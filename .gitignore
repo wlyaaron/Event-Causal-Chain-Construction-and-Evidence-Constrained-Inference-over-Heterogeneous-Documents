@@ -1,0 +1,6 @@
+__pycache__/
+.env
+.env.*
+outputs/
+*.partial
+*.partial.meta.json
