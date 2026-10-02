@@ -1,0 +1,321 @@
+[
+  {
+    "sample_id": "natural_disaster_038_Q01",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从台风红色预警发布到最终的防灾减灾经验总结，中间经历了哪些关键的灾害应对环节？请梳理完整的因果传导链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（预警发布）→D002（台风登陆）→D004（灾情统计）→D010（经验总结）。预警发布后启动应急响应和群众转移；台风登陆造成严重灾害，触发抢险救援、灾后安置、设施抢修、农业损失等一系列应对工作；灾情统计全面掌握灾害损失情况；基于灾害应对的全过程，最终进行防灾减灾经验总结和反思。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D010的完整因果传导链",
+        "包含台风登陆、灾情统计等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D002→D004→D010",
+        "中间还包括D003救援、D005安置、D007抢修、D008农业损失等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D010"
+      ],
+      "stages": [
+        "预警发布",
+        "台风登陆",
+        "灾情统计",
+        "经验总结"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q02",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "抢险救援（D003）和灾情统计（D004）都发生在台风登陆之后，二者中哪一个对灾后安置工作（D005）的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "抢险救援（D003）对灾后安置（D005）的推动作用更直接。依据：因果关系列表中D003→D005为间接传导，D004→D005也为间接传导，但从时间和逻辑上看，抢险救援直接将被困群众转移到安置点，是安置工作的前置环节；而灾情统计主要是对灾害损失的全面摸排，对安置工作的推动是间接的。救援人员在转移群众的同时，就将他们送到了安置点，二者紧密衔接。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D003对D005的推动更直接",
+        "依据是救援直接转移群众到安置点"
+      ],
+      "optional_facts": [
+        "D004灾情统计对安置的推动是间接的",
+        "救援与安置紧密衔接"
+      ],
+      "forbidden_facts": [
+        "判断D004更直接且无合理依据",
+        "混淆救援转移与灾情统计的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D004对D005的推动",
+      "more_direct": "D003",
+      "reason": "救援直接转移群众到安置点"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q03",
+    "pack_id": "038",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设气象部门没有提前发布台风红色预警（移除D001），这会对人员伤亡情况和抢险救援工作（D003）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有提前发布红色预警，人员伤亡会明显增加，抢险救援的难度和压力也会大幅上升。连锁影响：没有预警就不会提前启动应急响应和组织群众转移，大量群众会在毫无准备的情况下面对台风，房屋倒塌、山洪、触电等导致的伤亡会大幅增加；救援工作会更加被动，需要在更恶劣的天气条件下营救更多被困群众，救援人员的安全风险也会增加。受影响的关键边为[['D001','D002'],['D002','D003'],['D002','D005']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断人员伤亡会明显增加",
+        "说明抢险救援难度和压力会大幅上升"
+      ],
+      "optional_facts": [
+        "没有预警就不会提前转移群众",
+        "救援工作会更加被动"
+      ],
+      "forbidden_facts": [
+        "断言没有预警伤亡也不会增加",
+        "忽视预警在防灾减灾中的关键作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除台风红色预警",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "人员伤亡增加，救援难度上升"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q04",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "农业损失（D008）与社会各界捐助（D009）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D008（农业损失）→D004（灾情统计）→D009（社会捐助）。具体来说，农业损失是整个灾情的重要组成部分，灾情统计将包括农业损失在内的全面灾害情况向社会公布，引发了社会各界的广泛关注和同情，从而推动了社会捐助行动。此外，农业损失的具体报道（如农户损失惨重的故事）也直接触动了社会公众的爱心，促进了捐助。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D004灾情统计这一中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D008→D004→D009",
+        "农业损失的具体报道也直接触动公众爱心"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D008到D009的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D004",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediate",
+      "intermediate": "D004",
+      "path": "D008→D004→D009"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q05",
+    "pack_id": "038",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测台风灾区完全恢复正常生产生活秩序所需的具体天数？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性天数",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_038_Q06",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "台风登陆（D002）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D002的直接后果包括：D003（抢险救援）、D004（灾情统计）、D005（灾后安置）、D007（设施抢修）、D008（农业损失）。这五项都是台风登陆后直接引发的灾害应对和损失事件。证据：台风登陆后消防立即开展救援，应急部门统计灾情，群众被转移安置，各部门抢修基础设施，农业遭受严重损失。D006气象分析、D009社会捐助、D010经验总结为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D002直接导致D003抢险救援",
+        "D002直接导致D004灾情统计",
+        "D002直接导致D005灾后安置",
+        "D002直接导致D007设施抢修",
+        "D002直接导致D008农业损失"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D006、D009、D010为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D007或D008等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D007"
+      ],
+      [
+        "D002",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q07",
+    "pack_id": "038",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于预警发布和台风登陆（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003抢险救援——台风登陆造成人员被困，消防救援队伍必然会立即开展抢险救援，这是灾害应对的首要环节；第二，D005灾后安置——大量群众需要转移安置，政府会及时设置安置点，保障群众基本生活；第三，D007设施抢修——台风会损毁电力、通信、交通等基础设施，各部门会迅速组织抢修，恢复正常秩序。依据：重大自然灾害后的标准应对流程包括救援、安置、抢修等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003抢险救援、D005灾后安置、D007设施抢修",
+        "还可能发生D004灾情统计、D008农业损失等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-08-03",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D005",
+        "D007"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

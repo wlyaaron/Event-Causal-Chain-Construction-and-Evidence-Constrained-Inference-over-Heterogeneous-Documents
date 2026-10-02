@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_244_Q01",
+    "pack_id": "244",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "鹤岗富华煤矿9·20特大火灾事故的基本情况是怎样的？造成了多少人员伤亡？"
+  },
+  {
+    "sample_id": "public_safety_244_Q02",
+    "pack_id": "244",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "富华煤矿火灾事故的救援工作是如何开展的？救援过程中面临哪些主要困难？"
+  },
+  {
+    "sample_id": "public_safety_244_Q03",
+    "pack_id": "244",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "富华煤矿火灾事故的原因是什么？暴露出哪些深层次问题？"
+  },
+  {
+    "sample_id": "public_safety_244_Q04",
+    "pack_id": "244",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国务院事故调查组是如何开展调查的？最终对相关责任人作出了怎样的处理？"
+  },
+  {
+    "sample_id": "public_safety_244_Q05",
+    "pack_id": "244",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故发生后是如何开展善后安抚工作的？采取了哪些措施帮助遇难者家属？"
+  },
+  {
+    "sample_id": "public_safety_244_Q06",
+    "pack_id": "244",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "富华煤矿事故对全国煤矿安全生产产生了哪些影响和警示？应该从哪些方面加强煤矿安全工作？"
+  },
+  {
+    "sample_id": "public_safety_244_Q07",
+    "pack_id": "244",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如何从富华煤矿事故中吸取教训，有效防范煤矿井下火灾事故？"
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "sample_id": "healthcare_01_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（长期影响）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "完整因果链：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）。其中，疫情通报为起点，经逐级传导，最终导致长期影响；全球超700万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（疫情通报） 到终点 D009（长期影响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（疫情通报）",
+        "终点为 D009（长期影响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）",
+        "可包含关键环节 D002（官方发布）",
+        "可包含关键环节 D003（临床救治）",
+        "可包含关键环节 D004（专家科普）",
+        "可包含关键环节 D006（防控政策）",
+        "可包含关键环节 D008（医保政策）",
+        "终点影响：全球超700万人死亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "疫情通报",
+        "官方发布",
+        "临床救治",
+        "专家科普",
+        "防控政策",
+        "医保政策",
+        "长期影响"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_01_Q02",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于官方发布事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "healthcare_01_Q03",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D004（专家科普）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "D004（专家科普）：WHO全球在中国武汉，围绕新冠疫情暴发，WHO全球的权威专家进行科普解读。影响：全球超700万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：WHO全球",
+        "地点：中国武汉",
+        "基本事实：围绕新冠疫情暴发，WHO全球的权威专家进行科普解读"
+      ],
+      "optional_facts": [
+        "影响：全球超700万人死亡"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D004"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "healthcare_01_Q04",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D004（专家科普）未曾出现，D006（防控政策）的发生是否还能成立？请给出推断依据。",
+    "answers": "移除D004后，D006及其连锁后果很可能不成立。D004系D006的直接原因（直接因果），受影响边为 [['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；全球超700万人死亡 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D006及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_01_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D004（专家科普）在时间/进程上早于D006（防控政策）。能否据此断定D004（专家科普）导致了D006（防控政策）？请给出判断与证据。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D004→D006（直接因果），而非单纯时间顺序。证据：新冠疫情暴发防控进入常态化阶段，中国武汉多地出台相关管理新规。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（专家科普） 与 D006（防控政策） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D006"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D006（防控政策） 导致 D004（专家科普）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D006",
+      "temporal_order": "D004先于D006",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_01_Q06",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于D006（防控政策）阶段（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D007（体系建设）、D008（医保政策）、D009（长期影响）；其中最关键的是体系建设——新冠疫情暴发对公共卫生体系提出严峻考验。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:体系建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（医保政策）, D009（长期影响）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（防控政策）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:体系建设"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "healthcare_01_Q07",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（医保政策），并按顺序给出完整证据链。",
+    "answers": "按证据顺序，成因链为 D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策）。自疫情通报出发逐环传导至医保政策；全球超700万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（疫情通报） 到终点 D008（医保政策） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（疫情通报）",
+        "终点为 D008（医保政策）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策）",
+        "可包含关键环节 D002（官方发布）",
+        "可包含关键环节 D003（临床救治）",
+        "可包含关键环节 D004（专家科普）",
+        "可包含关键环节 D006（防控政策）",
+        "终点影响：全球超700万人死亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "疫情通报",
+        "官方发布",
+        "临床救治",
+        "专家科普",
+        "防控政策",
+        "医保政策"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_01_Q08",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于WHO全球的疫情通报事件，不同来源给出的关键数据不一致（官方700、另一来源840）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "healthcare_01_Q09",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的行业交流会，是否与主线事件疫情通报（D001）构成因果关系？请判断并说明。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "healthcare_01_Q10",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，WHO全球在该疫情通报事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

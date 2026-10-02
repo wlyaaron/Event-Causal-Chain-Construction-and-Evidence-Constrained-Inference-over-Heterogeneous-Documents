@@ -1,0 +1,460 @@
+[
+  {
+    "sample_id": "public_safety_118_Q01",
+    "pack_id": "118",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（事故发生）早于D005（救援进展），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（事故发生）早于D005（救援进展）只是时间先后，材料中不存在 D001→D005 的因果关系；其直接原因是D002（应急救援）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D005（救援进展） 只是时间先后",
+        "材料中不存在 D001→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D005（救援进展）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_118_Q02",
+    "pack_id": "118",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D006（全国大检查）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D006（全国大检查）直接导致了D008（技术建设）。依据：要求年底前所有露天煤矿建成边坡在线监测系统。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D006（全国大检查） 直接导致 D008（技术建设）",
+        "后果：要求年底前所有露天煤矿建成边坡在线监测系统"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（技术建设） 导致 D006（全国大检查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_118_Q03",
+    "pack_id": "118",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2023-06-20前进展（D001 事故发生；D002 应急救援；D003 国家督办；D004 全国部署；D005 救援进展；D006 全国大检查；D007 搜救结束）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D008（技术建设）、D009（调查结果）、D010（专项整治）。核心节点是技术建设：要求年底前所有露天煤矿建成边坡在线监测系统。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D008:技术建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D009（调查结果）, D010（专项整治）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-06-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "hidden_events": [
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "ground_truth": "D008:技术建设"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_118_Q04",
+    "pack_id": "118",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D006（全国大检查）被阻断，D008（技术建设）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D006，D008很可能不会发生或将显著改变。依据：D006是D008的直接原因（直接因果），移除后受影响的因果边包括 [['D006', 'D008'], ['D008', 'D011']]。相应地，提升露天煤矿边坡安全技术水平 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ],
+      [
+        "D006",
+        "D011"
+      ],
+      [
+        "D006",
+        "D008",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D011"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_118_Q05",
+    "pack_id": "118",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于调查结果事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“查明事故原因和责任”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_118_Q06",
+    "pack_id": "118",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D011（整治成效）的完整因果路径，并标明证据顺序。",
+    "answers": "完整因果链：D001（事故发生） → D003（国家督办） → D004（全国部署） → D006（全国大检查） → D011（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；全国矿山安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D011（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D011（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D003（国家督办） → D004（全国部署） → D006（全国大检查） → D011（整治成效）",
+        "可包含关键环节 D003（国家督办）",
+        "可包含关键环节 D004（全国部署）",
+        "可包含关键环节 D006（全国大检查）",
+        "终点影响：全国矿山安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D011"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D011"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005",
+        "D007",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D011"
+      ],
+      "stages": [
+        "事故发生",
+        "国家督办",
+        "全国部署",
+        "全国大检查",
+        "整治成效"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_118_Q07",
+    "pack_id": "118",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D011（整治成效）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "该结果由一条有向因果链推动：D001（事故发生） → D002（应急救援） → D005（救援进展） → D007（搜救结束） → D009（调查结果） → D010（专项整治） → D011（整治成效）。起点为事故发生，终点为整治成效；全国矿山安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D011（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D011（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（应急救援） → D005（救援进展） → D007（搜救结束） → D009（调查结果） → D010（专项整治） → D011（整治成效）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D005（救援进展）",
+        "可包含关键环节 D007（搜救结束）",
+        "可包含关键环节 D009（调查结果）",
+        "可包含关键环节 D010（专项整治）",
+        "终点影响：全国矿山安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D011"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D011"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005",
+        "D007",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D005",
+        "D007",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "事故发生",
+        "应急救援",
+        "救援进展",
+        "搜救结束",
+        "调查结果",
+        "专项整治",
+        "整治成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_118_Q08",
+    "pack_id": "118",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于新井煤业有限公司露天煤矿的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D012.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_118_Q09",
+    "pack_id": "118",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D013.txt》中邻近辖区国家矿山安全监察局的例行通报，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D013.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D013.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_118_Q10",
+    "pack_id": "118",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，新井煤业有限公司露天煤矿在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

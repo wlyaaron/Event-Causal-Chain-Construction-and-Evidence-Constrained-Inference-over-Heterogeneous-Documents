@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_029_Q01",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从国家数字经济战略发布到专家对未来趋势的深度解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "economy_trade_029_Q02",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "地方实践案例（D002）和统计数据发布（D003）都发生在战略发布之后，二者中哪一个对挑战分析（D005）的推动作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "economy_trade_029_Q03",
+    "pack_id": "029",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有出台数字经济发展战略（移除D001），这会对地方数字经济实践（D002）和传统产业数字化转型（D004）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "economy_trade_029_Q04",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "传统产业数字化转型（D004）与数字经济国际合作（D006）之间看似分属不同领域，实际上是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "economy_trade_029_Q05",
+    "pack_id": "029",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测2025年我国数字经济核心产业增加值的具体数值？"
+  },
+  {
+    "sample_id": "economy_trade_029_Q06",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国家数字经济战略发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "economy_trade_029_Q07",
+    "pack_id": "029",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于战略发布和地方实践（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

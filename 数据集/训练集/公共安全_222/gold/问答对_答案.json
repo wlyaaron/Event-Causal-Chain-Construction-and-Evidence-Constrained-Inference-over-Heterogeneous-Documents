@@ -1,0 +1,332 @@
+[
+  {
+    "sample_id": "public_safety_222_Q01",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从过山车故障发生到全国游乐园行业掀起整改潮，中间经历了哪些关键传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（过山车故障）→D004（技术鉴定查明原因）→D005（媒体深度调查揭露行业问题）→D006（监管部门专项执法）→D009（全国行业整改潮）。故障发生后，技术鉴定暴露了设备维护问题，媒体调查进一步揭示了行业普遍性的安全管理漏洞，推动监管部门开展执法检查，最终引发全行业的自查整改。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D009的完整因果传导链",
+        "包含技术鉴定、行业调查、监管执法等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D004→D005→D006→D009",
+        "可说明每个环节的推动作用"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D009"
+      ],
+      "stages": [
+        "故障发生",
+        "技术鉴定",
+        "行业调查",
+        "监管执法",
+        "行业整改"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_222_Q02",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "技术鉴定（D004）和媒体深度调查（D005）都发生在事故之后，二者中哪一个对监管执法行动（D006）的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "媒体深度调查（D005）对监管执法（D006）的推动作用更直接。依据：因果关系列表中D005→D006为直接因果（certain），而D004→D006没有直接因果边。技术鉴定主要查明了单起事故的技术原因，而媒体调查揭露了整个行业普遍存在的设备维护造假、人员培训走过场等系统性问题，形成了社会舆论压力，直接推动了监管部门的专项执法行动。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D005对D006的推动更直接",
+        "依据是D005→D006为直接因果关系"
+      ],
+      "optional_facts": [
+        "D004主要针对单起事故技术原因",
+        "D005揭露行业系统性问题，形成舆论压力"
+      ],
+      "forbidden_facts": [
+        "判断D004更直接且无合理依据",
+        "混淆时间先后与因果关系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D004 vs D005对D006的推动",
+      "more_direct": "D005",
+      "reason": "D005→D006为直接因果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_222_Q03",
+    "pack_id": "222",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设游乐园在事故前就严格落实了传感器定期更换制度，这次高空被困故障是否可以避免？这一改变会对后续的行业调查（D005）和标准修订（D008）产生什么连锁影响？",
+    "answers": "结论：如果严格落实传感器更换制度，本次故障大概率可以避免，因为技术鉴定表明事故直接原因就是传感器超期服役失效。连锁影响：D005（行业调查）仍可能发生但紧迫性减弱，因为没有具体事故作为切入点，媒体调查的关注度和影响力会下降；D008（标准修订）的推进会明显放缓，因为事故暴露的维护问题是推动标准修订的重要动因，没有事故倒逼，标准修订可能仍按原计划缓慢进行。受影响的关键边为[['D001','D004'],['D004','D005'],['D005','D006'],['D004','D008']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断故障大概率可以避免",
+        "说明对D005和D008的连锁影响"
+      ],
+      "optional_facts": [
+        "事故直接原因是传感器超期失效",
+        "D005紧迫性减弱，D008推进放缓"
+      ],
+      "forbidden_facts": [
+        "断言绝对不会发生任何事故",
+        "忽视行业本身存在的其他问题"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D005",
+        "D006"
+      ],
+      [
+        "D004",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "严格落实传感器定期更换",
+      "affected_edges": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D004",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "故障大概率避免，后续事件紧迫性减弱"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_222_Q04",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "被困游客的心理康复（D007）与行业安全标准修订（D008）之间看似不相关，实际上是否存在因果传导路径？请通过中间事件说明二者的关联。",
+    "answers": "二者存在间接因果关联，传导路径为：D007（心理康复）←D003（幸存者经历）←D001（故障事故）→D004（技术鉴定）→D008（标准修订）。具体来说，游客的心理创伤源于事故本身，而事故同时推动了技术鉴定和标准修订。虽然D007和D008之间没有直接因果边，但它们共享同一个根因D001，且D007所反映的事故危害（心理创伤）也为标准修订中加强安全保护、减少事故发生提供了现实依据。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出共享根因D001，通过中间事件传导"
+      ],
+      "optional_facts": [
+        "传导路径：D007←D003←D001→D004→D008",
+        "D007反映的事故危害为标准修订提供现实依据"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D007到D008的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D003",
+        "D001",
+        "D004",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_correlation_via_common_cause",
+      "common_cause": "D001",
+      "path": "D007←D003←D001→D004→D008"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_222_Q05",
+    "pack_id": "222",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确量化此次事故对欢乐世界游乐园未来三年营业收入的具体影响金额？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性金额",
+        "编造材料中不存在的财务数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_222_Q06",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "过山车故障（D001）发生后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（紧急救援）、D003（幸存者被困经历）、D004（技术鉴定）、D006（监管执法）。其中救援和幸存者经历是事故发生后的即时直接响应，技术鉴定是为查明事故原因而启动，监管执法是事故引发的监管行动。证据：事故发生后消防立即救援、游客经历被困过程、检验机构开展鉴定、市场监管部门启动专项检查。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002紧急救援",
+        "D001直接导致D003幸存者经历",
+        "D001直接导致D004技术鉴定",
+        "D001直接导致D006监管执法"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D005、D007、D008、D009、D010为间接因果"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D006这一直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D004",
+        "D006"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_222_Q07",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于事故发生和救援完成（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D004技术鉴定——事故发生后监管部门必然会组织技术鉴定查明原因，这是事故处理的标准流程；第二，D006监管执法——类似事故通常会引发监管部门的专项检查，防止同类事故再次发生；第三，D007心理康复——16名游客经历高空被困，大概率会出现不同程度的心理应激反应，需要专业心理疏导。依据：特种设备事故后通常会开展技术鉴定、监管检查和人员安抚这三项标准处置。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D004技术鉴定、D006监管执法、D007心理康复",
+        "还可能发生D005行业调查、D008标准修订等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D003",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-11-05",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D004",
+        "D006",
+        "D007"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

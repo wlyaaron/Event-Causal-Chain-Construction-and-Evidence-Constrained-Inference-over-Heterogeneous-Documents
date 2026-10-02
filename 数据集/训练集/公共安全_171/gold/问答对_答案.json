@@ -1,0 +1,418 @@
+[
+  {
+    "sample_id": "public_safety_171_Q01",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请依据材料说明D004（全国部署）的基本事实与直接影响。",
+    "answers": "D004（全国部署）发生于全国，涉及主体国务院安委办、住建部、安监总局。部署全国建筑施工安全专项检查。影响：启动全国建筑施工安全整治。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：国务院安委办、住建部、安监总局",
+        "地点：全国",
+        "基本事实：部署全国建筑施工安全专项检查"
+      ],
+      "optional_facts": [
+        "影响：启动全国建筑施工安全整治"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D004"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_171_Q02",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（事故发生）早于D006（专项整治），这是否意味着二者存在因果？请判断。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D006 的因果边；其直接原因是D004（全国部署）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D006（专项整治） 只是时间先后",
+        "材料中不存在 D001→D006 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D006（专项整治）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D006",
+      "temporal_order": "D001先于D006",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_171_Q03",
+    "pack_id": "171",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（事故发生）被阻断，D002（搜救结束）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002']]。相应地，全面开展善后工作 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_171_Q04",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（事故发生），说明经由哪些中间事件最终导致了D009（整治成效）。",
+    "answers": "完整因果链：D001（事故发生） → D003（国家调查） → D004（全国部署） → D006（专项整治） → D009（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；建筑施工安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D009（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D009（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D003（国家调查） → D004（全国部署） → D006（专项整治） → D009（整治成效）",
+        "可包含关键环节 D003（国家调查）",
+        "可包含关键环节 D004（全国部署）",
+        "可包含关键环节 D006（专项整治）",
+        "终点影响：建筑施工安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      "stages": [
+        "事故发生",
+        "国家调查",
+        "全国部署",
+        "专项整治",
+        "整治成效"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_171_Q05",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（整治成效）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "完整因果链：D001（事故发生） → D003（国家调查） → D004（全国部署） → D006（专项整治） → D009（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；建筑施工安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D009（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D009（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D003（国家调查） → D004（全国部署） → D006（专项整治） → D009（整治成效）",
+        "可包含关键环节 D003（国家调查）",
+        "可包含关键环节 D004（全国部署）",
+        "可包含关键环节 D006（专项整治）",
+        "终点影响：建筑施工安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D009"
+      ],
+      "stages": [
+        "事故发生",
+        "国家调查",
+        "全国部署",
+        "专项整治",
+        "整治成效"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_171_Q06",
+    "pack_id": "171",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2016-12-10前进展（D001 事故发生；D002 搜救结束；D003 国家调查；D004 全国部署；D006 专项整治）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D007（行业整治）、D009（整治成效）、D005（调查进展）。核心节点是行业整治：开展全国电力建设工程安全专项整治。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:行业整治"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D009（整治成效）, D005（调查进展）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009",
+        "D005",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-12-10",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D009",
+        "D005",
+        "D008"
+      ],
+      "ground_truth": "D007:行业整治"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_171_Q07",
+    "pack_id": "171",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D005（调查进展）这一原因，D008（司法判决）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D005，D008大概率不再发生。因为D005是D008的直接原因（直接因果），其下游受影响的边为 [['D005', 'D008'], ['D008', 'D009']]；事故宜春市中级人民法院等责任人受到法律制裁 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D005是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D008"
+      ],
+      [
+        "D005",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D005",
+      "affected_edges": [
+        [
+          "D005",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D005是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

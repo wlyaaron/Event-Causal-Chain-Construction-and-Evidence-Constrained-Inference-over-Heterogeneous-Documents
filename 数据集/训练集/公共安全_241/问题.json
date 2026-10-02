@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_241_Q01",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件后进行了怎样的追责问责？"
+  },
+  {
+    "sample_id": "public_safety_241_Q02",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事件后开展了哪些专项整改和督查？"
+  },
+  {
+    "sample_id": "public_safety_241_Q03",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通报处置进展、回应社会关切？"
+  },
+  {
+    "sample_id": "public_safety_241_Q04",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？"
+  },
+  {
+    "sample_id": "public_safety_241_Q05",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年合肥市城市轨道交通供电系统火灾事故是怎样发生的？造成了哪些后果？"
+  },
+  {
+    "sample_id": "public_safety_241_Q06",
+    "pack_id": "241",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这起事件将如何推动相关领域安全治理的完善？"
+  },
+  {
+    "sample_id": "public_safety_241_Q07",
+    "pack_id": "241",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生怎样的深远影响？"
+  }
+]

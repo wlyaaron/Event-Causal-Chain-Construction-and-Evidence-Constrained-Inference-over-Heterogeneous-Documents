@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_059_Q01",
+    "pack_id": "059",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（暂停赛事）阶段，材料仅显示：D001 事件发生；D002 官方通报；D003 成立调查组；D004 全国部署；D005 调查结果；D006 暂停赛事。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_059_Q02",
+    "pack_id": "059",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，如果移除D001（事件发生）这一原因，D002（官方通报）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_059_Q03",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D010（整治成效）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_059_Q04",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D003（成立调查组）在D005（调查结果）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_059_Q05",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，请依据材料说明D006（暂停赛事）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "public_safety_059_Q06",
+    "pack_id": "059",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在2021-06-11（当前已知：D001 事件发生；D002 官方通报；D003 成立调查组；D004 全国部署；D006 暂停赛事；D005 调查结果），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "public_safety_059_Q07",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（标准出台）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_059_Q08",
+    "pack_id": "059",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于黄河石林山地马拉松百公里越野赛的事件发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_059_Q09",
+    "pack_id": "059",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件事件发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_059_Q10",
+    "pack_id": "059",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，黄河石林山地马拉松百公里越野赛在该事件发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

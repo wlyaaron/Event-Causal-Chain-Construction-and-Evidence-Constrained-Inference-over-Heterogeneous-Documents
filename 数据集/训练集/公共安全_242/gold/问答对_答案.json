@@ -1,0 +1,309 @@
+[
+  {
+    "sample_id": "public_safety_242_Q01",
+    "pack_id": "242",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事故发生后开展了哪些专项督查和排查？",
+    "answers": "有关主管部门以事故为鉴开展公共安全专项督查，全面排查突出问题：建立问题隐患清单，落实闭环整改，压实企业主体责任和部门监管责任；同时对督办案件挂牌整改、逐一销号，确保整改见底、见效。",
+    "answer_facts": {
+      "required_facts": [
+        "有关部门开展公共安全专项督查（D006）",
+        "全面排查突出问题、建立隐患清单并闭环整改",
+        "压实企业主体责任与部门监管责任"
+      ],
+      "optional_facts": [
+        "传导路径：D001（踩踏事故）→ D006（专项督查）",
+        "对督办案件挂牌整改、逐一销号"
+      ],
+      "forbidden_facts": [
+        "把专项督查等同于事故当日的现场救援",
+        "引入原文未出现的督查覆盖范围或具体数字"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D006"
+      ],
+      "stages": [
+        "大型活动踩踏事故发生",
+        "开展公共安全专项督查"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_242_Q02",
+    "pack_id": "242",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通过情况通报回应社会关切？",
+    "answers": "石家庄有关部门第一时间召开新闻通报会，及时准确通报事故基本情况、伤亡救治进展、原因初判和处置措施，公开信息、回应舆论关切，防止谣言和不实炒作，切实保障公众知情权、稳定社会预期。",
+    "answer_facts": {
+      "required_facts": [
+        "石家庄有关部门召开新闻通报会及时通报事故情况（D002）",
+        "通报内容包括伤亡救治进展、原因初判和处置措施",
+        "目的是保障公众知情权、稳定社会预期、防止谣言"
+      ],
+      "optional_facts": [
+        "因果关系：D001（踩踏事故）→ D002（情况通报）",
+        "公开信息回应舆论关切"
+      ],
+      "forbidden_facts": [
+        "将情况通报与专项督查（D006）或追责（D005）混淆",
+        "编造原文未提及的通报场次或具体发布数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_242_Q03",
+    "pack_id": "242",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？",
+    "answers": "专家结合安全教育专项提出：普及大型活动等场所防范知识和科学自救、自救互救技能，提醒公众日常关注隐患、熟悉逃生路线和应急处置常识，遇突发保持镇静、科学应对；建议主办方和公众增强安全意识、落实防范措施，共同营造人人讲安全的良好氛围。",
+    "answer_facts": {
+      "required_facts": [
+        "结合安全教育专项普及防范知识与自救互救技能（D008）",
+        "提醒公众掌握逃生路线、应急处置常识",
+        "建议主办方和公众增强安全意识、落实防范措施"
+      ],
+      "optional_facts": [
+        "传导关系：D001（踩踏事故）→ D008（安全教育专项）",
+        "遇突发保持镇静、科学应对"
+      ],
+      "forbidden_facts": [
+        "把安全教育建议与追责问责（D005）混为一谈",
+        "编造原文未出现的具体培训数据或课程名称"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_cause",
+      "edge": [
+        "D001",
+        "D008"
+      ],
+      "confidence_level": "probable"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_242_Q04",
+    "pack_id": "242",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年石家庄市大型活动现场人员聚集踩踏事故是如何发生的？引发了哪些后果？",
+    "answers": "2016年石家庄市大型活动现场人员聚集踩踏事故发生后，引发当地政府启动应急预案、组织力量全力搜救救治；经事件调查组核查，认定为责任事件，直接原因是大型活动组织混乱、疏导措施缺失，暴露出安全生产责任不落实、隐患排查治理不到位等问题；造成人员死伤和财产损失。",
+    "answer_facts": {
+      "required_facts": [
+        "踩踏事故发生（D001），直接原因是大型活动组织混乱、疏导措施缺失（D004 调查认定）",
+        "引发应急救援（D003）与后续事件调查（D004）",
+        "暴露安全生产责任不落实、隐患排查治理不到位，造成人员死伤"
+      ],
+      "optional_facts": [
+        "处置链：D001（事故）→ D003（应急救援）→ D004（事件调查）",
+        "直接路径：D001（事故）→ D004（事件调查查明原因）"
+      ],
+      "forbidden_facts": [
+        "将原因归结为不可抗力或自然因素",
+        "编造原文未出现的具体责任人或处罚结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "大型活动踩踏事故发生",
+        "现场应急救援",
+        "事件调查查明原因"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_242_Q05",
+    "pack_id": "242",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故发生后现场是如何组织应急救援的？",
+    "answers": "现场指挥部实行统一指挥、多部门联合救援：调集消防、医疗、公安等专业力量携带装备昼夜作战，科学施救，控制现场险情动态，全力搜救被困人员、处置次生事故，医疗急救与交通疏导等部门协同，最大限度减少人员伤亡和财产损失。",
+    "answer_facts": {
+      "required_facts": [
+        "事故（D001）发生后由现场指挥部（D003）统一指挥、科学施救",
+        "调集消防、医疗、公安等专业力量协同救援",
+        "目标是控制险情、搜救被困人员、减少伤亡损失"
+      ],
+      "optional_facts": [
+        "因果关系：D001（踩踏事故）→ D003（应急救援）",
+        "医疗急救与交通疏导等部门协同"
+      ],
+      "forbidden_facts": [
+        "把事件调查（D004）或追责（D005）当作现场救援措施",
+        "引入原文未出现的救援队番号或伤亡细节"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_242_Q06",
+    "pack_id": "242",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生哪些长远影响？",
+    "answers": "预计此次事件将推动进一步压实安全生产责任，健全党政同责、一岗双责、失职追责机制；预计将推动完善大型活动安全管理制度，压实主办方主体责任和部门监管责任；预计将在长期内提升全社会安全意识，逐步形成事前防范、闭环整改的长效治理格局。",
+    "answer_facts": {
+      "required_facts": [
+        "预计推动压实安全生产责任、健全党政同责与失职追责机制",
+        "预计完善大型活动安全管理制度",
+        "预计长期提升全社会安全意识并形成长效治理"
+      ],
+      "optional_facts": [
+        "基于专项督查（D006）与动员部署（D011）作出的前瞻判断",
+        "由事故（D001）教训转化为制度性防范"
+      ],
+      "forbidden_facts": [
+        "断言具体立法或制度出台日期",
+        "把预测表述为已确证发生的事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-06-29",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      "predicted": [
+        "D010",
+        "D007",
+        "D004",
+        "D005",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_242_Q07",
+    "pack_id": "242",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？",
+    "answers": "预计未来将在专项整改成果基础上建立常态化机制：预计推动把安全隐患排查整改的经验做法固化为长效制度，防止问题反弹回潮；预计推动常态化隐患排查、闭环销号；预计加强安全教育与应急能力建设，把每一次事件的教训及时转化为治本安全的制度举措。",
+    "answer_facts": {
+      "required_facts": [
+        "预计把专项整改经验固化为常态化长效机制、防止反弹",
+        "预计推动常态化隐患排查与闭环销号",
+        "预计加强安全教育与应急能力建设"
+      ],
+      "optional_facts": [
+        "基于隐患整改（D010）、安全教育（D008）与动员部署（D011）作出的前瞻判断",
+        "把事件教训转化为治本安全的制度举措"
+      ],
+      "forbidden_facts": [
+        "断言问题一定不再发生的绝对结论",
+        "编造原文未出现的具体考核指标或时限"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D010"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-06-29",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      "predicted": [
+        "D010",
+        "D007",
+        "D004",
+        "D005",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

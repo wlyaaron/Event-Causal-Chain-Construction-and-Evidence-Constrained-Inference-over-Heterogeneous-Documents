@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_075_Q01",
+    "pack_id": "075",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "汶川地震发生的具体时间是什么？震中位于哪里？震级和震源深度分别是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q02",
+    "pack_id": "075",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么汶川地震中学校倒塌造成的学生伤亡特别引人关注？这一事件对中国校舍建设标准产生了什么影响？"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q03",
+    "pack_id": "075",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：全国哀悼日、唐家山堰塞湖险情解除、灾后重建总体规划发布、15名空降兵伞降茂县、地震发生。"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q04",
+    "pack_id": "075",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "汶川地震中的军队救援与国际救援队的参与在规模、方式和作用上有什么不同？"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q05",
+    "pack_id": "075",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "汶川地震如何从一次自然灾害演变为涉及应急救援、社会动员、国际合作、灾后重建和制度改革的综合性事件？"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q06",
+    "pack_id": "075",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括汶川地震抗震救灾和灾后重建的主要措施及其成效。"
+  },
+  {
+    "sample_id": "natural_disaster_075_Q07",
+    "pack_id": "075",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设汶川地震发生在通讯和交通更发达的地区，救援进程和伤亡情况可能会有什么不同？"
+  }
+]

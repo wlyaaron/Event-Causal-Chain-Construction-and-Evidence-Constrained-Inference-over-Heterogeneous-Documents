@@ -1,0 +1,376 @@
+[
+  {
+    "sample_id": "public_safety_212_Q01",
+    "pack_id": "212",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至2018-11-05，材料仅显示：D001 事故发生；D002 初步核实；D003 车辆打捞；D004 原因公布；D005 全国部署。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "预测后续进展为：D006（设施改造）、D007（法律出台）、D008（整治成效）。核心节点是设施改造：30多个城市安装驾驶区隔离门。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:设施改造"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（法律出台）, D008（整治成效）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2018-11-05",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "ground_truth": "D006:设施改造"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_212_Q02",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（整治成效），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（事故发生） → D002（初步核实） → D003（车辆打捞） → D004（原因公布） → D005（全国部署） → D006（设施改造） → D008（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；公共安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D008（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D008（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（初步核实） → D003（车辆打捞） → D004（原因公布） → D005（全国部署） → D006（设施改造） → D008（整治成效）",
+        "可包含关键环节 D002（初步核实）",
+        "可包含关键环节 D003（车辆打捞）",
+        "可包含关键环节 D004（原因公布）",
+        "可包含关键环节 D005（全国部署）",
+        "可包含关键环节 D006（设施改造）",
+        "终点影响：公共安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "事故发生",
+        "初步核实",
+        "车辆打捞",
+        "原因公布",
+        "全国部署",
+        "设施改造",
+        "整治成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_212_Q03",
+    "pack_id": "212",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D003（车辆打捞）所代表的条件被移除，后续的D004（原因公布）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D003，D004很可能不会发生或将显著改变。依据：D003是D004的直接原因（直接因果），移除后受影响的因果边包括 [['D003', 'D004'], ['D004', 'D005'], ['D004', 'D007'], ['D007', 'D008'], ['D005', 'D006']]。相应地，公布事故真相，引发社会对公共安全的讨论 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      [
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D007"
+        ],
+        [
+          "D007",
+          "D008"
+        ],
+        [
+          "D005",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_212_Q04",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（事故发生）早于D003（车辆打捞），这是否意味着二者存在因果？请判断。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D003 的因果边；其直接原因是D002（初步核实）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D003（车辆打捞） 只是时间先后",
+        "材料中不存在 D001→D003 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D003（车辆打捞）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_212_Q05",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D003（车辆打捞）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D003（车辆打捞）直接导致了D004（原因公布）。依据：乘客与司机激烈争执互殴致车辆失控。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（车辆打捞） 直接导致 D004（原因公布）",
+        "后果：乘客与司机激烈争执互殴致车辆失控"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（原因公布） 导致 D003（车辆打捞）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_212_Q06",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（整治成效）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（事故发生） → D002（初步核实） → D003（车辆打捞） → D004（原因公布） → D005（全国部署） → D006（设施改造） → D008（整治成效）。起点为事故发生，终点为整治成效；公共安全水平提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D008（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D008（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（初步核实） → D003（车辆打捞） → D004（原因公布） → D005（全国部署） → D006（设施改造） → D008（整治成效）",
+        "可包含关键环节 D002（初步核实）",
+        "可包含关键环节 D003（车辆打捞）",
+        "可包含关键环节 D004（原因公布）",
+        "可包含关键环节 D005（全国部署）",
+        "可包含关键环节 D006（设施改造）",
+        "终点影响：公共安全水平提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "事故发生",
+        "初步核实",
+        "车辆打捞",
+        "原因公布",
+        "全国部署",
+        "设施改造",
+        "整治成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_212_Q07",
+    "pack_id": "212",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对设施改造的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "natural_disaster_006_Q01",
+    "pack_id": "006",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D004（灾情安置）所代表的条件被移除，后续的D006（灾后重建）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q02",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（预警建设）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q03",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D008（防灾短板）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q04",
+    "pack_id": "006",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q05",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（灾害发生）早于D004（灾情安置），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q06",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，菲律宾相关的D004（灾情安置）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q07",
+    "pack_id": "006",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（灾害发生）被阻断，D002（应急救援）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q08",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于台风海燕造成的遇难人数，不同来源给出的数字并不一致，请指出存在的矛盾并说明应如何处置。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q09",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料提到邻近地区举办了民俗丰收节庆。该活动是否与台风海燕抢险救援及灾后安置存在因果关联？请判断并说明理由。"
+  },
+  {
+    "sample_id": "natural_disaster_006_Q10",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，灾区灾后重建专项方案的具体内容、牵头部门和实施时间分别是什么？"
+  }
+]

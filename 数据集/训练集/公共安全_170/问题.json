@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_170_Q01",
+    "pack_id": "170",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定地方进展是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "public_safety_170_Q02",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，围绕最终结果D007（地方进展），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_170_Q03",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D006（工作部署）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "public_safety_170_Q04",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D003（成立调查组）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "public_safety_170_Q05",
+    "pack_id": "170",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D004（政策出台）所代表的条件被移除，后续的D005（阶段进展）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_170_Q06",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D004（政策出台），说明经由哪些中间事件最终导致了D006（工作部署）。"
+  },
+  {
+    "sample_id": "public_safety_170_Q07",
+    "pack_id": "170",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2022-05-27（D001 事故发生；D002 救援结束；D003 成立调查组；D004 政策出台），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

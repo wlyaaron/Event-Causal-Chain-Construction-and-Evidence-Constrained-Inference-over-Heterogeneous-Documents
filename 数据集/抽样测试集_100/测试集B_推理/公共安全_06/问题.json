@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_006_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，围绕最终结果D002（应急响应与救援），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_006_Q02",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D007（善后处置推进）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "public_safety_006_Q03",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，假如当初D001（安全事件/风险发生）未曾出现，D009（调查评估与问责）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "public_safety_006_Q04",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D009（调查评估与问责）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "public_safety_006_Q05",
+    "pack_id": "06",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在2020-06-14（当前已知：D001 安全事件/风险发生；D002 应急响应与救援；D003 情况通报与回应；D004 上级督导检查；D005 专项整治部署），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "public_safety_006_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D002（应急响应与救援）发生在D007（善后处置推进）之前，这是否足以说明D002（应急响应与救援）是D007（善后处置推进）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_006_Q07",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了交通运输部温州瑞安市瑞阳危险品运输有限公司槽罐车、驾驶员谢志高负责人的个人从业年限？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_007_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（长期影响）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "healthcare_007_Q02",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对官方发布的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "healthcare_007_Q03",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，假如当初D001（疫情通报）未曾出现，D002（官方发布）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "healthcare_007_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "哪一事件是D001（疫情通报）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "healthcare_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（疫情通报）先于D004（专家科普）发生，可以据此断定D001（疫情通报）是D004（专家科普）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "healthcare_007_Q06",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于D006（防控政策）阶段（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "healthcare_007_Q07",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（医保政策）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  }
+]

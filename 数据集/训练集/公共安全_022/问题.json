@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_022_Q01",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（评论员文章），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_022_Q02",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故）在D002（医疗救治）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_022_Q03",
+    "pack_id": "022",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（事故）这一原因，D002（医疗救治）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_022_Q04",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯最终结果D012（专项整治成效显现）的多跳因果链条：从最初的事故起，哪些事件依次推动，最终使整治成效显现？请给出跨越多篇文档的有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_022_Q05",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（事故）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_022_Q06",
+    "pack_id": "022",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2004-02-23（D001 事故；D002 医疗救治；D003 事故调查；D004 追责问责；D005 安全整治），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_022_Q07",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故起因，调查组认定为责任事故（采空区管理不到位、超设计能力开采），但坊间流传另一种说法称系地质构造异常引发的自然塌陷、与人为管理无关。两种说法相互矛盾，应如何取舍？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_022_Q08",
+    "pack_id": "022",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到邻省一处非煤矿山的小型冒顶险情（D021）、事故前的安全生产例行检查（D022）以及名称含“阜新”的某建材企业（D023）。这些事件是否与本次坍塌事故构成因果关系？"
+  },
+  {
+    "sample_id": "public_safety_022_Q09",
+    "pack_id": "022",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定本次坍塌最初发生的准确时刻（D018）？"
+  }
+]

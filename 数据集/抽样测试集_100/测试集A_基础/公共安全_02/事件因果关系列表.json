@@ -1,0 +1,38 @@
+[
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D003",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D005",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D005",
+    "causal_type": "间接传导",
+    "confidence_level": "probable"
+  }
+]

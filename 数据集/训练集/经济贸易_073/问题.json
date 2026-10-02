@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_073_Q01",
+    "pack_id": "073",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（趋势展望）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "economy_trade_073_Q02",
+    "pack_id": "073",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "economy_trade_073_Q03",
+    "pack_id": "073",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（政策落地）在D002（市场反应）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "economy_trade_073_Q04",
+    "pack_id": "073",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D001（政策落地）没有发生（或被及时干预阻断），D002（市场反应）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "economy_trade_073_Q05",
+    "pack_id": "073",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D003（企业行动）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "economy_trade_073_Q06",
+    "pack_id": "073",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，欧美周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "economy_trade_073_Q07",
+    "pack_id": "073",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D008（成效评估）的成因：从源头到结果依次经历了哪些事件？"
+  }
+]

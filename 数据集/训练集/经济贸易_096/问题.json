@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_096_Q01",
+    "pack_id": "096",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D001（政策落地）所代表的条件被移除，后续的D002（市场反应）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "economy_trade_096_Q02",
+    "pack_id": "096",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_096_Q03",
+    "pack_id": "096",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示TTF基准对趋势展望不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "economy_trade_096_Q04",
+    "pack_id": "096",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D009（趋势展望）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "economy_trade_096_Q05",
+    "pack_id": "096",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D004（专家分析）所代表的条件被移除，后续的D006（中小企业影响）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "economy_trade_096_Q06",
+    "pack_id": "096",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D004（专家分析）发生在D006（中小企业影响）之前，这是否足以说明D004（专家分析）是D006（中小企业影响）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "economy_trade_096_Q07",
+    "pack_id": "096",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D002（市场反应）与某一事件存在直接因果，请指出该事件及其影响。"
+  }
+]

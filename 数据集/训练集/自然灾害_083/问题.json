@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_083_Q01",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从特大暴雨发生到城市内涝治理展望，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q02",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "排水系统问题调查（D004）和海绵城市建设反思（D005）都对治理展望（D008）有影响，二者中哪一个的影响更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q03",
+    "pack_id": "083",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设城市排水系统完善、海绵城市建设到位（即D004和D005中描述的问题都不存在），此次内涝灾害（D001）的影响会有什么不同？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q04",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "气象专家解读极端降雨（D007）与受灾群众安置（D006）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q05",
+    "pack_id": "083",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测该市下一次发生特大暴雨的具体日期？"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q06",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "特大暴雨发生（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q07",
+    "pack_id": "083",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于灾害发生和影响评估（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

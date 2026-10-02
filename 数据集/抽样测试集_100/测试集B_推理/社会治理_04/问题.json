@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_004_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（社会事件）早于D004（责任追究），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "social_governance_004_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D008（舆论关注）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "social_governance_004_Q03",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对社会共治的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "social_governance_004_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（社会事件），说明经由哪些中间事件最终导致了D009（社会共治）。"
+  },
+  {
+    "sample_id": "social_governance_004_Q05",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "结合材料，材料是否给出了D001（社会事件）中中共中央国务院相关负责人的个人从业年限？请依据材料回答。"
+  },
+  {
+    "sample_id": "social_governance_004_Q06",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（社会事件）未曾出现，D002（官方回应）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "social_governance_004_Q07",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，若观测截断在D006（法治建设）阶段（当前已知：D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），后续走向如何？请给出可验证预测。"
+  }
+]

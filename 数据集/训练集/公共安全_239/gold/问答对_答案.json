@@ -1,0 +1,301 @@
+[
+  {
+    "sample_id": "public_safety_239_Q01",
+    "pack_id": "239",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故发生后现场是如何组织应急救援的？",
+    "answers": "现场指挥部实行统一指挥、多部门联合救援：调集消防、医疗、公安、交通、燃气抢险等专业力量携带装备昼夜作战，科学施救，控制现场险情动态，全力搜救被困人员、处置次生事故，医疗急救与交通疏导等部门协同，最大限度减少人员伤亡和财产损失。",
+    "answer_facts": {
+      "required_facts": [
+        "事故（D001）发生后由现场指挥部（D002）统一指挥、科学施救",
+        "调集消防、医疗、公安、燃气抢险等专业力量协同救援",
+        "目标是控制险情、搜救被困人员、减少人员和财产损失"
+      ],
+      "optional_facts": [
+        "因果关系：D001（燃爆事故发生）→ D002（现场指挥部应急救援）",
+        "救援措施包括处置次生事故、医疗急救与交通疏导"
+      ],
+      "forbidden_facts": [
+        "把追责问责（D005）或事件调查（D006）当作现场救援措施",
+        "引入原文未出现的具体伤亡数字或救援队番号"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_239_Q02",
+    "pack_id": "239",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故认定的直接原因和主要因素是什么？",
+    "answers": "经调查组认定，事故的直接原因是燃气泄漏、在密闭空间聚集形成易燃气源并发生燃爆；主要因素包括相关单位安全生产责任不落实、隐患排查治理不到位、违规操作与执法监管存在薄弱环节、从业人员安全意识和应急准备不足等，属责任事故。",
+    "answer_facts": {
+      "required_facts": [
+        "直接原因：燃气泄漏在密闭空间聚集形成易燃气源并燃爆（D006 调查认定）",
+        "主要因素：相关单位安全生产责任不落实、隐患排查治理不到位",
+        "认定为责任事故，存在违规操作与监管薄弱环节"
+      ],
+      "optional_facts": [
+        "因果关系：D001（燃爆事故）→ D006（事件调查查明直接原因）",
+        "从业人员安全意识与应急准备不足"
+      ],
+      "forbidden_facts": [
+        "将原因归结为不可抗力或自然因素",
+        "编造原文未出现的具体责任人姓名或处罚结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_239_Q03",
+    "pack_id": "239",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故发生后如何进行追责问责？",
+    "answers": "司法机关与监察机关依据调查结论，对负有直接责任的单位和人员采取强制措施、追究法律责任，对负有领导和监管责任的人员依法依规给予党纪政务处分；对涉嫌违法犯罪的移送司法机关查处，通过追责问责警示教育、压实安全生产责任。",
+    "answer_facts": {
+      "required_facts": [
+        "司法机关与监察机关依法依规追究相关单位和人员责任（D005）",
+        "对直接责任人采取强制措施、追究法律责任",
+        "对领导和监管责任人给予党纪政务处分，涉嫌犯罪的移送司法"
+      ],
+      "optional_facts": [
+        "因果关系：D001（燃爆事故）→ D005（追责问责）",
+        "追责目的是警示教育、压实安全生产责任"
+      ],
+      "forbidden_facts": [
+        "把追责问责与应急救援（D002）混为一谈",
+        "编造原文未列明的具体处分档次或人数"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_239_Q04",
+    "pack_id": "239",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事故发生后开展了哪些专项督查和排查？",
+    "answers": "有关主管部门以事故为鉴开展地下空间燃气安全专项督查，全面排查突出问题：建立问题隐患清单，落实闭环整改，压实企业主体责任和部门监管责任；同时开展燃气管道等重点部位安全隐患排查，对督办案件挂牌整改、逐一销号，确保整改见底、见效。",
+    "answer_facts": {
+      "required_facts": [
+        "有关部门开展地下空间燃气安全专项督查（D004）",
+        "全面排查突出问题，建立隐患清单并闭环整改",
+        "压实企业主体责任与部门监管责任"
+      ],
+      "optional_facts": [
+        "传导路径：D001（事故）→ D003（情况通报）→ D004（专项督查）",
+        "直接路径：D001（事故）→ D004（专项督查）",
+        "对督办案件挂牌整改、逐一销号"
+      ],
+      "forbidden_facts": [
+        "把专项督查等同于事故当日的现场救援",
+        "引入原文未出现的督查覆盖范围或具体数字"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "燃气燃爆事故发生",
+        "政府情况通报",
+        "开展燃气安全专项督查"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_239_Q05",
+    "pack_id": "239",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通过情况通报回应社会关切？",
+    "answers": "政府有关部门第一时间召开新闻通报会，及时准确通报事故基本情况、伤亡救治进展、原因初判和处置措施，公开信息、回应舆论关切，防止谣言和不实炒作，切实保障公众知情权、稳定社会预期。",
+    "answer_facts": {
+      "required_facts": [
+        "政府有关部门召开新闻通报会及时通报事故情况（D003）",
+        "通报内容包括伤亡救治进展、原因初判和处置措施",
+        "目的是保障公众知情权、稳定社会预期、防止谣言"
+      ],
+      "optional_facts": [
+        "因果关系：D001（燃爆事故）→ D003（情况通报）",
+        "公开信息回应舆论关切"
+      ],
+      "forbidden_facts": [
+        "将情况通报与专项督查（D004）或追责（D005）混淆",
+        "编造原文未提及的通报场次或具体发布数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_239_Q06",
+    "pack_id": "239",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生哪些长远影响？",
+    "answers": "预计此次事件将推动进一步压实安全生产责任，健全党政同责、一岗双责、失职追责机制；预计将推动完善燃气等城市生命线安全管理制度，压实企业主体责任和部门监管责任；预计将在长期内提升全社会安全意识，逐步形成事前防范、闭环整改的长效治理格局。",
+    "answer_facts": {
+      "required_facts": [
+        "预计推动压实安全生产责任、健全党政同责与失职追责机制",
+        "预计完善燃气等城市生命线安全管理制度",
+        "预计长期提升全社会安全意识并形成长效治理"
+      ],
+      "optional_facts": [
+        "基于已发生的追责问责（D005）与专项督查（D004）作出的前瞻判断",
+        "由事故（D001）教训转化为制度性防范"
+      ],
+      "forbidden_facts": [
+        "断言具体的立法时间表或制度出台日期",
+        "把预测表述为已确证发生的事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-03-08",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      "predicted": [
+        "D006",
+        "D005"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_239_Q07",
+    "pack_id": "239",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？",
+    "answers": "预计未来将在专项整改成果基础上建立常态化机制：预计推动把安全隐患排查整改的经验做法固化为长效制度，防止问题反弹回潮；预计推动常态化隐患排查、闭环销号；预计加强安全教育与应急能力建设，把每一次事件的教训及时转化为治本安全的制度举措。",
+    "answer_facts": {
+      "required_facts": [
+        "预计把专项整改经验固化为常态化长效机制、防止反弹",
+        "预计推动常态化隐患排查与闭环销号",
+        "预计加强安全教育与应急能力建设"
+      ],
+      "optional_facts": [
+        "基于专项督查（D004）、安全教育（D007）与动员部署（D008）的前瞻判断",
+        "把事件教训转化为治本安全的制度举措"
+      ],
+      "forbidden_facts": [
+        "断言问题一定不再发生的绝对结论",
+        "编造原文未出现的具体考核指标或时限"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-03-08",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      "predicted": [
+        "D006",
+        "D005"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

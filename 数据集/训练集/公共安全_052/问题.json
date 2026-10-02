@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_052_Q01",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D007（调查评估与核查）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "public_safety_052_Q02",
+    "pack_id": "052",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D007（调查评估与核查）所代表的条件被移除，后续的D008（责任追究与处理）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_052_Q03",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D010（整治成效显现）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_052_Q04",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起事故的起因，网络上流传'系有人蓄意纵火''是失控汽车撞击引发起火'等说法（D013），而官方调查（D007）认定为燃气软管老化开裂泄漏遇明火爆炸。两类来源相互矛盾，应如何取舍并说明理由？"
+  },
+  {
+    "sample_id": "public_safety_052_Q05",
+    "pack_id": "052",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2024-02-24（D001 安全事件/风险发生；D002 应急响应与救援；D003 应急响应与指挥；D004 伤员救治；D005 调查评估与核查），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_052_Q06",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，事件D001（安全事件/风险发生）在时间/进程上早于D002（应急响应与救援）。能否据此断定D001（安全事件/风险发生）导致了D002（应急响应与救援）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_052_Q07",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D001（安全事件/风险发生）的直接下游事件之一是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "public_safety_052_Q08",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到同期邻近城市的燃气小故障（D017）以及国内其他地方的历史燃气爆炸案例（D018）。这些信息是否属于苏州'2·23'事故的成因或后果？请判断并说明理由。"
+  },
+  {
+    "sample_id": "public_safety_052_Q09",
+    "pack_id": "052",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，涉事橡胶软管究竟从何时开始老化开裂、燃气泄漏持续了多长时间？请依据材料作答。"
+  }
+]

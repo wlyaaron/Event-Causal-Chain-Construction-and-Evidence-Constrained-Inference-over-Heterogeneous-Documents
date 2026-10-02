@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_082_Q01",
+    "pack_id": "082",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2010年巴基斯坦洪水造成了多少人受灾、多少人死亡、多少经济损失？洪水覆盖了巴基斯坦多大面积？"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q02",
+    "pack_id": "082",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么2010年巴基斯坦洪水会造成如此巨大的破坏？请从自然因素（气象、水文）和人为因素（基础设施、治理能力）两个层面分析其因果链条。"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q03",
+    "pack_id": "082",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：西北部暴雨爆发、洪水蔓延至信德省、联合国发出募捐呼吁、苏库尔大坝面临溃坝风险、洪水水位开始下降、灾后重建启动。"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q04",
+    "pack_id": "082",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2010年巴基斯坦洪水与2004年印度洋海啸在灾害类型、影响范围、国际援助响应和恢复难度方面的异同。"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q05",
+    "pack_id": "082",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2010年巴基斯坦洪水如何通过农业减产、基础设施损毁、公共卫生危机等多个环节，最终影响到巴基斯坦的宏观经济和粮食安全？请梳理完整的传导链条。"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q06",
+    "pack_id": "082",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2010年巴基斯坦洪水在人道主义、经济发展、基础设施和气候变化政策四个方面产生的主要长期影响和教训。"
+  },
+  {
+    "sample_id": "natural_disaster_082_Q07",
+    "pack_id": "082",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设巴基斯坦在2010年之前拥有完善的洪水预警系统和高标准的防洪基础设施，2010年洪水的损失可能会有哪些不同？哪些影响仍然难以避免？"
+  }
+]

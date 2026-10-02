@@ -1,0 +1,452 @@
+[
+  {
+    "event_id": "D001",
+    "doc_id": "D001",
+    "event_type": "安全事件",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "受影响机构",
+      "地点": "乌克兰全球",
+      "内容": "NotPetya攻击推动安全标准升级一起涉及NotPetya的重大网络安全事件于2017-06-27在乌克兰全球浮出水面——NotPetya攻击。受影响方紧急开展系统排查和数据保全工作，努力将损失降到最低。",
+      "影响": "NotPetya攻击推动安全标准升级"
+    },
+    "occur_time": "2017-06-27",
+    "start": 0,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D001",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "受影响机构",
+        "doc_id": "D001",
+        "start": 138,
+        "end": 143
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D001",
+        "start": 52,
+        "end": 57
+      },
+      {
+        "field": "影响",
+        "text": "NotPetya攻击推动安全标准升级",
+        "doc_id": "D001",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "event_id": "D002",
+    "doc_id": "D002",
+    "event_type": "技术分析",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "安全机构",
+      "地点": "乌克兰全球",
+      "内容": "安全机构披露NotPetya攻击技术细节一起涉及NotPetya的重大网络安全事件于2017-06-27在乌克兰全球浮出水面——NotPetya攻击。乌克兰迅速启动应急响应，对受影响的系统进行全面排查和漏洞修补。",
+      "影响": "受影响机构的数据恢复和业务重建工作面临严峻挑战"
+    },
+    "occur_time": "2017-06-27",
+    "start": 6,
+    "end": 14,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D002",
+        "start": 6,
+        "end": 14
+      },
+      {
+        "field": "主体",
+        "text": "安全机构",
+        "doc_id": "D002",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D002",
+        "start": 54,
+        "end": 59
+      },
+      {
+        "field": "影响",
+        "text": "受影响机构的数据恢复和业务重建工作面临严峻挑战",
+        "doc_id": "D002",
+        "start": 146,
+        "end": 169
+      }
+    ]
+  },
+  {
+    "event_id": "D003",
+    "doc_id": "D003",
+    "event_type": "应急响应",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "据网络安全部",
+      "地点": "乌克兰全球",
+      "内容": "NotPetya攻击受影响方紧急应对据网络安全部门监测发现，2017-06-27乌克兰全球发生NotPetya安全事件，NotPetya攻击影响恶劣。攻击手法具有高度隐蔽性，常规安全防护手段难以有效识别和拦截。",
+      "影响": "NotPetya攻击受影响方紧急应对"
+    },
+    "occur_time": "2017-06-27",
+    "start": 0,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D003",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "据网络安全部",
+        "doc_id": "D003",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D003",
+        "start": 41,
+        "end": 46
+      },
+      {
+        "field": "影响",
+        "text": "NotPetya攻击受影响方紧急应对",
+        "doc_id": "D003",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "event_id": "D004",
+    "doc_id": "D004",
+    "event_type": "监管约谈",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "据网络安全部",
+      "地点": "乌克兰全球",
+      "内容": "NotPetya攻击推动安全标准升级据网络安全部门监测发现，2017-06-27乌克兰全球发生NotPetya安全事件，NotPetya攻击影响恶劣。攻击手法具有高度隐蔽性，常规安全防护手段难以有效识别和拦截。",
+      "影响": "NotPetya攻击推动安全标准升级"
+    },
+    "occur_time": "2017-06-27",
+    "start": 0,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D004",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "据网络安全部",
+        "doc_id": "D004",
+        "start": 19,
+        "end": 25
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D004",
+        "start": 41,
+        "end": 46
+      },
+      {
+        "field": "影响",
+        "text": "NotPetya攻击推动安全标准升级",
+        "doc_id": "D004",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "event_id": "D005",
+    "doc_id": "D005",
+    "event_type": "黑产溯源",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "网信部",
+      "地点": "乌克兰全球",
+      "内容": "网信部门就NotPetya攻击约谈相关方2017-06-27的乌克兰全球成为网络安全焦点，NotPetya攻击事件震惊业界。安全机构对攻击样本进行了深入逆向分析，揭示了NotPetya攻击的完整技术链条。",
+      "影响": "全球损失超100亿美元，此次安全事件波及面广，受影响用户数量庞大"
+    },
+    "occur_time": "2017-06-27",
+    "start": 5,
+    "end": 13,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D005",
+        "start": 5,
+        "end": 13
+      },
+      {
+        "field": "主体",
+        "text": "网信部",
+        "doc_id": "D005",
+        "start": 0,
+        "end": 3
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D005",
+        "start": 32,
+        "end": 37
+      },
+      {
+        "field": "影响",
+        "text": "全球损失超100亿美元，此次安全事件波及面广，受影响用户数量庞大",
+        "doc_id": "D005",
+        "start": 147,
+        "end": 179
+      }
+    ]
+  },
+  {
+    "event_id": "D006",
+    "doc_id": "D006",
+    "event_type": "标准升级",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "行业安全联盟紧急召开会",
+      "地点": "乌克兰全球",
+      "内容": "NotPetya攻击背后黑产链条曝光2017-06-27，乌克兰全球爆出网络安全漏洞，NotPetya攻击波及范围广泛。受影响方紧急开展系统排查和数据保全工作，努力将损失降到最低。",
+      "影响": "受影响机构的数据恢复和业务重建工作面临严峻挑战"
+    },
+    "occur_time": "2017-06-27",
+    "start": 0,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D006",
+        "start": 0,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "行业安全联盟紧急召开会",
+        "doc_id": "D006",
+        "start": 92,
+        "end": 103
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D006",
+        "start": 30,
+        "end": 35
+      },
+      {
+        "field": "影响",
+        "text": "受影响机构的数据恢复和业务重建工作面临严峻挑战",
+        "doc_id": "D006",
+        "start": 374,
+        "end": 397
+      }
+    ]
+  },
+  {
+    "event_id": "D007",
+    "doc_id": "D007",
+    "event_type": "治理挑战",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "据网络安全部",
+      "地点": "乌克兰全球",
+      "内容": "多国联手打击NotPetya攻击跨境犯罪据网络安全部门监测发现，2017-06-27乌克兰全球发生NotPetya安全事件，NotPetya攻击影响恶劣。攻击手法具有高度隐蔽性，常规安全防护手段难以有效识别和拦截。",
+      "影响": "受影响机构的数据恢复和业务重建工作面临严峻挑战"
+    },
+    "occur_time": "2017-06-27",
+    "start": 6,
+    "end": 14,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D007",
+        "start": 6,
+        "end": 14
+      },
+      {
+        "field": "主体",
+        "text": "据网络安全部",
+        "doc_id": "D007",
+        "start": 21,
+        "end": 27
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D007",
+        "start": 43,
+        "end": 48
+      },
+      {
+        "field": "影响",
+        "text": "受影响机构的数据恢复和业务重建工作面临严峻挑战",
+        "doc_id": "D007",
+        "start": 249,
+        "end": 272
+      }
+    ]
+  },
+  {
+    "event_id": "D008",
+    "doc_id": "D008",
+    "event_type": "用户维权",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "网信监管部",
+      "地点": "乌克兰全球",
+      "内容": "从NotPetya攻击看网络治理新挑战2017-06-27，乌克兰全球爆出网络安全漏洞，NotPetya攻击波及范围广泛。攻击手法具有高度隐蔽性，常规安全防护手段难以有效识别和拦截。",
+      "影响": "受影响机构的数据恢复和业务重建工作面临严峻挑战"
+    },
+    "occur_time": "2017-06-27",
+    "start": 1,
+    "end": 9,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D008",
+        "start": 1,
+        "end": 9
+      },
+      {
+        "field": "主体",
+        "text": "网信监管部",
+        "doc_id": "D008",
+        "start": 93,
+        "end": 98
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D008",
+        "start": 31,
+        "end": 36
+      },
+      {
+        "field": "影响",
+        "text": "受影响机构的数据恢复和业务重建工作面临严峻挑战",
+        "doc_id": "D008",
+        "start": 136,
+        "end": 159
+      }
+    ]
+  },
+  {
+    "event_id": "D009",
+    "doc_id": "D009",
+    "event_type": "防范建议",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "安全研究机构",
+      "地点": "乌克兰全球",
+      "内容": "安全专家支招防范NotPetya攻击风险安全研究机构报告指出，2017-06-27发生在乌克兰全球的NotPetya攻击是一起有组织的高级网络攻击。受影响方紧急开展系统排查和数据保全工作，努力将损失降到最低。",
+      "影响": "受影响机构的数据恢复和业务重建工作面临严峻挑战"
+    },
+    "occur_time": "2017-06-27",
+    "start": 8,
+    "end": 16,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D009",
+        "start": 8,
+        "end": 16
+      },
+      {
+        "field": "主体",
+        "text": "安全研究机构",
+        "doc_id": "D009",
+        "start": 21,
+        "end": 27
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D009",
+        "start": 45,
+        "end": 50
+      },
+      {
+        "field": "影响",
+        "text": "受影响机构的数据恢复和业务重建工作面临严峻挑战",
+        "doc_id": "D009",
+        "start": 138,
+        "end": 161
+      }
+    ]
+  },
+  {
+    "event_id": "D010",
+    "doc_id": "D010",
+    "event_type": "跨境打击",
+    "trigger_word": "NotPetya",
+    "argument": {
+      "主体": "安全机构",
+      "地点": "乌克兰全球",
+      "内容": "安全机构披露NotPetya攻击技术细节据网信部门通报，NotPetya攻击于2017-06-27在乌克兰全球被发现，NotPetya安全风险不容忽视。初步调查显示，攻击者通过多阶段渗透逐步突破防线，最终实施了NotPetya攻击。",
+      "影响": "乌克兰迅速启动应急响应，对受影响的系统进行全面排查和漏洞修补"
+    },
+    "occur_time": "2017-06-27",
+    "start": 6,
+    "end": 14,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "NotPetya",
+        "doc_id": "D010",
+        "start": 6,
+        "end": 14
+      },
+      {
+        "field": "主体",
+        "text": "安全机构",
+        "doc_id": "D010",
+        "start": 0,
+        "end": 4
+      },
+      {
+        "field": "地点",
+        "text": "乌克兰全球",
+        "doc_id": "D010",
+        "start": 51,
+        "end": 56
+      },
+      {
+        "field": "影响",
+        "text": "乌克兰迅速启动应急响应，对受影响的系统进行全面排查和漏洞修补",
+        "doc_id": "D010",
+        "start": 220,
+        "end": 250
+      }
+    ]
+  }
+]

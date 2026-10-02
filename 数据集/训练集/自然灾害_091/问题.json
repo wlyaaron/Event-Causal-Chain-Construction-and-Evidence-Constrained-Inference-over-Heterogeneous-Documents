@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_091_Q01",
+    "pack_id": "091",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（灾害发生）先于D004（灾情安置）发生，可以据此断定D001（灾害发生）是D004（灾情安置）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q02",
+    "pack_id": "091",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（灾害发生）没有发生（或被及时干预阻断），D002（应急救援）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q03",
+    "pack_id": "091",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道D006（灾后重建）阶段前进展（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q04",
+    "pack_id": "091",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，澳大利亚相关的D006（灾后重建）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q05",
+    "pack_id": "091",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，澳大利亚昆士兰新南威尔士周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q06",
+    "pack_id": "091",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（预警建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_091_Q07",
+    "pack_id": "091",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（预警建设）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  }
+]

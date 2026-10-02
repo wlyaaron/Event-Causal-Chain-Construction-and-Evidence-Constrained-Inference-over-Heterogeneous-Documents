@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "程序推进",
+    "description": "菲律宾提起仲裁后，仲裁庭经过两年多审理，于2015年作出管辖权裁决，进入实体审理阶段。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D003",
+    "relation_type": "程序推进",
+    "description": "仲裁庭取得管辖权后，经过一年实体审理，于2016年7月作出最终裁决。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D004",
+    "relation_type": "局势升级",
+    "description": "仲裁裁决公布前后，美国派遣双航母进入南海展示武力，对中国形成军事高压态势。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D005",
+    "relation_type": "外交交锋",
+    "description": "仲裁裁决引发中美在外交层面的激烈交锋，双方外长多次会谈博弈。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D006",
+    "relation_type": "区域反应",
+    "description": "仲裁裁决公布后，东盟国家在如何回应问题上出现严重立场分化。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D003",
+    "relation_type": "争议焦点",
+    "description": "中国在南海的岛礁建设是仲裁案的重要争议焦点之一，仲裁庭裁定岛礁建设违反公约。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D010",
+    "relation_type": "军事延续",
+    "description": "双航母部署后，美国继续以航行自由行动常态化的方式在南海保持军事压力。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D008",
+    "relation_type": "政策调整",
+    "description": "仲裁裁决后菲律宾新总统杜特尔特选择务实路线，访华推动中菲关系转圜。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D011",
+    "relation_type": "合作推进",
+    "description": "中菲关系转圜后，双方就渔业和油气资源开发开展合作磋商。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D009",
+    "relation_type": "共识推动",
+    "description": "东盟立场分化使各方认识到通过对话和规则建设解决分歧的重要性，推动准则磋商加速。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D009",
+    "relation_type": "氛围改善",
+    "description": "中菲关系转圜改善了南海地区氛围，为南海行为准则磋商创造了有利条件。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D010",
+    "effect_event_id": "D012",
+    "relation_type": "格局塑造",
+    "description": "美国航行自由行动常态化推动了南海地区安全格局的深度调整。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D012",
+    "relation_type": "长期影响",
+    "description": "仲裁裁决虽公布但无法执行，标志着南海争议进入长期化复杂化阶段。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D012",
+    "relation_type": "实力变化",
+    "description": "中国岛礁建设显著增强了在南海的实际控制能力，深刻改变了地区力量对比。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D012",
+    "relation_type": "战略博弈",
+    "description": "中美在南海的持续外交博弈推动地区安全格局向中美战略竞争方向演变。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D011",
+    "effect_event_id": "D012",
+    "relation_type": "争议延续",
+    "description": "渔业和油气资源争端的持续存在使南海争议难以在短期内解决。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "间接影响",
+    "description": "菲律宾提起仲裁后，中国加快了南海岛礁建设步伐以巩固实际控制。",
+    "pack_id": "141"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D007",
+    "relation_type": "反制措施",
+    "description": "美国军事施压促使中国进一步加强岛礁军事部署和基础设施建设。",
+    "pack_id": "141"
+  }
+]

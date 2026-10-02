@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "diplomacy_101_Q01",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（合作成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_101_Q02",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（合作机制建立发展）在D002（领导人会晤机制）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_101_Q03",
+    "pack_id": "101",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（合作机制建立发展）这一原因，D002（领导人会晤机制）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_101_Q04",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（合作意义与影响），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_101_Q05",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于双边贸易额的具体规模，材料中存在不同说法（D014）：一处称2022年已达上千亿美元，另有地方机构统计称尚不足千亿美元。应如何看待这一矛盾？"
+  },
+  {
+    "sample_id": "diplomacy_101_Q06",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（合作机制建立发展）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_101_Q07",
+    "pack_id": "101",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于持续广泛开展（D001 合作机制建立发展；D002 领导人会晤机制；D003 经贸合作成果；D004 基建互联互通合作；D005 地方与人文交流），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_101_Q08",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到某中东欧城市举办地方民俗风情展演（D016），这一活动是否属于推动中国-中东欧合作前景展望（D010）的因果环节？请判断并说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_101_Q09",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料中一份尚未确认的青年交流计划（D015），能否确定其牵头方、启动时间与具体名额？若不能，缺少哪些关键信息？"
+  }
+]

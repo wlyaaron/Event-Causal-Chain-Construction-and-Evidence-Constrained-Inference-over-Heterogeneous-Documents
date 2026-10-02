@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_166_Q01",
+    "pack_id": "166",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "东日本大地震的震级是多少？海啸最高达到多少米？最终遇难和失踪人数分别是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q02",
+    "pack_id": "166",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "福岛第一核电站为什么会发生堆芯熔毁？海啸是如何通过哪些环节导致核事故的？"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q03",
+    "pack_id": "166",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：核污染水排海决定、福岛核电站实现冷停堆、全国核电全部停运、福岛核事故等级升至7级、东日本大地震发生。"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q04",
+    "pack_id": "166",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "福岛核事故与切尔诺贝利核事故在事故等级、原因、泄漏量和应对方式上有什么异同？"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q05",
+    "pack_id": "166",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "东日本大地震如何通过一系列连锁反应最终影响到日本的能源政策、国际贸易和全球核安全标准？"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q06",
+    "pack_id": "166",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括福岛核事故对日本社会、经济和环境产生的主要长期影响。"
+  },
+  {
+    "sample_id": "natural_disaster_166_Q07",
+    "pack_id": "166",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设福岛第一核电站在建设时就考虑了15米以上海啸的防护措施，核事故是否有可能避免？请分析关键防护环节。"
+  }
+]

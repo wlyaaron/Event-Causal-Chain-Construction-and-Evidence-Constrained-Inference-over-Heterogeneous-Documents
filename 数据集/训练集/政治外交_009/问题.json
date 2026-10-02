@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "diplomacy_009_Q01",
+    "pack_id": "009",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D002（官方声明）阶段（当前已知：D001 外交会晤；D002 官方声明），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q02",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D007（国际回应）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "diplomacy_009_Q03",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（专家解读）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q04",
+    "pack_id": "009",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（外交会晤）没有发生（或被及时干预阻断），D002（官方声明）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q05",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D004（双边会谈）早于D005（多边场合），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q06",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（外交会晤）到D008（共识落实）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q07",
+    "pack_id": "009",
+    "question_type": "conflicting",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于联合声明所涵盖的合作条目数量，不同来源报道不一（数十项/逾百项/多项）。应如何判断？请说明处理方式。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q08",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提及了历史届次峰会案例（D014）与某国经贸换文报道（D015）。在还原本次广岛峰会的因果主线时，这些信息是否应当采信为因果环节？请说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_009_Q09",
+    "pack_id": "009",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据D013提及的那份未经署名的'会谈纪要'，能否确定其形成的具体时间与来源主体？请依据材料判断。"
+  }
+]

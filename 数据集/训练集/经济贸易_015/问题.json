@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "economy_trade_015_Q01",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（现代应用），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "economy_trade_015_Q02",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D003（危机原因分析）在D001（经济危机爆发）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "economy_trade_015_Q03",
+    "pack_id": "015",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（经济危机爆发）这一原因，D002（经济社会衰退）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "economy_trade_015_Q04",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D005（社会制度变革），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_015_Q05",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于大萧条谷底德国失业的具体规模，材料中不同来源的说法是否一致？应如何取舍判断？"
+  },
+  {
+    "sample_id": "economy_trade_015_Q06",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（经济危机爆发）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "economy_trade_015_Q07",
+    "pack_id": "015",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于长期影响（D001 经济危机爆发；D002 经济社会衰退；D003 危机原因分析；D004 新政改革；D005 社会制度变革），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_015_Q08",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到同一时期欧洲举办了若干大型体育赛事和文化博览活动（D015），这一现象是否属于推动D008（政治极端化）的因果原因？请判断并说明理由。"
+  },
+  {
+    "sample_id": "economy_trade_015_Q09",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定某国放弃金本位前所谓秘密内部评估方案（D014）的具体内容、拟定主体和时间？若不能，缺少哪些信息？"
+  }
+]

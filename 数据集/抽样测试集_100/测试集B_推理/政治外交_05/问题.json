@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（外交会晤），说明经由哪些中间事件最终导致了D009（专家解读）。"
+  },
+  {
+    "sample_id": "diplomacy_005_Q02",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_005_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料中关于D004（双边会谈）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "diplomacy_005_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（共识落实）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_005_Q05",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化官方声明对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "diplomacy_005_Q06",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D001（外交会晤）这一原因，D002（官方声明）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（外交会晤）在进程上早于D004（双边会谈）。能否据此认为D001（外交会晤）导致了D004（双边会谈）？请给出判断与证据。"
+  }
+]

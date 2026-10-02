@@ -1,0 +1,458 @@
+[
+  {
+    "sample_id": "cybersecurity_06_Q01",
+    "pack_id": "06",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（标准升级）阶段前进展（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D007（治理挑战）、D008（用户维权）、D009（防范建议）。核心节点是治理挑战：物联网安全折射出网络空间治理面临的新挑战。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理挑战"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（用户维权）, D009（防范建议）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（标准升级）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理挑战"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q02",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于标准升级事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“超150亿物联网设备面临风险”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（防范建议）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "完整因果链：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）。其中，安全事件为起点，经逐级传导，最终导致防范建议；超150亿物联网设备面临风险。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件） 到终点 D009（防范建议） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件）",
+        "终点为 D009（防范建议）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）",
+        "可包含关键环节 D002（技术分析）",
+        "可包含关键环节 D003（应急响应）",
+        "可包含关键环节 D004（监管约谈）",
+        "可包含关键环节 D006（标准升级）",
+        "可包含关键环节 D008（用户维权）",
+        "终点影响：超150亿物联网设备面临风险"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "安全事件",
+        "技术分析",
+        "应急响应",
+        "监管约谈",
+        "标准升级",
+        "用户维权",
+        "防范建议"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q04",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "材料是否给出了D001（安全事件）中IoT安全联盟相关负责人的个人从业年限？请依据材料回答。",
+    "answers": "无法确定：现有材料未记载该精确数据，属于缺失信息，应拒答而非臆测。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q05",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D001（安全事件）被阻断，D002（技术分析）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，超150亿物联网设备面临风险 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D002（技术分析）直接引发了哪一事件？请指出并说明依据。",
+    "answers": "直接因果链为 D002（技术分析） → D003（应急响应）。后果：物联网安全发生后，IoT安全联盟迅速启动应急响应机制。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（技术分析） 直接导致 D003（应急响应）",
+        "后果：物联网安全发生后，IoT安全联盟迅速启动应急响应机制"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D003（应急响应） 导致 D002（技术分析）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q07",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（用户维权）的完整因果路径，并标明证据顺序。",
+    "answers": "按证据顺序，成因链为 D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权）。自安全事件出发逐环传导至用户维权；超150亿物联网设备面临风险。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件） 到终点 D008（用户维权） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件）",
+        "终点为 D008（用户维权）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权）",
+        "可包含关键环节 D002（技术分析）",
+        "可包含关键环节 D003（应急响应）",
+        "可包含关键环节 D004（监管约谈）",
+        "可包含关键环节 D006（标准升级）",
+        "终点影响：超150亿物联网设备面临风险"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "安全事件",
+        "技术分析",
+        "应急响应",
+        "监管约谈",
+        "标准升级",
+        "用户维权"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

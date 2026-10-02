@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_070_Q01",
+    "pack_id": "070",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（全球疫苗接种启动与变异病毒出现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_070_Q02",
+    "pack_id": "070",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（武汉不明原因肺炎出现与病毒鉴定）在D002（武汉封城与全国一级响应）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_070_Q03",
+    "pack_id": "070",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D005（WHO宣布全球大流行与各国封锁）这一环节，D006（东京奥运推迟与G20特别峰会）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_070_Q04",
+    "pack_id": "070",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（武汉封城与全国一级响应）之后直接推动了哪个事件？"
+  },
+  {
+    "sample_id": "diplomacy_070_Q05",
+    "pack_id": "070",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测新冠疫苗对全球经济复苏的具体影响数值和时间节点？"
+  },
+  {
+    "sample_id": "diplomacy_070_Q06",
+    "pack_id": "070",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2020年5月31日（D001至D008均已发生，世卫大会结束），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_070_Q07",
+    "pack_id": "070",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D010（COVAX计划与联合国75周年）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

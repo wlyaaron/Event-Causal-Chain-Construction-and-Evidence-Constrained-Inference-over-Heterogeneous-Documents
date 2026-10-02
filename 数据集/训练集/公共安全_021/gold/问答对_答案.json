@@ -1,0 +1,354 @@
+[
+  {
+    "sample_id": "public_safety_021_Q01",
+    "pack_id": "021",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（安全事件/风险发生）到D005（善后处置推进）的完整因果传导过程，并按序列出证据。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事件/风险发生） → D002（应急响应与救援） → D005（善后处置推进）。起点为安全事件/风险发生，终点为善后处置推进；善后处置有序推进。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D005（善后处置推进） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D005（善后处置推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D002（应急响应与救援） → D005（善后处置推进）",
+        "可包含关键环节 D002（应急响应与救援）",
+        "终点影响：善后处置有序推进"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "应急响应与救援",
+        "善后处置推进"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_021_Q02",
+    "pack_id": "021",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，已知D001（安全事件/风险发生）先于D005（善后处置推进）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D005（直接因果），不是先后关系。证据：15个善后小组一对一帮扶遇难者家属。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 与 D005（善后处置推进） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（善后处置推进） 导致 D001（安全事件/风险发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_021_Q03",
+    "pack_id": "021",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2021-07-26（D001 安全事件/风险发生；D002 应急响应与救援；D003 上级督导检查；D004 专项整治部署；D005 善后处置推进），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D007（事故原因初步查明）、D006（专项整治部署）、D008（调查评估与问责）；其中最关键的是事故原因初步查明——初步查明火灾系一层照明线路漏电引燃可燃装饰材料所致。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:事故原因初步查明"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（专项整治部署）, D008（调查评估与问责）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-07-26",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D007",
+        "D006",
+        "D008"
+      ],
+      "ground_truth": "D007:事故原因初步查明"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_021_Q04",
+    "pack_id": "021",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（调查评估与问责）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "按证据顺序，成因链为 D001（安全事件/风险发生） → D007（事故原因初步查明） → D008（调查评估与问责）。自安全事件/风险发生出发逐环传导至调查评估与问责；事故责任得到严肃追究。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D008（调查评估与问责） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D008（调查评估与问责）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D007（事故原因初步查明） → D008（调查评估与问责）",
+        "可包含关键环节 D007（事故原因初步查明）",
+        "终点影响：事故责任得到严肃追究"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "事故原因初步查明",
+        "调查评估与问责"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_021_Q05",
+    "pack_id": "021",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，如果移除D001（安全事件/风险发生）这一原因，D002（应急响应与救援）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D005']]；成功搜救出多名被困人员 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006"
+      ],
+      [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_021_Q06",
+    "pack_id": "021",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请依据材料说明D002（应急响应与救援）的基本事实与直接影响。",
+    "answers": "据材料，D002（应急响应与救援）的主体为长春市消防救援支队及多部门救援力量，发生地为长春市净月区火灾现场及周边医院；调派15个消防站45辆消防车200余名指战员开展灭火救援。其影响：成功搜救出多名被困人员。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：长春市消防救援支队及多部门救援力量",
+        "地点：长春市净月区火灾现场及周边医院",
+        "基本事实：调派15个消防站45辆消防车200余名指战员开展灭火救援"
+      ],
+      "optional_facts": [
+        "影响：成功搜救出多名被困人员"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D002"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_021_Q07",
+    "pack_id": "021",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D005（善后处置推进）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D005（善后处置推进）。其中，安全事件/风险发生为起点，经逐级传导，最终导致善后处置推进；善后处置有序推进。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D005（善后处置推进） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D005（善后处置推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D005（善后处置推进）",
+        "终点影响：善后处置有序推进"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D005"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "善后处置推进"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  }
+]

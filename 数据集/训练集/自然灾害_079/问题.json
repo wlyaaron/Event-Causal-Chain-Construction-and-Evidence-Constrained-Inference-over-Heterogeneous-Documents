@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "natural_disaster_079_Q01",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（机制建设），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q02",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（自然灾害）在D002（转移安置）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q03",
+    "pack_id": "079",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（自然灾害）这一原因，D002（转移安置）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q04",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D004（工作部署），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q05",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于此次灾害紧急转移安置群众的规模，不同材料的说法是否一致？应如何看待？"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q06",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q07",
+    "pack_id": "079",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2006-02-10（D001 自然灾害；D002 转移安置；D003 灾情核查；D004 工作部署；D005 救灾救助），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q08",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到江南水乡文化旅游节，这与此次风暴潮灾害的抢险救援、群众安置存在因果关系吗？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_079_Q09",
+    "pack_id": "079",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定灾后重建总体规划之外追加专项投资支持方案的具体投资总额与实施时间？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_038_Q01",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从台风红色预警发布到最终的防灾减灾经验总结，中间经历了哪些关键的灾害应对环节？请梳理完整的因果传导链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q02",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "抢险救援（D003）和灾情统计（D004）都发生在台风登陆之后，二者中哪一个对灾后安置工作（D005）的推动作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q03",
+    "pack_id": "038",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设气象部门没有提前发布台风红色预警（移除D001），这会对人员伤亡情况和抢险救援工作（D003）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q04",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "农业损失（D008）与社会各界捐助（D009）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q05",
+    "pack_id": "038",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测台风灾区完全恢复正常生产生活秩序所需的具体天数？"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q06",
+    "pack_id": "038",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "台风登陆（D002）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "natural_disaster_038_Q07",
+    "pack_id": "038",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于预警发布和台风登陆（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

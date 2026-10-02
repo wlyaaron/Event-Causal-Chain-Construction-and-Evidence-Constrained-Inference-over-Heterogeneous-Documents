@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_097_Q01",
+    "pack_id": "097",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2022年美联储全年累计加息多少个基点？联邦基金利率目标区间在年底达到什么水平？连续四次加息75个基点是从哪个月开始的？"
+  },
+  {
+    "sample_id": "economy_trade_097_Q02",
+    "pack_id": "097",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么美联储加息会引发全球央行同步收紧货币政策？请从汇率、资本流动和通胀传导三个角度分析传导机制。"
+  },
+  {
+    "sample_id": "economy_trade_097_Q03",
+    "pack_id": "097",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序梳理2022年英国迷你预算危机的关键事件节点，从减税计划公布到特拉斯辞职，再到苏纳克接任。"
+  },
+  {
+    "sample_id": "economy_trade_097_Q04",
+    "pack_id": "097",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2022年美国、欧洲和日本三个经济体的货币政策差异，分析为什么日本央行在全球加息潮中坚持收益率曲线控制政策？这一政策的代价是什么？"
+  },
+  {
+    "sample_id": "economy_trade_097_Q05",
+    "pack_id": "097",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "美联储加息如何通过美元升值、资本外流、外汇储备枯竭、进口中断等链条最终导致斯里兰卡主权债务违约？请梳理完整的传导路径。"
+  },
+  {
+    "sample_id": "economy_trade_097_Q06",
+    "pack_id": "097",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2022年全球通货膨胀与美联储激进加息对全球金融市场、实体经济和地缘经济格局的全方位影响，并总结对未来经济治理的启示。"
+  },
+  {
+    "sample_id": "economy_trade_097_Q07",
+    "pack_id": "097",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设美联储在2021年就提前启动加息周期而非坚持通胀暂时论，2022年的通胀水平和金融市场动荡可能会有什么不同？哪些后果仍然难以避免？"
+  }
+]

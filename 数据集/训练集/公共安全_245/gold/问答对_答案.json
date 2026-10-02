@@ -1,0 +1,299 @@
+[
+  {
+    "sample_id": "public_safety_245_Q01",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通报处置进展、回应社会关切？",
+    "answers": "青岛市召开新闻发布会通报事件处置最新进展，介绍搜救救治、原因调查、善后安置等情况，坚持公开透明、及时准确发布权威信息，主动澄清不实传言，切实保障公众知情权，稳定社会情绪和预期。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（突发事件） 直接导致 D002（情况通报）",
+        "后果：保障公众知情权、稳定社会预期"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（情况通报） 导致 D001（突发事件）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_245_Q02",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？",
+    "answers": "专家用通俗语言普及了相关风险知识和科学避险、自救互救技能，提醒公众日常注意排查身边隐患、熟悉逃生路线和应急方法，遇险保持冷静、科学应对，并建议个人家庭增强安全意识、社会各方共同营造人人讲安全的良好氛围。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（突发事件） 直接导致 D005（事件调查）",
+        "后果：厘清事实和责任、提出整改建议"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（事件调查） 导致 D001（突发事件）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_245_Q03",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年青岛市危险废物非法处置爆炸事故是怎样发生的？造成了哪些后果？",
+    "answers": "2016年青岛市危险废物非法处置爆炸事故。接报后当地立即启动应急预案、组织力量全力搜救救治。事件初步造成人遇难、人受伤，经调查认定为责任事件，直接原因是非法收储处置危废、工艺失控，暴露出安全责任落实不到位、隐患治理不彻底等问题。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（突发事件） 到终点 D008（评论员文章） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（突发事件）",
+        "终点为 D008（评论员文章）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（突发事件） → D003（专项整改） → D004（追责问责） → D008（评论员文章）",
+        "可包含关键环节 D003（专项整改）",
+        "终点影响：凝聚防范化解安全风险的共识"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D008"
+      ],
+      "stages": [
+        "突发事件",
+        "专项整改",
+        "追责问责",
+        "评论员文章"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_245_Q04",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件发生后现场是如何组织应急处置的？",
+    "answers": "现场指挥部实行统一指挥、分组作业，搜救、救治、监测、保障各组密切配合，专业队伍携带装备昼夜奋战、科学施救，并对现场风险动态监测评估、坚决防范次生事故，医疗供电通信交通等部门协同联动做好保障。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（突发事件） 直接导致 D006（应急处置）",
+        "后果：有效控制险情、减少伤亡损失"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（应急处置） 导致 D001（突发事件）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_245_Q05",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "调查认定的直接原因和主要问题是什么？",
+    "answers": "调查认定这是一起责任事件，直接原因是非法收储处置危废、工艺失控。调查发现相关单位安全责任落实不到位、隐患治理不彻底，规章制度执行流于形式，风险辨识和应急准备存在短板，个别监管环节也存在把关不严、履职不力等问题。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（突发事件） 直接导致 D005（事件调查）",
+        "后果：厘清事实和责任、提出整改建议"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（事件调查） 导致 D001（突发事件）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_245_Q06",
+    "pack_id": "245",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？",
+    "answers": "预计未来将在巩固深化整改成果上持续用力。预计将建立健全整改落实的跟踪问效和常态化检查机制，防止问题反弹回潮；预计将推动风险隐患动态排查、闭环管理；预计将强化基层基础和应急能力建设，把每一起事件的教训真正转化为长治久安的制度举措。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:督导检查"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D005（事件调查）、D004（追责问责）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-11-09",
+      "visible": [
+        "D001",
+        "D006",
+        "D002",
+        "D003",
+        "D008"
+      ],
+      "predicted": [
+        "D007",
+        "D005",
+        "D004"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_245_Q07",
+    "pack_id": "245",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这起事件将如何推动相关领域安全治理的完善？",
+    "answers": "预计这起事件将推动相关领域安全治理体系的完善。预计将健全风险分级管控和隐患排查治理双重预防机制；预计将修订完善相关标准规范、提高准入门槛；预计将强化科技和信息化手段应用、提升监测预警和应急处置能力，推动安全治理从事后处置向事前预防转变。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:督导检查"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D005（事件调查）、D004（追责问责）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-11-09",
+      "visible": [
+        "D001",
+        "D006",
+        "D002",
+        "D003",
+        "D008"
+      ],
+      "predicted": [
+        "D007",
+        "D005",
+        "D004"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

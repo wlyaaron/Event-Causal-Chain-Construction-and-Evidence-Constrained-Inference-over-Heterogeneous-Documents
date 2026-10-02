@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_240_Q01",
+    "pack_id": "240",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？"
+  },
+  {
+    "sample_id": "public_safety_240_Q02",
+    "pack_id": "240",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年大连市船舶修造企业有限空间中毒事故是怎样发生的？造成了哪些后果？"
+  },
+  {
+    "sample_id": "public_safety_240_Q03",
+    "pack_id": "240",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件发生后现场是如何组织应急处置的？"
+  },
+  {
+    "sample_id": "public_safety_240_Q04",
+    "pack_id": "240",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "调查认定的直接原因和主要问题是什么？"
+  },
+  {
+    "sample_id": "public_safety_240_Q05",
+    "pack_id": "240",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件后进行了怎样的追责问责？"
+  },
+  {
+    "sample_id": "public_safety_240_Q06",
+    "pack_id": "240",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这起事件将如何推动相关领域安全治理的完善？"
+  },
+  {
+    "sample_id": "public_safety_240_Q07",
+    "pack_id": "240",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生怎样的深远影响？"
+  }
+]

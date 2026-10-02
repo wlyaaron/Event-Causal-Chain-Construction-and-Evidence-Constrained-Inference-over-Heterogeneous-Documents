@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "social_governance_007_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D009（社会共治）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "social_governance_007_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料显示D001（社会事件）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "social_governance_007_Q03",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（法治建设）阶段（当前已知：D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "social_governance_007_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（社会事件）到D009（社会共治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "social_governance_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D003（调查进展）在D004（责任追究）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "social_governance_007_Q06",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（社会事件）被阻断，D002（官方回应）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "social_governance_007_Q07",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从材料来看，D008（舆论关注）是由哪些先后发生的事件共同促成的？请列出因果链。"
+  },
+  {
+    "sample_id": "social_governance_007_Q08",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于公安部的社会事件事件，不同来源给出的关键数据不一致（官方300、另一来源360）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "social_governance_007_Q09",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的常规演练，是否与主线事件社会事件（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "social_governance_007_Q10",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，公安部在该社会事件事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

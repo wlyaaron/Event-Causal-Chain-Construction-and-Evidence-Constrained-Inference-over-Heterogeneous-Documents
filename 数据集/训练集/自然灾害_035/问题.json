@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_035_Q01",
+    "pack_id": "035",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "卡特里娜飓风造成的最终死亡人数是多少？经济损失约为多少亿美元？新奥尔良有多少比例的地区被洪水淹没？"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q02",
+    "pack_id": "035",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么新奥尔良的堤坝系统在卡特里娜飓风中会发生大规模溃决？请从自然因素和工程因素两个方面分析。"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q03",
+    "pack_id": "035",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：卡特里娜形成热带低压、升级为五级飓风、新奥尔良强制疏散、飓风登陆、堤坝溃决、军方接管救援、FEMA局长辞职。"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q04",
+    "pack_id": "035",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较卡特里娜飓风灾后联邦政府与州/地方政府在应急响应中的角色和表现，分析联邦制在重大灾难应对中的优势和劣势。"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q05",
+    "pack_id": "035",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "卡特里娜飓风如何通过能源设施破坏、保险损失、人口迁移等多个环节，对美国全国经济产生连锁影响？"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q06",
+    "pack_id": "035",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括卡特里娜飓风对美国在应急管理、种族关系、城市重建和政治格局四个方面产生的长期影响。"
+  },
+  {
+    "sample_id": "natural_disaster_035_Q07",
+    "pack_id": "035",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设卡特里娜飓风发生时联邦政府能够更快速有效地响应，人员伤亡和社会影响可能会有哪些不同？哪些根本性问题仍然可能存在？"
+  }
+]

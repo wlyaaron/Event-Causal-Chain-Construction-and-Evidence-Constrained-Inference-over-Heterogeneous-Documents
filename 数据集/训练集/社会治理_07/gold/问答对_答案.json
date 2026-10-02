@@ -1,0 +1,410 @@
+[
+  {
+    "sample_id": "social_governance_07_Q01",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（法治建设）阶段，材料仅显示：D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "后续实际发生：D007（治理创新）、D008（舆论关注）、D009（社会共治）。其中关键进展为治理创新：2023-12-18的中国抗震救灾事件为基层社会治理提供启示。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理创新"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（舆论关注）, D009（社会共治）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（法治建设）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理创新"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_07_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D004（责任追究）与哪一事件构成直接因果关系？其后果是什么？",
+    "answers": "D004（责任追究）直接导致了D005（民生政策）。依据：中国抗震救灾事件暴露出的问题推动应急管理部加快民生政策完善。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（责任追究） 直接导致 D005（民生政策）",
+        "后果：中国抗震救灾事件暴露出的问题推动应急管理部加快民生政策完善"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（民生政策） 导致 D004（责任追究）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "social_governance_07_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（社会共治），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）。社会事件触发链条，最终形成社会共治；积石山6.2级地震救援。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（社会事件） 到终点 D009（社会共治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（社会事件）",
+        "终点为 D009（社会共治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）",
+        "可包含关键环节 D002（官方回应）",
+        "可包含关键环节 D003（调查进展）",
+        "可包含关键环节 D004（责任追究）",
+        "可包含关键环节 D006（法治建设）",
+        "可包含关键环节 D008（舆论关注）",
+        "终点影响：积石山6.2级地震救援"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "社会事件",
+        "官方回应",
+        "调查进展",
+        "责任追究",
+        "法治建设",
+        "舆论关注",
+        "社会共治"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_07_Q04",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于治理创新事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“积石山6.2级地震救援”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_07_Q05",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D004（责任追究）没有发生（或被及时干预阻断），D006（法治建设）是否仍会发生？请判断并给出因果依据。",
+    "answers": "移除D004后，D006及其连锁后果很可能不成立。D004系D006的直接原因（直接因果），受影响边为 [['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；积石山6.2级地震救援 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D006及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_07_Q06",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（社会事件）先于D004（责任追究）发生，可以据此断定D001（社会事件）是D004（责任追究）的原因吗？请说明。",
+    "answers": "不能。D001（社会事件）早于D004（责任追究）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（调查进展）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（社会事件） 早于 D004（责任追究） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（社会事件） 导致 D004（责任追究）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_07_Q07",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于D006（法治建设）阶段（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D007（治理创新）、D008（舆论关注）、D009（社会共治）。核心节点是治理创新：2023-12-18的中国抗震救灾事件为基层社会治理提供启示。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理创新"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（舆论关注）, D009（社会共治）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（法治建设）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理创新"
+    },
+    "confidence_level": "possible"
+  }
+]

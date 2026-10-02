@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_006_Q01",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D004（环保讨论）没有发生（或被及时干预阻断），D005（国际影响）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "energy_environment_006_Q02",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D008（绿色路径）在D009（科技创新）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "energy_environment_006_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，请概述D008（绿色路径）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "energy_environment_006_Q04",
+    "pack_id": "06",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（产业发展）阶段前进展（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "energy_environment_006_Q05",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化绿色路径对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "energy_environment_006_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（科技创新）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "energy_environment_006_Q07",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D002（权威解读）所代表的条件被移除，后续的D003（能源转型）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  }
+]

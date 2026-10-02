@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_031_Q01",
+    "pack_id": "031",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（中小企业影响）阶段前进展（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "economy_trade_031_Q02",
+    "pack_id": "031",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D004（专家分析）没有发生（或被及时干预阻断），D006（中小企业影响）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "economy_trade_031_Q03",
+    "pack_id": "031",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D001（政策落地）在进程上早于D004（专家分析）。能否据此认为D001（政策落地）导致了D004（专家分析）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_031_Q04",
+    "pack_id": "031",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于中小企业影响事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "economy_trade_031_Q05",
+    "pack_id": "031",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（趋势展望），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "economy_trade_031_Q06",
+    "pack_id": "031",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D004（专家分析）发生在D005（行业影响）之前，这是否足以说明D004（专家分析）是D005（行业影响）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "economy_trade_031_Q07",
+    "pack_id": "031",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请概述D009（趋势展望）的主体、地点与主要影响。"
+  }
+]

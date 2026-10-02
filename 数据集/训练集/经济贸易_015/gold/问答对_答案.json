@@ -1,0 +1,411 @@
+[
+  {
+    "sample_id": "economy_trade_015_Q01",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（现代应用），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D003（危机原因分析） → D001（经济危机爆发） → D002（经济社会衰退） → D004（新政改革） → D009（萧条结束） → D010（历史教训总结） → D011（现代应用）。危机根源触发链条，经危机爆发、衰退、新政、萧条结束到教训总结，最终这些教训被后世制度化并实际应用；有效避免危机演变为又一次世纪性大萧条。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（危机原因分析） 到终点 D011（现代应用） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（危机原因分析）",
+        "终点为 D011（现代应用）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（危机原因分析） → D001（经济危机爆发） → D002（经济社会衰退） → D004（新政改革） → D009（萧条结束） → D010（历史教训总结） → D011（现代应用）",
+        "可包含关键环节 D010（历史教训总结）",
+        "终点影响：有效避免危机演变为又一次世纪性大萧条"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001",
+        "D002",
+        "D004",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      [
+        "D003",
+        "D001",
+        "D002",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D001",
+        "D002",
+        "D004",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "危机原因分析",
+        "经济危机爆发",
+        "经济社会衰退",
+        "新政改革",
+        "萧条结束",
+        "历史教训总结",
+        "现代应用"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_015_Q02",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D003（危机原因分析）在D001（经济危机爆发）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D003→D001（深层原因），不是先后关系。证据：成为20世纪最严重经济危机的起点。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（危机原因分析） 与 D001（经济危机爆发） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D003 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（经济危机爆发） 导致 D003（危机原因分析）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D003",
+      "event_b": "D001",
+      "temporal_order": "D003先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_015_Q03",
+    "pack_id": "015",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（经济危机爆发）这一原因，D002（经济社会衰退）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D004'], ['D002', 'D008'], ['D002', 'D010']]；资本主义世界陷入全面深度衰退 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D008"
+      ],
+      [
+        "D002",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ],
+        [
+          "D002",
+          "D008"
+        ],
+        [
+          "D002",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_015_Q04",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D005（社会制度变革），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D003（危机原因分析） → D001（经济危机爆发） → D002（经济社会衰退） → D004（新政改革） → D005（社会制度变革）。起点为危机原因分析，终点为社会制度变革；美国从自由放任走向混合经济和福利国家。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（危机原因分析） 到终点 D005（社会制度变革） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（危机原因分析）",
+        "终点为 D005（社会制度变革）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（危机原因分析） → D001（经济危机爆发） → D002（经济社会衰退） → D004（新政改革） → D005（社会制度变革）",
+        "可包含关键环节 D001（经济危机爆发）",
+        "终点影响：美国从自由放任走向混合经济和福利国家"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001",
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D001",
+        "D002",
+        "D004",
+        "D005"
+      ],
+      "stages": [
+        "危机原因分析",
+        "经济危机爆发",
+        "经济社会衰退",
+        "新政改革",
+        "社会制度变革"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_015_Q05",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于大萧条谷底德国失业的具体规模，材料中不同来源的说法是否一致？应如何取舍判断？",
+    "answers": "不一致：一份统计称登记失业者约六百万，另有研究认为若计入未登记者实际超过八百万，两组数字相互矛盾。应注意统计口径的差异（是否计入未登记失业者），在权威史料考证确认前不宜采信单一数字。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出德国失业规模存在相互矛盾的两种说法（约六百万与超过八百万）",
+        "指出不同来源之间存在冲突，不能直接采信"
+      ],
+      "optional_facts": [
+        "差异源于统计口径不同（是否计入未登记失业者）",
+        "在权威考证前保持存疑"
+      ],
+      "forbidden_facts": [
+        "直接采信某一数字为确定结论",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "conflict_point": "德国失业规模",
+      "sources": [
+        "一份统计：约六百万",
+        "另有研究：超过八百万"
+      ],
+      "resolution": "口径不同，暂无法确认，需权威史料考证"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_015_Q06",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（经济危机爆发）之后直接发生了什么？",
+    "answers": "D002（经济社会衰退）是D001（经济危机爆发）的直接后果。证据：资本主义世界陷入全面深度衰退。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（经济危机爆发） 直接导致 D002（经济社会衰退）",
+        "后果：资本主义世界陷入全面深度衰退"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（经济社会衰退） 导致 D001（经济危机爆发）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_015_Q07",
+    "pack_id": "015",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于长期影响（D001 经济危机爆发；D002 经济社会衰退；D003 危机原因分析；D004 新政改革；D005 社会制度变革），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（危机全球蔓延）、D007（货币体系崩溃）、D008（政治极端化）、D009（萧条结束）、D010（历史教训总结），并进一步推动D011（现代应用）；其中最关键的是危机全球蔓延——整个资本主义世界陷入长期萧条。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:危机全球蔓延"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（货币体系崩溃）、D008（政治极端化）、D009（萧条结束）、D010（历史教训总结）、D011（现代应用）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "长期影响",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_015_Q08",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到同一时期欧洲举办了若干大型体育赛事和文化博览活动（D015），这一现象是否属于推动D008（政治极端化）的因果原因？请判断并说明理由。",
+    "answers": "不是。同期欧洲的大型体育赛事和文化博览活动（D015）只是同一时期发生的社会文化现象，与法西斯主义崛起的政治经济根源并无直接因果关联，材料中也未记载其与D008（政治极端化）之间存在任何因果边。推动政治极端化的是D002（经济社会衰退）、D006（危机全球蔓延）等事件，不应被无关现象干扰。",
+    "answer_facts": {
+      "required_facts": [
+        "判断 D015 不是 D008 的因果原因",
+        "指出 D015 与法西斯主义崛起根源无直接关联，无因果边"
+      ],
+      "optional_facts": [
+        "推动 D008 的是 D002、D006 等事件",
+        "识别 D015 为干扰项"
+      ],
+      "forbidden_facts": [
+        "认定 D015 导致 D008",
+        "编造 D015 与 D008 之间的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D015",
+      "target": "D008",
+      "is_causal": false,
+      "reason": "同期社会文化现象，与政治极端化根源无因果关联"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_015_Q09",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定某国放弃金本位前所谓秘密内部评估方案（D014）的具体内容、拟定主体和时间？若不能，缺少哪些信息？",
+    "answers": "不能确定。D014 仅来自未经证实的说法，材料明确指出该方案的具体内容、拟定主体和时间均不明确、主体不详，且尚无权威史料佐证。要确定这些内容，还缺少权威档案、明确的拟定机构及具体时间等关键信息。",
+    "answer_facts": {
+      "required_facts": [
+        "判定无法确定 D014 的具体内容、拟定主体和时间",
+        "指出材料信息不足、主体不详、无权威史料佐证"
+      ],
+      "optional_facts": [
+        "缺少权威档案、拟定机构、具体时间等信息",
+        "该说法未经证实"
+      ],
+      "forbidden_facts": [
+        "编造方案的具体内容、主体或时间",
+        "将未经证实的说法当作确定结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "missing_fields": [
+        "方案具体内容",
+        "拟定主体",
+        "时间"
+      ],
+      "reason": "说法未经证实，无权威史料佐证，主体不详"
+    },
+    "confidence_level": "possible"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_002_Q01",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，北京周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "diplomacy_002_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（专家解读），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_002_Q03",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中美经贸团队在D001（外交会晤）中的具体现场处置耗时（精确到分钟）是多少？"
+  },
+  {
+    "sample_id": "diplomacy_002_Q04",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D001（外交会晤）所代表的条件被移除，后续的D002（官方声明）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_002_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D008（共识落实）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "diplomacy_002_Q06",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（共识落实），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_002_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D003（峰会成果）发生在D004（双边会谈）之前，这是否足以说明D003（峰会成果）是D004（双边会谈）的原因？请说明理由。"
+  }
+]

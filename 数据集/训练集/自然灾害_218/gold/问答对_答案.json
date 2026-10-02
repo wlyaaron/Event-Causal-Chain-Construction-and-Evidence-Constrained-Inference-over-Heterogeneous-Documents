@@ -1,0 +1,149 @@
+[
+  {
+    "sample_id": "natural_disaster_218_Q01",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "1995年日本阪神大地震的基本情况和灾害损失是怎样的？",
+    "answers": "1995年1月17日凌晨5时46分，日本兵库县南部发生里氏7.3级强烈地震，震中位于淡路岛附近，震源深度约16公里，最大烈度达到日本气象厅烈度7级。地震造成6434人遇难、43792人受伤，是日本战后最严重的地震灾害。神户市受灾最重，全市10.5万栋房屋完全倒塌、14万栋半倒塌，近300处次生火灾烧毁7000余栋房屋。阪神高速公路多处坍塌、神户港完全瘫痪，供水供电燃气交通通讯等生命线系统全面崩溃。直接经济损失超过10万亿日元，约31万灾民失去家园被紧急安置。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_218_Q02",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "阪神地震救援工作面临哪些主要困难？",
+    "answers": "阪神地震救援初期面临多重困难：一是交通全面中断，阪神高速坍塌、道路被废墟堵塞，铁路停运，大型救援车辆无法进入重灾区，大量救援力量和物资滞留在外围，耽误了黄金救援时间；二是救灾物资严重匮乏，食品、饮用水、药品、保暖物资都供应不足，数十万灾民生活困难；三是生命线系统全面崩溃，停水停电断气，消防用水不足导致火灾失控，通讯中断造成信息不畅；四是次生灾害频发，余震上千次、火灾数百处，分散救援力量；五是冬季严寒天气，气温低增加被困人员失温风险和救援难度；六是体制机制缺陷，自卫队出动程序繁琐、部门协调不畅、初期反应迟缓。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_218_Q03",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "阪神大地震造成重大人员伤亡的主要原因是什么？",
+    "answers": "造成重大人员伤亡的主要原因包括：第一，地震发生在凌晨5时46分，绝大多数人还在熟睡中，来不及逃生，很多人在睡梦中被倒塌房屋压埋；第二，神户等城市老旧木结构住宅密集，这些1981年旧标准建造的房屋抗震能力差，强震中成片倒塌，约90%遇难者死于房屋倒塌；第三，次生火灾危害严重，燃气管道破裂引发近300处火灾，供水中断、道路堵塞导致火势失控，大量房屋被烧毁，造成众多人员伤亡；第四，高速公路高架桥坍塌等基础设施损毁也造成了部分伤亡；第五，救援初期交通中断，救援力量无法及时进入，错过了最佳救援时间，增加了被困人员死亡率。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_218_Q04",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "阪神大地震后日本对建筑抗震标准进行了哪些重要修订？",
+    "answers": "阪神地震后日本在1996年全面修订建筑基准法，出台平成新耐震基准，主要修订包括：一是大幅提高抗震设防烈度，要求建筑能够承受烈度7级强震不倒塌，远高于旧标准的烈度6级要求；二是改进结构计算方法，引入动态分析更科学评估抗震性能；三是加强木结构住宅抗震要求，增加墙体支撑和抗震加固规定；四是提高桥梁、高速公路等基础设施抗震标准，特别强化桥墩等关键部位设计；五是重视土壤液化对策，对软土地基建筑提出更高要求。同时大力推进既有建筑抗震加固改造，政府提供补贴，学校医院等公共建筑优先达标。隔震和减震技术也借此快速发展普及。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_218_Q05",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "阪神大地震对日本防灾减灾体系带来了哪些系统性改革？",
+    "answers": "阪神地震推动日本防灾体系进行了七大方面系统性改革：一是完善巨灾应对机制，重新评估首都直下地震等巨灾风险，大幅增加应急物资储备，建立更快速的全国响应机制；二是强化生命线工程抗震能力，全面改造地下管网，建立多重应急供水系统，燃气加装地震自动关阀；三是提升交通应急能力，全面加固高速公路铁路桥梁，规划应急交通网络，加强道路抢修力量；四是改革灾害应对体制，修改灾害对策基本法，强化首相指挥权，明确自卫队救灾职能，完善部门协调机制；五是加强社区防灾和全民防灾教育，推广家庭应急包，培养社区防灾志愿者；六是完善国际援助接受机制，简化流程更好利用国际救援力量；七是重视心理和社会重建，建立灾害心理援助体系，以人为本推进重建。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D010",
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_218_Q06",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "阪神大地震的经验对其他地震多发国家的城市防灾有哪些重要启示？未来特大城市防震减灾的重点方向是什么？",
+    "answers": "阪神地震的重要启示包括：一是必须高度重视特大城市直下型地震的巨灾风险，不能低估破坏力，要按最不利情景做防灾准备；二是提高建筑抗震标准是减少人员伤亡的根本途径，严格新建标准的同时必须大力推进老旧建筑抗震加固；三是城市生命线系统抗震能力至关重要，供水、交通、能源、通讯等系统必须具备更高的冗余度和应急恢复能力；四是要建立高效统一的应急指挥体系，确保巨灾发生时能快速调动全国资源；五是必须重视次生灾害防控，特别是火灾、燃气泄漏等连锁灾害；六是加强基层社区防灾能力建设，提高民众自救互救意识和能力；七是灾后重建要坚持以人为本，重视心理和社会重建。未来特大城市防震减灾重点方向是：城市韧性建设、智慧防灾技术应用、地下空间抗震、应急物流体系、跨区域协同救灾机制等。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D010",
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q07",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "阪神大地震的灾后重建模式有哪些特点？对未来重大灾害重建有哪些借鉴意义？",
+    "answers": "阪神地震重建的主要特点：一是立法先行，通过《阪神淡路大震灾复兴基本法》提供法律和资金保障，十年投入超10万亿日元，是日本战后最大规模重建工程；二是重建与城市更新相结合，不是简单复原，而是借重建优化城市布局、拓宽道路、增加防灾空间、升级基础设施，整体提升城市品质和防灾能力；三是政府主导与民间参与相结合，政府统筹规划投入，民间组织和志愿者深度参与，1995年被称为日本志愿者元年，推动了日本市民社会发展；四是分阶段推进，先应急安置、再临时住宅、最后永久住房，住房重建与产业恢复、社区重建同步推进；五是重视心理重建和社会重建，关注弱势群体，修复社区社会网络。借鉴意义：重建要系统规划、立法保障、多元参与、以人为本、提升韧性，不仅要恢复原貌更要实现发展升级。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

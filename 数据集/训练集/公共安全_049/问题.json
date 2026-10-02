@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_049_Q01",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（管道安全整治成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_049_Q02",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D005（环境应急处置）与D004（伤亡损失核定）在时间上相近，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_049_Q03",
+    "pack_id": "049",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（输油管道泄漏爆炸事故发生）这一原因，D002（中央部署与应急响应）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_049_Q04",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（责任追究），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_049_Q05",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故的起因，材料中既有'管道遭人为破坏、天然气爆炸'的网络传言（D015），又有官方调查认定的管道腐蚀破裂、油气积聚遇火花引爆（D006），二者相互矛盾，应采信哪一个？为什么？"
+  },
+  {
+    "sample_id": "public_safety_049_Q06",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（输油管道泄漏爆炸事故发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_049_Q07",
+    "pack_id": "049",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2013-11-25（D001 输油管道泄漏爆炸事故发生；D002 中央部署与应急响应；D003 抢险救援与伤员救治；D004 伤亡损失核定；D005 环境应急处置），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_049_Q08",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到了专项行动期间其他地区个别无关的管道轻微渗漏（D019）以及以往国内外其他油气管道事故（D020）。在追溯本起'11·22'事故的因果链条时，这些信息是否应纳入？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_049_Q09",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定从凌晨发现泄漏到10时30分爆炸这段时间内，现场由哪一方、在何时段主导处置、是否及时组织疏散？请判断并说明依据。"
+  }
+]

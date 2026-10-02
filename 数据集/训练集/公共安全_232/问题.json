@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_232_Q01",
+    "pack_id": "232",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（事故发生）被阻断，D002（救援进展）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_232_Q02",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D004（搜救结束）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "public_safety_232_Q03",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（事故发生）先于D004（搜救结束）发生，可以据此断定D001（事故发生）是D004（搜救结束）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_232_Q04",
+    "pack_id": "232",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化搜救结束对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "public_safety_232_Q05",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D010（整治成效）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_232_Q06",
+    "pack_id": "232",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "依据现有材料，D001（事故发生）涉及的确切人数/精确金额是多少？"
+  },
+  {
+    "sample_id": "public_safety_232_Q07",
+    "pack_id": "232",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道2019-04-15前进展（D001 事故发生；D002 救援进展；D003 国家调查；D004 搜救结束；D005 全国部署；D006 标准出台）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  }
+]

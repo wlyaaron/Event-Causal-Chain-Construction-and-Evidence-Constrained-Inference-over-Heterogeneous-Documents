@@ -1,0 +1,421 @@
+[
+  {
+    "sample_id": "public_safety_049_Q01",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（管道安全整治成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（输油管道泄漏爆炸事故发生） → D002（中央部署与应急响应） → D006（事故调查报告公布） → D007（间接原因剖析） → D009（管道隐患大排查大整治） → D011（管道安全长效机制建设） → D012（管道安全整治成效显现）。特别重大事故触发链条，经调查、剖析、专项整治和长效机制建设，最终整治成效逐步显现。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（输油管道泄漏爆炸事故发生） 到终点 D012（管道安全整治成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（输油管道泄漏爆炸事故发生）",
+        "终点为 D012（管道安全整治成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D002 → D006 → D007 → D009 → D011 → D012",
+        "可包含关键环节 D009（管道隐患大排查大整治）",
+        "终点影响：整治成效逐步显现"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D007",
+        "D009",
+        "D011",
+        "D012"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D007",
+        "D009",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D006",
+        "D007",
+        "D009",
+        "D011",
+        "D012"
+      ],
+      "stages": [
+        "输油管道泄漏爆炸事故发生",
+        "中央部署与应急响应",
+        "事故调查报告公布",
+        "间接原因剖析",
+        "管道隐患大排查大整治",
+        "管道安全长效机制建设",
+        "管道安全整治成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q02",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D005（环境应急处置）与D004（伤亡损失核定）在时间上相近，二者是否构成因果？依据是什么？",
+    "answers": "不能仅凭时间相近或先后认定因果。D005（环境应急处置）与D004（伤亡损失核定）都是由同一事故D001直接引发的并行处置环节，材料中并未记载二者之间存在因果边，彼此不构成因果关系。判定因果必须以明确的因果证据为准，而非时间关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D005 与 D004 之间不构成因果关系",
+        "不能仅凭时间相近或先后就断定因果"
+      ],
+      "optional_facts": [
+        "二者都是由 D001 直接引发的并行处置环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间关系就断定因果",
+        "编造 D005 与 D004 之间不存在的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ],
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D005",
+      "event_b": "D004",
+      "temporal_order": "时间相近",
+      "causal_link": false,
+      "note": "并行处置环节，无因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q03",
+    "pack_id": "049",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（输油管道泄漏爆炸事故发生）这一原因，D002（中央部署与应急响应）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D001', 'D003'], ['D001', 'D004'], ['D001', 'D005']]；抢险救援伤员救治和事故调查全面展开 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q04",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（责任追究），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（输油管道泄漏爆炸事故发生） → D002（中央部署与应急响应） → D006（事故调查报告公布） → D007（间接原因剖析） → D008（责任追究）。起点为事故发生，终点为责任追究；形成严肃问责震慑，倒逼安全生产责任落实。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（输油管道泄漏爆炸事故发生） 到终点 D008（责任追究） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（输油管道泄漏爆炸事故发生）",
+        "终点为 D008（责任追究）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D002 → D006 → D007 → D008",
+        "可包含关键环节 D006（事故调查报告公布）",
+        "可包含关键环节 D007（间接原因剖析）"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "输油管道泄漏爆炸事故发生",
+        "中央部署与应急响应",
+        "事故调查报告公布",
+        "间接原因剖析",
+        "责任追究"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q05",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故的起因，材料中既有'管道遭人为破坏、天然气爆炸'的网络传言（D015），又有官方调查认定的管道腐蚀破裂、油气积聚遇火花引爆（D006），二者相互矛盾，应采信哪一个？为什么？",
+    "answers": "应采信官方调查认定（D006）。D015的'人为破坏、天然气爆炸'仅为网络传言，未获证实；而D006是国务院事故调查组经全面勘查取证后的权威认定，明确直接原因是管道腐蚀减薄破裂、原油泄漏后油气积聚遇现场处置火花引爆，并排除了人为破坏和天然气爆炸的说法。面对相互矛盾的来源，应以权威官方调查结论为准，而非未经证实的网络传言。",
+    "answer_facts": {
+      "required_facts": [
+        "采信 D006（官方调查认定的腐蚀破裂、油气积聚引爆）",
+        "D015（人为破坏/天然气爆炸传言）未获证实可信度低，D006 为权威认定可信度高"
+      ],
+      "optional_facts": [
+        "官方结论建立在全面勘查取证基础之上",
+        "网络传言不能作为定论依据"
+      ],
+      "forbidden_facts": [
+        "采信未经证实的人为破坏或天然气爆炸传言",
+        "认为两种说法可信度相同无法取舍"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ],
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "conflict_pair": [
+        "D015",
+        "D006"
+      ],
+      "adopted": "D006",
+      "reason": "官方调查认定可信度高于未证实的网络传言"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q06",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（输油管道泄漏爆炸事故发生）之后直接发生了什么？",
+    "answers": "D002（中央部署与应急响应）是D001（输油管道泄漏爆炸事故发生）的直接后果。证据：抢险救援伤员救治和事故调查全面展开。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（输油管道泄漏爆炸事故发生） 直接导致 D002（中央部署与应急响应）",
+        "后果：抢险救援伤员救治和事故调查全面展开"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain",
+        "D001 还直接引发 D003、D004、D005"
+      ],
+      "forbidden_facts": [
+        "D002（中央部署与应急响应） 导致 D001（输油管道泄漏爆炸事故发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_049_Q07",
+    "pack_id": "049",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2013-11-25（D001 输油管道泄漏爆炸事故发生；D002 中央部署与应急响应；D003 抢险救援与伤员救治；D004 伤亡损失核定；D005 环境应急处置），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（事故调查报告公布）、D007（间接原因剖析）、D008（责任追究）、D009（管道隐患大排查大整治）、D010（安全生产反思），并进一步推动D011（管道安全长效机制建设）、D012（管道安全整治成效显现）；其中最关键的是D006——查明原因、认定性质责任，为后续处理提供依据。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:事故调查报告公布"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（间接原因剖析）、D008（责任追究）、D009、D010、D011、D012"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2013-11-25",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_049_Q08",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到了专项行动期间其他地区个别无关的管道轻微渗漏（D019）以及以往国内外其他油气管道事故（D020）。在追溯本起'11·22'事故的因果链条时，这些信息是否应纳入？请说明理由。",
+    "answers": "都不应纳入。D019是专项行动期间其他地区个别与本起事故无关的管道轻微渗漏，均被及时处置、未造成后果；D020只是以往国内外其他油气管道事故，仅作背景对照和风险警示。二者均为语义相近的干扰项，与本起'11·22'特别重大事故的因果链条没有关系，应予排除。",
+    "answer_facts": {
+      "required_facts": [
+        "D019、D020 均不应纳入本起事故的因果链",
+        "二者与本起事故无因果关联"
+      ],
+      "optional_facts": [
+        "D019 是无关的轻微渗漏且已及时处置",
+        "D020 是历史案例仅作背景对照"
+      ],
+      "forbidden_facts": [
+        "将干扰事件纳入因果链",
+        "把无关渗漏或历史事故当作本起事故的一部分"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D019"
+      ],
+      [
+        "D020"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D019",
+        "D020"
+      ],
+      "decision": "排除",
+      "reason": "语义相近但与本起事故因果无关"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_049_Q09",
+    "pack_id": "049",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定从凌晨发现泄漏到10时30分爆炸这段时间内，现场由哪一方、在何时段主导处置、是否及时组织疏散？请判断并说明依据。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定该时段的处置主体与详细时间线",
+        "材料记载早期口径不一、信息不明确"
+      ],
+      "optional_facts": [
+        "确切处置时间线和责任主体有待事故调查最终认定"
+      ],
+      "forbidden_facts": [
+        "武断指认某一方为该时段唯一处置主体",
+        "编造材料未提供的详细时间线"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_reason": "早期通报口径不一，信息不明确",
+      "expected_answer": "无法确定处置主体与详细时间线"
+    },
+    "confidence_level": null
+  }
+]

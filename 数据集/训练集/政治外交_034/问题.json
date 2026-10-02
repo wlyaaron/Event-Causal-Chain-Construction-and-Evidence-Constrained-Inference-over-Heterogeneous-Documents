@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_034_Q01",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从中欧经贸高层对话开幕到中欧关系展望与专家解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "diplomacy_034_Q02",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "投资协定谈判（D003）和绿色合作（D004）都是对话的重点议题，二者中哪一个对企业视角（D006）的影响更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "diplomacy_034_Q03",
+    "pack_id": "034",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设中欧没有举行这次经贸高层对话（移除D001），这会对绿色合作（D004）和国际评价（D007）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "diplomacy_034_Q04",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "贸易摩擦与分歧（D005）与中欧关系展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "diplomacy_034_Q05",
+    "pack_id": "034",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测中欧投资协定正式生效的具体日期？"
+  },
+  {
+    "sample_id": "diplomacy_034_Q06",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "中欧经贸高层对话开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "diplomacy_034_Q07",
+    "pack_id": "034",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于对话开幕和成果盘点（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

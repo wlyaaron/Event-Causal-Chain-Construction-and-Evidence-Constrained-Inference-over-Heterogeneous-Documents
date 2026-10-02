@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_223_Q01",
+    "pack_id": "223",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2018年新疆发生大范围强对流天气灾害是怎样发生的？造成了怎样的影响？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q02",
+    "pack_id": "223",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾害发生后开展了哪些抢险救援和转移安置工作？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q03",
+    "pack_id": "223",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何指挥调度抗灾救灾工作？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q04",
+    "pack_id": "223",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾情评估和救助帮扶是如何开展的？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q05",
+    "pack_id": "223",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "监测预警在此次抗灾救灾中发挥了怎样的作用？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q06",
+    "pack_id": "223",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次灾害将如何推动防灾减灾救灾能力的提升？"
+  },
+  {
+    "sample_id": "natural_disaster_223_Q07",
+    "pack_id": "223",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次抗灾救灾对凝聚精神力量、建设美好家园将产生怎样的影响？"
+  }
+]

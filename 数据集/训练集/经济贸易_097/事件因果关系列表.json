@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "政策传导",
+    "description": "美联储激进加息引发全球央行同步收紧，各国为防止资本外流和货币贬值被迫跟进加息。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "资产估值",
+    "description": "美联储加息推高无风险利率，降低股票估值吸引力，全球股市遭遇熊市。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D004",
+    "relation_type": "汇率传导",
+    "description": "美美利差扩大推动美元强势升值，引发全球货币贬值和汇市动荡。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D003",
+    "relation_type": "流动性收紧",
+    "description": "全球央行同步加息收紧全球流动性，风险资产普遍承压下跌。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D008",
+    "relation_type": "债务压力",
+    "description": "美元升值增加新兴市场美元债务偿债负担，加剧债务危机。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D005",
+    "relation_type": "市场脆弱",
+    "description": "强美元和高利率环境下，英国财政政策失误引发市场剧烈反应。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D003",
+    "relation_type": "信心冲击",
+    "description": "英国金融动荡加剧全球市场避险情绪，进一步冲击风险资产。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D006",
+    "relation_type": "流动性危机",
+    "description": "全球流动性收紧和风险资产下跌暴露了加密货币行业的杠杆风险，最终引发FTX破产。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "需求抑制",
+    "description": "抵押贷款利率随美联储加息飙升，购房成本大增导致房地产市场降温。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D007",
+    "relation_type": "全球同步",
+    "description": "全球央行同步加息使多国房地产市场同步降温，形成全球性房地产调整。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D009",
+    "relation_type": "政策效果",
+    "description": "美联储激进加息抑制了总需求，叠加供应链改善，推动通胀从高位回落。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D009",
+    "effect_event_id": "D002",
+    "relation_type": "政策调整",
+    "description": "通胀见顶回落使美联储和全球央行得以放缓加息步伐。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D010",
+    "effect_event_id": "D011",
+    "relation_type": "供应链调整",
+    "description": "中国疫情封控和经济压力促使全球企业重新评估供应链布局，加速多元化。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D011",
+    "effect_event_id": "D012",
+    "relation_type": "长期影响",
+    "description": "供应链重构增加成本和不确定性，对全球经济长期增长产生负面影响。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D012",
+    "relation_type": "滞后效应",
+    "description": "货币政策紧缩的滞后效应在2023年集中显现，全球经济衰退风险升温。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D012",
+    "relation_type": "拖累全球",
+    "description": "新兴市场债务危机拖累全球经济增长，增加全球金融不稳定。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D012",
+    "relation_type": "经济拖累",
+    "description": "全球房地产市场降温通过财富效应和投资渠道拖累经济增长。",
+    "pack_id": "097"
+  },
+  {
+    "cause_event_id": "D009",
+    "effect_event_id": "D012",
+    "relation_type": "政策预期",
+    "description": "通胀回落但仍高于目标，央行维持高利率，经济增长面临持续压力。",
+    "pack_id": "097"
+  }
+]

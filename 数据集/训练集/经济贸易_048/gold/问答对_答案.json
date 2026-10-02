@@ -1,0 +1,304 @@
+[
+  {
+    "sample_id": "economy_trade_048_Q01",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从国家碳达峰碳中和政策体系发布到绿色低碳转型展望与国际合作，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（政策发布）→D004（产业转型）→D007（挑战分析）→D008（发展展望）。国家政策发布后，推动了地方实践、产业转型、碳市场运行、绿色金融发展等一系列行动；在转型过程中，暴露出技术、资金、就业等挑战；基于转型实践和挑战分析，最终形成对绿色低碳转型的展望和国际合作的呼吁。中间还包括D002地方实践、D003数据发布、D005碳市场运行、D006绿色金融等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含产业转型、挑战分析等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D004→D007→D008",
+        "中间还包括地方实践、数据发布、碳市场、绿色金融等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D008"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "政策发布",
+        "产业转型",
+        "挑战分析",
+        "发展展望"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_048_Q02",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "新能源产业数据发布（D003）和传统高耗能行业转型（D004）都与绿色低碳转型相关，二者中哪一个对全国碳市场运行（D005）的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "传统高耗能行业转型（D004）对碳市场运行（D005）的推动作用更直接。依据：因果关系列表中D004→D005为直接因果（certain），而D003→D005没有直接因果边，D003主要通过D004间接影响碳市场。碳市场的核心参与主体是钢铁、水泥、电解铝、发电等高耗能高排放企业，这些企业的绿色转型直接产生了碳排放配额的买卖需求，是碳市场交易的主要驱动力。新能源产业数据发布主要展示新能源发展成就，对碳市场的影响是间接的。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D004对D005的推动更直接",
+        "依据是D004→D005为直接因果关系"
+      ],
+      "optional_facts": [
+        "D003主要通过D004间接影响碳市场",
+        "碳市场核心参与主体是高耗能高排放企业"
+      ],
+      "forbidden_facts": [
+        "判断D003更直接且无合理依据",
+        "混淆新能源发展与高耗能行业转型的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D004对D005的推动",
+      "more_direct": "D004",
+      "reason": "D004→D005为直接因果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_048_Q03",
+    "pack_id": "048",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有发布碳达峰碳中和'1+N'政策体系（移除D001），这会对地方绿色低碳转型实践（D002）和绿色金融发展（D006）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有国家'1+N'政策体系发布，地方绿色低碳转型实践（D002）的力度和系统性会明显减弱，绿色金融发展（D006）的速度和规模也会大幅放缓。连锁影响：没有国家层面的顶层设计和明确目标，地方政府缺乏统一的政策指引和考核约束，绿色低碳转型可能停留在零散的试点层面，难以形成系统性推进；绿色金融的发展也缺乏政策驱动和标准指引，金融机构对绿色项目的支持力度会减弱，绿色信贷、绿色债券等的增长速度会放缓。受影响的关键边为[['D001','D002'],['D001','D006']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断地方转型实践力度会减弱",
+        "说明绿色金融发展速度会放缓"
+      ],
+      "optional_facts": [
+        "没有顶层设计地方缺乏统一指引和考核约束",
+        "绿色金融缺乏政策驱动和标准指引"
+      ],
+      "forbidden_facts": [
+        "断言没有政策地方也会同样力度转型",
+        "忽视国家政策在绿色转型中的核心引领作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除国家'1+N'政策体系",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "地方转型力度减弱，绿色金融发展放缓"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_048_Q04",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "传统高耗能行业绿色转型（D004）与绿色低碳转型展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D004（产业转型）→D007（挑战分析）→D008（发展展望）。具体来说，传统高耗能行业的绿色转型实践，既展示了转型的成效和经验，也暴露出技术、资金、就业等方面的挑战；基于这些实践和挑战，专家和媒体进行了深入分析，形成了对绿色低碳转型的全面展望，包括机遇、挑战和国际合作等方面。此外，D004也通过D005碳市场运行等环节间接影响D008。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D007挑战分析这一中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D004→D007→D008",
+        "D004也通过D005碳市场等环节间接影响D008"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D004到D008的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediate",
+      "intermediate": "D007",
+      "path": "D004→D007→D008"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_048_Q05",
+    "pack_id": "048",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测我国实现碳中和目标的具体年份以及所需的精确投资总额？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性年份和金额",
+        "编造材料中不存在的精确预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_048_Q06",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国家碳达峰碳中和政策体系发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（地方实践）、D004（产业转型）、D005（碳市场运行）、D006（绿色金融）。这四项都是国家政策发布后直接推动的核心行动。证据：政策发布后，浙江等地方积极推进绿色低碳转型实践，钢铁等高耗能行业加快绿色转型，全国碳市场稳步扩大覆盖范围并完善运行机制，绿色金融在政策引导下快速发展。D003数据发布、D007挑战分析、D008发展展望为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002地方实践",
+        "D001直接导致D004产业转型",
+        "D001直接导致D005碳市场运行",
+        "D001直接导致D006绿色金融"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D003、D007、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D005或D006等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_048_Q07",
+    "pack_id": "048",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于政策发布和地方实践（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D004传统高耗能行业绿色转型——国家政策发布后，钢铁、水泥、化工等高耗能行业作为减排重点，必然会加快绿色转型；第二，D005全国碳市场运行完善——碳市场是推动企业减排的重要市场机制，政策发布后会稳步扩大覆盖范围、完善运行机制；第三，D006绿色金融快速发展——绿色低碳转型需要大量资金支持，政策发布后绿色信贷、绿色债券等会快速增长。依据：国家'1+N'政策体系明确了能源、工业、建筑、交通、金融等各领域的重点任务。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D004产业转型、D005碳市场、D006绿色金融",
+        "还可能发生D003数据发布、D007挑战分析等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-06",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D004",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

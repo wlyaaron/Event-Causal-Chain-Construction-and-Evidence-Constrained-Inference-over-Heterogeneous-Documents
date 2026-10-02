@@ -1,0 +1,531 @@
+[
+  {
+    "sample_id": "public_safety_019_Q01",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：国务院相关的D004（成立调查组）发生后，紧接着出现的直接结果是什么？",
+    "answers": "D009（调查结果）是D004（成立调查组）的直接后果。证据：认定为强对流天气导致的特别重大灾难性事件。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（成立调查组） 直接导致 D009（调查结果）",
+        "后果：认定为强对流天气导致的特别重大灾难性事件"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D009（调查结果） 导致 D004（成立调查组）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D009"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_019_Q02",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（事故发生）先于D003（船舶打捞）发生，可以据此断定D001（事故发生）是D003（船舶打捞）的原因吗？请说明。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D003 的因果边；其直接原因是D002（国家救援）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D003（船舶打捞） 只是时间先后",
+        "材料中不存在 D001→D003 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D003（船舶打捞）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_019_Q03",
+    "pack_id": "019",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，假如当初D006（全国部署）未曾出现，D008（系统建设）的发生是否还能成立？请给出推断依据。",
+    "answers": "结论：一旦阻断D006，D008大概率不再发生。因为D006是D008的直接原因（直接因果），其下游受影响的边为 [['D006', 'D008'], ['D008', 'D012']]；提升极端天气预警能力 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ],
+      [
+        "D006",
+        "D007",
+        "D012"
+      ],
+      [
+        "D006",
+        "D008",
+        "D012"
+      ],
+      [
+        "D006",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D012"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_019_Q04",
+    "pack_id": "019",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道2015-07-20前进展（D001 事故发生；D002 国家救援；D003 船舶打捞；D004 成立调查组；D005 搜救结束；D006 全国部署；D007 标准修订）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D008（系统建设）、D009（调查结果）、D010（能力建设）。核心节点是系统建设：建设高密度气象站网。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D008:系统建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D009（调查结果）, D010（能力建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2015-07-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "hidden_events": [
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "ground_truth": "D008:系统建设"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_019_Q05",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（事故发生）到D012（整治成效）的完整因果传导过程，并按序列出证据。",
+    "answers": "梳理可得因果路径：D001（事故发生） → D002（国家救援） → D003（船舶打捞） → D005（搜救结束） → D006（全国部署） → D007（标准修订） → D012（整治成效）。事故发生触发链条，最终形成整治成效；建立内河航运安全长效机制。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D012（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D012（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（国家救援） → D003（船舶打捞） → D005（搜救结束） → D006（全国部署） → D007（标准修订） → D012（整治成效）",
+        "可包含关键环节 D002（国家救援）",
+        "可包含关键环节 D003（船舶打捞）",
+        "可包含关键环节 D005（搜救结束）",
+        "可包含关键环节 D006（全国部署）",
+        "可包含关键环节 D007（标准修订）",
+        "终点影响：建立内河航运安全长效机制"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D011",
+        "D012"
+      ],
+      [
+        "D001",
+        "D004",
+        "D009",
+        "D010",
+        "D012"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D012"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      "stages": [
+        "事故发生",
+        "国家救援",
+        "船舶打捞",
+        "搜救结束",
+        "全国部署",
+        "标准修订",
+        "整治成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_019_Q06",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D012（整治成效）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（事故发生） → D002（国家救援） → D003（船舶打捞） → D005（搜救结束） → D006（全国部署） → D007（标准修订） → D012（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；建立内河航运安全长效机制。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D012（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D012（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（国家救援） → D003（船舶打捞） → D005（搜救结束） → D006（全国部署） → D007（标准修订） → D012（整治成效）",
+        "可包含关键环节 D002（国家救援）",
+        "可包含关键环节 D003（船舶打捞）",
+        "可包含关键环节 D005（搜救结束）",
+        "可包含关键环节 D006（全国部署）",
+        "可包含关键环节 D007（标准修订）",
+        "终点影响：建立内河航运安全长效机制"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008",
+        "D012"
+      ],
+      [
+        "D001",
+        "D006",
+        "D011",
+        "D012"
+      ],
+      [
+        "D001",
+        "D004",
+        "D009",
+        "D010",
+        "D012"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D012"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D012"
+      ],
+      "stages": [
+        "事故发生",
+        "国家救援",
+        "船舶打捞",
+        "搜救结束",
+        "全国部署",
+        "标准修订",
+        "整治成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_019_Q07",
+    "pack_id": "019",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至2015-07-20，材料仅显示：D001 事故发生；D002 国家救援；D003 船舶打捞；D004 成立调查组；D005 搜救结束；D006 全国部署；D007 标准修订。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "预测后续进展为：D008（系统建设）、D009（调查结果）、D010（能力建设）。核心节点是系统建设：建设高密度气象站网。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D008:系统建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D009（调查结果）, D010（能力建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2015-07-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "hidden_events": [
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "ground_truth": "D008:系统建设"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_019_Q08",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于东方之星号客轮的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D013.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_019_Q09",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D014.txt》中邻近辖区交通运输部的行业交流会，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D014.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D014.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_019_Q10",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，东方之星号客轮在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

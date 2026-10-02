@@ -1,0 +1,380 @@
+[
+  {
+    "sample_id": "public_safety_055_Q01",
+    "pack_id": "055",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（防范措施），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D004（原因初步调查） → D001（事故发生） → D005（挂牌督办） → D006（调查报告公布） → D007（责任追究） → D009（教训反思） → D010（防范措施）。原因初步调查触发链条，最终形成防范措施；全面提升煤矿水害防治能力。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D004（原因初步调查） 到终点 D010（防范措施） 的有向因果链（顺序不可颠倒）",
+        "起点为 D004（原因初步调查）",
+        "终点为 D010（防范措施）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D004（原因初步调查） → D001（事故发生） → D005（挂牌督办） → D006（调查报告公布） → D007（责任追究） → D009（教训反思） → D010（防范措施）",
+        "可包含关键环节 D001（事故发生）",
+        "终点影响：全面提升煤矿水害防治能力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001",
+        "D002",
+        "D003",
+        "D008",
+        "D010"
+      ],
+      [
+        "D004",
+        "D001",
+        "D002",
+        "D003",
+        "D009",
+        "D010"
+      ],
+      [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "原因初步调查",
+        "事故发生",
+        "挂牌督办",
+        "调查报告公布",
+        "责任追究",
+        "教训反思",
+        "防范措施"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_055_Q02",
+    "pack_id": "055",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D004（原因初步调查）在D001（事故发生）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D004→D001（直接因果），不是先后关系。证据：造成多名井下人员被困。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（原因初步调查） 与 D001（事故发生） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（事故发生） 导致 D004（原因初步调查）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D001",
+      "temporal_order": "D004先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_055_Q03",
+    "pack_id": "055",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D004（原因初步调查）这一原因，D001（事故发生）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D004，D001大概率不再发生。因为D004是D001的直接原因，其下游受影响的边为 [['D004', 'D001'], ['D001', 'D002'], ['D001', 'D005'], ['D001', 'D004']]；造成多名井下人员被困 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001"
+      ],
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D001"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_055_Q04",
+    "pack_id": "055",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（教训反思），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D004（原因初步调查） → D001（事故发生） → D005（挂牌督办） → D006（调查报告公布） → D007（责任追究） → D009（教训反思）。起点为原因初步调查，终点为教训反思；推动全社会反思煤矿安全生产深层次问题。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D004（原因初步调查） 到终点 D009（教训反思） 的有向因果链（顺序不可颠倒）",
+        "起点为 D004（原因初步调查）",
+        "终点为 D009（教训反思）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D004（原因初步调查） → D001（事故发生） → D005（挂牌督办） → D006（调查报告公布） → D007（责任追究） → D009（教训反思）",
+        "可包含关键环节 D001（事故发生）",
+        "终点影响：推动全社会反思煤矿安全生产深层次问题"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001",
+        "D002",
+        "D003",
+        "D009"
+      ],
+      [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D004",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      "stages": [
+        "原因初步调查",
+        "事故发生",
+        "挂牌督办",
+        "调查报告公布",
+        "责任追究",
+        "教训反思"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_055_Q05",
+    "pack_id": "055",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_055_Q06",
+    "pack_id": "055",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D004（原因初步调查）之后直接发生了什么？",
+    "answers": "D001（事故发生）是D004（原因初步调查）的直接后果。证据：造成多名井下人员被困。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（原因初步调查） 直接导致 D001（事故发生）",
+        "后果：造成多名井下人员被困"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D004（原因初步调查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_055_Q07",
+    "pack_id": "055",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2020-10-28（D001 事故发生；D002 应急救援；D003 人员伤亡；D004 原因初步调查；D005 挂牌督办），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（调查报告公布）、D007（责任追究）、D008（专项整治）、D009（教训反思）、D010（防范措施）；其中最关键的是调查报告公布——全面查清事故原因责任，提出整改措施。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:调查报告公布"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（责任追究）、D008（专项整治）、D009（教训反思）、D010（防范措施）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2020-10-28",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

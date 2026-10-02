@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "diplomacy_045_Q01",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件依次推动，最终导致了D012（一体化成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_045_Q02",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（国际组织成立）在D002（组织制度确立）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_045_Q03",
+    "pack_id": "045",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（国际组织成立）这一原因，D002（组织制度确立）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_045_Q04",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕结果D010（未来发展展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_045_Q05",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于东盟经济总量的全球排名，材料中不同来源存在哪些不一致说法？应如何判断其可信度？"
+  },
+  {
+    "sample_id": "diplomacy_045_Q06",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（国际组织成立）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_045_Q07",
+    "pack_id": "045",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于组织成立与制度确立阶段（D001 国际组织成立；D002 组织制度确立），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_045_Q08",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提及了某成员国的地方民俗节庆、东盟成立前的早期区域合作尝试等内容，这些是否与D008（双边关系发展）的成因存在因果关系？请甄别并说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_045_Q09",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定东盟酝酿的那项全区域青年人才培养计划的资金规模、启动时间与实施细则？若不能，缺少哪些关键信息？"
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "sample_id": "diplomacy_086_Q01",
+    "pack_id": "086",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（东亚合作前景展望），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D002（东亚合作机制发展） → D001（东亚峰会召开） → D005（美国加入东亚峰会） → D006（南海问题争议） → D008（东亚合作面临挑战） → D009（东亚合作前景展望）。东亚合作机制发展触发链条，最终形成东亚合作前景展望；经济融合深化、非传统安全合作加强、人文交流更密切。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（东亚合作机制发展） 到终点 D009（东亚合作前景展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（东亚合作机制发展）",
+        "终点为 D009（东亚合作前景展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（东亚合作机制发展） → D001（东亚峰会召开） → D005（美国加入东亚峰会） → D006（南海问题争议） → D008（东亚合作面临挑战） → D009（东亚合作前景展望）",
+        "可包含关键环节 D001（东亚峰会召开）",
+        "终点影响：经济融合深化、非传统安全合作加强、人文交流更密切"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D003",
+        "D007",
+        "D009"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D008",
+        "D009"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D002",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "东亚合作机制发展",
+        "东亚峰会召开",
+        "美国加入东亚峰会",
+        "南海问题争议",
+        "东亚合作面临挑战",
+        "东亚合作前景展望"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_086_Q02",
+    "pack_id": "086",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（东亚合作机制发展）在D001（东亚峰会召开）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D002→D001（直接因果），不是先后关系。证据：18个成员国参与，东盟主导，讨论政治安全经济等战略议题。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（东亚合作机制发展） 与 D001（东亚峰会召开） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（东亚峰会召开） 导致 D002（东亚合作机制发展）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D001",
+      "temporal_order": "D002先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_086_Q03",
+    "pack_id": "086",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（东亚合作机制发展）这一原因，D001（东亚峰会召开）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D002，D001大概率不再发生。因为D002是D001的直接原因，其下游受影响的边为 [['D002', 'D001'], ['D001', 'D003'], ['D001', 'D004'], ['D001', 'D005'], ['D001', 'D006']]；18个成员国参与，东盟主导，讨论政治安全经济等战略议题 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D001"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_086_Q04",
+    "pack_id": "086",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（东亚合作面临挑战），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D002（东亚合作机制发展） → D001（东亚峰会召开） → D005（美国加入东亚峰会） → D006（南海问题争议） → D008（东亚合作面临挑战）。起点为东亚合作机制发展，终点为东亚合作面临挑战；中美战略竞争是最大挑战，冲击东盟中心地位。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（东亚合作机制发展） 到终点 D008（东亚合作面临挑战） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（东亚合作机制发展）",
+        "终点为 D008（东亚合作面临挑战）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（东亚合作机制发展） → D001（东亚峰会召开） → D005（美国加入东亚峰会） → D006（南海问题争议） → D008（东亚合作面临挑战）",
+        "可包含关键环节 D001（东亚峰会召开）",
+        "终点影响：中美战略竞争是最大挑战，冲击东盟中心地位"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D008"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "东亚合作机制发展",
+        "东亚峰会召开",
+        "美国加入东亚峰会",
+        "南海问题争议",
+        "东亚合作面临挑战"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_086_Q05",
+    "pack_id": "086",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_086_Q06",
+    "pack_id": "086",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（东亚合作机制发展）之后直接发生了什么？",
+    "answers": "D001（东亚峰会召开）是D002（东亚合作机制发展）的直接后果。证据：18个成员国参与，东盟主导，讨论政治安全经济等战略议题。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D002（东亚合作机制发展） 直接导致 D001（东亚峰会召开）",
+        "后果：18个成员国参与，东盟主导，讨论政治安全经济等战略议题"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（东亚峰会召开） 导致 D002（东亚合作机制发展）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_086_Q07",
+    "pack_id": "086",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2011年正式加入（D001 东亚峰会召开；D002 东亚合作机制发展；D003 主要议题与合作成果；D004 中国参与东亚峰会；D005 美国加入东亚峰会），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（南海问题争议）、D007（RCEP签署生效）、D008（东亚合作面临挑战）、D009（东亚合作前景展望）；其中最关键的是南海问题争议——外部势力介入使问题复杂化，中国主张当事国协商解决。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:南海问题争议"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（RCEP签署生效）、D008（东亚合作面临挑战）、D009（东亚合作前景展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2011年正式加入",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

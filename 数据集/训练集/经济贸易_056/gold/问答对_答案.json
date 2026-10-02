@@ -1,0 +1,510 @@
+[
+  {
+    "sample_id": "economy_trade_056_Q01",
+    "pack_id": "056",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D007（国际合作）、D008（成效评估）、D009（趋势展望）。核心节点是国际合作：拉美锂三角合作在南美的落地引发全球经济界关注。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（成效评估）, D009（趋势展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中小企业影响）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际合作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_056_Q02",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（趋势展望），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）。其中，政策落地为起点，经逐级传导，最终导致趋势展望；控制全球65%锂资源。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D009（趋势展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D009（趋势展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "可包含关键环节 D008（成效评估）",
+        "终点影响：控制全球65%锂资源"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估",
+        "趋势展望"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_056_Q03",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于锂三角掌握的全球锂资源占比，材料中不同来源的说法是否一致？应如何取舍？",
+    "answers": "不一致：一份行业报告称约为65%，另有研究机构估算仅为55%左右，两组数字相互矛盾。应保持审慎，以权威机构最终核实的口径为准，不应轻易采信任一未经核实的数字。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出存在相互矛盾的两种说法（约65%与约55%）",
+        "指出两者相互矛盾、不能同时成立"
+      ],
+      "optional_facts": [
+        "应以权威机构最终核实的口径为准",
+        "在核实前对具体比例保持存疑"
+      ],
+      "forbidden_facts": [
+        "断定某一数字必然正确而忽视矛盾",
+        "编造材料未提供的第三个数字"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "conflict_sources": [
+        "行业报告（约65%）",
+        "研究机构（约55%）"
+      ],
+      "resolution": "以权威机构最终核实口径为准，暂存疑"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_056_Q04",
+    "pack_id": "056",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D001（政策落地）未曾出现，D002（市场反应）的发生是否还能成立？请给出推断依据。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；控制全球65%锂资源 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_056_Q05",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D009（趋势展望）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "D009（趋势展望）：阿根廷智利玻利维亚在南美，2023-09-28的拉美锂三角合作为行业发展指明了方向。影响：控制全球65%锂资源。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：阿根廷智利玻利维亚",
+        "地点：南美",
+        "基本事实：2023-09-28的拉美锂三角合作为行业发展指明了方向"
+      ],
+      "optional_facts": [
+        "影响：控制全球65%锂资源"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D009"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_056_Q06",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（政策落地）发生在D002（市场反应）之前，这是否足以说明D001（政策落地）是D002（市场反应）的原因？请说明理由。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D001→D002（直接因果），而非单纯时间顺序。证据：针对2023-09-28在南美推出的拉美锂三角合作。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（政策落地） 与 D002（市场反应） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（市场反应） 导致 D001（政策落地）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_056_Q07",
+    "pack_id": "056",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续将出现：D007（国际合作）、D008（成效评估）、D009（趋势展望）；其中最关键的是国际合作——拉美锂三角合作在南美的落地引发全球经济界关注。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（成效评估）, D009（趋势展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中小企业影响）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际合作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_056_Q08",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到南美当地举办了拉美民俗音乐节，这一事件是否属于推动拉美锂三角合作成效的因果链条？请判断并说明理由。",
+    "answers": "不属于。拉美民俗音乐节（D014）只是同期举办的无关文化活动，与拉美锂三角合作的核心议程并无直接关联，材料中也未记载它与任何核心事件存在因果边，不应纳入因果链条。",
+    "answer_facts": {
+      "required_facts": [
+        "判定拉美民俗音乐节与核心因果链无关",
+        "该事件不存在指向核心事件的因果边"
+      ],
+      "optional_facts": [
+        "它是同期举办的干扰性文化活动",
+        "应排除在成效因果链之外"
+      ],
+      "forbidden_facts": [
+        "将无关事件纳入因果链",
+        "编造其与核心事件的因果关系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D014",
+      "is_in_causal_chain": false
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_056_Q09",
+    "pack_id": "056",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到三国或将就锂资源出口配额签署一份新协议，能否据此确定该协议的具体条款、牵头方和签署时间？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 信息不足",
+        "协议的具体条款、牵头方和签署时间均不明确"
+      ],
+      "optional_facts": [
+        "该消息未经证实",
+        "需进一步核实"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的协议细节"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_reason": "unverified_incomplete",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

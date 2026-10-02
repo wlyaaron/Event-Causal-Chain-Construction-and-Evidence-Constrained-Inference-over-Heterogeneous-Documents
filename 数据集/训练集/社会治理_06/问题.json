@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_06_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D004（责任追究）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "social_governance_06_Q02",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，京津冀周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "social_governance_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（社会事件）到D009（社会共治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "social_governance_06_Q04",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D008（舆论关注）所代表的条件被移除，后续的D009（社会共治）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "social_governance_06_Q05",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D002（官方回应）所代表的条件被移除，后续的D003（调查进展）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "social_governance_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（社会事件）在进程上早于D004（责任追究）。能否据此认为D001（社会事件）导致了D004（责任追究）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "social_governance_06_Q07",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（舆论关注），并按顺序给出完整证据链。"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_055_Q01",
+    "pack_id": "055",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "斯诺登曝光的美国国家安全局监控计划中，代号为棱镜（PRISM）的计划主要涉及哪些互联网公司？该计划允许NSA收集哪些类型的数据？"
+  },
+  {
+    "sample_id": "diplomacy_055_Q02",
+    "pack_id": "055",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "斯诺登为什么选择在2013年曝光NSA的监控计划？他的个人经历和职业背景如何影响了他的决定？"
+  },
+  {
+    "sample_id": "diplomacy_055_Q03",
+    "pack_id": "055",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：斯诺登离开香港飞往莫斯科、棱镜计划首次被《卫报》报道、斯诺登获得俄罗斯临时庇护、《美国自由法案》签署、默克尔手机监听事件曝光。"
+  },
+  {
+    "sample_id": "diplomacy_055_Q04",
+    "pack_id": "055",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较美国政府和斯诺登本人对监控计划的不同立场和论据，双方在国家安全与个人隐私的权衡上有什么根本分歧？"
+  },
+  {
+    "sample_id": "diplomacy_055_Q05",
+    "pack_id": "055",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "斯诺登曝光NSA监控计划如何从一条新闻报道逐步演变为涉及全球外交危机、美国立法改革、互联网技术变革和数字权利运动的多维度事件？"
+  },
+  {
+    "sample_id": "diplomacy_055_Q06",
+    "pack_id": "055",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括斯诺登事件对美国外交关系、国内立法、互联网技术和全球隐私意识产生的长期影响。"
+  },
+  {
+    "sample_id": "diplomacy_055_Q07",
+    "pack_id": "055",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设斯诺登在2013年没有选择曝光NSA监控计划，而是通过内部渠道（如监察长办公室）举报，事件的发展轨迹可能会有什么不同？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_07_Q01",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D004（伦理讨论）这一原因，D006（标准制定）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "technology_governance_07_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（国际合作）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "technology_governance_07_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（场景落地），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "technology_governance_07_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，已知D002（行业热议）先于D003（监管规范）出现，可否仅凭先后顺序认定二者的因果关系？"
+  },
+  {
+    "sample_id": "technology_governance_07_Q05",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，假设你只掌握D006（标准制定）阶段及之前的信息（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "technology_governance_07_Q06",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，请依据材料说明D005（资本关注）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "technology_governance_07_Q07",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（技术突破）没有发生（或被及时干预阻断），D002（行业热议）是否仍会发生？请判断并给出因果依据。"
+  }
+]

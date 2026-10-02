@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "industrial_production_03_Q01",
+    "pack_id": "03",
+    "question_type": "fact_query",
+    "reasoning_type": "single_hop",
+    "question": "昆山'8·2'中荣金属制品厂粉尘爆炸事故发生的具体时间和地点是什么？最终确认的死亡人数和直接经济损失分别是多少？"
+  },
+  {
+    "sample_id": "industrial_production_03_Q02",
+    "pack_id": "03",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "single_hop",
+    "question": "根据材料，导致昆山'8·2'粉尘爆炸事故发生的直接技术原因是什么？请说明爆炸发生的物理过程。"
+  },
+  {
+    "sample_id": "industrial_production_03_Q03",
+    "pack_id": "03",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间先后顺序排列以下事件：事故调查报告公布、国务院调查组成立、事故发生、问责结果公布、全国专项整治启动，并说明相邻事件之间是否存在因果关系。"
+  },
+  {
+    "sample_id": "industrial_production_03_Q04",
+    "pack_id": "03",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较事故发生当日（D001）与事故调查报告公布时（D005）的伤亡数据差异，分析为什么死亡人数从事发当日的68人上升到最终的146人，这一变化反映了什么？"
+  },
+  {
+    "sample_id": "industrial_production_03_Q05",
+    "pack_id": "03",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯从'企业长期未整改粉尘隐患'到'全国粉尘防爆专项整治'的完整因果链条，说明中间经过了哪些关键事件环节，每个环节的推动作用是什么？"
+  },
+  {
+    "sample_id": "industrial_production_03_Q06",
+    "pack_id": "03",
+    "question_type": "summary",
+    "reasoning_type": "summary",
+    "question": "请综合全部材料，概括昆山'8·2'粉尘爆炸事故在企业管理、政府监管、制度建设三个层面分别暴露了哪些问题，以及后续采取了哪些针对性整改措施。"
+  },
+  {
+    "sample_id": "industrial_production_03_Q07",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设中荣公司在2013年收到整改通知后，及时投入80万元对除尘系统进行了全面改造，这起事故是否还会发生？请结合材料中的事故原因分析，说明这一假设会如何影响后续的事件链条。"
+  }
+]

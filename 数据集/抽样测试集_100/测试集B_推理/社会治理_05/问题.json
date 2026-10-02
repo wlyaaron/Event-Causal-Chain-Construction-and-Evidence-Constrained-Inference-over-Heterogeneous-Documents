@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（社会共治）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "social_governance_005_Q02",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D008（舆论关注）在时间/进程上早于D009（社会共治）。能否据此断定D008（舆论关注）导致了D009（社会共治）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "social_governance_005_Q03",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（社会事件）未曾出现，D002（官方回应）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "social_governance_005_Q04",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：假设你只掌握D006（法治建设）阶段及之前的信息（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "social_governance_005_Q05",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D006（法治建设）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "social_governance_005_Q06",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对社会事件的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "social_governance_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（舆论关注）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  }
+]

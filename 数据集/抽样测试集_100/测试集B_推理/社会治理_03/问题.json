@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_003_Q01",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（社会事件），说明经由哪些中间事件最终导致了D009（社会共治）。"
+  },
+  {
+    "sample_id": "social_governance_003_Q02",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D003（调查进展）这一原因，D004（责任追究）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "social_governance_003_Q03",
+    "pack_id": "03",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D006（法治建设）阶段前进展（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "social_governance_003_Q04",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D008（舆论关注）发生在D009（社会共治）之前，这是否足以说明D008（舆论关注）是D009（社会共治）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "social_governance_003_Q05",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "彭清林相关的D004（责任追究）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "social_governance_003_Q06",
+    "pack_id": "03",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对治理创新的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "social_governance_003_Q07",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（社会事件），说明经由哪些中间事件最终导致了D008（舆论关注）。"
+  }
+]

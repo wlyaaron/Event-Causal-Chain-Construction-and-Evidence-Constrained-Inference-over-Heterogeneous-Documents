@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_06_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "蚂蚁集团原计划在哪两个交易所同步上市？IPO发行价和对应市值分别是多少？"
+  },
+  {
+    "sample_id": "technology_governance_06_Q02",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "马云在外滩金融峰会的演讲与蚂蚁集团IPO被暂缓之间存在怎样的因果关系？请详细说明事件发展的链条。"
+  },
+  {
+    "sample_id": "technology_governance_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间先后顺序排列以下事件：蚂蚁消金获批开业、四部门首次联合约谈、上交所暂缓上市、马云外滩演讲、四部门提出五大整改要求、蚂蚁集团启动IPO。"
+  },
+  {
+    "sample_id": "technology_governance_06_Q04",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "蚂蚁集团通过网络小贷牌照运营花呗借呗与通过消费金融公司运营有什么不同？请从监管要求、资本约束、杠杆率等方面进行比较。"
+  },
+  {
+    "sample_id": "technology_governance_06_Q05",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2021年4月12日四部门对蚂蚁集团提出的五大整改要求具体包括哪些内容？这些要求分别针对蚂蚁集团的哪些业务和问题？"
+  },
+  {
+    "sample_id": "technology_governance_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括蚂蚁集团IPO被叫停及整改事件对中国金融科技行业监管制度和行业发展产生的主要影响。"
+  },
+  {
+    "sample_id": "technology_governance_06_Q07",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设马云没有在外滩金融峰会发表那番批评监管的演讲，蚂蚁集团的IPO是否会顺利进行？后续的监管和整改是否仍然会发生？请说明理由。"
+  }
+]

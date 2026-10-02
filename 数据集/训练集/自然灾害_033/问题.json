@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "natural_disaster_033_Q01",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D013（成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q02",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（地震灾害发生）在D002（应急响应启动）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q03",
+    "pack_id": "033",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（地震灾害发生）这一原因，D002（应急响应启动）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q04",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D007（国家工作组指导），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q05",
+    "pack_id": "033",
+    "question_type": "conflicting",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本次泸定地震转移安置的受灾群众人数，不同来源的说法是否一致？应如何看待其中的矛盾？"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q06",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（地震灾害发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q07",
+    "pack_id": "033",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2022-09-06（D001 地震灾害发生；D002 应急响应启动；D003 伤亡情况通报；D004 人员搜救行动；D005 群众转移安置），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q08",
+    "pack_id": "033",
+    "question_type": "distractor",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到邻近地区举办康定情歌旅游文化节，这与泸定灾区的抗震救灾、人员搜救存在因果关系吗？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q09",
+    "pack_id": "033",
+    "question_type": "missing_information",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，泸定灾后重建追加的专项资金支持方案的具体内容、牵头部门和实施时间是什么？"
+  }
+]

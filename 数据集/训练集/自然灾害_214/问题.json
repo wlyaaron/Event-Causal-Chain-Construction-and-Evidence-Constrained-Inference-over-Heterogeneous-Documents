@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_214_Q01",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2018年广西遭遇大范围低温雨雪冰冻灾害是怎样发生的？造成了怎样的影响？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q02",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾害发生后开展了哪些抢险救援和转移安置工作？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q03",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何指挥调度抗灾救灾工作？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q04",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾情评估和救助帮扶是如何开展的？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q05",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "监测预警在此次抗灾救灾中发挥了怎样的作用？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q06",
+    "pack_id": "214",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次抗灾救灾对凝聚精神力量、建设美好家园将产生怎样的影响？"
+  },
+  {
+    "sample_id": "natural_disaster_214_Q07",
+    "pack_id": "214",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来在防范应对同类灾害方面还需重点做好哪些工作？"
+  }
+]

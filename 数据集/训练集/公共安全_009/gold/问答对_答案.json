@@ -1,0 +1,361 @@
+[
+  {
+    "sample_id": "public_safety_009_Q01",
+    "pack_id": "009",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D004（善后处置）是否仍会发生？请判断并给出因果依据。",
+    "answers": "判断：若移除D001，D004很可能不会发生或将显著改变。依据：D001是D004的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D004'], ['D004', 'D005'], ['D005', 'D006']]。相应地，省级医疗专家组赶赴齐齐哈尔指导救治 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D007",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_009_Q02",
+    "pack_id": "009",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示教育部对治理成效评估不负有任何责任，请解释后续处理的依据。",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“全国校园建筑排查覆盖率达92.3%”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_009_Q03",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，围绕最终结果D006（治理成效评估），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D007（专项整治部署） → D006（治理成效评估）。其中，安全事件/风险发生为起点，经逐级传导，最终导致治理成效评估；全国校园建筑排查覆盖率达92.3%。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D006（治理成效评估） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D006（治理成效评估）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D007（专项整治部署） → D006（治理成效评估）",
+        "可包含关键环节 D007（专项整治部署）",
+        "终点影响：全国校园建筑排查覆盖率达92.3%"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D007",
+        "D006"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D007",
+        "D006"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "专项整治部署",
+        "治理成效评估"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_009_Q04",
+    "pack_id": "009",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D004（善后处置）未曾出现，D005（整治行动推进）的发生是否还能成立？请给出推断依据。",
+    "answers": "结论：一旦阻断D004，D005大概率不再发生。因为D004是D005的直接原因（直接因果），其下游受影响的边为 [['D004', 'D005'], ['D005', 'D006']]；截至8月底累计排查学校7800余所、场馆建筑2.1万栋 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_009_Q05",
+    "pack_id": "009",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2023-07-25前进展（D001 安全事件/风险发生；D002 应急响应与救援；D004 善后处置；D003 调查评估与核查）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "后续实际发生：D007（专项整治部署）、D005（整治行动推进）、D006（治理成效评估）。其中关键进展为专项整治部署：事故发生后，黑龙江、辽宁、浙江、甘肃等多地迅速启动校舍场馆安全专项排查整治工作。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:专项整治部署"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D005（整治行动推进）, D006（治理成效评估）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D003",
+        "D007",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-07-25",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D004",
+        "D003"
+      ],
+      "hidden_events": [
+        "D007",
+        "D005",
+        "D006"
+      ],
+      "ground_truth": "D007:专项整治部署"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_009_Q06",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（安全事件/风险发生）在进程上早于D005（整治行动推进）。能否据此认为D001（安全事件/风险发生）导致了D005（整治行动推进）？请给出判断与证据。",
+    "answers": "不能。D001（安全事件/风险发生）早于D005（整治行动推进）只是时间先后，材料中不存在 D001→D005 的因果关系；其直接原因是D004（善后处置）、D003（调查评估与核查）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 早于 D005（整治行动推进） 只是时间先后",
+        "材料中不存在 D001→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（安全事件/风险发生） 导致 D005（整治行动推进）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_009_Q07",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（安全事件/风险发生）到D005（整治行动推进）的完整因果传导过程，并按序列出证据。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D004（善后处置） → D005（整治行动推进）。安全事件/风险发生触发链条，最终形成整治行动推进；截至8月底累计排查学校7800余所、场馆建筑2.1万栋。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D005（整治行动推进） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D005（整治行动推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（善后处置） → D005（整治行动推进）",
+        "可包含关键环节 D004（善后处置）",
+        "终点影响：截至8月底累计排查学校7800余所、场馆建筑2.1万栋"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "善后处置",
+        "整治行动推进"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "economy_trade_059_Q01",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（趋势展望）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "economy_trade_059_Q02",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D009（趋势展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_059_Q03",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料中关于D004（专家分析）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "economy_trade_059_Q04",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，事件D003（企业行动）在时间/进程上早于D004（专家分析）。能否据此断定D003（企业行动）导致了D004（专家分析）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_059_Q05",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于供应链多元化带动下相关市场规模的增长幅度，材料中不同来源给出了怎样的说法？应如何取舍？"
+  },
+  {
+    "sample_id": "economy_trade_059_Q06",
+    "pack_id": "059",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D001（政策落地）所代表的条件被移除，后续的D002（市场反应）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "economy_trade_059_Q07",
+    "pack_id": "059",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "economy_trade_059_Q08",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有观点称东南亚当地举办的国际美食文化节是全球供应链多元化的重要组成部分。这一说法是否成立？请结合材料判断并说明理由。"
+  },
+  {
+    "sample_id": "economy_trade_059_Q09",
+    "pack_id": "059",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "越南、印度就承接产业转移税收优惠出台的专项方案，其具体内容、牵头方和实施时间是什么？材料是否提供了足以确定的信息？"
+  }
+]

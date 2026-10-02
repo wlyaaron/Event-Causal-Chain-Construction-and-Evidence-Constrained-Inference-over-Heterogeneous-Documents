@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_090_Q01",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展到长效整治的多个阶段，说明哪些事件依次推动了D014（整治成效），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_090_Q02",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故）在D002（安全整治）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_090_Q03",
+    "pack_id": "090",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（事故）这一原因，D002（安全整治）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_090_Q04",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故起因，网络传言（D017）称系暴雨引发地基沉降或设计图纸被恶意篡改，而事故调查（D005）认定为违规施工、荷载超限。两类信息相互矛盾时应如何取舍？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_090_Q05",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定违规施工失控的具体起始时间（D020）？若不能，请说明缺失了哪些关键信息。"
+  },
+  {
+    "sample_id": "public_safety_090_Q06",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（事故）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_090_Q07",
+    "pack_id": "090",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2005-07-04（D001 事故；D003 应急救援；D004 医疗救治），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_090_Q08",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到邻省某地的消防安全大检查（D021）和外省一起在建桥梁垮塌历史案例（D022）。这两者是否与本次大同市事故的因果链条相关？请判断并说明理由。"
+  },
+  {
+    "sample_id": "public_safety_090_Q09",
+    "pack_id": "090",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D012（整改落实）之后直接发生了什么？"
+  }
+]

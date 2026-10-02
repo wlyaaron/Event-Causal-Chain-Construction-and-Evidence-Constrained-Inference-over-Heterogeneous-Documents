@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_214_Q01",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际刑警组织是什么样的国际组织？它的历史沿革和基本架构是怎样的？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q02",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际刑警组织的七色通报分别是什么？红色通报的作用和机制是怎样的？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q03",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际刑警组织的主要工作领域有哪些？在打击跨国犯罪中发挥了哪些具体作用？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q04",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "中国与国际刑警组织的合作情况如何？取得了哪些主要成果？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q05",
+    "pack_id": "214",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国际刑警组织面临哪些主要挑战和争议？应该如何应对？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q06",
+    "pack_id": "214",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来国际刑警组织的发展趋势是什么？将在全球安全治理中扮演怎样的角色？"
+  },
+  {
+    "sample_id": "diplomacy_214_Q07",
+    "pack_id": "214",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在全球化和数字化背景下，国际警务合作面临哪些新机遇和新挑战？国际刑警组织应如何改革以适应新形势？"
+  }
+]

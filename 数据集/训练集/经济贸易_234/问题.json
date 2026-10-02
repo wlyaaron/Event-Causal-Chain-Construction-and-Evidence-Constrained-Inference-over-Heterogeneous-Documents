@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_234_Q01",
+    "pack_id": "234",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "世界体系理论是谁创立的？它的核心观点和三层结构是什么？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q02",
+    "pack_id": "234",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "什么是不平等交换？它在世界体系中是如何实现的？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q03",
+    "pack_id": "234",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "资本主义世界体系的历史发展经历了哪些阶段和霸权周期？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q04",
+    "pack_id": "234",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "世界体系理论与依附理论有什么联系和区别？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q05",
+    "pack_id": "234",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "对世界体系理论的主要批评有哪些？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q06",
+    "pack_id": "234",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "新兴经济体崛起会改变资本主义世界体系的结构吗？未来世界体系将如何演变？"
+  },
+  {
+    "sample_id": "economy_trade_234_Q07",
+    "pack_id": "234",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "世界体系理论在当代有什么现实意义和应用价值？"
+  }
+]

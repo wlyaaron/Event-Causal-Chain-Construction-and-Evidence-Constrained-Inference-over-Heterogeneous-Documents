@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_197_Q01",
+    "pack_id": "197",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "阿拉伯之春的导火索事件是什么？发生在哪个国家、什么时间？"
+  },
+  {
+    "sample_id": "diplomacy_197_Q02",
+    "pack_id": "197",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么突尼斯的抗议能够成功推翻本·阿里政权，而巴林的抗议却被镇压？两国的关键差异是什么？"
+  },
+  {
+    "sample_id": "diplomacy_197_Q03",
+    "pack_id": "197",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：穆巴拉克下台、卡扎菲被杀、本·阿里出逃、叙利亚德拉抗议爆发、沙特军队进入巴林。"
+  },
+  {
+    "sample_id": "diplomacy_197_Q04",
+    "pack_id": "197",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较埃及和叙利亚在阿拉伯之春中的发展轨迹，为什么埃及在18天内实现了政权更迭，而叙利亚却陷入了长期内战？"
+  },
+  {
+    "sample_id": "diplomacy_197_Q05",
+    "pack_id": "197",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "阿拉伯之春如何从突尼斯一个小贩的自焚事件逐步演变为波及整个阿拉伯世界、并导致利比亚、叙利亚、也门等国长期内战的地区性动荡？"
+  },
+  {
+    "sample_id": "diplomacy_197_Q06",
+    "pack_id": "197",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括阿拉伯之春十年后阿拉伯世界的整体状况，以及这场运动留下的主要遗产和教训。"
+  },
+  {
+    "sample_id": "diplomacy_197_Q07",
+    "pack_id": "197",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设卡扎菲政权没有对班加西的抗议进行暴力镇压，而是选择了政治对话和改革，利比亚的发展轨迹可能会有什么不同？"
+  }
+]

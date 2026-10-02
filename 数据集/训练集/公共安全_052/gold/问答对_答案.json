@@ -1,0 +1,372 @@
+[
+  {
+    "sample_id": "public_safety_052_Q01",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D007（调查评估与核查）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D007（调查评估与核查）直接导致了D008（责任追究与处理）。依据：对事故公安机关、纪检监察机关责任人和失职公职人员依法追究责任。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D007（调查评估与核查） 直接导致 D008（责任追究与处理）",
+        "后果：对事故责任人和失职公职人员依法追究责任"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（责任追究与处理） 导致 D007（调查评估与核查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D007",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_052_Q02",
+    "pack_id": "052",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D007（调查评估与核查）所代表的条件被移除，后续的D008（责任追究与处理）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "结论：一旦阻断D007，D008大概率不再发生。因为D007是D008的直接原因（直接因果），其下游受影响的边为 [['D007', 'D008']]；后续的责任追究与处理也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D007",
+      "affected_edges": [
+        [
+          "D007",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_052_Q03",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D010（整治成效显现）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "按证据顺序，成因链为 D001（安全事件/风险发生） → D003（应急响应与指挥） → D006（临时排查整治） → D007（调查评估与核查） → D008（责任追究与处理） → D009（长效机制建设） → D010（整治成效显现）。自安全事件出发逐环传导，最终随各项燃气安全长效制度落地见效，全市餐饮场所燃气安全状况明显改善、同类事故明显减少。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D010（整治成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D010（整治成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D006 → D007 → D008 → D009 → D010",
+        "可包含关键环节 D008（责任追究与处理）",
+        "可包含关键环节 D009（长效机制建设）",
+        "终点影响：全市餐饮场所燃气安全状况明显改善、同类事故明显减少"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "应急响应与指挥",
+        "临时排查整治",
+        "调查评估与核查",
+        "责任追究与处理",
+        "长效机制建设",
+        "整治成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_052_Q04",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起事故的起因，网络上流传'系有人蓄意纵火''是失控汽车撞击引发起火'等说法（D013），而官方调查（D007）认定为燃气软管老化开裂泄漏遇明火爆炸。两类来源相互矛盾，应如何取舍并说明理由？",
+    "answers": "应采信官方调查结论（D007）。事故调查组经勘查取证认定事故直接原因为液化石油气橡胶软管老化开裂、燃气泄漏遇明火爆炸，并已排除纵火和车辆撞击的说法；官方结论权威可信，网络传言（D013）未获证实、可信度低，应予排除。",
+    "answer_facts": {
+      "required_facts": [
+        "采信官方调查认定的燃气软管老化开裂泄漏遇明火爆炸",
+        "网络纵火/车辆撞击等传言可信度低，应排除"
+      ],
+      "optional_facts": [
+        "官方结论基于调查组勘查取证，权威可信",
+        "两类来源可信度不同，应择高可信度来源"
+      ],
+      "forbidden_facts": [
+        "采信网络纵火/撞击传言为事故原因",
+        "认为两种说法证据对等无从取舍"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ],
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "conflicting_sources": [
+        "D013",
+        "D007"
+      ],
+      "preferred": "D007",
+      "reason": "官方调查勘查取证，权威可信；网络传言未获证实"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_052_Q05",
+    "pack_id": "052",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2024-02-24（D001 安全事件/风险发生；D002 应急响应与救援；D003 应急响应与指挥；D004 伤员救治；D005 调查评估与核查），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D006（临时排查整治）、D007（调查评估与核查）、D008（责任追究与处理）、D009（长效机制建设）、D010（整治成效显现）。核心节点是临时排查整治：部署全市燃气安全紧急排查整治。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:临时排查整治"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（调查评估与核查）, D008（责任追究与处理）, D009（长效机制建设）, D010（整治成效显现）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-02-24",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D006:临时排查整治"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_052_Q06",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，事件D001（安全事件/风险发生）在时间/进程上早于D002（应急响应与救援）。能否据此断定D001（安全事件/风险发生）导致了D002（应急响应与救援）？请给出判断与证据。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D001→D002（直接因果）。证据：调派大量救援力量赴现场开展灭火、人员搜救、关阀断料、群众疏散工作。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 与 D002（应急响应与救援） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急响应与救援） 导致 D001（安全事件/风险发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_052_Q07",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D001（安全事件/风险发生）的直接下游事件之一是哪一个？造成了什么后果？",
+    "answers": "D001（安全事件/风险发生）直接导致了D005（调查评估与核查）。依据：开展事故初期调查，初步认定事故为燃气软管老化泄漏遇明火爆炸。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 直接导致 D005（调查评估与核查）",
+        "后果：开展事故初期调查"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（调查评估与核查） 导致 D001（安全事件/风险发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_052_Q08",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到同期邻近城市的燃气小故障（D017）以及国内其他地方的历史燃气爆炸案例（D018）。这些信息是否属于苏州'2·23'事故的成因或后果？请判断并说明理由。",
+    "answers": "都不是。邻近城市的燃气小故障（D017）均被及时处置、未造成人员伤亡，与本起事故无因果关联；国内其他地方的历史燃气爆炸案例（D018）仅作背景对比、警示同类风险，与本起苏州'2·23'事故并无因果关联。二者均为无关干扰信息，不应纳入本起事故的因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "D017 与本起事故无因果关联",
+        "D018 与本起事故无因果关联"
+      ],
+      "optional_facts": [
+        "D017为邻市无关小故障，D018为历史背景案例",
+        "两者均为干扰项，不应纳入事故因果链"
+      ],
+      "forbidden_facts": [
+        "将D017或D018认定为本起事故的成因或后果",
+        "编造其与苏州事故的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D017"
+      ],
+      [
+        "D018"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D017",
+        "D018"
+      ],
+      "judgement": "均与本起事故无因果关联，属干扰信息"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_052_Q09",
+    "pack_id": "052",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，涉事橡胶软管究竟从何时开始老化开裂、燃气泄漏持续了多长时间？请依据材料作答。",
+    "answers": "材料未提供足够信息，无法确定。材料仅认定事故直接原因为橡胶软管老化开裂泄漏遇明火爆炸，但对软管从何时开始老化开裂、泄漏持续多长时间并无明确记载，确切时间尚难以认定。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 材料信息不足",
+        "材料未记载软管老化起始时间与泄漏持续时长"
+      ],
+      "optional_facts": [
+        "材料仅认定事故直接原因为软管老化开裂泄漏遇明火爆炸"
+      ],
+      "forbidden_facts": [
+        "编造具体的老化起始时间或泄漏持续时长",
+        "给出材料未记载的确定性时间数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D016"
+      ]
+    ],
+    "annotations": {
+      "missing_type": "time_unspecified",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

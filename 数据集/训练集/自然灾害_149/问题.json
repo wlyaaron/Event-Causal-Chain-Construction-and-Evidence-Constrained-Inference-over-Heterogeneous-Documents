@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_149_Q01",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，事件D001（灾害发生）在进程上早于D004（灾情安置）。能否据此认为D001（灾害发生）导致了D004（灾情安置）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q02",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D002（应急救援）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q03",
+    "pack_id": "149",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示巴基斯坦对防灾短板不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q04",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q05",
+    "pack_id": "149",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：假设你只掌握D006（灾后重建）阶段及之前的信息（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q06",
+    "pack_id": "149",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D001（灾害发生）未曾出现，D002（应急救援）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_149_Q07",
+    "pack_id": "149",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_08_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请依据材料说明D002（权威解读）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "energy_environment_08_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，从多个环节出发，梳理导致D009（科技创新）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "energy_environment_08_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（绿色路径）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "energy_environment_08_Q04",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（产业发展）阶段及之前的信息（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "energy_environment_08_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（政策发布）早于D004（环保讨论），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "energy_environment_08_Q06",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D001（政策发布）被阻断，D002（权威解读）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "energy_environment_08_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D008（绿色路径）由哪一主体在何地发生？造成了什么影响？"
+  }
+]

@@ -1,0 +1,534 @@
+[
+  {
+    "sample_id": "economy_trade_115_Q01",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（趋势展望）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "完整因果链：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）。其中，政策落地为起点，经逐级传导，最终导致趋势展望；全球最大自贸区形成。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D009（趋势展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D009（趋势展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "可包含关键环节 D008（成效评估）",
+        "终点影响：全球最大自贸区形成"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估",
+        "趋势展望"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_115_Q02",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料中关于D005（行业影响）记载了哪些关键事实？",
+    "answers": "据材料，D005（行业影响）的主体为15个成员国，发生地为亚太；围绕2022-01-01的区域全面经济伙伴关系协定生效，多位经济学家展开深入讨论。其影响：全球最大自贸区形成。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：15个成员国",
+        "地点：亚太",
+        "基本事实：围绕2022-01-01的区域全面经济伙伴关系协定生效，多位经济学家展开深入讨论"
+      ],
+      "optional_facts": [
+        "影响：全球最大自贸区形成"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D005"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_115_Q03",
+    "pack_id": "115",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "后续实际发生：D007（国际合作）、D008（成效评估）、D009（趋势展望）。其中关键进展为国际合作：区域全面经济伙伴关系协定生效在亚太的落地引发全球经济界关注。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（成效评估）, D009（趋势展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中小企业影响）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际合作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_115_Q04",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，沿因果链解释D008（成效评估）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估）。自政策落地出发逐环传导至成效评估；全球最大自贸区形成。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D008（成效评估） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D008（成效评估）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "终点影响：全球最大自贸区形成"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_115_Q05",
+    "pack_id": "115",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了专家分析事件中现场救援人员的具体姓名与联系方式？请依据材料回答。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_115_Q06",
+    "pack_id": "115",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D001（政策落地）所代表的条件被移除，后续的D002（市场反应）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，全球最大自贸区形成 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_115_Q07",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（政策落地）早于D004（专家分析），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（政策落地）早于D004（专家分析）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（企业行动）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（政策落地） 早于 D004（专家分析） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（政策落地） 导致 D004（专家分析）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_115_Q08",
+    "pack_id": "115",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于15个成员国的政策落地事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_115_Q09",
+    "pack_id": "115",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区15个成员国的日常检查，是否与主线事件政策落地（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_115_Q10",
+    "pack_id": "115",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，15个成员国在该政策落地事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

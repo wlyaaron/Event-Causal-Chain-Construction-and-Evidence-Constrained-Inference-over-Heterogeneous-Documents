@@ -1,0 +1,398 @@
+[
+  {
+    "sample_id": "natural_disaster_177_Q01",
+    "pack_id": "177",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D010（灾害适应），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得主因果路径：D003（台风登陆）→ D005（灾情统计）→ D009（灾后重建）→ D010（灾害适应）。台风登陆造成农牧渔业巨大损失，推动灾后重建与理赔，进而促成海南出台金融支持措施、发展特色农业保险与气象指数保险以增强灾害适应能力。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（台风登陆） 到终点 D010（灾害适应） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（台风登陆）",
+        "终点为 D010（灾害适应）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（台风登陆） → D005（灾情统计） → D009（灾后重建） → D010（灾害适应）",
+        "可包含关键环节 D005（灾情统计）",
+        "可包含关键环节 D009（灾后重建）",
+        "终点影响：完善特色农产品保险与气象指数保险、提升防灾韧性"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      [
+        "D003",
+        "D004",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "台风登陆",
+        "灾情统计",
+        "灾后重建",
+        "灾害适应"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q02",
+    "pack_id": "177",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于'摩羯'登陆海南时并未造成任何经济损失，请说明为何灾后还要开展保险理赔？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为文昌、海口两市直接经济损失合计约600亿元、全省农牧渔业损失约119.48亿元，与'未造成任何经济损失'的假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q03",
+    "pack_id": "177",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D003（台风登陆）被阻断，D004（城市重创）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若台风未登陆，城市重创很可能不会发生。依据：D003是D004的直接原因，登陆后维持的强风才导致海口大面积停电停水、通信中断；移除D003将同时切断D004、D005、D006、D007等下游连锁影响。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D005"
+      ],
+      [
+        "D003",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q04",
+    "pack_id": "177",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D008（抢修恢复）阶段，材料仅显示：D001 灾害预兆；D002 预警部署；D003 台风登陆；D004 城市重创；D005 灾情统计；D006 二次登陆；D007 应急救援；D008 抢修恢复。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，供电供水通信基本恢复后，后续最可能进入D009（灾后重建）——受损门窗、电梯维修与保险定损理赔；并进一步推动D010（灾害适应）的政策与保险安排。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D009:灾后重建"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D010（灾害适应）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D008（抢修恢复）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "hidden_events": [
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D009:灾后重建"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q05",
+    "pack_id": "177",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D005（灾情统计）由哪一主体在何地统计发布？造成或反映了什么影响？",
+    "answers": "据材料，D005（灾情统计）的主体为海南省应急指挥办，发生地为海南省文昌市；截至2024-09-08统计，全省农牧渔业因灾总损失约119.48亿元，文昌、海口两市直接经济损失合计约600亿元。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：海南省应急指挥办",
+        "地点：海南省文昌市",
+        "基本事实：截至2024-09-08"
+      ],
+      "optional_facts": [
+        "影响：农牧渔业损失约119.48亿元"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D005"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q06",
+    "pack_id": "177",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D002（预警部署，9月4日）早于D006（二次登陆，9月6日），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D002（预警部署）早于D006（二次登陆）只是时间先后，材料中不存在 D002→D006 的因果关系；二次登陆是台风路径本身的结果（D003），与海南的预警部署无因果联系。时间在先不等于因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（预警部署） 早于 D006（二次登陆） 只是时间先后",
+        "材料中不存在 D002→D006 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D002（预警部署） 导致 D006（二次登陆）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D006"
+      ],
+      [
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D006",
+      "temporal_order": "D002先于D006",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q07",
+    "pack_id": "177",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（抢修恢复）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D003（台风登陆）→ D004（城市重创）→ D008（抢修恢复）。台风登陆导致海口大面积停电停水、通信中断，进而需要全力抢修电网、供水与通信，城区约一周内陆续恢复。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（台风登陆） 到终点 D008（抢修恢复） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（台风登陆）",
+        "终点为 D008（抢修恢复）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（台风登陆） → D004（城市重创） → D008（抢修恢复）",
+        "可包含关键环节 D004（城市重创）",
+        "终点影响：供电供水通信约一周内陆续恢复"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004",
+        "D008"
+      ],
+      [
+        "D003",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D004",
+        "D008"
+      ],
+      "stages": [
+        "台风登陆",
+        "城市重创",
+        "抢修恢复"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q08",
+    "pack_id": "177",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于'摩羯'造成的人员伤亡，官方通报与另一网传来源给出的数据不一致（官方4人死亡，另一来源称数十人）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "多个来源相互冲突，交叉核验前不应给出唯一结论",
+        "应以官方/权威通报为准并标注冲突、存疑"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "直接采信与官方通报相悖的来源口径",
+        "在未核验冲突前给出唯一确定结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D007.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_177_Q09",
+    "pack_id": "177",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中广西某市的常态化防汛演练，是否与主线事件台风登陆（D003）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为年度例行的背景性演练信息，与'摩羯'登陆主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [
+        "判定该干扰性信息与主线事件不存在因果关系",
+        "应将其排除，不纳入证据链"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "把背景性 / 无关信息强行纳入因果链",
+        "编造干扰信息与主线事件的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_177_Q10",
+    "pack_id": "177",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，'摩羯'在文昌翁田镇登陆时，台风眼经过当地的持续时间（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "所需信息在现有材料中缺失",
+        "应拒答而非臆测"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "编造材料未记载的具体数据或结论",
+        "给出看似确定实则无据的答案"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

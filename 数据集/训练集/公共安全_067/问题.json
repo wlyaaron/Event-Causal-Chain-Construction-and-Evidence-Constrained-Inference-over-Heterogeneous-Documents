@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_067_Q01",
+    "pack_id": "067",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（安全事故发生）被阻断，D002（应急救援处置）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_067_Q02",
+    "pack_id": "067",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了公安机关、检察机关齐齐哈尔市第三十四中学体育馆负责人的个人从业年限？"
+  },
+  {
+    "sample_id": "public_safety_067_Q03",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D007（事故调查报告公布）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "public_safety_067_Q04",
+    "pack_id": "067",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D004（善后处置工作）阶段前进展（D001 安全事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 善后处置工作）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_067_Q05",
+    "pack_id": "067",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2023-07-24（D005 责任人立案侦查；D001 安全事故发生；D002 应急救援处置；D003 伤亡情况通报），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_067_Q06",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料中关于D003（伤亡情况通报）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "public_safety_067_Q07",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D004（善后处置工作）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  }
+]

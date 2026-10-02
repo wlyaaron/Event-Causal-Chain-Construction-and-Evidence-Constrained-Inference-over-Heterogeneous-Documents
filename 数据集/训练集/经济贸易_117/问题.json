@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_117_Q01",
+    "pack_id": "117",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，围绕最终结果D009（趋势展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_117_Q02",
+    "pack_id": "117",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（政策落地）在D002（市场反应）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "economy_trade_117_Q03",
+    "pack_id": "117",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D004（专家分析）没有发生（或被及时干预阻断），D006（中小企业影响）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "economy_trade_117_Q04",
+    "pack_id": "117",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，若观测截断在D006（中小企业影响）阶段（当前已知：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "economy_trade_117_Q05",
+    "pack_id": "117",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（成效评估）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "economy_trade_117_Q06",
+    "pack_id": "117",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于专家分析事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "economy_trade_117_Q07",
+    "pack_id": "117",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D004（专家分析）与哪一事件构成直接因果关系？其后果是什么？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_100_Q01",
+    "pack_id": "100",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2015年大众汽车排放门事件是如何被发现的？美国环保署指控的具体内容是什么？涉及哪些车型和数量？"
+  },
+  {
+    "sample_id": "economy_trade_100_Q02",
+    "pack_id": "100",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "大众汽车排放门事件为什么会从一个美国市场的局部事件演变为全球性的企业危机？请分析事件升级的关键节点和原因。"
+  },
+  {
+    "sample_id": "economy_trade_100_Q03",
+    "pack_id": "100",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序梳理大众汽车排放门从2006年作弊行为开始到2023年高管判刑的关键事件发展脉络。"
+  },
+  {
+    "sample_id": "economy_trade_100_Q04",
+    "pack_id": "100",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较大众汽车在美国市场和欧洲市场应对排放门的不同策略和结果，分析为什么两个市场的处理方式存在如此大的差异。"
+  },
+  {
+    "sample_id": "economy_trade_100_Q05",
+    "pack_id": "100",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "排放门事件如何通过品牌损害、财务损失、政策变化和行业竞争等多个渠道推动大众汽车加速电动化转型？请分析各因素之间的关联。"
+  },
+  {
+    "sample_id": "economy_trade_100_Q06",
+    "pack_id": "100",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括大众汽车排放门事件对全球汽车行业的深远影响，包括排放法规改革、柴油车市场衰退、车企电动化转型和企业合规体系建设等方面。"
+  },
+  {
+    "sample_id": "economy_trade_100_Q07",
+    "pack_id": "100",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设大众汽车在2014年西弗吉尼亚大学研究报告发布后主动向监管机构坦白排放问题，而不是试图隐瞒，事件的发展和后果可能会有什么不同？"
+  }
+]

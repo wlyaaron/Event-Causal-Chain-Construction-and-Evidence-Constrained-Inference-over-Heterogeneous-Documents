@@ -1,0 +1,130 @@
+[
+  {
+    "event_id": "E01",
+    "doc_id": "E01",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E02",
+    "doc_id": "E02",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E03",
+    "doc_id": "E03",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E04",
+    "doc_id": "E04",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E05",
+    "doc_id": "E05",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E06",
+    "doc_id": "E06",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E07",
+    "doc_id": "E07",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  },
+  {
+    "event_id": "E08",
+    "doc_id": "E08",
+    "event_type": "",
+    "trigger_word": "",
+    "argument": {
+      "主体": "",
+      "地点": "",
+      "内容": "",
+      "影响": ""
+    },
+    "occur_time": "",
+    "start": 0,
+    "end": 0,
+    "source_spans": []
+  }
+]

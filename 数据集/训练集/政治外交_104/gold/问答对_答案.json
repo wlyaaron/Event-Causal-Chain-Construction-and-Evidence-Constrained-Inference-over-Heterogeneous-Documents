@@ -1,0 +1,390 @@
+[
+  {
+    "sample_id": "diplomacy_104_Q01",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D013（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（外交活动） → D003（重要讲话） → D004（国际反响） → D010（评论员文章） → D011（成果落实） → D012（机制建设） → D013（成效显现）。外交活动触发链条，历经重要讲话、国际反响、评论引领、成果落实、机制建设，最终务实合作成效逐步显现，成果惠及各国民众。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交活动） 到终点 D013（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交活动）",
+        "终点为 D013（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D004 → D010 → D011 → D012 → D013",
+        "可包含关键环节 D010（评论员文章）、D011（成果落实）、D012（机制建设）",
+        "终点影响：一批合作成果惠及各国民众，为地区发展注入持久动力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ],
+      [
+        "D001",
+        "D002",
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ],
+      "stages": [
+        "外交活动",
+        "重要讲话",
+        "国际反响",
+        "评论员文章",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_104_Q02",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（外交活动）在D002（会议成果）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：为深化合作提供制度保障。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（外交活动） 与 D002（会议成果） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（会议成果） 导致 D001（外交活动）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_104_Q03",
+    "pack_id": "104",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（外交活动）这一原因，D002（会议成果）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D010']]；为深化合作提供制度保障 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_104_Q04",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D004（国际反响），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（外交活动） → D003（重要讲话） → D004（国际反响）。起点为外交活动，终点为国际反响；彰显中国负责任大国担当。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交活动） 到终点 D004（国际反响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交活动）",
+        "终点为 D004（国际反响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交活动） → D003（重要讲话） → D004（国际反响）",
+        "可包含关键环节 D003（重要讲话）",
+        "终点影响：彰显中国负责任大国担当"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "外交活动",
+        "重要讲话",
+        "国际反响"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_104_Q05",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于此次活动通过的成果文件数量，材料中存在不同说法（D015）：一处称十余项，另有报道称二十余项。应如何看待这一矛盾？",
+    "answers": "两处来源相互矛盾：一份现场通稿称共发表和通过成果文件十余项，另有报道则称为二十余项。二者数字冲突，不应直接采信任一数值，具体数量有待官方清单最终确认。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出两处来源对成果文件数量说法相互矛盾",
+        "指出不应直接采信任一数值，需官方核实"
+      ],
+      "optional_facts": [
+        "一处称十余项，另一处称二十余项",
+        "具体数量待官方清单确认"
+      ],
+      "forbidden_facts": [
+        "直接断定某一数值为准确无误",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "数量冲突",
+      "sources": [
+        "D002",
+        "D015"
+      ],
+      "resolution": "存疑，待官方清单确认"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_104_Q06",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（外交活动）之后直接发生了什么？",
+    "answers": "D002（会议成果）是D001（外交活动）的直接后果。证据：为深化合作提供制度保障。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（外交活动） 直接导致 D002（会议成果）",
+        "后果：为深化合作提供制度保障"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（会议成果） 导致 D001（外交活动）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_104_Q07",
+    "pack_id": "104",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2004-10-25（D001 外交活动；D002 会议成果；D003 重要讲话；D004 国际反响；D005 双边会见），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（务实合作）、D007（综合评述）、D008（专家解读）、D009（活动花絮）、D010（评论员文章）；其中最关键的是务实合作——推动互利合作提质升级。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:务实合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（综合评述）、D008（专家解读）、D009（活动花絮）、D010（评论员文章）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2004-10-25",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_104_Q08",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到活动间隙杭州举办了西湖文化主题民俗展演（D017），这一活动是否属于推动D010（评论员文章）的因果环节？请判断并说明理由。",
+    "answers": "不属于。D017（西湖文化主题民俗展演）只是活动间隙的一项地方文化活动，吸引市民游客参与，与会晤核心议程无直接关联，材料中也未记载它与D010之间存在任何因果边，属于干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判断 D017 不是推动 D010 的因果环节",
+        "指出 D017 与 D010 之间不存在因果边"
+      ],
+      "optional_facts": [
+        "D017 属于无关的地方文化活动",
+        "属于干扰信息"
+      ],
+      "forbidden_facts": [
+        "将 D017 纳入因果链",
+        "编造 D017 与 D010 的因果关系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D017"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D017",
+      "target": "D010",
+      "has_causal_link": false
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_104_Q09",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料中一项未经证实的后续磋商安排（D016），能否确定其具体议题、牵头方与举行时间？若不能，缺少哪些关键信息？",
+    "answers": "不能确定。D016提及的后续磋商安排尚未经证实，材料未给出具体议题、牵头方和举行时间等关键信息，主体不详，因此无法据此得出确定结论，相关信息有待进一步核实。",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定 / 信息缺失",
+        "缺少具体议题、牵头方、举行时间等关键信息"
+      ],
+      "optional_facts": [
+        "该磋商安排尚未经证实",
+        "相关信息有待进一步核实"
+      ],
+      "forbidden_facts": [
+        "给出确定的议题或牵头方或时间",
+        "编造材料中不存在的信息"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D016"
+      ]
+    ],
+    "annotations": {
+      "missing_fields": [
+        "具体议题",
+        "牵头方",
+        "举行时间"
+      ],
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "social_governance_05_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D006（法治建设）早于D008（舆论关注），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "social_governance_05_Q02",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请还原从D001（社会事件）到D009（社会共治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "social_governance_05_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（社会事件），说明经由哪些中间事件最终导致了D008（舆论关注）。"
+  },
+  {
+    "sample_id": "social_governance_05_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D002（官方回应）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "social_governance_05_Q05",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D006（法治建设）未曾出现，D008（舆论关注）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "social_governance_05_Q06",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，截至D006（法治建设）阶段，材料仅显示：D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "social_governance_05_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D002（官方回应）在D003（调查进展）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "social_governance_05_Q08",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于哈尔滨的社会事件事件，不同来源给出的关键数据不一致（官方304、另一来源365）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "social_governance_05_Q09",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区哈尔滨的行业交流会，是否与主线事件社会事件（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "social_governance_05_Q10",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，哈尔滨在该社会事件事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

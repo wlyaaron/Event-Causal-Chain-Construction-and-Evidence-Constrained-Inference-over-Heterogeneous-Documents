@@ -1,0 +1,427 @@
+[
+  {
+    "sample_id": "public_safety_047_Q01",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（食品安全整治成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D003（调查评估与核查） → D005（调查评估与核查） → D006（责任追究与处理） → D007（校园食品安全专项整治落实） → D008（校园食品安全长效机制建设） → D009（食品安全整治成效显现）。食物中毒事件触发链条，经调查、追责、专项整治和长效机制建设，最终整治成效逐步显现。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D009（食品安全整治成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D009（食品安全整治成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D005 → D006 → D007 → D008 → D009",
+        "可包含关键环节 D006（责任追究与处理）",
+        "终点影响：整治成效逐步显现"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "调查评估与核查",
+        "调查评估与核查",
+        "责任追究与处理",
+        "校园食品安全专项整治落实",
+        "校园食品安全长效机制建设",
+        "食品安全整治成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_047_Q02",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D002（医疗救治）在D004（善后与临时排查）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "不能仅凭时间先后认定因果。D002（医疗救治）与D004（善后与临时排查）在时间上虽有先后，但材料中并未记载二者之间存在因果边，它们都是由同一事件D001触发的并行处置环节，彼此之间不构成因果关系。判定因果必须以明确的因果证据为准，而非时间顺序。",
+    "answer_facts": {
+      "required_facts": [
+        "D002 与 D004 之间不构成因果关系",
+        "不能仅凭时间先后就断定因果"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D004",
+        "二者都是由 D001 触发的并行处置环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "编造 D002 与 D004 之间不存在的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ],
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D004",
+      "temporal_order": "D002先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据，不构成因果"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_047_Q03",
+    "pack_id": "047",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D001（安全事件/风险发生）所代表的条件被移除，后续的D003（调查评估与核查）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "结论：一旦阻断D001，D003大概率不再发生。因为D001是D003的直接原因（直接因果），其下游受影响的边为 [['D001', 'D003'], ['D003', 'D005'], ['D003', 'D006']]；初步判定为沙门氏菌交叉污染导致的食物中毒 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D003",
+          "D005"
+        ],
+        [
+          "D003",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_047_Q04",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D006（责任追究与处理）的完整因果路径，并标明证据顺序。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D003（调查评估与核查） → D005（调查评估与核查） → D006（责任追究与处理）。安全事件触发链条，经调查核实、结果公布，最终形成责任追究与处理；11名企业相关人员被立案侦查并采取刑事强制措施。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D006（责任追究与处理） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D006（责任追究与处理）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D005 → D006",
+        "可包含关键环节 D003（调查评估与核查）",
+        "可包含关键环节 D005（调查评估与核查）"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "调查评估与核查",
+        "调查评估与核查",
+        "责任追究与处理"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_047_Q05",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起事件的起因，材料中既有'蓄意投毒、农药残留致病'的网络猜测（D013），又有官方认定的沙门氏菌交叉污染（D003），二者相互矛盾，应采信哪一个？为什么？",
+    "answers": "应采信官方认定的沙门氏菌交叉污染（D003）。D013的'投毒、农药残留'仅为网络猜测，未获证实；而D003是疾控中心对呕吐物、排泄物、剩余食材、加工器具等采样检测后的权威认定，明确为食堂生熟不分导致的沙门氏菌交叉污染，并排除了投毒和农药残留的说法。面对相互矛盾的来源，应以权威官方检测结论为准，而非未经证实的网络猜测。",
+    "answer_facts": {
+      "required_facts": [
+        "采信 D003（官方认定沙门氏菌交叉污染）",
+        "D013（投毒/农药猜测）未获证实可信度低，D003 为权威检测认定可信度高"
+      ],
+      "optional_facts": [
+        "官方结论建立在采样检测基础之上",
+        "网络猜测不能作为定论依据"
+      ],
+      "forbidden_facts": [
+        "采信未经证实的投毒或农药残留猜测",
+        "认为两种说法可信度相同无法取舍"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ],
+      [
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "conflict_pair": [
+        "D013",
+        "D003"
+      ],
+      "adopted": "D003",
+      "reason": "官方采样检测认定可信度高于未证实的网络猜测"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_047_Q06",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：沿因果关系看，D003（调查评估与核查）之后直接发生了什么？",
+    "answers": "D005（调查评估与核查）是D003（调查评估与核查）的直接后果。证据：公布事件最终调查结果。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（调查评估与核查） 直接导致 D005（调查评估与核查）",
+        "后果：公布事件最终调查结果"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（调查评估与核查） 导致 D003（调查评估与核查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_047_Q07",
+    "pack_id": "047",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握2023-06-14及之前的信息（D001 安全事件/风险发生；D002 医疗救治；D003 调查评估与核查；D004 善后与临时排查），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "基于因果走势，后续将出现：D005（调查评估与核查）、D006（责任追究与处理），并可能进一步推动D007（校园食品安全专项整治落实）、D008（校园食品安全长效机制建设）、D009（食品安全整治成效显现）；其中最关键的是D005——公布事件最终调查结果，为责任追究提供依据。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:调查评估与核查"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（责任追究与处理）、D007（校园食品安全专项整治落实）、D008、D009"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-06-14",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_047_Q08",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到了同期一所无关幼儿园幼儿的肠胃不适（D016）、省内外同名'金苹果'幼儿园（D017）以及以往其他地方的学校食物中毒案例（D018）。在追溯本起食物中毒事件的因果链条时，这些信息是否应纳入？请说明理由。",
+    "answers": "都不应纳入。D016是同期另一所无关幼儿园的普通肠胃型感冒，与本起食物中毒并无关联；D017是省内外同名或同属'金苹果'品牌的其他幼儿园，与本次涉事的龙湾半岛幼稚园无直接关系；D018只是以往其他地方的学校食物中毒案例，仅作背景对比。三者均为语义相近的干扰项，与本起事件的因果链条没有关系，应予排除。",
+    "answer_facts": {
+      "required_facts": [
+        "D016、D017、D018 均不应纳入本起事件的因果链",
+        "三者与本起食物中毒无因果关联"
+      ],
+      "optional_facts": [
+        "D016 是无关的普通肠胃感冒",
+        "D017 是同名但无关的其他园区",
+        "D018 是历史案例仅作背景对比"
+      ],
+      "forbidden_facts": [
+        "将干扰事件纳入因果链",
+        "把同名园区或历史案例当作本起事件的一部分"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D016"
+      ],
+      [
+        "D017"
+      ],
+      [
+        "D018"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D016",
+        "D017",
+        "D018"
+      ],
+      "decision": "排除",
+      "reason": "语义相近但与本起事件因果无关"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_047_Q09",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定导致本次中毒的问题食材具体是哪一批次、于何时进入食堂？请判断并说明依据。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定问题食材的批次与进货时间",
+        "材料对此记载不明确"
+      ],
+      "optional_facts": [
+        "材料只认定了沙门氏菌交叉污染这一性质",
+        "确切时间尚难以认定"
+      ],
+      "forbidden_facts": [
+        "武断给出确切的批次或进货时间",
+        "编造材料未提供的信息"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_reason": "材料记载不明确，信息不足",
+      "expected_answer": "无法确定问题食材批次与进货时间"
+    },
+    "confidence_level": null
+  }
+]

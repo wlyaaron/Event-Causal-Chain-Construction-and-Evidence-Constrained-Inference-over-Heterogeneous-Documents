@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_205_Q01",
+    "pack_id": "205",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q02",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D003（企业行动）在时间/进程上早于D004（专家分析）。能否据此断定D003（企业行动）导致了D004（专家分析）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q03",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（趋势展望），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q04",
+    "pack_id": "205",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D001（政策落地）这一原因，D002（市场反应）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q05",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D004（专家分析）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q06",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D008（成效评估），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_205_Q07",
+    "pack_id": "205",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了中非负责人的个人从业年限？"
+  }
+]

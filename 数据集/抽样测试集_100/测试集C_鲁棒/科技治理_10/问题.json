@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "technology_governance_010_Q01",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（技术突破），说明经由哪些中间事件最终导致了D009（国际合作）。（请结合材料作答）"
+  },
+  {
+    "sample_id": "technology_governance_010_Q02",
+    "pack_id": "10",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "当观测范围限定在D006（标准制定）阶段及之前时，及之前的信息（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "technology_governance_010_Q03",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D004（伦理讨论）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "technology_governance_010_Q04",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（技术突破）在D002（行业热议）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "technology_governance_010_Q05",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D008（场景落地）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "technology_governance_010_Q06",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了人才培养事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "technology_governance_010_Q07",
+    "pack_id": "10",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（技术突破）没有发生（或被及时干预阻断），D002（行业热议）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "technology_governance_010_Q08",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于新一代AI治理委员会的技术突破事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "technology_governance_010_Q09",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件技术突破（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "technology_governance_010_Q10",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，新一代AI治理委员会在该技术突破事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

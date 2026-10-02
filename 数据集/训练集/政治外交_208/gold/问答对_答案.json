@@ -1,0 +1,147 @@
+[
+  {
+    "sample_id": "diplomacy_208_Q01",
+    "pack_id": "208",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "各方在经贸合作方面达成了哪些安排？",
+    "answers": "各方进一步深化经贸投资合作，一批合作项目和商业协议相继达成。各方同意扩大双向贸易和投资规模，推动产业链供应链深度融合，加强在基础设施、能源资源、现代农业、高新技术等领域合作，实现优势互补、互利共赢。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_208_Q02",
+    "pack_id": "208",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中方同各方的沟通就重大问题凝聚了哪些共识？",
+    "answers": "中方同各方举行会谈会晤，就双边关系及重大国际和地区问题深入沟通，凝聚广泛共识：一致同意增进政治互信、加强战略对接、深化务实合作、妥善处理分歧，共同主张坚持多边主义、践行合作共赢、维护国际公平正义。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_208_Q03",
+    "pack_id": "208",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在人文交流方面各方达成了哪些共识？",
+    "answers": "各方高度重视人文交流，一致同意加强教育、文化、旅游、体育、青年、媒体、智库等领域交流合作，夯实关系发展的民意基础。各方认为国之交在于民相亲、民相亲在于心相通，将推动文明交流互鉴、弘扬全人类共同价值。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_208_Q04",
+    "pack_id": "208",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际社会和专家如何评价此次活动？",
+    "answers": "此次活动在国际社会引发热烈反响，多国人士和媒体认为成果丰硕、意义重大，为动荡变革的世界注入了稳定性和正能量。专家认为这是中国特色大国外交的又一生动实践，中方倡导的深化能源经贸和投资合作等主张展现了合作共赢理念和命运与共胸怀。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_208_Q05",
+    "pack_id": "208",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "综合来看，此次活动有怎样的意义和亮点？",
+    "answers": "此次活动主题鲜明、成果丰硕、影响深远，是观察中国特色大国外交的重要窗口。从深入的战略沟通到务实的合作对接，从广泛的共识凝聚到丰硕的成果产出，充分展现了对话合作、互利共赢的时代潮流和中国的大国担当。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_208_Q06",
+    "pack_id": "208",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动将如何推动相关关系和务实合作的未来发展？",
+    "answers": "预计此次活动将有力推动相关关系和务实合作深入发展。预计将推动各项共识和成果加快落实，拓展合作广度和深度；预计将带动经贸、人文等领域合作提质升级，让成果更好惠及各国人民；预计将为共建面向未来的战略伙伴关系、为地区和世界的和平稳定注入持久动力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D003"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_208_Q07",
+    "pack_id": "208",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动对推动构建人类命运共同体将产生怎样的深远影响？",
+    "answers": "预计此次活动将进一步推动构建人类命运共同体理念深入人心。预计将凝聚坚持真正多边主义、弘扬全人类共同价值的广泛共识；预计将推动各国摒弃零和博弈、树立命运与共理念；预计将彰显中国负责任大国担当，为完善全球治理、应对全球性挑战贡献更多中国智慧和力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

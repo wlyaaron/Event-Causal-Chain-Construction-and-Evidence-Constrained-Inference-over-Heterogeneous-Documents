@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，从时间看D001（疫情通报）早于D004（专家科普），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "healthcare_001_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请概述D001（疫情通报）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "healthcare_001_Q03",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（防控政策）阶段（当前已知：D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "healthcare_001_Q04",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定医保政策是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "healthcare_001_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（疫情通报）到D009（长期影响）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "healthcare_001_Q06",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D003（临床救治）没有发生（或被及时干预阻断），D004（专家科普）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "healthcare_001_Q07",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：如果移除D001（疫情通报）这一原因，D002（官方发布）是否会失去支撑？请判断并说明连锁影响。"
+  }
+]

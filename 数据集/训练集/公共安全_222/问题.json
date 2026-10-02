@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_222_Q01",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从过山车故障发生到全国游乐园行业掀起整改潮，中间经历了哪些关键传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "public_safety_222_Q02",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "技术鉴定（D004）和媒体深度调查（D005）都发生在事故之后，二者中哪一个对监管执法行动（D006）的推动作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "public_safety_222_Q03",
+    "pack_id": "222",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设游乐园在事故前就严格落实了传感器定期更换制度，这次高空被困故障是否可以避免？这一改变会对后续的行业调查（D005）和标准修订（D008）产生什么连锁影响？"
+  },
+  {
+    "sample_id": "public_safety_222_Q04",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "被困游客的心理康复（D007）与行业安全标准修订（D008）之间看似不相关，实际上是否存在因果传导路径？请通过中间事件说明二者的关联。"
+  },
+  {
+    "sample_id": "public_safety_222_Q05",
+    "pack_id": "222",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确量化此次事故对欢乐世界游乐园未来三年营业收入的具体影响金额？"
+  },
+  {
+    "sample_id": "public_safety_222_Q06",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "过山车故障（D001）发生后，直接触发了哪些后续事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "public_safety_222_Q07",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于事故发生和救援完成（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

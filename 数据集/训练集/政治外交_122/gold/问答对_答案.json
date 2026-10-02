@@ -1,0 +1,294 @@
+[
+  {
+    "sample_id": "diplomacy_122_Q01",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（国际斡旋与阿富汗局势持续恶化），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（美国宣布撤军与塔利班攻势启动）→D002（巴格拉姆基地撤离与省会接连陷落）→D003（塔利班闪电占领全国与喀布尔陷落）→D004（喀布尔机场混乱与塔利班宣布建国）→D005（喀布尔机场恐袭与美军完成撤离）→D006（塔利班组建临时政府与国际承认僵局）→D007（人道主义危机与妇女权利倒退）→D008（国际斡旋与阿富汗局势持续恶化）。美国撤军引发政权更迭，塔利班执政后因人权和包容性问题遭国际孤立，人道危机持续恶化。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的有向因果链",
+        "起点D001",
+        "终点D008"
+      ],
+      "optional_facts": [
+        "可包含D004中的机场混乱",
+        "终点影响：阿富汗局势未见根本改善"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_122_Q02",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（美国宣布撤军与塔利班攻势启动）在D003（塔利班闪电占领全国与喀布尔陷落）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D003（间接传导）。美国宣布撤军并开始撤离后，塔利班利用权力真空发动全国攻势，阿富汗安全部队失去美军空中支援后迅速崩溃，最终导致塔利班占领全国。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D003存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D003约4个月",
+        "D002是中间环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": true
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_122_Q03",
+    "pack_id": "122",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（巴格拉姆基地撤离与省会接连陷落）这一环节，D003（塔利班闪电占领全国与喀布尔陷落）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D002是D003的直接原因，移除后D003将失去关键支撑。因为巴格拉姆基地的撤离标志着美军完全放弃对阿富汗安全部队的地面支援，而省会接连陷落摧毁了阿富汗政府的统治基础和安全部队的士气，直接导致了喀布尔的陷落。受影响的下游包括D004机场混乱和D005美军撤离。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D001也是D003的原因但不足以替代D002"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D002",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D003失去关键支撑"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_122_Q04",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D003（塔利班闪电占领全国与喀布尔陷落）之后直接推动了哪个事件？",
+    "answers": "D004（喀布尔机场混乱与塔利班宣布建国）是D003的直接后果。证据：8月15日塔利班进入喀布尔后，数千名阿富汗人涌向喀布尔机场试图逃离，出现攀爬飞机坠落身亡的惨剧；8月19日塔利班宣布成立阿富汗伊斯兰酋长国。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003直接导致D004",
+        "后果：机场混乱与塔利班建国"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_122_Q05",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测塔利班政府何时能获得国际社会的广泛承认以及阿富汗经济何时复苏？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_122_Q06",
+    "pack_id": "122",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2021年8月30日（D001至D005均已发生，美军完成撤离），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（塔利班组建临时政府与国际承认僵局）、D007（人道主义危机与妇女权利倒退）、D008（国际斡旋与阿富汗局势持续恶化）；其中最关键的是塔利班组建排他性临时政府导致国际承认僵局，阿富汗面临严重人道危机和人权倒退。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D006"
+      ],
+      "optional_facts": [
+        "后续还可能发生D007、D008"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-08-30",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_122_Q07",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D006（塔利班组建临时政府与国际承认僵局）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（美国宣布撤军与塔利班攻势启动）→D002（巴格拉姆基地撤离与省会接连陷落）→D003（塔利班闪电占领全国与喀布尔陷落）→D005（喀布尔机场恐袭与美军完成撤离）→D006（塔利班组建临时政府与国际承认僵局）。塔利班夺取政权后组建排他性政府，国际社会因人权和包容性问题拒绝承认。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D006的有向因果链",
+        "起点D001",
+        "终点D006"
+      ],
+      "optional_facts": [
+        "可包含D004",
+        "终点影响：塔利班外交孤立"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  }
+]

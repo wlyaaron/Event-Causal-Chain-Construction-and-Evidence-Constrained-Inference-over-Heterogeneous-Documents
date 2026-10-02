@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料显示D005（自治区调查组与责任人控制）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "public_safety_005_Q02",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D001（压力容器爆炸事故发生）没有发生（或被及时干预阻断），D002（应急救援处置）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_005_Q03",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至2026-01-19，材料仅显示：D001 压力容器爆炸事故发生；D002 应急救援处置；D004 善后处置工作；D005 自治区调查组与责任人控制；D006 国务院安委会挂牌督办。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_005_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（压力容器爆炸事故发生）先于D004（善后处置工作）发生，可以据此断定D001（压力容器爆炸事故发生）是D004（善后处置工作）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_005_Q05",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化伤亡情况通报对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "public_safety_005_Q06",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（压力容器爆炸事故发生），说明经由哪些中间事件最终导致了D008（行业警示与全国专项整治）。"
+  },
+  {
+    "sample_id": "public_safety_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D003（伤亡情况通报）在D004（善后处置工作）之前发生，二者是否构成因果？依据是什么？"
+  }
+]

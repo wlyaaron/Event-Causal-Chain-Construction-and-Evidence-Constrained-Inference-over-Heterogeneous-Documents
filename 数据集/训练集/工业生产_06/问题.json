@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "industrial_production_06_Q01",
+    "pack_id": "06",
+    "question_type": "fact_query",
+    "reasoning_type": "single_hop",
+    "question": "响水'3·21'天嘉宜化工爆炸事故发生的具体时间和地点是什么？最终确认的死亡人数和直接经济损失分别是多少？"
+  },
+  {
+    "sample_id": "industrial_production_06_Q02",
+    "pack_id": "06",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "single_hop",
+    "question": "根据材料，导致响水'3·21'化工爆炸事故发生的直接技术原因是什么？请说明爆炸发生的物理过程。"
+  },
+  {
+    "sample_id": "industrial_production_06_Q03",
+    "pack_id": "06",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间先后顺序排列以下事件：事故调查报告公布、国务院调查组成立、事故发生、问责结果公布、化工园区关闭，并说明相邻事件之间是否存在因果关系。"
+  },
+  {
+    "sample_id": "industrial_production_06_Q04",
+    "pack_id": "06",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较事故发生当日（D001）与事故调查报告公布时（D005）的伤亡数据差异，分析为什么死亡人数从事发当日的47人上升到最终的78人，这一变化反映了什么？"
+  },
+  {
+    "sample_id": "industrial_production_06_Q05",
+    "pack_id": "06",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯从'企业违规储存硝化废料'到'陈家港化工园区整体关闭'的完整因果链条，说明中间经过了哪些关键事件环节，每个环节的推动作用是什么？"
+  },
+  {
+    "sample_id": "industrial_production_06_Q06",
+    "pack_id": "06",
+    "question_type": "summary",
+    "reasoning_type": "summary",
+    "question": "请综合全部材料，概括响水'3·21'化工爆炸事故在企业管理、政府监管、产业发展三个层面分别暴露了哪些问题，以及后续采取了哪些针对性整改措施。"
+  },
+  {
+    "sample_id": "industrial_production_06_Q07",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设天嘉宜公司在2018年被环保局处罚后，及时将违规储存的硝化废料委托有资质单位进行处置，这起事故是否还会发生？请结合材料中的事故原因分析，说明这一假设会如何影响后续的事件链条。"
+  }
+]

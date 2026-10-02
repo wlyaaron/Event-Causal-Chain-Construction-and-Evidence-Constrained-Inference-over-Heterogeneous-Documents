@@ -1,0 +1,145 @@
+[
+  {
+    "sample_id": "public_safety_246_Q01",
+    "pack_id": "246",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年宁波市大型农贸市场火灾事故是怎样发生的？造成了哪些后果？",
+    "answers": "2016年宁波市大型农贸市场火灾事故。接报后当地立即启动应急预案、组织力量全力搜救救治。事件初步造成人遇难、人受伤，经调查认定为责任事件，直接原因是电气线路私拉乱接、消防通道堵塞，暴露出安全责任落实不到位、隐患治理不彻底等问题。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_246_Q02",
+    "pack_id": "246",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件发生后现场是如何组织应急处置的？",
+    "answers": "现场指挥部实行统一指挥、分组作业，搜救、救治、监测、保障各组密切配合，专业队伍携带装备昼夜奋战、科学施救，并对现场风险动态监测评估、坚决防范次生事故，医疗供电通信交通等部门协同联动做好保障。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_246_Q03",
+    "pack_id": "246",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "调查认定的直接原因和主要问题是什么？",
+    "answers": "调查认定这是一起责任事件，直接原因是电气线路私拉乱接、消防通道堵塞。调查发现相关单位安全责任落实不到位、隐患治理不彻底，规章制度执行流于形式，风险辨识和应急准备存在短板，个别监管环节也存在把关不严、履职不力等问题。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_246_Q04",
+    "pack_id": "246",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件后进行了怎样的追责问责？",
+    "answers": "司法机关依法对负有直接责任的人员采取强制措施、追究法律责任；纪检监察机关对负有领导和监管责任的人员严肃问责、给予党纪政务处分，涉嫌违法犯罪的移送司法机关查处。旨在以严肃问责压实责任、警示教育。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_246_Q05",
+    "pack_id": "246",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事件后开展了哪些专项整改和督查？",
+    "answers": "有关主管部门部署开展农贸市场消防安全专项整治，坚持问题导向全面排查整改隐患，实行清单化管理、闭环式整改，整改不到位的坚决依法处理。同时派出督查组深入一线明查暗访、督导检查，以督促改、以督促建，确保整治见底见效。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_246_Q06",
+    "pack_id": "246",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生怎样的深远影响？",
+    "answers": "预计此次事件将有力推动安全责任的刚性落实。预计将进一步压实党政同责、一岗双责、失职追责要求；预计将完善考核问责和激励约束机制，推动各级各方真正把责任扛在肩上；预计将促进全社会安全意识提升，形成人人重视安全、层层防范风险的良好局面。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D010"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_246_Q07",
+    "pack_id": "246",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？",
+    "answers": "预计未来将在巩固深化整改成果上持续用力。预计将建立健全整改落实的跟踪问效和常态化检查机制，防止问题反弹回潮；预计将推动风险隐患动态排查、闭环管理；预计将强化基层基础和应急能力建设，把每一起事件的教训真正转化为长治久安的制度举措。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

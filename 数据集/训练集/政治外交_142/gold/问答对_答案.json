@@ -1,0 +1,480 @@
+[
+  {
+    "sample_id": "diplomacy_142_Q01",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（专家解读），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "完整因果链：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）。其中，外交会晤为起点，经逐级传导，最终导致专家解读；签署458项合作成果。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D009（专家解读） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D009（专家解读）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "可包含关键环节 D008（共识落实）",
+        "终点影响：签署458项合作成果"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实",
+        "专家解读"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_142_Q02",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，140多国代表相关的D004（双边会谈）发生后，紧接着出现的直接结果是什么？",
+    "answers": "材料表明，D004（双边会谈）的直接结果是D006（政策发布）；2023-10-18的第三届一带一路国际合作高峰论坛为地区合作带来积极信号。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（双边会谈） 直接导致 D006（政策发布）",
+        "后果：2023-10-18的第三届一带一路国际合作高峰论坛为地区合作带来积极信号"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（政策发布） 导致 D004（双边会谈）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_142_Q03",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（外交会晤）先于D004（双边会谈）发生，可以据此断定D001（外交会晤）是D004（双边会谈）的原因吗？请说明。",
+    "answers": "不能。D001（外交会晤）早于D004（双边会谈）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（峰会成果）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（外交会晤） 早于 D004（双边会谈） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（外交会晤） 导致 D004（双边会谈）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_142_Q04",
+    "pack_id": "142",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D004（双边会谈）这一原因，D006（政策发布）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D004，D006大概率不再发生。因为D004是D006的直接原因（直接因果），其下游受影响的边为 [['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；签署458项合作成果 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D006及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_142_Q05",
+    "pack_id": "142",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。",
+    "answers": "预测后续进展为：D007（国际回应）、D008（共识落实）、D009（专家解读）。核心节点是国际回应：第三届一带一路国际合作高峰论坛成为国际媒体关注的焦点。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（共识落实）, D009（专家解读）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（政策发布）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际回应"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_142_Q06",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了140多国代表负责人的个人从业年限？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_142_Q07",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（外交会晤），说明经由哪些中间事件最终导致了D008（共识落实）。",
+    "answers": "该结果由一条有向因果链推动：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）。起点为外交会晤，终点为共识落实；签署458项合作成果。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D008（共识落实） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D008（共识落实）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "终点影响：签署458项合作成果"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_142_Q08",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于140多国代表的外交会晤事件，不同来源给出的关键数据不一致（官方458、另一来源550）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_142_Q09",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的日常检查，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_142_Q10",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，140多国代表在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

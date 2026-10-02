@@ -1,0 +1,304 @@
+[
+  {
+    "sample_id": "diplomacy_167_Q01",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（人道灾难加剧与停火谈判僵局），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（哈马斯袭击以色列与以色列宣战）→D002（以色列空袭加沙与全面封锁）→D003（联合国大会决议与以色列地面进攻）→D004（加沙城巷战与医院危机）→D005（临时停火与人质交换）→D006（南部战事升级与南非起诉以色列）→D007（红海危机与国际法院裁决）→D008（埃及和平计划与拉法进攻危机）→D009（安理会停火决议与伊朗以色列交锋）→D010（人道灾难加剧与停火谈判僵局）。哈马斯袭击引发以色列全面军事行动，多次停火谈判破裂，加沙人道灾难持续加剧。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D010的有向因果链",
+        "起点D001",
+        "终点D010"
+      ],
+      "optional_facts": [
+        "可包含D005中的临时停火",
+        "终点影响：和平前景渺茫"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "hops": 9
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_167_Q02",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（哈马斯袭击以色列与以色列宣战）在D005（临时停火与人质交换）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D003→D004→D005（间接传导）。哈马斯袭击并劫持人质是以色列发动战争的直接原因，而战争升级和人质问题最终促成了临时停火与人质交换协议。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D005存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D005约1个半月",
+        "D002-D004是中间环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": true
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_167_Q03",
+    "pack_id": "167",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D004（加沙城巷战与医院危机）这一环节，D005（临时停火与人质交换）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D004是D005的直接原因之一，移除后D005将失去重要支撑。因为加沙城巷战造成大量平民伤亡和医院危机，国际社会的人道主义压力急剧增大，直接促成了临时停火协议。受影响的下游包括D006南部战事升级和D007国际法院裁决。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D003也是D005的原因但不足以替代D004"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D005失去重要支撑"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_167_Q04",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D005（临时停火与人质交换）之后直接推动了哪个事件？",
+    "answers": "D006（南部战事升级与南非起诉以色列）是D005的直接后果。证据：12月1日停火破裂后，以色列国防军恢复军事行动，向加沙地带南部汗尤尼斯发动大规模进攻；同时国际社会对以色列的法律压力增大，南非于12月29日向国际法院起诉以色列种族灭绝。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D005直接导致D006",
+        "后果：南部战事升级与法律起诉"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D005",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_167_Q05",
+    "pack_id": "167",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测巴以冲突何时能实现永久停火以及哈马斯何时被彻底消灭？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_167_Q06",
+    "pack_id": "167",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2023年12月1日（D001至D005均已发生，停火破裂恢复战斗），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（南部战事升级与南非起诉以色列）、D007（红海危机与国际法院裁决）、D008（埃及和平计划与拉法进攻危机）、D009（安理会停火决议与伊朗以色列交锋）、D010（人道灾难加剧与停火谈判僵局）；其中最关键的是以色列将军事行动扩展至南部，国际法律和外交压力增大，地区冲突外溢风险上升。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D006"
+      ],
+      "optional_facts": [
+        "后续还可能发生D007至D010"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-12-01",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_167_Q07",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D007（红海危机与国际法院裁决）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（哈马斯袭击以色列与以色列宣战）→D002（以色列空袭加沙与全面封锁）→D005（临时停火与人质交换）→D006（南部战事升级与南非起诉以色列）→D007（红海危机与国际法院裁决）。胡塞武装以支持巴勒斯坦为由袭击红海商船，南非因加沙人道灾难起诉以色列，国际法院作出裁决。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D007的有向因果链",
+        "起点D001",
+        "终点D007"
+      ],
+      "optional_facts": [
+        "可包含D003、D004",
+        "终点影响：地区冲突外溢"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  }
+]

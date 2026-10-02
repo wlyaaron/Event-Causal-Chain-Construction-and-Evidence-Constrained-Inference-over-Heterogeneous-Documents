@@ -1,0 +1,553 @@
+[
+  {
+    "sample_id": "natural_disaster_092_Q01",
+    "pack_id": "092",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（灾害发生）未曾出现，D002（应急救援）的发生是否还能成立？请给出推断依据。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；单日融化60亿吨冰 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q02",
+    "pack_id": "092",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（灾后重建）阶段，材料仅显示：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "预测后续进展为：D007（社会援助）、D008（防灾短板）、D009（预警建设）。核心节点是社会援助：格陵兰冰盖融化灾情牵动着社会各界的心。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:社会援助"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（防灾短板）, D009（预警建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（灾后重建）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:社会援助"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q03",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。",
+    "answers": "完整因果链：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）。其中，灾害发生为起点，经逐级传导，最终导致预警建设；单日融化60亿吨冰。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D009（预警建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D009（预警建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "可包含关键环节 D008（防灾短板）",
+        "终点影响：单日融化60亿吨冰"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板",
+        "预警建设"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q04",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（灾害发生）到D008（防灾短板）的完整因果传导过程，并按序列出证据。",
+    "answers": "完整因果链：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）。其中，灾害发生为起点，经逐级传导，最终导致防灾短板；单日融化60亿吨冰。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D008（防灾短板） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D008（防灾短板）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "终点影响：单日融化60亿吨冰"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q05",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（灾害发生）发生在D002（应急救援）之前，这是否足以说明D001（灾害发生）是D002（应急救援）的原因？请说明理由。",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：格陵兰冰盖融化发生后，格陵兰立即调集专业救援队伍赶赴格陵兰灾区。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（灾害发生） 与 D002（应急救援） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急救援） 导致 D001（灾害发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q06",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D008（防灾短板）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "据材料，D008（防灾短板）的主体为格陵兰，发生地为格陵兰；格陵兰冰盖融化暴露出当前防灾减灾体系的薄弱环节。其影响：单日融化60亿吨冰。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：格陵兰",
+        "地点：格陵兰",
+        "基本事实：格陵兰冰盖融化暴露出当前防灾减灾体系的薄弱环节"
+      ],
+      "optional_facts": [
+        "影响：单日融化60亿吨冰"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D008"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q07",
+    "pack_id": "092",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。",
+    "answers": "预测后续进展为：D007（社会援助）、D008（防灾短板）、D009（预警建设）。核心节点是社会援助：格陵兰冰盖融化灾情牵动着社会各界的心。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:社会援助"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（防灾短板）, D009（预警建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（灾后重建）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:社会援助"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q08",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于格陵兰的灾害发生事件，不同来源给出的关键数据不一致（官方60、另一来源72）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_092_Q09",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区格陵兰的日常检查，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q10",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，格陵兰在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

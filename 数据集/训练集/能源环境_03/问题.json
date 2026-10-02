@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_03_Q01",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "吉林石化双苯厂爆炸发生在哪一天？事故造成多少人死亡？约有多少吨苯类污染物进入了松花江？"
+  },
+  {
+    "sample_id": "energy_environment_03_Q02",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么吉林石化爆炸会导致松花江污染？消防废水和泄漏物料是如何进入江水的？请说明污染形成的机制。"
+  },
+  {
+    "sample_id": "energy_environment_03_Q03",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：双苯厂爆炸、哈尔滨停水、污染带进入俄罗斯、解振华引咎辞职、国务院批复调查报告、流域治理规划启动。"
+  },
+  {
+    "sample_id": "energy_environment_03_Q04",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "哈尔滨市的停水应急处置与沿江其他城市的供水保障措施在应对策略和影响范围上有什么不同？"
+  },
+  {
+    "sample_id": "energy_environment_03_Q05",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从操作工失误到最终推动全国环境应急体系改革，中间经过了哪些关键环节？请结合事故发生、污染扩散、应急处置、责任追究等多个层面说明。"
+  },
+  {
+    "sample_id": "energy_environment_03_Q06",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括松花江污染事件对中国环境保护制度建设产生的主要影响，包括问责制度、应急体系和行业监管等方面。"
+  },
+  {
+    "sample_id": "energy_environment_03_Q07",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设吉林石化双苯厂在爆炸发生时配备了足够容量的事故应急池，能够全部收集消防废水和泄漏物料，后续的松花江污染事件是否还会发生？请分析可能的情景。"
+  }
+]

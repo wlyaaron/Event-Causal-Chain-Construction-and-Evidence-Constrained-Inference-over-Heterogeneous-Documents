@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_145_Q01",
+    "pack_id": "145",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握D006（政策发布）阶段及之前的信息（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "diplomacy_145_Q02",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料显示D003（峰会成果）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "diplomacy_145_Q03",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D003（峰会成果）早于D004（双边会谈），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "diplomacy_145_Q04",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_145_Q05",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D008（共识落实）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "diplomacy_145_Q06",
+    "pack_id": "145",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D004（双边会谈）所代表的条件被移除，后续的D005（多边场合）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_145_Q07",
+    "pack_id": "145",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（政策发布）阶段，材料仅显示：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布。据此预测后续最可能发生的进展，并说明推理依据。"
+  }
+]

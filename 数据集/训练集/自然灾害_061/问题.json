@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_061_Q01",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D003（官方通报）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q02",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D003（官方通报）在时间/进程上早于D004（灾情安置）。能否据此断定D003（官方通报）导致了D004（灾情安置）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q03",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（预警建设）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q04",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D008（防灾短板）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q05",
+    "pack_id": "061",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q06",
+    "pack_id": "061",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D001（灾害发生）这一原因，D002（应急救援）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q07",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（灾害发生）在进程上早于D004（灾情安置）。能否据此认为D001（灾害发生）导致了D004（灾情安置）？请给出判断与证据。"
+  }
+]

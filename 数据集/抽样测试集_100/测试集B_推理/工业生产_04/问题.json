@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "industrial_production_004_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D008（专项整治）早于D009（安全短板），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（事故发生）到D009（安全短板）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（专项整治）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q04",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D004（调查报告）这一原因，D006（企业处罚）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q05",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（企业处罚）阶段（D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D002（抢险救援）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "industrial_production_004_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（事故发生）在进程上早于D004（调查报告）。能否据此认为D001（事故发生）导致了D004（调查报告）？请给出判断与证据。"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_07_Q01",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：假设你只掌握D006（产业发展）阶段及之前的信息（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "energy_environment_07_Q02",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，假如当初D001（政策发布）未曾出现，D002（权威解读）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "energy_environment_07_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（政策发布），说明经由哪些中间事件最终导致了D009（科技创新）。"
+  },
+  {
+    "sample_id": "energy_environment_07_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（政策发布）先于D004（环保讨论）发生，可以据此断定D001（政策发布）是D004（环保讨论）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "energy_environment_07_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D001（政策发布）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "energy_environment_07_Q06",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D008（绿色路径）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "energy_environment_07_Q07",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定能源转型是否会导致整个行业长期停摆？"
+  }
+]

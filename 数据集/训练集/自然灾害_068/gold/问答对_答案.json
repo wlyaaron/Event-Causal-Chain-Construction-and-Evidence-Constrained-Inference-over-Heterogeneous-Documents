@@ -1,0 +1,484 @@
+[
+  {
+    "sample_id": "natural_disaster_068_Q01",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。",
+    "answers": "完整因果链：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）。其中，灾害发生为起点，经逐级传导，最终导致预警建设；1万多人死亡失踪。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D009（预警建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D009（预警建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "可包含关键环节 D008（防灾短板）",
+        "终点影响：1万多人死亡失踪"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板",
+        "预警建设"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q02",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D004（灾情安置）发生在D005（成因分析）之前，这是否足以说明D004（灾情安置）是D005（成因分析）的原因？请说明理由。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D004→D005（直接因果）。证据：针对2023-09-10的利比亚德尔纳溃坝，利比亚的气象地质专家进行深入分析。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（灾情安置） 与 D005（成因分析） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（成因分析） 导致 D004（灾情安置）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q03",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D006（灾后重建）直接导致了什么？请依据材料作答。",
+    "answers": "D006（灾后重建）直接导致了D008（防灾短板）。依据：利比亚德尔纳溃坝暴露出当前防灾减灾体系的薄弱环节。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D006（灾后重建） 直接导致 D008（防灾短板）",
+        "后果：利比亚德尔纳溃坝暴露出当前防灾减灾体系的薄弱环节"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（防灾短板） 导致 D006（灾后重建）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q04",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（防灾短板）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）。起点为灾害发生，终点为防灾短板；1万多人死亡失踪。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D008（防灾短板） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D008（防灾短板）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "终点影响：1万多人死亡失踪"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q05",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于此次灾害紧急转移安置群众的规模，不同材料的说法是否一致？应如何看待？",
+    "answers": "不一致，存在相互矛盾的说法：一份初步统计称转移安置受灾群众约3万人，另有部门估计约2.5万人（见D012）。两组数字来源不同、口径有别，相互矛盾，不能简单取其一作为定论，具体人数有待权威机构最终核实。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出转移安置人数存在相互矛盾的两种说法（约3万人 vs 约2.5万人）",
+        "指出应以权威机构最终核实为准，不能武断采信某一数字"
+      ],
+      "optional_facts": [
+        "矛盾来源：一份初步统计与另一部门估计口径不同",
+        "两组数字分别约为3万人与2.5万人"
+      ],
+      "forbidden_facts": [
+        "断言某一数字即为确定的最终答案",
+        "编造材料中不存在的数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "numeric_inconsistency",
+      "sources": [
+        "初步统计：转移安置约3万人",
+        "部门估计：转移安置约2.5万人"
+      ],
+      "resolution": "有待权威机构最终核实"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q06",
+    "pack_id": "068",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D003（官方通报）没有发生（或被及时干预阻断），D004（灾情安置）是否仍会发生？请判断并给出因果依据。",
+    "answers": "判断：若移除D003，D004很可能不会发生或将显著改变。依据：D003是D004的直接原因（直接因果），移除后受影响的因果边包括 [['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，1万多人死亡失踪 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q07",
+    "pack_id": "068",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（灾后重建）阶段（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D007（社会援助）、D008（防灾短板）、D009（预警建设）；其中最关键的是社会援助——利比亚德尔纳溃坝灾情牵动着社会各界的心。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:社会援助"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（防灾短板）, D009（预警建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（灾后重建）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:社会援助"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q08",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到地中海沿岸城市举办地中海沿岸文化节，这与德尔纳溃坝灾区的抢险救援、群众安置存在因果关系吗？请判断并说明。",
+    "answers": "没有因果关系。地中海沿岸文化节（D014）只是邻近城市如期举办的一年一度民俗文化活动，与德尔纳溃坝灾区的抢险救援、群众安置工作并无直接关联，属于语义相近但无关的干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判断地中海沿岸文化节（D014）与抢险救援、群众安置之间没有因果关系",
+        "指出该活动属于语义相近但无关的干扰信息"
+      ],
+      "optional_facts": [
+        "地中海沿岸文化节只是邻近城市如期举办的民俗文化活动",
+        "不应将无关事件纳入因果链"
+      ],
+      "forbidden_facts": [
+        "断言地中海沿岸文化节与抢险救援存在因果关系",
+        "把无关干扰事件编入证据链"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D014",
+      "is_relevant": false,
+      "note": "语义相近的无关干扰事件"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q09",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到有关方面或将追加一份专项投资支持方案，请说明该方案的具体投资总额、牵头部门和实施时间。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "指出该追加专项投资方案的投资总额、牵头部门和实施时间在材料中均不明确",
+        "结论为无法确定"
+      ],
+      "optional_facts": [
+        "相关信息未经证实、有待核实",
+        "缺乏可核实的确定信息"
+      ],
+      "forbidden_facts": [
+        "编造该方案的具体投资总额或牵头部门",
+        "断言一个确定的实施时间"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_reason": "unverified_incomplete_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

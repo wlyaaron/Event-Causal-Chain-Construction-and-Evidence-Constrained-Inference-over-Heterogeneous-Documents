@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_105_Q01",
+    "pack_id": "105",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（外交会晤）早于D004（双边会谈），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "diplomacy_105_Q02",
+    "pack_id": "105",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D003（峰会成果）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "diplomacy_105_Q03",
+    "pack_id": "105",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至D006（政策发布）阶段，材料仅显示：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "diplomacy_105_Q04",
+    "pack_id": "105",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（外交会晤）没有发生（或被及时干预阻断），D002（官方声明）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "diplomacy_105_Q05",
+    "pack_id": "105",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于共识落实事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "diplomacy_105_Q06",
+    "pack_id": "105",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（外交会晤），说明经由哪些中间事件最终导致了D009（专家解读）。"
+  },
+  {
+    "sample_id": "diplomacy_105_Q07",
+    "pack_id": "105",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（政策发布）阶段及之前的信息（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请预测事件的后续走向，并给出可验证的预测结论。"
+  }
+]

@@ -1,0 +1,425 @@
+[
+  {
+    "sample_id": "diplomacy_094_Q01",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D010（区域影响），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得主因果路径：D001（会议举办） → D002（出席讲话） → D004（通过宣言） → D005（批准决定） → D009（务实合作） → D010（区域影响）。各环节依次传导，最终形成D010（区域影响）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（会议举办） 到终点 D010（区域影响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（会议举办）",
+        "终点为 D010（区域影响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（会议举办） → D002（出席讲话） → D004（通过宣言） → D005（批准决定） → D009（务实合作） → D010（区域影响）",
+        "可包含关键环节 D002（出席讲话）",
+        "可包含关键环节 D004（通过宣言）",
+        "可包含关键环节 D005（批准决定）",
+        "可包含关键环节 D009（务实合作）",
+        "终点影响：提升上合组织地区影响力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "会议举办",
+        "出席讲话",
+        "通过宣言",
+        "批准决定",
+        "务实合作",
+        "区域影响"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_094_Q02",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于此次上合组织阿斯塔纳峰会并未接纳任何新成员国，请说明为何各方还称上合组织完成了新一轮扩员？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“白俄罗斯入盟，成员国增至10个”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_094_Q03",
+    "pack_id": "094",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（会议举办）被阻断，D003（白俄入盟）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001（会议举办），D003（白俄入盟）很可能不会发生或将显著改变。依据：D001（会议举办）是D003（白俄入盟）的直接原因，移除后其下游连锁影响随之中断。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（会议举办）是D003（白俄入盟）的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003（白俄入盟）及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D003"
+      ],
+      "counterfactual_result": "D003（白俄入盟）及其下游很可能不发生",
+      "acceptable_points": [
+        "D001（会议举办）是D003（白俄入盟）的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_094_Q04",
+    "pack_id": "094",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（中国接任）阶段，材料仅显示：D001 会议举办；D002 出席讲话；D003 白俄入盟；D004 通过宣言；D005 批准决定；D006 中国接任。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续最可能发生D007（成果通报）；这是可见事件沿因果链自然推进的结果。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:成果通报"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（扩员壮大）, D009（务实合作）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中国接任）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:成果通报"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_094_Q05",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D003（白俄入盟）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "据材料，D003（白俄入盟）的主体为上合组织，发生地为阿斯塔纳；在阿斯塔纳峰会上，白俄罗斯正式成为上合组织成员国，上合组织成员国数量增至10个，。其影响：白俄罗斯入盟，成员国增至10个。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：上合组织",
+        "地点：阿斯塔纳",
+        "基本事实：在阿斯塔纳峰会上"
+      ],
+      "optional_facts": [
+        "影响：白俄罗斯入盟，成员国增至10个"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D003"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_094_Q06",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D002（出席讲话）早于D008（扩员壮大），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D002（出席讲话）早于D008（扩员壮大）只是时间先后，材料中不存在 D002→D008 的因果关系；时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（出席讲话） 早于 D008（扩员壮大） 只是时间先后",
+        "材料中不存在 D002→D008 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D002（出席讲话） 导致 D008（扩员壮大）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D008",
+      "temporal_order": "D002先于D008",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_094_Q07",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（务实合作）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（会议举办） → D002（出席讲话） → D004（通过宣言） → D005（批准决定） → D009（务实合作）。自源头逐环传导至D009（务实合作）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（会议举办） 到终点 D009（务实合作） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（会议举办）",
+        "终点为 D009（务实合作）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（会议举办） → D002（出席讲话） → D004（通过宣言） → D005（批准决定） → D009（务实合作）",
+        "可包含关键环节 D002（出席讲话）",
+        "可包含关键环节 D004（通过宣言）",
+        "可包含关键环节 D005（批准决定）",
+        "终点影响：深化多领域务实合作"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009"
+      ],
+      "stages": [
+        "会议举办",
+        "出席讲话",
+        "通过宣言",
+        "批准决定",
+        "务实合作"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_094_Q08",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于上合组织成员国数量，官方通报与另一网传来源不一致（官方称白俄罗斯入盟后增至10个，另一来源称已达15个）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "多个来源相互冲突，交叉核验前不应给出唯一结论",
+        "应以官方/权威通报为准并标注冲突、存疑"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "直接采信与官方通报相悖的来源口径",
+        "在未核验冲突前给出唯一确定结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D003.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_094_Q09",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D001（会议举办）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [
+        "判定该干扰性信息与主线事件不存在因果关系",
+        "应将其排除，不纳入证据链"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "把背景性 / 无关信息强行纳入因果链",
+        "编造干扰信息与主线事件的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_094_Q10",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，《上合组织2035年前发展战略》全文的具体章节数是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "所需信息在现有材料中缺失",
+        "应拒答而非臆测"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "编造材料未记载的具体数据或结论",
+        "给出看似确定实则无据的答案"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

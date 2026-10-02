@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_034_Q01",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（火灾事故发生），说明经由哪些中间事件最终导致了D008（行业警示与专项整治），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_034_Q02",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D004（善后处置工作）先于D005（提级调查与责任人控制）发生，可以据此断定D004是D005的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_034_Q03",
+    "pack_id": "034",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（火灾事故发生）没有发生（或被及时干预阻断），D002（应急救援处置）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_034_Q04",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（火灾事故发生）经责任追究到D009（整改落实与成效）的完整因果传导过程，并按序给出跨文档的证据链。"
+  },
+  {
+    "sample_id": "public_safety_034_Q05",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D007（事故原因深度调查）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "public_safety_034_Q06",
+    "pack_id": "034",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D005（提级调查与责任人控制）阶段及之前的信息（D001 火灾事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 善后处置工作；D005 提级调查与责任人控制），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "public_safety_034_Q07",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起火灾的直接起因，事故调查结果公布前网络流传'电气线路老化短路'致火的说法，而调查报告认定为未及时熄灭的祈福蜡烛引燃可燃物。两种来源信息相互矛盾，应以哪一个为准？为什么？"
+  },
+  {
+    "sample_id": "public_safety_034_Q08",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有观点认为，事发当日灵宝市区另一处沿街店铺的小火情（D018）、提级调查前的例行消防检查（D019）、省内其他同名'澜风'门店（D020）与本起足疗店火灾的成因或追责存在直接因果关系。这一说法是否成立？请判断。"
+  },
+  {
+    "sample_id": "public_safety_034_Q09",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据现有材料，能否精确确定本起火灾中祈福蜡烛引燃周边可燃物的确切时刻（精确到分钟）？请说明理由。"
+  }
+]

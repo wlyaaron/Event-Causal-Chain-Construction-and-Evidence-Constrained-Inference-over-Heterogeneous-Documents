@@ -1,0 +1,411 @@
+[
+  {
+    "sample_id": "healthcare_08_Q01",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D002（官方发布）没有发生（或被及时干预阻断），D003（临床救治）是否仍会发生？请判断并给出因果依据。",
+    "answers": "判断：若移除D002，D003很可能不会发生或将显著改变。依据：D002是D003的直接原因（直接因果），移除后受影响的因果边包括 [['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，中医药振兴发展重大工程 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_08_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，国办相关的D002（官方发布）发生后，紧接着出现的直接结果是什么？",
+    "answers": "直接因果链为 D002（官方发布） → D003（临床救治）。后果：在中国定点医院的精心救治下，中医药振兴临床救治工作取得积极进展。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（官方发布） 直接导致 D003（临床救治）",
+        "后果：在中国定点医院的精心救治下，中医药振兴临床救治工作取得积极进展"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D003（临床救治） 导致 D002（官方发布）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "healthcare_08_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D001（疫情通报）在进程上早于D004（专家科普）。能否据此认为D001（疫情通报）导致了D004（专家科普）？请给出判断与证据。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D004 的因果边；其直接原因是D003（临床救治）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（疫情通报） 早于 D004（专家科普） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（疫情通报） 导致 D004（专家科普）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "healthcare_08_Q04",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化长期影响对区域经济未来五年的总体影响？",
+    "answers": "无法确定：现有证据不足以得出唯一、可靠的结论，需要更多外部数据。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "healthcare_08_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（疫情通报）到D009（长期影响）的完整因果传导过程，并按序列出证据。",
+    "answers": "该结果由一条有向因果链推动：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）。起点为疫情通报，终点为长期影响；中医药振兴发展重大工程。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（疫情通报） 到终点 D009（长期影响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（疫情通报）",
+        "终点为 D009（长期影响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）",
+        "可包含关键环节 D002（官方发布）",
+        "可包含关键环节 D003（临床救治）",
+        "可包含关键环节 D004（专家科普）",
+        "可包含关键环节 D006（防控政策）",
+        "可包含关键环节 D008（医保政策）",
+        "终点影响：中医药振兴发展重大工程"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "疫情通报",
+        "官方发布",
+        "临床救治",
+        "专家科普",
+        "防控政策",
+        "医保政策",
+        "长期影响"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_08_Q06",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D003（临床救治）与哪一事件构成直接因果关系？其后果是什么？",
+    "answers": "D003（临床救治）直接导致了D004（专家科普）。依据：围绕中医药振兴，国办的权威专家进行科普解读。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（临床救治） 直接导致 D004（专家科普）",
+        "后果：围绕中医药振兴，国办的权威专家进行科普解读"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（专家科普） 导致 D003（临床救治）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "healthcare_08_Q07",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道D006（防控政策）阶段前进展（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "后续实际发生：D007（体系建设）、D008（医保政策）、D009（长期影响）。其中关键进展为体系建设：中医药振兴对公共卫生体系提出严峻考验。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:体系建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（医保政策）, D009（长期影响）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（防控政策）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:体系建设"
+    },
+    "confidence_level": "possible"
+  }
+]

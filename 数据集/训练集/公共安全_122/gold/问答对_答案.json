@@ -1,0 +1,408 @@
+[
+  {
+    "sample_id": "public_safety_122_Q01",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（治理成效与长效机制），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D002（调查评估启动） → D007（调查进展通报） → D009（调查评估与问责） → D010（治理成效与长效机制）。安全事件/风险发生触发链条，最终形成治理成效与长效机制；城市公共安全管理体系进一步完善。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D010（治理成效与长效机制） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D010（治理成效与长效机制）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D002（调查评估启动） → D007（调查进展通报） → D009（调查评估与问责） → D010（治理成效与长效机制）",
+        "可包含关键环节 D002（调查评估启动）",
+        "可包含关键环节 D007（调查进展通报）",
+        "可包含关键环节 D009（调查评估与问责）",
+        "终点影响：城市公共安全管理体系进一步完善"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "调查评估启动",
+        "调查进展通报",
+        "调查评估与问责",
+        "治理成效与长效机制"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_122_Q02",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化安全事件/风险发生对区域经济未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_122_Q03",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D001（安全事件/风险发生）在进程上早于D007（调查进展通报）。能否据此认为D001（安全事件/风险发生）导致了D007（调查进展通报）？请给出判断与证据。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D007 的因果边；其直接原因是D002（调查评估启动）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 早于 D007（调查进展通报） 只是时间先后",
+        "材料中不存在 D001→D007 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（安全事件/风险发生） 导致 D007（调查进展通报）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D007",
+      "temporal_order": "D001先于D007",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_122_Q04",
+    "pack_id": "122",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2015-01-05（D001 安全事件/风险发生；D002 调查评估启动；D003 善后处置推进；D004 上级督导支援；D005 专项整治部署；D006 专项整治部署），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "后续实际发生：D007（调查进展通报）、D008（行业整改部署）、D009（调查评估与问责）。其中关键进展为调查进展通报：通报事件调查阶段性进展。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:调查进展通报"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（行业整改部署）, D009（调查评估与问责）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2015-01-05",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:调查进展通报"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_122_Q05",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D010（治理成效与长效机制）记载了哪些关键事实？",
+    "answers": "D010（治理成效与长效机制）：上海市人民政府在上海市，出台六项措施加强城市公共安全。影响：城市公共安全管理体系进一步完善。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：上海市人民政府",
+        "地点：上海市",
+        "基本事实：出台六项措施加强城市公共安全"
+      ],
+      "optional_facts": [
+        "影响：城市公共安全管理体系进一步完善"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D010"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_122_Q06",
+    "pack_id": "122",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D003（善后处置推进）是否仍会发生？请判断并给出因果依据。",
+    "answers": "结论：一旦阻断D001，D003大概率不再发生。因为D001是D003的直接原因（直接因果），其下游受影响的边为 [['D001', 'D003']]；善后处置有序推进 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D007",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D003"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_122_Q07",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D009（调查评估与问责）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D002（调查评估启动） → D007（调查进展通报） → D009（调查评估与问责）。其中，安全事件/风险发生为起点，经逐级传导，最终导致调查评估与问责；事件责任得到认定。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D009（调查评估与问责） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D009（调查评估与问责）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D002（调查评估启动） → D007（调查进展通报） → D009（调查评估与问责）",
+        "可包含关键环节 D002（调查评估启动）",
+        "可包含关键环节 D007（调查进展通报）",
+        "终点影响：事件责任得到认定"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D007",
+        "D009"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "调查评估启动",
+        "调查进展通报",
+        "调查评估与问责"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_122_Q08",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于外滩跨年聚集群众、黄浦区政府及上海市主管部门的安全事件/风险发生事件，不同来源给出的关键数据不一致（官方36、另一来源43）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_122_Q09",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的日常检查，是否与主线事件安全事件/风险发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_122_Q10",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，外滩跨年聚集群众、黄浦区政府及上海市主管部门在该安全事件/风险发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

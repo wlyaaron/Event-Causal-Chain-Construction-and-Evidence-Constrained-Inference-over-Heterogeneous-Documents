@@ -1,0 +1,373 @@
+[
+  {
+    "sample_id": "public_safety_230_Q01",
+    "pack_id": "230",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（安全事故发生）发生在D005（责任人立案侦查）之前，这是否足以说明D001（安全事故发生）是D005（责任人立案侦查）的原因？请说明理由。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D001→D005（直接因果）。证据：控制公安机关、检察机关责任人。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事故发生） 与 D005（责任人立案侦查） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（责任人立案侦查） 导致 D001（安全事故发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_230_Q02",
+    "pack_id": "230",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（安全事故发生）未曾出现，D002（应急救援处置）的发生是否还能成立？请给出推断依据。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D003', 'D005'], ['D005', 'D007']]；最大限度挽救了生命 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D003",
+          "D005"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_230_Q03",
+    "pack_id": "230",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D007（事故调查报告公布）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "按证据顺序，成因链为 D001（安全事故发生） → D006（国务院成立调查组） → D007（事故调查报告公布）。自安全事故发生出发逐环传导至事故调查报告公布；严肃追责问责，推动全国开展自建房安全专项整治，加强自建房安全管理。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事故发生） 到终点 D007（事故调查报告公布） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事故发生）",
+        "终点为 D007（事故调查报告公布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事故发生） → D006（国务院成立调查组） → D007（事故调查报告公布）",
+        "可包含关键环节 D006（国务院成立调查组）",
+        "终点影响：严肃追责问责，推动全国开展自建房安全专项整治，加强自建房安全管理"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "安全事故发生",
+        "国务院成立调查组",
+        "事故调查报告公布"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_230_Q04",
+    "pack_id": "230",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于伤亡情况通报事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“及时公开事故信息”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_230_Q05",
+    "pack_id": "230",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，长沙市人民政府相关的D003（伤亡情况通报）发生后，紧接着出现的直接结果是什么？",
+    "answers": "D003（伤亡情况通报）直接导致了D004（善后处置工作）。依据：安抚遇难者家属情绪。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（伤亡情况通报） 直接导致 D004（善后处置工作）",
+        "后果：安抚遇难者家属情绪"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（善后处置工作） 导致 D003（伤亡情况通报）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_230_Q06",
+    "pack_id": "230",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2022-05（D001 安全事故发生；D002 应急救援处置；D004 善后处置工作；D005 责任人立案侦查），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D003（伤亡情况通报）、D006（国务院成立调查组）、D007（事故调查报告公布）；其中最关键的是伤亡情况通报——及时公开事故信息。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D003:伤亡情况通报"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（国务院成立调查组）, D007（事故调查报告公布）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D003",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-05",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D003",
+        "D006",
+        "D007"
+      ],
+      "ground_truth": "D003:伤亡情况通报"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_230_Q07",
+    "pack_id": "230",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D006（国务院成立调查组）所代表的条件被移除，后续的D007（事故调查报告公布）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "结论：一旦阻断D006，D007大概率不再发生。因为D006是D007的直接原因（直接因果），其下游受影响的边为 [['D006', 'D007']]；严肃追责问责，推动全国开展自建房安全专项整治，加强自建房安全管理 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D007的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D007及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D007及其下游很可能不发生",
+      "acceptable_points": [
+        "D006是D007的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_167_Q01",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（人道灾难加剧与停火谈判僵局），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_167_Q02",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（哈马斯袭击以色列与以色列宣战）在D005（临时停火与人质交换）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_167_Q03",
+    "pack_id": "167",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D004（加沙城巷战与医院危机）这一环节，D005（临时停火与人质交换）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_167_Q04",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D005（临时停火与人质交换）之后直接推动了哪个事件？"
+  },
+  {
+    "sample_id": "diplomacy_167_Q05",
+    "pack_id": "167",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测巴以冲突何时能实现永久停火以及哈马斯何时被彻底消灭？"
+  },
+  {
+    "sample_id": "diplomacy_167_Q06",
+    "pack_id": "167",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2023年12月1日（D001至D005均已发生，停火破裂恢复战斗），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_167_Q07",
+    "pack_id": "167",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D007（红海危机与国际法院裁决）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

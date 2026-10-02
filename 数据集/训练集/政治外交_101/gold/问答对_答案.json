@@ -1,0 +1,400 @@
+[
+  {
+    "sample_id": "diplomacy_101_Q01",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（合作成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（合作机制建立发展） → D003（经贸合作成果） → D006（挑战与质疑） → D007（机制调整与转型） → D010（合作前景展望） → D011（合作提质升级） → D012（合作成效显现）。合作机制建立触发链条，历经经贸成果、挑战调整、前景展望、提质升级，最终合作成效逐步显现，成果惠及各国民众。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（合作机制建立发展） 到终点 D012（合作成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（合作机制建立发展）",
+        "终点为 D012（合作成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D006 → D007 → D010 → D011 → D012",
+        "可包含关键环节 D010（合作前景展望）、D011（合作提质升级）",
+        "终点影响：一批高质量项目建成投产，成果惠及各国民众"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "stages": [
+        "合作机制建立发展",
+        "经贸合作成果",
+        "挑战与质疑",
+        "机制调整与转型",
+        "合作前景展望",
+        "合作提质升级",
+        "合作成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_101_Q02",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（合作机制建立发展）在D002（领导人会晤机制）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：作为最高级别机制引领合作方向，推动合作不断升级。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（合作机制建立发展） 与 D002（领导人会晤机制） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（领导人会晤机制） 导致 D001（合作机制建立发展）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_101_Q03",
+    "pack_id": "101",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（合作机制建立发展）这一原因，D002（领导人会晤机制）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D004']]；作为最高级别机制引领合作方向，推动合作不断升级 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_101_Q04",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（合作意义与影响），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（合作机制建立发展） → D002（领导人会晤机制） → D004（基建互联互通合作） → D009（合作意义与影响）。起点为合作机制建立发展，终点为合作意义与影响；成为多边主义与互利共赢的重要实践。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（合作机制建立发展） 到终点 D009（合作意义与影响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（合作机制建立发展）",
+        "终点为 D009（合作意义与影响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（合作机制建立发展） → D002（领导人会晤机制） → D004（基建互联互通合作） → D009（合作意义与影响）",
+        "可包含关键环节 D002（领导人会晤机制）",
+        "终点影响：成为多边主义与互利共赢的重要实践"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D009"
+      ],
+      [
+        "D001",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D009"
+      ],
+      "stages": [
+        "合作机制建立发展",
+        "领导人会晤机制",
+        "基建互联互通合作",
+        "合作意义与影响"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_101_Q05",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于双边贸易额的具体规模，材料中存在不同说法（D014）：一处称2022年已达上千亿美元，另有地方机构统计称尚不足千亿美元。应如何看待这一矛盾？",
+    "answers": "两处来源相互矛盾：D003称2022年双边贸易额增长到上千亿美元，而D014提及的地方机构统计口径称同期尚不足千亿美元。二者统计口径不同、结论冲突，不应直接采信任一数值，具体规模有待权威部门进一步核实。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出两处来源对贸易额规模说法相互矛盾",
+        "指出不应直接采信任一数值，需权威核实"
+      ],
+      "optional_facts": [
+        "矛盾源于统计口径不同",
+        "一处称上千亿美元，另一处称尚不足千亿美元"
+      ],
+      "forbidden_facts": [
+        "直接断定某一数值为准确无误",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "数值/统计口径冲突",
+      "sources": [
+        "D003",
+        "D014"
+      ],
+      "resolution": "存疑，待权威核实"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_101_Q06",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（合作机制建立发展）之后直接发生了什么？",
+    "answers": "D002（领导人会晤机制）是D001（合作机制建立发展）的直接后果。证据：作为最高级别机制引领合作方向，推动合作不断升级。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（合作机制建立发展） 直接导致 D002（领导人会晤机制）",
+        "后果：作为最高级别机制引领合作方向，推动合作不断升级"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（领导人会晤机制） 导致 D001（合作机制建立发展）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_101_Q07",
+    "pack_id": "101",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于持续广泛开展（D001 合作机制建立发展；D002 领导人会晤机制；D003 经贸合作成果；D004 基建互联互通合作；D005 地方与人文交流），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（挑战与质疑）、D007（机制调整与转型）、D008（双边关系深入发展）、D009（合作意义与影响）、D010（合作前景展望）；其中最关键的是挑战与质疑——合作进入调整期，部分国家退出机制。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:挑战与质疑"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（机制调整与转型）、D008（双边关系深入发展）、D009（合作意义与影响）、D010（合作前景展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "持续广泛开展",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_101_Q08",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到某中东欧城市举办地方民俗风情展演（D016），这一活动是否属于推动中国-中东欧合作前景展望（D010）的因果环节？请判断并说明理由。",
+    "answers": "不属于。D016（民俗风情展演）只是交流活动期间的一项地方文化展示，介绍当地美食手工艺和旅游资源，与合作机制核心议程无直接关联，材料中也未记载它与D010之间存在任何因果边，属于干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判断 D016 不是推动 D010 的因果环节",
+        "指出 D016 与 D010 之间不存在因果边"
+      ],
+      "optional_facts": [
+        "D016 属于无关的地方文化展示活动",
+        "属于干扰信息"
+      ],
+      "forbidden_facts": [
+        "将 D016 纳入因果链",
+        "编造 D016 与 D010 的因果关系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D016"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D016",
+      "target": "D010",
+      "has_causal_link": false
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_101_Q09",
+    "pack_id": "101",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料中一份尚未确认的青年交流计划（D015），能否确定其牵头方、启动时间与具体名额？若不能，缺少哪些关键信息？",
+    "answers": "不能确定。D015提及的青年交流计划尚未获得各方确认，材料未给出牵头方、启动时间和具体名额等关键信息，因此无法据此得出确定结论，相关信息有待进一步证实。",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定 / 信息缺失",
+        "缺少牵头方、启动时间、具体名额等关键信息"
+      ],
+      "optional_facts": [
+        "该计划尚未获各方确认",
+        "相关信息有待进一步证实"
+      ],
+      "forbidden_facts": [
+        "给出确定的牵头方或时间或名额",
+        "编造材料中不存在的信息"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "missing_fields": [
+        "牵头方",
+        "启动时间",
+        "具体名额"
+      ],
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

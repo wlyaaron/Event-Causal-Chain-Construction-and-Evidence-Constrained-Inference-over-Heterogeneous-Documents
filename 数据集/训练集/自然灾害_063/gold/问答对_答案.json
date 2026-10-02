@@ -1,0 +1,308 @@
+[
+  {
+    "sample_id": "natural_disaster_063_Q01",
+    "pack_id": "063",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从高温红色预警发布到城市治理反思与展望，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（预警发布）→D002（高温影响）→D004（电力保障）→D008（经验总结）。预警发布后，高温天气对城市生活、农业、电力、健康等各方面产生影响，各部门采取应对措施保障民生；在应对过程中，暴露出城市治理的一些短板和不足；基于高温应对的全过程，最终进行城市治理的反思和展望。中间还包括D003农业受损、D005健康防护、D006气象分析、D007劳动者坚守等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含高温影响、电力保障等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D002→D004→D008",
+        "中间还包括农业受损、健康防护、气象分析、劳动者坚守等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D008"
+      ],
+      "stages": [
+        "预警发布",
+        "高温影响",
+        "电力保障",
+        "经验总结"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_063_Q02",
+    "pack_id": "063",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "农业受损（D003）和电力保障（D004）都是高温天气的直接影响，二者中哪一个对城市治理反思（D008）的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "电力保障（D004）对城市治理反思（D008）的推动作用更直接。依据：D008城市治理反思的核心内容是城市应对高温的能力和短板，其中电力供应保障是城市治理的核心议题之一，直接关系到城市正常运转和居民生活；而D003农业受损主要是农村和农业领域的问题，虽然也在反思中有所涉及，但不是城市治理反思的核心内容。从因果关系看，D004→D008和D003→D008都是间接传导，但D004与城市治理的关联度更高。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D004对D008的推动更直接",
+        "依据是电力保障是城市治理的核心议题"
+      ],
+      "optional_facts": [
+        "D003农业受损主要是农村和农业领域问题",
+        "D004与城市治理的关联度更高"
+      ],
+      "forbidden_facts": [
+        "判断D003更直接且无合理依据",
+        "混淆城市治理与农业农村问题的不同范畴"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D004对D008的推动",
+      "more_direct": "D004",
+      "reason": "电力保障是城市治理核心议题"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_063_Q03",
+    "pack_id": "063",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设气象部门没有提前发布高温红色预警（移除D001），这会对高温健康防护（D005）和电力保障（D004）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有提前发布高温红色预警，健康防护（D005）的及时性和有效性会明显下降，电力保障（D004）的准备和应对也会不足。连锁影响：没有预警，公众和卫生部门就无法提前做好防暑降温准备，中暑等健康问题会增加；电力部门也无法提前预判用电负荷增长，电力调度和设备维护准备不足，可能会出现更多的电力故障和停电。应急响应的启动也会滞后，各部门的应对会更加被动。受影响的关键边为[['D001','D005'],['D001','D004']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断健康防护的及时性会下降",
+        "说明电力保障的准备会不足"
+      ],
+      "optional_facts": [
+        "没有预警公众无法提前做好防暑准备",
+        "电力部门无法提前预判用电负荷增长"
+      ],
+      "forbidden_facts": [
+        "断言没有预警应对也不会受影响",
+        "忽视预警在高温应对中的关键作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除高温红色预警",
+      "affected_edges": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "健康防护及时性下降，电力保障准备不足"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_063_Q04",
+    "pack_id": "063",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "气象专家解读高温成因（D006）与城市治理反思（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D006（气象分析）→D001（预警发布）→D002（高温影响）→D008（经验总结）。具体来说，气象专家对高温成因的科学解读，为气象部门发布高温预警提供了科学依据，也帮助公众和有关部门更好地认识高温天气的特点和规律；基于对高温天气的科学认识，各部门采取了相应的应对措施；在应对过程中暴露出的城市治理短板，最终推动了城市治理的反思和展望。此外，D006中关于全球变暖背景下高温天气将更加频繁的分析，也直接为D008中提高城市气候适应能力的建议提供了支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D001预警、D002高温影响等中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D006→D001→D002→D008",
+        "D006中全球变暖分析直接支撑D008中气候适应建议"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D006到D008的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D001",
+        "D002",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediates",
+      "intermediates": [
+        "D001",
+        "D002"
+      ],
+      "path": "D006→D001→D002→D008"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_063_Q05",
+    "pack_id": "063",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测明年夏天高温天气的具体天数和最高气温极值？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性天数和气温",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_063_Q06",
+    "pack_id": "063",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "高温天气影响城市生活（D002）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D002的直接后果包括：D003（农业受损）、D004（电力保障）、D005（健康防护）、D007（劳动者坚守）。这四项都是高温天气直接引发的影响和应对行动。证据：高温干旱导致农作物受旱，高温导致用电负荷激增，高温增加健康风险需要防护，高温下户外劳动者需要坚守岗位。D001预警发布是D002之前的事件，D006气象分析、D008经验总结为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D002直接导致D003农业受损",
+        "D002直接导致D004电力保障",
+        "D002直接导致D005健康防护",
+        "D002直接导致D007劳动者坚守"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D006、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D004或D007等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D003",
+        "D004",
+        "D005",
+        "D007"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_063_Q07",
+    "pack_id": "063",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于预警发布和高温影响（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D004电力保障——高温导致空调用电激增，全社会用电量必然会创新高，电力部门需要全力保障供应；第二，D005健康防护——高温天气下中暑等健康风险增加，卫生部门必然会发布健康防护指南；第三，D003农业受损——持续高温干旱会对农作物生长造成不利影响，农业部门需要抗旱保丰收。依据：高温天气的标准影响链条包括电力、健康、农业等关键领域。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D004电力保障、D005健康防护、D003农业受损",
+        "还可能发生D007劳动者坚守、D006气象分析等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-07-21",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D004",
+        "D005",
+        "D003"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

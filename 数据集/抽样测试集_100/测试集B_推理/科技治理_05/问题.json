@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D009（国际合作）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "technology_governance_005_Q02",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（标准制定）阶段（当前已知：D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "technology_governance_005_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D001（技术突破）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "technology_governance_005_Q04",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（技术突破）未曾出现，D002（行业热议）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "technology_governance_005_Q05",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D008（场景落地）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "technology_governance_005_Q06",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（标准制定）阶段前进展（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "technology_governance_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，从时间上看D002（行业热议）早于D003（监管规范），但这能否证明因果？请依据材料判断。"
+  }
+]

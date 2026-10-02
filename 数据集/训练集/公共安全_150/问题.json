@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_150_Q01",
+    "pack_id": "150",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，河南省新乡市封丘县赵岗镇戚城中学周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "public_safety_150_Q02",
+    "pack_id": "150",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（食品安全事件发生）没有发生（或被及时干预阻断），D002（应急处置与调查）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_150_Q03",
+    "pack_id": "150",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：哪一事件是D001（食品安全事件发生）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "public_safety_150_Q04",
+    "pack_id": "150",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间上看D002（应急处置与调查）早于D003（初步调查结果通报），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "public_safety_150_Q05",
+    "pack_id": "150",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道2021-11-27前进展（D004 善后处置与整改；D001 食品安全事件发生；D002 应急处置与调查；D003 初步调查结果通报）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_150_Q06",
+    "pack_id": "150",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请回溯到D001（食品安全事件发生），说明经由哪些中间事件最终导致了D007（全国部署加强校园食品安全）。"
+  },
+  {
+    "sample_id": "public_safety_150_Q07",
+    "pack_id": "150",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D004（善后处置与整改）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  }
+]

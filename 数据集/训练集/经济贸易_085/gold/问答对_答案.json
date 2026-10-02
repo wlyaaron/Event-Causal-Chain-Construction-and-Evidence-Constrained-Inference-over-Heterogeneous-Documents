@@ -1,0 +1,422 @@
+[
+  {
+    "sample_id": "economy_trade_085_Q01",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D002（制度规范） → D001（金融开放） → D003（市场运行） → D006（机制拓展） → D008（媒体评论） → D009（成果落实） → D010（机制建设） → D011（成效显现）。制度规范触发链条，历经市场运行、机制拓展、媒体评论、成果落实与机制建设，最终成效显现；境内外投资者获得感不断增强。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（制度规范） 到终点 D011（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（制度规范）",
+        "终点为 D011（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（制度规范） → D001（金融开放） → D003（市场运行） → D006（机制拓展） → D008（媒体评论） → D009（成果落实） → D010（机制建设） → D011（成效显现）",
+        "可包含关键环节 D008（媒体评论）",
+        "终点影响：境内外投资者获得感不断增强"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "制度规范",
+        "金融开放",
+        "市场运行",
+        "机制拓展",
+        "媒体评论",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_085_Q02",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（制度规范）在D001（金融开放）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D002→D001（直接因果），不是先后关系。证据：内地与香港股市实现互联互通，资本市场双向开放进入新阶段。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（制度规范） 与 D001（金融开放） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（金融开放） 导致 D002（制度规范）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D001",
+      "temporal_order": "D002先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_085_Q03",
+    "pack_id": "085",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（制度规范）这一原因，D001（金融开放）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D002，D001大概率不再发生。因为D002是D001的直接原因，其下游受影响的边为 [['D002', 'D001'], ['D001', 'D003'], ['D001', 'D005'], ['D001', 'D006'], ['D001', 'D007'], ['D001', 'D008']]；内地与香港股市实现互联互通，资本市场双向开放进入新阶段 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D001"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D007"
+        ],
+        [
+          "D001",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_085_Q04",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D005（战略意义），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D002（制度规范） → D001（金融开放） → D003（市场运行） → D005（战略意义）。起点为制度规范，终点为战略意义；助推人民币国际化，巩固香港国际金融中心地位。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（制度规范） 到终点 D005（战略意义） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（制度规范）",
+        "终点为 D005（战略意义）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（制度规范） → D001（金融开放） → D003（市场运行） → D005（战略意义）",
+        "可包含关键环节 D001（金融开放）",
+        "终点影响：助推人民币国际化，巩固香港国际金融中心地位"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D003",
+        "D005"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005"
+      ],
+      [
+        "D002",
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D003",
+        "D005"
+      ],
+      "stages": [
+        "制度规范",
+        "金融开放",
+        "市场运行",
+        "战略意义"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_085_Q05",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于沪港通首日北向资金的实际净买入金额，材料中不同来源给出了不一致的说法，应如何判断？",
+    "answers": "材料存在相互矛盾的说法：一家机构估算约120亿元，另有券商研究称约100亿元，两组数字彼此冲突。应并列呈现分歧、不轻易采信单一数字，具体规模有待权威机构最终核实。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出关于首日北向资金净买入金额存在互相矛盾的来源",
+        "一家机构估算约120亿元，另有券商研究称约100亿元",
+        "不应在证据不足时武断采信某一数字"
+      ],
+      "optional_facts": [
+        "可指出具体规模有待权威机构最终核实"
+      ],
+      "forbidden_facts": [
+        "直接断定某一数字为唯一正确答案",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "数值冲突",
+      "sources": [
+        "某机构估算约120亿元",
+        "某券商研究约100亿元"
+      ],
+      "resolution": "并列呈现分歧，待权威核实"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_085_Q06",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（制度规范）之后直接发生了什么？",
+    "answers": "D001（金融开放）是D002（制度规范）的直接后果。证据：内地与香港股市实现互联互通，资本市场双向开放进入新阶段。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D002（制度规范） 直接导致 D001（金融开放）",
+        "后果：内地与香港股市实现互联互通，资本市场双向开放进入新阶段"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（金融开放） 导致 D002（制度规范）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_085_Q07",
+    "pack_id": "085",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2014-11-14（D001 金融开放；D002 制度规范；D003 市场运行；D004 配套政策），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（战略意义）、D006（机制拓展）、D007（风险防控）、D008（媒体评论）；其中最关键的是战略意义——助推人民币国际化，巩固香港国际金融中心地位。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:战略意义"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（机制拓展）、D007（风险防控）、D008（媒体评论）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2014-11-14",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_085_Q08",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到上海当地举办国际金融文化节，这与沪港通首日交易的因果链条是否相关？请判断并说明理由。",
+    "answers": "不相关。上海举办国际金融文化节属于无关事项，与沪港通首日交易的因果链条没有直接关联，不应纳入因果推理。核心因果链仍是制度规范、金融开放、市场运行等事件。",
+    "answer_facts": {
+      "required_facts": [
+        "判断国际金融文化节与沪港通因果链无关",
+        "该事件属于干扰信息，不应纳入因果推理"
+      ],
+      "optional_facts": [
+        "核心因果链仍围绕制度规范、金融开放、市场运行等展开"
+      ],
+      "forbidden_facts": [
+        "将文化节纳入沪港通因果链",
+        "编造文化节与首日交易的因果关系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D015",
+      "is_relevant": false,
+      "reason": "无关事件，与核心因果链无因果联系"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_085_Q09",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到有关方面或将就进一步扩大互联互通标的范围出台新的专项安排，能否据此确定该安排的具体内容、牵头部门和实施时间？",
+    "answers": "不能。材料仅为未经证实的消息，该专项安排的具体内容、牵头部门和实施时间均不明确，主体不详，信息缺失，无法据此确定，有待进一步核实。",
+    "answer_facts": {
+      "required_facts": [
+        "判断关键信息缺失，无法确定具体内容、牵头部门和实施时间",
+        "该消息未经证实，主体不详"
+      ],
+      "optional_facts": [
+        "相关信息有待进一步核实"
+      ],
+      "forbidden_facts": [
+        "编造该专项安排的具体内容或时间",
+        "将未证实消息当作确定事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "missing_fields": [
+        "具体内容",
+        "牵头部门",
+        "实施时间"
+      ],
+      "expected_answer": "信息不足，无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

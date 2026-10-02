@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_05_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请依据材料说明D002（官方发布）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "healthcare_05_Q02",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化医保政策对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "healthcare_05_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（长期影响）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "healthcare_05_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D004（专家科普）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "healthcare_05_Q05",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（疫情通报）先于D004（专家科普）发生，可以据此断定D001（疫情通报）是D004（专家科普）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "healthcare_05_Q06",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（疫情通报）未曾出现，D002（官方发布）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "healthcare_05_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（医保政策），并按顺序给出完整证据链。"
+  }
+]

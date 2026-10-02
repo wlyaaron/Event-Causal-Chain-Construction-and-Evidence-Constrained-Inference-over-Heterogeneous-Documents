@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_04_Q01",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握D006（产业发展）阶段及之前的信息（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "energy_environment_04_Q02",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示欧盟对国际影响不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "energy_environment_04_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（科技创新），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "energy_environment_04_Q04",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（产业发展）阶段，材料仅显示：D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "energy_environment_04_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料中关于D009（科技创新）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "energy_environment_04_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D006（产业发展）发生在D008（绿色路径）之前，这是否足以说明D006（产业发展）是D008（绿色路径）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "energy_environment_04_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D008（绿色路径）的成因：从源头到结果依次经历了哪些事件？"
+  }
+]

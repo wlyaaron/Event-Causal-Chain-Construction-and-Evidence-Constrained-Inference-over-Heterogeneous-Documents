@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_002_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，沿因果链解释D009（行业转型）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "transportation_002_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D003（官方部署）发生在D004（原因调查）之前，这是否足以说明D003（官方部署）是D004（原因调查）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "transportation_002_Q03",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D002（现场救援）在时间/进程上早于D003（官方部署）。能否据此断定D002（现场救援）导致了D003（官方部署）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "transportation_002_Q04",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，假设你只掌握D006（善后处置）阶段及之前的信息（D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "transportation_002_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（事故发生）到D008（专项整治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "transportation_002_Q06",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（事故发生）没有发生（或被及时干预阻断），D002（现场救援）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "transportation_002_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "哪一事件是D004（原因调查）的直接后果？其影响如何？"
+  }
+]

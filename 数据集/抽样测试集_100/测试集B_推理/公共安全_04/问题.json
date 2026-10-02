@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_004_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D008（平台建设应用）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "public_safety_004_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D004（民生工程建设）先于D008（平台建设应用）发生，可以据此断定D004（民生工程建设）是D008（平台建设应用）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_004_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D007（政策标准出台）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_004_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（平台建设应用）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_004_Q05",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，贵州省周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "public_safety_004_Q06",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D007（政策标准出台）没有发生（或被及时干预阻断），D008（平台建设应用）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_004_Q07",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2026-06-02（D004 民生工程建设；D008 平台建设应用；D001 智慧消防建设；D002 智慧消防应用；D007 政策标准出台），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

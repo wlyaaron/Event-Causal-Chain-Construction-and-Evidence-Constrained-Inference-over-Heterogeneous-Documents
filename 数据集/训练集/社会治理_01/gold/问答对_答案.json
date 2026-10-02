@@ -1,0 +1,482 @@
+[
+  {
+    "sample_id": "social_governance_01_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间看D001（社会事件）早于D004（责任追究），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（社会事件）早于D004（责任追究）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（调查进展）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（社会事件） 早于 D004（责任追究） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（社会事件） 导致 D004（责任追究）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_01_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D006（法治建设）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "直接因果链为 D006（法治建设） → D008（舆论关注）。后果：唐山打人事件事件在河北唐山持续引发舆论关注。",
+    "answer_facts": {
+      "required_facts": [
+        "D006（法治建设） 直接导致 D008（舆论关注）",
+        "后果：唐山打人事件事件在河北唐山持续引发舆论关注"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（舆论关注） 导致 D006（法治建设）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "social_governance_01_Q03",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了舆论关注事件中现场救援人员的具体姓名与联系方式？请依据材料回答。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "social_governance_01_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（社会共治），并按顺序给出完整证据链。",
+    "answers": "按证据顺序，成因链为 D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）。自社会事件出发逐环传导至社会共治；全国掀起扫黑除恶回头看。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（社会事件） 到终点 D009（社会共治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（社会事件）",
+        "终点为 D009（社会共治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）",
+        "可包含关键环节 D002（官方回应）",
+        "可包含关键环节 D003（调查进展）",
+        "可包含关键环节 D004（责任追究）",
+        "可包含关键环节 D006（法治建设）",
+        "可包含关键环节 D008（舆论关注）",
+        "终点影响：全国掀起扫黑除恶回头看"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "社会事件",
+        "官方回应",
+        "调查进展",
+        "责任追究",
+        "法治建设",
+        "舆论关注",
+        "社会共治"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_01_Q05",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D002（官方回应）被阻断，D003（调查进展）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "移除D002后，D003及其连锁后果很可能不成立。D002系D003的直接原因（直接因果），受影响边为 [['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；全国掀起扫黑除恶回头看 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_01_Q06",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（法治建设）阶段及之前的信息（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "基于因果走势，后续将出现：D007（治理创新）、D008（舆论关注）、D009（社会共治）；其中最关键的是治理创新——2022-06-10的唐山打人事件事件为基层社会治理提供启示。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理创新"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（舆论关注）, D009（社会共治）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（法治建设）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理创新"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_01_Q07",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（社会事件）没有发生（或被及时干预阻断），D002（官方回应）是否仍会发生？请判断并给出因果依据。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，全国掀起扫黑除恶回头看 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

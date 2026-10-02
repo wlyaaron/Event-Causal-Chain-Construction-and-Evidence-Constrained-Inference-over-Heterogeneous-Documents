@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_080_Q01",
+    "pack_id": "080",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "通用汽车是在哪一年哪一天申请破产保护的？美国政府总共投入了多少救助资金？最终收回了多少？"
+  },
+  {
+    "sample_id": "economy_trade_080_Q02",
+    "pack_id": "080",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么通用汽车这家百年汽车巨头会在2009年申请破产？请从长期结构性因素和短期触发因素两个层面分析其因果链条。"
+  },
+  {
+    "sample_id": "economy_trade_080_Q03",
+    "pack_id": "080",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：瓦格纳辞职、通用汽车申请破产、363出售完成、通用汽车IPO、政府完全退出、底特律申请破产。"
+  },
+  {
+    "sample_id": "economy_trade_080_Q04",
+    "pack_id": "080",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较通用汽车、克莱斯勒和福特三大车企在2008年金融危机中的不同应对策略和最终结果，分析为什么福特能够避免破产而通用和克莱斯勒不能。"
+  },
+  {
+    "sample_id": "economy_trade_080_Q05",
+    "pack_id": "080",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "通用汽车的破产重组如何通过劳动力成本改革、品牌精简、债务削减等多个环节，最终影响到公司的盈利能力和市场竞争力？"
+  },
+  {
+    "sample_id": "economy_trade_080_Q06",
+    "pack_id": "080",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2009年美国汽车工业救助对美国经济、政治、劳工关系和城市发展四个方面产生的主要长期影响。"
+  },
+  {
+    "sample_id": "economy_trade_080_Q07",
+    "pack_id": "080",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设美国政府在2009年没有救助通用汽车和克莱斯勒，任由它们破产清算，美国经济和汽车工业可能会出现哪些不同的结果？哪些问题仍然可能存在？"
+  }
+]

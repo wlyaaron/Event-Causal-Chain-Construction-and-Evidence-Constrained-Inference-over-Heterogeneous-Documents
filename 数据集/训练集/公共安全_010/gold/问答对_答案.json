@@ -1,0 +1,326 @@
+[
+  {
+    "sample_id": "public_safety_010_Q01",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：已知D004（事故原因认定）先于D006（治理成效与制度完善）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D004→D006（直接因果），不是先后关系。证据：对高架桥、跨线桥特别是独柱墩结构桥梁开展全面排查。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（事故原因认定） 与 D006（治理成效与制度完善） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D006"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D006（治理成效与制度完善） 导致 D004（事故原因认定）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D006",
+      "temporal_order": "D004先于D006",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_010_Q02",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D006（治理成效与制度完善），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D004（事故原因认定） → D006（治理成效与制度完善）。其中，安全事件/风险发生为起点，经逐级传导，最终导致治理成效与制度完善；推动桥梁安全长效管养机制建设。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D006（治理成效与制度完善） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D006（治理成效与制度完善）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（事故原因认定） → D006（治理成效与制度完善）",
+        "可包含关键环节 D004（事故原因认定）",
+        "终点影响：推动桥梁安全长效管养机制建设"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D006"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D006"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "事故原因认定",
+        "治理成效与制度完善"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_010_Q03",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请概述D006（治理成效与制度完善）的主体、地点与主要影响。",
+    "answers": "D006（治理成效与制度完善）：各地住建、交通部门及行业专家在全国范围，对高架桥、跨线桥特别是独柱墩结构桥梁开展全面排查。影响：推动桥梁安全长效管养机制建设。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：各地住建、交通部门及行业专家",
+        "地点：全国范围",
+        "基本事实：对高架桥、跨线桥特别是独柱墩结构桥梁开展全面排查"
+      ],
+      "optional_facts": [
+        "影响：推动桥梁安全长效管养机制建设"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D006"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_010_Q04",
+    "pack_id": "010",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（安全事件/风险发生）被阻断，D002（应急响应与救援）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002']]。相应地，经通宵搜救逐一清理桥下被压车辆 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_010_Q05",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D005（专项整治部署）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D004（事故原因认定） → D005（专项整治部署）。其中，安全事件/风险发生为起点，经逐级传导，最终导致专项整治部署；健全联合执法和信用惩戒机制。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D005（专项整治部署） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D005（专项整治部署）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（事故原因认定） → D005（专项整治部署）",
+        "可包含关键环节 D004（事故原因认定）",
+        "终点影响：健全联合执法和信用惩戒机制"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "事故原因认定",
+        "专项整治部署"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_010_Q06",
+    "pack_id": "010",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对事故原因认定的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_010_Q07",
+    "pack_id": "010",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在2019-10-10（当前已知：D004 事故原因认定；D005 专项整治部署；D001 安全事件/风险发生；D002 应急响应与救援），后续走向如何？请给出可验证预测。",
+    "answers": "预测后续进展为：D003（情况通报与回应）、D006（治理成效与制度完善）。核心节点是情况通报与回应：召开新闻发布会通报事故伤亡、救援进展和初步分析结果。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D003:情况通报与回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（治理成效与制度完善）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005",
+        "D001",
+        "D002",
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2019-10-10",
+      "visible_events": [
+        "D004",
+        "D005",
+        "D001",
+        "D002"
+      ],
+      "hidden_events": [
+        "D003",
+        "D006"
+      ],
+      "ground_truth": "D003:情况通报与回应"
+    },
+    "confidence_level": "possible"
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "蚂蚁集团启动IPO后，进入询价和路演阶段，机构投资者踊跃认购，估值达到2.1万亿元创新高",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D003",
+    "relation_type": "时序关系",
+    "description": "在IPO申购完成、即将挂牌上市之际，马云于2020年10月24日在外滩金融峰会发表演讲，批评金融监管",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "马云外滩演讲批评金融监管，引发监管层强烈反应，直接导致四部门于11月2日联合约谈蚂蚁集团高管",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "四部门联合约谈后，金融监管环境发生变化，上交所于11月3日宣布暂缓蚂蚁集团科创板上市，港交所同步暂缓",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "IPO被暂缓后，蚂蚁集团面临监管压力，于2020年11月成立整改工作组，启动全面整改",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "蚂蚁集团初步整改后，监管部门于2021年4月12日再次联合约谈，正式提出五大整改要求，明确整改路线图",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "五大整改要求中明确要求持牌经营，蚂蚁集团加快消费金融公司申设，2021年6月蚂蚁消金获批开业，花呗借呗纳入持牌监管",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "五大整改要求推动蚂蚁集团在金融控股公司申设、个人征信、支付规范、余额宝压降、相互宝停运等方面持续深化整改",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D009",
+    "relation_type": "递进关系",
+    "description": "蚂蚁消金开业后，花呗借呗业务迁移和资本补充工作推进，成为蚂蚁集团整体整改的重要组成部分",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "蚂蚁集团IPO暂缓事件引发监管部门对金融科技行业的系统性反思，推动了一系列监管政策出台和制度完善",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "对蚂蚁集团的五大整改要求确立了金融科技监管的基本框架，为全行业监管制度建设提供了范本",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D009",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "蚂蚁集团持续整改的实践推动了金融科技行业整体规范发展，行业进入持牌经营、审慎监管的新阶段",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "马云演讲是整个事件的导火索，从演讲到约谈再到上市暂缓，形成了完整的因果链条",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "蚂蚁集团IPO事件从启动到暂缓再到整改，完整展现了中国金融科技从快速发展到规范监管的转变过程",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "四部门首次联合约谈开创了金融科技监管的新模式，为此后常态化联合监管机制的建立奠定了基础",
+    "pack_id": "06"
+  }
+]

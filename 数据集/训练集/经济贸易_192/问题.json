@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_192_Q01",
+    "pack_id": "192",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_192_Q02",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D001（政策落地）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "economy_trade_192_Q03",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（趋势展望）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "economy_trade_192_Q04",
+    "pack_id": "192",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于企业行动事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "economy_trade_192_Q05",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间上看D008（成效评估）早于D009（趋势展望），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "economy_trade_192_Q06",
+    "pack_id": "192",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（政策落地）被阻断，D002（市场反应）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "economy_trade_192_Q07",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：恒大集团相关的D008（成效评估）发生后，紧接着出现的直接结果是什么？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_125_Q01",
+    "pack_id": "125",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（灾害发生）到D009（预警建设）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q02",
+    "pack_id": "125",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示澳大利亚对灾情安置不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q03",
+    "pack_id": "125",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q04",
+    "pack_id": "125",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（灾害发生）没有发生（或被及时干预阻断），D002（应急救援）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q05",
+    "pack_id": "125",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D002（应急救援）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q06",
+    "pack_id": "125",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（灾害发生）先于D004（灾情安置）发生，可以据此断定D001（灾害发生）是D004（灾情安置）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "natural_disaster_125_Q07",
+    "pack_id": "125",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，沿因果链解释D008（防灾短板）的成因：从源头到结果依次经历了哪些事件？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_222_Q01",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2017年中日韩领导人会议举行的主要内容和中方立场主张是什么？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q02",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "此次活动达成了哪些成果、签署了哪些文件？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q03",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "各方在经贸合作方面达成了哪些安排？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q04",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中方同各方的沟通就重大问题凝聚了哪些共识？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q05",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在人文交流方面各方达成了哪些共识？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q06",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动对推动构建人类命运共同体将产生怎样的深远影响？"
+  },
+  {
+    "sample_id": "diplomacy_222_Q07",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "展望未来，各方深化合作还需在哪些方面共同努力？"
+  }
+]

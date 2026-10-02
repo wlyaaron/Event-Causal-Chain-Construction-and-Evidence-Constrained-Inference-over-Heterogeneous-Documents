@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "industrial_production_02_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（安全短板），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D001（事故发生）在进程上早于D004（调查报告）。能否据此认为D001（事故发生）导致了D004（调查报告）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q03",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，假如当初D001（事故发生）未曾出现，D002（抢险救援）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q04",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（专项整治）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q05",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对责任追究的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q06",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（企业处罚）阶段（当前已知：D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "industrial_production_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D008（专项整治）与哪一事件构成直接因果关系？其后果是什么？"
+  }
+]

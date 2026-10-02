@@ -1,0 +1,318 @@
+[
+  {
+    "sample_id": "public_safety_061_Q01",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（安全事件/风险发生）到D005（善后处置推进）的完整因果传导过程，并按序列出证据。",
+    "answers": "按证据顺序，成因链为 D001（安全事件/风险发生） → D005（善后处置推进）。自安全事件/风险发生出发逐环传导至善后处置推进；善后处置有序推进。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D005（善后处置推进） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D005（善后处置推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D005（善后处置推进）",
+        "终点影响：善后处置有序推进"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D005"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "善后处置推进"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_061_Q02",
+    "pack_id": "061",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "结合材料，现有文档能否给出D001（安全事件/风险发生）精确到分钟的处置时长？请作答。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_061_Q03",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（安全事件/风险发生）先于D007（整治行动推进）发生，可以据此断定D001（安全事件/风险发生）是D007（整治行动推进）的原因吗？请说明。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D007 的因果边；其直接原因是D003（专项整治部署）、D006（专项整治部署）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 早于 D007（整治行动推进） 只是时间先后",
+        "材料中不存在 D001→D007 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（安全事件/风险发生） 导致 D007（整治行动推进）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D007",
+      "temporal_order": "D001先于D007",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_061_Q04",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请概述D007（整治行动推进）的主体、地点与主要影响。",
+    "answers": "D007（整治行动推进）：山西省住房和城乡建设厅等部门在山西省全省农村地区，开展农村房屋安全隐患排查整治专项行动。影响：全省农村房屋安全底数逐步摸清。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：山西省住房和城乡建设厅等部门",
+        "地点：山西省全省农村地区",
+        "基本事实：开展农村房屋安全隐患排查整治专项行动"
+      ],
+      "optional_facts": [
+        "影响：全省农村房屋安全底数逐步摸清"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D007"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_061_Q05",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D007（整治行动推进），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事件/风险发生） → D003（专项整治部署） → D007（整治行动推进）。起点为安全事件/风险发生，终点为整治行动推进；全省农村房屋安全底数逐步摸清。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D007（整治行动推进） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D007（整治行动推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D003（专项整治部署） → D007（整治行动推进）",
+        "可包含关键环节 D003（专项整治部署）",
+        "终点影响：全省农村房屋安全底数逐步摸清"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D007"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "专项整治部署",
+        "整治行动推进"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_061_Q06",
+    "pack_id": "061",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2020-08-31前进展（D001 安全事件/风险发生；D002 应急响应与救援；D004 上级督导检查；D003 专项整治部署；D005 善后处置推进）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D006（专项整治部署）、D007（整治行动推进）、D008（调查评估与问责）。核心节点是专项整治部署：部署开展城市房屋建筑安全隐患排查整治。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:专项整治部署"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（整治行动推进）, D008（调查评估与问责）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2020-08-31",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D004",
+        "D003",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "ground_truth": "D006:专项整治部署"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_061_Q07",
+    "pack_id": "061",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（安全事件/风险发生）这一原因，D002（应急响应与救援）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D002', 'D005']]；经过近18小时连续搜救 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007"
+      ],
+      [
+        "D001",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

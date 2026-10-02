@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_098_Q01",
+    "pack_id": "098",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "雷曼兄弟是在哪一天申请破产保护的？其债务总额约为多少？"
+  },
+  {
+    "sample_id": "economy_trade_098_Q02",
+    "pack_id": "098",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么美联储在雷曼兄弟破产后选择救助AIG而不是救助雷曼兄弟？两者的关键区别是什么？"
+  },
+  {
+    "sample_id": "economy_trade_098_Q03",
+    "pack_id": "098",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间先后排列以下事件：TARP法案签署、六大央行同步降息、通用汽车申请破产、G20伦敦峰会、雷曼兄弟破产。"
+  },
+  {
+    "sample_id": "economy_trade_098_Q04",
+    "pack_id": "098",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "TARP法案首次投票被否决和最终通过时，在投票结果、附加条款和市场反应上有什么不同？"
+  },
+  {
+    "sample_id": "economy_trade_098_Q05",
+    "pack_id": "098",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "雷曼兄弟破产如何通过金融市场传导最终导致通用汽车申请破产保护？请说明中间的关键环节。"
+  },
+  {
+    "sample_id": "economy_trade_098_Q06",
+    "pack_id": "098",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2008年全球金融危机中各国政府和央行采取的主要应对措施及其政策逻辑。"
+  },
+  {
+    "sample_id": "economy_trade_098_Q07",
+    "pack_id": "098",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设美国政府在2008年9月救助了雷曼兄弟而非任其破产，后续的金融危机发展轨迹可能会有什么不同？"
+  }
+]

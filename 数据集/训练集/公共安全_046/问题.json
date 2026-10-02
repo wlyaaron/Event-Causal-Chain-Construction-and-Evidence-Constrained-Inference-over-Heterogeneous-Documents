@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_046_Q01",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料中关于D005（规划战略部署）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "public_safety_046_Q02",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D004（政策制度出台）在进程上早于D007（科技发展规划）。能否据此认为D004（政策制度出台）导致了D007（科技发展规划）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_046_Q03",
+    "pack_id": "046",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对队伍建设调研的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "public_safety_046_Q04",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D005（规划战略部署）到D003（队伍建设招录）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "public_safety_046_Q05",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D005（规划战略部署），说明经由哪些中间事件最终导致了D008（地方队伍建设）。"
+  },
+  {
+    "sample_id": "public_safety_046_Q06",
+    "pack_id": "046",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2026-06-10（D004 政策制度出台；D006 政策解读宣传；D007 科技发展规划；D005 规划战略部署；D001 队伍建设招录），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_046_Q07",
+    "pack_id": "046",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：设想D005（规划战略部署）被阻断，D009（地方队伍建设）会不会随之改变或消失？请从因果链角度说明。"
+  }
+]

@@ -1,0 +1,451 @@
+[
+  {
+    "sample_id": "natural_disaster_107_Q01",
+    "pack_id": "107",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D010（复盘整改），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得主因果路径：D001（汛情背景） → D002（险情发现） → D003（堤防决堤） → D006（应急响应） → D007（封堵合龙） → D008（封堵完成） → D009（排涝复堤） → D010（复盘整改）。各环节依次传导，最终形成D010（复盘整改）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（汛情背景） 到终点 D010（复盘整改） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（汛情背景）",
+        "终点为 D010（复盘整改）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（汛情背景） → D002（险情发现） → D003（堤防决堤） → D006（应急响应） → D007（封堵合龙） → D008（封堵完成） → D009（排涝复堤） → D010（复盘整改）",
+        "可包含关键环节 D002（险情发现）",
+        "可包含关键环节 D003（堤防决堤）",
+        "可包含关键环节 D006（应急响应）",
+        "可包含关键环节 D007（封堵合龙）",
+        "可包含关键环节 D008（封堵完成）",
+        "可包含关键环节 D009（排涝复堤）",
+        "终点影响：排查整改堤防隐患、提升防汛能力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "汛情背景",
+        "险情发现",
+        "堤防决堤",
+        "应急响应",
+        "封堵合龙",
+        "封堵完成",
+        "排涝复堤",
+        "复盘整改"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q02",
+    "pack_id": "107",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于团洲垸决堤后垸内并未进水受淹，请说明为何还要开展大规模排涝清淤？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“团洲垸逾九成面积被淹”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q03",
+    "pack_id": "107",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D002（险情发现）被阻断，D003（堤防决堤）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D002（险情发现），D003（堤防决堤）很可能不会发生或将显著改变。依据：D002（险情发现）是D003（堤防决堤）的直接原因，移除后其下游连锁影响随之中断。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（险情发现）是D003（堤防决堤）的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003（堤防决堤）及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D003"
+      ],
+      "counterfactual_result": "D003（堤防决堤）及其下游很可能不发生",
+      "acceptable_points": [
+        "D002（险情发现）是D003（堤防决堤）的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q04",
+    "pack_id": "107",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（应急响应）阶段，材料仅显示：D001 汛情背景；D002 险情发现；D003 堤防决堤；D004 洪水淹没；D005 群众转移；D006 应急响应。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续最可能发生D007（封堵合龙）；这是可见事件沿因果链自然推进的结果。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:封堵合龙"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（封堵完成）, D009（排涝复堤）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（应急响应）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:封堵合龙"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q05",
+    "pack_id": "107",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D004（洪水淹没）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "据材料，D004（洪水淹没）的主体为华容县防汛抗旱指挥部，发生地为团洲垸；决堤后洪水迅速漫延，据华容县防汛抗旱指挥部初步核查，团洲垸逾九成面积被淹，多个村。其影响：团洲垸逾九成面积被淹。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：华容县防汛抗旱指挥部",
+        "地点：团洲垸",
+        "基本事实：决堤后洪水迅速漫延"
+      ],
+      "optional_facts": [
+        "影响：团洲垸逾九成面积被淹"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D004"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q06",
+    "pack_id": "107",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D005（群众转移）早于D008（封堵完成），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D005（群众转移）早于D008（封堵完成）只是时间先后，材料中不存在 D005→D008 的因果关系；时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D005（群众转移） 早于 D008（封堵完成） 只是时间先后",
+        "材料中不存在 D005→D008 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D005（群众转移） 导致 D008（封堵完成）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D005",
+      "event_b": "D008",
+      "temporal_order": "D005先于D008",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q07",
+    "pack_id": "107",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（排涝复堤）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（汛情背景） → D002（险情发现） → D003（堤防决堤） → D006（应急响应） → D007（封堵合龙） → D008（封堵完成） → D009（排涝复堤）。自源头逐环传导至D009（排涝复堤）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（汛情背景） 到终点 D009（排涝复堤） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（汛情背景）",
+        "终点为 D009（排涝复堤）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（汛情背景） → D002（险情发现） → D003（堤防决堤） → D006（应急响应） → D007（封堵合龙） → D008（封堵完成） → D009（排涝复堤）",
+        "可包含关键环节 D002（险情发现）",
+        "可包含关键环节 D003（堤防决堤）",
+        "可包含关键环节 D006（应急响应）",
+        "可包含关键环节 D007（封堵合龙）",
+        "可包含关键环节 D008（封堵完成）",
+        "终点影响：组织排涝清淤与堤防加固"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "汛情背景",
+        "险情发现",
+        "堤防决堤",
+        "应急响应",
+        "封堵合龙",
+        "封堵完成",
+        "排涝复堤"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q08",
+    "pack_id": "107",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于团洲垸的受淹范围，官方通报与另一网传来源不一致（官方称逾九成面积被淹，另一来源称整个华容县城被淹）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "多个来源相互冲突，交叉核验前不应给出唯一结论",
+        "应以官方/权威通报为准并标注冲突、存疑"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "直接采信与官方通报相悖的来源口径",
+        "在未核验冲突前给出唯一确定结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D004.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_107_Q09",
+    "pack_id": "107",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（险情发现）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [
+        "判定该干扰性信息与主线事件不存在因果关系",
+        "应将其排除，不纳入证据链"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "把背景性 / 无关信息强行纳入因果链",
+        "编造干扰信息与主线事件的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_107_Q10",
+    "pack_id": "107",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，团洲垸决堤时溃口的最终精确宽度是多少米？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "所需信息在现有材料中缺失",
+        "应拒答而非臆测"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "编造材料未记载的具体数据或结论",
+        "给出看似确定实则无据的答案"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

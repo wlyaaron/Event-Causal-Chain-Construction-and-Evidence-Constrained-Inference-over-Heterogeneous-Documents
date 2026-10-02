@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_218_Q01",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "1995年日本阪神大地震的基本情况和灾害损失是怎样的？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q02",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "阪神地震救援工作面临哪些主要困难？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q03",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "阪神大地震造成重大人员伤亡的主要原因是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q04",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "阪神大地震后日本对建筑抗震标准进行了哪些重要修订？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q05",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "阪神大地震对日本防灾减灾体系带来了哪些系统性改革？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q06",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "阪神大地震的经验对其他地震多发国家的城市防灾有哪些重要启示？未来特大城市防震减灾的重点方向是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_218_Q07",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "阪神大地震的灾后重建模式有哪些特点？对未来重大灾害重建有哪些借鉴意义？"
+  }
+]

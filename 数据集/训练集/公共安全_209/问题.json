@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_209_Q01",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料中关于D001（安全事件发生）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "public_safety_209_Q02",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（安全事件发生）到D005（案件解读讨论）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "public_safety_209_Q03",
+    "pack_id": "209",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对安全事件发生的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "public_safety_209_Q04",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D008（制度体系完善）在进程上早于D002（执法调查启动）。能否据此认为D008（制度体系完善）导致了D002（执法调查启动）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_209_Q05",
+    "pack_id": "209",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于2022-07（D008 制度体系完善；D002 执法调查启动；D001 安全事件发生；D003 违法事实查明；D005 案件解读讨论），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_209_Q06",
+    "pack_id": "209",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D002（执法调查启动）未曾出现，D003（违法事实查明）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "public_safety_209_Q07",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，国家互联网信息办公室相关的D004（行政处罚决定）发生后，紧接着出现的直接结果是什么？"
+  }
+]

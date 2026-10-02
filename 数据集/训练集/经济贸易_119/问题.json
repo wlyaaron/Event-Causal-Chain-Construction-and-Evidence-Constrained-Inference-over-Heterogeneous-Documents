@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_119_Q01",
+    "pack_id": "119",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "安然公司申请破产时的资产规模是多少？谁是安然的审计机构？该审计机构的最终结局如何？"
+  },
+  {
+    "sample_id": "economy_trade_119_Q02",
+    "pack_id": "119",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "安然公司从市值600亿美元的能源巨头到申请破产保护，经历了哪些关键环节？请分析其衰落的因果链条。"
+  },
+  {
+    "sample_id": "economy_trade_119_Q03",
+    "pack_id": "119",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：斯基林辞职、安然第三季度报巨亏、安达信销毁文件、安然申请破产、萨班斯法案签署、斯基林被定罪。"
+  },
+  {
+    "sample_id": "economy_trade_119_Q04",
+    "pack_id": "119",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较安然公司破产与2008年雷曼兄弟破产在成因、影响范围和监管应对方面的异同。"
+  },
+  {
+    "sample_id": "economy_trade_119_Q05",
+    "pack_id": "119",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "安然的财务造假如何通过审计失败、投资者信心崩溃、信用降级、收购失败等多个环节，最终导致公司破产并引发整个会计行业的监管改革？"
+  },
+  {
+    "sample_id": "economy_trade_119_Q06",
+    "pack_id": "119",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括安然丑闻对美国企业治理、会计行业、金融监管和商业文化产生了哪些长期影响。"
+  },
+  {
+    "sample_id": "economy_trade_119_Q07",
+    "pack_id": "119",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设安然的特殊目的实体（SPE）被审计师及时发现并要求合并报表，安然是否还会破产？这对整个事件的走向会产生什么影响？"
+  }
+]

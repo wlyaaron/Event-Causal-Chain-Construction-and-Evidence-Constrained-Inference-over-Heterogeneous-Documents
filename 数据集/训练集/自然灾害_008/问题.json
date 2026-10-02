@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_008_Q01",
+    "pack_id": "008",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（灾后重建）阶段前进展（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q02",
+    "pack_id": "008",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（预警建设）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q03",
+    "pack_id": "008",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D001（灾害发生）被阻断，D002（应急救援）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q04",
+    "pack_id": "008",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（灾害发生）先于D004（灾情安置）发生，可以据此断定D001（灾害发生）是D004（灾情安置）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q05",
+    "pack_id": "008",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D008（防灾短板）。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q06",
+    "pack_id": "008",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对预警建设的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "natural_disaster_008_Q07",
+    "pack_id": "008",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，美国加拿大相关的D006（灾后重建）发生后，紧接着出现的直接结果是什么？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_171_Q01",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请依据材料说明D004（全国部署）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "public_safety_171_Q02",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（事故发生）早于D006（专项整治），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_171_Q03",
+    "pack_id": "171",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（事故发生）被阻断，D002（搜救结束）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_171_Q04",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（事故发生），说明经由哪些中间事件最终导致了D009（整治成效）。"
+  },
+  {
+    "sample_id": "public_safety_171_Q05",
+    "pack_id": "171",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（整治成效）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_171_Q06",
+    "pack_id": "171",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2016-12-10前进展（D001 事故发生；D002 搜救结束；D003 国家调查；D004 全国部署；D006 专项整治）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_171_Q07",
+    "pack_id": "171",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D005（调查进展）这一原因，D008（司法判决）是否会失去支撑？请判断并说明连锁影响。"
+  }
+]

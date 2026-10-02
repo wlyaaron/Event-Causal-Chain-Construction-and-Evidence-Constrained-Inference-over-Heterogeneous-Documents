@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "natural_disaster_092_Q01",
+    "pack_id": "092",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（灾害发生）未曾出现，D002（应急救援）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q02",
+    "pack_id": "092",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（灾后重建）阶段，材料仅显示：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q03",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q04",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（灾害发生）到D008（防灾短板）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q05",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（灾害发生）发生在D002（应急救援）之前，这是否足以说明D001（灾害发生）是D002（应急救援）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q06",
+    "pack_id": "092",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D008（防灾短板）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q07",
+    "pack_id": "092",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q08",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于格陵兰的灾害发生事件，不同来源给出的关键数据不一致（官方60、另一来源72）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q09",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区格陵兰的日常检查，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_092_Q10",
+    "pack_id": "092",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，格陵兰在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

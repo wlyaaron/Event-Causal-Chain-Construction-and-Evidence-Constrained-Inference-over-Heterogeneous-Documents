@@ -1,0 +1,524 @@
+[
+  {
+    "sample_id": "diplomacy_190_Q01",
+    "pack_id": "190",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道D006（政策发布）阶段前进展（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "基于因果走势，后续将出现：D007（国际回应）、D008（共识落实）、D009（专家解读）；其中最关键的是国际回应——中国加入CPTPP谈判成为国际媒体关注的焦点。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（共识落实）, D009（专家解读）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（政策发布）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际回应"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_190_Q02",
+    "pack_id": "190",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）。其中，外交会晤为起点，经逐级传导，最终导致专家解读；启动 accession 进程。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D009（专家解读） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D009（专家解读）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "可包含关键环节 D008（共识落实）",
+        "终点影响：启动 accession 进程"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实",
+        "专家解读"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_190_Q03",
+    "pack_id": "190",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D006（政策发布）在时间/进程上早于D008（共识落实）。能否据此断定D006（政策发布）导致了D008（共识落实）？请给出判断与证据。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D006→D008（直接因果）。证据：中国加入CPTPP谈判结束后，相关共识的落实工作正在有序推进。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D006（政策发布） 与 D008（共识落实） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D006 先于 D008"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D008（共识落实） 导致 D006（政策发布）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D006",
+      "event_b": "D008",
+      "temporal_order": "D006先于D008",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_190_Q04",
+    "pack_id": "190",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料中关于D003（峰会成果）记载了哪些关键事实？",
+    "answers": "据材料，D003（峰会成果）的主体为中国及CPTPP成员，发生地为新西兰；经过密集磋商，中国加入CPTPP谈判在新西兰达成多项重要共识。其影响：启动 accession 进程。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：中国及CPTPP成员",
+        "地点：新西兰",
+        "基本事实：经过密集磋商，中国加入CPTPP谈判在新西兰达成多项重要共识"
+      ],
+      "optional_facts": [
+        "影响：启动 accession 进程"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D003"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_190_Q05",
+    "pack_id": "190",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D008（共识落实）的完整因果路径，并标明证据顺序。",
+    "answers": "完整因果链：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）。其中，外交会晤为起点，经逐级传导，最终导致共识落实；启动 accession 进程。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D008（共识落实） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D008（共识落实）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "终点影响：启动 accession 进程"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_190_Q06",
+    "pack_id": "190",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了中国及CPTPP成员负责人的个人从业年限？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_190_Q07",
+    "pack_id": "190",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（外交会晤）被阻断，D002（官方声明）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，启动 accession 进程 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_190_Q08",
+    "pack_id": "190",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于中国及CPTPP成员的外交会晤事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_190_Q09",
+    "pack_id": "190",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_190_Q10",
+    "pack_id": "190",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中国及CPTPP成员在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

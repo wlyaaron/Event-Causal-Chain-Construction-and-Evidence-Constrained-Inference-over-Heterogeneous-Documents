@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_011_Q01",
+    "pack_id": "011",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2004年印度洋海啸中，受灾最严重的四个国家分别是？各国的死亡人数大约是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q02",
+    "pack_id": "011",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么2004年印度洋海啸会造成如此巨大的人员伤亡？哪些因素共同导致了这场灾难的高死亡率？"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q03",
+    "pack_id": "011",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：海啸发生、全球援助行动启动、印度洋海啸预警系统初步建成、海啸十周年纪念、亚齐和平协议签署。"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q04",
+    "pack_id": "011",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较印尼亚齐和泰国普吉岛在海啸后的恢复情况，为什么两地的恢复速度和路径有所不同？"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q05",
+    "pack_id": "011",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2004年印度洋海啸如何从一场自然灾害逐步推动了印度洋地区预警系统建设、亚齐和平进程以及全球人道主义援助机制的改进？"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q06",
+    "pack_id": "011",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2004年印度洋海啸对受灾国家和国际社会在防灾减灾、区域合作和人道主义援助方面产生的长期影响。"
+  },
+  {
+    "sample_id": "natural_disaster_011_Q07",
+    "pack_id": "011",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2004年印度洋地区已经建立了像太平洋地区那样有效的海啸预警系统，海啸的死亡人数可能会有什么变化？为什么？"
+  }
+]

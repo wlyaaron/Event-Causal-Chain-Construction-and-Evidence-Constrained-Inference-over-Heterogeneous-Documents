@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E02",
+    "relation_type": "直接影响",
+    "description": "持续强降雨引发的特大洪水直接冲击凯达尔纳特镇，导致该镇几乎被完全摧毁，数千朝圣者被困。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E04",
+    "relation_type": "直接影响",
+    "description": "洪水沿恒河干流下泄，导致瑞诗凯诗、赫里德瓦尔、台拉登等上游城镇大面积淹没。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E03",
+    "relation_type": "触发响应",
+    "description": "凯达尔纳特等重灾区大量人员被困，触发印度军队展开史上最大规模山区救援行动。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E03",
+    "relation_type": "触发响应",
+    "description": "恒河上游城镇大面积淹没，灾情严重，促使印度军队投入大规模救援力量。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E05",
+    "relation_type": "引发研究",
+    "description": "特大洪水的异常严重性引发气候科学家和地质学家对灾害成因的深入分析。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E10",
+    "relation_type": "推动改革",
+    "description": "专家对洪水成因的分析揭示了人类活动的影响，推动了对山区发展模式的反思和改革。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E06",
+    "relation_type": "次生风险",
+    "description": "大量人员伤亡和灾区卫生条件恶化，使灾后疫情防控形势严峻。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E06",
+    "relation_type": "次生风险",
+    "description": "城镇大面积淹没导致饮用水系统瘫痪，增加了水源性传染病的爆发风险。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E07",
+    "relation_type": "经济冲击",
+    "description": "凯达尔纳特等朝觐圣地被摧毁，直接导致北阿坎德邦旅游业遭受重创。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E07",
+    "relation_type": "经济冲击",
+    "description": "瑞诗凯诗等旅游城市被洪水淹没，旅游基础设施严重损毁，朝觐经济陷入困境。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E08",
+    "relation_type": "引发争议",
+    "description": "军队救援行动虽然规模宏大，但政府初期反应迟缓、协调不力，引发了对救灾不力的广泛争议。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E08",
+    "relation_type": "引发争议",
+    "description": "大量朝圣者伤亡的惨剧使公众对政府预警和疏散不力的不满加剧，反对派要求问责。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E09",
+    "relation_type": "引发援助",
+    "description": "北阿坎德邦特大洪水的严重灾情引起国际社会关注，多国和国际组织提供救灾援助。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E09",
+    "relation_type": "补充支持",
+    "description": "印度国内救援力量虽然庞大但仍显不足，国际援助作为补充支持了救灾工作。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E07",
+    "effect_event_id": "E10",
+    "relation_type": "推动重建",
+    "description": "旅游业和经济遭受重创，迫切需要通过灾后重建恢复经济，推动重建工作全面展开。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E06",
+    "effect_event_id": "E10",
+    "relation_type": "推动重建",
+    "description": "灾后公共卫生危机暴露了灾区基础设施的薄弱，推动重建工作中加强公共卫生设施建设。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E08",
+    "effect_event_id": "E10",
+    "relation_type": "制度推动",
+    "description": "救灾不力的争议和问责压力推动政府在灾后重建中反思和改革灾害管理体系。",
+    "pack_id": "181"
+  },
+  {
+    "cause_event_id": "E09",
+    "effect_event_id": "E10",
+    "relation_type": "资源支持",
+    "description": "国际社会的救灾援助为灾后重建提供了资金和物资支持，助力重建工作推进。",
+    "pack_id": "181"
+  }
+]

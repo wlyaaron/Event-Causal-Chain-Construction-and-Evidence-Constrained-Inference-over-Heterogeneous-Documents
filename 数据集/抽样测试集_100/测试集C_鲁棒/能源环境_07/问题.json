@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "energy_environment_007_Q01",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D001（政策发布）没有发生（或被及时干预阻断），D002（权威解读）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q02",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "若材料只更新到D006（产业发展）为止，前进展（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请梳理D001（政策发布）最终引发D009（科技创新）的完整路径，逐环节列出支撑证据。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q04",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对挑战对策的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请依据材料说明D006（产业发展）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q06",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（政策发布）在时间上先于D004（环保讨论），这是否意味着二者之间存在因果关联？请说明判断逻辑。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q07",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "试设想D001（政策发布）没有发生的情况，D002（权威解读）能否独立成立？请从因果关系角度分析。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q08",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于北溪1号2号的政策发布事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "energy_environment_007_Q09",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件政策发布（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "energy_environment_007_Q10",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，北溪1号2号在该政策发布事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

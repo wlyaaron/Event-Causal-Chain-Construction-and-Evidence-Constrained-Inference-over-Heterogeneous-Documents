@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "长春长生疫苗造假事件曝光后，国家药监局迅速派出专项调查组进驻企业全面彻查",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "因果关系",
+    "description": "疫苗事件引发全国舆论强烈关注，党和国家领导人高度重视并作出重要指示批示",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "调查组查明企业存在系统性违法违规行为，涉嫌犯罪，公安机关对企业高管立案调查并采取刑拘措施",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "狂犬疫苗造假事件曝光后，长春长生此前生产的问题百白破疫苗的流向也被查明并公布",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "疫苗造假事件严重打击了公众对疫苗安全的信心，引发了全国范围的疫苗信任危机和接种率下降",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D006",
+    "relation_type": "递进关系",
+    "description": "问题百白破疫苗涉及21万儿童的消息进一步加剧了公众的恐慌情绪和对疫苗安全的不信任",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "在中央领导指示和国务院调查组的深入工作下，最终查明了企业系统性违法事实和监管失职问题",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "国家药监局的专项调查为国务院调查组提供了关键证据和事实基础，推动了调查结果的最终公布",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "调查结果认定了监管部门的失职渎职责任，推动了对多名省部级官员的严肃问责",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "调查查明企业系统性违法事实后，监管部门依法对长春长生作出了91亿元的巨额行政处罚",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "企业高管被刑拘后，经过司法侦查和审判，高俊芳等被告人最终被判处有期徒刑",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D011",
+    "relation_type": "因果关系",
+    "description": "疫苗事件暴露了疫苗管理法律制度的不足，直接推动了《疫苗管理法》的立法进程和出台",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D011",
+    "relation_type": "因果关系",
+    "description": "监管问责中暴露出的制度漏洞，为疫苗管理法的制度设计提供了重要参考和改革方向",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D011",
+    "effect_event_id": "D012",
+    "relation_type": "因果关系",
+    "description": "《疫苗管理法》要求建立疫苗全程追溯体系，推动了全国疫苗电子追溯平台的建设和行业重塑",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D012",
+    "relation_type": "因果关系",
+    "description": "疫苗事件成为中国疫苗行业转型升级的催化剂，推动了行业质量提升和监管能力加强",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D009",
+    "effect_event_id": "D012",
+    "relation_type": "因果关系",
+    "description": "巨额罚款和企业退市的严厉惩处，对整个疫苗行业形成了强大震慑，推动企业加强质量管理",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D011",
+    "relation_type": "因果关系",
+    "description": "公众信任危机凸显了疫苗安全信息公开和制度保障的重要性，推动了疫苗管理法中信息公开条款的设立",
+    "pack_id": "03"
+  },
+  {
+    "cause_event_id": "D010",
+    "effect_event_id": "D011",
+    "relation_type": "因果关系",
+    "description": "刑事判决中暴露出的法律量刑不足，推动了疫苗管理法中法律责任条款的从严设计",
+    "pack_id": "03"
+  }
+]

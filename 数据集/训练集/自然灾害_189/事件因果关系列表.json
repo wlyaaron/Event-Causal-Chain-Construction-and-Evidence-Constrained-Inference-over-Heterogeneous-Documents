@@ -1,0 +1,86 @@
+[
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D003",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D003",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D004",
+    "causal_type": "救援需求",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D005",
+    "causal_type": "引发争议",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D006",
+    "causal_type": "安置需求",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D006",
+    "causal_type": "流离失所",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D007",
+    "causal_type": "暴露问题",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D007",
+    "causal_type": "加剧争议",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D008",
+    "causal_type": "重建需求",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D008",
+    "result_event_id": "D009",
+    "causal_type": "长期影响",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D009",
+    "causal_type": "政治影响",
+    "confidence_level": "probable",
+    "pack_id": "189"
+  }
+]

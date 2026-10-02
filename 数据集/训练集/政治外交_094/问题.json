@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "diplomacy_094_Q01",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D010（区域影响），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_094_Q02",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于此次上合组织阿斯塔纳峰会并未接纳任何新成员国，请说明为何各方还称上合组织完成了新一轮扩员？"
+  },
+  {
+    "sample_id": "diplomacy_094_Q03",
+    "pack_id": "094",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（会议举办）被阻断，D003（白俄入盟）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "diplomacy_094_Q04",
+    "pack_id": "094",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（中国接任）阶段，材料仅显示：D001 会议举办；D002 出席讲话；D003 白俄入盟；D004 通过宣言；D005 批准决定；D006 中国接任。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "diplomacy_094_Q05",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D003（白俄入盟）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "diplomacy_094_Q06",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D002（出席讲话）早于D008（扩员壮大），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "diplomacy_094_Q07",
+    "pack_id": "094",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（务实合作）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_094_Q08",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于上合组织成员国数量，官方通报与另一网传来源不一致（官方称白俄罗斯入盟后增至10个，另一来源称已达15个）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "diplomacy_094_Q09",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D001（会议举办）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "diplomacy_094_Q10",
+    "pack_id": "094",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，《上合组织2035年前发展战略》全文的具体章节数是多少？"
+  }
+]

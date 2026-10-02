@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_213_Q01",
+    "pack_id": "213",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "一线调研反映出举措带来了哪些变化？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q02",
+    "pack_id": "213",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在区域协作方面开展了哪些工作？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q03",
+    "pack_id": "213",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2017年江西绿色低碳产业示范园区建设的主要内容和目标是什么？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q04",
+    "pack_id": "213",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何推进举措落地？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q05",
+    "pack_id": "213",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关负责人和专家如何解读这一举措？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q06",
+    "pack_id": "213",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措对稳定预期、提振信心将发挥怎样的作用？"
+  },
+  {
+    "sample_id": "economy_trade_213_Q07",
+    "pack_id": "213",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措将如何影响相关领域的未来发展？"
+  }
+]

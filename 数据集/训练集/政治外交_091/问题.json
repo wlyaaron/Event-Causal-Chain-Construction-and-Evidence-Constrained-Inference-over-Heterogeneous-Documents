@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_091_Q01",
+    "pack_id": "091",
+    "question_type": "事实查询",
+    "reasoning_type": "single_hop",
+    "question": "伊朗核协议（JCPOA）是在哪一年、哪个城市达成的？协议的核心内容是什么？伊朗在浓缩铀库存和丰度方面做出了哪些具体承诺？"
+  },
+  {
+    "sample_id": "diplomacy_091_Q02",
+    "pack_id": "091",
+    "question_type": "因果推理",
+    "reasoning_type": "multi_hop_causal",
+    "question": "特朗普政府为什么决定退出伊朗核协议？请从协议本身的缺陷（日落条款、导弹计划、地区活动）、美国国内政治（共和党反对、以色列游说）和特朗普个人外交理念三个层面分析其因果链条。"
+  },
+  {
+    "sample_id": "diplomacy_091_Q03",
+    "pack_id": "091",
+    "question_type": "时序推理",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：JCPOA正式执行、特朗普宣布退出协议、伊朗突破浓缩铀库存上限、苏莱曼尼遇刺、伊朗导弹袭击美军基地、拜登政府启动维也纳谈判、阿米尼抗议爆发。"
+  },
+  {
+    "sample_id": "diplomacy_091_Q04",
+    "pack_id": "091",
+    "question_type": "比较分析",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较奥巴马政府和特朗普政府对伊朗核问题的政策差异，包括外交手段、制裁策略、对以色列的态度和对地区稳定的影响。"
+  },
+  {
+    "sample_id": "diplomacy_091_Q05",
+    "pack_id": "091",
+    "question_type": "多跳推理",
+    "reasoning_type": "multi_hop_causal",
+    "question": "美国退出JCPOA并重新实施制裁，如何通过经济压力、伊朗核突破、地区代理人冲突、美伊军事对峙等多个环节，最终影响到中东地区的整体安全格局？请梳理完整的传导链条。"
+  },
+  {
+    "sample_id": "diplomacy_091_Q06",
+    "pack_id": "091",
+    "question_type": "总结概括",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括伊朗核协议（JCPOA）从达成、执行、美国退出、伊朗突破到维也纳谈判停滞的完整历程，并总结这一事件对核不扩散体系和多边外交的启示。"
+  },
+  {
+    "sample_id": "diplomacy_091_Q07",
+    "pack_id": "091",
+    "question_type": "假设推断",
+    "reasoning_type": "counterfactual",
+    "question": "假设美国没有在2018年退出JCPOA，伊朗核问题和中东局势可能会如何发展？哪些因素可能仍然导致协议面临挑战？请分析可能的情景。"
+  }
+]

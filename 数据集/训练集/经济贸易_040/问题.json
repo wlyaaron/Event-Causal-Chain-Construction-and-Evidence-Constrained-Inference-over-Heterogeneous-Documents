@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "economy_trade_040_Q01",
+    "pack_id": "040",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，全球周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "economy_trade_040_Q02",
+    "pack_id": "040",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（趋势展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_040_Q03",
+    "pack_id": "040",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "请判断：针对D001（政策落地），两处来源给出的口径相互冲突且尚未核实。在核验前能否给出确定答案？"
+  },
+  {
+    "sample_id": "economy_trade_040_Q04",
+    "pack_id": "040",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料中关于D003（企业行动）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "economy_trade_040_Q05",
+    "pack_id": "040",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_040_Q06",
+    "pack_id": "040",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D008（成效评估）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_040_Q07",
+    "pack_id": "040",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，如果移除D001（政策落地）这一原因，D002（市场反应）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "economy_trade_040_Q08",
+    "pack_id": "040",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于西方国家对俄的政策落地事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "economy_trade_040_Q09",
+    "pack_id": "040",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的行业交流会，是否与主线事件政策落地（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "economy_trade_040_Q10",
+    "pack_id": "040",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，西方国家对俄在该政策落地事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

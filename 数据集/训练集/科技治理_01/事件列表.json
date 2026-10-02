@@ -1,0 +1,452 @@
+[
+  {
+    "event_id": "D001",
+    "doc_id": "D001",
+    "event_type": "技术突破",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "研发团队",
+      "地点": "美国",
+      "内容": "ChatGPT发布发布引发行业热议2022-11-30的美国见证了ChatGPT发布的重要发布，ChatGPT创新引起广泛关注。研发团队在美国开展了大量实验验证工作，确保了ChatGPT技术的可靠性和实用性。",
+      "影响": "ChatGPT发布发布引发行业热议"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D001",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "研发团队",
+        "doc_id": "D001",
+        "start": 65,
+        "end": 69
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D001",
+        "start": 29,
+        "end": 31
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布发布引发行业热议",
+        "doc_id": "D001",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "event_id": "D002",
+    "doc_id": "D002",
+    "event_type": "行业热议",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "投资机构",
+      "地点": "美国",
+      "内容": "ChatGPT发布国际合作不断深化ChatGPT发布于2022-11-30在美国发布，标志着ChatGPT技术迈入新的发展阶段。从基础研究到应用开发，ChatGPT发布实现了ChatGPT技术的全链条创新突破。",
+      "影响": "ChatGPT发布国际合作不断深化"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D002",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "投资机构",
+        "doc_id": "D002",
+        "start": 107,
+        "end": 111
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D002",
+        "start": 39,
+        "end": 41
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布国际合作不断深化",
+        "doc_id": "D002",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "event_id": "D003",
+    "doc_id": "D003",
+    "event_type": "监管规范",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "据科技部",
+      "地点": "美国",
+      "内容": "ChatGPT发布对人才培养提出新要求据科技部门消息，2022-11-30美国的ChatGPT发布引发科技界广泛关注。从技术参数看，ChatGPT发布在ChatGPT领域的多项核心指标达到了国际领先水平。",
+      "影响": "ChatGPT发布对人才培养提出新要求"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D003",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "据科技部",
+        "doc_id": "D003",
+        "start": 20,
+        "end": 24
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D003",
+        "start": 38,
+        "end": 40
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布对人才培养提出新要求",
+        "doc_id": "D003",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "event_id": "D004",
+    "doc_id": "D004",
+    "event_type": "伦理讨论",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "技术的快速发展对社会",
+      "地点": "美国",
+      "内容": "ChatGPT发布横空出世 美国迎来里程碑2022-11-30，美国成为科技创新焦点——ChatGPT发布引起行业热议。从基础研究到应用开发，ChatGPT发布实现了ChatGPT技术的全链条创新突破。",
+      "影响": "ChatGPT发布横空出世 美国迎来里程碑"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D004",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "技术的快速发展对社会",
+        "doc_id": "D004",
+        "start": 200,
+        "end": 210
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D004",
+        "start": 14,
+        "end": 16
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布横空出世 美国迎来里程碑",
+        "doc_id": "D004",
+        "start": 0,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "event_id": "D005",
+    "doc_id": "D005",
+    "event_type": "资本关注",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "多家高校和企业",
+      "地点": "美国",
+      "内容": "ChatGPT发布在多场景落地应用2022-11-30的美国见证了ChatGPT发布的重要发布，ChatGPT创新引起广泛关注。OpenAI围绕ChatGPT进行了多年的技术攻关，此次突破凝聚了大量科研人员的心血。",
+      "影响": "ChatGPT发布在多场景落地应用"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D005",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "多家高校和企业",
+        "doc_id": "D005",
+        "start": 248,
+        "end": 255
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D005",
+        "start": 29,
+        "end": 31
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布在多场景落地应用",
+        "doc_id": "D005",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "event_id": "D006",
+    "doc_id": "D006",
+    "event_type": "标准制定",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "领域的知识产权布局",
+      "地点": "美国",
+      "内容": "ChatGPT发布横空出世 美国迎来里程碑ChatGPT发布于2022-11-30在美国发布，标志着ChatGPT技术迈入新的发展阶段。这一突破涵盖多项关键技术创新，OpenAI在ChatGPT领域的知识产权布局日益完善。",
+      "影响": "ChatGPT发布横空出世 美国迎来里程碑"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D006",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "领域的知识产权布局",
+        "doc_id": "D006",
+        "start": 98,
+        "end": 107
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D006",
+        "start": 14,
+        "end": 16
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布横空出世 美国迎来里程碑",
+        "doc_id": "D006",
+        "start": 0,
+        "end": 21
+      }
+    ]
+  },
+  {
+    "event_id": "D007",
+    "doc_id": "D007",
+    "event_type": "趋势展望",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "据科技部",
+      "地点": "美国",
+      "内容": "从ChatGPT发布看科技创新新趋势据科技部门消息，2022-11-30美国的ChatGPT发布引发科技界广泛关注。从基础研究到应用开发，ChatGPT发布实现了ChatGPT技术的全链条创新突破。",
+      "影响": "从ChatGPT发布看科技创新新趋势"
+    },
+    "occur_time": "2022-11-30",
+    "start": 1,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D007",
+        "start": 1,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "据科技部",
+        "doc_id": "D007",
+        "start": 19,
+        "end": 23
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D007",
+        "start": 37,
+        "end": 39
+      },
+      {
+        "field": "影响",
+        "text": "从ChatGPT发布看科技创新新趋势",
+        "doc_id": "D007",
+        "start": 0,
+        "end": 18
+      }
+    ]
+  },
+  {
+    "event_id": "D008",
+    "doc_id": "D008",
+    "event_type": "场景落地",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "监管部",
+      "地点": "美国",
+      "内容": "ChatGPT发布推动相关标准制定来自科技界的消息显示，2022-11-30美国的ChatGPT发布在ChatGPT领域取得重要进展。OpenAI围绕ChatGPT进行了多年的技术攻关，此次突破凝聚了大量科研人员的心血。",
+      "影响": "ChatGPT发布推动相关标准制定"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D008",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "监管部",
+        "doc_id": "D008",
+        "start": 112,
+        "end": 115
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D008",
+        "start": 39,
+        "end": 41
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布推动相关标准制定",
+        "doc_id": "D008",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "event_id": "D009",
+    "doc_id": "D009",
+    "event_type": "国际合作",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "研发团队",
+      "地点": "美国",
+      "内容": "ChatGPT发布推动相关标准制定2022-11-30，ChatGPT发布在美国正式对外公布，ChatGPT领域迎来重大突破。研发团队在美国开展了大量实验验证工作，确保了ChatGPT技术的可靠性和实用性。",
+      "影响": "ChatGPT发布推动相关标准制定"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D009",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "研发团队",
+        "doc_id": "D009",
+        "start": 64,
+        "end": 68
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D009",
+        "start": 39,
+        "end": 41
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布推动相关标准制定",
+        "doc_id": "D009",
+        "start": 0,
+        "end": 17
+      }
+    ]
+  },
+  {
+    "event_id": "D010",
+    "doc_id": "D010",
+    "event_type": "人才培养",
+    "trigger_word": "ChatGPT",
+    "argument": {
+      "主体": "投资机构",
+      "地点": "美国",
+      "内容": "ChatGPT发布横空出世 美国迎来里程碑科技领域的重磅消息：ChatGPT发布于2022-11-30在美国正式亮相。从技术参数看，ChatGPT发布在ChatGPT领域的多项核心指标达到了国际领先水平。",
+      "影响": "ChatGPT发布横空出世 美国迎来里程碑"
+    },
+    "occur_time": "2022-11-30",
+    "start": 0,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "ChatGPT",
+        "doc_id": "D010",
+        "start": 0,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "投资机构",
+        "doc_id": "D010",
+        "start": 104,
+        "end": 108
+      },
+      {
+        "field": "地点",
+        "text": "美国",
+        "doc_id": "D010",
+        "start": 14,
+        "end": 16
+      },
+      {
+        "field": "影响",
+        "text": "ChatGPT发布横空出世 美国迎来里程碑",
+        "doc_id": "D010",
+        "start": 0,
+        "end": 21
+      }
+    ]
+  }
+]

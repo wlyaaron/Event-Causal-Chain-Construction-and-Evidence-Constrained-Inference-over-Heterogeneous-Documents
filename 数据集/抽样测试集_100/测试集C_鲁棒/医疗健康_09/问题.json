@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "healthcare_009_Q01",
+    "pack_id": "09",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D006（防控政策）没有发生（或被及时干预阻断），D008（医保政策）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "healthcare_009_Q02",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D008（医保政策）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "healthcare_009_Q03",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间上看D008（医保政策）早于D009（长期影响），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "healthcare_009_Q04",
+    "pack_id": "09",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握D006（防控政策）阶段及之前的信息（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "healthcare_009_Q05",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（长期影响）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "healthcare_009_Q06",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（医保政策）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "healthcare_009_Q07",
+    "pack_id": "09",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D001（疫情通报）没有发生（或被及时干预阻断），D002（官方发布）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "healthcare_009_Q08",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于WHO的疫情通报事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "healthcare_009_Q09",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区WHO的常规演练，是否与主线事件疫情通报（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "healthcare_009_Q10",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，WHO在该疫情通报事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_146_Q01",
+    "pack_id": "146",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "economy_trade_146_Q02",
+    "pack_id": "146",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D004（专家分析）被阻断，D006（中小企业影响）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "economy_trade_146_Q03",
+    "pack_id": "146",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "哪一事件是D002（市场反应）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "economy_trade_146_Q04",
+    "pack_id": "146",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D001（政策落地）在时间/进程上早于D002（市场反应）。能否据此断定D001（政策落地）导致了D002（市场反应）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_146_Q05",
+    "pack_id": "146",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对成效评估的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "economy_trade_146_Q06",
+    "pack_id": "146",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（趋势展望）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_146_Q07",
+    "pack_id": "146",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（中小企业影响）阶段及之前的信息（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请预测事件的后续走向，并给出可验证的预测结论。"
+  }
+]

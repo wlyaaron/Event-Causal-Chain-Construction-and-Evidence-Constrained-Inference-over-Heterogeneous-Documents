@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_061_Q01",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（安全事件/风险发生）到D005（善后处置推进）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "public_safety_061_Q02",
+    "pack_id": "061",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "结合材料，现有文档能否给出D001（安全事件/风险发生）精确到分钟的处置时长？请作答。"
+  },
+  {
+    "sample_id": "public_safety_061_Q03",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（安全事件/风险发生）先于D007（整治行动推进）发生，可以据此断定D001（安全事件/风险发生）是D007（整治行动推进）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_061_Q04",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请概述D007（整治行动推进）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "public_safety_061_Q05",
+    "pack_id": "061",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D007（整治行动推进），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_061_Q06",
+    "pack_id": "061",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2020-08-31前进展（D001 安全事件/风险发生；D002 应急响应与救援；D004 上级督导检查；D003 专项整治部署；D005 善后处置推进）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_061_Q07",
+    "pack_id": "061",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（安全事件/风险发生）这一原因，D002（应急响应与救援）是否会失去支撑？请判断并说明连锁影响。"
+  }
+]

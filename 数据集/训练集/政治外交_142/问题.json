@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "diplomacy_142_Q01",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（专家解读），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q02",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，140多国代表相关的D004（双边会谈）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "diplomacy_142_Q03",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（外交会晤）先于D004（双边会谈）发生，可以据此断定D001（外交会晤）是D004（双边会谈）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q04",
+    "pack_id": "142",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D004（双边会谈）这一原因，D006（政策发布）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q05",
+    "pack_id": "142",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q06",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了140多国代表负责人的个人从业年限？"
+  },
+  {
+    "sample_id": "diplomacy_142_Q07",
+    "pack_id": "142",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（外交会晤），说明经由哪些中间事件最终导致了D008（共识落实）。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q08",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于140多国代表的外交会晤事件，不同来源给出的关键数据不一致（官方458、另一来源550）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "diplomacy_142_Q09",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的日常检查，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "diplomacy_142_Q10",
+    "pack_id": "142",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，140多国代表在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

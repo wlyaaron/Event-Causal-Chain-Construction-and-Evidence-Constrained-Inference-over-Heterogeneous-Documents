@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "cybersecurity_008_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：已知D006（标准升级）先于D008（用户维权）出现，可否仅凭先后顺序认定二者的因果关系？"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q02",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（安全事件）被阻断，D002（技术分析）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，教育部网信办相关的D002（技术分析）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q04",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：假设你只掌握D006（标准升级）阶段及之前的信息（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（安全事件），说明经由哪些中间事件最终导致了D009（防范建议）。"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q06",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（用户维权）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "cybersecurity_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：已知D004（监管约谈）先于D005（黑产溯源）出现，可否仅凭先后顺序认定二者的因果关系？"
+  }
+]

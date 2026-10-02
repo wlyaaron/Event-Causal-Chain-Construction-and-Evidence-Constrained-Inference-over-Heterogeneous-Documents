@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_047_Q01",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（食品安全整治成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_047_Q02",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D002（医疗救治）在D004（善后与临时排查）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_047_Q03",
+    "pack_id": "047",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D001（安全事件/风险发生）所代表的条件被移除，后续的D003（调查评估与核查）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_047_Q04",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D006（责任追究与处理）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "public_safety_047_Q05",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起事件的起因，材料中既有'蓄意投毒、农药残留致病'的网络猜测（D013），又有官方认定的沙门氏菌交叉污染（D003），二者相互矛盾，应采信哪一个？为什么？"
+  },
+  {
+    "sample_id": "public_safety_047_Q06",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：沿因果关系看，D003（调查评估与核查）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_047_Q07",
+    "pack_id": "047",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握2023-06-14及之前的信息（D001 安全事件/风险发生；D002 医疗救治；D003 调查评估与核查；D004 善后与临时排查），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "public_safety_047_Q08",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到了同期一所无关幼儿园幼儿的肠胃不适（D016）、省内外同名'金苹果'幼儿园（D017）以及以往其他地方的学校食物中毒案例（D018）。在追溯本起食物中毒事件的因果链条时，这些信息是否应纳入？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_047_Q09",
+    "pack_id": "047",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定导致本次中毒的问题食材具体是哪一批次、于何时进入食堂？请判断并说明依据。"
+  }
+]

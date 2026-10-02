@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_029_Q01",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，哪一事件是D004（双边会谈）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "diplomacy_029_Q02",
+    "pack_id": "029",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_029_Q03",
+    "pack_id": "029",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于峰会成果事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "diplomacy_029_Q04",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，围绕最终结果D009（专家解读），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_029_Q05",
+    "pack_id": "029",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中美元首在D001（外交会晤）中的具体现场处置耗时（精确到分钟）是多少？"
+  },
+  {
+    "sample_id": "diplomacy_029_Q06",
+    "pack_id": "029",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D006（政策发布）所代表的条件被移除，后续的D008（共识落实）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_029_Q07",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D002（官方声明）发生在D003（峰会成果）之前，这是否足以说明D002（官方声明）是D003（峰会成果）的原因？请说明理由。"
+  }
+]

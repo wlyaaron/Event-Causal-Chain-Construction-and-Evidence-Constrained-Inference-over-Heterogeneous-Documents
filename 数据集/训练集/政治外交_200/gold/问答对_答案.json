@@ -1,0 +1,428 @@
+[
+  {
+    "sample_id": "diplomacy_200_Q01",
+    "pack_id": "200",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。",
+    "answers": "基于因果走势，后续将出现：D007（国际回应）、D008（共识落实）、D009（专家解读）；其中最关键的是国际回应——巴以冲突加沙危机成为国际媒体关注的焦点。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（共识落实）, D009（专家解读）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（政策发布）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际回应"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_200_Q02",
+    "pack_id": "200",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D003（峰会成果）没有发生（或被及时干预阻断），D004（双边会谈）是否仍会发生？请判断并给出因果依据。",
+    "answers": "判断：若移除D003，D004很可能不会发生或将显著改变。依据：D003是D004的直接原因（直接因果），移除后受影响的因果边包括 [['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，超3万人死亡 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_200_Q03",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D008（共识落实）早于D009（专家解读），但这能否证明因果？请依据材料判断。",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D008→D009（直接因果），不是先后关系。证据：2023-10-07发生在加沙地带的巴以冲突加沙危机。",
+    "answer_facts": {
+      "required_facts": [
+        "D008（共识落实） 与 D009（专家解读） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D008 先于 D009"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D009（专家解读） 导致 D008（共识落实）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D008",
+      "event_b": "D009",
+      "temporal_order": "D008先于D009",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_200_Q04",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料显示D001（外交会晤）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D002（官方声明）是D001（外交会晤）的直接后果。证据：针对2023-10-07发生的巴以冲突加沙危机。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（外交会晤） 直接导致 D002（官方声明）",
+        "后果：针对2023-10-07发生的巴以冲突加沙危机"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（官方声明） 导致 D001（外交会晤）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_200_Q05",
+    "pack_id": "200",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定共识落实是否会导致整个行业长期停摆？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_200_Q06",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）。自外交会晤出发逐环传导至专家解读；超3万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D009（专家解读） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D009（专家解读）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "可包含关键环节 D008（共识落实）",
+        "终点影响：超3万人死亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实",
+        "专家解读"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_200_Q07",
+    "pack_id": "200",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（外交会晤）没有发生（或被及时干预阻断），D002（官方声明）是否仍会发生？请判断并给出因果依据。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；超3万人死亡 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

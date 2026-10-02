@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "economy_trade_085_Q01",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（成效显现），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "economy_trade_085_Q02",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（制度规范）在D001（金融开放）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "economy_trade_085_Q03",
+    "pack_id": "085",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（制度规范）这一原因，D001（金融开放）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "economy_trade_085_Q04",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D005（战略意义），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_085_Q05",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于沪港通首日北向资金的实际净买入金额，材料中不同来源给出了不一致的说法，应如何判断？"
+  },
+  {
+    "sample_id": "economy_trade_085_Q06",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（制度规范）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "economy_trade_085_Q07",
+    "pack_id": "085",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2014-11-14（D001 金融开放；D002 制度规范；D003 市场运行；D004 配套政策），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_085_Q08",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到上海当地举办国际金融文化节，这与沪港通首日交易的因果链条是否相关？请判断并说明理由。"
+  },
+  {
+    "sample_id": "economy_trade_085_Q09",
+    "pack_id": "085",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到有关方面或将就进一步扩大互联互通标的范围出台新的专项安排，能否据此确定该安排的具体内容、牵头部门和实施时间？"
+  }
+]

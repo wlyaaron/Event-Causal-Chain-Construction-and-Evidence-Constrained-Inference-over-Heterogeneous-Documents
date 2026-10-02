@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_115_Q01",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q02",
+    "pack_id": "115",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（灾后重建）阶段，材料仅显示：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q03",
+    "pack_id": "115",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，假如当初D001（灾害发生）未曾出现，D002（应急救援）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q04",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（防灾短板）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q05",
+    "pack_id": "115",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定国际关注是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q06",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D008（防灾短板）早于D009（预警建设），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_115_Q07",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，请概述D002（应急救援）的主体、地点与主要影响。"
+  }
+]

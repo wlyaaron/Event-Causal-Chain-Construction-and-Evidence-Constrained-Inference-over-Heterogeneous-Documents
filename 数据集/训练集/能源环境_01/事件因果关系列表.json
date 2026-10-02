@@ -1,0 +1,107 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "钻井平台爆炸沉没导致海底立管破裂，油井开始持续泄漏原油，浮油在墨西哥湾不断扩散",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D003",
+    "relation_type": "因果关系",
+    "description": "原油持续泄漏失控，BP公司紧急启动多项深海堵漏作业，但因技术难度大先后失败",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "爆炸和漏油事件造成重大人员伤亡和环境灾难，美国政府将其升级为国家级重大事件并全面介入",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "原油不断扩散对沿岸各州经济和生态造成严重威胁，促使奥巴马政府加强干预并设立赔偿基金",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D005",
+    "relation_type": "递进关系",
+    "description": "多种堵漏方案失败后，BP工程师改用切管盖帽法，最终成功安装封顶罩停止漏油",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "美国政府的强大压力和监管介入，促使BP加大堵漏投入和技术攻关，加速了封井成功的进程",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "长达87天的原油泄漏对墨西哥湾海洋生态系统造成了广泛而深远的长期影响",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "封井成功后，科学家得以对漏油造成的生态影响进行系统评估，发现了深海和湿地的长期损害",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "漏油事件造成了巨大的环境和经济损失，BP及相关公司被依法追究责任并支付巨额赔偿",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "美国政府启动的司法调查和监管改革，推动了巨额赔偿的达成和深海钻探安全规则的全面升级",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "生态长期影响评估揭示了灾难的严重程度，为赔偿金额的确定和安全改革提供了科学依据",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "堵漏作业中暴露的技术缺陷和管理问题，推动了深海钻探安全标准和应急响应能力的改革",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "爆炸导致的大规模原油泄漏是墨西哥湾生态系统遭受长期损害的根本原因",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "封井成功后，事件从应急响应阶段转入赔偿追责和制度改革阶段",
+    "pack_id": "01"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "原油泄漏对渔业、旅游业等造成的巨大经济损失，是推动巨额赔偿和解的重要因素",
+    "pack_id": "01"
+  }
+]

@@ -1,0 +1,313 @@
+[
+  {
+    "sample_id": "natural_disaster_106_Q01",
+    "pack_id": "106",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（评论员文章），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（自然灾害） → D003（救灾救助） → D004（抢险救援） → D011（评论员文章）。自然灾害触发链条，最终形成评论员文章；凝聚万众一心重建家园的力量。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D011（评论员文章） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D011（评论员文章）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D003（救灾救助） → D004（抢险救援） → D011（评论员文章）",
+        "可包含关键环节 D003（救灾救助）",
+        "终点影响：凝聚万众一心重建家园的力量"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D011"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D011"
+      ],
+      [
+        "D001",
+        "D003",
+        "D011"
+      ],
+      [
+        "D001",
+        "D004",
+        "D011"
+      ],
+      [
+        "D001",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D011"
+      ],
+      "stages": [
+        "自然灾害",
+        "救灾救助",
+        "抢险救援",
+        "评论员文章"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_106_Q02",
+    "pack_id": "106",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（自然灾害）在D002（工作部署）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：推动各项救灾措施落地见效。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 与 D002（工作部署） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（工作部署） 导致 D001（自然灾害）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_106_Q03",
+    "pack_id": "106",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（自然灾害）这一原因，D002（工作部署）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D011']]；推动各项救灾措施落地见效 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D011"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_106_Q04",
+    "pack_id": "106",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D004（抢险救援），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（自然灾害） → D003（救灾救助） → D004（抢险救援）。起点为自然灾害，终点为抢险救援；最大限度搜救被困群众、减少伤亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D004（抢险救援） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D004（抢险救援）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D003（救灾救助） → D004（抢险救援）",
+        "可包含关键环节 D003（救灾救助）",
+        "终点影响：最大限度搜救被困群众、减少伤亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "自然灾害",
+        "救灾救助",
+        "抢险救援"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_106_Q05",
+    "pack_id": "106",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_106_Q06",
+    "pack_id": "106",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+    "answers": "D002（工作部署）是D001（自然灾害）的直接后果。证据：推动各项救灾措施落地见效。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 直接导致 D002（工作部署）",
+        "后果：推动各项救灾措施落地见效"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（工作部署） 导致 D001（自然灾害）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_106_Q07",
+    "pack_id": "106",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2008-08-28（D001 自然灾害；D002 工作部署；D003 救灾救助；D004 抢险救援；D005 转移安置；D006 灾情核查），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D007（恢复重建）、D008（专家解读）、D009（监测预警）、D010（抗灾故事）、D011（评论员文章）；其中最关键的是恢复重建——建设更加安全宜居的美好家园。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:恢复重建"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（专家解读）、D009（监测预警）、D010（抗灾故事）、D011（评论员文章）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2008-08-28",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "predicted": [
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

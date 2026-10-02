@@ -1,0 +1,298 @@
+[
+  {
+    "sample_id": "diplomacy_060_Q01",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（克里米亚大桥爆炸与能源战），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（俄罗斯承认乌东两共和国独立）→D002（俄罗斯对乌发动特别军事行动）→D003（首轮谈判与联大决议）→D004（多轮谈判与伊斯坦布尔协议）→D005（布恰事件与第五轮制裁）→D006（顿巴斯战役与马里乌波尔陷落）→D007（G7与北约马德里峰会）→D008（卢甘斯克完全控制与粮食出口协议）→D009（克里米亚袭击与俄部分动员）→D010（克里米亚大桥爆炸与能源战）。冲突经历了发起、谈判、升级、再升级的螺旋式发展。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D010的有向因果链",
+        "起点D001",
+        "终点D010"
+      ],
+      "optional_facts": [
+        "可包含北约东扩",
+        "终点影响：冲突向俄本土扩展"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "hops": 9
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_060_Q02",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（俄罗斯承认乌东两共和国独立）在D002（俄罗斯对乌发动特别军事行动）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D002（直接因果）。承认两共和国独立后，俄罗斯与两国签署了友好合作互助条约，有权在其领土上建立军事基地和部署军队，为三天后发动军事行动奠定了法律和军事基础。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D002存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D002仅3天"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_060_Q03",
+    "pack_id": "060",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D005（布恰事件与第五轮制裁）这一环节，D006（顿巴斯战役与马里乌波尔陷落）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D005是D006的直接原因之一，移除后D006将失去部分支撑但不会完全消失。因为布恰事件导致谈判陷入僵局，俄方转而集中军事力量在顿巴斯发动攻势；但即使没有布恰事件，俄方原定计划也是控制顿巴斯，所以D006仍可能发生但时间和规模可能不同。受影响的下游包括D007北约峰会和D009部分动员。",
+    "answer_facts": {
+      "required_facts": [
+        "D005是D006的直接原因",
+        "移除原因则结果链部分断裂"
+      ],
+      "optional_facts": [
+        "D004也是D006的原因但不足以替代D005"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ],
+      [
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D005",
+      "affected_edges": [
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D006失去部分支撑但仍可能发生"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_060_Q04",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（俄罗斯对乌发动特别军事行动）之后直接推动了哪个事件？",
+    "answers": "D003（首轮谈判与联合国大会决议）是D002的直接后果。证据：2月24日军事行动爆发后，2月28日俄乌即在白俄罗斯举行首轮谈判，3月2日联合国大会通过决议要求俄撤军。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D002直接导致D003",
+        "后果：首轮谈判和联大决议"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_060_Q05",
+    "pack_id": "060",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测俄乌冲突最终结束的具体时间和和平协议的详细条款？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_060_Q06",
+    "pack_id": "060",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2022年6月30日（D001至D007均已发生，北约马德里峰会结束），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D008（卢甘斯克完全控制与粮食出口协议）、D009（克里米亚袭击与俄部分动员）、D010（克里米亚大桥爆炸与能源战）；其中最关键的是俄军完全控制卢甘斯克后，乌克兰开始袭击克里米亚目标，俄罗斯宣布部分动员并吞并乌东四地，冲突进一步升级。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D008"
+      ],
+      "optional_facts": [
+        "后续还可能发生D009、D010"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-06-30",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "predicted": [
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_060_Q07",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D009（克里米亚袭击与俄部分动员）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（俄罗斯承认乌东两共和国独立）→D002（俄罗斯对乌发动特别军事行动）→D006（顿巴斯战役与马里乌波尔陷落）→D008（卢甘斯克完全控制与粮食出口协议）→D009（克里米亚袭击与俄部分动员）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D009的有向因果链",
+        "起点D001",
+        "终点D009"
+      ],
+      "optional_facts": [
+        "可包含D007",
+        "终点影响：俄罗斯吞并乌东四地"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  }
+]

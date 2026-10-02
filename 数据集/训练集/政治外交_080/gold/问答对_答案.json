@@ -1,0 +1,298 @@
+[
+  {
+    "sample_id": "diplomacy_080_Q01",
+    "pack_id": "080",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（G20巴厘岛中美元首会晤与东南亚之行），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（佩洛西拟窜访台湾消息曝光与中方警告）→D002（中美元首通话与白皮书发表）→D003（佩洛西窜台与中方反制启动）→D004（解放军环台大规模军演）→D005（军演延续与美国会代表团续窜台）→D006（芯片法案签署与中美元首巴厘岛会晤）→D007（台湾政策法案通过与中美外交博弈）→D008（中共二十大与对台政策阐述）→D009（G20巴厘岛中美元首会晤与东南亚之行）。佩洛西窜台引发中美关系严重危机，经过数月博弈后，双方在G20峰会期间举行元首会晤以稳定关系。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D009的有向因果链",
+        "起点D001",
+        "终点D009"
+      ],
+      "optional_facts": [
+        "可包含D006中的8月18日巴厘岛会晤",
+        "终点影响：中美关系阶段性企稳"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "hops": 8
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_080_Q02",
+    "pack_id": "080",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（佩洛西拟窜访台湾消息曝光与中方警告）在D003（佩洛西窜台与中方反制启动）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D003（间接传导）。佩洛西拟窜台的消息曝光后，中方多次严正交涉和警告，但佩洛西不顾反对执意窜台，直接引发了中方的强烈反制，包括制裁、取消合作和军事演训。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D003存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D003约两周",
+        "D002是中间环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": true
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_080_Q03",
+    "pack_id": "080",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D003（佩洛西窜台与中方反制启动）这一环节，D004（解放军环台大规模军演）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D003是D004的直接原因，移除后D004将失去关键支撑。因为解放军环台军演正是对佩洛西窜台的直接军事反制，没有佩洛西窜台这一触发事件，解放军不会在8月4日至7日进行如此大规模的环台军演。受影响的下游包括D005军演延续、D007台湾政策法案等。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D001和D002也是原因但不足以替代D003"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D003",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D004失去关键支撑"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_080_Q04",
+    "pack_id": "080",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D003（佩洛西窜台与中方反制启动）之后直接推动了哪个事件？",
+    "answers": "D004（解放军环台大规模军演）是D003的直接后果。证据：8月2日佩洛西窜台当晚，解放军即宣布将于8月4日至7日在台湾周边进行重要军事演训行动并组织实弹射击。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003直接导致D004",
+        "后果：解放军环台大规模军演"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_080_Q05",
+    "pack_id": "080",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测台海局势未来走向和两岸统一的具体时间节点？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_080_Q06",
+    "pack_id": "080",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2022年8月7日（D001至D004均已发生，解放军环台军演结束），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（军演延续与美国会代表团续窜台）、D006（芯片法案签署与中美元首巴厘岛会晤）、D007（台湾政策法案通过与中美外交博弈）、D008（中共二十大与对台政策阐述）、D009（G20巴厘岛中美元首会晤与东南亚之行）；其中最关键的是台海常态化战备警巡确立，中美关系经历危机后通过元首会晤阶段性企稳。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D005"
+      ],
+      "optional_facts": [
+        "后续还可能发生D006、D007、D008、D009"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-08-07",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_080_Q07",
+    "pack_id": "080",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D007（台湾政策法案通过与中美外交博弈）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（佩洛西拟窜访台湾消息曝光与中方警告）→D003（佩洛西窜台与中方反制启动）→D004（解放军环台大规模军演）→D005（军演延续与美国会代表团续窜台）→D007（台湾政策法案通过与中美外交博弈）。佩洛西窜台引发的中美关系危机，促使美国国会推动更激进的对台立法。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D007的有向因果链",
+        "起点D001",
+        "终点D007"
+      ],
+      "optional_facts": [
+        "可包含D006",
+        "终点影响：美台关系实质性升级"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  }
+]

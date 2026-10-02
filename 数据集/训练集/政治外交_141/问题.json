@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_141_Q01",
+    "pack_id": "141",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "南海仲裁案仲裁庭于何时作出最终裁决？裁决的核心内容是什么？中国政府对裁决的态度如何？"
+  },
+  {
+    "sample_id": "diplomacy_141_Q02",
+    "pack_id": "141",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么菲律宾在2013年提起南海仲裁案？请从黄岩岛对峙事件、双边谈判失败和美国支持等角度分析其背后的原因。"
+  },
+  {
+    "sample_id": "diplomacy_141_Q03",
+    "pack_id": "141",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序梳理2016年南海局势的关键事件节点，从仲裁庭管辖权裁决到最终裁决，再到杜特尔特访华。"
+  },
+  {
+    "sample_id": "diplomacy_141_Q04",
+    "pack_id": "141",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较菲律宾阿基诺三世政府与杜特尔特政府在南海问题上的政策差异，分析杜特尔特选择对华缓和的原因和影响。"
+  },
+  {
+    "sample_id": "diplomacy_141_Q05",
+    "pack_id": "141",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "美国双航母进入南海、航行自由行动常态化、推动东盟统一立场等一系列行动，如何共同构成美国对中国的南海施压战略？请分析各手段之间的协同关系。"
+  },
+  {
+    "sample_id": "diplomacy_141_Q06",
+    "pack_id": "141",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2016年南海仲裁案对中菲关系、中美关系、东盟内部团结以及地区安全格局的全方位影响，并总结南海争议长期化的主要原因。"
+  },
+  {
+    "sample_id": "diplomacy_141_Q07",
+    "pack_id": "141",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设菲律宾没有提起南海仲裁案，2012年黄岩岛对峙后的中菲关系和南海局势可能会如何发展？中国的岛礁建设节奏是否会有所不同？"
+  }
+]

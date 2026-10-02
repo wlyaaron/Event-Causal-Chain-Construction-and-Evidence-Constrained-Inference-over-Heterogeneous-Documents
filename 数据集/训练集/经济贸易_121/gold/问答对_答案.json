@@ -1,0 +1,356 @@
+[
+  {
+    "sample_id": "economy_trade_121_Q01",
+    "pack_id": "121",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（油价回升与能源格局重塑），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（谈判破裂）→ D002（沙特发动价格战）→ D003（油价暴跌）→ D006（页岩油重创）→ D008（美国介入协调）→ D009（达成减产协议）→ D010（油价回升与格局重塑）。价格战引发危机，最终通过减产协议和市场出清实现格局重塑；OPEC+影响力增强，能源转型加速。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（谈判破裂） 到终点 D010（油价回升与能源格局重塑） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（OPEC+减产谈判破裂）",
+        "终点为 D010（油价回升与能源格局重塑）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D002→D003→D006→D008→D009→D010",
+        "可包含关键环节 D009（OPEC+达成史上最大减产协议）",
+        "终点影响：OPEC+影响力增强，美国页岩油行业洗牌，能源转型加速"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D009",
+        "D010"
+      ],
+      [
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "谈判破裂",
+        "价格战爆发",
+        "油价暴跌",
+        "页岩油重创",
+        "美国介入",
+        "达成减产",
+        "格局重塑"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_121_Q02",
+    "pack_id": "121",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（OPEC+减产谈判破裂）在D002（沙特发动价格战）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：谈判破裂后沙特随即宣布降价增产，正式打响石油价格战。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（OPEC+减产谈判破裂） 与 D002（沙特发动价格战） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001（3月6日）先于 D002（3月8日）"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（沙特发动价格战） 导致 D001（谈判破裂）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_121_Q03",
+    "pack_id": "121",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（OPEC+减产谈判破裂）这一原因，D002（沙特发动价格战）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001','D002'],['D002','D003'],['D003','D006'],['D006','D008'],['D008','D009']]；油价暴跌、页岩油重创、减产协议等连锁事件也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D003",
+        "D006"
+      ],
+      [
+        "D006",
+        "D008"
+      ],
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_121_Q04",
+    "pack_id": "121",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D006（美国页岩油行业遭受重创），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（谈判破裂）→ D002（沙特发动价格战）→ D003（油价暴跌）→ D006（页岩油重创）。起点为谈判破裂，终点为页岩油行业遭受重创；美国页岩油企业陷入亏损，行业裁员超万人。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（谈判破裂） 到终点 D006（页岩油重创） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（OPEC+减产谈判破裂）",
+        "终点为 D006（美国页岩油行业遭受重创）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D002→D003→D006",
+        "可包含关键环节 D003（国际油价历史性暴跌）",
+        "终点影响：页岩油企业亏损、裁员、债务违约风险上升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006"
+      ],
+      [
+        "D002",
+        "D003",
+        "D006"
+      ],
+      [
+        "D003",
+        "D006"
+      ],
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D006"
+      ],
+      "stages": [
+        "谈判破裂",
+        "价格战爆发",
+        "油价暴跌",
+        "页岩油重创"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_121_Q05",
+    "pack_id": "121",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对全球经济未来五年的总体影响以及油价的长期均衡价格？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_121_Q06",
+    "pack_id": "121",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D008（美国介入协调产油国）之后直接发生了什么？",
+    "answers": "D009（OPEC+达成史上最大减产协议）是D008（美国介入协调产油国）的直接后果。证据：特朗普与沙特、俄罗斯领导人通话后，OPEC+于4月12日达成每日减产970万桶的历史性协议。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D008（美国介入协调） 直接导致 D009（OPEC+达成史上最大减产协议）",
+        "后果：每日减产970万桶，价格战告一段落"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D009（减产协议） 导致 D008（美国介入）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D008",
+        "D009"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_121_Q07",
+    "pack_id": "121",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2020-04-02（D001 谈判破裂；D002 沙特发动价格战；D003 油价暴跌；D004 俄罗斯增产；D005 需求暴跌；D006 页岩油重创；D007 全球连锁反应；D008 美国介入协调），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D009（OPEC+达成史上最大减产协议）、D010（油价回升与能源格局重塑）；其中最关键的是减产协议——每日减产970万桶，价格战告一段落，油价逐步回升。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D009:OPEC+达成史上最大减产协议"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D010（油价回升与能源格局重塑）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2020-04-02",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "predicted": [
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

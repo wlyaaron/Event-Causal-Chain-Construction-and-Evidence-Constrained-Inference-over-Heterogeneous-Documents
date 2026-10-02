@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "industrial_production_009_Q01",
+    "pack_id": "09",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道D006（企业处罚）阶段前进展（D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q02",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化事故发生对区域经济未来五年的总体影响？（请结合材料作答）"
+  },
+  {
+    "sample_id": "industrial_production_009_Q03",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（安全短板）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q04",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "D001（事故发生）存在两处相互矛盾的来源记载且尚未核实，能否据此下唯一结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q05",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（事故发生）先于D004（调查报告）发生，可以据此断定D001（事故发生）是D004（调查报告）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q06",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请依据材料说明D002（抢险救援）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q07",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（专项整治）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q08",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于国务院安委会的事故发生事件，不同来源给出的关键数据不一致（官方2023、另一来源2428）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "industrial_production_009_Q09",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "industrial_production_009_Q10",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，国务院安委会在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

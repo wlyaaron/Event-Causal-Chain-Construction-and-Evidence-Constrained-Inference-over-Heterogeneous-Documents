@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_02_Q01",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定趋势展望是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "technology_governance_02_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D001（技术突破）早于D002（行业热议），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "technology_governance_02_Q03",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D001（技术突破）这一原因，D002（行业热议）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "technology_governance_02_Q04",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "欧盟相关的D004（伦理讨论）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "technology_governance_02_Q05",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（标准制定）阶段前进展（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "technology_governance_02_Q06",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D009（国际合作）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "technology_governance_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D008（场景落地），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

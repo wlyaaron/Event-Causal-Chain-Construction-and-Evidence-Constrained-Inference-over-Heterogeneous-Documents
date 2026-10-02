@@ -1,0 +1,74 @@
+[
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "宗旨确立",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D003",
+    "causal_type": "机制形成",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D005",
+    "causal_type": "目标推动",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D005",
+    "causal_type": "实践推动",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D006",
+    "causal_type": "功能延伸",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D006",
+    "causal_type": "对话需求",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D007",
+    "causal_type": "历史发展",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D007",
+    "result_event_id": "D008",
+    "causal_type": "经验总结",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D009",
+    "result_event_id": "D008",
+    "causal_type": "影响成就",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D008",
+    "result_event_id": "D010",
+    "causal_type": "展望未来",
+    "confidence_level": "probable"
+  },
+  {
+    "cause_event_id": "D007",
+    "result_event_id": "D010",
+    "causal_type": "发展延续",
+    "confidence_level": "probable"
+  }
+]

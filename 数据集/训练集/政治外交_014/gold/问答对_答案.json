@@ -1,0 +1,505 @@
+[
+  {
+    "sample_id": "diplomacy_014_Q01",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，请概述D009（专家解读）的主体、地点与主要影响。",
+    "answers": "据材料，D009（专家解读）的主体为中国与东盟，发生地为视频方式；2021-11-22发生在视频方式的中国东盟建立对话关系30周年。其影响：建立全面战略伙伴关系。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：中国与东盟",
+        "地点：视频方式",
+        "基本事实：2021-11-22发生在视频方式的中国东盟建立对话关系30周年"
+      ],
+      "optional_facts": [
+        "影响：建立全面战略伙伴关系"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D009"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_014_Q02",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了中国与东盟负责人的个人从业年限？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_014_Q03",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（专家解读）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）。起点为外交会晤，终点为专家解读；建立全面战略伙伴关系。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D009（专家解读） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D009（专家解读）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "可包含关键环节 D008（共识落实）",
+        "终点影响：建立全面战略伙伴关系"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实",
+        "专家解读"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_014_Q04",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D004（双边会谈）在时间/进程上早于D006（政策发布）。能否据此断定D004（双边会谈）导致了D006（政策发布）？请给出判断与证据。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D004→D006（直接因果），而非单纯时间顺序。证据：2021-11-22的中国东盟建立对话关系30周年为地区合作带来积极信号。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（双边会谈） 与 D006（政策发布） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D006"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D006（政策发布） 导致 D004（双边会谈）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D006",
+      "temporal_order": "D004先于D006",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_014_Q05",
+    "pack_id": "014",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（外交会晤）未曾出现，D002（官方声明）的发生是否还能成立？请给出推断依据。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；建立全面战略伙伴关系 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_014_Q06",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D002（官方声明）在时间/进程上早于D003（峰会成果）。能否据此断定D002（官方声明）导致了D003（峰会成果）？请给出判断与证据。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D002→D003（直接因果）。证据：经过密集磋商，中国东盟建立对话关系30周年在视频方式达成多项重要共识。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（官方声明） 与 D003（峰会成果） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D003"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D003（峰会成果） 导致 D002（官方声明）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D003",
+      "temporal_order": "D002先于D003",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_014_Q07",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（共识落实），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得因果路径：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）。外交会晤触发链条，最终形成共识落实；建立全面战略伙伴关系。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D008（共识落实） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D008（共识落实）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "终点影响：建立全面战略伙伴关系"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_014_Q08",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于中国与东盟的外交会晤事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_014_Q09",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区中国与东盟的行业交流会，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_014_Q10",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中国与东盟在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

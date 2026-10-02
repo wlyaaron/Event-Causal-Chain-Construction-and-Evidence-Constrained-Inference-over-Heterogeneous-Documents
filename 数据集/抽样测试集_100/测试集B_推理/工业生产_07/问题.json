@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "industrial_production_007_Q01",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D006（企业处罚）没有发生（或被及时干预阻断），D008（专项整治）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "industrial_production_007_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（事故发生）早于D004（调查报告），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "industrial_production_007_Q03",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于法规完善事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "industrial_production_007_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，从多个环节出发，梳理导致D009（安全短板）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "industrial_production_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（安全短板）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "industrial_production_007_Q06",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于D006（企业处罚）阶段（D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "industrial_production_007_Q07",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请概述D001（事故发生）的主体、地点与主要影响。"
+  }
+]

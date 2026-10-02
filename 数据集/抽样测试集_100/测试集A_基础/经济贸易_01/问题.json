@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，围绕最终结果D009（趋势展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_001_Q02",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "请判断：材料是否给出了D001（政策落地）中欧盟各国相关负责人的个人从业年限？请依据材料回答。"
+  },
+  {
+    "sample_id": "economy_trade_001_Q03",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（政策落地）被阻断，D002（市场反应）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "economy_trade_001_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，哪一事件是D008（成效评估）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "economy_trade_001_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（成效评估）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "economy_trade_001_Q06",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（政策落地）先于D004（专家分析）发生，可以据此断定D001（政策落地）是D004（专家分析）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "economy_trade_001_Q07",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。"
+  }
+]

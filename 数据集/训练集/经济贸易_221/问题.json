@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_221_Q01",
+    "pack_id": "221",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "增长极理论的核心思想是什么？它是由谁提出的？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q02",
+    "pack_id": "221",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "什么是极化效应和扩散效应？它们在区域发展中分别起什么作用？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q03",
+    "pack_id": "221",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "增长极理论提出后经历了怎样的发展和完善过程？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q04",
+    "pack_id": "221",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "增长极理论在世界各国的政策实践中有哪些经验和教训？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q05",
+    "pack_id": "221",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "中国是如何应用增长极理论的？形成了怎样的增长极体系？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q06",
+    "pack_id": "221",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在数字经济和高质量发展的新时代，增长极理论有哪些新的发展方向？"
+  },
+  {
+    "sample_id": "economy_trade_221_Q07",
+    "pack_id": "221",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "为什么增长极理论提出半个多世纪后依然具有生命力？未来发展前景如何？"
+  }
+]

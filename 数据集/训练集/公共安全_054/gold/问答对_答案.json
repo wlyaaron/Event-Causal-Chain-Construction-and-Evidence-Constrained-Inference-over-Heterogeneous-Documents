@@ -1,0 +1,372 @@
+[
+  {
+    "sample_id": "public_safety_054_Q01",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料中关于D007（灾后恢复重建）记载了哪些关键事实？",
+    "answers": "D007（灾后恢复重建）：郑州市、河南省各级政府在郑州市及受灾地区，。影响：城市生产生活秩序逐步恢复。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：郑州市、河南省各级政府",
+        "地点：郑州市及受灾地区",
+        "基本事实："
+      ],
+      "optional_facts": [
+        "影响：城市生产生活秩序逐步恢复"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D007"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_054_Q02",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，郑州市周边居民的确切疏散人数是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_054_Q03",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D010（责任追究处理）的完整因果路径，并标明证据顺序。",
+    "answers": "该结果由一条有向因果链推动：D001（自然灾害发生） → D002（重大险情发生） → D006（伤亡损失通报） → D008（国务院成立调查组） → D009（调查报告公布） → D010（责任追究处理）。起点为自然灾害发生，终点为责任追究处理；严肃追责问责，形成有力震慑，推动各地压实防灾减灾救灾责任。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害发生） 到终点 D010（责任追究处理） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害发生）",
+        "终点为 D010（责任追究处理）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害发生） → D002（重大险情发生） → D006（伤亡损失通报） → D008（国务院成立调查组） → D009（调查报告公布） → D010（责任追究处理）",
+        "可包含关键环节 D002（重大险情发生）",
+        "可包含关键环节 D006（伤亡损失通报）",
+        "可包含关键环节 D008（国务院成立调查组）",
+        "可包含关键环节 D009（调查报告公布）",
+        "终点影响：严肃追责问责，形成有力震慑，推动各地压实防灾减灾救灾责任"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D010"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "自然灾害发生",
+        "重大险情发生",
+        "伤亡损失通报",
+        "国务院成立调查组",
+        "调查报告公布",
+        "责任追究处理"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_054_Q04",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "D001（自然灾害发生）存在两处相互矛盾的来源记载且尚未核实，能否据此下唯一结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_054_Q05",
+    "pack_id": "054",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握2021-07-21及之前的信息（D005 重点救援处置；D007 灾后恢复重建；D001 自然灾害发生；D002 重大险情发生；D004 重点救援处置；D003 应急救援响应），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "基于因果走势，后续将出现：D006（伤亡损失通报）、D008（国务院成立调查组）、D009（调查报告公布）；其中最关键的是伤亡损失通报——公布重大人员伤亡数字。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:伤亡损失通报"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（国务院成立调查组）, D009（调查报告公布）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D007",
+        "D001",
+        "D002",
+        "D004",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-07-21",
+      "visible_events": [
+        "D005",
+        "D007",
+        "D001",
+        "D002",
+        "D004",
+        "D003"
+      ],
+      "hidden_events": [
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D006:伤亡损失通报"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_054_Q06",
+    "pack_id": "054",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D006（伤亡损失通报）这一原因，D008（国务院成立调查组）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "判断：若移除D006，D008很可能不会发生或将显著改变。依据：D006是D008的直接原因（直接因果），移除后受影响的因果边包括 [['D006', 'D008'], ['D008', 'D009'], ['D009', 'D010']]。相应地，首次针对自然灾害成立国务院调查组 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ],
+      [
+        "D006",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D009",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D006是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_054_Q07",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D004（重点救援处置）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "按证据顺序，成因链为 D001（自然灾害发生） → D002（重大险情发生） → D004（重点救援处置）。自自然灾害发生出发逐环传导至重点救援处置；大部分乘客成功获救。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害发生） 到终点 D004（重点救援处置） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害发生）",
+        "终点为 D004（重点救援处置）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害发生） → D002（重大险情发生） → D004（重点救援处置）",
+        "可包含关键环节 D002（重大险情发生）",
+        "终点影响：大部分乘客成功获救"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004"
+      ],
+      "stages": [
+        "自然灾害发生",
+        "重大险情发生",
+        "重点救援处置"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_054_Q08",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于河南省郑州市的自然灾害发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_054_Q09",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中其他区域某单位的行业交流会，是否与主线事件自然灾害发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_054_Q10",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，河南省郑州市在该自然灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

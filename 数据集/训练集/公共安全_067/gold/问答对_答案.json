@@ -1,0 +1,373 @@
+[
+  {
+    "sample_id": "public_safety_067_Q01",
+    "pack_id": "067",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（安全事故发生）被阻断，D002（应急救援处置）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D003', 'D005'], ['D005', 'D007']]；搜救出15名被困人员 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D003",
+          "D005"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_067_Q02",
+    "pack_id": "067",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了公安机关、检察机关齐齐哈尔市第三十四中学体育馆负责人的个人从业年限？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_067_Q03",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D007（事故调查报告公布）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事故发生） → D006（国务院挂牌督办） → D007（事故调查报告公布）。起点为安全事故发生，终点为事故调查报告公布；严肃追责问责，推动全国校园建筑安全和施工安全专项整治。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事故发生） 到终点 D007（事故调查报告公布） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事故发生）",
+        "终点为 D007（事故调查报告公布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事故发生） → D006（国务院挂牌督办） → D007（事故调查报告公布）",
+        "可包含关键环节 D006（国务院挂牌督办）",
+        "终点影响：严肃追责问责，推动全国校园建筑安全和施工安全专项整治"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "安全事故发生",
+        "国务院挂牌督办",
+        "事故调查报告公布"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_067_Q04",
+    "pack_id": "067",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D004（善后处置工作）阶段前进展（D001 安全事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 善后处置工作）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "预测后续进展为：D005（责任人立案侦查）、D006（国务院挂牌督办）、D007（事故调查报告公布）。核心节点是责任人立案侦查：控制公安机关、检察机关责任人。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:责任人立案侦查"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（国务院挂牌督办）, D007（事故调查报告公布）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D004（善后处置工作）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "hidden_events": [
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "ground_truth": "D005:责任人立案侦查"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_067_Q05",
+    "pack_id": "067",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2023-07-24（D005 责任人立案侦查；D001 安全事故发生；D002 应急救援处置；D003 伤亡情况通报），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "后续实际发生：D004（善后处置工作）、D006（国务院挂牌督办）、D007（事故调查报告公布）。其中关键进展为善后处置工作：安抚遇难者家属情绪。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D004:善后处置工作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（国务院挂牌督办）, D007（事故调查报告公布）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-07-24",
+      "visible_events": [
+        "D005",
+        "D001",
+        "D002",
+        "D003"
+      ],
+      "hidden_events": [
+        "D004",
+        "D006",
+        "D007"
+      ],
+      "ground_truth": "D004:善后处置工作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_067_Q06",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料中关于D003（伤亡情况通报）记载了哪些关键事实？",
+    "answers": "D003（伤亡情况通报）发生于齐齐哈尔市，涉及主体齐齐哈尔市人民政府。。影响：及时向社会公开事故信息。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：齐齐哈尔市人民政府",
+        "地点：齐齐哈尔市",
+        "基本事实："
+      ],
+      "optional_facts": [
+        "影响：及时向社会公开事故信息"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D003"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_067_Q07",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D004（善后处置工作）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（善后处置工作）。起点为安全事故发生，终点为善后处置工作；安抚遇难者家属情绪。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事故发生） 到终点 D004（善后处置工作） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事故发生）",
+        "终点为 D004（善后处置工作）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（善后处置工作）",
+        "可包含关键环节 D002（应急救援处置）",
+        "可包含关键环节 D003（伤亡情况通报）",
+        "终点影响：安抚遇难者家属情绪"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "安全事故发生",
+        "应急救援处置",
+        "伤亡情况通报",
+        "善后处置工作"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  }
+]

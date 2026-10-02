@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_226_Q01",
+    "pack_id": "226",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关负责人和专家如何解读这一举措？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q02",
+    "pack_id": "226",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在优化服务方面做了哪些工作、市场反响如何？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q03",
+    "pack_id": "226",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "举措取得了哪些成效？相关数据如何？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q04",
+    "pack_id": "226",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "一线调研反映出举措带来了哪些变化？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q05",
+    "pack_id": "226",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在区域协作方面开展了哪些工作？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q06",
+    "pack_id": "226",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措对稳定预期、提振信心将发挥怎样的作用？"
+  },
+  {
+    "sample_id": "economy_trade_226_Q07",
+    "pack_id": "226",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措将如何影响相关领域的未来发展？"
+  }
+]

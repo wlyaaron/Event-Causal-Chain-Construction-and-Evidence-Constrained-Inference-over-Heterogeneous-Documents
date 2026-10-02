@@ -1,0 +1,322 @@
+[
+  {
+    "sample_id": "public_safety_209_Q01",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料中关于D001（安全事件发生）记载了哪些关键事实？",
+    "answers": "D001（安全事件发生）：滴滴出行、国家互联网信息办公室在全国范围，。影响：成为《网络安全审查办法》实施后首个重大案例。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：滴滴出行、国家互联网信息办公室",
+        "地点：全国范围",
+        "基本事实："
+      ],
+      "optional_facts": [
+        "影响：成为《网络安全审查办法》实施后首个重大案例"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D001"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_209_Q02",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（安全事件发生）到D005（案件解读讨论）的完整因果传导过程，并按序列出证据。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事件发生） → D002（执法调查启动） → D003（违法事实查明） → D004（行政处罚决定） → D005（案件解读讨论）。起点为安全事件发生，终点为案件解读讨论；推动全社会增强数据安全和个人信息保护意识。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件发生） 到终点 D005（案件解读讨论） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件发生）",
+        "终点为 D005（案件解读讨论）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件发生） → D002（执法调查启动） → D003（违法事实查明） → D004（行政处罚决定） → D005（案件解读讨论）",
+        "可包含关键环节 D002（执法调查启动）",
+        "可包含关键环节 D003（违法事实查明）",
+        "可包含关键环节 D004（行政处罚决定）",
+        "终点影响：推动全社会增强数据安全和个人信息保护意识"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D008",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "stages": [
+        "安全事件发生",
+        "执法调查启动",
+        "违法事实查明",
+        "行政处罚决定",
+        "案件解读讨论"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_209_Q03",
+    "pack_id": "209",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对安全事件发生的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_209_Q04",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D008（制度体系完善）在进程上早于D002（执法调查启动）。能否据此认为D008（制度体系完善）导致了D002（执法调查启动）？请给出判断与证据。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D008→D002 的因果边；其直接原因是D001（安全事件发生）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D008（制度体系完善） 早于 D002（执法调查启动） 只是时间先后",
+        "材料中不存在 D008→D002 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D008（制度体系完善） 导致 D002（执法调查启动）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D008",
+      "event_b": "D002",
+      "temporal_order": "D008先于D002",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_209_Q05",
+    "pack_id": "209",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于2022-07（D008 制度体系完善；D002 执法调查启动；D001 安全事件发生；D003 违法事实查明；D005 案件解读讨论），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D006（企业整改回应）、D007（社会广泛关注）、D004（行政处罚决定）。核心节点是企业整改回应：推动企业落实数据安全主体责任。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:企业整改回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（社会广泛关注）, D004（行政处罚决定）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D002",
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-07",
+      "visible_events": [
+        "D008",
+        "D002",
+        "D001",
+        "D003",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D004"
+      ],
+      "ground_truth": "D006:企业整改回应"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_209_Q06",
+    "pack_id": "209",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D002（执法调查启动）未曾出现，D003（违法事实查明）的发生是否还能成立？请给出推断依据。",
+    "answers": "判断：若移除D002，D003很可能不会发生或将显著改变。依据：D002是D003的直接原因（直接因果），移除后受影响的因果边包括 [['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D004', 'D007']]。相应地，全面查清违法事实 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D007"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D004",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_209_Q07",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，国家互联网信息办公室相关的D004（行政处罚决定）发生后，紧接着出现的直接结果是什么？",
+    "answers": "材料表明，D004（行政处罚决定）的直接结果是D006（企业整改回应）；推动企业落实数据安全主体责任。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（行政处罚决定） 直接导致 D006（企业整改回应）",
+        "后果：推动企业落实数据安全主体责任"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（企业整改回应） 导致 D004（行政处罚决定）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

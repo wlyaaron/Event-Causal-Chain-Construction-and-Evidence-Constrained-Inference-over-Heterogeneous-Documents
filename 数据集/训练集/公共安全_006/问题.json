@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_006_Q01",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（隐患排查），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_006_Q02",
+    "pack_id": "006",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于梅大高速茶阳路段此次并未发生任何塌方、也无车辆陷落，请说明为何官方还要通报52人遇难？"
+  },
+  {
+    "sample_id": "public_safety_006_Q03",
+    "pack_id": "006",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（持续降雨）被阻断，D002（路面塌方）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_006_Q04",
+    "pack_id": "006",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（全力搜救）阶段，材料仅显示：D001 持续降雨；D002 路面塌方；D003 车辆陷落；D004 引发起火；D005 启动应急；D006 全力搜救。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_006_Q05",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D003（车辆陷落）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "public_safety_006_Q06",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D004（引发起火）早于D006（全力搜救），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_006_Q07",
+    "pack_id": "006",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（领导指示）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_006_Q08",
+    "pack_id": "006",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于梅大高速塌方灾害的遇难人数，官方通报与另一网传来源不一致（官方称52人遇难，另一来源称遇难人数已过百）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_006_Q09",
+    "pack_id": "006",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（路面塌方）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_006_Q10",
+    "pack_id": "006",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，此次梅大高速塌方灾害造成的直接经济损失具体是多少万元？"
+  }
+]

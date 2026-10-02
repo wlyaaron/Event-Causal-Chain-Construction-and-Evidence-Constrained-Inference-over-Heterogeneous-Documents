@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_093_Q01",
+    "pack_id": "093",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D006（中小企业影响）阶段前进展（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q02",
+    "pack_id": "093",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了战略意义事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q03",
+    "pack_id": "093",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（趋势展望）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q04",
+    "pack_id": "093",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（中小企业影响）阶段（当前已知：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q05",
+    "pack_id": "093",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（政策落地）被阻断，D002（市场反应）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q06",
+    "pack_id": "093",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（政策落地）先于D004（专家分析）发生，可以据此断定D001（政策落地）是D004（专家分析）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "economy_trade_093_Q07",
+    "pack_id": "093",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D008（成效评估）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  }
+]

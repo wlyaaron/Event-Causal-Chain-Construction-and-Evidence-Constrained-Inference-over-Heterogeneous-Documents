@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_212_Q01",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在优化服务方面做了哪些工作、市场反响如何？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q02",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "举措取得了哪些成效？相关数据如何？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q03",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "一线调研反映出举措带来了哪些变化？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q04",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在区域协作方面开展了哪些工作？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q05",
+    "pack_id": "212",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2015年贵州知识产权保护中心揭牌运行的主要内容和目标是什么？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q06",
+    "pack_id": "212",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措将如何影响相关领域的未来发展？"
+  },
+  {
+    "sample_id": "economy_trade_212_Q07",
+    "pack_id": "212",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "着眼长远，深化相关改革开放还需在哪些方面持续用力？"
+  }
+]

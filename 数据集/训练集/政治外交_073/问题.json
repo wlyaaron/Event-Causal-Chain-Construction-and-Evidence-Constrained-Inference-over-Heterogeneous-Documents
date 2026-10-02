@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_073_Q01",
+    "pack_id": "073",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2016年英国脱欧公投的投票结果是什么？脱欧派和留欧派分别获得了多少百分比的选票？投票率是多少？"
+  },
+  {
+    "sample_id": "diplomacy_073_Q02",
+    "pack_id": "073",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么北爱尔兰边境问题成为英国脱欧谈判中最棘手的难题？请从历史、地理和政治三个角度分析其因果链条。"
+  },
+  {
+    "sample_id": "diplomacy_073_Q03",
+    "pack_id": "073",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：卡梅伦辞职、触发第50条、梅的协议被议会否决、约翰逊成为首相、英国正式脱欧、英欧达成圣诞节贸易协议。"
+  },
+  {
+    "sample_id": "diplomacy_073_Q04",
+    "pack_id": "073",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较特蕾莎·梅和鲍里斯·约翰逊在脱欧策略、与欧盟谈判方式和处理议会关系方面的异同。"
+  },
+  {
+    "sample_id": "diplomacy_073_Q05",
+    "pack_id": "073",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "英国脱欧如何通过移民政策变化、劳动力短缺、供应链中断等多个环节，最终影响到英国的医疗、农业和物流等具体行业？"
+  },
+  {
+    "sample_id": "diplomacy_073_Q06",
+    "pack_id": "073",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括英国脱欧对英国在政治、经济、社会和外交四个方面产生的主要长期影响。"
+  },
+  {
+    "sample_id": "diplomacy_073_Q07",
+    "pack_id": "073",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2016年公投结果是留欧派获胜，英国和欧洲的政治经济格局可能会有哪些不同？与实际情况相比，哪些问题仍然可能存在？"
+  }
+]

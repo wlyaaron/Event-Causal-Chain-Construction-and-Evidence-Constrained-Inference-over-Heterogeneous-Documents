@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_192_Q01",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D008（共识落实）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "diplomacy_192_Q02",
+    "pack_id": "192",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（政策发布）阶段前进展（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "diplomacy_192_Q03",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_192_Q04",
+    "pack_id": "192",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定官方声明是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "diplomacy_192_Q05",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，已知D006（政策发布）先于D008（共识落实）出现，可否仅凭先后顺序认定二者的因果关系？"
+  },
+  {
+    "sample_id": "diplomacy_192_Q06",
+    "pack_id": "192",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D001（外交会晤）所代表的条件被移除，后续的D002（官方声明）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_192_Q07",
+    "pack_id": "192",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（政策发布）阶段前进展（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  }
+]

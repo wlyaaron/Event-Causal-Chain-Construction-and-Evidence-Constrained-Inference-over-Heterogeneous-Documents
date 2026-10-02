@@ -1,0 +1,145 @@
+[
+  {
+    "sample_id": "diplomacy_222_Q01",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2017年中日韩领导人会议举行的主要内容和中方立场主张是什么？",
+    "answers": "2017年中日韩领导人会议举行。中方系统阐述有关立场主张，倡导深化三国务实合作、维护地区稳定，得到与会各方积极响应。各方围绕加强团结协作、增进政治互信、深化务实合作深入交换意见，一致同意携手把美好愿景转化为务实行动，共同维护世界和平稳定。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_222_Q02",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "此次活动达成了哪些成果、签署了哪些文件？",
+    "answers": "各方经过深入协商，签署或达成一系列合作文件和协议，涵盖经贸投资、互联互通、绿色发展、数字经济、人文交流等领域。成果文件明确了下一阶段合作的重点方向、具体举措和保障机制，为各方深化合作提供了行动指南。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_222_Q03",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "各方在经贸合作方面达成了哪些安排？",
+    "answers": "各方进一步深化经贸投资合作，一批合作项目和商业协议相继达成。各方同意扩大双向贸易和投资规模，推动产业链供应链深度融合，加强在基础设施、能源资源、现代农业、高新技术等领域合作，实现优势互补、互利共赢。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_222_Q04",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中方同各方的沟通就重大问题凝聚了哪些共识？",
+    "answers": "中方同各方举行会谈会晤，就双边关系及重大国际和地区问题深入沟通，凝聚广泛共识：一致同意增进政治互信、加强战略对接、深化务实合作、妥善处理分歧，共同主张坚持多边主义、践行合作共赢、维护国际公平正义。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_222_Q05",
+    "pack_id": "222",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在人文交流方面各方达成了哪些共识？",
+    "answers": "各方高度重视人文交流，一致同意加强教育、文化、旅游、体育、青年、媒体、智库等领域交流合作，夯实关系发展的民意基础。各方认为国之交在于民相亲、民相亲在于心相通，将推动文明交流互鉴、弘扬全人类共同价值。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_222_Q06",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动对推动构建人类命运共同体将产生怎样的深远影响？",
+    "answers": "预计此次活动将进一步推动构建人类命运共同体理念深入人心。预计将凝聚坚持真正多边主义、弘扬全人类共同价值的广泛共识；预计将推动各国摒弃零和博弈、树立命运与共理念；预计将彰显中国负责任大国担当，为完善全球治理、应对全球性挑战贡献更多中国智慧和力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D010",
+        "D009"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_222_Q07",
+    "pack_id": "222",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "展望未来，各方深化合作还需在哪些方面共同努力？",
+    "answers": "预计未来各方将在多个方面共同努力深化合作。预计将加强战略沟通和政策协调，推动发展战略对接和规则标准衔接；预计将拓展数字经济、绿色发展等新兴领域合作，培育新增长点；预计将妥善管控分歧、增进政治互信，为合作行稳致远营造良好环境。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

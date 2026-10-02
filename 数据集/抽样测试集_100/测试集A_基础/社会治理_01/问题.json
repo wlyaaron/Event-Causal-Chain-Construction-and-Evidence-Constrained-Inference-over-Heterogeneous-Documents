@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（社会事件）到D009（社会共治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "social_governance_001_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D008（舆论关注）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "social_governance_001_Q03",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D003（调查进展）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "social_governance_001_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（社会事件）在D002（官方回应）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "social_governance_001_Q05",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：反事实假设：如果D006（法治建设）没有发生（或被及时干预阻断），D008（舆论关注）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "social_governance_001_Q06",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（法治建设）阶段及之前的信息（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "social_governance_001_Q07",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化治理创新对区域经济未来五年的总体影响？"
+  }
+]

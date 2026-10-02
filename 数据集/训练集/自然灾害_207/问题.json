@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_207_Q01",
+    "pack_id": "207",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "1999年土耳其大地震的基本情况是怎样的？造成了多大的人员伤亡和财产损失？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q02",
+    "pack_id": "207",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "土耳其政府和社会是如何开展抗震救援的？国际社会提供了哪些援助？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q03",
+    "pack_id": "207",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "地震救援工作面临哪些主要困难？为什么说黄金救援时间非常紧迫？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q04",
+    "pack_id": "207",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "地震暴露出土耳其在建筑质量方面存在哪些严重问题？政府采取了什么措施？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q05",
+    "pack_id": "207",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "土耳其是如何开展灾民安置和卫生防疫工作的？取得了什么效果？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q06",
+    "pack_id": "207",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "1999年土耳其大地震对该国灾后重建和长远发展产生了哪些深远影响？"
+  },
+  {
+    "sample_id": "natural_disaster_207_Q07",
+    "pack_id": "207",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "从1999年土耳其大地震中可以吸取哪些防震减灾的经验教训？对其他地震多发国家有什么启示？"
+  }
+]

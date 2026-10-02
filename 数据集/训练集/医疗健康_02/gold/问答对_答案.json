@@ -1,0 +1,414 @@
+[
+  {
+    "sample_id": "healthcare_02_Q01",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对专家科普的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "healthcare_02_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D004（专家科普）之后直接发生了什么？",
+    "answers": "直接因果链为 D004（专家科普） → D006（防控政策）。后果：新冠疫苗接种防控进入常态化阶段，全球多地出台相关管理新规。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（专家科普） 直接导致 D006（防控政策）",
+        "后果：新冠疫苗接种防控进入常态化阶段，全球多地出台相关管理新规"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（防控政策） 导致 D004（专家科普）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "healthcare_02_Q03",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（防控政策）阶段（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "后续实际发生：D007（体系建设）、D008（医保政策）、D009（长期影响）。其中关键进展为体系建设：新冠疫苗接种对公共卫生体系提出严峻考验。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:体系建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（医保政策）, D009（长期影响）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（防控政策）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:体系建设"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "healthcare_02_Q04",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，如果移除D004（专家科普）这一原因，D006（防控政策）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "移除D004后，D006及其连锁后果很可能不成立。D004系D006的直接原因（直接因果），受影响边为 [['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；全球超130亿剂次接种 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D006及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_02_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（疫情通报）早于D004（专家科普），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（疫情通报）早于D004（专家科普）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（临床救治）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（疫情通报） 早于 D004（专家科普） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（疫情通报） 导致 D004（专家科普）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "healthcare_02_Q06",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（疫情通报）到D009（长期影响）的完整因果传导过程，并按序列出证据。",
+    "answers": "完整因果链：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）。其中，疫情通报为起点，经逐级传导，最终导致长期影响；全球超130亿剂次接种。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（疫情通报） 到终点 D009（长期影响） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（疫情通报）",
+        "终点为 D009（长期影响）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策） → D009（长期影响）",
+        "可包含关键环节 D002（官方发布）",
+        "可包含关键环节 D003（临床救治）",
+        "可包含关键环节 D004（专家科普）",
+        "可包含关键环节 D006（防控政策）",
+        "可包含关键环节 D008（医保政策）",
+        "终点影响：全球超130亿剂次接种"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "疫情通报",
+        "官方发布",
+        "临床救治",
+        "专家科普",
+        "防控政策",
+        "医保政策",
+        "长期影响"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "healthcare_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D008（医保政策），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "完整因果链：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策）。其中，疫情通报为起点，经逐级传导，最终导致医保政策；全球超130亿剂次接种。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（疫情通报） 到终点 D008（医保政策） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（疫情通报）",
+        "终点为 D008（医保政策）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（疫情通报） → D002（官方发布） → D003（临床救治） → D004（专家科普） → D006（防控政策） → D008（医保政策）",
+        "可包含关键环节 D002（官方发布）",
+        "可包含关键环节 D003（临床救治）",
+        "可包含关键环节 D004（专家科普）",
+        "可包含关键环节 D006（防控政策）",
+        "终点影响：全球超130亿剂次接种"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "疫情通报",
+        "官方发布",
+        "临床救治",
+        "专家科普",
+        "防控政策",
+        "医保政策"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

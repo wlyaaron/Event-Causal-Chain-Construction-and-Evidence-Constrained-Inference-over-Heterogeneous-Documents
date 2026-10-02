@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_01_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "深水地平线钻井平台是在哪一天爆炸的？事故造成多少人死亡？平台沉没后海底油井每天泄漏多少桶原油？"
+  },
+  {
+    "sample_id": "energy_environment_01_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "BP公司的控油罩法为什么会失败？天然气水合物的形成与深海环境有什么关系？"
+  },
+  {
+    "sample_id": "energy_environment_01_Q03",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：平台爆炸、控油罩法失败、灭顶法失败、封井成功、奥巴马发表全国讲话、最终和解协议达成。"
+  },
+  {
+    "sample_id": "energy_environment_01_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "控油罩法、立管插入法和切管盖帽法三种堵漏方案在原理、适用条件和效果上有什么不同？"
+  },
+  {
+    "sample_id": "energy_environment_01_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从钻井平台爆炸到最终推动深海钻探安全改革，中间经历了哪些关键环节？请结合技术失败、政府介入、生态评估和法律追责等层面说明。"
+  },
+  {
+    "sample_id": "energy_environment_01_Q06",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括墨西哥湾漏油事件对海洋生态系统造成的主要长期影响，包括深海、湿地和海洋生物等方面。"
+  },
+  {
+    "sample_id": "energy_environment_01_Q07",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设深水地平线平台配备了更可靠的防喷器系统，且在爆炸发生时防喷器能够正常关闭，后续的漏油灾难是否还会发生？请分析可能的情景。"
+  }
+]

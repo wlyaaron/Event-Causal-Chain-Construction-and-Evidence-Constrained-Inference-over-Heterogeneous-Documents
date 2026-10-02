@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_061_Q01",
+    "pack_id": "061",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "9·11袭击中四架被劫持的航班分别撞击了哪些目标？共有多少人遇难？"
+  },
+  {
+    "sample_id": "diplomacy_061_Q02",
+    "pack_id": "061",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "9·11调查委员会为什么认为袭击是可以预防的？主要的情报失误体现在哪些方面？"
+  },
+  {
+    "sample_id": "diplomacy_061_Q03",
+    "pack_id": "061",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：塔利班政权垮台、爱国者法案通过、关塔那摩监狱设立、9·11调查委员会报告发布、海豹突击队击毙本拉登。"
+  },
+  {
+    "sample_id": "diplomacy_061_Q04",
+    "pack_id": "061",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "小布什政府和奥巴马政府在反恐政策（包括审讯手段、关塔那摩监狱、监控权力）上有什么不同？"
+  },
+  {
+    "sample_id": "diplomacy_061_Q05",
+    "pack_id": "061",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "9·11袭击如何从一次恐怖袭击事件逐步演变为持续二十年的全球反恐战争和地缘政治重塑？"
+  },
+  {
+    "sample_id": "diplomacy_061_Q06",
+    "pack_id": "061",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括9·11袭击对美国国内政策和国际地缘政治产生的主要影响。"
+  },
+  {
+    "sample_id": "diplomacy_061_Q07",
+    "pack_id": "061",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设9·11袭击前美国情报机构之间能够有效共享信息，袭击是否有可能被阻止？请分析关键节点。"
+  }
+]

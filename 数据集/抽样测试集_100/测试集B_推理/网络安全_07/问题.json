@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "cybersecurity_007_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（防范建议）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（用户维权）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D008（用户维权）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q04",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（标准升级）阶段（当前已知：D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（安全事件）先于D004（监管约谈）发生，可以据此断定D001（安全事件）是D004（监管约谈）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q06",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D001（安全事件）未曾出现，D002（技术分析）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "cybersecurity_007_Q07",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "当多方信源关于黑产溯源的核心数据存在分歧时，是否可以直接下结论？应当如何处理这种信息冲突？"
+  }
+]

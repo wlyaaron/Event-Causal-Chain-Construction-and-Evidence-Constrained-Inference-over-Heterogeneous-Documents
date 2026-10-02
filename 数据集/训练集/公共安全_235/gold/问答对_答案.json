@@ -1,0 +1,349 @@
+[
+  {
+    "sample_id": "public_safety_235_Q01",
+    "pack_id": "235",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（火灾事故发生）先于D003（伤亡情况通报）发生，可以据此断定D001（火灾事故发生）是D003（伤亡情况通报）的原因吗？请说明。",
+    "answers": "不能。D001（火灾事故发生）早于D003（伤亡情况通报）只是时间先后，材料中不存在 D001→D003 的因果关系；其直接原因是D002（应急救援处置）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（火灾事故发生） 早于 D003（伤亡情况通报） 只是时间先后",
+        "材料中不存在 D001→D003 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（火灾事故发生） 导致 D003（伤亡情况通报）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_235_Q02",
+    "pack_id": "235",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D007（事故原因调查）直接引发了哪一事件？请指出并说明依据。",
+    "answers": "直接因果链为 D007（事故原因调查） → D008（警示与行业整改）。后果：各地深刻汲取事故教训。",
+    "answer_facts": {
+      "required_facts": [
+        "D007（事故原因调查） 直接导致 D008（警示与行业整改）",
+        "后果：各地深刻汲取事故教训"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（警示与行业整改） 导致 D007（事故原因调查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D007",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_235_Q03",
+    "pack_id": "235",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（警示与行业整改）的完整因果路径，并标明证据顺序。",
+    "answers": "按证据顺序，成因链为 D007（事故原因调查） → D008（警示与行业整改）。自事故原因调查出发逐环传导至警示与行业整改；推动行业消防安全整治。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D007（事故原因调查） 到终点 D008（警示与行业整改） 的有向因果链（顺序不可颠倒）",
+        "起点为 D007（事故原因调查）",
+        "终点为 D008（警示与行业整改）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D007（事故原因调查） → D008（警示与行业整改）",
+        "终点影响：推动行业消防安全整治"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "事故原因调查",
+        "警示与行业整改"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_235_Q04",
+    "pack_id": "235",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定事故原因调查是否会导致整个行业长期停摆？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_235_Q05",
+    "pack_id": "235",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D001（火灾事故发生）未曾出现，D002（应急救援处置）的发生是否还能成立？请给出推断依据。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D003', 'D005'], ['D003', 'D006'], ['D003', 'D008'], ['D006', 'D007']]；开展灭火和人员搜救 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D003",
+          "D005"
+        ],
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D003",
+          "D008"
+        ],
+        [
+          "D006",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_235_Q06",
+    "pack_id": "235",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至2026-07-10，材料仅显示：D001 火灾事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 善后处置工作；D005 责任人控制。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "预测后续进展为：D006（挂牌督办）、D007（事故原因调查）、D008（警示与行业整改）。核心节点是挂牌督办：国务院安委会决定对该起重大火灾查处挂牌督办。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:挂牌督办"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（事故原因调查）, D008（警示与行业整改）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-07-10",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "ground_truth": "D006:挂牌督办"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_235_Q07",
+    "pack_id": "235",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：泉州市人民政府相关的D003（伤亡情况通报）发生后，紧接着出现的直接结果是什么？",
+    "answers": "D003（伤亡情况通报）直接导致了D004（善后处置工作）。依据：组建28个一户一专班。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（伤亡情况通报） 直接导致 D004（善后处置工作）",
+        "后果：组建28个一户一专班"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（善后处置工作） 导致 D003（伤亡情况通报）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

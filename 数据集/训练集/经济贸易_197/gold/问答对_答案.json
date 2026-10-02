@@ -1,0 +1,337 @@
+[
+  {
+    "sample_id": "economy_trade_197_Q01",
+    "pack_id": "197",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（经验总结借鉴），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（国际协议签署） → D002（政策承诺发布） → D003（经济冲击发生） → D004（资产泡沫形成） → D007（经济长期停滞） → D008（学术观点分歧） → D010（经验总结借鉴）。国际协议签署触发链条，最终形成经验总结借鉴；为中国等新兴经济体应对汇率压力、防范金融风险提供重要历史借鉴。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（国际协议签署） 到终点 D010（经验总结借鉴） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（国际协议签署）",
+        "终点为 D010（经验总结借鉴）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（国际协议签署） → D002（政策承诺发布） → D003（经济冲击发生） → D004（资产泡沫形成） → D007（经济长期停滞） → D008（学术观点分歧） → D010（经验总结借鉴）",
+        "可包含关键环节 D002（政策承诺发布）",
+        "终点影响：为中国等新兴经济体应对汇率压力、防范金融风险提供重要历史借鉴"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008",
+        "D010"
+      ],
+      "stages": [
+        "国际协议签署",
+        "政策承诺发布",
+        "经济冲击发生",
+        "资产泡沫形成",
+        "经济长期停滞",
+        "学术观点分歧",
+        "经验总结借鉴"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_197_Q02",
+    "pack_id": "197",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（国际协议签署）在D002（政策承诺发布）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：奠定汇率调整的政策基础，形成国际协调框架，但各国落实程度不一。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（国际协议签署） 与 D002（政策承诺发布） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（政策承诺发布） 导致 D001（国际协议签署）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_197_Q03",
+    "pack_id": "197",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（国际协议签署）这一原因，D002（政策承诺发布）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003']]；奠定汇率调整的政策基础，形成国际协调框架，但各国落实程度不一 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_197_Q04",
+    "pack_id": "197",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（学术观点分歧），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（国际协议签署） → D002（政策承诺发布） → D003（经济冲击发生） → D004（资产泡沫形成） → D007（经济长期停滞） → D008（学术观点分歧）。起点为国际协议签署，终点为学术观点分歧；深化对国际协调、汇率政策、泡沫经济的认识，为各国政策提供多元参考。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（国际协议签署） 到终点 D008（学术观点分歧） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（国际协议签署）",
+        "终点为 D008（学术观点分歧）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（国际协议签署） → D002（政策承诺发布） → D003（经济冲击发生） → D004（资产泡沫形成） → D007（经济长期停滞） → D008（学术观点分歧）",
+        "可包含关键环节 D002（政策承诺发布）",
+        "终点影响：深化对国际协调、汇率政策、泡沫经济的认识，为各国政策提供多元参考"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "国际协议签署",
+        "政策承诺发布",
+        "经济冲击发生",
+        "资产泡沫形成",
+        "经济长期停滞",
+        "学术观点分歧"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_197_Q05",
+    "pack_id": "197",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_197_Q06",
+    "pack_id": "197",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（国际协议签署）之后直接发生了什么？",
+    "answers": "D002（政策承诺发布）是D001（国际协议签署）的直接后果。证据：奠定汇率调整的政策基础，形成国际协调框架，但各国落实程度不一。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（国际协议签署） 直接导致 D002（政策承诺发布）",
+        "后果：奠定汇率调整的政策基础，形成国际协调框架，但各国落实程度不一"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（政策承诺发布） 导致 D001（国际协议签署）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_197_Q07",
+    "pack_id": "197",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于1985-1988（D001 国际协议签署；D002 政策承诺发布；D003 经济冲击发生；D004 资产泡沫形成；D005 贸易格局变化），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（全球格局重塑）、D007（经济长期停滞）、D008（学术观点分歧）、D009（后续协议调整）、D010（经验总结借鉴）；其中最关键的是全球格局重塑——推动国际货币体系多极化，加速东亚经济崛起，G7协调机制地位提升。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:全球格局重塑"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（经济长期停滞）、D008（学术观点分歧）、D009（后续协议调整）、D010（经验总结借鉴）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "1985-1988",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

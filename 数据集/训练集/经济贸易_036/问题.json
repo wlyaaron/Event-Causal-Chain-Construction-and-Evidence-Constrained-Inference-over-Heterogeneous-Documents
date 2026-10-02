@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_036_Q01",
+    "pack_id": "036",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2015年A股牛市的顶峰是哪一天？上证指数达到了多少点？融资余额在顶峰时达到了多少？"
+  },
+  {
+    "sample_id": "economy_trade_036_Q02",
+    "pack_id": "036",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2015年A股股灾是如何从监管层严查场外配资演变为千股跌停的流动性危机的？请分析其中的因果链条。"
+  },
+  {
+    "sample_id": "economy_trade_036_Q03",
+    "pack_id": "036",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：811汇改、上证指数达到5178点、国家队入场救市、公安部介入调查、徐翔被警方带走。"
+  },
+  {
+    "sample_id": "economy_trade_036_Q04",
+    "pack_id": "036",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2015年中国股灾和2000年美国互联网泡沫破裂在成因、跌幅、政府应对和长期影响方面的异同。"
+  },
+  {
+    "sample_id": "economy_trade_036_Q05",
+    "pack_id": "036",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2015年股灾如何从股市下跌逐步传导至金融体系稳定、实体经济信心、人民币汇率和全球市场，形成多维度的冲击链条？"
+  },
+  {
+    "sample_id": "economy_trade_036_Q06",
+    "pack_id": "036",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2015年股灾暴露了中国资本市场哪些制度性缺陷，以及股灾后推动了哪些重要改革。"
+  },
+  {
+    "sample_id": "economy_trade_036_Q07",
+    "pack_id": "036",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2015年监管层没有在6月严查场外配资，而是允许市场自然调整，A股的走势可能会有什么不同？股灾是否仍然会发生？请结合杠杆和估值因素分析。"
+  }
+]

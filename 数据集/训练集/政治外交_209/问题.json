@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_209_Q01",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际社会和专家如何评价此次活动？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q02",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "综合来看，此次活动有怎样的意义和亮点？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q03",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2019年上海合作组织安全合作会议召开的主要内容和中方立场主张是什么？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q04",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "此次活动达成了哪些成果、签署了哪些文件？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q05",
+    "pack_id": "209",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "各方在经贸合作方面达成了哪些安排？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q06",
+    "pack_id": "209",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "展望未来，各方深化合作还需在哪些方面共同努力？"
+  },
+  {
+    "sample_id": "diplomacy_209_Q07",
+    "pack_id": "209",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动将如何推动相关关系和务实合作的未来发展？"
+  }
+]

@@ -1,0 +1,436 @@
+[
+  {
+    "sample_id": "natural_disaster_026_Q01",
+    "pack_id": "026",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D007（媒体评论），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（自然灾害） → D002（领导指示） → D003（应急救援） → D004（灾情通报） → D005（群众安置） → D006（灾后重建） → D007（媒体评论）。自然灾害触发链条，最终形成媒体评论；凝聚社会共识，激励各族人民同心同德重建家园。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D007（媒体评论） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D007（媒体评论）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D002（领导指示） → D003（应急救援） → D004（灾情通报） → D005（群众安置） → D006（灾后重建） → D007（媒体评论）",
+        "可包含关键环节 D002（领导指示）",
+        "终点影响：凝聚社会共识，激励各族人民同心同德重建家园"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "自然灾害",
+        "领导指示",
+        "应急救援",
+        "灾情通报",
+        "群众安置",
+        "灾后重建",
+        "媒体评论"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q02",
+    "pack_id": "026",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（自然灾害）在D002（领导指示）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：抗震救灾工作迅速有力展开，各方救援力量紧急集结。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 与 D002（领导指示） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（领导指示） 导致 D001（自然灾害）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q03",
+    "pack_id": "026",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（自然灾害）这一原因，D002（领导指示）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D002', 'D005']]；抗震救灾工作迅速有力展开，各方救援力量紧急集结 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q04",
+    "pack_id": "026",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D006（灾后重建），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（自然灾害） → D002（领导指示） → D003（应急救援） → D004（灾情通报） → D005（群众安置） → D006（灾后重建）。起点为自然灾害，终点为灾后重建；灾后恢复重建全面展开，一个新玉树在雪域高原崛起。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D006（灾后重建） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D006（灾后重建）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D002（领导指示） → D003（应急救援） → D004（灾情通报） → D005（群众安置） → D006（灾后重建）",
+        "可包含关键环节 D002（领导指示）",
+        "终点影响：灾后恢复重建全面展开，一个新玉树在雪域高原崛起"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "stages": [
+        "自然灾害",
+        "领导指示",
+        "应急救援",
+        "灾情通报",
+        "群众安置",
+        "灾后重建"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q05",
+    "pack_id": "026",
+    "question_type": "conflicting",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本次玉树地震的遇难人数，不同来源的说法是否一致？应如何看待其中的矛盾？",
+    "answers": "不一致，存在出入：一份最终核定数据称2698人遇难，早期通报曾估计约2600人遇难（见D009）。两组数字来源与核定阶段不同，存在矛盾，应以抗震救灾指挥部最终核定的数字为准，不能简单采信早期估计。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出遇难人数存在不一致的两种说法（2698人 vs 约2600人）",
+        "指出应以指挥部最终核定为准，不能武断采信早期估计"
+      ],
+      "optional_facts": [
+        "矛盾来源：最终核定数据与早期通报估计不同",
+        "两组数字分别为2698人与约2600人"
+      ],
+      "forbidden_facts": [
+        "断言早期估计数字即为最终答案",
+        "编造材料中不存在的数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "numeric_inconsistency",
+      "sources": [
+        "最终核定：2698人遇难",
+        "早期通报：约2600人遇难"
+      ],
+      "resolution": "以指挥部最终核定为准"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q06",
+    "pack_id": "026",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+    "answers": "D002（领导指示）是D001（自然灾害）的直接后果。证据：抗震救灾工作迅速有力展开，各方救援力量紧急集结。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 直接导致 D002（领导指示）",
+        "后果：抗震救灾工作迅速有力展开，各方救援力量紧急集结"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（领导指示） 导致 D001（自然灾害）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q07",
+    "pack_id": "026",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2010-04-21（D001 自然灾害；D002 领导指示；D003 应急救援；D004 灾情通报），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（群众安置）、D006（灾后重建）、D007（媒体评论）；其中最关键的是群众安置——受灾群众得到妥善安置，灾区社会秩序稳定，基本生活有保障。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:群众安置"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（灾后重建）、D007（媒体评论）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2010-04-21",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q08",
+    "pack_id": "026",
+    "question_type": "distractor",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到邻近地区举办康巴文化艺术节，这与玉树灾区的群众安置、抗震救灾存在因果关系吗？请判断并说明。",
+    "answers": "没有因果关系。康巴文化艺术节（D011）只是邻近地区如期举办的一年一度民俗活动，与玉树灾区的群众安置、抗震救灾工作并无直接关联，属于语义相近但无关的干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判定康巴文化艺术节与群众安置/抗震救灾无因果关系",
+        "指出其为无关干扰信息，不应纳入因果推理"
+      ],
+      "optional_facts": [
+        "该活动只是邻近地区例行举办的文化艺术节"
+      ],
+      "forbidden_facts": [
+        "将康巴文化艺术节认定为群众安置的原因或结果",
+        "编造二者之间的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D011",
+      "is_relevant": false,
+      "note": "语义相近的无关干扰事件"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_026_Q09",
+    "pack_id": "026",
+    "question_type": "missing_information",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，玉树灾后重建专项配套方案的具体内容、牵头部门和实施时间是什么？",
+    "answers": "材料无法提供该信息。D010仅为一条未经证实的消息，称有关方面或将就玉树灾后重建再出台专项配套方案，但其具体内容、牵头部门和实施时间均不明确，主体不详，相关信息有待进一步核实，因此无法据此给出确定答案。",
+    "answer_facts": {
+      "required_facts": [
+        "判定材料缺乏该信息、无法确定",
+        "指出相关消息未经证实、主体与关键要素不明确"
+      ],
+      "optional_facts": [
+        "仅知或将出台灾后重建专项配套方案，其余不详"
+      ],
+      "forbidden_facts": [
+        "编造专项方案的具体内容、牵头部门或实施时间",
+        "将未经证实的消息当作确定事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "missing_reason": "unverified_incomplete_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

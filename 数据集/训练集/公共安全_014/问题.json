@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_014_Q01",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故发生）先于D005（调查报告）发生，可以据此断定D001（事故发生）是D005（调查报告）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_014_Q02",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D005（调查报告）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "public_safety_014_Q03",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对挂牌督办的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "public_safety_014_Q04",
+    "pack_id": "014",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：如果移除D002（挂牌督办）这一原因，D005（调查报告）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_014_Q05",
+    "pack_id": "014",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2021-06-16前进展（D001 事故发生；D002 挂牌督办；D003 行业部署）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_014_Q06",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请依据材料说明D003（行业部署）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "public_safety_014_Q07",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D002（挂牌督办）发生在D005（调查报告）之前，这是否足以说明D002（挂牌督办）是D005（调查报告）的原因？请说明理由。"
+  }
+]

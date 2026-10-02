@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_033_Q01",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D007（责任追究与专项整治），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_033_Q02",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间看D006（企业问题暴露）早于D005（事故原因认定），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_033_Q03",
+    "pack_id": "033",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，假如当初D001（安全事件/风险发生）未曾出现，D004（事故调查启动）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "public_safety_033_Q04",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（安全事件/风险发生）经责任追究到D010（整治成效显现）的完整因果传导过程，并按序给出跨文档的证据链。"
+  },
+  {
+    "sample_id": "public_safety_033_Q05",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D005（事故原因认定）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "public_safety_033_Q06",
+    "pack_id": "033",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至事故调查组认定原因（D005）时，材料仅显示：D001 安全事件/风险发生；D002 应急响应与救援；D004 事故调查启动；D005 事故原因认定。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_033_Q07",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起事故的直接起因，网络流传'煤气泄漏'致爆的说法，而河南省应急管理厅的初步调查认定为空分装置冷箱泄漏'砂爆'致液氧贮槽破裂。两种来源信息相互矛盾，应以哪一个为准？为什么？"
+  },
+  {
+    "sample_id": "public_safety_033_Q08",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有观点认为，三门峡周边同期的运输车辆侧翻事件（D019）、事故调查组成立前的例行安全检查（D020）、省内其他含'气化'字样的同名企业（D021）与本起'7·19'爆炸事故的成因或追责存在直接因果关系。这一说法是否成立？请判断。"
+  },
+  {
+    "sample_id": "public_safety_033_Q09",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据现有材料，能否精确确定本起爆炸事故发生的具体起始时刻（精确到分钟）？请说明理由。"
+  }
+]

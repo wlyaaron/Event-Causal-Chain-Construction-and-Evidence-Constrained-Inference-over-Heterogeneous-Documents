@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_145_Q01",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（政策落地）早于D004（专家分析），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "economy_trade_145_Q02",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（趋势展望）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "economy_trade_145_Q03",
+    "pack_id": "145",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定趋势展望是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "economy_trade_145_Q04",
+    "pack_id": "145",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_145_Q05",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "美日韩台相关的D008（成效评估）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "economy_trade_145_Q06",
+    "pack_id": "145",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：如果移除D004（专家分析）这一原因，D005（行业影响）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "economy_trade_145_Q07",
+    "pack_id": "145",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间看D001（政策落地）早于D004（专家分析），这是否意味着二者存在因果？请判断。"
+  }
+]

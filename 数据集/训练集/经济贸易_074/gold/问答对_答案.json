@@ -1,0 +1,413 @@
+[
+  {
+    "sample_id": "economy_trade_074_Q01",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（经济贸易-区域发展） → D002（政策支持） → D003（基础设施） → D007（格局升级） → D008（舆论引导） → D009（成果落实） → D010（机制建设） → D011（成效显现）。经济贸易-区域发展触发链条，经政策、基础设施、格局升级、舆论引导、成果落实、机制建设，最终成效进一步显现；群众获得感不断增强。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（经济贸易-区域发展） 到终点 D011（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（经济贸易-区域发展）",
+        "终点为 D011（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（经济贸易-区域发展） → D002（政策支持） → D003（基础设施） → D007（格局升级） → D008（舆论引导） → D009（成果落实） → D010（机制建设） → D011（成效显现）",
+        "可包含关键环节 D003（基础设施）",
+        "可包含关键环节 D007（格局升级）",
+        "可包含关键环节 D008（舆论引导）",
+        "可包含关键环节 D009（成果落实）",
+        "可包含关键环节 D010（机制建设）",
+        "终点影响：群众获得感不断增强"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "经济贸易-区域发展",
+        "政策支持",
+        "基础设施",
+        "格局升级",
+        "舆论引导",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_074_Q02",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（经济贸易-区域发展）在D002（政策支持）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：为西部大开发提供坚实政策支撑，有力推动西部地区加快发展。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（经济贸易-区域发展） 与 D002（政策支持） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（政策支持） 导致 D001（经济贸易-区域发展）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_074_Q03",
+    "pack_id": "074",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（经济贸易-区域发展）这一原因，D002（政策支持）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D002', 'D006']]；为西部大开发提供坚实政策支撑，有力推动西部地区加快发展 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D002",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_074_Q04",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（舆论引导），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（经济贸易-区域发展） → D002（政策支持） → D003（基础设施） → D007（格局升级） → D008（舆论引导）。起点为经济贸易-区域发展，终点为舆论引导；凝聚推动区域协调发展共识，坚定不移推进西部大开发迈上新台阶。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（经济贸易-区域发展） 到终点 D008（舆论引导） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（经济贸易-区域发展）",
+        "终点为 D008（舆论引导）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（经济贸易-区域发展） → D002（政策支持） → D003（基础设施） → D007（格局升级） → D008（舆论引导）",
+        "可包含关键环节 D002（政策支持）",
+        "终点影响：凝聚推动区域协调发展共识，坚定不移推进西部大开发迈上新台阶"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "经济贸易-区域发展",
+        "政策支持",
+        "基础设施",
+        "格局升级",
+        "舆论引导"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_074_Q05",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于西部大开发实施以来西部地区生产总值的年均增速，材料中不同来源给出了怎样的说法？应如何取舍？",
+    "answers": "材料中存在相互矛盾的说法：一份地方汇总数据称西部地区生产总值年均增长约两位数，另有研究机构报告估计为个位数增长，两组数字相互矛盾。应保持审慎，不宜采信单一来源，具体数值有待权威机构最终核实。",
+    "answer_facts": {
+      "required_facts": [
+        "存在两种相互矛盾的说法：年均增长约两位数 与 个位数增长",
+        "两组数字相互矛盾，不能同时成立"
+      ],
+      "optional_facts": [
+        "应保持审慎，不宜轻信单一来源",
+        "具体数值有待权威机构最终核实"
+      ],
+      "forbidden_facts": [
+        "直接采信某一数字并断言为确定结论",
+        "忽视来源之间的冲突"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "relation": "conflict",
+      "event": "D013",
+      "conflict_points": [
+        "年均增长约两位数",
+        "个位数增长"
+      ]
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_074_Q06",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（经济贸易-区域发展）之后直接发生了什么？",
+    "answers": "D002（政策支持）是D001（经济贸易-区域发展）的直接后果。证据：为西部大开发提供坚实政策支撑，有力推动西部地区加快发展。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（经济贸易-区域发展） 直接导致 D002（政策支持）",
+        "后果：为西部大开发提供坚实政策支撑，有力推动西部地区加快发展"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（政策支持） 导致 D001（经济贸易-区域发展）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_074_Q07",
+    "pack_id": "074",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2004-12-30（D001 经济贸易-区域发展；D002 政策支持；D003 基础设施；D004 工程效益），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（生态建设）、D006（产业发展）、D007（格局升级）、D008（舆论引导）；其中最关键的是生态建设——森林覆盖率不断提高，水土流失荒漠化有效遏制，实现生态经济社会效益有机统一，筑牢生态屏障。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:生态建设"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（产业发展）、D007（格局升级）、D008（舆论引导）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2004-12-30",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_074_Q08",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有观点称西部某地举办的民族民俗文化节是西部大开发的重要组成部分。这一说法是否成立？请结合材料判断并说明理由。",
+    "answers": "不成立。材料明确指出民族民俗文化节只是与此同时在西部某地举办的活动，吸引了大量游客参与，与西部大开发的核心议程并无直接关联，属于无关干扰信息，不能作为西部大开发的组成部分。",
+    "answer_facts": {
+      "required_facts": [
+        "该说法不成立",
+        "民族民俗文化节与西部大开发的核心议程并无直接关联"
+      ],
+      "optional_facts": [
+        "它只是同期在当地举办的活动，属无关信息"
+      ],
+      "forbidden_facts": [
+        "将无关的文化节纳入西部大开发的因果链",
+        "编造两者之间的关联"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "relation": "distractor",
+      "event": "D015",
+      "is_relevant": false
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_074_Q09",
+    "pack_id": "074",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "有关方面拟就新一轮西部大开发出台的专项支持方案，其具体内容、牵头部门和实施时间是什么？材料是否提供了足以确定的信息？",
+    "answers": "材料未提供足以确定的信息。材料仅以未经证实的消息提及有关方面或将就新一轮西部大开发出台专项支持方案，但明确指出该方案的具体内容、牵头部门和实施时间均不明确，主体不详，相关信息有待进一步核实，因此无法据此作答。",
+    "answer_facts": {
+      "required_facts": [
+        "材料未提供足以确定的信息",
+        "方案的具体内容、牵头部门和实施时间均不明确"
+      ],
+      "optional_facts": [
+        "该消息未经证实，主体不详",
+        "相关信息有待进一步核实"
+      ],
+      "forbidden_facts": [
+        "编造方案的具体内容、牵头部门或实施时间",
+        "将未经证实的消息当作确定事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "relation": "missing",
+      "event": "D014",
+      "missing_slots": [
+        "具体内容",
+        "牵头部门",
+        "实施时间"
+      ]
+    },
+    "confidence_level": "possible"
+  }
+]

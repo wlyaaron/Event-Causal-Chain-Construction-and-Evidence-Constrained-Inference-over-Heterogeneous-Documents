@@ -1,0 +1,318 @@
+[
+  {
+    "sample_id": "public_safety_104_Q01",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料中关于D001（安全事件/风险发生）记载了哪些关键事实？",
+    "answers": "D001（安全事件/风险发生）发生于江苏省苏州市昆山经济技术开发区昆山中荣金属制品有限公司抛光二车间，涉及主体昆山中荣金属制品有限公司、抛光二车间当班作业人员。汽车轮毂打磨抛光作业过程中。影响：当天造成75人死亡、185人受伤。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：昆山中荣金属制品有限公司、抛光二车间当班作业人员",
+        "地点：江苏省苏州市昆山经济技术开发区昆山中荣金属制品有限公司抛光二车间",
+        "基本事实：汽车轮毂打磨抛光作业过程中"
+      ],
+      "optional_facts": [
+        "影响：当天造成75人死亡、185人受伤"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D001"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_104_Q02",
+    "pack_id": "104",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（安全事件/风险发生）未曾出现，D002（应急响应与救援）的发生是否还能成立？请给出推断依据。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002']]。相应地，对危重伤员制定个性化诊疗方案开展多学科联合救治 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_104_Q03",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D005（事故原因认定）在进程上早于D004（事故调查启动）。能否据此认为D005（事故原因认定）导致了D004（事故调查启动）？请给出判断与证据。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D005→D004 的因果边；其直接原因是D001（安全事件/风险发生）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D005（事故原因认定） 早于 D004（事故调查启动） 只是时间先后",
+        "材料中不存在 D005→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D005（事故原因认定） 导致 D004（事故调查启动）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D005",
+      "event_b": "D004",
+      "temporal_order": "D005先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_104_Q04",
+    "pack_id": "104",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对责任追究与调查处理的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_104_Q05",
+    "pack_id": "104",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（治理成效与制度完善），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（安全事件/风险发生） → D004（事故调查启动） → D005（事故原因认定） → D007（专项整治部署） → D008（治理成效与制度完善）。其中，安全事件/风险发生为起点，经逐级传导，最终导致治理成效与制度完善；粉尘防爆监管制度和技术标准体系不断健全。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D008（治理成效与制度完善） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D008（治理成效与制度完善）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（事故调查启动） → D005（事故原因认定） → D007（专项整治部署） → D008（治理成效与制度完善）",
+        "可包含关键环节 D004（事故调查启动）",
+        "可包含关键环节 D005（事故原因认定）",
+        "可包含关键环节 D007（专项整治部署）",
+        "终点影响：粉尘防爆监管制度和技术标准体系不断健全"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "事故调查启动",
+        "事故原因认定",
+        "专项整治部署",
+        "治理成效与制度完善"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_104_Q06",
+    "pack_id": "104",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D007（专项整治部署）被阻断，D008（治理成效与制度完善）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "移除D007后，D008及其连锁后果很可能不成立。D007系D008的直接原因（直接因果），受影响边为 [['D007', 'D008']]；粉尘防爆监管制度和技术标准体系不断健全 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D007",
+      "affected_edges": [
+        [
+          "D007",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_104_Q07",
+    "pack_id": "104",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2014-08-02（D005 事故原因认定；D007 专项整治部署；D004 事故调查启动；D001 安全事件/风险发生；D002 应急响应与救援），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D003（情况通报与回应）、D006（责任追究与调查处理）、D008（治理成效与制度完善）；其中最关键的是情况通报与回应——召开新闻发布会通报事故救援、伤员救治和善后处置进展。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D003:情况通报与回应"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（责任追究与调查处理）, D008（治理成效与制度完善）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D007",
+        "D004",
+        "D001",
+        "D002",
+        "D003",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2014-08-02",
+      "visible_events": [
+        "D005",
+        "D007",
+        "D004",
+        "D001",
+        "D002"
+      ],
+      "hidden_events": [
+        "D003",
+        "D006",
+        "D008"
+      ],
+      "ground_truth": "D003:情况通报与回应"
+    },
+    "confidence_level": "possible"
+  }
+]

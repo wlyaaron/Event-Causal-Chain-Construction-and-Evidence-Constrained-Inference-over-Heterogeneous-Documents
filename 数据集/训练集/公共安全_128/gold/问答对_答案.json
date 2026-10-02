@@ -1,0 +1,325 @@
+[
+  {
+    "sample_id": "public_safety_128_Q01",
+    "pack_id": "128",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（爆炸事故发生）早于D004（高层指示与善后），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（爆炸事故发生）早于D004（高层指示与善后）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（伤亡情况通报）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（爆炸事故发生） 早于 D004（高层指示与善后） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（爆炸事故发生） 导致 D004（高层指示与善后）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_128_Q02",
+    "pack_id": "128",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（行业整治措施）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "完整因果链：D007（事故原因调查） → D008（行业整治措施）。其中，事故原因调查为起点，经逐级传导，最终导致行业整治措施；推动行业安全整治和转型升级。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D007（事故原因调查） 到终点 D008（行业整治措施） 的有向因果链（顺序不可颠倒）",
+        "起点为 D007（事故原因调查）",
+        "终点为 D008（行业整治措施）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D007（事故原因调查） → D008（行业整治措施）",
+        "终点影响：推动行业安全整治和转型升级"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "事故原因调查",
+        "行业整治措施"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_128_Q03",
+    "pack_id": "128",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D006（国务院调查组与最高检督办）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+    "answers": "完整因果链：D001（爆炸事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（高层指示与善后） → D006（国务院调查组与最高检督办）。其中，爆炸事故发生为起点，经逐级传导，最终导致国务院调查组与最高检督办；国家级调查介入，确保事故调查严肃公正。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（爆炸事故发生） 到终点 D006（国务院调查组与最高检督办） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（爆炸事故发生）",
+        "终点为 D006（国务院调查组与最高检督办）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（爆炸事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（高层指示与善后） → D006（国务院调查组与最高检督办）",
+        "可包含关键环节 D002（应急救援处置）",
+        "可包含关键环节 D003（伤亡情况通报）",
+        "可包含关键环节 D004（高层指示与善后）",
+        "终点影响：国家级调查介入，确保事故调查严肃公正"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006"
+      ],
+      "stages": [
+        "爆炸事故发生",
+        "应急救援处置",
+        "伤亡情况通报",
+        "高层指示与善后",
+        "国务院调查组与最高检督办"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_128_Q04",
+    "pack_id": "128",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道2026-05-08前进展（D001 爆炸事故发生；D002 应急救援处置；D004 高层指示与善后；D005 责任人控制与停产；D003 伤亡情况通报）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "基于因果走势，后续将出现：D006（国务院调查组与最高检督办）、D007（事故原因调查）、D008（行业整治措施）；其中最关键的是国务院调查组与最高检督办——国务院成立由应急管理部牵头的事故调查组。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:国务院调查组与最高检督办"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（事故原因调查）, D008（行业整治措施）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D003",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-05-08",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D003"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "ground_truth": "D006:国务院调查组与最高检督办"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_128_Q05",
+    "pack_id": "128",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D007（事故原因调查）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "直接因果链为 D007（事故原因调查） → D008（行业整治措施）。后果：湖南省出台整治五项硬措施。",
+    "answer_facts": {
+      "required_facts": [
+        "D007（事故原因调查） 直接导致 D008（行业整治措施）",
+        "后果：湖南省出台整治五项硬措施"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（行业整治措施） 导致 D007（事故原因调查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D007",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_128_Q06",
+    "pack_id": "128",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D007（事故原因调查）被阻断，D008（行业整治措施）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "移除D007后，D008及其连锁后果很可能不成立。D007系D008的直接原因（直接因果），受影响边为 [['D007', 'D008']]；推动行业安全整治和转型升级 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D008及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D007",
+      "affected_edges": [
+        [
+          "D007",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D008及其下游很可能不发生",
+      "acceptable_points": [
+        "D007是D008的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_128_Q07",
+    "pack_id": "128",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，已知D003（伤亡情况通报）先于D004（高层指示与善后）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D003→D004（直接因果），而非单纯时间顺序。证据：习近平总书记作出重要指示，要求全力救治伤员、妥善善后、查明原因、严肃追责。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（伤亡情况通报） 与 D004（高层指示与善后） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D003 先于 D004"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D004（高层指示与善后） 导致 D003（伤亡情况通报）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D003",
+      "event_b": "D004",
+      "temporal_order": "D003先于D004",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  }
+]

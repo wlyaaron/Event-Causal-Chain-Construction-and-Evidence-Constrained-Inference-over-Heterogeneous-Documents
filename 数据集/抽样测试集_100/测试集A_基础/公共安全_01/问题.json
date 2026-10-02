@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D005（调查报告）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_001_Q02",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "结合材料，材料是否给出了D001（事故发生）中欣佳酒店相关负责人的个人从业年限？请依据材料回答。"
+  },
+  {
+    "sample_id": "public_safety_001_Q03",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在2020-03-12（当前已知：D001 事故发生；D002 救援进展；D003 全国部署），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "public_safety_001_Q04",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D001（事故发生）所代表的条件被移除，后续的D002（救援进展）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_001_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D005（调查报告），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_001_Q06",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：应急管理部相关的D003（全国部署）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "public_safety_001_Q07",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间上看D004（成立调查组）早于D005（调查报告），但这能否证明因果？请依据材料判断。"
+  }
+]

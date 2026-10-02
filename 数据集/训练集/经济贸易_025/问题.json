@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_025_Q01",
+    "pack_id": "025",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "纳斯达克综合指数在互联网泡沫期间的最高点和最低点分别是多少？发生在什么时间？"
+  },
+  {
+    "sample_id": "economy_trade_025_Q02",
+    "pack_id": "025",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么1990年代末会出现互联网投资狂热？哪些因素共同推动了互联网泡沫的形成？"
+  },
+  {
+    "sample_id": "economy_trade_025_Q03",
+    "pack_id": "025",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：纳斯达克创历史新高、安然破产、美联储首次降息、世界通讯破产、萨班斯-奥克斯利法案签署。"
+  },
+  {
+    "sample_id": "economy_trade_025_Q04",
+    "pack_id": "025",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较亚马逊和Pets.com在互联网泡沫中的不同结局，为什么亚马逊能幸存并发展壮大而Pets.com却破产了？"
+  },
+  {
+    "sample_id": "economy_trade_025_Q05",
+    "pack_id": "025",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "互联网泡沫的破裂如何从股市下跌逐步演变为经济衰退、公司会计丑闻爆发、以及最终推动公司治理立法改革的连锁反应？"
+  },
+  {
+    "sample_id": "economy_trade_025_Q06",
+    "pack_id": "025",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括互联网泡沫破裂对美国经济、金融监管、风险投资行业和科技产业发展产生的长期影响。"
+  },
+  {
+    "sample_id": "economy_trade_025_Q07",
+    "pack_id": "025",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设美联储在1999年采取更激进的加息政策来刺破互联网泡沫，而不是在2001年才开始降息，经济和市场的发展轨迹可能会有什么不同？"
+  }
+]

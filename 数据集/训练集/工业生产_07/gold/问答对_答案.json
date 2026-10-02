@@ -1,0 +1,300 @@
+[
+  {
+    "sample_id": "industrial_production_07_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（事故十周年总结与长效机制），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（输油管道原油泄漏）→D002（抢修现场剧烈爆炸）→D003（国务院事故调查组成立）→D005（事故原因初步查明）→D006（事故调查报告认定责任）→D007（全国油气管道隐患整治启动）→D009（管道安全治理深化）→D010（安全生产改革推进）→D011（事故十周年总结与长效机制）。泄漏爆炸事故触发调查追责，最终推动全国安全生产治理体系现代化。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D011的有向因果链",
+        "起点D001",
+        "终点D011"
+      ],
+      "optional_facts": [
+        "可包含D004、D008",
+        "终点影响：管道事故率下降75%"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D007",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D007",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "hops": 8
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_07_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（输油管道原油泄漏）在D002（抢修现场剧烈爆炸）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D002（直接因果）。泄漏原油进入地下排水管网后挥发形成爆炸性混合气体，在抢修作业中遇火花发生爆炸。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D002存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D002约7.5小时"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "industrial_production_07_Q03",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D005（事故原因初步查明）这一环节，D006（事故调查报告认定责任）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D005是D006的直接原因之一，移除后D006将失去关键支撑。因为D005查明了管道腐蚀破裂、原油进入排水管网遇火花爆炸等核心事实，以及中石化多项违法违规行为，这些是D006认定事故性质和责任的基础。受影响的下游包括D007全国整治和D008司法审判。",
+    "answer_facts": {
+      "required_facts": [
+        "D005是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D003也是D006的直接原因但不足以替代D005"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ],
+      [
+        "D005",
+        "D007"
+      ],
+      [
+        "D005",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D005",
+      "affected_edges": [
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D006失去关键支撑"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_07_Q04",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D003（国务院事故调查组成立）之后直接推动了哪个事件？",
+    "answers": "D005（事故原因初步查明）是D003的直接后果。证据：11月25日至26日调查组查明管道腐蚀破裂、原油进入排水管网遇火花爆炸等原因。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003直接导致D005",
+        "后果：查明事故原因和违法违规行为"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "industrial_production_07_Q05",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测该事故对东黄输油管道未来十年输油量的具体影响数值？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "industrial_production_07_Q06",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2013年11月24日（D001泄漏；D002爆炸；D003调查组成立；D004李克强赴现场），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（事故原因初步查明）、D006（事故调查报告认定责任）、D007（全国油气管道隐患整治启动）；其中最关键的是事故调查结果公布，认定为特别重大生产安全责任事故。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D005"
+      ],
+      "optional_facts": [
+        "后续还可能发生D006、D007"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2013-11-24",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_07_Q07",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D008（司法审判完成）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（输油管道原油泄漏）→D002（抢修现场剧烈爆炸）→D003（国务院事故调查组成立）→D005（事故原因初步查明）→D006（事故调查报告认定责任）→D008（司法审判完成）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的有向因果链",
+        "起点D001",
+        "终点D008"
+      ],
+      "optional_facts": [
+        "可包含D004",
+        "终点影响：多名被告人被判处有期徒刑"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

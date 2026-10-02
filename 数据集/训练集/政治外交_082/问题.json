@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_082_Q01",
+    "pack_id": "082",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（专家解读）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_082_Q02",
+    "pack_id": "082",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（政策发布）阶段（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_082_Q03",
+    "pack_id": "082",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D004（双边会谈）被阻断，D006（政策发布）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "diplomacy_082_Q04",
+    "pack_id": "082",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（外交会晤）早于D004（双边会谈），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "diplomacy_082_Q05",
+    "pack_id": "082",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（共识落实）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_082_Q06",
+    "pack_id": "082",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D004（双边会谈）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "diplomacy_082_Q07",
+    "pack_id": "082",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于D006（政策发布）阶段（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

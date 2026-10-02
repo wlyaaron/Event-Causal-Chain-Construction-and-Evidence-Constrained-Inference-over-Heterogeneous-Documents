@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_004_Q01",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了官方声明事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "diplomacy_004_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D004（双边会谈）在时间/进程上早于D005（多边场合）。能否据此断定D004（双边会谈）导致了D005（多边场合）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "diplomacy_004_Q03",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于D006（政策发布）阶段（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "diplomacy_004_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D004（双边会谈）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_004_Q05",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D003（峰会成果）没有发生（或被及时干预阻断），D004（双边会谈）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "diplomacy_004_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（专家解读）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_004_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请还原从D001（外交会晤）到D008（共识落实）的完整因果传导过程，并按序列出证据。"
+  }
+]

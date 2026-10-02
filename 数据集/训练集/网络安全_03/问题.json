@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "cybersecurity_03_Q01",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（安全事件）被阻断，D002（技术分析）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q02",
+    "pack_id": "03",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道D006（标准升级）阶段前进展（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q03",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D004（监管约谈）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q04",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，事件D003（应急响应）在时间/进程上早于D004（监管约谈）。能否据此断定D003（应急响应）导致了D004（监管约谈）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q05",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（安全事件），说明经由哪些中间事件最终导致了D009（防范建议）。"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q06",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（安全事件），说明经由哪些中间事件最终导致了D008（用户维权）。"
+  },
+  {
+    "sample_id": "cybersecurity_03_Q07",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D001（安全事件）直接导致了什么？请依据材料作答。"
+  }
+]

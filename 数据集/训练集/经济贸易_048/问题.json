@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_048_Q01",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从国家碳达峰碳中和政策体系发布到绿色低碳转型展望与国际合作，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "economy_trade_048_Q02",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "新能源产业数据发布（D003）和传统高耗能行业转型（D004）都与绿色低碳转型相关，二者中哪一个对全国碳市场运行（D005）的推动作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "economy_trade_048_Q03",
+    "pack_id": "048",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有发布碳达峰碳中和'1+N'政策体系（移除D001），这会对地方绿色低碳转型实践（D002）和绿色金融发展（D006）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "economy_trade_048_Q04",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "传统高耗能行业绿色转型（D004）与绿色低碳转型展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "economy_trade_048_Q05",
+    "pack_id": "048",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测我国实现碳中和目标的具体年份以及所需的精确投资总额？"
+  },
+  {
+    "sample_id": "economy_trade_048_Q06",
+    "pack_id": "048",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国家碳达峰碳中和政策体系发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "economy_trade_048_Q07",
+    "pack_id": "048",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于政策发布和地方实践（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

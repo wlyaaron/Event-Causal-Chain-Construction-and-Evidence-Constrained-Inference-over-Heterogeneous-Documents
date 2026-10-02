@@ -1,0 +1,402 @@
+[
+  {
+    "sample_id": "transportation_08_Q01",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化调查报告对区域经济未来五年的总体影响？",
+    "answers": "无法确定：现有证据不足以得出唯一、可靠的结论，需要更多外部数据。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "transportation_08_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，从时间上看D004（原因调查）早于D005（责任追究），但这能否证明因果？请依据材料判断。",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D004→D005（直接因果），不是先后关系。证据：针对2023-07-31的城市内涝交通事故。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（原因调查） 与 D005（责任追究） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（责任追究） 导致 D004（原因调查）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "transportation_08_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请依据材料说明D005（责任追究）的基本事实与直接影响。",
+    "answers": "D005（责任追究）发生于北京河北，涉及主体北京交通。针对2023-07-31的城市内涝交通事故。影响：多条地铁线路停运。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：北京交通",
+        "地点：北京河北",
+        "基本事实：针对2023-07-31的城市内涝交通事故"
+      ],
+      "optional_facts": [
+        "影响：多条地铁线路停运"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D005"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "transportation_08_Q04",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于D006（善后处置）阶段（D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D007（隐患分析）、D008（专项整治）、D009（行业转型）。核心节点是隐患分析：城市内涝交通事故引发行业反思。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:隐患分析"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（专项整治）, D009（行业转型）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（善后处置）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:隐患分析"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "transportation_08_Q05",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D004（原因调查）这一原因，D006（善后处置）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "移除D004后，D006及其连锁后果很可能不成立。D004系D006的直接原因（直接因果），受影响边为 [['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；多条地铁线路停运 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D006及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D006的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "transportation_08_Q06",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（行业转型），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得因果路径：D001（事故发生） → D002（现场救援） → D003（官方部署） → D004（原因调查） → D006（善后处置） → D008（专项整治） → D009（行业转型）。事故发生触发链条，最终形成行业转型；多条地铁线路停运。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D009（行业转型） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D009（行业转型）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（现场救援） → D003（官方部署） → D004（原因调查） → D006（善后处置） → D008（专项整治） → D009（行业转型）",
+        "可包含关键环节 D002（现场救援）",
+        "可包含关键环节 D003（官方部署）",
+        "可包含关键环节 D004（原因调查）",
+        "可包含关键环节 D006（善后处置）",
+        "可包含关键环节 D008（专项整治）",
+        "终点影响：多条地铁线路停运"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "事故发生",
+        "现场救援",
+        "官方部署",
+        "原因调查",
+        "善后处置",
+        "专项整治",
+        "行业转型"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "transportation_08_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（专项整治）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（事故发生） → D002（现场救援） → D003（官方部署） → D004（原因调查） → D006（善后处置） → D008（专项整治）。起点为事故发生，终点为专项整治；多条地铁线路停运。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D008（专项整治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D008（专项整治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（现场救援） → D003（官方部署） → D004（原因调查） → D006（善后处置） → D008（专项整治）",
+        "可包含关键环节 D002（现场救援）",
+        "可包含关键环节 D003（官方部署）",
+        "可包含关键环节 D004（原因调查）",
+        "可包含关键环节 D006（善后处置）",
+        "终点影响：多条地铁线路停运"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "事故发生",
+        "现场救援",
+        "官方部署",
+        "原因调查",
+        "善后处置",
+        "专项整治"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

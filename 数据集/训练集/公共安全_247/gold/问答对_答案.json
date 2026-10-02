@@ -1,0 +1,144 @@
+[
+  {
+    "sample_id": "public_safety_247_Q01",
+    "pack_id": "247",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "调查认定的直接原因和主要问题是什么？",
+    "answers": "调查认定这是一起责任事件，直接原因是制冷管路老化、应急处置不当。调查发现相关单位安全责任落实不到位、隐患治理不彻底，规章制度执行流于形式，风险辨识和应急准备存在短板，个别监管环节也存在把关不严、履职不力等问题。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_247_Q02",
+    "pack_id": "247",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件后进行了怎样的追责问责？",
+    "answers": "司法机关依法对负有直接责任的人员采取强制措施、追究法律责任；纪检监察机关对负有领导和监管责任的人员严肃问责、给予党纪政务处分，涉嫌违法犯罪的移送司法机关查处。旨在以严肃问责压实责任、警示教育。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_247_Q03",
+    "pack_id": "247",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事件后开展了哪些专项整改和督查？",
+    "answers": "有关主管部门部署开展涉氨制冷企业安全专项整治，坚持问题导向全面排查整改隐患，实行清单化管理、闭环式整改，整改不到位的坚决依法处理。同时派出督查组深入一线明查暗访、督导检查，以督促改、以督促建，确保整治见底见效。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_247_Q04",
+    "pack_id": "247",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通报处置进展、回应社会关切？",
+    "answers": "南昌市召开新闻发布会通报事件处置最新进展，介绍搜救救治、原因调查、善后安置等情况，坚持公开透明、及时准确发布权威信息，主动澄清不实传言，切实保障公众知情权，稳定社会情绪和预期。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_247_Q05",
+    "pack_id": "247",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？",
+    "answers": "专家用通俗语言普及了相关风险知识和科学避险、自救互救技能，提醒公众日常注意排查身边隐患、熟悉逃生路线和应急方法，遇险保持冷静、科学应对，并建议个人家庭增强安全意识、社会各方共同营造人人讲安全的良好氛围。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_247_Q06",
+    "pack_id": "247",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？",
+    "answers": "预计未来将在巩固深化整改成果上持续用力。预计将建立健全整改落实的跟踪问效和常态化检查机制，防止问题反弹回潮；预计将推动风险隐患动态排查、闭环管理；预计将强化基层基础和应急能力建设，把每一起事件的教训真正转化为长治久安的制度举措。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_247_Q07",
+    "pack_id": "247",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这起事件将如何推动相关领域安全治理的完善？",
+    "answers": "预计这起事件将推动相关领域安全治理体系的完善。预计将健全风险分级管控和隐患排查治理双重预防机制；预计将修订完善相关标准规范、提高准入门槛；预计将强化科技和信息化手段应用、提升监测预警和应急处置能力，推动安全治理从事后处置向事前预防转变。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

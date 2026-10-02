@@ -1,0 +1,421 @@
+[
+  {
+    "sample_id": "public_safety_007_Q01",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D005（责任追究处理），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（火灾事故发生） → D003（中央指示与调查组成立） → D004（调查报告公布） → D006（暴露问题披露） → D005（责任追究处理）。火灾事故发生触发链条，最终形成责任追究处理；依法追究相关企业和个人责任，强化警示教育。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（火灾事故发生） 到终点 D005（责任追究处理） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（火灾事故发生）",
+        "终点为 D005（责任追究处理）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（火灾事故发生） → D003（中央指示与调查组成立） → D004（调查报告公布） → D006（暴露问题披露） → D005（责任追究处理）",
+        "可包含关键环节 D003（中央指示与调查组成立）",
+        "终点影响：依法追究相关企业和个人责任，强化警示教育"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）",
+        "把D020（例行检查）、D021（同名实体）等无关事件纳入因果链"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D005"
+      ],
+      "stages": [
+        "火灾事故发生",
+        "中央指示与调查组成立",
+        "调查报告公布",
+        "暴露问题披露",
+        "责任追究处理"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q02",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（火灾事故发生）在D002（搜救与伤亡通报）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：开展遇难人员身份确认、家属安抚和善后处置。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（火灾事故发生） 与 D002（搜救与伤亡通报） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（搜救与伤亡通报） 导致 D001（火灾事故发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q03",
+    "pack_id": "007",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（火灾事故发生）这一原因，D003（中央指示与调查组成立）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D003大概率不再发生。因为D001是D003的直接原因，其下游受影响的边为 [['D001', 'D003'], ['D003', 'D004']]；组织开展事故调查和责任追究 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q04",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请围绕最终结果D010（消防安全长效机制建立），跨越D001、D003、D004、D007、D009等多篇材料，追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条较长的有向因果链推动：D001（火灾事故发生） → D003（中央指示与调查组成立） → D004（调查报告公布） → D007（整改措施建议） → D009（整改落实） → D010（制度建设）。起点为火灾事故发生，终点为长效机制建立；提升消防安全治理长效化水平。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（火灾事故发生） 到终点 D010（制度建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（火灾事故发生）",
+        "终点为 D010（制度建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D003 → D004 → D007 → D009 → D010",
+        "可包含关键环节 D007（整改措施建议）、D009（整改落实）",
+        "终点影响：提升消防安全治理长效化水平"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）",
+        "把D014（起因争议）、D024（背景统计）等存疑或干扰信息当作因果环节"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D004",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D007",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "火灾事故发生",
+        "中央指示与调查组成立",
+        "调查报告公布",
+        "整改措施建议",
+        "整改落实",
+        "制度建设"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q05",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（火灾事故发生）之后直接发生了什么？",
+    "answers": "D002（搜救与伤亡通报）是D001（火灾事故发生）的直接后果。证据：开展遇难人员身份确认、家属安抚和善后处置。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（火灾事故发生） 直接导致 D002（搜救与伤亡通报）",
+        "后果：开展遇难人员身份确认、家属安抚和善后处置"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（搜救与伤亡通报） 导致 D001（火灾事故发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_007_Q06",
+    "pack_id": "007",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2023-08-29（D001 火灾事故发生；D002 搜救与伤亡通报；D003 中央指示与调查组成立；D004 调查报告公布），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（责任追究处理）、D006（暴露问题披露）、D007（整改措施建议）、D008（专家分析警示），并进一步推动D009（整改落实）、D010（制度建设）；其中最关键的是责任追究处理——依法追究相关企业和个人责任，强化警示教育。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:责任追究处理"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（暴露问题披露）、D007（整改措施建议）、D008（专家分析警示）",
+        "更远期还可能出现 D009（整改落实）、D010（制度建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-08-29",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q07",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故的『直接起因』，官方调查认定为违规电焊作业，而事发初期另有说法称系电气线路老化短路（D014）。两种说法应如何取舍？请说明依据。",
+    "answers": "应以国务院事故调查组认定的‘违规电焊作业’为准。D014 的‘电气线路老化短路’属事发初期未经证实的说法，与经现场勘查、技术鉴定得出的官方结论不一致，且后经勘查鉴定未获采信；而调查报告（D004）与应急管理部通报（D012）口径一致、相互印证，更为权威可信。",
+    "answer_facts": {
+      "required_facts": [
+        "就『直接起因』这一分歧点，官方认定（违规电焊）比 D014 的说法更可信",
+        "D014 属未经证实、未获采信的说法"
+      ],
+      "optional_facts": [
+        "官方结论由 D004（调查报告）、D012（部门通报）相互印证",
+        "存在分歧不等于两说等价，应按证据与权威性取舍"
+      ],
+      "forbidden_facts": [
+        "采信未经证实的‘电气线路老化’说法",
+        "认定两种说法可信度相同、无法取舍",
+        "编造材料未记载的起因"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ],
+      [
+        "D004"
+      ],
+      [
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "conflict_aspect": "事故直接起因",
+      "low_credibility_source": "D014",
+      "credibility": "未经证实/未获采信",
+      "authoritative_sources": [
+        "D004",
+        "D012"
+      ],
+      "resolution": "以官方调查认定的违规电焊作业为准"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_007_Q08",
+    "pack_id": "007",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料还提到邻近地市一家厂房的小型火情（D019）以及事发前当地的消防安全季度例行检查（D020）。这两件事是否与本次火灾事故（D001）构成因果关系？请判断并说明理由。",
+    "answers": "都不构成因果关系。D019是邻近地市另一家厂房几乎同期发生的一起独立小型火情，已由当地另行处置；D020是事发前按年度计划推进的消防安全季度例行检查，属常规安排。二者与本次事故仅在‘消防/安全’主题上相似，材料中并无任何因果边连接，属无关干扰信息，不应纳入本事故的因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "D019 与 D001 不构成因果关系",
+        "D020 与 D001 不构成因果关系",
+        "指出二者是主题相似但无关的干扰信息"
+      ],
+      "optional_facts": [
+        "D019 是邻近地市独立火情",
+        "D020 是季度例行检查，与事故分属不同安排"
+      ],
+      "forbidden_facts": [
+        "断定 D019 或 D020 由本次事故引起或导致本次事故",
+        "把语义相似当作因果证据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D019"
+      ],
+      [
+        "D020"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D019",
+        "D020"
+      ],
+      "target_event": "D001",
+      "causal_link": false,
+      "reason": "主题相似但无因果边，属无关干扰"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_007_Q09",
+    "pack_id": "007",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定厂房内某处短时冒烟迹象（D016）的确切发生时间及其与起火时刻的先后顺序？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未标注 D016 的具体发生时间，先后顺序无法判断"
+      ],
+      "optional_facts": [
+        "该信息属时间不明的存疑材料"
+      ],
+      "forbidden_facts": [
+        "编造具体时间点或先后顺序",
+        "给出确定性结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "missing_dimension": "time",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

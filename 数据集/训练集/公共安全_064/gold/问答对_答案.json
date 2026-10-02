@@ -1,0 +1,350 @@
+[
+  {
+    "sample_id": "public_safety_064_Q01",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同推动了D010（评论员文章）的发表，并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（火灾事故）→D003（事故调查）→D006（安全整治）→D007（工作部署）→D010（评论员文章）。火灾事故是起因，经事故调查查明原因后推动安全整治和工作部署，最终形成评论员文章，呼吁全社会重视高层建筑消防安全。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点D001（火灾事故）到终点D010（评论员文章）的有向因果链（顺序不可颠倒）",
+        "起点为D001（火灾事故）",
+        "终点为D010（评论员文章）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D003→D006→D007→D010",
+        "可包含关键环节D006（安全整治）和D007（工作部署）",
+        "终点影响：呼吁全社会重视高层建筑消防安全，形成群防群治局面"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D010"
+      ],
+      [
+        "D001",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      "stages": [
+        "火灾事故",
+        "事故调查",
+        "安全整治",
+        "工作部署",
+        "评论员文章"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_064_Q02",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（火灾事故）在D003（事故调查）之前发生，二者是否构成因果关系？依据是什么？",
+    "answers": "能认定因果关系，但关键依据是材料中的因果记载D001→D003（直接因果），而非单纯的时间先后关系。证据：火灾事故发生后，消防、公安、应急等部门组成联合调查组开展事故原因调查，查明起火原因为电气线路老化短路。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（火灾事故）与D003（事故调查）存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D003发生",
+        "调查结果：起火原因为15层住户电气线路老化短路"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D003（事故调查）导致D001（火灾事故）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D003",
+      "temporal_order": "D001先于D003",
+      "causal_link": true,
+      "note": "时间在先且有因果证据，事故调查是火灾事故的直接后果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_064_Q03",
+    "pack_id": "064",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D003（事故调查）这一环节，D006（安全整治）是否还会发生？请判断并说明连锁影响。",
+    "answers": "结论：移除D003后，D006仍有可能发生，但推动力度和针对性会减弱。因为D001（火灾事故）本身也可间接推动安全整治，但D003查明的具体原因（电气线路老化、消防设施不足等）为专项整治提供了明确方向。受影响的边为[['D003','D006'],['D006','D007'],['D007','D010']]，整治行动可能从针对性专项整治变为一般性安全检查。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D006的直接原因，移除后D006的推动力度减弱",
+        "需说明移除原因后的连锁影响"
+      ],
+      "optional_facts": [
+        "D001本身也可间接推动安全整治，但针对性不足",
+        "D003查明的具体原因为整治提供了明确方向",
+        "下游D007（工作部署）和D010（评论员文章）也会受到影响"
+      ],
+      "forbidden_facts": [
+        "断言移除D003后D006绝对不会发生",
+        "忽视D001对D006的间接推动作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D006"
+      ],
+      [
+        "D006",
+        "D007"
+      ],
+      [
+        "D007",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D007",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D006仍可能发生但针对性减弱，下游事件受连锁影响",
+      "acceptable_points": [
+        "D003是D006的直接原因",
+        "移除后整治力度和针对性减弱",
+        "需考虑D001的间接推动作用"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_064_Q04",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请围绕最终结果D004（医疗救治），追溯其多跳因果链条：哪些事件依次推动了它的发生？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（火灾事故）→D002（应急处置）→D004（医疗救治）。起点为火灾事故，经多部门协同应急处置后，卫生部门调集医疗资源开展伤员救治；另有路径D001→D004为直接因果。终点影响：23名伤员得到及时有效救治，2名重伤员脱离生命危险。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点D001（火灾事故）到终点D004（医疗救治）的有向因果链",
+        "起点为D001（火灾事故）",
+        "终点为D004（医疗救治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D002→D004",
+        "可包含关键环节D002（应急处置）",
+        "终点影响：23名伤员得到救治，2名重伤员脱离危险"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004"
+      ],
+      "stages": [
+        "火灾事故",
+        "应急处置",
+        "医疗救治"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_064_Q05",
+    "pack_id": "064",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化此次火灾事故对该市未来三年房地产市场价格的具体影响幅度？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定/无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_064_Q06",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（火灾事故）之后直接引发了哪些事件？请列举。",
+    "answers": "D001（火灾事故）的直接后果包括：D002（应急处置）、D003（事故调查）、D004（医疗救治）、D005（应急救援）、D009（安置保障）。这些都是火灾发生后立即启动的直接响应措施。证据：火灾发生后多部门协同开展应急处置、消防救援人员展开搜救、医院开辟绿色通道救治伤员、街道安置受灾居民。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（火灾事故）直接导致D002（应急处置）",
+        "D001直接导致D004（医疗救治）",
+        "D001直接导致D005（应急救援）",
+        "D001直接导致D009（安置保障）"
+      ],
+      "optional_facts": [
+        "D001还直接导致D003（事故调查）",
+        "因果类型均为直接因果",
+        "置信度等级certain"
+      ],
+      "forbidden_facts": [
+        "将间接因果（如D006、D007、D008、D010）列为直接后果",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D009"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_064_Q07",
+    "pack_id": "064",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2024-03-15（D001火灾事故、D002应急处置、D004医疗救治、D005应急救援、D009安置保障），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D003（事故调查）、D006（安全整治）、D007（工作部署）、D008（专家解读）、D010（评论员文章）。其中最关键的是D003事故调查——查明火灾原因后将推动针对性的安全整治行动。依据：重大火灾事故后通常会开展事故调查，查明原因后启动专项整治，并召开安全生产会议部署工作。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D003（事故调查）"
+      ],
+      "optional_facts": [
+        "后续还可能发生D006（安全整治）、D007（工作部署）、D008（专家解读）、D010（评论员文章）",
+        "事故调查是推动后续整治的关键环节"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-03-15",
+      "visible": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D009"
+      ],
+      "predicted": [
+        "D003",
+        "D006",
+        "D007",
+        "D008",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

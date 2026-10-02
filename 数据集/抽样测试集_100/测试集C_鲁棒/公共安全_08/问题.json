@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_008_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（安全事件/风险发生），说明经由哪些中间事件最终导致了D011（治理成效与长效机制）。"
+  },
+  {
+    "sample_id": "public_safety_008_Q02",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于2015-12-25（D001 安全事件/风险发生；D002 应急响应与救援；D004 专项整治部署；D005 专项整治部署；D006 应急救援进展；D003 调查评估启动；D009 事故性质认定），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_008_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（安全事件/风险发生）在进程上早于D006（应急救援进展）。能否据此认为D001（安全事件/风险发生）导致了D006（应急救援进展）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_008_Q04",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D010（调查评估与问责）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_008_Q05",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D001（安全事件/风险发生）所代表的条件被移除，后续的D010（调查评估与问责）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_008_Q06",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示深圳市、光明新区人民政府及各深圳市主管部门对善后处置推进不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "public_safety_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（应急救援结束），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_008_Q08",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于深圳市益相龙投资发展有限公司红坳渣土受纳场的安全事件/风险发生事件，不同来源给出的关键数据不一致（官方73、另一来源88）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_008_Q09",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D013.txt》中邻近辖区国务院事故调查组的行业交流会，是否与主线事件安全事件/风险发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_008_Q10",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，深圳市益相龙投资发展有限公司红坳渣土受纳场在该安全事件/风险发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_02_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（科技创新）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "energy_environment_02_Q02",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D008（绿色路径）所代表的条件被移除，后续的D009（科技创新）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "energy_environment_02_Q03",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D006（产业发展）阶段及之前的信息（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "energy_environment_02_Q04",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D008（绿色路径）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "energy_environment_02_Q05",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了绿色路径事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "energy_environment_02_Q06",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D008（绿色路径）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "energy_environment_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D006（产业发展）在D008（绿色路径）之前发生，二者是否构成因果？依据是什么？"
+  }
+]

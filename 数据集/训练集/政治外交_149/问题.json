@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_149_Q01",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D003（峰会成果）在D004（双边会谈）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_149_Q02",
+    "pack_id": "149",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化共识落实对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "diplomacy_149_Q03",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_149_Q04",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，法国总统马克龙相关的D004（双边会谈）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "diplomacy_149_Q05",
+    "pack_id": "149",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D003（峰会成果）被阻断，D004（双边会谈）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "diplomacy_149_Q06",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，法国总统马克龙相关的D001（外交会晤）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "diplomacy_149_Q07",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（外交会晤）到D008（共识落实）的完整因果传导过程，并按序列出证据。"
+  }
+]

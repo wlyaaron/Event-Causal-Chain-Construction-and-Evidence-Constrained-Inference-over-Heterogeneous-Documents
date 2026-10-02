@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_004_Q01",
+    "pack_id": "004",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了国务院事故调查组、江西省委省政府江西省新余市渝水区佳乐苑小区临街商住综合楼负责人的个人从业年限？"
+  },
+  {
+    "sample_id": "public_safety_004_Q02",
+    "pack_id": "004",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D005（整改防范）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_004_Q03",
+    "pack_id": "004",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D003（事故调查）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "public_safety_004_Q04",
+    "pack_id": "004",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至2024-09-21，材料仅显示：D001 安全事件/风险发生；D002 应急处置；D008 事故追踪；D003 事故调查；D004 事故原因认定。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_004_Q05",
+    "pack_id": "004",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（安全事件/风险发生）早于D008（事故追踪），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_004_Q06",
+    "pack_id": "004",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（安全事件/风险发生），说明经由哪些中间事件最终导致了D007（责任追究）。"
+  },
+  {
+    "sample_id": "public_safety_004_Q07",
+    "pack_id": "004",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D002（应急处置）是否仍会发生？请判断并给出因果依据。"
+  }
+]

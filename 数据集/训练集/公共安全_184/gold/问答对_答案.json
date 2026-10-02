@@ -1,0 +1,380 @@
+[
+  {
+    "sample_id": "public_safety_184_Q01",
+    "pack_id": "184",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（行业整改规范），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（赛事突发灾害事件） → D002（应急救援行动） → D004（社会舆论反响） → D005（官方调查启动） → D006（调查结果公布） → D007（问责处理结果） → D008（教训反思总结） → D009（行业整改规范）。赛事突发灾害事件触发链条，最终形成行业整改规范；促进马拉松和户外运动行业健康发展。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（赛事突发灾害事件） 到终点 D009（行业整改规范） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（赛事突发灾害事件）",
+        "终点为 D009（行业整改规范）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（赛事突发灾害事件） → D002（应急救援行动） → D004（社会舆论反响） → D005（官方调查启动） → D006（调查结果公布） → D007（问责处理结果） → D008（教训反思总结） → D009（行业整改规范）",
+        "可包含关键环节 D002（应急救援行动）",
+        "终点影响：促进马拉松和户外运动行业健康发展"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "赛事突发灾害事件",
+        "应急救援行动",
+        "社会舆论反响",
+        "官方调查启动",
+        "调查结果公布",
+        "问责处理结果",
+        "教训反思总结",
+        "行业整改规范"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_184_Q02",
+    "pack_id": "184",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（赛事突发灾害事件）在D002（应急救援行动）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：最终确认伤亡数字，善后工作启动。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（赛事突发灾害事件） 与 D002（应急救援行动） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急救援行动） 导致 D001（赛事突发灾害事件）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_184_Q03",
+    "pack_id": "184",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（赛事突发灾害事件）这一原因，D002（应急救援行动）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D004']]；最终确认伤亡数字，善后工作启动 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_184_Q04",
+    "pack_id": "184",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（教训反思总结），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（赛事突发灾害事件） → D002（应急救援行动） → D004（社会舆论反响） → D005（官方调查启动） → D006（调查结果公布） → D007（问责处理结果） → D008（教训反思总结）。起点为赛事突发灾害事件，终点为教训反思总结；推动行业反思和安全意识提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（赛事突发灾害事件） 到终点 D008（教训反思总结） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（赛事突发灾害事件）",
+        "终点为 D008（教训反思总结）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（赛事突发灾害事件） → D002（应急救援行动） → D004（社会舆论反响） → D005（官方调查启动） → D006（调查结果公布） → D007（问责处理结果） → D008（教训反思总结）",
+        "可包含关键环节 D002（应急救援行动）",
+        "终点影响：推动行业反思和安全意识提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "赛事突发灾害事件",
+        "应急救援行动",
+        "社会舆论反响",
+        "官方调查启动",
+        "调查结果公布",
+        "问责处理结果",
+        "教训反思总结"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_184_Q05",
+    "pack_id": "184",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_184_Q06",
+    "pack_id": "184",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（赛事突发灾害事件）之后直接发生了什么？",
+    "answers": "D002（应急救援行动）是D001（赛事突发灾害事件）的直接后果。证据：最终确认伤亡数字，善后工作启动。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（赛事突发灾害事件） 直接导致 D002（应急救援行动）",
+        "后果：最终确认伤亡数字，善后工作启动"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（应急救援行动） 导致 D001（赛事突发灾害事件）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_184_Q07",
+    "pack_id": "184",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2021年5月下旬（D001 赛事突发灾害事件；D002 应急救援行动；D003 事件经过还原；D004 社会舆论反响；D005 官方调查启动），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（调查结果公布）、D007（问责处理结果）、D008（教训反思总结）、D009（行业整改规范）；其中最关键的是调查结果公布——查明事件原因和性质，认定管理责任。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:调查结果公布"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（问责处理结果）、D008（教训反思总结）、D009（行业整改规范）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021年5月下旬",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

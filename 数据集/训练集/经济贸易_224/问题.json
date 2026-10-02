@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_224_Q01",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依附理论兴起的时代背景和思想渊源是什么？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q02",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "多斯桑托斯对依附理论的主要贡献是什么？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q03",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依附理论与现代化理论的核心分歧有哪些？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q04",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依附理论在实践层面产生了哪些重要影响？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q05",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依附理论衰落的原因和主要批评是什么？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q06",
+    "pack_id": "224",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "全球化时代新依附理论认为当代依附关系呈现哪些新特征？未来发展趋势如何？"
+  },
+  {
+    "sample_id": "economy_trade_224_Q07",
+    "pack_id": "224",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依附理论对当代发展中国家实现自主发展有哪些启示？中国经验对依附理论发展有何意义？"
+  }
+]

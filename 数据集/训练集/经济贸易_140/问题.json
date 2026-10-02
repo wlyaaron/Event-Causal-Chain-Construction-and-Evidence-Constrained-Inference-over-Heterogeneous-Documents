@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_140_Q01",
+    "pack_id": "140",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "economy_trade_140_Q02",
+    "pack_id": "140",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D003（企业行动）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "economy_trade_140_Q03",
+    "pack_id": "140",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示中美双方对政策落地不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "economy_trade_140_Q04",
+    "pack_id": "140",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（趋势展望）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "economy_trade_140_Q05",
+    "pack_id": "140",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "economy_trade_140_Q06",
+    "pack_id": "140",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D001（政策落地）在进程上早于D004（专家分析）。能否据此认为D001（政策落地）导致了D004（专家分析）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_140_Q07",
+    "pack_id": "140",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，假如当初D006（中小企业影响）未曾出现，D008（成效评估）的发生是否还能成立？请给出推断依据。"
+  }
+]

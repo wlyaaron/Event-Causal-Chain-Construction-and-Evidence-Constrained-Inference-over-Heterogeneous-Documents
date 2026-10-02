@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_089_Q01",
+    "pack_id": "089",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2023年3月至4月间，美国共有哪几家银行倒闭？按资产规模从大到小排列，并说明各自的总资产规模。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q02",
+    "pack_id": "089",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "硅谷银行倒闭的直接原因和深层原因分别是什么？请从利率风险、存款结构、科技行业寒冬和监管放松四个维度分析其因果链条。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q03",
+    "pack_id": "089",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：硅谷银行宣布出售证券产生亏损、硅谷银行被FDIC接管、签名银行被关闭、瑞士信贷获得瑞士央行500亿瑞郎贷款、瑞银收购瑞士信贷、第一共和银行被摩根大通收购、美联储推出BTFP工具。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q04",
+    "pack_id": "089",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2023年硅谷银行倒闭与2008年雷曼兄弟破产在倒闭原因、政府应对方式、市场影响和长期后果方面的异同。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q05",
+    "pack_id": "089",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "美联储的激进加息政策如何通过债券价格下跌、未实现亏损增加、存款流失、银行挤兑等环节，最终导致硅谷银行倒闭？请梳理完整的传导机制，并说明这一机制如何传染到其他银行。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q06",
+    "pack_id": "089",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2023年春季全球银行业危机在金融监管、银行商业模式、货币政策和数字时代金融稳定四个方面带来的主要教训和长期影响。"
+  },
+  {
+    "sample_id": "economy_trade_089_Q07",
+    "pack_id": "089",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2018年没有放松对中型银行的监管（即维持500亿美元的严格监管门槛），硅谷银行的倒闭是否可以避免？如果仍然倒闭，政府的应对会有哪些不同？请分析可能的情景。"
+  }
+]

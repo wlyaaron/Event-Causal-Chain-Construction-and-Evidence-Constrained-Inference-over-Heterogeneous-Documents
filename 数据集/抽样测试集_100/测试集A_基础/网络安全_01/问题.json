@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "cybersecurity_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D006（标准升级）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（安全事件）到D009（防范建议）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q03",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对黑产溯源的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q04",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D001（安全事件）所代表的条件被移除，后续的D002（技术分析）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（安全事件）早于D004（监管约谈），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q06",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D006（标准升级）阶段及之前的信息（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "cybersecurity_001_Q07",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：全国人大相关的D008（用户维权）发生后，紧接着出现的直接结果是什么？"
+  }
+]

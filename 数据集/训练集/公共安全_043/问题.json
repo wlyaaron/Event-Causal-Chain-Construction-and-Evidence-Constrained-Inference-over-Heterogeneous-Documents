@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_043_Q01",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（消防安全防范总结），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_043_Q02",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D005（企业责任人被控制）在D004（国务院提级调查）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_043_Q03",
+    "pack_id": "043",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（重大火灾事故发生）这一原因，D002（火灾救援与伤亡通报）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_043_Q04",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（消防安全问题反思），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_043_Q05",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起火灾的起火原因，材料中既有'燃气泄漏爆炸'的网络传言（D013），又有官方认定的电气起火（D014），二者相互矛盾，应采信哪一个？为什么？"
+  },
+  {
+    "sample_id": "public_safety_043_Q06",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（重大火灾事故发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_043_Q07",
+    "pack_id": "043",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于事故后第二日（D001 重大火灾事故发生；D002 火灾救援与伤亡通报；D003 火灾原因初步调查；D004 国务院提级调查；D005 企业责任人被控制），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_043_Q08",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到了同期一处无关小场所起火（D019）、专项检查前的例行年度检查（D020）以及省内外含'北龙'字样的其他企业（D021）。在追溯本起'8·25'重大火灾的因果链条时，这些信息是否应纳入？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_043_Q09",
+    "pack_id": "043",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定本起火灾的确切起火时刻（精确到分钟）？请判断并说明依据。"
+  }
+]

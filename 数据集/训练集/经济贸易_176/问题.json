@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_176_Q01",
+    "pack_id": "176",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（趋势展望）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "economy_trade_176_Q02",
+    "pack_id": "176",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，全球周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "economy_trade_176_Q03",
+    "pack_id": "176",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，请依据材料说明D010（战略意义）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "economy_trade_176_Q04",
+    "pack_id": "176",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D001（政策落地）没有发生（或被及时干预阻断），D002（市场反应）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "economy_trade_176_Q05",
+    "pack_id": "176",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "economy_trade_176_Q06",
+    "pack_id": "176",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D008（成效评估）在时间/进程上早于D009（趋势展望）。能否据此断定D008（成效评估）导致了D009（趋势展望）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_176_Q07",
+    "pack_id": "176",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（成效评估），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

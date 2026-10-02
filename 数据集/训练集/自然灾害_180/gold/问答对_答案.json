@@ -1,0 +1,336 @@
+[
+  {
+    "sample_id": "natural_disaster_180_Q01",
+    "pack_id": "180",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（河南灾后重建全面推进），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（特大暴雨）→ D003（国家应急响应）→ D004（消防驰援）→ D007（灾情统计）→ D010（灾后重建）。暴雨造成重大损失，国家启动应急响应和救援，灾情统计后全面推进灾后重建，城市防洪能力系统提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（特大暴雨） 到终点 D010（灾后重建） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（河南遭遇历史罕见特大暴雨）",
+        "终点为 D010（河南灾后重建全面推进）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D003→D004→D007→D010",
+        "可包含关键环节 D007（河南暴雨灾情统计公布）",
+        "终点影响：受灾群众生活恢复，城市防洪排涝和应急管理能力系统提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D007",
+        "D010"
+      ],
+      [
+        "D007",
+        "D010"
+      ],
+      [
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D007",
+        "D010"
+      ],
+      "stages": [
+        "暴雨发生",
+        "国家响应",
+        "救援驰援",
+        "灾情统计",
+        "灾后重建"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_180_Q02",
+    "pack_id": "180",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（河南遭遇历史罕见特大暴雨）在D002（郑州地铁5号线被困事件）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：特大暴雨导致郑州严重内涝，洪水进入地铁5号线隧道，列车被困，14人遇难。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（特大暴雨） 与 D002（地铁被困） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001（7月20日白天）先于 D002（7月20日傍晚）"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（地铁被困） 导致 D001（特大暴雨）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_180_Q03",
+    "pack_id": "180",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（河南遭遇历史罕见特大暴雨）这一原因，D002（郑州地铁5号线被困事件）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001','D002'],['D002','D007'],['D007','D008'],['D008','D009']]；地铁被困、灾情统计、成立调查组、公布报告等连锁事件也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D007"
+      ],
+      [
+        "D007",
+        "D008"
+      ],
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D007"
+        ],
+        [
+          "D007",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_180_Q04",
+    "pack_id": "180",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D007（河南暴雨灾情统计公布），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（特大暴雨）→ D002（地铁被困）→ D004（消防驰援）→ D007（灾情统计）。起点为特大暴雨，终点为灾情统计公布；全省因灾死亡失踪398人，直接经济损失1200.6亿元。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（特大暴雨） 到终点 D007（灾情统计） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（河南遭遇历史罕见特大暴雨）",
+        "终点为 D007（河南暴雨灾情统计公布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001→D002→D004→D007",
+        "可包含关键环节 D002（郑州地铁5号线被困事件）",
+        "终点影响：全省1391.28万人受灾，直接经济损失1200.6亿元"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D002",
+        "D007"
+      ],
+      [
+        "D004",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D007"
+      ],
+      "stages": [
+        "暴雨发生",
+        "地铁被困",
+        "救援驰援",
+        "灾情统计"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_180_Q05",
+    "pack_id": "180",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述极端暴雨事件对河南省未来十年经济社会发展的总体影响以及气候变化的长期趋势？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_180_Q06",
+    "pack_id": "180",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D008（国务院成立郑州暴雨灾害调查组）之后直接发生了什么？",
+    "answers": "D009（国务院调查组公布调查报告）是D008（国务院成立郑州暴雨灾害调查组）的直接后果。证据：调查组于2021年8月成立，经过近半年调查，于2022年1月21日公布调查报告，认定存在严重失职失责，89名公职人员被追责问责。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D008（成立调查组） 直接导致 D009（公布调查报告）",
+        "后果：认定严重失职失责，89名公职人员被追责问责"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D009（调查报告） 导致 D008（成立调查组）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D008",
+        "D009"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_180_Q07",
+    "pack_id": "180",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2021-08-02（D001 特大暴雨；D002 地铁被困；D003 国家应急响应；D004 消防驰援；D005 社会捐款；D006 专家解读；D007 灾情统计；D008 成立调查组），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D009（国务院调查组公布调查报告）、D010（河南灾后重建全面推进）；其中最关键的是调查报告公布——认定失职失责并追责问责，随后全面推进灾后重建，提升城市防洪能力。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D009:国务院调查组公布调查报告"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D010（河南灾后重建全面推进）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-08-02",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "predicted": [
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

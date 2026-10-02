@@ -1,0 +1,412 @@
+[
+  {
+    "sample_id": "public_safety_166_Q01",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D005（行业整治），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（事故发生） → D004（事故调查） → D007（专家解读） → D005（行业整治）。事故发生触发链条，最终形成行业整治；整治疲劳驾驶等突出违法行为，防范道路交通事故。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D005（行业整治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D005（行业整治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D004（事故调查） → D007（专家解读） → D005（行业整治）",
+        "可包含关键环节 D004（事故调查）",
+        "终点影响：整治疲劳驾驶等突出违法行为，防范道路交通事故"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）",
+        "把D020（邻地事件）、D021（例行检查）等无关事件纳入因果链"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D005"
+      ],
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D007",
+        "D005"
+      ],
+      "stages": [
+        "事故发生",
+        "事故调查",
+        "专家解读",
+        "行业整治"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q02",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故发生）在D002（抢险救援）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：受伤人员得到及时抢救，最大限度减少损失。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 与 D002（抢险救援） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（抢险救援） 导致 D001（事故发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q03",
+    "pack_id": "166",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（事故发生）这一原因，D002（抢险救援）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003']]；受伤人员得到及时抢救，最大限度减少损失 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q04",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请围绕最终结果D011（成效显现），跨越D001、D004、D007、D005、D010等多篇材料，追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条较长的有向因果链推动：D001（事故发生） → D004（事故调查） → D007（专家解读） → D005（行业整治） → D010（制度建设） → D011（成效显现）。起点为事故发生，终点为成效显现；整治成效逐步显现，重特大事故得到有效遏制。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D011（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D011（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001 → D004 → D007 → D005 → D010 → D011",
+        "可包含关键环节 D005（行业整治）、D010（制度建设）",
+        "终点影响：整治成效逐步显现"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）",
+        "把D014（未证实伤亡）、D015（起因争议）等存疑或干扰信息当作因果环节"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D005",
+        "D010",
+        "D011"
+      ],
+      [
+        "D005",
+        "D010",
+        "D011"
+      ],
+      [
+        "D001",
+        "D005",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D007",
+        "D005",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "事故发生",
+        "事故调查",
+        "专家解读",
+        "行业整治",
+        "制度建设",
+        "成效显现"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q05",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（事故发生）之后直接发生了什么？",
+    "answers": "D002（抢险救援）是D001（事故发生）的直接后果。证据：受伤人员得到及时抢救，最大限度减少损失。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 直接导致 D002（抢险救援）",
+        "后果：受伤人员得到及时抢救，最大限度减少损失"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（抢险救援） 导致 D001（事故发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_166_Q06",
+    "pack_id": "166",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2012-08-28（D001 事故发生；D002 抢险救援；D003 善后处置；D004 事故调查），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（行业整治）、D006（专项监管）、D007（专家解读）、D008（评论员文章），并进一步推动D009（责任追究）、D010（制度建设）、D011（成效显现）；其中最关键的是行业整治——整治疲劳驾驶等突出违法行为，防范道路交通事故。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:行业整治"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（专项监管）、D007（专家解读）、D008（评论员文章）",
+        "更远期还可能出现 D009（责任追究）、D010（制度建设）、D011（成效显现）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2012-08-28",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q07",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于事故的『伤亡规模』，官方通报与网络流传的另一组数字（D014）存在明显出入，应如何判断二者可信度？请说明依据。",
+    "answers": "应以官方通报为准。网络流传的另一组伤亡数字（D014）援引自未具名消息源，与官方通报存在明显出入，可信度较低且尚未获权威证实；而新华社通报、交通运输部门情况通报（D013）与央视报道（D012）相互印证，口径一致，更为可信。",
+    "answer_facts": {
+      "required_facts": [
+        "就『伤亡规模』这一分歧点，官方通报比网络流传数字更可信",
+        "D014 的说法可信度较低，来源为未具名消息源、未获权威证实"
+      ],
+      "optional_facts": [
+        "官方口径由 D012（媒体报道）、D013（部门通报）相互印证",
+        "存在分歧不等于两说等价，应按来源权威性与印证情况取舍"
+      ],
+      "forbidden_facts": [
+        "采信未经证实的网络流传数字",
+        "认定两种说法可信度相同、无法取舍",
+        "编造具体伤亡数字"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ],
+      [
+        "D013"
+      ],
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "conflict_aspect": "伤亡规模",
+      "low_credibility_source": "D014",
+      "credibility": "可信度较低",
+      "authoritative_sources": [
+        "D001",
+        "D012",
+        "D013"
+      ],
+      "resolution": "以官方通报为准"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_166_Q08",
+    "pack_id": "166",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料还提到邻近省份高速公路的一起轻微追尾（D020）以及事发路段所在片区的例行安全检查（D021）。这两件事是否与本次事故（D001）构成因果关系？请判断并说明理由。",
+    "answers": "都不构成因果关系。D020是邻近省份另一条高速公路几乎同期发生的一起独立轻微追尾事故，已由当地另行处置；D021是事发前按年度计划推进的例行安全设施检查，属常规安排。二者与本次事故仅在‘交通/安全’主题上相似，材料中并无任何因果边连接，属无关干扰信息，不应纳入本事故的因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "D020 与 D001 不构成因果关系",
+        "D021 与 D001 不构成因果关系",
+        "指出二者是主题相似但无关的干扰信息"
+      ],
+      "optional_facts": [
+        "D020 是邻近省份独立事故",
+        "D021 是年度例行检查，与事故分属不同安排"
+      ],
+      "forbidden_facts": [
+        "断定 D020 或 D021 由本次事故引起或导致本次事故",
+        "把语义相似当作因果证据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D020"
+      ],
+      [
+        "D021"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D020",
+        "D021"
+      ],
+      "target_event": "D001",
+      "causal_link": false,
+      "reason": "主题相似但无因果边，属无关干扰"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_166_Q09",
+    "pack_id": "166",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定救援期间现场车流短时聚集（D017）的确切发生时间及其在救援各环节中的先后顺序？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未标注 D017 的具体发生时间，先后顺序无法判断"
+      ],
+      "optional_facts": [
+        "该信息属时间不明的存疑材料"
+      ],
+      "forbidden_facts": [
+        "编造具体时间点或先后顺序",
+        "给出确定性结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "missing_dimension": "time",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

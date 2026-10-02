@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_033_Q01",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从联大一般性辩论开幕到专家对联大深远影响的解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "diplomacy_033_Q02",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "各国领导人一般性辩论（D003）和发展中国家集体发声（D005）都发生在决议通过之前，二者中哪一个对决议最终内容（D006）的塑造作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "diplomacy_033_Q03",
+    "pack_id": "033",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设本届联大没有发展中国家的集体发声（移除D005），这会对安理会改革热议（D004）和决议通过（D006）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "diplomacy_033_Q04",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中国国家主席在联大的发言（D002）与后续国际社会对联大成果的评价（D007）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "diplomacy_033_Q05",
+    "pack_id": "033",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测本届联大通过的各项决议在未来一年内的具体落实比例？"
+  },
+  {
+    "sample_id": "diplomacy_033_Q06",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "联大一般性辩论开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "diplomacy_033_Q07",
+    "pack_id": "033",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于联大开幕和中国国家主席发言（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

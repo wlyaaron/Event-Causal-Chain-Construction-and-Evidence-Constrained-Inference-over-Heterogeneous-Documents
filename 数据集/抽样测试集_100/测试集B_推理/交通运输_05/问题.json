@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，从多个环节出发，梳理导致D009（行业转型）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "transportation_005_Q02",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（善后处置）阶段（当前已知：D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "transportation_005_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（事故发生）先于D004（原因调查）发生，可以据此断定D001（事故发生）是D004（原因调查）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "transportation_005_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请概述D004（原因调查）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "transportation_005_Q05",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D004（原因调查）未曾出现，D006（善后处置）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "transportation_005_Q06",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对调查报告的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "transportation_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D001（事故发生），说明经由哪些中间事件最终导致了D008（专项整治）。"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "industrial_production_04_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（安全短板）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "industrial_production_04_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（事故发生）早于D004（调查报告），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q03",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道D006（企业处罚）阶段前进展（D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D001（事故发生）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q05",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D004（调查报告）被阻断，D005（责任追究）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q06",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示大红柳沟煤矿对抢险救援不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（事故发生）到D008（专项整治）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q08",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于大红柳沟煤矿的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "industrial_production_04_Q09",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中其他区域某单位的例行通报，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "industrial_production_04_Q10",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，大红柳沟煤矿在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "diplomacy_010_Q01",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D009（专家解读）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q02",
+    "pack_id": "10",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D003（峰会成果）被阻断，D004（双边会谈）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q03",
+    "pack_id": "10",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如果只能观察到D006（政策发布）及之前的事件，后续信息暂不可知，材料仅显示：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q04",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（外交会晤）先于D004（双边会谈）发生，可以据此断定D001（外交会晤）是D004（双边会谈）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q05",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，沿因果关系看，D003（峰会成果）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_010_Q06",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化共识落实对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "diplomacy_010_Q07",
+    "pack_id": "10",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D008（共识落实）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q08",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于中国共产党与世界政党的外交会晤事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "diplomacy_010_Q09",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的行业交流会，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q10",
+    "pack_id": "10",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中国共产党与世界政党在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

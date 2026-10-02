@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_005_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D007（社会援助）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q02",
+    "pack_id": "05",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了灾情安置事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D009（预警建设）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间上看D008（防灾短板）早于D009（预警建设），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q05",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D001（灾害发生）在时间上先于D004（灾情安置），这是否意味着二者之间存在因果关联？请说明判断逻辑。"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q06",
+    "pack_id": "05",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于D006（灾后重建）阶段（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_005_Q07",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D008（防灾短板）。"
+  }
+]

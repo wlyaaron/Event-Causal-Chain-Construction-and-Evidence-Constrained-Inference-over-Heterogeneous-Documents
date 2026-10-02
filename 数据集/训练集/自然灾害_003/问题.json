@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "natural_disaster_003_Q01",
+    "pack_id": "003",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，甘肃临夏积石山周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q02",
+    "pack_id": "003",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间上看D006（灾后重建）早于D008（防灾短板），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q03",
+    "pack_id": "003",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料显示D008（防灾短板）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q04",
+    "pack_id": "003",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（灾害发生）被阻断，D002（应急救援）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q05",
+    "pack_id": "003",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（灾后重建）阶段及之前的信息（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q06",
+    "pack_id": "003",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D009（预警建设）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q07",
+    "pack_id": "003",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（灾害发生）到D008（防灾短板）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q08",
+    "pack_id": "003",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于甘青两省的灾害发生事件，不同来源给出的关键数据不一致（官方6、另一来源7）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q09",
+    "pack_id": "003",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的例行通报，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_003_Q10",
+    "pack_id": "003",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，甘青两省在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

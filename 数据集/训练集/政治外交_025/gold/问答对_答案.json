@@ -1,0 +1,295 @@
+[
+  {
+    "sample_id": "diplomacy_025_Q01",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从G20峰会开幕到联合声明正式发布，中间经历了哪些关键的讨论和磋商环节？请梳理完整的因果传导链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（峰会开幕）→D002（核心议题讨论）→D004（联合声明发布）。峰会开幕后，各国领导人围绕全球经济形势、宏观经济政策协调、全球经济治理改革等核心议题进行深入讨论，形成初步共识；同时D003（中美会晤）和D006（发展中国家发声）也为声明内容提供了重要输入，最终促成涵盖六大领域32项共识的联合声明发布。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D004的完整因果传导链",
+        "包含核心议题讨论这一关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D002→D004",
+        "D003中美会晤和D006发展中国家发声也为声明提供输入"
+      ],
+      "forbidden_facts": [
+        "跳过讨论环节直接得出声明",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004"
+      ],
+      "stages": [
+        "峰会开幕",
+        "议题讨论",
+        "声明发布"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_025_Q02",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "核心议题讨论（D002）和中美元首会晤（D003）都发生在联合声明发布之前，二者中哪一个对声明最终内容的塑造作用更直接？请结合材料说明判断依据。",
+    "answers": "核心议题讨论（D002）对联合声明（D004）的塑造作用更直接。依据：因果关系列表中D002→D004为直接因果（certain），而D003→D004为间接传导（probable）。核心议题讨论是各国领导人就全球经济治理、气候变化、数字经济等声明涵盖的六大领域直接进行磋商和共识形成的过程，是声明内容的主要来源；而中美会晤主要聚焦双边关系，对多边声明的影响是间接的。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D002对D004的塑造更直接",
+        "依据是D002→D004为直接因果关系"
+      ],
+      "optional_facts": [
+        "D003→D004为间接传导",
+        "D002是声明六大领域内容的主要磋商过程"
+      ],
+      "forbidden_facts": [
+        "判断D003更直接且无合理依据",
+        "混淆双边会晤与多边讨论的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D002 vs D003对D004的塑造",
+      "more_direct": "D002",
+      "reason": "D002→D004为直接因果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_025_Q03",
+    "pack_id": "025",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设本次峰会期间没有安排中美元首双边会晤，这会对联合声明的发布（D004）和国际社会评价（D007）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有中美元首会晤，联合声明（D004）仍会发布，但内容中涉及大国关系协调的部分可能弱化；国际社会评价（D007）的积极程度会明显下降。连锁影响：D003是本次峰会最受国际关注的亮点之一，外媒普遍将其视为峰会最大亮点。没有中美会晤，峰会的国际关注度和媒体评价会降低，D007中关于'多边主义胜利'的评价可能改为'有进展但缺乏突破'。受影响的关键边为[['D003','D004'],['D004','D007']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断联合声明仍会发布但内容可能弱化",
+        "说明国际评价积极程度会下降"
+      ],
+      "optional_facts": [
+        "D003是峰会最受关注的亮点",
+        "外媒普遍高度评价中美会晤"
+      ],
+      "forbidden_facts": [
+        "断言没有会晤声明就不会发布",
+        "忽视D002对声明的直接推动作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D004",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "取消中美元首会晤",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "声明仍发布但内容弱化，国际评价积极度下降"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_025_Q04",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "发展中国家在峰会上的发声（D006）与后续专家对峰会的深度解读（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D006（发展中国家发声）→D004（联合声明发布）→D008（专家深度解读）。具体来说，发展中国家在峰会上提出的改革全球经济治理、增加话语权、气候融资等诉求，被纳入了联合声明的相关内容；而专家在深度解读峰会时，将'全球南方崛起重塑全球治理'列为三大深远影响之一，这正是对D006所反映趋势的分析和回应。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D004联合声明这一中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D006→D004→D008",
+        "专家将'全球南方崛起'列为三大影响之一"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D006到D008的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D004",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediate",
+      "intermediate": "D004",
+      "path": "D006→D004→D008"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_025_Q05",
+    "pack_id": "025",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测本次G20峰会达成的32项合作共识在未来一年内的具体落实比例？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性比例",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_025_Q06",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "G20峰会开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（核心议题讨论）、D003（中美元首会晤）、D006（发展中国家发声）。这三项都是峰会开幕后当天即开展的核心活动。证据：峰会开幕后随即进入第一阶段会议进行议题讨论，当天下午举行中美元首会晤，发展中国家领导人也在当天的讨论中发声。D004、D005、D007、D008、D009均为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002核心议题讨论",
+        "D001直接导致D003中美元首会晤",
+        "D001直接导致D006发展中国家发声"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D004声明发布等为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D006这一直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D006"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_025_Q07",
+    "pack_id": "025",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于峰会开幕和核心议题讨论（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003中美元首会晤——G20峰会期间大国领导人双边会晤是常规安排，中美关系备受关注，会晤几乎是必然的；第二，D005经贸合作成果达成——峰会期间各国通常会签署一系列合作协议，这是峰会的重要务实成果；第三，D004联合声明发布——每次G20峰会结束时都会发表联合声明，这是峰会的标准收官环节。依据：G20峰会的标准流程包括多边讨论、双边会晤、成果签署、声明发布等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003中美会晤、D005成果达成、D004声明发布",
+        "还可能发生D006发展中国家发声、D007国际评价等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-12-01",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D005",
+        "D004"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

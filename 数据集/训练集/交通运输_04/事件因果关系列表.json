@@ -1,0 +1,121 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "MH370航班失联直接触发了多国联合搜救行动的启动，26个国家相继派出舰船和飞机参与搜索",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D003",
+    "relation_type": "递进关系",
+    "description": "水面和空中搜索未能发现残骸后，搜救力量转入水下黑匣子信号搜索阶段，使用专业水下探测设备",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "航班失联后卫星握手数据显示飞机继续飞行7小时，经多普勒分析确定飞机终结于南印度洋，马来西亚总理据此宣布结论",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "确认飞机终结于南印度洋后，搜索力量从广泛水面搜索转入针对性的深海拖曳声呐系统搜索",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "黑匣子电池耗尽且初步AUV搜索无果后，需要更大范围、更系统的深海声呐搜索来覆盖整个第七弧线区域",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "深海搜索持续进行期间，海洋漂流将飞机碎片带到留尼汪岛等海岸，被当地居民发现并经鉴定确认属于MH370",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "残骸碎片的发现为调查提供了实物证据，结合多年搜索和分析结果，最终促成了最终调查报告的编制和发布",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "MH370失联事件暴露了全球民航安全体系的重大漏洞，直接推动了国际民航组织实施一系列安全改革措施",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "最终调查报告提出的35条安全改进建议，为全球航空安全体系改革提供了具体方向和实施依据",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "国际搜救过程中获取的卫星数据和雷达信息，为确定飞机终结位置提供了关键数据支撑",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "因果关系",
+    "description": "航班失联后，为尽快找到飞机和获取飞行数据，搜救力量紧急展开黑匣子水下信标信号搜索",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "确认飞机坠入南印度洋后，海洋环流模型预测碎片可能漂流至东非海岸，调查人员据此在相关区域开展残骸搜寻",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "大规模深海搜索虽未找到主体残骸，但积累了详尽的海底数据和搜索经验，为最终调查报告提供了重要依据",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "黑匣子信号搜索阶段获取的疑似信号数据和分析结果，被纳入最终调查报告作为重要参考信息",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "残骸碎片的发现和分析推动了对飞机漂浮特性的研究，间接促进了可抛放式飞行记录器等安全技术的研发",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "大规模国际搜救中暴露出的空管协作和航班跟踪问题，成为推动全球航空安全改革的重要动因",
+    "pack_id": "04"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "MH370失联事件本身是最终调查报告的调查对象，整个报告围绕失联的原因、过程和影响展开",
+    "pack_id": "04"
+  }
+]

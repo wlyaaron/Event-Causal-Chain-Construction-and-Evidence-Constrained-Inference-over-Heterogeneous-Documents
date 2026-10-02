@@ -1,0 +1,301 @@
+[
+  {
+    "sample_id": "public_safety_014_Q01",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故发生）先于D005（调查报告）发生，可以据此断定D001（事故发生）是D005（调查报告）的原因吗？请说明。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D005 的因果边；其直接原因是D002（挂牌督办）、D004（问责处理）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D005（调查报告） 只是时间先后",
+        "材料中不存在 D001→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D005（调查报告）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_014_Q02",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D005（调查报告）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（事故发生） → D002（挂牌督办） → D005（调查报告）。起点为事故发生，终点为调查报告；查清事故原因和责任。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D005（调查报告） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D005（调查报告）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（挂牌督办） → D005（调查报告）",
+        "可包含关键环节 D002（挂牌督办）",
+        "终点影响：查清事故原因和责任"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D005"
+      ],
+      "stages": [
+        "事故发生",
+        "挂牌督办",
+        "调查报告"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_014_Q03",
+    "pack_id": "014",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对挂牌督办的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_014_Q04",
+    "pack_id": "014",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：如果移除D002（挂牌督办）这一原因，D005（调查报告）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "判断：若移除D002，D005很可能不会发生或将显著改变。依据：D002是D005的直接原因（直接因果），移除后受影响的因果边包括 [['D002', 'D005']]。相应地，查清事故原因和责任 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_014_Q05",
+    "pack_id": "014",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2021-06-16前进展（D001 事故发生；D002 挂牌督办；D003 行业部署）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "后续实际发生：D004（问责处理）、D005（调查报告）。其中关键进展为问责处理：对34名公职人员严肃追责问责。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D004:问责处理"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D005（调查报告）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-06-16",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003"
+      ],
+      "hidden_events": [
+        "D004",
+        "D005"
+      ],
+      "ground_truth": "D004:问责处理"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_014_Q06",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请依据材料说明D003（行业部署）的基本事实与直接影响。",
+    "answers": "D003（行业部署）：住房和城乡建设部在全国，召开视频会议部署住房和城乡建设领域安全隐患排查。影响：全国住建系统启动燃气安全专项排查整治工作。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：住房和城乡建设部",
+        "地点：全国",
+        "基本事实：召开视频会议部署住房和城乡建设领域安全隐患排查"
+      ],
+      "optional_facts": [
+        "影响：全国住建系统启动燃气安全专项排查整治工作"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D003"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_014_Q07",
+    "pack_id": "014",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D002（挂牌督办）发生在D005（调查报告）之前，这是否足以说明D002（挂牌督办）是D005（调查报告）的原因？请说明理由。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D002→D005（直接因果）。证据：公布事故调查报告。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（挂牌督办） 与 D005（调查报告） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（调查报告） 导致 D002（挂牌督办）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D005"
+      ],
+      [
+        "D002",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D005",
+      "temporal_order": "D002先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  }
+]

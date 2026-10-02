@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_039_Q01",
+    "pack_id": "039",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D007（隐患排查整治），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_039_Q02",
+    "pack_id": "039",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（火灾事故发生）在D002（应急救援处置）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_039_Q03",
+    "pack_id": "039",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（火灾事故发生）这一原因，D002（应急救援处置）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_039_Q04",
+    "pack_id": "039",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（责任追究处理），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_039_Q05",
+    "pack_id": "039",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？"
+  },
+  {
+    "sample_id": "public_safety_039_Q06",
+    "pack_id": "039",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（火灾事故发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_039_Q07",
+    "pack_id": "039",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2024-02-24（D001 火灾事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 事故挂牌督办；D005 起火原因初步查明），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

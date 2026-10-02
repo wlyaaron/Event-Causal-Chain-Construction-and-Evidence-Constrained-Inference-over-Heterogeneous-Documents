@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_201_Q01",
+    "pack_id": "201",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对外交会晤的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "diplomacy_201_Q02",
+    "pack_id": "201",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，截至D006（政策发布）阶段，材料仅显示：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "diplomacy_201_Q03",
+    "pack_id": "201",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D001（外交会晤）所代表的条件被移除，后续的D002（官方声明）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_201_Q04",
+    "pack_id": "201",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D004（双边会谈）早于D005（多边场合），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "diplomacy_201_Q05",
+    "pack_id": "201",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请概述D010（国际评价）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "diplomacy_201_Q06",
+    "pack_id": "201",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_201_Q07",
+    "pack_id": "201",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请还原从D001（外交会晤）到D008（共识落实）的完整因果传导过程，并按序列出证据。"
+  }
+]

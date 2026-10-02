@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_008_Q01",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D004（专家科普）没有发生（或被及时干预阻断），D006（防控政策）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "healthcare_008_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D003（临床救治）早于D004（专家科普），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "healthcare_008_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D007（体系建设）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "healthcare_008_Q04",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（长期影响），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "healthcare_008_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（疫情通报）到D008（医保政策）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "healthcare_008_Q06",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如果只能观察到D006（防控政策）及之前的事件，后续信息暂不可知，（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "healthcare_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D008（医保政策）直接导致了什么？请依据材料作答。"
+  }
+]

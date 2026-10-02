@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "economy_trade_008_Q01",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如果只能观察到D006（中小企业影响）及之前的事件，后续信息暂不可知，（当前已知：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D008（成效评估）早于D009（趋势展望），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q03",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，假如当初D004（专家分析）未曾出现，D006（中小企业影响）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q04",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定战略意义是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "economy_trade_008_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（趋势展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q06",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "结合材料，《D012.txt》中的邻近/相似信息与主线D001（政策落地）是否存在因果联系？请辨析。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D002（市场反应）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q08",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于海南省的政策落地事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "economy_trade_008_Q09",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的例行通报，是否与主线事件政策落地（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "economy_trade_008_Q10",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，海南省在该政策落地事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

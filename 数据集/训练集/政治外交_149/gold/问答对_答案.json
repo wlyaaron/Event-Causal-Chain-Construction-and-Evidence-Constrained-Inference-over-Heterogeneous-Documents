@@ -1,0 +1,399 @@
+[
+  {
+    "sample_id": "diplomacy_149_Q01",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D003（峰会成果）在D004（双边会谈）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D003→D004（直接因果）。证据：国际关系专家对2023-04-05的马克龙访华进行了深入解读。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（峰会成果） 与 D004（双边会谈） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D003 先于 D004"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D004（双边会谈） 导致 D003（峰会成果）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D003",
+      "event_b": "D004",
+      "temporal_order": "D003先于D004",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_149_Q02",
+    "pack_id": "149",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化共识落实对区域经济未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_149_Q03",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "梳理可得因果路径：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）。外交会晤触发链条，最终形成专家解读；签署航空核能合作。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D009（专家解读） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D009（专家解读）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实） → D009（专家解读）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "可包含关键环节 D008（共识落实）",
+        "终点影响：签署航空核能合作"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实",
+        "专家解读"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_149_Q04",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，法国总统马克龙相关的D004（双边会谈）发生后，紧接着出现的直接结果是什么？",
+    "answers": "D004（双边会谈）直接导致了D005（多边场合）。依据：马克龙访华引发国际社会广泛关注。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（双边会谈） 直接导致 D005（多边场合）",
+        "后果：马克龙访华引发国际社会广泛关注"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（多边场合） 导致 D004（双边会谈）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_149_Q05",
+    "pack_id": "149",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D003（峰会成果）被阻断，D004（双边会谈）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "移除D003后，D004及其连锁后果很可能不成立。D003系D004的直接原因（直接因果），受影响边为 [['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；签署航空核能合作 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_149_Q06",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，法国总统马克龙相关的D001（外交会晤）发生后，紧接着出现的直接结果是什么？",
+    "answers": "材料表明，D001（外交会晤）的直接结果是D002（官方声明）；针对2023-04-05发生的马克龙访华，外交部发言人在例行记者会上作出回应。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（外交会晤） 直接导致 D002（官方声明）",
+        "后果：针对2023-04-05发生的马克龙访华，外交部发言人在例行记者会上作出回应"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（官方声明） 导致 D001（外交会晤）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_149_Q07",
+    "pack_id": "149",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（外交会晤）到D008（共识落实）的完整因果传导过程，并按序列出证据。",
+    "answers": "按证据顺序，成因链为 D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）。自外交会晤出发逐环传导至共识落实；签署航空核能合作。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（外交会晤） 到终点 D008（共识落实） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（外交会晤）",
+        "终点为 D008（共识落实）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（外交会晤） → D002（官方声明） → D003（峰会成果） → D004（双边会谈） → D006（政策发布） → D008（共识落实）",
+        "可包含关键环节 D002（官方声明）",
+        "可包含关键环节 D003（峰会成果）",
+        "可包含关键环节 D004（双边会谈）",
+        "可包含关键环节 D006（政策发布）",
+        "终点影响：签署航空核能合作"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "外交会晤",
+        "官方声明",
+        "峰会成果",
+        "双边会谈",
+        "政策发布",
+        "共识落实"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

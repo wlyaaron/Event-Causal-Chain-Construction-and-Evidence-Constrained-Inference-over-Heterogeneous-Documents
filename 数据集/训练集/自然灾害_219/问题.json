@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_219_Q01",
+    "pack_id": "219",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2001年印度古吉拉特地震的基本情况是怎样的？造成了多大的人员伤亡和财产损失？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q02",
+    "pack_id": "219",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "古吉拉特地震的救援工作是如何开展的？面临哪些主要困难？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q03",
+    "pack_id": "219",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "地震后灾民安置和卫生防疫工作是如何开展的？取得了什么成效？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q04",
+    "pack_id": "219",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "古吉拉特地震的地质成因是什么？为什么破坏力如此巨大？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q05",
+    "pack_id": "219",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "古吉拉特大地震留下了哪些深刻的防灾减灾教训？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q06",
+    "pack_id": "219",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如果类似强度的地震再次发生在人口密集地区，如何才能有效减少人员伤亡？"
+  },
+  {
+    "sample_id": "natural_disaster_219_Q07",
+    "pack_id": "219",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "古吉拉特地震的灾后重建经验对其他地震灾区有哪些借鉴意义？"
+  }
+]

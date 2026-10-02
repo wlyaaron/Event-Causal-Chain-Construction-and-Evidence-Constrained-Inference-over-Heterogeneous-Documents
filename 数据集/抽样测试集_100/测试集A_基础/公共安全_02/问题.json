@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_002_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（安全事件/风险发生）在进程上早于D004（责任追究）。能否据此认为D001（安全事件/风险发生）导致了D004（责任追究）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_002_Q02",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D002（事故原因认定）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_002_Q03",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D005（司法审判）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_002_Q04",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，从多个环节出发，梳理导致D005（司法审判）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "public_safety_002_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D001（安全事件/风险发生）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "public_safety_002_Q06",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于2014-01（D001 安全事件/风险发生；D002 事故原因认定；D003 事故原因认定），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_002_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，已知D004（责任追究）先于D005（司法审判）出现，可否仅凭先后顺序认定二者的因果关系？"
+  }
+]

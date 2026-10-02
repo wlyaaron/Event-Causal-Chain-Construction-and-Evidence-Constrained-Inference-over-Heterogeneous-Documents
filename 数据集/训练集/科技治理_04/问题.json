@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_04_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "滴滴出行App是在哪一天被国家互联网信息办公室通知下架的？下架的直接原因是什么？"
+  },
+  {
+    "sample_id": "technology_governance_04_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "滴滴赴美上市与随后的网络安全审查之间存在怎样的因果关系？为什么上市会触发监管行动？"
+  },
+  {
+    "sample_id": "technology_governance_04_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：滴滴25款App被下架、七部门联合进驻调查、滴滴从纽交所退市、国家网信办公布行政处罚决定、滴滴出行App重新上架。"
+  },
+  {
+    "sample_id": "technology_governance_04_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "滴滴出行App被下架和滴滴旗下25款App被全面下架这两次监管行动在范围和影响上有什么不同？"
+  },
+  {
+    "sample_id": "technology_governance_04_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国家网信办对滴滴处以80.26亿元罚款，这一处罚金额是基于哪些违法事实做出的？请结合具体数据说明。"
+  },
+  {
+    "sample_id": "technology_governance_04_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括滴滴网络安全审查事件对中国互联网行业监管和数据安全制度建设产生的主要影响。"
+  },
+  {
+    "sample_id": "technology_governance_04_Q07",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设滴滴在赴美上市前主动申报了网络安全审查并通过了审查，后续的事件发展可能会有什么不同？"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "transportation_009_Q01",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（行业转型），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "transportation_009_Q02",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示Freemantle Highway对隐患分析不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "transportation_009_Q03",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请概括D010（调查报告）的相关要素，包括主体、地点和主要影响。"
+  },
+  {
+    "sample_id": "transportation_009_Q04",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故发生）先于D004（原因调查）发生，可以据此断定D001（事故发生）是D004（原因调查）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "transportation_009_Q05",
+    "pack_id": "09",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D002（现场救援）所代表的条件被移除，后续的D003（官方部署）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "transportation_009_Q06",
+    "pack_id": "09",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "当观测范围限定在D006（善后处置）阶段及之前时，（当前已知：D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "transportation_009_Q07",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从D001（事故发生）到D008（专项整治），中间经过了哪些事件传导？请结合材料按序说明并给出证据。"
+  },
+  {
+    "sample_id": "transportation_009_Q08",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于Freemantle Highway的事故发生事件，不同来源给出的关键数据不一致（官方3000、另一来源3600）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "transportation_009_Q09",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区Freemantle Highway的常规演练，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "transportation_009_Q10",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，Freemantle Highway在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

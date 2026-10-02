@@ -1,0 +1,147 @@
+[
+  {
+    "sample_id": "natural_disaster_224_Q01",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾后恢复重建情况如何？涌现了哪些先锋事迹？",
+    "answers": "当地坚持科学规划、以人为本推进重建，严格执行工程设防标准、提高抗灾能力，努力建设更安全宜居的新家园。抗灾一线涌现出众多冲锋在前、无私奉献的先锋，党员干部和救援人员把危险留给自己、把安全带给群众，汇聚起磅礴精神力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_224_Q02",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2016年江西发生严重气象干旱是怎样发生的？造成了怎样的影响？",
+    "answers": "2016年江西发生严重气象干旱。灾害由长期少雨高温致气象水文干旱引发，造成一定人员伤亡和财产损失，部分房屋、道路、电力、通信等设施受损，众多群众不同程度受灾。灾情发生后当地立即启动应急响应，组织多方力量第一时间赶赴一线全力搜救被困群众、救治受伤人员。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_224_Q03",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾害发生后开展了哪些抢险救援和转移安置工作？",
+    "answers": "现场救援指挥部统一指挥、科学调度，各救援力量分区分组搜救被困群众、抢通受阻道路，克服恶劣天气和次生灾害威胁逐片搜救。当地坚持应转尽转、不落一人紧急转移群众，安置点物资和医疗防疫等服务同步跟进、保障有力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_224_Q04",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何指挥调度抗灾救灾工作？",
+    "answers": "有关主管部门迅速启动应急响应，派出工作组赶赴一线指导，紧急调拨救灾资金物资、统筹调度专业救援力量。有关方面强调压紧压实责任、加强会商研判、科学调度力量、坚决防范次生灾害，并加快抢修基础设施、尽快恢复生产生活秩序。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_224_Q05",
+    "pack_id": "224",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾情评估和救助帮扶是如何开展的？",
+    "answers": "灾情评估组深入受灾区域逐村逐户核查评估，全面摸清受灾底数、确保数据真实准确，为救助重建提供依据。社会各界踊跃支援，救援队伍、物资、捐赠源源汇向灾区，有关部门坚持公开透明、精准发放，确保爱心及时送到受灾群众手中。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_224_Q06",
+    "pack_id": "224",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次灾害将如何推动防灾减灾救灾能力的提升？",
+    "answers": "预计此次灾害将推动防灾减灾救灾能力整体提升。预计将健全以防为主、防抗救相结合的体制机制，补短板堵漏洞强弱项；预计将加强监测预警体系和防灾基础设施建设、提高工程设防标准；预计将加强科普宣传和应急演练，全面提升全社会综合防灾减灾能力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D007"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_224_Q07",
+    "pack_id": "224",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次抗灾救灾对凝聚精神力量、建设美好家园将产生怎样的影响？",
+    "answers": "预计此次抗灾救灾将进一步凝聚众志成城、共克时艰的强大精神力量。预计将激励广大干部群众自力更生、重建家园，把灾区建设得更加安全美好；预计将弘扬一方有难、八方支援的守望相助精神；预计将彰显人民至上、生命至上理念，凝聚起战胜困难的磅礴力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

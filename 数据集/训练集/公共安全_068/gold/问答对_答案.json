@@ -1,0 +1,297 @@
+[
+  {
+    "sample_id": "public_safety_068_Q01",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，请依据材料说明D004（专项整治行动）的基本事实与直接影响。",
+    "answers": "据材料，D004（专项整治行动）的主体为温州市消防救援支队，发生地为浙江省温州市；打出防控组合拳，零容忍检查、全覆盖宣传、长效化管理，筑牢小微园区安全墙。其影响：形成齐抓共管良好局面。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：温州市消防救援支队",
+        "地点：浙江省温州市",
+        "基本事实：打出防控组合拳，零容忍检查、全覆盖宣传、长效化管理，筑牢小微园区安全墙"
+      ],
+      "optional_facts": [
+        "影响：形成齐抓共管良好局面"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D004"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_068_Q02",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，已知D008（政策制度出台）先于D005（监管政策发布）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D008→D005（直接因果）。证据：发出紧急通知要求强化消防安全防范。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D008（政策制度出台） 与 D005（监管政策发布） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D008 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（监管政策发布） 导致 D008（政策制度出台）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D008",
+      "event_b": "D005",
+      "temporal_order": "D008先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_068_Q03",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D005（监管政策发布）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "完整因果链：D008（政策制度出台） → D005（监管政策发布）。其中，政策制度出台为起点，经逐级传导，最终导致监管政策发布；推动各地加强小微企业消防安全监管。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D008（政策制度出台） 到终点 D005（监管政策发布） 的有向因果链（顺序不可颠倒）",
+        "起点为 D008（政策制度出台）",
+        "终点为 D005（监管政策发布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D008（政策制度出台） → D005（监管政策发布）",
+        "终点影响：推动各地加强小微企业消防安全监管"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D008",
+        "D005"
+      ],
+      "stages": [
+        "政策制度出台",
+        "监管政策发布"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_068_Q04",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，从多个环节出发，梳理导致D005（监管政策发布）的完整因果路径，并标明证据顺序。",
+    "answers": "该结果由一条有向因果链推动：D008（政策制度出台） → D005（监管政策发布）。起点为政策制度出台，终点为监管政策发布；推动各地加强小微企业消防安全监管。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D008（政策制度出台） 到终点 D005（监管政策发布） 的有向因果链（顺序不可颠倒）",
+        "起点为 D008（政策制度出台）",
+        "终点为 D005（监管政策发布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D008（政策制度出台） → D005（监管政策发布）",
+        "终点影响：推动各地加强小微企业消防安全监管"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D008",
+        "D005"
+      ],
+      "stages": [
+        "政策制度出台",
+        "监管政策发布"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_068_Q05",
+    "pack_id": "068",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2026-07-12（D001 专项整治行动；D008 政策制度出台；D004 专项整治行动；D003 监管模式创新；D006 监管标准提高），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "预测后续进展为：D005（监管政策发布）、D007（联合惩戒措施）、D002（专项整治行动）。核心节点是监管政策发布：发出紧急通知要求强化消防安全防范。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:监管政策发布"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（联合惩戒措施）, D002（专项整治行动）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D008",
+        "D004",
+        "D003",
+        "D006",
+        "D005",
+        "D007",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-07-12",
+      "visible_events": [
+        "D001",
+        "D008",
+        "D004",
+        "D003",
+        "D006"
+      ],
+      "hidden_events": [
+        "D005",
+        "D007",
+        "D002"
+      ],
+      "ground_truth": "D005:监管政策发布"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_068_Q06",
+    "pack_id": "068",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D008（政策制度出台）所代表的条件被移除，后续的D005（监管政策发布）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "移除D008后，D005及其连锁后果很可能不成立。D008系D005的直接原因（直接因果），受影响边为 [['D008', 'D005'], ['D005', 'D002']]；推动各地加强小微企业消防安全监管 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D008是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D005"
+      ],
+      [
+        "D008",
+        "D002"
+      ],
+      [
+        "D008",
+        "D001",
+        "D004"
+      ],
+      [
+        "D008",
+        "D005",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D008",
+      "affected_edges": [
+        [
+          "D008",
+          "D005"
+        ],
+        [
+          "D005",
+          "D002"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D008是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_068_Q07",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D008（政策制度出台）在时间/进程上早于D005（监管政策发布）。能否据此断定D008（政策制度出台）导致了D005（监管政策发布）？请给出判断与证据。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D008→D005（直接因果）。证据：发出紧急通知要求强化消防安全防范。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D008（政策制度出台） 与 D005（监管政策发布） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D008 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（监管政策发布） 导致 D008（政策制度出台）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D008",
+      "event_b": "D005",
+      "temporal_order": "D008先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  }
+]

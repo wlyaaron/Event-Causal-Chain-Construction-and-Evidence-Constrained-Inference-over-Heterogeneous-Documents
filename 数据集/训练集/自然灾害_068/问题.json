@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "natural_disaster_068_Q01",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（灾害发生），说明经由哪些中间事件最终导致了D009（预警建设）。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q02",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D004（灾情安置）发生在D005（成因分析）之前，这是否足以说明D004（灾情安置）是D005（成因分析）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q03",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D006（灾后重建）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q04",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（防灾短板）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q05",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于此次灾害紧急转移安置群众的规模，不同材料的说法是否一致？应如何看待？"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q06",
+    "pack_id": "068",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D003（官方通报）没有发生（或被及时干预阻断），D004（灾情安置）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q07",
+    "pack_id": "068",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（灾后重建）阶段（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q08",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到地中海沿岸城市举办地中海沿岸文化节，这与德尔纳溃坝灾区的抢险救援、群众安置存在因果关系吗？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_068_Q09",
+    "pack_id": "068",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到有关方面或将追加一份专项投资支持方案，请说明该方案的具体投资总额、牵头部门和实施时间。"
+  }
+]

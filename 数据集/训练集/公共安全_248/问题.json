@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_248_Q01",
+    "pack_id": "248",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "贵州盘江金佳煤矿发生了什么事故？事故的基本情况是怎样的？"
+  },
+  {
+    "sample_id": "public_safety_248_Q02",
+    "pack_id": "248",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "煤与瓦斯突出事故的救援工作面临哪些困难？盘江煤矿事故是如何开展救援的？"
+  },
+  {
+    "sample_id": "public_safety_248_Q03",
+    "pack_id": "248",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "煤矿瓦斯防治工作的重点是什么？如何才能有效防范瓦斯事故？"
+  },
+  {
+    "sample_id": "public_safety_248_Q04",
+    "pack_id": "248",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "盘江煤矿事故的调查处理结果是怎样的？暴露出了哪些问题？"
+  },
+  {
+    "sample_id": "public_safety_248_Q05",
+    "pack_id": "248",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "如何构建煤矿安全生产长效机制，从根本上保障矿工安全？"
+  },
+  {
+    "sample_id": "public_safety_248_Q06",
+    "pack_id": "248",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如果煤矿发生煤与瓦斯突出事故，现场人员应该如何正确处置才能最大限度减少伤亡？"
+  },
+  {
+    "sample_id": "public_safety_248_Q07",
+    "pack_id": "248",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "如何才能从根本上减少煤矿瓦斯事故，实现煤矿安全生产形势持续好转？"
+  }
+]

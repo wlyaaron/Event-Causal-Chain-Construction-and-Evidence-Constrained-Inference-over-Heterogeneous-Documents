@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "energy_environment_008_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D009（科技创新）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q02",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（产业发展）阶段前进展（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料显示D004（环保讨论）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q04",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（政策发布）到D008（绿色路径）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q05",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示国家能源局对科技创新不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q06",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D008（绿色路径）所代表的条件被移除，后续的D009（科技创新）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "energy_environment_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D001（政策发布）在D002（权威解读）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "energy_environment_008_Q08",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于国家能源局的政策发布事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "energy_environment_008_Q09",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的例行通报，是否与主线事件政策发布（D001）构成因果关系？请判断并说明。（请结合材料作答）"
+  },
+  {
+    "sample_id": "energy_environment_008_Q10",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，国家能源局在该政策发布事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

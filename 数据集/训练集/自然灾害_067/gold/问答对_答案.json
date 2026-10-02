@@ -1,0 +1,453 @@
+[
+  {
+    "sample_id": "natural_disaster_067_Q01",
+    "pack_id": "067",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（灾害发生）被阻断，D002（应急救援）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，夏季海冰面积创第六低 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q02",
+    "pack_id": "067",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示北极对官方通报不负有任何责任，请解释后续处理的依据。",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“夏季海冰面积创第六低”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q03",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D009（预警建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）。起点为灾害发生，终点为预警建设；夏季海冰面积创第六低。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D009（预警建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D009（预警建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "可包含关键环节 D008（防灾短板）",
+        "终点影响：夏季海冰面积创第六低"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板",
+        "预警建设"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q04",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D002（应急救援）直接导致了什么？请依据材料作答。",
+    "answers": "直接因果链为 D002（应急救援） → D003（官方通报）。后果：针对2023-09-18发生在北极的北极海冰。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（应急救援） 直接导致 D003（官方通报）",
+        "后果：针对2023-09-18发生在北极的北极海冰"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D003（官方通报） 导致 D002（应急救援）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D003"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q05",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D001（灾害发生）直接引发了哪一事件？请指出并说明依据。",
+    "answers": "D001（灾害发生）直接导致了D002（应急救援）。依据：北极海冰发生后，北极立即调集专业救援队伍赶赴北极灾区。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（灾害发生） 直接导致 D002（应急救援）",
+        "后果：北极海冰发生后，北极立即调集专业救援队伍赶赴北极灾区"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（应急救援） 导致 D001（灾害发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q06",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D004（灾情安置）早于D005（成因分析），但这能否证明因果？请依据材料判断。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D004→D005（直接因果），而非单纯时间顺序。证据：针对2023-09-18的北极海冰，北极的气象地质专家进行深入分析。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（灾情安置） 与 D005（成因分析） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（成因分析） 导致 D004（灾情安置）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_067_Q07",
+    "pack_id": "067",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，沿因果链解释D008（防灾短板）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "该结果由一条有向因果链推动：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）。起点为灾害发生，终点为防灾短板；夏季海冰面积创第六低。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D008（防灾短板） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D008（防灾短板）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "终点影响：夏季海冰面积创第六低"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_007_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（事故发生）先于D005（检察介入）发生，可以据此断定D001（事故发生）是D005（检察介入）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_007_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D010（全国部署）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "public_safety_007_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：材料中关于D010（全国部署）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "public_safety_007_Q04",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D007（善后安置）这一原因，D008（善后结束）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D007（善后安置），说明经由哪些中间事件最终导致了D008（善后结束）。"
+  },
+  {
+    "sample_id": "public_safety_007_Q06",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示现场救援指挥部对搜救结束不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "public_safety_007_Q07",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2015-08-27（D001 事故发生；D002 领导赴现场；D003 成立调查组；D004 伤亡通报；D007 善后安置；D005 检察介入），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_007_Q08",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于瑞海国际物流有限公司的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_007_Q09",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区现场救援指挥部的行业交流会，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_007_Q10",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，瑞海国际物流有限公司在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

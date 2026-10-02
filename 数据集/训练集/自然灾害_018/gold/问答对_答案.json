@@ -1,0 +1,394 @@
+[
+  {
+    "sample_id": "natural_disaster_018_Q01",
+    "pack_id": "018",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（自然灾害） → D003（灾情通报） → D006（灾后重建） → D008（媒体评论） → D009（成果落实） → D010（机制建设） → D011（成效显现）。自然灾害触发链条，历经灾情通报、恢复重建、评论引导、成果落实和机制建设，最终成效显现；群众获得感、安全感不断增强。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D011（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D011（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D003（灾情通报） → D006（灾后重建） → D008（媒体评论） → D009（成果落实） → D010（机制建设） → D011（成效显现）",
+        "可包含关键环节 D008（媒体评论）",
+        "终点影响：群众获得感、安全感不断增强"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      [
+        "D009",
+        "D010",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D006",
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ],
+      "stages": [
+        "自然灾害",
+        "灾情通报",
+        "灾后重建",
+        "媒体评论",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q02",
+    "pack_id": "018",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（自然灾害）在D002（应急响应）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：为山西防汛救灾提供有力支持和物资资金保障。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 与 D002（应急响应） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急响应） 导致 D001（自然灾害）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q03",
+    "pack_id": "018",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（自然灾害）这一原因，D002（应急响应）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D004']]；为山西防汛救灾提供有力支持和物资资金保障 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q04",
+    "pack_id": "018",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（媒体评论），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（自然灾害） → D002（应急响应） → D004（应急救援） → D008（媒体评论）。起点为自然灾害，终点为媒体评论；凝聚共识，激励灾后重建，警示加强防灾减灾能力建设。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（自然灾害） 到终点 D008（媒体评论） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（自然灾害）",
+        "终点为 D008（媒体评论）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（自然灾害） → D002（应急响应） → D004（应急救援） → D008（媒体评论）",
+        "可包含关键环节 D002（应急响应）",
+        "终点影响：凝聚共识，激励灾后重建，警示加强防灾减灾能力建设"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D008"
+      ],
+      "stages": [
+        "自然灾害",
+        "应急响应",
+        "应急救援",
+        "媒体评论"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q05",
+    "pack_id": "018",
+    "question_type": "conflicting",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本次山西秋汛造成的直接经济损失，不同来源的说法是否一致？应如何看待其中的矛盾？",
+    "answers": "不一致，存在相互矛盾的说法：一份初步统计称直接经济损失约50.29亿元，另有部门估计约48亿元（见D013）。两组数字来源不同、口径有别，相互矛盾，不能简单取其一作为定论，具体损失金额有待权威机构进一步核灾后最终核实。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出直接经济损失存在相互矛盾的两种说法（约50.29亿元 vs 约48亿元）",
+        "指出应以权威机构最终核实为准，不能武断采信某一数字"
+      ],
+      "optional_facts": [
+        "矛盾来源：一份初步统计与另一部门估计口径不同",
+        "两组数字分别约为50.29亿元与48亿元"
+      ],
+      "forbidden_facts": [
+        "断言某一数字即为确定的最终答案",
+        "编造材料中不存在的数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "numeric_inconsistency",
+      "sources": [
+        "初步统计：直接经济损失约50.29亿元",
+        "部门估计：直接经济损失约48亿元"
+      ],
+      "resolution": "有待权威机构最终核实"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q06",
+    "pack_id": "018",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+    "answers": "D002（应急响应）是D001（自然灾害）的直接后果。证据：为山西防汛救灾提供有力支持和物资资金保障。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（自然灾害） 直接导致 D002（应急响应）",
+        "后果：为山西防汛救灾提供有力支持和物资资金保障"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（应急响应） 导致 D001（自然灾害）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q07",
+    "pack_id": "018",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2021-10-07（D001 自然灾害；D002 应急响应；D003 灾情通报；D004 应急救援），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（群众安置）、D006（灾后重建）、D007（农业救灾）、D008（媒体评论）；其中最关键的是群众安置——保障受灾群众基本生活，维护灾区社会稳定。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:群众安置"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（灾后重建）、D007（农业救灾）、D008（媒体评论）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-10-07",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q08",
+    "pack_id": "018",
+    "question_type": "distractor",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到邻近地区举办晋祠民俗文化节，这与山西灾区的农业救灾、秋收秋种存在因果关系吗？请判断并说明。",
+    "answers": "没有因果关系。晋祠民俗文化节（D015）只是邻近地区如期举办的一年一度民俗活动，与山西灾区的农业救灾、秋收秋种工作并无直接关联，属于语义相近但无关的干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判定晋祠民俗文化节与农业救灾/秋收秋种无因果关系",
+        "指出其为无关干扰信息，不应纳入因果推理"
+      ],
+      "optional_facts": [
+        "该活动只是邻近地区例行举办的民俗文化节"
+      ],
+      "forbidden_facts": [
+        "将晋祠民俗文化节认定为农业救灾的原因或结果",
+        "编造二者之间的因果联系"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D015",
+      "is_relevant": false,
+      "note": "语义相近的无关干扰事件"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_018_Q09",
+    "pack_id": "018",
+    "question_type": "missing_information",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，灾后重建专项方案的具体内容、牵头部门和实施时间是什么？",
+    "answers": "材料无法提供该信息。D014仅为一条未经证实的消息，称有关方面或将就灾后重建出台专项方案，但其具体内容、牵头部门和实施时间均不明确，主体不详，相关信息有待进一步核实，因此无法据此给出确定答案。",
+    "answer_facts": {
+      "required_facts": [
+        "判定材料缺乏该信息、无法确定",
+        "指出相关消息未经证实、主体与关键要素不明确"
+      ],
+      "optional_facts": [
+        "仅知或将出台灾后重建专项方案，其余不详"
+      ],
+      "forbidden_facts": [
+        "编造专项方案的具体内容、牵头部门或实施时间",
+        "将未经证实的消息当作确定事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "missing_reason": "unverified_incomplete_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

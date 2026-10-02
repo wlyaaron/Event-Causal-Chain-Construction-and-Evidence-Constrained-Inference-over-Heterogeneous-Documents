@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_192_Q01",
+    "pack_id": "192",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果移除D006（灾后重建）这一原因，D008（防灾短板）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q02",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（灾害发生）在D002（应急救援）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q03",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，请概述D007（社会援助）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q04",
+    "pack_id": "192",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q05",
+    "pack_id": "192",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了防灾短板事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q06",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（预警建设）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "natural_disaster_192_Q07",
+    "pack_id": "192",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，沿因果关系看，D004（灾情安置）之后直接发生了什么？"
+  }
+]

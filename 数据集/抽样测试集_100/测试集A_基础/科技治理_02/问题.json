@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_002_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D002（行业热议）发生在D003（监管规范）之前，这是否足以说明D002（行业热议）是D003（监管规范）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "technology_governance_002_Q02",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于D006（标准制定）阶段（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "technology_governance_002_Q03",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（国际合作）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "technology_governance_002_Q04",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（场景落地）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "technology_governance_002_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D009（国际合作）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "technology_governance_002_Q06",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D003（监管规范）未曾出现，D004（伦理讨论）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "technology_governance_002_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "材料显示D001（技术突破）发生在D004（伦理讨论）之前，时间上的先后顺序能否直接证明二者存在因果关系？请说明理由。"
+  }
+]

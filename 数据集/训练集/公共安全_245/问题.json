@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_245_Q01",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通报处置进展、回应社会关切？"
+  },
+  {
+    "sample_id": "public_safety_245_Q02",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？"
+  },
+  {
+    "sample_id": "public_safety_245_Q03",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年青岛市危险废物非法处置爆炸事故是怎样发生的？造成了哪些后果？"
+  },
+  {
+    "sample_id": "public_safety_245_Q04",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事件发生后现场是如何组织应急处置的？"
+  },
+  {
+    "sample_id": "public_safety_245_Q05",
+    "pack_id": "245",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "调查认定的直接原因和主要问题是什么？"
+  },
+  {
+    "sample_id": "public_safety_245_Q06",
+    "pack_id": "245",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来如何巩固整改成果、防止问题反弹？"
+  },
+  {
+    "sample_id": "public_safety_245_Q07",
+    "pack_id": "245",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这起事件将如何推动相关领域安全治理的完善？"
+  }
+]

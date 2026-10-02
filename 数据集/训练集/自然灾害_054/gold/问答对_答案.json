@@ -1,0 +1,340 @@
+[
+  {
+    "sample_id": "natural_disaster_054_Q01",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（灾后恢复重建），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D009（灾害成因分析） → D001（极端暴雨灾害） → D002（应急响应启动） → D005（抢险救援行动） → D010（灾后恢复重建）。灾害成因分析触发链条，最终形成灾后恢复重建；灾区逐步恢复正常生产生活秩序。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D009（灾害成因分析） 到终点 D010（灾后恢复重建） 的有向因果链（顺序不可颠倒）",
+        "起点为 D009（灾害成因分析）",
+        "终点为 D010（灾后恢复重建）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D009（灾害成因分析） → D001（极端暴雨灾害） → D002（应急响应启动） → D005（抢险救援行动） → D010（灾后恢复重建）",
+        "可包含关键环节 D001（极端暴雨灾害）",
+        "终点影响：灾区逐步恢复正常生产生活秩序"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001",
+        "D002",
+        "D005",
+        "D010"
+      ],
+      [
+        "D009",
+        "D001",
+        "D002",
+        "D008",
+        "D010"
+      ],
+      [
+        "D009",
+        "D001",
+        "D003",
+        "D007",
+        "D010"
+      ],
+      [
+        "D009",
+        "D001",
+        "D004",
+        "D007",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D009",
+        "D001",
+        "D002",
+        "D005",
+        "D010"
+      ],
+      "stages": [
+        "灾害成因分析",
+        "极端暴雨灾害",
+        "应急响应启动",
+        "抢险救援行动",
+        "灾后恢复重建"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_054_Q02",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D009（灾害成因分析）在D001（极端暴雨灾害）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D009→D001（直接因果），不是先后关系。证据：引发严重洪涝灾害，多地降雨量破历史极值。",
+    "answer_facts": {
+      "required_facts": [
+        "D009（灾害成因分析） 与 D001（极端暴雨灾害） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D009 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（极端暴雨灾害） 导致 D009（灾害成因分析）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D009",
+      "event_b": "D001",
+      "temporal_order": "D009先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_054_Q03",
+    "pack_id": "054",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D009（灾害成因分析）这一原因，D001（极端暴雨灾害）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D009，D001大概率不再发生。因为D009是D001的直接原因，其下游受影响的边为 [['D009', 'D001'], ['D001', 'D002'], ['D001', 'D003'], ['D001', 'D004'], ['D001', 'D006']]；引发严重洪涝灾害，多地降雨量破历史极值 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D009是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001"
+      ],
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D009",
+      "affected_edges": [
+        [
+          "D009",
+          "D001"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D009是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_054_Q04",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D005（抢险救援行动），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D009（灾害成因分析） → D001（极端暴雨灾害） → D002（应急响应启动） → D005（抢险救援行动）。起点为灾害成因分析，终点为抢险救援行动；营救大量被困群众，减少人员伤亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D009（灾害成因分析） 到终点 D005（抢险救援行动） 的有向因果链（顺序不可颠倒）",
+        "起点为 D009（灾害成因分析）",
+        "终点为 D005（抢险救援行动）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D009（灾害成因分析） → D001（极端暴雨灾害） → D002（应急响应启动） → D005（抢险救援行动）",
+        "可包含关键环节 D001（极端暴雨灾害）",
+        "终点影响：营救大量被困群众，减少人员伤亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001",
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D009",
+        "D001",
+        "D002",
+        "D005"
+      ],
+      "stages": [
+        "灾害成因分析",
+        "极端暴雨灾害",
+        "应急响应启动",
+        "抢险救援行动"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_054_Q05",
+    "pack_id": "054",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_054_Q06",
+    "pack_id": "054",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D009（灾害成因分析）之后直接发生了什么？",
+    "answers": "D001（极端暴雨灾害）是D009（灾害成因分析）的直接后果。证据：引发严重洪涝灾害，多地降雨量破历史极值。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D009（灾害成因分析） 直接导致 D001（极端暴雨灾害）",
+        "后果：引发严重洪涝灾害，多地降雨量破历史极值"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（极端暴雨灾害） 导致 D009（灾害成因分析）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D009",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_054_Q07",
+    "pack_id": "054",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2023-07-30起（D001 极端暴雨灾害；D002 应急响应启动；D003 人员伤亡通报；D004 蓄滞洪区启用；D005 抢险救援行动），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（列车被困救援）、D007（群众转移安置）、D008（救灾资金拨付）、D009（灾害成因分析）、D010（灾后恢复重建）；其中最关键的是列车被困救援——一场惊心动魄的山区大救援取得成功。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:列车被困救援"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（群众转移安置）、D008（救灾资金拨付）、D009（灾害成因分析）、D010（灾后恢复重建）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-07-30起",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D003",
+    "causal_type": "救援响应",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D003",
+    "causal_type": "加剧困难",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D004",
+    "causal_type": "触发援助",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D005",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D006",
+    "causal_type": "卫生条件引发",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D007",
+    "causal_type": "系统性冲击",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D007",
+    "causal_type": "加剧社会冲击",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D007",
+    "result_event_id": "D008",
+    "causal_type": "阻碍重建",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D008",
+    "causal_type": "支持重建",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D004",
+    "result_event_id": "D009",
+    "causal_type": "经验反思",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D010",
+    "causal_type": "教训总结",
+    "confidence_level": "probable",
+    "pack_id": "104"
+  }
+]

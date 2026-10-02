@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_200_Q01",
+    "pack_id": "200",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_200_Q02",
+    "pack_id": "200",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，反事实假设：如果D003（峰会成果）没有发生（或被及时干预阻断），D004（双边会谈）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "diplomacy_200_Q03",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间上看D008（共识落实）早于D009（专家解读），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "diplomacy_200_Q04",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料显示D001（外交会晤）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "diplomacy_200_Q05",
+    "pack_id": "200",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定共识落实是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "diplomacy_200_Q06",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_200_Q07",
+    "pack_id": "200",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D001（外交会晤）没有发生（或被及时干预阻断），D002（官方声明）是否仍会发生？请判断并给出因果依据。"
+  }
+]

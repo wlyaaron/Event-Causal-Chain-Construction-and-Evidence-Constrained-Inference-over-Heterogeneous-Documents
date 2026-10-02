@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_217_Q01",
+    "pack_id": "217",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中心-外围理论的主要内容是什么？普雷维什是如何解释贸易条件恶化的？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q02",
+    "pack_id": "217",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "进口替代工业化战略的主要内容是什么？它取得了哪些成就，又存在什么问题？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q03",
+    "pack_id": "217",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依附理论和世界体系理论与中心-外围理论是什么关系？它们分别有什么发展？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q04",
+    "pack_id": "217",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "对中心-外围理论的主要批评有哪些？应该如何客观评价这一理论？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q05",
+    "pack_id": "217",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "全球化时代中心-外围关系发生了哪些新变化？基本结构是否改变了？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q06",
+    "pack_id": "217",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "中心-外围理论对当今发展中国家有哪些启示？应该如何处理开放与自主的关系？"
+  },
+  {
+    "sample_id": "economy_trade_217_Q07",
+    "pack_id": "217",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来中心-外围格局会如何演变？新兴经济体能否根本改变这一格局？"
+  }
+]

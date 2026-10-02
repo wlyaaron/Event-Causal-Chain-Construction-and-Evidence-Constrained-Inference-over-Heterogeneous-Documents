@@ -1,0 +1,318 @@
+[
+  {
+    "sample_id": "economy_trade_029_Q01",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从国家数字经济战略发布到专家对未来趋势的深度解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（战略发布）→D003（数据发布）→D005（挑战分析）→D007（专家解读）。战略发布后，国家统计局发布数字经济核心产业发展数据，全面展示发展成就；基于数据和实际情况，媒体调查分析了数字经济发展面临的五大挑战；专家在战略、数据、挑战的基础上，深度解读了数字经济未来五大发展趋势。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D007的完整因果传导链",
+        "包含数据发布、挑战分析等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D003→D005→D007",
+        "D002地方实践和D004产业转型也为专家解读提供素材"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      "stages": [
+        "战略发布",
+        "数据发布",
+        "挑战分析",
+        "专家解读"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_029_Q02",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "地方实践案例（D002）和统计数据发布（D003）都发生在战略发布之后，二者中哪一个对挑战分析（D005）的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "统计数据发布（D003）对挑战分析（D005）的推动作用更直接。依据：因果关系列表中D003→D005为直接因果（certain），而D004→D005为间接传导（probable），D002与D005之间没有直接因果边。统计数据从宏观层面全面展示了数字经济的规模、结构、区域分布等情况，能够直接揭示发展不平衡、核心技术短板等问题；而地方实践案例主要展示成功经验，对挑战分析的推动是间接的。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D003对D005的推动更直接",
+        "依据是D003→D005为直接因果关系"
+      ],
+      "optional_facts": [
+        "D002主要展示成功经验",
+        "D003从宏观层面揭示发展不平衡等问题"
+      ],
+      "forbidden_facts": [
+        "判断D002更直接且无合理依据",
+        "混淆正面案例与问题分析的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D002 vs D003对D005的推动",
+      "more_direct": "D003",
+      "reason": "D003→D005为直接因果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_029_Q03",
+    "pack_id": "029",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有出台数字经济发展战略（移除D001），这会对地方数字经济实践（D002）和传统产业数字化转型（D004）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有国家战略，D002地方实践和D004产业转型仍会发生，但推进速度和力度会明显减弱。浙江等地的数字经济实践在国家战略发布前就已经开始，说明地方有内生发展动力；但国家战略提供了政策支持、资金引导、统一规划，移除后地方实践可能缺乏顶层设计和资源支持，转型步伐放缓。连锁影响：D003数据发布可能推迟或规格降低，D005挑战分析可能缺乏政策背景，D006国际合作的国家统筹力度下降。受影响的关键边为[['D001','D002'],['D001','D004'],['D001','D006']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断地方实践和产业转型仍会发生但速度减弱",
+        "说明国家战略的政策支持和资源引导作用"
+      ],
+      "optional_facts": [
+        "浙江等地实践在战略前已开始，有内生动力",
+        "D003、D005、D006也会受到连锁影响"
+      ],
+      "forbidden_facts": [
+        "断言没有战略就完全不会发展",
+        "忽视地方和企业的内生发展动力"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除国家数字经济战略",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "地方实践和产业转型仍发生但推进速度减弱"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_029_Q04",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "传统产业数字化转型（D004）与数字经济国际合作（D006）之间看似分属不同领域，实际上是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D004（产业转型）←D001（战略发布）→D006（国际合作）。具体来说，传统产业数字化转型和数字经济国际合作都是国家数字经济发展战略推动下的重要举措，共享同一个根因D001。战略既要求推动产业数字化转型，也要求拓展数字经济国际合作。此外，D004所展示的数字化转型成效，也为我国在D006国际合作中提供了实践经验和技术输出能力，增强了国际合作的底气和实力。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出共享根因D001，通过战略发布传导"
+      ],
+      "optional_facts": [
+        "传导路径：D004←D001→D006",
+        "D004的转型成效为D006提供实践经验和技术输出能力"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D004到D006的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_correlation_via_common_cause",
+      "common_cause": "D001",
+      "path": "D004←D001→D006"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_029_Q05",
+    "pack_id": "029",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测2025年我国数字经济核心产业增加值的具体数值？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性数值",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_029_Q06",
+    "pack_id": "029",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国家数字经济战略发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（地方实践）、D004（产业转型）、D006（国际合作）、D007（专家解读）、D008（发展展望）。其中地方实践和产业转型是战略推动下的具体落实，国际合作是战略的重要组成部分，专家解读和发展展望是对战略的回应和阐释。证据：战略发布后，浙江等地的实践受到关注，传统企业加快数字化转型，我国积极参与全球数字治理，专家纷纷解读战略，媒体发表展望评论。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002地方实践",
+        "D001直接导致D004产业转型",
+        "D001直接导致D006国际合作",
+        "D001直接导致D007专家解读",
+        "D001直接导致D008发展展望"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D003数据发布、D005挑战分析为间接因果"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D006或D008等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D004",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_029_Q07",
+    "pack_id": "029",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于战略发布和地方实践（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003统计数据发布——国家战略发布后，统计部门通常会发布相关统计数据来展示发展现状，为政策实施提供依据；第二，D004传统产业数字化转型——战略明确要求大力推进产业数字化，各地企业会加快数字化改造步伐；第三，D005挑战分析——随着战略实施和数据发布，发展中存在的问题和挑战会受到关注，媒体和专家会进行分析。依据：国家战略发布后的标准推进流程包括数据统计、政策落实、问题分析等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003数据发布、D004产业转型、D005挑战分析",
+        "还可能发生D006国际合作、D007专家解读等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D003",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-03-18",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D004",
+        "D005"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

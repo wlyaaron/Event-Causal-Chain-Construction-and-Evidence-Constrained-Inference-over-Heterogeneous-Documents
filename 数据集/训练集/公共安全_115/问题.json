@@ -1,0 +1,65 @@
+[
+  {
+    "sample_id": "public_safety_115_Q01",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（事故教训总结），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_115_Q02",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（火灾事故发生）在D002（救援与伤亡通报）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "public_safety_115_Q03",
+    "pack_id": "115",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（火灾事故发生）这一原因，D003（初步调查发现）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "public_safety_115_Q04",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于起火原因，网络传言（D012）称系电器线路短路或同行蓄意纵火，而初步调查（D003）认定为舞台自制烟火引燃隔音海绵。两类信息相互矛盾时应如何取舍？请说明理由。"
+  },
+  {
+    "sample_id": "public_safety_115_Q05",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确认网传\"另有一名更高层级保护伞\"（D013）的身份？若不能，请说明缺失了哪些关键信息。"
+  },
+  {
+    "sample_id": "public_safety_115_Q06",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（火灾事故发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "public_safety_115_Q07",
+    "pack_id": "115",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2008-09-20当晚（D001 火灾事故发生；D002 救援与伤亡通报），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_115_Q08",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到邻市某地的道路交通安全整治（D014）和外地某娱乐场所的历史火灾案例（D015）。这两者是否与本次深圳舞王俱乐部火灾的因果链条相关？请判断并说明理由。"
+  },
+  {
+    "sample_id": "public_safety_115_Q09",
+    "pack_id": "115",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（全国专项检查），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

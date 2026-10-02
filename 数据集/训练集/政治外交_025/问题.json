@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_025_Q01",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从G20峰会开幕到联合声明正式发布，中间经历了哪些关键的讨论和磋商环节？请梳理完整的因果传导链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "diplomacy_025_Q02",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "核心议题讨论（D002）和中美元首会晤（D003）都发生在联合声明发布之前，二者中哪一个对声明最终内容的塑造作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "diplomacy_025_Q03",
+    "pack_id": "025",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设本次峰会期间没有安排中美元首双边会晤，这会对联合声明的发布（D004）和国际社会评价（D007）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "diplomacy_025_Q04",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "发展中国家在峰会上的发声（D006）与后续专家对峰会的深度解读（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "diplomacy_025_Q05",
+    "pack_id": "025",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测本次G20峰会达成的32项合作共识在未来一年内的具体落实比例？"
+  },
+  {
+    "sample_id": "diplomacy_025_Q06",
+    "pack_id": "025",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "G20峰会开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "diplomacy_025_Q07",
+    "pack_id": "025",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于峰会开幕和核心议题讨论（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

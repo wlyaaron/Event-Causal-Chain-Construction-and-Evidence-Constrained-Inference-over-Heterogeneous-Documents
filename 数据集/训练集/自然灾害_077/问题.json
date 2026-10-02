@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_077_Q01",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D006（灾后重建）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q02",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（预警建设）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q03",
+    "pack_id": "077",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，西班牙周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q04",
+    "pack_id": "077",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D004（灾情安置）所代表的条件被移除，后续的D005（成因分析）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q05",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间上看D001（灾害发生）早于D002（应急救援），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q06",
+    "pack_id": "077",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q07",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "西班牙相关的D003（官方通报）发生后，紧接着出现的直接结果是什么？"
+  }
+]

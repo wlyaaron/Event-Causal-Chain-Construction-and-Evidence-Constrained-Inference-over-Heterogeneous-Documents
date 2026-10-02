@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_067_Q01",
+    "pack_id": "067",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2021年1月6日国会山骚乱中共有多少人死亡？阿什利·巴比特是如何死亡的？有多少名执法人员受伤？"
+  },
+  {
+    "sample_id": "diplomacy_067_Q02",
+    "pack_id": "067",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2020年美国总统大选结果争议是如何一步步演变为2021年1月6日国会山骚乱的？请分析其中的关键传导环节。"
+  },
+  {
+    "sample_id": "diplomacy_067_Q03",
+    "pack_id": "067",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：特朗普社交媒体被封禁、众议院通过弹劾条款、参议院弹劾审判投票、国会骚乱委员会成立、特别检察官起诉特朗普。"
+  },
+  {
+    "sample_id": "diplomacy_067_Q04",
+    "pack_id": "067",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较特朗普第一次弹劾（2019年乌克兰电话门）和第二次弹劾（2021年煽动叛乱）在起因、投票结果、政治影响方面的异同。"
+  },
+  {
+    "sample_id": "diplomacy_067_Q05",
+    "pack_id": "067",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "特朗普在1月6日当天的行为（包括演讲、发推文、发布视频）如何通过多个渠道影响了骚乱的发展、社交媒体的封禁决定、以及后续的弹劾和刑事起诉？"
+  },
+  {
+    "sample_id": "diplomacy_067_Q06",
+    "pack_id": "067",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括国会山骚乱对美国国内政治、司法体系、社会极化、以及国际形象产生了哪些长期影响。"
+  },
+  {
+    "sample_id": "diplomacy_067_Q07",
+    "pack_id": "067",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2021年1月6日副总统彭斯按照特朗普的要求拒绝认证选举人票，美国可能会出现怎样的政治和宪政危机？与实际情况相比会有哪些不同？"
+  }
+]

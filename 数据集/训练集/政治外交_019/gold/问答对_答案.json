@@ -1,0 +1,350 @@
+[
+  {
+    "sample_id": "diplomacy_019_Q01",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D007（人文交流），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D003（建交历程） → D001（政治外交-建交） → D002（国际反响） → D005（务实合作） → D007（人文交流）。建交历程触发链条，最终形成人文交流；增进两国人民相互了解和友谊，为中法关系注入持久动力。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（建交历程） 到终点 D007（人文交流） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（建交历程）",
+        "终点为 D007（人文交流）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（建交历程） → D001（政治外交-建交） → D002（国际反响） → D005（务实合作） → D007（人文交流）",
+        "可包含关键环节 D001（政治外交-建交）",
+        "终点影响：增进两国人民相互了解和友谊，为中法关系注入持久动力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001",
+        "D002",
+        "D005",
+        "D007"
+      ],
+      [
+        "D003",
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D003",
+        "D001",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D001",
+        "D002",
+        "D005",
+        "D007"
+      ],
+      "stages": [
+        "建交历程",
+        "政治外交-建交",
+        "国际反响",
+        "务实合作",
+        "人文交流"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_019_Q02",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D003（建交历程）在D001（政治外交-建交）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D003→D001（直接因果），不是先后关系。证据：冲破孤立中国图谋，在西方大国对华关系上打开重要缺口。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（建交历程） 与 D001（政治外交-建交） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D003 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（政治外交-建交） 导致 D003（建交历程）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D003",
+      "event_b": "D001",
+      "temporal_order": "D003先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_019_Q03",
+    "pack_id": "019",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D003（建交历程）这一原因，D001（政治外交-建交）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D003，D001大概率不再发生。因为D003是D001的直接原因，其下游受影响的边为 [['D003', 'D001'], ['D001', 'D002'], ['D001', 'D005'], ['D001', 'D007'], ['D001', 'D006'], ['D001', 'D008']]；冲破孤立中国图谋，在西方大国对华关系上打开重要缺口 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ],
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D001"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D007"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_019_Q04",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D008（舆论引导），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D003（建交历程） → D001（政治外交-建交） → D002（国际反响） → D006（历史启示） → D008（舆论引导）。起点为建交历程，终点为舆论引导；凝聚发展中法关系共识，为动荡变革的世界注入稳定性。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D003（建交历程） 到终点 D008（舆论引导） 的有向因果链（顺序不可颠倒）",
+        "起点为 D003（建交历程）",
+        "终点为 D008（舆论引导）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D003（建交历程） → D001（政治外交-建交） → D002（国际反响） → D006（历史启示） → D008（舆论引导）",
+        "可包含关键环节 D001（政治外交-建交）",
+        "终点影响：凝聚发展中法关系共识，为动荡变革的世界注入稳定性"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001",
+        "D002",
+        "D006",
+        "D008"
+      ],
+      [
+        "D003",
+        "D001",
+        "D006",
+        "D008"
+      ],
+      [
+        "D003",
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D003",
+        "D001",
+        "D002",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "建交历程",
+        "政治外交-建交",
+        "国际反响",
+        "历史启示",
+        "舆论引导"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_019_Q05",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_019_Q06",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D003（建交历程）之后直接发生了什么？",
+    "answers": "D001（政治外交-建交）是D003（建交历程）的直接后果。证据：冲破孤立中国图谋，在西方大国对华关系上打开重要缺口。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D003（建交历程） 直接导致 D001（政治外交-建交）",
+        "后果：冲破孤立中国图谋，在西方大国对华关系上打开重要缺口"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（政治外交-建交） 导致 D003（建交历程）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_019_Q07",
+    "pack_id": "019",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于1964-01-27（D001 政治外交-建交；D002 国际反响；D003 建交历程；D004 精神内核），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（务实合作）、D006（历史启示）、D007（人文交流）、D008（舆论引导）；其中最关键的是务实合作——成为中国同西方大国关系的一面旗帜，实现互利共赢。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:务实合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（历史启示）、D007（人文交流）、D008（舆论引导）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "1964-01-27",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D003",
+    "causal_type": "次生灾害",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D005",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D004",
+    "causal_type": "增加难度",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D007",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D003",
+    "result_event_id": "D007",
+    "causal_type": "扩大安置",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D007",
+    "result_event_id": "D008",
+    "causal_type": "重建需求",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D008",
+    "causal_type": "重建需求",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D008",
+    "causal_type": "增加难度",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D008",
+    "result_event_id": "D009",
+    "causal_type": "长期影响",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D010",
+    "causal_type": "教训总结",
+    "confidence_level": "probable",
+    "pack_id": "023"
+  }
+]

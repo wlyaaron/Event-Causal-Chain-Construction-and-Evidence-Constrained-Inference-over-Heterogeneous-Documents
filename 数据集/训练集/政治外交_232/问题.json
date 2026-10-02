@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_232_Q01",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际奥委会是什么时候成立的？它的主要职能和组织架构是怎样的？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q02",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "《奥林匹克2020议程》的主要内容和意义是什么？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q03",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国际奥委会在反兴奋剂方面做了哪些工作？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q04",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国际奥委会在推动性别平等方面取得了哪些进展？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q05",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "东京奥运会为什么延期举办？这一决定有什么意义？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q06",
+    "pack_id": "232",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "奥林匹克运动未来发展的主要趋势和方向是什么？"
+  },
+  {
+    "sample_id": "diplomacy_232_Q07",
+    "pack_id": "232",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "奥运会申办和举办机制改革的方向是什么？将带来哪些影响？"
+  }
+]

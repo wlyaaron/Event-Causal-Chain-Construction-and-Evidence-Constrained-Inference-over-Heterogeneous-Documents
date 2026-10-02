@@ -1,0 +1,365 @@
+[
+  {
+    "sample_id": "public_safety_037_Q01",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D007（事故调查报告公布）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（安全事故发生） → D006（国务院成立调查组） → D007（事故调查报告公布）。其中，安全事故发生为起点，经逐级传导，最终导致事故调查报告公布；推动全国化工行业安全整治。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事故发生） 到终点 D007（事故调查报告公布） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事故发生）",
+        "终点为 D007（事故调查报告公布）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事故发生） → D006（国务院成立调查组） → D007（事故调查报告公布）",
+        "可包含关键环节 D006（国务院成立调查组）",
+        "终点影响：推动全国化工行业安全整治"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "安全事故发生",
+        "国务院成立调查组",
+        "事故调查报告公布"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_037_Q02",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，D004（善后处置工作）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "按证据顺序，成因链为 D001（安全事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（善后处置工作）。自安全事故发生出发逐环传导至善后处置工作；安抚遇难者家属情绪。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事故发生） 到终点 D004（善后处置工作） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事故发生）",
+        "终点为 D004（善后处置工作）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（善后处置工作）",
+        "可包含关键环节 D002（应急救援处置）",
+        "可包含关键环节 D003（伤亡情况通报）",
+        "终点影响：安抚遇难者家属情绪"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "安全事故发生",
+        "应急救援处置",
+        "伤亡情况通报",
+        "善后处置工作"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_037_Q03",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D001（安全事故发生）直接引发了哪一事件？请指出并说明依据。",
+    "answers": "直接因果链为 D001（安全事故发生） → D002（应急救援处置）。后果：成功扑灭现场火灾。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事故发生） 直接导致 D002（应急救援处置）",
+        "后果：成功扑灭现场火灾"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（应急救援处置） 导致 D001（安全事故发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_037_Q04",
+    "pack_id": "037",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握2019-03-21及之前的信息（D004 善后处置工作；D005 责任人立案侦查；D001 安全事故发生；D002 应急救援处置），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "后续实际发生：D006（国务院成立调查组）、D003（伤亡情况通报）、D007（事故调查报告公布）。其中关键进展为国务院成立调查组：提升事故调查级别。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:国务院成立调查组"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D003（伤亡情况通报）, D007（事故调查报告公布）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005",
+        "D001",
+        "D002",
+        "D006",
+        "D003",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2019-03-21",
+      "visible_events": [
+        "D004",
+        "D005",
+        "D001",
+        "D002"
+      ],
+      "hidden_events": [
+        "D006",
+        "D003",
+        "D007"
+      ],
+      "ground_truth": "D006:国务院成立调查组"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_037_Q05",
+    "pack_id": "037",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D001（安全事故发生）所代表的条件被移除，后续的D002（应急救援处置）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D003', 'D005'], ['D005', 'D007']]。相应地，成功扑灭现场火灾 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D003",
+          "D005"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_037_Q06",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D004（善后处置工作）早于D005（责任人立案侦查），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D004（善后处置工作）早于D005（责任人立案侦查）只是时间先后，材料中不存在 D004→D005 的因果关系；其直接原因是D001（安全事故发生）、D003（伤亡情况通报）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（善后处置工作） 早于 D005（责任人立案侦查） 只是时间先后",
+        "材料中不存在 D004→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D004（善后处置工作） 导致 D005（责任人立案侦查）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_037_Q07",
+    "pack_id": "037",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对善后处置工作的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

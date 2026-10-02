@@ -1,0 +1,412 @@
+[
+  {
+    "sample_id": "diplomacy_045_Q01",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件依次推动，最终导致了D012（一体化成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（国际组织成立） → D002（组织制度确立） → D003（经济合作深化） → D007（对外合作网络构建） → D008（双边关系发展） → D011（合作提质升级） → D012（一体化成效显现）。国际组织成立触发链条，经制度确立、经济合作、对外网络、双边关系与合作提质升级，最终一体化成效显现；为地区繁荣稳定注入持久动力。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（国际组织成立） 到终点 D012（一体化成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（国际组织成立）",
+        "终点为 D012（一体化成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（国际组织成立） → D002（组织制度确立） → D003（经济合作深化） → D007（对外合作网络构建） → D008（双边关系发展） → D011（合作提质升级） → D012（一体化成效显现）",
+        "可包含关键环节 D008（双边关系发展）、D011（合作提质升级）",
+        "终点影响：为地区繁荣稳定注入持久动力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D007",
+        "D008",
+        "D011",
+        "D012"
+      ],
+      "stages": [
+        "国际组织成立",
+        "组织制度确立",
+        "经济合作深化",
+        "对外合作网络构建",
+        "双边关系发展",
+        "合作提质升级",
+        "一体化成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_045_Q02",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（国际组织成立）在D002（组织制度确立）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：东盟运行有了制度保障和行为准则。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（国际组织成立） 与 D002（组织制度确立） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（组织制度确立） 导致 D001（国际组织成立）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_045_Q03",
+    "pack_id": "045",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（国际组织成立）这一原因，D002（组织制度确立）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D003'], ['D002', 'D004'], ['D002', 'D005']]；东盟运行有了制度保障和行为准则 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D002",
+          "D004"
+        ],
+        [
+          "D002",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_045_Q04",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕结果D010（未来发展展望），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（国际组织成立） → D002（组织制度确立） → D003（经济合作深化） → D009（成就与挑战并存） → D010（未来发展展望）。起点为国际组织成立，终点为未来发展展望；东盟将继续在亚太地区发挥重要作用。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（国际组织成立） 到终点 D010（未来发展展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（国际组织成立）",
+        "终点为 D010（未来发展展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（国际组织成立） → D002（组织制度确立） → D003（经济合作深化） → D009（成就与挑战并存） → D010（未来发展展望）",
+        "可包含关键环节 D002（组织制度确立）",
+        "终点影响：东盟将继续在亚太地区发挥重要作用"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D006",
+        "D003",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D009",
+        "D010"
+      ],
+      "stages": [
+        "国际组织成立",
+        "组织制度确立",
+        "经济合作深化",
+        "成就与挑战并存",
+        "未来发展展望"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_045_Q05",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于东盟经济总量的全球排名，材料中不同来源存在哪些不一致说法？应如何判断其可信度？",
+    "answers": "材料存在互相矛盾的说法：有称东盟为全球第五大经济体，也有资料称排在第六位，还有报道笼统称'第五六位'。这些差异源于统计口径和年份不同，均非唯一确定结论，应以权威统计机构最新数据为准，暂不宜采信任何单一名次。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出经济总量排名存在互相矛盾的多种说法（第五/第六/第五六位）",
+        "指出差异源于统计口径和年份不同、尚无唯一定论"
+      ],
+      "optional_facts": [
+        "应以权威统计机构最新数据为准",
+        "在核实前不宜采信任何单一名次"
+      ],
+      "forbidden_facts": [
+        "径直认定某一名次为确定事实",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "conflicting_event": "D014",
+      "conflict_field": "经济总量全球排名",
+      "conflicting_values": [
+        "第五",
+        "第六",
+        "第五六位"
+      ],
+      "resolution": "以权威统计为准，暂难给出唯一定论"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "diplomacy_045_Q06",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（国际组织成立）之后直接发生了什么？",
+    "answers": "D002（组织制度确立）是D001（国际组织成立）的直接后果。证据：东盟运行有了制度保障和行为准则。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（国际组织成立） 直接导致 D002（组织制度确立）",
+        "后果：东盟运行有了制度保障和行为准则"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（组织制度确立） 导致 D001（国际组织成立）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_045_Q07",
+    "pack_id": "045",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于组织成立与制度确立阶段（D001 国际组织成立；D002 组织制度确立），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D003（经济合作深化）、D004（安全合作推进）、D005（社会文化合作）等进展；其中最关键的是经济合作深化——区域内贸易投资大幅增长，东盟成为全球第五大经济体。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D003:经济合作深化"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D004（安全合作推进）、D005（社会文化合作）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "组织制度确立阶段",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D004",
+        "D005"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_045_Q08",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提及了某成员国的地方民俗节庆、东盟成立前的早期区域合作尝试等内容，这些是否与D008（双边关系发展）的成因存在因果关系？请甄别并说明理由。",
+    "answers": "均无因果关系。某成员国的地方民俗节庆（D016）属当地例行文化盛事，与东盟机制建设无直接关联；东盟成立前的东南亚联盟、马菲印尼联盟等早期尝试（D017）自成脉络，仅作历史背景参照。二者都不构成D008（双边关系发展）的成因，应作为干扰信息排除。",
+    "answer_facts": {
+      "required_facts": [
+        "判定地方民俗节庆、早期区域合作尝试与 D008 无因果关系",
+        "将其识别为干扰项予以排除"
+      ],
+      "optional_facts": [
+        "D016 民俗节庆仅为当地例行文化盛事",
+        "D017 早期尝试仅作历史背景参照"
+      ],
+      "forbidden_facts": [
+        "将干扰信息误判为 D008 的成因",
+        "编造二者与 D008 之间的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D016",
+        "D017"
+      ],
+      "target": "D008",
+      "conclusion": "干扰项与目标无因果关系"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_045_Q09",
+    "pack_id": "045",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定东盟酝酿的那项全区域青年人才培养计划的资金规模、启动时间与实施细则？若不能，缺少哪些关键信息？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定无法确定该计划的资金规模、启动时间与实施细则",
+        "指出关键信息缺失、未对外披露"
+      ],
+      "optional_facts": [
+        "缺少资金规模",
+        "缺少启动时间",
+        "缺少实施细则"
+      ],
+      "forbidden_facts": [
+        "编造该计划的资金规模、时间或细则",
+        "将未证实信息当作确定事实"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_event": "D015",
+      "missing_fields": [
+        "资金规模",
+        "启动时间",
+        "实施细则"
+      ],
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

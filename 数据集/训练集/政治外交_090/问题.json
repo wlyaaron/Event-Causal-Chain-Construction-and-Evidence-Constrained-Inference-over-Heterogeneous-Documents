@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_090_Q01",
+    "pack_id": "090",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "联合国安理会第1973号决议是在哪一年通过的？该决议授权了哪些主要行动？有哪些国家投了弃权票？"
+  },
+  {
+    "sample_id": "diplomacy_090_Q02",
+    "pack_id": "090",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么北约对利比亚的军事干预能够在相对较短的时间内帮助反对派推翻卡扎菲政权？请从军事、政治和国际环境三个层面分析。"
+  },
+  {
+    "sample_id": "diplomacy_090_Q03",
+    "pack_id": "090",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：利比亚抗议爆发、联合国通过1973号决议、的黎波里陷落、卡扎菲身亡、班加西领事馆袭击、哈夫塔尔发动尊严行动。"
+  },
+  {
+    "sample_id": "diplomacy_090_Q04",
+    "pack_id": "090",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2011年利比亚内战和2014年开始的第二次利比亚内战在起因、参与方、国际干预程度和结果方面的异同。"
+  },
+  {
+    "sample_id": "diplomacy_090_Q05",
+    "pack_id": "090",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "卡扎菲政权倒台后，利比亚如何从庆祝解放逐步演变为国家分裂和第二次内战？请梳理这一演变过程中的关键因果链条。"
+  },
+  {
+    "sample_id": "diplomacy_090_Q06",
+    "pack_id": "090",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2011年利比亚内战及其后续十年动荡对利比亚国内、地区安全和国际秩序三个层面产生的主要影响。"
+  },
+  {
+    "sample_id": "diplomacy_090_Q07",
+    "pack_id": "090",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2011年联合国安理会没有通过第1973号决议、北约没有进行军事干预，利比亚的局势可能会如何发展？与实际情况相比，哪些后果可能更严重，哪些可能较轻？"
+  }
+]

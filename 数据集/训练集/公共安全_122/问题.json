@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_122_Q01",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（治理成效与长效机制），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "public_safety_122_Q02",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化安全事件/风险发生对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "public_safety_122_Q03",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D001（安全事件/风险发生）在进程上早于D007（调查进展通报）。能否据此认为D001（安全事件/风险发生）导致了D007（调查进展通报）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_122_Q04",
+    "pack_id": "122",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2015-01-05（D001 安全事件/风险发生；D002 调查评估启动；D003 善后处置推进；D004 上级督导支援；D005 专项整治部署；D006 专项整治部署），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "public_safety_122_Q05",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D010（治理成效与长效机制）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "public_safety_122_Q06",
+    "pack_id": "122",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D003（善后处置推进）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_122_Q07",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D009（调查评估与问责）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "public_safety_122_Q08",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于外滩跨年聚集群众、黄浦区政府及上海市主管部门的安全事件/风险发生事件，不同来源给出的关键数据不一致（官方36、另一来源43）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_122_Q09",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的日常检查，是否与主线事件安全事件/风险发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_122_Q10",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，外滩跨年聚集群众、黄浦区政府及上海市主管部门在该安全事件/风险发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

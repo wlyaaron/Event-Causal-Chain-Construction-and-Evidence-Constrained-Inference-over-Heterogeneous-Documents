@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_218_Q01",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "此次活动达成了哪些成果、签署了哪些文件？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q02",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "各方在经贸合作方面达成了哪些安排？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q03",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中方同各方的沟通就重大问题凝聚了哪些共识？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q04",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在人文交流方面各方达成了哪些共识？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q05",
+    "pack_id": "218",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际社会和专家如何评价此次活动？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q06",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "展望未来，各方深化合作还需在哪些方面共同努力？"
+  },
+  {
+    "sample_id": "diplomacy_218_Q07",
+    "pack_id": "218",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次活动将如何推动相关关系和务实合作的未来发展？"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_181_Q01",
+    "pack_id": "181",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2013年北阿坎德邦特大洪水发生的时间和主要受灾区域是哪里？凯达尔纳特镇的受灾情况如何？"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q02",
+    "pack_id": "181",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从自然因素和人为因素两个维度分析2013年北阿坎德邦特大洪水的成因，为什么说这场灾难是人祸大于天灾？"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q03",
+    "pack_id": "181",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序梳理2013年北阿坎德邦洪水从降雨开始到灾后重建的关键事件节点。"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q04",
+    "pack_id": "181",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较印度军队救援行动的成效与政府救灾工作的不足，分析为什么大规模军事救援仍然引发了对政府救灾不力的广泛批评。"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q05",
+    "pack_id": "181",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "洪水如何通过旅游业冲击、基础设施损毁和公共卫生危机等多个渠道影响北阿坎德邦的经济和社会？请分析各影响之间的关联。"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q06",
+    "pack_id": "181",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2013年北阿坎德邦洪水对印度灾害治理体系的启示，以及灾后重建中在水电开发、城镇规划和生态保护方面的改革措施。"
+  },
+  {
+    "sample_id": "natural_disaster_181_Q07",
+    "pack_id": "181",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设北阿坎德邦政府在接到暴雨预警后及时组织了朝圣者疏散和居民转移，这场洪水的人员伤亡可能会降低到什么程度？还会引发对政府救灾不力的广泛争议吗？"
+  }
+]

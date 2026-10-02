@@ -1,0 +1,305 @@
+[
+  {
+    "sample_id": "economy_trade_057_Q01",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从乡村振兴战略实施成效发布到挑战与展望，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（成效发布）→D002（产业振兴）→D007（城乡融合）→D008（挑战展望）。成效发布后，展示了产业、人才、文化、生态、组织五个振兴的成就；产业振兴等具体实践推动了城乡融合发展；在推进过程中，暴露出农业基础、产业质量、人才短缺等挑战；基于实践和挑战，最终形成对乡村振兴的展望。中间还包括D003人才振兴、D004文化振兴、D005生态振兴、D006组织振兴等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含产业振兴、城乡融合等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D002→D007→D008",
+        "中间还包括人才、文化、生态、组织振兴等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "成效发布",
+        "产业振兴",
+        "城乡融合",
+        "挑战展望"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_057_Q02",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "人才振兴（D003）和组织振兴（D006）都对产业振兴（D002）有推动作用，二者中哪一个的推动作用更直接？请结合材料说明判断依据。",
+    "answers": "人才振兴（D003）对产业振兴（D002）的推动作用更直接。依据：因果关系列表中D003→D002为直接因果（certain），D006→D002也为直接因果，但人才是产业发展的第一资源，大学生返乡创业直接带来了技术、理念和资金，直接推动了产业发展；而组织振兴主要是通过加强基层党组织建设，为产业发展提供组织保障和引领作用，相对间接。从案例看，东河县草莓产业的发展、智慧农场的兴起，都是人才直接推动的结果。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D003对D002的推动更直接",
+        "依据是人才是产业发展的第一资源"
+      ],
+      "optional_facts": [
+        "D006组织振兴主要提供组织保障",
+        "大学生返乡创业直接带来技术理念资金"
+      ],
+      "forbidden_facts": [
+        "判断D006更直接且无合理依据",
+        "混淆人才直接推动与组织间接保障的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D006对D002的推动",
+      "more_direct": "D003",
+      "reason": "人才是产业发展第一资源"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_057_Q03",
+    "pack_id": "057",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有实施乡村振兴战略（移除D001），这会对生态振兴（D005）和城乡融合发展（D007）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有实施乡村振兴战略，生态振兴（D005）的推进力度会明显减弱，城乡融合发展（D007）的进程也会大幅放缓。连锁影响：没有国家战略的顶层设计和资金投入，农村人居环境整治就缺乏统一部署和资金保障，'垃圾村'的改造可能会推迟；城乡融合发展也缺乏政策推动和制度保障，城乡二元结构难以打破，城乡差距可能会继续扩大。受影响的关键边为[['D001','D005'],['D001','D007']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断生态振兴推进力度会减弱",
+        "说明城乡融合进程会放缓"
+      ],
+      "optional_facts": [
+        "没有战略农村环境整治缺乏资金保障",
+        "没有战略城乡二元结构难以打破"
+      ],
+      "forbidden_facts": [
+        "断言没有战略乡村也会同样发展",
+        "忽视国家战略在乡村振兴中的核心引领作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除乡村振兴战略",
+      "affected_edges": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "生态振兴减弱，城乡融合放缓"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_057_Q04",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "文化振兴（D004）与乡村振兴挑战展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D004（文化振兴）→D001（成效发布）→D008（挑战展望）。具体来说，文化振兴是乡村振兴战略的重要组成部分，其成就是成效发布的重要内容；基于包括文化振兴在内的五个振兴的实践和成效，专家和媒体进行了全面的总结和反思，指出了包括文化振兴在内的各领域存在的短板和挑战，最终形成了乡村振兴的挑战与展望。此外，D004中提到的移风易俗、文明乡风建设等内容，也是D008中乡村治理挑战的重要组成部分。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D001成效发布这一中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D004→D001→D008",
+        "文化振兴中的移风易俗也是D008治理挑战的组成部分"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D004到D008的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediate",
+      "intermediate": "D001",
+      "path": "D004→D001→D008"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_057_Q05",
+    "pack_id": "057",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测我国实现乡村全面振兴的具体年份？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性年份",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_057_Q06",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "乡村振兴战略实施成效发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（产业振兴）、D003（人才振兴）、D004（文化振兴）、D005（生态振兴）、D006（组织振兴）。这五项都是乡村振兴战略的核心内容，也是成效发布后重点展示和推进的领域。证据：乡村振兴战略包括产业、人才、文化、生态、组织'五个振兴'，成效发布后各地在这五个方面都取得了显著成就。D007城乡融合、D008挑战展望为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002产业振兴",
+        "D001直接导致D003人才振兴",
+        "D001直接导致D004文化振兴",
+        "D001直接导致D005生态振兴",
+        "D001直接导致D006组织振兴"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D007、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏五个振兴中的任何一个"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_057_Q07",
+    "pack_id": "057",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于成效发布和产业振兴（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003人才振兴——产业发展需要人才支撑，产业振兴必然会吸引和带动人才返乡创业；第二，D005生态振兴——乡村振兴不仅要产业兴，还要生态美，产业发展的同时必然会推进生态环境改善；第三，D006组织振兴——乡村振兴需要坚强的组织保障，产业和生态建设都需要基层党组织引领。依据：乡村振兴战略的'五个振兴'是相互联系、相互促进的有机整体。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003人才振兴、D005生态振兴、D006组织振兴",
+        "还可能发生D004文化振兴、D007城乡融合等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-07",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

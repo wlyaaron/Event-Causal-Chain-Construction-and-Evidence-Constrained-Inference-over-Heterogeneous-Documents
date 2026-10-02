@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_001_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，D009（行业转型）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "transportation_001_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D002（现场救援）直接导致了什么？请依据材料作答。"
+  },
+  {
+    "sample_id": "transportation_001_Q03",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，从时间看D001（事故发生）早于D004（原因调查），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "transportation_001_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（事故发生），说明经由哪些中间事件最终导致了D008（专项整治）。"
+  },
+  {
+    "sample_id": "transportation_001_Q05",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，红海周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "transportation_001_Q06",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D004（原因调查）没有发生（或被及时干预阻断），D005（责任追究）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "transportation_001_Q07",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（善后处置）阶段（当前已知：D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），后续走向如何？请给出可验证预测。"
+  }
+]

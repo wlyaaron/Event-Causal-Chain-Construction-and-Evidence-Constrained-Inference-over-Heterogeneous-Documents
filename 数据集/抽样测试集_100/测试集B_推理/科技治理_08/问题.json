@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_008_Q01",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握D006（标准制定）阶段及之前的信息（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（国际合作），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D001（技术突破）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q04",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（技术突破）未曾出现，D002（行业热议）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（场景落地），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q06",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对技术突破的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "technology_governance_008_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（技术突破）先于D004（伦理讨论）发生，可以据此断定D001（技术突破）是D004（伦理讨论）的原因吗？请说明。"
+  }
+]

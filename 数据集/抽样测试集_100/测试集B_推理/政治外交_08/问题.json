@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_008_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（外交会晤）先于D004（双边会谈）发生，可以据此断定D001（外交会晤）是D004（双边会谈）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "diplomacy_008_Q02",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D001（外交会晤）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "diplomacy_008_Q03",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（政策发布）阶段（当前已知：D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "diplomacy_008_Q04",
+    "pack_id": "08",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化峰会成果对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "diplomacy_008_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（外交会晤），说明经由哪些中间事件最终导致了D009（专家解读）。"
+  },
+  {
+    "sample_id": "diplomacy_008_Q06",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（外交会晤）发生在D002（官方声明）之前，这是否足以说明D001（外交会晤）是D002（官方声明）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_008_Q07",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：设想D001（外交会晤）被阻断，D002（官方声明）会不会随之改变或消失？请从因果链角度说明。"
+  }
+]

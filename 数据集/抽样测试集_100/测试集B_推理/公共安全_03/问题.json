@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_003_Q01",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请还原从D001（事故发生）到D007（全国部署）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "public_safety_003_Q02",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间上看D002（官方通报）早于D004（应急处置），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "public_safety_003_Q03",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D004（应急处置）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "public_safety_003_Q04",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D006（国家督办）所代表的条件被移除，后续的D007（全国部署）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "public_safety_003_Q05",
+    "pack_id": "03",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至2022-09-25，材料仅显示：D001 事故发生；D002 官方通报；D003 问责处理；D004 应急处置；D005 全省部署。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_003_Q06",
+    "pack_id": "03",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对官方通报的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "public_safety_003_Q07",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（整治成效）的完整因果路径，并标明证据顺序。"
+  }
+]

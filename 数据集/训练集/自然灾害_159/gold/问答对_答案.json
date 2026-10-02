@@ -1,0 +1,298 @@
+[
+  {
+    "sample_id": "natural_disaster_159_Q01",
+    "pack_id": "159",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（调查报告公布与问责处理），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（极端强降雨袭击河南与郑州暴雨）→D002（郑州地铁5号线进水事故）→D003（京广路隧道淹水事故）→D005（卫河共产主义渠险情与决口）→D006（新乡鹤壁严重内涝）→D008（国务院成立调查组）→D011（调查报告公布与问责处理）。极端暴雨引发重大人员伤亡和经济损失，国务院成立调查组，最终公布报告并对89名公职人员问责。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D011的有向因果链",
+        "起点D001",
+        "终点D011"
+      ],
+      "optional_facts": [
+        "可包含D004全国救援",
+        "终点影响：398死失踪，1200亿损失"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D009",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D011"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_159_Q02",
+    "pack_id": "159",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（极端强降雨袭击河南与郑州暴雨）在D007（灾后安置与卫生防疫）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D001→D004→D007和D001→D006→D007（间接传导）。极端强降雨造成大面积受灾和人员转移，直接催生了大规模的灾后安置和卫生防疫需求，D004全国救援和D006新乡鹤壁内涝是中间环节。",
+    "answer_facts": {
+      "required_facts": [
+        "D001与D007存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001先于D007约9天",
+        "D004、D006是中间环节"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D007",
+      "temporal_order": "D001先于D007",
+      "causal_link": true
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_159_Q03",
+    "pack_id": "159",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D005（卫河共产主义渠险情与决口）这一环节，D006（新乡鹤壁严重内涝）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D005是D006的直接原因，移除后D006将失去关键支撑。因为卫河决口和共产主义渠漫堤导致洪水涌入新乡鹤壁的乡镇和城区，直接造成了两市的严重内涝。虽然D001的强降雨也会造成一定内涝，但没有D005的河道决口，内涝的严重程度会大幅降低。受影响的下游包括D007灾后安置和D009灾后重建。",
+    "answer_facts": {
+      "required_facts": [
+        "D005是D006的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D001也是D006的原因但不足以替代D005"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D006"
+      ],
+      [
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D005",
+      "affected_edges": [
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D006失去关键支撑"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_159_Q04",
+    "pack_id": "159",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D008（国务院成立调查组）之后直接推动了哪个事件？",
+    "answers": "D011（调查报告公布与问责处理）是D008的直接后果。证据：国务院调查组于2021年8月2日成立，经过近6个月的调查，于2022年1月21日正式公布调查报告，认定398人死亡失踪、1200亿元损失，对8人追究刑事责任、89人给予党纪政务处分。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D008直接导致D011",
+        "后果：调查报告公布与问责"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D011"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D008",
+        "D011"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_159_Q05",
+    "pack_id": "159",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测郑州未来何时会再次发生类似强度的特大暴雨以及届时的人员伤亡数量？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_159_Q06",
+    "pack_id": "159",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2021年7月27日（D001至D007均已发生，全国救援力量集结、卫河决口合龙、灾后安置启动），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D008（国务院成立调查组）、D009（灾后重建全面启动）、D010（保险理赔与灾害救助）、D011（调查报告公布与问责处理）；其中最关键的是国务院将成立调查组对灾害进行全面调查，河南省将启动大规模灾后重建，保险业赔付超95亿元，最终调查报告将推动全国城市防洪排涝标准提升。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D008"
+      ],
+      "optional_facts": [
+        "后续还可能发生D009至D011"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2021-07-27",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "predicted": [
+        "D008",
+        "D009",
+        "D010",
+        "D011"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_159_Q07",
+    "pack_id": "159",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D010（保险理赔与灾害救助）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（极端强降雨袭击河南与郑州暴雨）→D004（全国救援力量集结河南）→D007（灾后安置与卫生防疫）→D010（保险理赔与灾害救助）。极端暴雨造成大量车辆、房屋、农田和人员损失，受灾群众和企业向保险公司报案，保险业开通绿色通道进行理赔，政府对未投保群众给予救助。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D010的有向因果链",
+        "起点D001",
+        "终点D010"
+      ],
+      "optional_facts": [
+        "可包含D006新乡鹤壁内涝",
+        "终点影响：赔付超95亿元"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D010"
+      ],
+      [
+        "D001",
+        "D006",
+        "D007",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D007",
+        "D010"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  }
+]

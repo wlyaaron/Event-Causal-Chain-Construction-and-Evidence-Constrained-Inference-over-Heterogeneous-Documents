@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_135_Q01",
+    "pack_id": "135",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，台湾海峡周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "diplomacy_135_Q02",
+    "pack_id": "135",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D001（外交会晤）所代表的条件被移除，后续的D002（官方声明）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "diplomacy_135_Q03",
+    "pack_id": "135",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：哪一事件是D006（政策发布）的直接后果？其影响如何？"
+  },
+  {
+    "sample_id": "diplomacy_135_Q04",
+    "pack_id": "135",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（外交会晤）早于D004（双边会谈），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "diplomacy_135_Q05",
+    "pack_id": "135",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D006（政策发布）阶段前进展（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "diplomacy_135_Q06",
+    "pack_id": "135",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（专家解读），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_135_Q07",
+    "pack_id": "135",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D008（共识落实）的成因：从源头到结果依次经历了哪些事件？"
+  }
+]

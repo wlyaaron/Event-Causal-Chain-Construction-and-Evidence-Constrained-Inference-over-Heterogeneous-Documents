@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_009_Q01",
+    "pack_id": "009",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D001（安全事件/风险发生）没有发生（或被及时干预阻断），D004（善后处置）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "public_safety_009_Q02",
+    "pack_id": "009",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示教育部对治理成效评估不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "public_safety_009_Q03",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，围绕最终结果D006（治理成效评估），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_009_Q04",
+    "pack_id": "009",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D004（善后处置）未曾出现，D005（整治行动推进）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "public_safety_009_Q05",
+    "pack_id": "009",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道2023-07-25前进展（D001 安全事件/风险发生；D002 应急响应与救援；D004 善后处置；D003 调查评估与核查）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_009_Q06",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（安全事件/风险发生）在进程上早于D005（整治行动推进）。能否据此认为D001（安全事件/风险发生）导致了D005（整治行动推进）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_009_Q07",
+    "pack_id": "009",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（安全事件/风险发生）到D005（整治行动推进）的完整因果传导过程，并按序列出证据。"
+  }
+]

@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "technology_governance_08_Q01",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D008（场景落地）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "technology_governance_08_Q02",
+    "pack_id": "08",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（行业热议）这一原因，D003（监管规范）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "technology_governance_08_Q03",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（技术突破）早于D004（伦理讨论），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "technology_governance_08_Q04",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（技术突破）到D009（国际合作）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "technology_governance_08_Q05",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，材料中关于D009（国际合作）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "technology_governance_08_Q06",
+    "pack_id": "08",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（标准制定）阶段（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "technology_governance_08_Q07",
+    "pack_id": "08",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D008（场景落地）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  }
+]

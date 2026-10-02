@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_01_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间看D001（社会事件）早于D004（责任追究），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "social_governance_01_Q02",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D006（法治建设）与某一事件存在直接因果，请指出该事件及其影响。"
+  },
+  {
+    "sample_id": "social_governance_01_Q03",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了舆论关注事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "social_governance_01_Q04",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（社会共治），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "social_governance_01_Q05",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D002（官方回应）被阻断，D003（调查进展）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "social_governance_01_Q06",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（法治建设）阶段及之前的信息（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "social_governance_01_Q07",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（社会事件）没有发生（或被及时干预阻断），D002（官方回应）是否仍会发生？请判断并给出因果依据。"
+  }
+]

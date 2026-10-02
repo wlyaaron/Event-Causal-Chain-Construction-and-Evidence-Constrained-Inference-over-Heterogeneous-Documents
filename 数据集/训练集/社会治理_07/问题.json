@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "social_governance_07_Q01",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（法治建设）阶段，材料仅显示：D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "social_governance_07_Q02",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D004（责任追究）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "social_governance_07_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（社会共治），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "social_governance_07_Q04",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于治理创新事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "social_governance_07_Q05",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，反事实假设：如果D004（责任追究）没有发生（或被及时干预阻断），D006（法治建设）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "social_governance_07_Q06",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（社会事件）先于D004（责任追究）发生，可以据此断定D001（社会事件）是D004（责任追究）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "social_governance_07_Q07",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于D006（法治建设）阶段（D001 社会事件；D002 官方回应；D003 调查进展；D004 责任追究；D005 民生政策；D006 法治建设），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

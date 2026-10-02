@@ -1,0 +1,416 @@
+[
+  {
+    "sample_id": "economy_trade_075_Q01",
+    "pack_id": "075",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，已知D008（成效评估）先于D009（趋势展望）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D008→D009（直接因果），不是先后关系。证据：2023-09-08的人民币汇率波动为行业发展指明了方向。",
+    "answer_facts": {
+      "required_facts": [
+        "D008（成效评估） 与 D009（趋势展望） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D008 先于 D009"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D009（趋势展望） 导致 D008（成效评估）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D008",
+      "event_b": "D009",
+      "temporal_order": "D008先于D009",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_075_Q02",
+    "pack_id": "075",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（政策落地）到D009（趋势展望）的完整因果传导过程，并按序列出证据。",
+    "answers": "完整因果链：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）。其中，政策落地为起点，经逐级传导，最终导致趋势展望；离岸人民币跌破7.3。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D009（趋势展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D009（趋势展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "可包含关键环节 D008（成效评估）",
+        "终点影响：离岸人民币跌破7.3"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估",
+        "趋势展望"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_075_Q03",
+    "pack_id": "075",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续将出现：D007（国际合作）、D008（成效评估）、D009（趋势展望）；其中最关键的是国际合作——人民币汇率波动在中国的落地引发全球经济界关注。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（成效评估）, D009（趋势展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中小企业影响）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际合作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_075_Q04",
+    "pack_id": "075",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D003（企业行动）这一原因，D004（专家分析）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "判断：若移除D003，D004很可能不会发生或将显著改变。依据：D003是D004的直接原因（直接因果），移除后受影响的因果边包括 [['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，离岸人民币跌破7.3 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D004及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ],
+      [
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D003",
+      "affected_edges": [
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D004及其下游很可能不发生",
+      "acceptable_points": [
+        "D003是D004的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_075_Q05",
+    "pack_id": "075",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D008（成效评估）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估）。其中，政策落地为起点，经逐级传导，最终导致成效评估；离岸人民币跌破7.3。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D008（成效评估） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D008（成效评估）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "终点影响：离岸人民币跌破7.3"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_075_Q06",
+    "pack_id": "075",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对企业行动的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_075_Q07",
+    "pack_id": "075",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D001（政策落地）与哪一事件构成直接因果关系？其后果是什么？",
+    "answers": "D002（市场反应）是D001（政策落地）的直接后果。证据：针对2023-09-08在中国推出的人民币汇率波动。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（政策落地） 直接导致 D002（市场反应）",
+        "后果：针对2023-09-08在中国推出的人民币汇率波动"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（市场反应） 导致 D001（政策落地）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

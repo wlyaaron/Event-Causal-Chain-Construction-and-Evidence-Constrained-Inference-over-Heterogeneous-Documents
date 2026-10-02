@@ -1,0 +1,540 @@
+[
+  {
+    "sample_id": "natural_disaster_064_Q01",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（预警建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "梳理可得因果路径：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）。灾害发生触发链条，最终形成预警建设；超5万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D009（预警建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D009（预警建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "可包含关键环节 D008（防灾短板）",
+        "终点影响：超5万人死亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板",
+        "预警建设"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q02",
+    "pack_id": "064",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于防灾短板事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+    "answers": "问题包含错误前提，无法回答：材料显示实际情况为“超5万人死亡”，与问题假设相悖。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q03",
+    "pack_id": "064",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（灾害发生）被阻断，D002（应急救援）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "判断：若移除D001，D002很可能不会发生或将显著改变。依据：D001是D002的直接原因（直接因果），移除后受影响的因果边包括 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，超5万人死亡 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q04",
+    "pack_id": "064",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（灾后重建）阶段，材料仅显示：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续将出现：D007（社会援助）、D008（防灾短板）、D009（预警建设）；其中最关键的是社会援助——土耳其叙利亚7.8级地震灾情牵动着社会各界的心。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:社会援助"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（防灾短板）, D009（预警建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（灾后重建）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:社会援助"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q05",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D008（防灾短板）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "据材料，D008（防灾短板）的主体为土耳其叙利亚，发生地为土耳其卡赫拉曼马拉什；土耳其叙利亚7.8级地震暴露出当前防灾减灾体系的薄弱环节。其影响：超5万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：土耳其叙利亚",
+        "地点：土耳其卡赫拉曼马拉什",
+        "基本事实：土耳其叙利亚7.8级地震暴露出当前防灾减灾体系的薄弱环节"
+      ],
+      "optional_facts": [
+        "影响：超5万人死亡"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D008"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q06",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D001（灾害发生）早于D004（灾情安置），这是否意味着二者存在因果？请判断。",
+    "answers": "不能。D001（灾害发生）早于D004（灾情安置）只是时间先后，材料中不存在 D001→D004 的因果关系；其直接原因是D003（官方通报）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（灾害发生） 早于 D004（灾情安置） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（灾害发生） 导致 D004（灾情安置）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q07",
+    "pack_id": "064",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（防灾短板）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）。自灾害发生出发逐环传导至防灾短板；超5万人死亡。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D008（防灾短板） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D008（防灾短板）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "终点影响：超5万人死亡"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q08",
+    "pack_id": "064",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于土耳其叙利亚的灾害发生事件，不同来源给出的关键数据不一致（官方5、另一来源6）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_064_Q09",
+    "pack_id": "064",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区土耳其叙利亚的常规演练，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_064_Q10",
+    "pack_id": "064",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，土耳其叙利亚在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

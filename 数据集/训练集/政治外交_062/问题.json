@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_062_Q01",
+    "pack_id": "062",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（专家解读）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_062_Q02",
+    "pack_id": "062",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D006（政策发布）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "diplomacy_062_Q03",
+    "pack_id": "062",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：事件D001（外交会晤）在进程上早于D004（双边会谈）。能否据此认为D001（外交会晤）导致了D004（双边会谈）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "diplomacy_062_Q04",
+    "pack_id": "062",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D008（共识落实）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "diplomacy_062_Q05",
+    "pack_id": "062",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否记载了中美元首负责人的个人从业年限？"
+  },
+  {
+    "sample_id": "diplomacy_062_Q06",
+    "pack_id": "062",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D002（官方声明）没有发生（或被及时干预阻断），D003（峰会成果）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "diplomacy_062_Q07",
+    "pack_id": "062",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（政策发布）阶段前进展（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  }
+]

@@ -1,0 +1,369 @@
+[
+  {
+    "sample_id": "natural_disaster_077_Q01",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D006（灾后重建）与哪一事件构成直接因果关系？其后果是什么？",
+    "answers": "D008（防灾短板）是D006（灾后重建）的直接后果。证据：西班牙干旱暴露出当前防灾减灾体系的薄弱环节。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D006（灾后重建） 直接导致 D008（防灾短板）",
+        "后果：西班牙干旱暴露出当前防灾减灾体系的薄弱环节"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（防灾短板） 导致 D006（灾后重建）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q02",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（预警建设）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "该结果由一条有向因果链推动：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）。起点为灾害发生，终点为预警建设；水库储水不足25%。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（灾害发生） 到终点 D009（预警建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（灾害发生）",
+        "终点为 D009（预警建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（灾害发生） → D002（应急救援） → D003（官方通报） → D004（灾情安置） → D006（灾后重建） → D008（防灾短板） → D009（预警建设）",
+        "可包含关键环节 D002（应急救援）",
+        "可包含关键环节 D003（官方通报）",
+        "可包含关键环节 D004（灾情安置）",
+        "可包含关键环节 D006（灾后重建）",
+        "可包含关键环节 D008（防灾短板）",
+        "终点影响：水库储水不足25%"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "灾害发生",
+        "应急救援",
+        "官方通报",
+        "灾情安置",
+        "灾后重建",
+        "防灾短板",
+        "预警建设"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q03",
+    "pack_id": "077",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，西班牙周边居民的确切疏散人数是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_077_Q04",
+    "pack_id": "077",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D004（灾情安置）所代表的条件被移除，后续的D005（成因分析）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "结论：一旦阻断D004，D005大概率不再发生。因为D004是D005的直接原因（直接因果），其下游受影响的边为 [['D004', 'D005'], ['D005', 'D007'], ['D007', 'D009']]；水库储水不足25% 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D007"
+        ],
+        [
+          "D007",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q05",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间上看D001（灾害发生）早于D002（应急救援），但这能否证明因果？请依据材料判断。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D001→D002（直接因果），而非单纯时间顺序。证据：西班牙干旱发生后，西班牙立即调集专业救援队伍赶赴西班牙灾区。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（灾害发生） 与 D002（应急救援） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急救援） 导致 D001（灾害发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q06",
+    "pack_id": "077",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。",
+    "answers": "基于因果走势，后续将出现：D007（社会援助）、D008（防灾短板）、D009（预警建设）；其中最关键的是社会援助——西班牙干旱灾情牵动着社会各界的心。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:社会援助"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（防灾短板）, D009（预警建设）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（灾后重建）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:社会援助"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_077_Q07",
+    "pack_id": "077",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "西班牙相关的D003（官方通报）发生后，紧接着出现的直接结果是什么？",
+    "answers": "材料表明，D003（官方通报）的直接结果是D004（灾情安置）；2023-05-05西班牙干旱发生后，西班牙灾区群众安置工作有序推进。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（官方通报） 直接导致 D004（灾情安置）",
+        "后果：2023-05-05西班牙干旱发生后，西班牙灾区群众安置工作有序推进"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（灾情安置） 导致 D003（官方通报）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

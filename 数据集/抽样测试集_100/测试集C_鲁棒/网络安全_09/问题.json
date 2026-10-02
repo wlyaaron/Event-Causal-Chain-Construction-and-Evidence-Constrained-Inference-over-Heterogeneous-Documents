@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "cybersecurity_009_Q01",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "材料显示D001（安全事件）发生在D004（监管约谈）之前，时间上的先后顺序能否直接证明二者存在因果关系？请说明理由。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q02",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（防范建议）的形成经历了哪些关键环节？请按因果先后给出证据链。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q03",
+    "pack_id": "09",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（安全事件）这一原因，D002（技术分析）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q04",
+    "pack_id": "09",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（标准升级）阶段前进展（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q05",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D008（用户维权），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q06",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了跨境打击事件中现场救援人员的具体姓名与联系方式？请依据材料回答。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q07",
+    "pack_id": "09",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料中关于D003（应急响应）记载了哪些关键事实？"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q08",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于T-Mobile的安全事件事件，不同来源给出的关键数据不一致（官方3700、另一来源4440）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q09",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的常规演练，是否与主线事件安全事件（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "cybersecurity_009_Q10",
+    "pack_id": "09",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，T-Mobile在该安全事件事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

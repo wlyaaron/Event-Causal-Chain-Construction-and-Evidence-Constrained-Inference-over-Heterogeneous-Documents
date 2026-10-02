@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "technology_governance_01_Q01",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D009（国际合作）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "technology_governance_01_Q02",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，美国周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "technology_governance_01_Q03",
+    "pack_id": "01",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，在只知道D006（标准制定）阶段前进展（D001 技术突破；D002 行业热议；D003 监管规范；D004 伦理讨论；D005 资本关注；D006 标准制定）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "technology_governance_01_Q04",
+    "pack_id": "01",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D008（场景落地）所代表的条件被移除，后续的D009（国际合作）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "technology_governance_01_Q05",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D002（行业热议）的直接下游事件是哪一个？造成了什么后果？"
+  },
+  {
+    "sample_id": "technology_governance_01_Q06",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，从时间看D001（技术突破）早于D004（伦理讨论），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "technology_governance_01_Q07",
+    "pack_id": "01",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（技术突破）到D008（场景落地）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "technology_governance_01_Q08",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于OpenAI的技术突破事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "technology_governance_01_Q09",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中邻近辖区OpenAI的例行通报，是否与主线事件技术突破（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "technology_governance_01_Q10",
+    "pack_id": "01",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，OpenAI在该技术突破事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

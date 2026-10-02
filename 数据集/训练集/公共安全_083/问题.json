@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "public_safety_083_Q01",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D002（应急救援处置）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "public_safety_083_Q02",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请回溯到D001（安全事故发生），说明经由哪些中间事件最终导致了D007（事故调查报告公布）。"
+  },
+  {
+    "sample_id": "public_safety_083_Q03",
+    "pack_id": "083",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示银川市人民政府对伤亡情况通报不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "public_safety_083_Q04",
+    "pack_id": "083",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "截至2023-06-22，材料仅显示：D005 责任人立案侦查；D001 安全事故发生；D002 应急救援处置；D003 伤亡情况通报。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_083_Q05",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D003（伤亡情况通报）在时间/进程上早于D004（善后处置工作）。能否据此断定D003（伤亡情况通报）导致了D004（善后处置工作）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "public_safety_083_Q06",
+    "pack_id": "083",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D001（安全事故发生）被阻断，D003（伤亡情况通报）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_083_Q07",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料显示D001（安全事故发生）与某一事件存在直接因果，请指出该事件及其影响。"
+  }
+]

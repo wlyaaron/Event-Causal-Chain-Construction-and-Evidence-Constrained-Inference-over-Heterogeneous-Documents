@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_129_Q01",
+    "pack_id": "129",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（专项整治），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_129_Q02",
+    "pack_id": "129",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于燕郊镇此次并未发生任何燃气泄漏和爆燃，请说明为何官方还要通报7人死亡、27人受伤？"
+  },
+  {
+    "sample_id": "public_safety_129_Q03",
+    "pack_id": "129",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D001（管道受损）被阻断，D002（燃气泄漏）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_129_Q04",
+    "pack_id": "129",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（成立调查组）阶段，材料仅显示：D001 管道受损；D002 燃气泄漏；D003 发生爆燃；D004 造成伤亡；D005 启动救援；D006 成立调查组。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_129_Q05",
+    "pack_id": "129",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D003（发生爆燃）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "public_safety_129_Q06",
+    "pack_id": "129",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D005（启动救援）早于D010（善后处置），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_129_Q07",
+    "pack_id": "129",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（追究责任）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_129_Q08",
+    "pack_id": "129",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于燕郊爆燃事故的死亡人数，官方通报与另一网传来源不一致（官方称7人死亡，另一来源称死亡人数超过30人）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_129_Q09",
+    "pack_id": "129",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（燃气泄漏）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_129_Q10",
+    "pack_id": "129",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，此次燕郊燃气爆燃事故最终被追究刑事责任的人员具体姓名有哪些？"
+  }
+]

@@ -1,0 +1,417 @@
+[
+  {
+    "sample_id": "public_safety_034_Q01",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请回溯到D001（火灾事故发生），说明经由哪些中间事件最终导致了D008（行业警示与专项整治），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（火灾事故发生）→ D002（应急救援处置）→ D003（伤亡情况通报）→ D005（提级调查与责任人控制）→ D007（事故原因深度调查）→ D008（行业警示与专项整治）。火灾发生后经救援、伤亡通报、提级调查、原因深度调查逐级传导，最终推动人员密集场所消防安全专项整治；此外D003也经间接传导直接推动了D008。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（火灾事故发生） 到终点 D008（行业警示与专项整治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（火灾事故发生）",
+        "终点为 D008（行业警示与专项整治）"
+      ],
+      "optional_facts": [
+        "参考路径：D001 → D002 → D003 → D005 → D007 → D008",
+        "可包含关键环节 D005（提级调查与责任人控制）、D007（事故原因深度调查）",
+        "D003 也经间接传导推动 D008"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      [
+        "D003",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "火灾事故发生",
+        "应急救援处置",
+        "伤亡情况通报",
+        "提级调查与责任人控制",
+        "事故原因深度调查",
+        "行业警示与专项整治"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_034_Q02",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D004（善后处置工作）先于D005（提级调查与责任人控制）发生，可以据此断定D004是D005的原因吗？请说明。",
+    "answers": "不能。D004与D005只是时间先后关系，二者同为D003（伤亡情况通报）的下游，材料未记载 D004→D005 的因果边。不能据时间先后断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（善后处置工作） 早于 D005（提级调查与责任人控制） 只是时间先后",
+        "材料中不存在 D004→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [
+        "D004 与 D005 同为 D003 的下游事件"
+      ],
+      "forbidden_facts": [
+        "D004（善后处置工作） 导致 D005（提级调查与责任人控制）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004"
+      ],
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_034_Q03",
+    "pack_id": "034",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，反事实假设：如果D001（火灾事故发生）没有发生（或被及时干预阻断），D002（应急救援处置）是否仍会发生？请判断并给出因果依据。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因（直接因果），消防6分钟到场、灭火搜救均因火灾发生而启动；其下游连锁（D002→D003→D004/D005→…）也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D002及其下游很可能不发生",
+        "需区分直接因果与间接传导的强弱"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_034_Q04",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（火灾事故发生）经责任追究到D009（整改落实与成效）的完整因果传导过程，并按序给出跨文档的证据链。",
+    "answers": "按证据顺序，成因链为 D001（火灾事故发生，见D001）→ D002（应急救援处置，见D002）→ D003（伤亡情况通报，见D003）→ D005（提级调查与责任人控制，见D005）→ D007（事故原因深度调查，见D007）→ D008（行业警示与专项整治，见D008）→ D009（整改落实与成效）。自火灾发生经调查追责、专项整治逐环传导，最终整治成效逐步显现，跨越D001、D002、D003、D005、D007、D008多篇文档。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（火灾事故发生） 到终点 D009（整改落实与成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（火灾事故发生）",
+        "终点为 D009（整改落实与成效）"
+      ],
+      "optional_facts": [
+        "参考路径：D001 → D002 → D003 → D005 → D007 → D008 → D009",
+        "可包含关键环节 D007（事故原因深度调查）、D008（行业警示与专项整治）",
+        "终点影响：专项整治成效逐步显现"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D005",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "火灾事故发生",
+        "应急救援处置",
+        "伤亡情况通报",
+        "提级调查与责任人控制",
+        "事故原因深度调查",
+        "行业警示与专项整治",
+        "整改落实与成效"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_034_Q05",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D007（事故原因深度调查）的直接下游事件是哪一个？造成了什么后果？",
+    "answers": "D008（行业警示与专项整治）是D007（事故原因深度调查）的直接后果。证据：查清事故根源、暴露深层次隐患后，各地开展人员密集场所消防安全专项整治。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D007（事故原因深度调查） 直接导致 D008（行业警示与专项整治）",
+        "后果：各地开展人员密集场所消防安全专项整治"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（行业警示与专项整治） 导致 D007（事故原因深度调查）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D007",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_034_Q06",
+    "pack_id": "034",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "假设你只掌握D005（提级调查与责任人控制）阶段及之前的信息（D001 火灾事故发生；D002 应急救援处置；D003 伤亡情况通报；D004 善后处置工作；D005 提级调查与责任人控制），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "基于因果走势，后续最可能发生：D007（事故原因深度调查）——提级调查会进一步查清事故直接原因和深层隐患；其依据是D005直接导致D007。此后还可能出现D006（调查报告公布与公职问责）、D008（行业警示与专项整治）、D009（整改落实与成效）。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:事故原因深度调查"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（调查报告公布与公职问责）, D008（行业警示与专项整治）, D009（整改落实与成效）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D005提级调查与责任人控制",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hidden_events": [
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ],
+      "ground_truth": "D007:事故原因深度调查"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_034_Q07",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本起火灾的直接起因，事故调查结果公布前网络流传'电气线路老化短路'致火的说法，而调查报告认定为未及时熄灭的祈福蜡烛引燃可燃物。两种来源信息相互矛盾，应以哪一个为准？为什么？",
+    "answers": "应以事故调查报告的官方认定为准，即D013：直接原因是未及时熄灭的祈福蜡烛引燃周边可燃物。网传'电气线路老化短路'说法（D012）可信度低，与调查认定不符，已被官方澄清、排除。官方权威调查结论优先于未经证实的网络传言。",
+    "answer_facts": {
+      "required_facts": [
+        "以官方调查报告认定的祈福蜡烛引燃为准",
+        "网传'电气故障/线路老化'说法可信度低、已被澄清排除",
+        "官方权威调查结论优先于未经证实的传言"
+      ],
+      "optional_facts": [
+        "需区分信息来源的权威性与可信度",
+        "调查报告为最终认定依据"
+      ],
+      "forbidden_facts": [
+        "采信'电气故障'传言作为直接原因",
+        "认为两种说法可信度相同、无法取舍"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D013"
+      ],
+      [
+        "D012"
+      ],
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "conflict_pair": [
+        "D012",
+        "D013"
+      ],
+      "reliable_source": "D013",
+      "unreliable_source": "D012",
+      "resolution": "以官方认定的祈福蜡烛引燃为准，排除'电气故障'传言"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_034_Q08",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有观点认为，事发当日灵宝市区另一处沿街店铺的小火情（D018）、提级调查前的例行消防检查（D019）、省内其他同名'澜风'门店（D020）与本起足疗店火灾的成因或追责存在直接因果关系。这一说法是否成立？请判断。",
+    "answers": "不成立。D018是当日另一处因线路问题的独立小火情，很快自行处置，与本起火灾无关；D019是年度例行消防检查，属常规安排，与提级专项调查并非同一回事；D020是省内其他同名门店，与涉事的灵宝澜风足疗店并非同一主体。三者均与本起事故的成因和追责没有因果关系，材料也未记载任何相关因果边，属于干扰信息。",
+    "answer_facts": {
+      "required_facts": [
+        "D018、D019、D020 均与本起事故无因果关系",
+        "材料未记载相关因果边",
+        "三者属于干扰信息，应予排除"
+      ],
+      "optional_facts": [
+        "D018为无关的独立小火情",
+        "D019为常规年度例行检查，非本起专项调查",
+        "D020为同名的不同经营主体"
+      ],
+      "forbidden_facts": [
+        "认定干扰事件与本起事故存在因果关系",
+        "将同名门店或例行检查混入事故因果链"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D018"
+      ],
+      [
+        "D019"
+      ],
+      [
+        "D020"
+      ]
+    ],
+    "annotations": {
+      "distractors": [
+        "D018",
+        "D019",
+        "D020"
+      ],
+      "judgement": false,
+      "note": "干扰事件与事故因果无关，不存在相应因果边"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_034_Q09",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据现有材料，能否精确确定本起火灾中祈福蜡烛引燃周边可燃物的确切时刻（精确到分钟）？请说明理由。",
+    "answers": "无法精确确定。材料显示火灾大致发生在5月2日6时许，但对确切引燃时刻不同渠道说法不一（有称6时20分许起火、有以6时30分接到报警为节点），蜡烛究竟在何时引燃可燃物尚难精确认定，需以调查报告为准（见D015）。因此在现有材料下不能给出精确到分钟的引燃时刻，信息不足。",
+    "answer_facts": {
+      "required_facts": [
+        "现有材料无法精确确定蜡烛引燃可燃物的确切时刻（精确到分钟）",
+        "不同渠道对起火/报警时刻说法不一",
+        "属于信息不足/缺失"
+      ],
+      "optional_facts": [
+        "大致时间为5月2日6时许",
+        "确切时刻需以调查报告为准"
+      ],
+      "forbidden_facts": [
+        "编造一个精确到分钟的确切引燃时刻",
+        "断言材料已明确给出精确引燃时刻"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "missing_field": "祈福蜡烛引燃可燃物的确切时刻（精确到分钟）",
+      "reason": "不同渠道说法不一，材料未最终认定",
+      "conclusion": "信息不足，无法确定"
+    },
+    "confidence_level": "possible"
+  }
+]

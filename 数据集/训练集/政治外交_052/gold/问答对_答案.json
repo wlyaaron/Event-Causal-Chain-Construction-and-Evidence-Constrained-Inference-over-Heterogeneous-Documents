@@ -1,0 +1,290 @@
+[
+  {
+    "sample_id": "diplomacy_052_Q01",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（磋商破裂摩擦升级至科技领域），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（美国宣布对华加征关税）→D002（中美互相公布关税清单）→D003（中美两轮磋商达成共识）→D004（美国撕毁共识贸易战打响）→D005（贸易战规模扩大）→D006（两国元首阿根廷会晤达成休战）→D007（多轮磋商取得阶段性进展）→D008（磋商破裂摩擦升级至科技领域）。贸易摩擦经历了发起、缓和、升级、再缓和、再升级的曲折过程。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的有向因果链",
+        "起点D001",
+        "终点D008"
+      ],
+      "optional_facts": [
+        "可包含华为被列入实体清单",
+        "终点影响：摩擦向科技领域扩展"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ],
+      "hops": 7
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_052_Q02",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D003（中美两轮磋商达成共识）在D004（美国撕毁共识贸易战打响）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，关键依据是材料中的因果记载D003→D004（直接因果）。5月19日双方发表联合声明宣布不打贸易战，但6月15日美国即撕毁共识宣布加征关税，共识的破裂直接导致贸易战正式打响。",
+    "answer_facts": {
+      "required_facts": [
+        "D003与D004存在因果关系",
+        "依据是明确的因果证据而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D003先于D004约1个月"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后断定因果",
+        "因果方向颠倒"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D003",
+      "event_b": "D004",
+      "temporal_order": "D003先于D004",
+      "causal_link": true
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_052_Q03",
+    "pack_id": "052",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D006（两国元首阿根廷会晤达成休战）这一环节，D007（多轮磋商取得阶段性进展）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "D006是D007的直接原因，移除后D007将失去关键支撑。因为阿根廷会晤达成的90天休战共识是2019年多轮磋商的政治基础，没有元首层面的共识，副部级和高级别磋商难以启动。受影响的下游包括D008磋商破裂。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D007的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "D005也是D006的原因但不足以替代D006"
+      ],
+      "forbidden_facts": [
+        "移除后结果照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ],
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D007失去关键支撑"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_052_Q04",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（美国宣布对华加征关税）之后直接推动了哪个事件？",
+    "answers": "D002（中美互相公布关税清单）是D001的直接后果。证据：3月22日美国宣布加征关税后，4月3日美国公布具体清单，4月4日中国对等公布清单，双方互征关税规模均达500亿美元。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002",
+        "后果：双方公布对等关税清单"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度certain"
+      ],
+      "forbidden_facts": [
+        "因果方向颠倒",
+        "编造其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_052_Q05",
+    "pack_id": "052",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确预测中美贸易摩擦对全球GDP增速的具体影响数值？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出确定性答案",
+        "编造数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_052_Q06",
+    "pack_id": "052",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2018年12月1日（D001至D006均已发生，两国元首阿根廷会晤达成休战），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D007（多轮磋商取得阶段性进展）、D008（磋商破裂摩擦升级至科技领域）；其中最关键的是2019年多轮磋商后美方突然提高关税并将华为列入实体清单，摩擦向科技领域扩展。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生D007"
+      ],
+      "optional_facts": [
+        "后续还可能发生D008"
+      ],
+      "forbidden_facts": [
+        "预测已出现的进展",
+        "编造未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2018-12-01",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "predicted": [
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_052_Q07",
+    "pack_id": "052",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请追溯D005（贸易战规模扩大）的多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由有向因果链推动：D001（美国宣布对华加征关税）→D002（中美互相公布关税清单）→D003（中美两轮磋商达成共识）→D004（美国撕毁共识贸易战打响）→D005（贸易战规模扩大）。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D005的有向因果链",
+        "起点D001",
+        "终点D005"
+      ],
+      "optional_facts": [
+        "可包含D006",
+        "终点影响：双方互征规模达2500亿和1100亿"
+      ],
+      "forbidden_facts": [
+        "颠倒顺序",
+        "编造因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  }
+]

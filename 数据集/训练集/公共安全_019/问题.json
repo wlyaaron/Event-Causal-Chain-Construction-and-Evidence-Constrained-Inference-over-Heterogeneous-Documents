@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_019_Q01",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：国务院相关的D004（成立调查组）发生后，紧接着出现的直接结果是什么？"
+  },
+  {
+    "sample_id": "public_safety_019_Q02",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（事故发生）先于D003（船舶打捞）发生，可以据此断定D001（事故发生）是D003（船舶打捞）的原因吗？请说明。"
+  },
+  {
+    "sample_id": "public_safety_019_Q03",
+    "pack_id": "019",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，假如当初D006（全国部署）未曾出现，D008（系统建设）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "public_safety_019_Q04",
+    "pack_id": "019",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道2015-07-20前进展（D001 事故发生；D002 国家救援；D003 船舶打捞；D004 成立调查组；D005 搜救结束；D006 全国部署；D007 标准修订）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "public_safety_019_Q05",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（事故发生）到D012（整治成效）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "public_safety_019_Q06",
+    "pack_id": "019",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D012（整治成效）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_019_Q07",
+    "pack_id": "019",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至2015-07-20，材料仅显示：D001 事故发生；D002 国家救援；D003 船舶打捞；D004 成立调查组；D005 搜救结束；D006 全国部署；D007 标准修订。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_019_Q08",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于东方之星号客轮的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_019_Q09",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D014.txt》中邻近辖区交通运输部的行业交流会，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_019_Q10",
+    "pack_id": "019",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，东方之星号客轮在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

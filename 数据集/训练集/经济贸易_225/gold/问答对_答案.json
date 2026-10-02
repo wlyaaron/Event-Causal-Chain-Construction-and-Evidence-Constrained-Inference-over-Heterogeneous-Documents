@@ -1,0 +1,146 @@
+[
+  {
+    "sample_id": "economy_trade_225_Q01",
+    "pack_id": "225",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何推进举措落地？",
+    "answers": "有关主管部门实字当头、干字为先，细化任务分工，明确时间节点和责任主体，挂图作战、压茬推进；坚持上下联动、部门协同，把可操作能落地的举措做实做细，并注重防范风险、跟踪问效，推动健全县乡村三级商业网络走深走实。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_225_Q02",
+    "pack_id": "225",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关负责人和专家如何解读这一举措？",
+    "answers": "受访者认为这一举措抓住了关键、切中了要害，具有很强的现实针对性；指出推进相关改革既是应对挑战的现实需要，也是塑造发展新优势的必然要求，有利于促进农村消费扩容提质；建议在抓落实上下真功夫，注重系统集成、放大政策组合效应。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_225_Q03",
+    "pack_id": "225",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在优化服务方面做了哪些工作、市场反响如何？",
+    "answers": "当地深化放管服改革，优化政务服务，推行集成办理、一网通办，建立常态化政企沟通机制，落实惠企政策免申即享。举措发布后市场反响热烈，众多经营主体表示政策精准有力、含金量高，坚定了投资兴业、深耕市场的信心。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_225_Q04",
+    "pack_id": "225",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "举措取得了哪些成效？相关数据如何？",
+    "answers": "随着举措深入实施，政策红利加快释放，经营主体活力增强，投资和消费稳步回升，新动能加快集聚。有关部门发布的数据显示，投资、消费、外贸、就业等主要指标稳中向好、结构优化，印证了举措成效和经济长期向好的基本面。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_225_Q05",
+    "pack_id": "225",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "一线调研反映出举措带来了哪些变化？",
+    "answers": "记者深入生产经营一线蹲点调研发现，政策落地让企业办事更顺畅、负担更减轻、信心更增强，得以把更多资源投入技术创新和市场开拓。从一线鲜活实践中可以感受到改革的温度和发展的活力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_225_Q06",
+    "pack_id": "225",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "着眼长远，深化相关改革开放还需在哪些方面持续用力？",
+    "answers": "预计未来将在深化改革扩大开放上持续用力。预计将进一步破除制约高质量发展的体制机制障碍，构建高水平社会主义市场经济体制；预计将以更高水平开放拥抱世界、稳外贸稳外资；预计将统筹发展和安全，推动经济实现质的有效提升和量的合理增长。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_225_Q07",
+    "pack_id": "225",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "这一举措对稳定预期、提振信心将发挥怎样的作用？",
+    "answers": "预计这一举措将有效稳定预期、提振信心。预计将释放坚定深化改革扩大开放的强烈信号，增强各类经营主体投资经营信心；预计将通过降成本、优服务让企业更有获得感；预计将激发市场活力和社会创造力，为经济回升向好营造良好环境。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D004"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

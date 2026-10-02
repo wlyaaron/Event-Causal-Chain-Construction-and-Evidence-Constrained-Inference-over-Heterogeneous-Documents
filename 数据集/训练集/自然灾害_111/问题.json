@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_111_Q01",
+    "pack_id": "111",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2015年尼泊尔地震发生在哪一天？震级是多少？最终造成多少人死亡？哪座标志性的瞭望塔在地震中完全倒塌？"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q02",
+    "pack_id": "111",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2015年尼泊尔地震是如何从地质构造运动演变为一场造成近9000人死亡的人道主义灾难的？请分析其中的因果链条。"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q03",
+    "pack_id": "111",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：5月12日7.3级余震、4月25日主震、国际重建会议、珠峰雪崩、中国救援队抵达加德满都。"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q04",
+    "pack_id": "111",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2015年尼泊尔地震和2008年汶川特大地震在震级、伤亡、救援响应和灾后重建方面的异同。"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q05",
+    "pack_id": "111",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2015年尼泊尔地震如何通过人员伤亡、基础设施破坏、文化遗产损失、旅游业冲击和政治动荡等多个维度传导至国家长期发展，形成系统性影响？"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q06",
+    "pack_id": "111",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2015年尼泊尔地震暴露了哪些防灾减灾方面的问题，以及地震后尼泊尔在抗震能力建设方面采取了哪些措施。"
+  },
+  {
+    "sample_id": "natural_disaster_111_Q07",
+    "pack_id": "111",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2015年尼泊尔地震发生在深夜而不是中午，伤亡情况可能会有什么不同？请结合尼泊尔的建筑质量和人口分布分析。"
+  }
+]

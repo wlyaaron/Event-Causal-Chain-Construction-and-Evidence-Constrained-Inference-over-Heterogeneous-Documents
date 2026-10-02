@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_106_Q01",
+    "pack_id": "106",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2020年3月美股在多少天内触发了多少次熔断？标普500指数从2月高点到3月低点的最大跌幅是多少？波动率指数VIX最高达到多少？"
+  },
+  {
+    "sample_id": "economy_trade_106_Q02",
+    "pack_id": "106",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2020年新冠疫情是如何从公共卫生危机演变为全球经济危机和金融危机的？请分析其中的传导链条。"
+  },
+  {
+    "sample_id": "economy_trade_106_Q03",
+    "pack_id": "106",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：美联储无限量QE、CARES法案签署、WHO宣布全球大流行、美股第一次熔断、WTI原油负价格。"
+  },
+  {
+    "sample_id": "economy_trade_106_Q04",
+    "pack_id": "106",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2020年新冠疫情经济危机和2008年全球金融危机在起因、政策应对、复苏路径和长期影响方面的异同。"
+  },
+  {
+    "sample_id": "economy_trade_106_Q05",
+    "pack_id": "106",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2020年美联储的无限量宽松政策如何通过资产价格、财富效应、通胀预期、汇率等多个渠道传导至全球经济，形成系统性影响？"
+  },
+  {
+    "sample_id": "economy_trade_106_Q06",
+    "pack_id": "106",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2020年新冠疫情对全球经济产生了哪些长期结构性影响，包括工作方式、供应链、通胀、贫富分化等方面。"
+  },
+  {
+    "sample_id": "economy_trade_106_Q07",
+    "pack_id": "106",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2020年美联储和美国政府没有采取大规模货币和财政刺激，全球经济可能会走出怎样的轨迹？与实际情况相比会有哪些不同？"
+  }
+]

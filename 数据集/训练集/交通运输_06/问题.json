@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_06_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "东方之星号客轮是在哪一天、什么水域翻沉的？船上共有多少人？最终有多少人生还、多少人遇难？"
+  },
+  {
+    "sample_id": "transportation_06_Q02",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "东方之星号翻沉的直接原因是什么？除了极端天气外，还有哪些间接原因导致了这起事故？"
+  },
+  {
+    "sample_id": "transportation_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：客轮翻沉、李克强赶赴现场、船体扶正打捞、潜水员救出陈书涵、最终调查报告发布、善后赔偿完成。"
+  },
+  {
+    "sample_id": "transportation_06_Q04",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "紧急搜救阶段和船体扶正打捞阶段在救援目标、作业方式和面临困难上有什么不同？"
+  },
+  {
+    "sample_id": "transportation_06_Q05",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从极端天气发生到客轮最终翻沉，中间涉及哪些关键环节？请结合气象条件、船舶性能、船长操作和公司管理等多个层面说明。"
+  },
+  {
+    "sample_id": "transportation_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括东方之星号翻沉事件对中国内河航运安全体系产生的主要影响和推动的改革措施。"
+  },
+  {
+    "sample_id": "transportation_06_Q07",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设东方之星号在收到恶劣天气预警后立即采取抛锚停航措施，事故是否还会发生？请结合下击暴流的特点和船舶稳性进行分析。"
+  }
+]

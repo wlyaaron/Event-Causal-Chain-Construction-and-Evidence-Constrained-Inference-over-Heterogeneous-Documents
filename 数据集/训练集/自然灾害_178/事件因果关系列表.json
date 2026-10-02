@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E02",
+    "relation_type": "直接导致",
+    "description": "西欧历史性暴雨使阿尔河水位暴涨，德国阿尔河谷成为重灾区。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E03",
+    "relation_type": "直接导致",
+    "description": "持续强降雨导致默兹河水位创历史新高，比利时列日省遭受严重洪水。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E04",
+    "relation_type": "直接导致",
+    "description": "暴雨使马斯河水位暴涨，荷兰南部宣布紧急状态并大规模疏散。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E05",
+    "relation_type": "人员伤亡",
+    "description": "德国阿尔河谷村庄被冲毁，大量居民未能及时撤离，造成重大人员伤亡。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E05",
+    "relation_type": "人员伤亡",
+    "description": "比利时列日省洪水造成38人死亡，数万人撤离家园。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E06",
+    "relation_type": "引发调查",
+    "description": "德国重灾区大量人员伤亡引发对预警系统和应急响应的广泛质疑和调查。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E06",
+    "relation_type": "引发调查",
+    "description": "比利时预警系统注册率低、信息传达不畅，促使政府展开独立调查。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E07",
+    "relation_type": "科学研究",
+    "description": "极端降雨事件引发气候科学家关注，迅速展开气候变化归因研究。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E07",
+    "effect_event_id": "E09",
+    "relation_type": "政策推动",
+    "description": "气候变化归因研究结果为气候政策升级提供了科学依据，推动欧洲减排和适应行动。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E08",
+    "relation_type": "直接推动",
+    "description": "重大人员伤亡和经济损失促使各国政府启动大规模重建计划和援助。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E08",
+    "relation_type": "重建需求",
+    "description": "阿尔河谷基础设施和房屋大面积损毁，需要长期和大规模的重建投入。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E06",
+    "effect_event_id": "E09",
+    "relation_type": "政策推动",
+    "description": "预警系统缺陷调查结果推动了欧洲多国紧急预警系统和防洪标准的改革。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E08",
+    "effect_event_id": "E09",
+    "relation_type": "长期影响",
+    "description": "重建过程中对未来洪水风险的考量，推动了气候适应和城市规划政策的升级。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E09",
+    "relation_type": "经验推动",
+    "description": "荷兰防洪经验与不足的反思，推动了跨境河流管理合作和防洪标准提高。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E07",
+    "effect_event_id": "E06",
+    "relation_type": "背景因素",
+    "description": "气候变化导致极端降雨增加，而现有预警和防洪系统未能适应这一变化，暴露了系统缺陷。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E05",
+    "relation_type": "连锁反应",
+    "description": "洪水范围广、强度大，涉及多国，造成了欧洲数十年来最严重的洪水人员伤亡。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E09",
+    "relation_type": "政治压力",
+    "description": "重大人员伤亡和经济损失形成强大政治压力，推动欧洲气候政策从减缓转向减缓与适应并重。",
+    "pack_id": "178"
+  },
+  {
+    "cause_event_id": "E08",
+    "effect_event_id": "E06",
+    "relation_type": "反思改进",
+    "description": "重建过程中暴露的资金发放缓慢、保险覆盖率低等问题，进一步推动了应急管理体系的改革。",
+    "pack_id": "178"
+  }
+]

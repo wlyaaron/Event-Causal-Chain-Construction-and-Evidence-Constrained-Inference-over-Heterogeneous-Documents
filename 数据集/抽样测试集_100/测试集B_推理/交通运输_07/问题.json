@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_007_Q01",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：D009（行业转型）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "transportation_007_Q02",
+    "pack_id": "07",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化事故发生对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "transportation_007_Q03",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，已知D003（官方部署）先于D004（原因调查）出现，可否仅凭先后顺序认定二者的因果关系？"
+  },
+  {
+    "sample_id": "transportation_007_Q04",
+    "pack_id": "07",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（善后处置）阶段，材料仅显示：D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "transportation_007_Q05",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，请概述D010（调查报告）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "transportation_007_Q06",
+    "pack_id": "07",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "如果D004（原因调查）被移除，D005（责任追究）及其后续连锁反应是否还会发生？请给出判断并说明理由。"
+  },
+  {
+    "sample_id": "transportation_007_Q07",
+    "pack_id": "07",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（专项整治），并按顺序给出完整证据链。"
+  }
+]

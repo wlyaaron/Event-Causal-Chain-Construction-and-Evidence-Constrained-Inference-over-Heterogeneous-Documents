@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_054_Q01",
+    "pack_id": "054",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "美国对伊拉克发动军事行动的代号是什么？行动开始于哪一天？"
+  },
+  {
+    "sample_id": "diplomacy_054_Q02",
+    "pack_id": "054",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "美国以伊拉克拥有大规模杀伤性武器为由发动战争，但战后并未发现WMD。这一结果对战争的合法性和美国国际形象产生了什么影响？"
+  },
+  {
+    "sample_id": "diplomacy_054_Q03",
+    "pack_id": "054",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：萨达姆被抓获、布什宣布主要战事结束、萨达姆雕像被推倒、阿布格莱布虐囚曝光、伊拉克主权移交。"
+  },
+  {
+    "sample_id": "diplomacy_054_Q04",
+    "pack_id": "054",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "布什2003年5月宣布任务完成时的乐观预期与此后伊拉克实际局势之间存在哪些差距？"
+  },
+  {
+    "sample_id": "diplomacy_054_Q05",
+    "pack_id": "054",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从美军发动战争到萨达姆被抓获，经历了哪些关键军事和政治环节？"
+  },
+  {
+    "sample_id": "diplomacy_054_Q06",
+    "pack_id": "054",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2003年伊拉克战争从爆发到2004年主权移交期间的主要事件及其影响。"
+  },
+  {
+    "sample_id": "diplomacy_054_Q07",
+    "pack_id": "054",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设联合国安理会通过了授权对伊动武的决议，伊拉克战争的国际反响和战后进程可能会有什么不同？"
+  }
+]

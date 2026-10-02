@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_059_Q01",
+    "pack_id": "059",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "克里米亚公投是在哪一天举行的？根据克里米亚选举委员会的结果，支持加入俄罗斯的比例是多少？联合国大会对克里米亚公投的态度是什么？"
+  },
+  {
+    "sample_id": "diplomacy_059_Q02",
+    "pack_id": "059",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2013年乌克兰亲欧盟示威运动是如何一步步演变为俄罗斯吞并克里米亚的？请分析其中的因果链条。"
+  },
+  {
+    "sample_id": "diplomacy_059_Q03",
+    "pack_id": "059",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：MH17被击落、亚努科维奇出逃、克里米亚公投、明斯克协议签署、俄罗斯出兵克里米亚。"
+  },
+  {
+    "sample_id": "diplomacy_059_Q04",
+    "pack_id": "059",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2014年克里米亚危机和2008年俄格战争在起因、过程、国际反应和长期影响方面的异同。"
+  },
+  {
+    "sample_id": "diplomacy_059_Q05",
+    "pack_id": "059",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "俄罗斯吞并克里米亚如何通过制裁、能源、军事、信息等多个维度传导至全球国际关系，形成系统性的地缘政治冲击？"
+  },
+  {
+    "sample_id": "diplomacy_059_Q06",
+    "pack_id": "059",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2014年克里米亚危机对欧洲安全格局、北约战略、俄罗斯经济和乌克兰国家发展产生了哪些长期影响。"
+  },
+  {
+    "sample_id": "diplomacy_059_Q07",
+    "pack_id": "059",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设2013年亚努科维奇没有拒签欧盟联系国协定，乌克兰和克里米亚的局势可能会如何发展？俄罗斯是否仍然会采取行动？"
+  }
+]

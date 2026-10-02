@@ -1,0 +1,437 @@
+[
+  {
+    "sample_id": "economy_trade_134_Q01",
+    "pack_id": "134",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D006（中小企业影响）与哪一事件构成直接因果关系？其后果是什么？",
+    "answers": "直接因果链为 D006（中小企业影响） → D008（成效评估）。后果：非洲债务减免实施已近一周年，巴黎各界对其成效进行总结评估。",
+    "answer_facts": {
+      "required_facts": [
+        "D006（中小企业影响） 直接导致 D008（成效评估）",
+        "后果：非洲债务减免实施已近一周年，巴黎各界对其成效进行总结评估"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D008（成效评估） 导致 D006（中小企业影响）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D008"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_134_Q02",
+    "pack_id": "134",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：截至D006（中小企业影响）阶段，材料仅显示：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响。据此预测后续最可能发生的进展，并说明推理依据。",
+    "answers": "基于因果走势，后续将出现：D007（国际合作）、D008（成效评估）、D009（趋势展望）；其中最关键的是国际合作——非洲债务减免在巴黎的落地引发全球经济界关注。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:国际合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（成效评估）, D009（趋势展望）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（中小企业影响）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:国际合作"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_134_Q03",
+    "pack_id": "134",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D009（趋势展望）的完整因果路径，并标明证据顺序。",
+    "answers": "完整因果链：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）。其中，政策落地为起点，经逐级传导，最终导致趋势展望；赞比亚债务重组协议。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策落地） 到终点 D009（趋势展望） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策落地）",
+        "终点为 D009（趋势展望）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策落地） → D002（市场反应） → D003（企业行动） → D004（专家分析） → D006（中小企业影响） → D008（成效评估） → D009（趋势展望）",
+        "可包含关键环节 D002（市场反应）",
+        "可包含关键环节 D003（企业行动）",
+        "可包含关键环节 D004（专家分析）",
+        "可包含关键环节 D006（中小企业影响）",
+        "可包含关键环节 D008（成效评估）",
+        "终点影响：赞比亚债务重组协议"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "政策落地",
+        "市场反应",
+        "企业行动",
+        "专家分析",
+        "中小企业影响",
+        "成效评估",
+        "趋势展望"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_134_Q04",
+    "pack_id": "134",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，巴黎周边居民的确切疏散人数是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "economy_trade_134_Q05",
+    "pack_id": "134",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，如果移除D001（政策落地）这一原因，D002（市场反应）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]；赞比亚债务重组协议 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_134_Q06",
+    "pack_id": "134",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，事件D006（中小企业影响）在时间/进程上早于D008（成效评估）。能否据此断定D006（中小企业影响）导致了D008（成效评估）？请给出判断与证据。",
+    "answers": "可以认定为因果，但依据不是时间先后本身，而是材料中明确记载的因果关系：D006→D008（直接因果）。证据：非洲债务减免实施已近一周年，巴黎各界对其成效进行总结评估。时间先后仅是必要条件，须有因果证据支撑。",
+    "answer_facts": {
+      "required_facts": [
+        "D006（中小企业影响） 与 D008（成效评估） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D006 先于 D008"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D008（成效评估） 导致 D006（中小企业影响）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D006",
+      "event_b": "D008",
+      "temporal_order": "D006先于D008",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_134_Q07",
+    "pack_id": "134",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，材料显示D004（专家分析）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D004（专家分析）直接导致了D005（行业影响）。依据：围绕2023-06-22的非洲债务减免，多位经济学家展开深入讨论。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（专家分析） 直接导致 D005（行业影响）",
+        "后果：围绕2023-06-22的非洲债务减免，多位经济学家展开深入讨论"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（行业影响） 导致 D004（专家分析）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

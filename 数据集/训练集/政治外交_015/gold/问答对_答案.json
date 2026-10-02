@@ -1,0 +1,344 @@
+[
+  {
+    "sample_id": "diplomacy_015_Q01",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（未来前景挑战），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D002（论坛历史发展） → D001（达沃斯论坛概况） → D005（核心议题讨论） → D006（论坛影响力价值） → D007（批评与争议） → D010（未来前景挑战）。论坛历史发展触发链条，最终形成未来前景挑战；决定论坛在下一时代的角色与地位。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（论坛历史发展） 到终点 D010（未来前景挑战） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（论坛历史发展）",
+        "终点为 D010（未来前景挑战）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（论坛历史发展） → D001（达沃斯论坛概况） → D005（核心议题讨论） → D006（论坛影响力价值） → D007（批评与争议） → D010（未来前景挑战）",
+        "可包含关键环节 D001（达沃斯论坛概况）",
+        "终点影响：决定论坛在下一时代的角色与地位"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D009",
+        "D010"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D009",
+        "D010"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D007",
+        "D010"
+      ],
+      "stages": [
+        "论坛历史发展",
+        "达沃斯论坛概况",
+        "核心议题讨论",
+        "论坛影响力价值",
+        "批评与争议",
+        "未来前景挑战"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_015_Q02",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（论坛历史发展）在D001（达沃斯论坛概况）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D002→D001（历史形成），不是先后关系。证据：成为全球经济与治理的重要风向标和对话平台。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（论坛历史发展） 与 D001（达沃斯论坛概况） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（达沃斯论坛概况） 导致 D002（论坛历史发展）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D001",
+      "temporal_order": "D002先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_015_Q03",
+    "pack_id": "015",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（达沃斯论坛概况）这一原因，D005（核心议题讨论）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D005大概率不再发生。因为D001是D005的直接原因，其下游受影响的边为 [['D001', 'D005'], ['D005', 'D006'], ['D005', 'D009']]；引领全球议程设置，影响政策与舆论走向 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D005",
+        "D006"
+      ],
+      [
+        "D005",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D005",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_015_Q04",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D007（批评与争议），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D002（论坛历史发展） → D001（达沃斯论坛概况） → D005（核心议题讨论） → D006（论坛影响力价值） → D007（批评与争议）。起点为论坛历史发展，终点为批评与争议；推动论坛反思与改革，也反映全球社会撕裂。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（论坛历史发展） 到终点 D007（批评与争议） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（论坛历史发展）",
+        "终点为 D007（批评与争议）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（论坛历史发展） → D001（达沃斯论坛概况） → D005（核心议题讨论） → D006（论坛影响力价值） → D007（批评与争议）",
+        "可包含关键环节 D001（达沃斯论坛概况）",
+        "终点影响：推动论坛反思与改革，也反映全球社会撕裂"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "论坛历史发展",
+        "达沃斯论坛概况",
+        "核心议题讨论",
+        "论坛影响力价值",
+        "批评与争议"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_015_Q05",
+    "pack_id": "015",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_015_Q06",
+    "pack_id": "015",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（达沃斯论坛概况）之后直接发生了什么？",
+    "answers": "D005（核心议题讨论）是D001（达沃斯论坛概况）的直接后果。证据：引领全球议程设置，影响政策与舆论走向。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（达沃斯论坛概况） 直接导致 D005（核心议题讨论）",
+        "后果：引领全球议程设置，影响政策与舆论走向"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D005（核心议题讨论） 导致 D001（达沃斯论坛概况）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_015_Q07",
+    "pack_id": "015",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于历届年会持续推进（D001 达沃斯论坛概况；D002 论坛历史发展；D003 2023年冬季年会；D004 中国参与论坛；D005 核心议题讨论），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（论坛影响力价值）、D007（批评与争议）、D008（疫情后转型变化）、D009（全球治理作用）、D010（未来前景挑战）；其中最关键的是论坛影响力价值——奠定全球第一非官方经济论坛的地位。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:论坛影响力价值"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（批评与争议）、D008（疫情后转型变化）、D009（全球治理作用）、D010（未来前景挑战）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "历届年会持续推进",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

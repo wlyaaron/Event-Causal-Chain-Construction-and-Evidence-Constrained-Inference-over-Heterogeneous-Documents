@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_057_Q01",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从乡村振兴战略实施成效发布到挑战与展望，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。"
+  },
+  {
+    "sample_id": "economy_trade_057_Q02",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "人才振兴（D003）和组织振兴（D006）都对产业振兴（D002）有推动作用，二者中哪一个的推动作用更直接？请结合材料说明判断依据。"
+  },
+  {
+    "sample_id": "economy_trade_057_Q03",
+    "pack_id": "057",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设国家没有实施乡村振兴战略（移除D001），这会对生态振兴（D005）和城乡融合发展（D007）产生什么影响？请判断并说明连锁反应。"
+  },
+  {
+    "sample_id": "economy_trade_057_Q04",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "文化振兴（D004）与乡村振兴挑战展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。"
+  },
+  {
+    "sample_id": "economy_trade_057_Q05",
+    "pack_id": "057",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测我国实现乡村全面振兴的具体年份？"
+  },
+  {
+    "sample_id": "economy_trade_057_Q06",
+    "pack_id": "057",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "乡村振兴战略实施成效发布（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。"
+  },
+  {
+    "sample_id": "economy_trade_057_Q07",
+    "pack_id": "057",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于成效发布和产业振兴（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。"
+  }
+]

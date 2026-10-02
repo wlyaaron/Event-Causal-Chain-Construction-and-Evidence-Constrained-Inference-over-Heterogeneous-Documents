@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E02",
+    "relation_type": "法律基础",
+    "description": "JCPOA达成并经安理会核可后，为制裁解除提供了国际法框架，IAEA确认后制裁正式解除。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E03",
+    "relation_type": "背景铺垫",
+    "description": "JCPOA执行后伊朗经济恢复有限，以色列和沙特持续反对，美国国会保留部分制裁，为特朗普退出埋下伏笔。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E04",
+    "relation_type": "直接引发",
+    "description": "美国退出协议并实施最严厉制裁，欧洲未能兑现经济承诺，促使伊朗逐步突破核协议限制。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E07",
+    "relation_type": "推动谈判",
+    "description": "伊朗核能力持续提升引起国际关切，拜登政府上台后启动维也纳谈判试图恢复协议。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E05",
+    "relation_type": "对抗升级",
+    "description": "美国退出协议后对伊朗极限施压，双方对抗不断升级，最终导致苏莱曼尼遇刺事件。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E06",
+    "relation_type": "直接报复",
+    "description": "苏莱曼尼遇刺后，伊朗以导弹袭击美军基地作为报复，同时发生误击乌克兰客机事件。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E06",
+    "effect_event_id": "E08",
+    "relation_type": "加剧不满",
+    "description": "误击乌克兰客机事件暴露政府无能和隐瞒，加剧了伊朗民众对政权的不信任和不满。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E08",
+    "relation_type": "经济根源",
+    "description": "美国制裁导致伊朗经济急剧恶化、通货膨胀飙升、民生困苦，是国内抗议的重要经济根源。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E04",
+    "effect_event_id": "E08",
+    "relation_type": "政治影响",
+    "description": "核问题上的对外对抗增强了伊朗强硬派势力，压缩了政治改革空间，加剧国内矛盾。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E07",
+    "effect_event_id": "E04",
+    "relation_type": "谈判停滞",
+    "description": "维也纳谈判陷入停滞，伊朗继续推进核计划，浓缩铀丰度和库存进一步突破限制。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E07",
+    "relation_type": "政策逆转",
+    "description": "特朗普退出JCPOA，拜登政府试图逆转这一政策，启动重返协议的间接谈判。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E04",
+    "relation_type": "推动突破",
+    "description": "苏莱曼尼遇刺后，伊朗宣布完全取消离心机数量限制，核突破进入更激进阶段。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E08",
+    "effect_event_id": "E07",
+    "relation_type": "影响谈判",
+    "description": "伊朗国内抗议运动和强硬派全面掌权，使伊朗在核谈判中的立场更加强硬。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E02",
+    "effect_event_id": "E08",
+    "relation_type": "期望落差",
+    "description": "JCPOA带来的经济红利远低于预期，民众对温和派政府失望，为后续社会动荡埋下伏笔。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E01",
+    "effect_event_id": "E03",
+    "relation_type": "争议根源",
+    "description": "JCPOA本身存在日落条款、不限制导弹计划和地区活动等争议，为美国退出协议提供了理由。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E03",
+    "effect_event_id": "E07",
+    "relation_type": "谈判动因",
+    "description": "美国制裁的人道主义后果和中东地区紧张局势，促使拜登政府寻求通过外交谈判解决伊朗核问题。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E06",
+    "effect_event_id": "E04",
+    "relation_type": "连锁反应",
+    "description": "伊朗导弹袭击美军基地后，美伊关系进一步恶化，伊朗在核问题上的态度更趋强硬。",
+    "pack_id": "091"
+  },
+  {
+    "cause_event_id": "E05",
+    "effect_event_id": "E08",
+    "relation_type": "社会震荡",
+    "description": "苏莱曼尼遇刺引发伊朗全国哀悼，随后的误击客机事件迅速转化为反政府抗议，社会矛盾激化。",
+    "pack_id": "091"
+  }
+]

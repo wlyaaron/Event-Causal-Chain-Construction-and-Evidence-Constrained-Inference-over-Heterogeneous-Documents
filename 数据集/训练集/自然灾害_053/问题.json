@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_053_Q01",
+    "pack_id": "053",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D003（抢险搜救），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q02",
+    "pack_id": "053",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（特大山洪泥石流灾害发生）在D002（中央部署与应急响应）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q03",
+    "pack_id": "053",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（特大山洪泥石流灾害发生）这一原因，D002（中央部署与应急响应）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q04",
+    "pack_id": "053",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D004（堰塞湖排险与河道疏通），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q05",
+    "pack_id": "053",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q06",
+    "pack_id": "053",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（特大山洪泥石流灾害发生）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "natural_disaster_053_Q07",
+    "pack_id": "053",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2010-08-16（D001 特大山洪泥石流灾害发生；D002 中央部署与应急响应；D003 抢险搜救；D004 堰塞湖排险与河道疏通；D005 群众安置与供水抢修），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

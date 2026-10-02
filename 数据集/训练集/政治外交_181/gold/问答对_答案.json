@@ -1,0 +1,362 @@
+[
+  {
+    "sample_id": "diplomacy_181_Q01",
+    "pack_id": "181",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D002（领导人会谈） → D001（发表公报） → D003（原则确立） → D007（精神阐释） → D008（评论员文章）。领导人会谈触发链条，最终形成评论员文章；凝聚推动中美关系健康稳定发展的社会共识。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（领导人会谈） 到终点 D008（评论员文章） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（领导人会谈）",
+        "终点为 D008（评论员文章）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（领导人会谈） → D001（发表公报） → D003（原则确立） → D007（精神阐释） → D008（评论员文章）",
+        "可包含关键环节 D001（发表公报）",
+        "终点影响：凝聚推动中美关系健康稳定发展的社会共识"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D003",
+        "D007",
+        "D008"
+      ],
+      [
+        "D002",
+        "D001",
+        "D004",
+        "D007",
+        "D008"
+      ],
+      [
+        "D002",
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D002",
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D003",
+        "D007",
+        "D008"
+      ],
+      "stages": [
+        "领导人会谈",
+        "发表公报",
+        "原则确立",
+        "精神阐释",
+        "评论员文章"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_181_Q02",
+    "pack_id": "181",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（领导人会谈）在D001（发表公报）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D002→D001（直接因果），不是先后关系。证据：标志中美开始走向关系正常化，为两国关系翻开新的一页。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（领导人会谈） 与 D001（发表公报） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D001"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D001（发表公报） 导致 D002（领导人会谈）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D001",
+      "temporal_order": "D002先于D001",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_181_Q03",
+    "pack_id": "181",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D002（领导人会谈）这一原因，D001（发表公报）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D002，D001大概率不再发生。因为D002是D001的直接原因，其下游受影响的边为 [['D002', 'D001'], ['D001', 'D003'], ['D001', 'D004'], ['D001', 'D005'], ['D001', 'D006'], ['D001', 'D007'], ['D001', 'D008']]；标志中美开始走向关系正常化，为两国关系翻开新的一页 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D001及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D001"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D007"
+        ],
+        [
+          "D001",
+          "D008"
+        ]
+      ],
+      "counterfactual_result": "D001及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D001的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_181_Q04",
+    "pack_id": "181",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D006（关系发展），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D002（领导人会谈） → D001（发表公报） → D003（原则确立） → D006（关系发展）。起点为领导人会谈，终点为关系发展；实现两国关系正常化，为双边关系全面发展奠定基础。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D002（领导人会谈） 到终点 D006（关系发展） 的有向因果链（顺序不可颠倒）",
+        "起点为 D002（领导人会谈）",
+        "终点为 D006（关系发展）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D002（领导人会谈） → D001（发表公报） → D003（原则确立） → D006（关系发展）",
+        "可包含关键环节 D001（发表公报）",
+        "终点影响：实现两国关系正常化，为双边关系全面发展奠定基础"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001",
+        "D003",
+        "D006"
+      ],
+      [
+        "D002",
+        "D001",
+        "D005",
+        "D006"
+      ],
+      [
+        "D002",
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D002",
+        "D001",
+        "D003",
+        "D006"
+      ],
+      "stages": [
+        "领导人会谈",
+        "发表公报",
+        "原则确立",
+        "关系发展"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_181_Q05",
+    "pack_id": "181",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_181_Q06",
+    "pack_id": "181",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D002（领导人会谈）之后直接发生了什么？",
+    "answers": "D001（发表公报）是D002（领导人会谈）的直接后果。证据：标志中美开始走向关系正常化，为两国关系翻开新的一页。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D002（领导人会谈） 直接导致 D001（发表公报）",
+        "后果：标志中美开始走向关系正常化，为两国关系翻开新的一页"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D001（发表公报） 导致 D002（领导人会谈）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D002",
+        "D001"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_181_Q07",
+    "pack_id": "181",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于1972-03-01（D001 发表公报；D002 领导人会谈；D003 原则确立；D004 影响评述），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D005（交流合作）、D006（关系发展）、D007（精神阐释）、D008（评论员文章）；其中最关键的是交流合作——增进两国人民相互了解和友好感情，夯实两国关系民意根基。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:交流合作"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（关系发展）、D007（精神阐释）、D008（评论员文章）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "1972-03-01",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "predicted": [
+        "D005",
+        "D006",
+        "D007",
+        "D008"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

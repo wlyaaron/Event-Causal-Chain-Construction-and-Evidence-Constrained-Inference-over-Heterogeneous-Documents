@@ -1,0 +1,464 @@
+[
+  {
+    "sample_id": "industrial_production_04_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D009（安全短板）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（事故发生） → D002（抢险救援） → D003（挂牌督办） → D004（调查报告） → D006（企业处罚） → D008（专项整治） → D009（安全短板）。自事故发生出发逐环传导至安全短板；多人遇难。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D009（安全短板） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D009（安全短板）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（抢险救援） → D003（挂牌督办） → D004（调查报告） → D006（企业处罚） → D008（专项整治） → D009（安全短板）",
+        "可包含关键环节 D002（抢险救援）",
+        "可包含关键环节 D003（挂牌督办）",
+        "可包含关键环节 D004（调查报告）",
+        "可包含关键环节 D006（企业处罚）",
+        "可包含关键环节 D008（专项整治）",
+        "终点影响：多人遇难"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "事故发生",
+        "抢险救援",
+        "挂牌督办",
+        "调查报告",
+        "企业处罚",
+        "专项整治",
+        "安全短板"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_04_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（事故发生）早于D004（调查报告），这是否意味着二者存在因果？请判断。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D004 的因果边；其直接原因是D003（挂牌督办）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D004（调查报告） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D004（调查报告）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "industrial_production_04_Q03",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道D006（企业处罚）阶段前进展（D001 事故发生；D002 抢险救援；D003 挂牌督办；D004 调查报告；D005 责任追究；D006 企业处罚）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "基于因果走势，后续将出现：D007（技术原因）、D008（专项整治）、D009（安全短板）；其中最关键的是技术原因——针对2023-07-23的新疆哈密大红柳沟煤矿事故事故。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:技术原因"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（专项整治）, D009（安全短板）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（企业处罚）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:技术原因"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "industrial_production_04_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D001（事故发生）的主体、地点与主要影响。",
+    "answers": "据材料，D001（事故发生）的主体为大红柳沟煤矿，发生地为新疆哈密；2023-07-23，新疆哈密发生一起严重事故事故——新疆哈密大红柳沟煤矿事故。其影响：多人遇难。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：大红柳沟煤矿",
+        "地点：新疆哈密",
+        "基本事实：2023-07-23，新疆哈密发生一起严重事故事故——新疆哈密大红柳沟煤矿事故"
+      ],
+      "optional_facts": [
+        "影响：多人遇难"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D001"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "industrial_production_04_Q05",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D004（调查报告）被阻断，D005（责任追究）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "结论：一旦阻断D004，D005大概率不再发生。因为D004是D005的直接原因（直接因果），其下游受影响的边为 [['D004', 'D005'], ['D005', 'D007'], ['D007', 'D009']]；多人遇难 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D007"
+        ],
+        [
+          "D007",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_04_Q06",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示大红柳沟煤矿对抢险救援不负有任何责任，请解释后续处理的依据。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "问题包含与材料矛盾的错误前提"
+      ],
+      "optional_facts": [
+        "可指出材料中的实际情况以说明矛盾"
+      ],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "false_premise",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "industrial_production_04_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请还原从D001（事故发生）到D008（专项整治）的完整因果传导过程，并按序列出证据。",
+    "answers": "完整因果链：D001（事故发生） → D002（抢险救援） → D003（挂牌督办） → D004（调查报告） → D006（企业处罚） → D008（专项整治）。其中，事故发生为起点，经逐级传导，最终导致专项整治；多人遇难。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D008（专项整治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D008（专项整治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D002（抢险救援） → D003（挂牌督办） → D004（调查报告） → D006（企业处罚） → D008（专项整治）",
+        "可包含关键环节 D002（抢险救援）",
+        "可包含关键环节 D003（挂牌督办）",
+        "可包含关键环节 D004（调查报告）",
+        "可包含关键环节 D006（企业处罚）",
+        "终点影响：多人遇难"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "事故发生",
+        "抢险救援",
+        "挂牌督办",
+        "调查报告",
+        "企业处罚",
+        "专项整治"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "industrial_production_04_Q08",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于大红柳沟煤矿的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "industrial_production_04_Q09",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中其他区域某单位的例行通报，是否与主线事件事故发生（D001）构成因果关系？请判断并说明。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "industrial_production_04_Q10",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，大红柳沟煤矿在该事故发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

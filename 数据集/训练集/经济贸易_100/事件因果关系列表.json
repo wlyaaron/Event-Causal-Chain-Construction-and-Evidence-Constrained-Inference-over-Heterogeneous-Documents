@@ -1,0 +1,128 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "直接导致",
+    "description": "美国环保署的排放作弊指控引发大众股价暴跌和公众愤怒，直接导致CEO文德恩辞职。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "直接导致",
+    "description": "排放作弊指控曝光后，大众确认全球1100万辆柴油车受影响，启动史上最大规模召回。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D004",
+    "relation_type": "引发连锁反应",
+    "description": "大众排放门暴露了柴油车实际排放超标的普遍问题，引发欧洲柴油车信任危机和限制政策。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D005",
+    "relation_type": "触发调查",
+    "description": "排放作弊行为涉嫌欺诈和违反清洁空气法，触发美国司法部的刑事调查。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D006",
+    "relation_type": "推动转型",
+    "description": "管理层更替后，新任CEO迪斯将电动化作为核心战略，加速大众向电动汽车转型。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D008",
+    "relation_type": "造成损失",
+    "description": "1100万辆车的召回和维修，加上美国市场的车辆回购，造成大众巨额经济损失。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D006",
+    "relation_type": "推动转型",
+    "description": "柴油车市场份额急剧下滑和各国限制政策，迫使大众加速电动化转型以应对市场变化。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D007",
+    "relation_type": "扩大调查",
+    "description": "柴油车信任危机促使各国监管机构对整个行业展开排放调查，多家车企相继被查。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D008",
+    "relation_type": "造成损失",
+    "description": "美国司法部的刑事调查导致大众支付43亿美元罚款，多名高管被追责，增加了总损失。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D008",
+    "relation_type": "财务影响",
+    "description": "500亿欧元的电动化投资虽然是战略布局，但在排放门巨额支出的背景下加大了财务压力。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D004",
+    "relation_type": "加剧危机",
+    "description": "雷诺、菲亚特等多家车企也被查出排放问题，进一步加剧了欧洲的柴油车信任危机。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D006",
+    "relation_type": "行业推动",
+    "description": "全行业排放调查和法规收紧，推动包括大众在内的所有车企加速电动化转型。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D008",
+    "relation_type": "根本原因",
+    "description": "排放作弊指控是整个事件的起点，所有后续的罚款、赔偿、召回和品牌损失都源于此。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D004",
+    "relation_type": "加剧不信任",
+    "description": "大规模召回本身也加剧了消费者对柴油车的不信任，推动了限制政策的出台。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D007",
+    "relation_type": "示范效应",
+    "description": "美国对大众的严厉刑事追责为其他国家提供了示范，推动了全球范围的车企排放调查。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D004",
+    "relation_type": "替代方案",
+    "description": "大众的电动化转型为消费者提供了柴油车的替代选择，加速了柴油车的市场退出。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D006",
+    "relation_type": "战略倒逼",
+    "description": "排放门造成的巨额损失和品牌损害倒逼大众必须通过电动化转型寻找新的增长点。",
+    "pack_id": "100"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D005",
+    "relation_type": "配合调查",
+    "description": "管理层更替后，新管理层更倾向于配合调查和承担责任，推动了刑事调查的深入。",
+    "pack_id": "100"
+  }
+]

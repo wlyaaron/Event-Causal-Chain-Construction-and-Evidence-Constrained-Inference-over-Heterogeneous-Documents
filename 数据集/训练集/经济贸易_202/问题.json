@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_202_Q01",
+    "pack_id": "202",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "希腊主权债务危机爆发的直接导火索是什么？希腊最终获得的第一轮救助金额是多少？"
+  },
+  {
+    "sample_id": "economy_trade_202_Q02",
+    "pack_id": "202",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "爱尔兰的债务危机与希腊有什么不同？爱尔兰政府的银行担保政策如何加剧了危机？"
+  },
+  {
+    "sample_id": "economy_trade_202_Q03",
+    "pack_id": "202",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：ESM启动、希腊债务重组、德拉吉不惜一切代价演讲、LTRO推出、西班牙银行业救助。"
+  },
+  {
+    "sample_id": "economy_trade_202_Q04",
+    "pack_id": "202",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "欧洲央行的LTRO和OMT两种政策工具在操作方式、效果和争议上有什么不同？"
+  },
+  {
+    "sample_id": "economy_trade_202_Q05",
+    "pack_id": "202",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "希腊债务危机如何通过金融市场传染机制最终演变为整个欧元区的系统性危机？"
+  },
+  {
+    "sample_id": "economy_trade_202_Q06",
+    "pack_id": "202",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括欧债危机中欧元区国家和机构采取的主要应对措施及其效果。"
+  },
+  {
+    "sample_id": "economy_trade_202_Q07",
+    "pack_id": "202",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设欧元区在危机爆发前就建立了财政联盟和银行业联盟，欧债危机的发展轨迹可能会有什么不同？"
+  }
+]

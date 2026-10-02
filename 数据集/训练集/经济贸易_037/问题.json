@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "economy_trade_037_Q01",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D009（趋势展望）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q02",
+    "pack_id": "037",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，华盛顿周边居民的确切疏散人数是多少？"
+  },
+  {
+    "sample_id": "economy_trade_037_Q03",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D003（企业行动）在D004（专家分析）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "economy_trade_037_Q04",
+    "pack_id": "037",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：假如当初D001（政策落地）未曾出现，D002（市场反应）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q05",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：D004（专家分析）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q06",
+    "pack_id": "037",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q07",
+    "pack_id": "037",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（政策落地）到D008（成效评估）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q08",
+    "pack_id": "037",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于中美的政策落地事件，不同来源给出的关键数据不一致（官方2000、另一来源2400）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "economy_trade_037_Q09",
+    "pack_id": "037",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的例行通报，是否与主线事件政策落地（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "economy_trade_037_Q10",
+    "pack_id": "037",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，中美在该政策落地事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

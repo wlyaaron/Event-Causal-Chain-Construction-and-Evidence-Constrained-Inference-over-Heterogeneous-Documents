@@ -1,0 +1,363 @@
+[
+  {
+    "sample_id": "public_safety_170_Q01",
+    "pack_id": "170",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定地方进展是否会导致整个行业长期停摆？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_170_Q02",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，围绕最终结果D007（地方进展），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D004（政策出台） → D005（阶段进展） → D006（工作部署） → D007（地方进展）。起点为政策出台，终点为地方进展；湖南省自建房整治持续推进。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D004（政策出台） 到终点 D007（地方进展） 的有向因果链（顺序不可颠倒）",
+        "起点为 D004（政策出台）",
+        "终点为 D007（地方进展）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D004（政策出台） → D005（阶段进展） → D006（工作部署） → D007（地方进展）",
+        "可包含关键环节 D005（阶段进展）",
+        "可包含关键环节 D006（工作部署）",
+        "终点影响：湖南省自建房整治持续推进"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D007"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "政策出台",
+        "阶段进展",
+        "工作部署",
+        "地方进展"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_170_Q03",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D006（工作部署）直接导致了什么？请依据材料作答。",
+    "answers": "D007（地方进展）是D006（工作部署）的直接后果。证据：全省已排查自建房1444.59万栋。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D006（工作部署） 直接导致 D007（地方进展）",
+        "后果：全省已排查自建房1444.59万栋"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D007（地方进展） 导致 D006（工作部署）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D006",
+        "D007"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_170_Q04",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D003（成立调查组）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "据材料，D003（成立调查组）的主体为国务院，发生地为湖南省长沙市；国务院决定成立调查组。其影响：启动国家级事故调查程序。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：国务院",
+        "地点：湖南省长沙市",
+        "基本事实：国务院决定成立调查组"
+      ],
+      "optional_facts": [
+        "影响：启动国家级事故调查程序"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D003"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_170_Q05",
+    "pack_id": "170",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：若D004（政策出台）所代表的条件被移除，后续的D005（阶段进展）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D004，D005很可能不会发生或将显著改变。依据：D004是D005的直接原因（直接因果），移除后受影响的因果边包括 [['D004', 'D005'], ['D005', 'D006'], ['D006', 'D007']]。相应地，百日行动取得阶段性进展 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D004",
+        "D007"
+      ],
+      [
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_170_Q06",
+    "pack_id": "170",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D004（政策出台），说明经由哪些中间事件最终导致了D006（工作部署）。",
+    "answers": "梳理可得因果路径：D004（政策出台） → D005（阶段进展） → D006（工作部署）。政策出台触发链条，最终形成工作部署；巩固百日行动成效。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D004（政策出台） 到终点 D006（工作部署） 的有向因果链（顺序不可颠倒）",
+        "起点为 D004（政策出台）",
+        "终点为 D006（工作部署）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D004（政策出台） → D005（阶段进展） → D006（工作部署）",
+        "可包含关键环节 D005（阶段进展）",
+        "终点影响：巩固百日行动成效"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "stages": [
+        "政策出台",
+        "阶段进展",
+        "工作部署"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_170_Q07",
+    "pack_id": "170",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：已知信息止于2022-05-27（D001 事故发生；D002 救援结束；D003 成立调查组；D004 政策出台），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "后续实际发生：D005（阶段进展）、D006（工作部署）、D007（地方进展）。其中关键进展为阶段进展：全国共排查经营性自建房726万栋。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:阶段进展"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（工作部署）, D007（地方进展）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-05-27",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "hidden_events": [
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "ground_truth": "D005:阶段进展"
+    },
+    "confidence_level": "possible"
+  }
+]

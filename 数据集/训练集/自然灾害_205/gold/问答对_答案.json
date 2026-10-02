@@ -1,0 +1,146 @@
+[
+  {
+    "sample_id": "natural_disaster_205_Q01",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾情评估和救助帮扶是如何开展的？",
+    "answers": "灾情评估组深入受灾区域逐村逐户核查评估，全面摸清受灾底数、确保数据真实准确，为救助重建提供依据。社会各界踊跃支援，救援队伍、物资、捐赠源源汇向灾区，有关部门坚持公开透明、精准发放，确保爱心及时送到受灾群众手中。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_205_Q02",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "监测预警在此次抗灾救灾中发挥了怎样的作用？",
+    "answers": "气象水文等部门加强监测预警，滚动发布预报预警信息，为提前防范、科学救援和群众避险提供有力支撑。有关部门运用先进设备和技术密切跟踪灾害态势，及时把预警传递到基层和群众，为提前转移避险赢得了宝贵时间。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D007"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_205_Q03",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类灾害提出了哪些建议？",
+    "answers": "专家指出岩溶发育叠加地下水位变化是此类灾害的重要成因，防范关键在于加强监测预警、完善应急预案、开展防灾演练，做到早预警、早转移、早避险。专家建议公众增强防灾避险意识、掌握自救互救技能、熟悉转移路线，遇到预警坚决服从指挥、及时转移。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_205_Q04",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾后恢复重建情况如何？涌现了哪些先锋事迹？",
+    "answers": "当地坚持科学规划、以人为本推进重建，严格执行工程设防标准、提高抗灾能力，努力建设更安全宜居的新家园。抗灾一线涌现出众多冲锋在前、无私奉献的先锋，党员干部和救援人员把危险留给自己、把安全带给群众，汇聚起磅礴精神力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_205_Q05",
+    "pack_id": "205",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2018年福建发生严重地面塌陷灾害是怎样发生的？造成了怎样的影响？",
+    "answers": "2018年福建发生严重地面塌陷灾害。灾害由岩溶发育叠加地下水位变化引发，造成一定人员伤亡和财产损失，部分房屋、道路、电力、通信等设施受损，众多群众不同程度受灾。灾情发生后当地立即启动应急响应，组织多方力量第一时间赶赴一线全力搜救被困群众、救治受伤人员。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_205_Q06",
+    "pack_id": "205",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次灾害将如何推动防灾减灾救灾能力的提升？",
+    "answers": "预计此次灾害将推动防灾减灾救灾能力整体提升。预计将健全以防为主、防抗救相结合的体制机制，补短板堵漏洞强弱项；预计将加强监测预警体系和防灾基础设施建设、提高工程设防标准；预计将加强科普宣传和应急演练，全面提升全社会综合防灾减灾能力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D009",
+        "D008"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_205_Q07",
+    "pack_id": "205",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次抗灾救灾对凝聚精神力量、建设美好家园将产生怎样的影响？",
+    "answers": "预计此次抗灾救灾将进一步凝聚众志成城、共克时艰的强大精神力量。预计将激励广大干部群众自力更生、重建家园，把灾区建设得更加安全美好；预计将弘扬一方有难、八方支援的守望相助精神；预计将彰显人民至上、生命至上理念，凝聚起战胜困难的磅礴力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D010",
+        "D009"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

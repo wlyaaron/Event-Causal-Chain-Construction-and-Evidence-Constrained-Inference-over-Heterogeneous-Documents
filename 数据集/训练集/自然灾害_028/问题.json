@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_028_Q01",
+    "pack_id": "028",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "2010年海地地震的震级、震中位置和震源深度分别是多少？官方公布的死亡人数是多少？"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q02",
+    "pack_id": "028",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么2010年海地地震的伤亡人数如此惨重？哪些因素共同导致了这场灾难的巨大破坏？"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q03",
+    "pack_id": "028",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：霍乱疫情爆发、地震发生、联合国秘书长就霍乱道歉、8名中国维和英烈灵柩回国、海地重建国际捐助者会议召开。"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q04",
+    "pack_id": "028",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较2010年海地地震和2008年汶川地震在伤亡人数、救援响应和重建效果方面的差异，分析造成这些差异的主要原因。"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q05",
+    "pack_id": "028",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "海地地震如何从一场自然灾害逐步演变为涉及国际救援、政治治理、公共卫生、难民安置和长期重建的复合型危机？请梳理各环节之间的因果链条。"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q06",
+    "pack_id": "028",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括海地地震十年后在物质重建、经济发展、公共卫生和政治社会方面的总体状况，以及国际援助模式存在的主要问题。"
+  },
+  {
+    "sample_id": "natural_disaster_028_Q07",
+    "pack_id": "028",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设海地在地震前拥有完善的建筑抗震标准和有效的政府应急管理体系，这场地震的破坏程度和伤亡人数可能会有多大不同？请结合地震参数和海地国情进行分析。"
+  }
+]

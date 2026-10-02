@@ -1,0 +1,383 @@
+[
+  {
+    "sample_id": "natural_disaster_033_Q01",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D013（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（地震灾害发生） → D003（伤亡情况通报） → D008（灾后重建启动） → D010（重建推进） → D011（成果落实） → D012（机制建设） → D013（成效显现）。地震灾害触发链条，历经伤亡通报、重建启动、重建推进、成果落实和机制建设，最终成效显现；群众获得感、安全感不断增强。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（地震灾害发生） 到终点 D013（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（地震灾害发生）",
+        "终点为 D013（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（地震灾害发生） → D003（伤亡情况通报） → D008（灾后重建启动） → D010（重建推进） → D011（成果落实） → D012（机制建设） → D013（成效显现）",
+        "可包含关键环节 D008（灾后重建启动）",
+        "终点影响：群众获得感、安全感不断增强"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D008",
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ],
+      [
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D008",
+        "D010",
+        "D011",
+        "D012",
+        "D013"
+      ],
+      "stages": [
+        "地震灾害发生",
+        "伤亡情况通报",
+        "灾后重建启动",
+        "重建推进",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q02",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（地震灾害发生）在D002（应急响应启动）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：全国性抗震救灾行动全面展开。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（地震灾害发生） 与 D002（应急响应启动） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（应急响应启动） 导致 D001（地震灾害发生）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q03",
+    "pack_id": "033",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（地震灾害发生）这一原因，D002（应急响应启动）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D004'], ['D002', 'D007']]；全国性抗震救灾行动全面展开 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D004"
+      ],
+      [
+        "D002",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ],
+        [
+          "D002",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q04",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D007（国家工作组指导），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（地震灾害发生） → D002（应急响应启动） → D007（国家工作组指导）。起点为地震灾害发生，终点为国家工作组指导；统筹协调各方力量，提升救灾效能。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（地震灾害发生） 到终点 D007（国家工作组指导） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（地震灾害发生）",
+        "终点为 D007（国家工作组指导）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（地震灾害发生） → D002（应急响应启动） → D007（国家工作组指导）",
+        "可包含关键环节 D002（应急响应启动）",
+        "终点影响：统筹协调各方力量，提升救灾效能"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D007"
+      ],
+      "stages": [
+        "地震灾害发生",
+        "应急响应启动",
+        "国家工作组指导"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q05",
+    "pack_id": "033",
+    "question_type": "conflicting",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于本次泸定地震转移安置的受灾群众人数，不同来源的说法是否一致？应如何看待其中的矛盾？",
+    "answers": "不一致，存在相互矛盾的说法：一份初步统计称转移安置受灾群众约5万人，另有部门估计约4.5万人（见D015）。两组数字来源不同、口径有别，相互矛盾，不能简单取其一作为定论，具体人数有待权威机构最终核实。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出转移安置人数存在相互矛盾的两种说法（约5万人 vs 约4.5万人）",
+        "指出应以权威机构最终核实为准，不能武断采信某一数字"
+      ],
+      "optional_facts": [
+        "矛盾来源：一份初步统计与另一部门估计口径不同",
+        "两组数字分别约为5万人与4.5万人"
+      ],
+      "forbidden_facts": [
+        "断言某一数字即为确定的最终答案",
+        "编造材料中不存在的数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "conflict_type": "numeric_inconsistency",
+      "sources": [
+        "初步统计：转移安置约5万人",
+        "部门估计：转移安置约4.5万人"
+      ],
+      "resolution": "有待权威机构最终核实"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q06",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（地震灾害发生）之后直接发生了什么？",
+    "answers": "D002（应急响应启动）是D001（地震灾害发生）的直接后果。证据：全国性抗震救灾行动全面展开。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（地震灾害发生） 直接导致 D002（应急响应启动）",
+        "后果：全国性抗震救灾行动全面展开"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（应急响应启动） 导致 D001（地震灾害发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q07",
+    "pack_id": "033",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2022-09-06（D001 地震灾害发生；D002 应急响应启动；D003 伤亡情况通报；D004 人员搜救行动；D005 群众转移安置），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（次生灾害风险）、D007（国家工作组指导）、D008（灾后重建启动）、D009（地震成因分析）；其中最关键的是次生灾害风险——增加救援难度，威胁群众安全。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:次生灾害风险"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（国家工作组指导）、D008（灾后重建启动）、D009（地震成因分析）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2022-09-06",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q08",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "有材料提到邻近地区如期举办康定情歌旅游文化节，这与泸定灾区的抗震救灾、人员搜救存在因果关系吗？请判断并说明。",
+    "answers": "没有因果关系。康定情歌旅游文化节（D017）只是邻近地区如期举办的一年一度民俗文化活动，与泸定灾区的抗震救灾、人员搜救工作并无直接关联，属于语义相近但无关的干扰信息，不应纳入因果链。",
+    "answer_facts": {
+      "required_facts": [
+        "判断康定情歌旅游文化节（D017）与抗震救灾、人员搜救之间没有因果关系",
+        "指出该活动属于语义相近但无关的干扰信息"
+      ],
+      "optional_facts": [
+        "康定情歌旅游文化节只是邻近地区如期举办的民俗文化活动",
+        "不应将无关事件纳入因果链"
+      ],
+      "forbidden_facts": [
+        "断言康定情歌旅游文化节与抗震救灾存在因果关系",
+        "把无关干扰事件编入证据链"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D017"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D017",
+      "is_relevant": false,
+      "note": "语义相近的无关干扰事件"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_033_Q09",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "材料提到有关方面或将在总体规划之外再追加一份专项资金支持方案，请说明该方案的具体内容、牵头部门和实施时间。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "指出该追加专项资金方案的具体内容、牵头部门和实施时间在材料中均不明确",
+        "结论为无法确定"
+      ],
+      "optional_facts": [
+        "相关信息未经证实、有待核实",
+        "缺乏可核实的确定信息"
+      ],
+      "forbidden_facts": [
+        "编造该方案的具体内容或牵头部门",
+        "断言一个确定的实施时间"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "missing_reason": "unverified_incomplete_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

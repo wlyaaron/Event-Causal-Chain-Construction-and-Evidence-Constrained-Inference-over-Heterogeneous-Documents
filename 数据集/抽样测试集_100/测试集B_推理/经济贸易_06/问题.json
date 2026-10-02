@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_006_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（政策落地）到D009（趋势展望）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q02",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间看D001（政策落地）早于D004（专家分析），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "请判断：请概述D004（专家分析）的主体、地点与主要影响。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q04",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D009（趋势展望）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q05",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，若D001（政策落地）所代表的条件被移除，后续的D002（市场反应）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q06",
+    "pack_id": "06",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，在只知道D006（中小企业影响）阶段前进展（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "economy_trade_006_Q07",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（政策落地），说明经由哪些中间事件最终导致了D008（成效评估）。"
+  }
+]

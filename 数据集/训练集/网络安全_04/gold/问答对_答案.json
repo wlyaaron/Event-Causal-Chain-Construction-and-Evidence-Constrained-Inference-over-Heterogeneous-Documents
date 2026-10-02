@@ -1,0 +1,339 @@
+[
+  {
+    "sample_id": "cybersecurity_04_Q01",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（标准升级）阶段（当前已知：D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级），后续走向如何？请给出可验证预测。",
+    "answers": "预测后续进展为：D007（治理挑战）、D008（用户维权）、D009（防范建议）。核心节点是治理挑战：雅虎数据泄露折射出网络空间治理面临的新挑战。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理挑战"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（用户维权）, D009（防范建议）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（标准升级）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理挑战"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "cybersecurity_04_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "已知D004（监管约谈）先于D006（标准升级）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D004→D006（直接因果），不是先后关系。证据：雅虎数据泄露事件暴露出行业安全短板，雅虎加快推动标准升级。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（监管约谈） 与 D006（标准升级） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D006"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D006（标准升级） 导致 D004（监管约谈）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D006",
+      "temporal_order": "D004先于D006",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_04_Q03",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "材料是否给出了治理挑战事件中现场救援人员的具体姓名与联系方式？请依据材料回答。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "cybersecurity_04_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D009（防范建议），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）。起点为安全事件，终点为防范建议；30亿账户信息泄露。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件） 到终点 D009（防范建议） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件）",
+        "终点为 D009（防范建议）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）",
+        "可包含关键环节 D002（技术分析）",
+        "可包含关键环节 D003（应急响应）",
+        "可包含关键环节 D004（监管约谈）",
+        "可包含关键环节 D006（标准升级）",
+        "可包含关键环节 D008（用户维权）",
+        "终点影响：30亿账户信息泄露"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "安全事件",
+        "技术分析",
+        "应急响应",
+        "监管约谈",
+        "标准升级",
+        "用户维权",
+        "防范建议"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_04_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D004（监管约谈）早于D005（黑产溯源），但这能否证明因果？请依据材料判断。",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D004→D005（直接因果），而非单纯时间顺序。证据：随着调查深入，雅虎数据泄露背后的黑色产业链逐渐浮出水面。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（监管约谈） 与 D005（黑产溯源） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D004 先于 D005"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D005（黑产溯源） 导致 D004（监管约谈）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D005",
+      "temporal_order": "D004先于D005",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_04_Q06",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D008（用户维权）所代表的条件被移除，后续的D009（防范建议）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D008，D009很可能不会发生或将显著改变。依据：D008是D009的直接原因（直接因果），移除后受影响的因果边包括 [['D008', 'D009']]。相应地，30亿账户信息泄露 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D009及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ],
+      [
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D008",
+      "affected_edges": [
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D009及其下游很可能不发生",
+      "acceptable_points": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_04_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，材料显示D003（应急响应）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "材料表明，D003（应急响应）的直接结果是D004（监管约谈）；针对2016-12-14的雅虎数据泄露事件，雅虎网信监管部门对责任方进行约谈。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D003（应急响应） 直接导致 D004（监管约谈）",
+        "后果：针对2016-12-14的雅虎数据泄露事件，雅虎网信监管部门对责任方进行约谈"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（监管约谈） 导致 D003（应急响应）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D003",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  }
+]

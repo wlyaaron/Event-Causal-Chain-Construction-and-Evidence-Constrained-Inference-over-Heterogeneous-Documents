@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "cybersecurity_06_Q01",
+    "pack_id": "06",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：在只知道D006（标准升级）阶段前进展（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q02",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于标准升级事件并未造成任何人员伤亡或损失，请说明为何仍要追责？"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "D009（防范建议）是如何一步步发生的？请自起点起按因果顺序还原事件链。"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q04",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "材料是否给出了D001（安全事件）中IoT安全联盟相关负责人的个人从业年限？请依据材料回答。"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q05",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，设想D001（安全事件）被阻断，D002（技术分析）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D002（技术分析）直接引发了哪一事件？请指出并说明依据。"
+  },
+  {
+    "sample_id": "cybersecurity_06_Q07",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（用户维权）的完整因果路径，并标明证据顺序。"
+  }
+]

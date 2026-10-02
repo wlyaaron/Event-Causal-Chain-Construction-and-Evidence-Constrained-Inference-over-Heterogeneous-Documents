@@ -1,0 +1,121 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "客轮翻沉后大量人员被困水下，直接触发了交通运输部、海军、武警等力量的紧急搜救行动",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "因果关系",
+    "description": "事故造成重大人员伤亡，引起党和国家领导人高度重视，推动成立国务院救援指挥部统一指挥",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D004",
+    "relation_type": "递进关系",
+    "description": "水面搜救无法进入水下船舱，需要专业潜水员深入翻沉船舱内部实施搜救，推动了潜水救援的展开",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "国务院救援指挥部在评估搜救进展后，决定实施船体扶正打捞，以全面搜寻遇难者和开展事故调查",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "经过72小时黄金救援期后发现新幸存者可能性极低，搜救重点转向遗体搜寻，需要扶正打捞船体",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "船体扶正打捞出水后，救援人员得以进入船舱全面搜寻遇难者遗体，推动了身份确认和善后赔偿工作",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "事故造成442人遇难，需要对遇难者家属进行安抚、赔偿和心理疏导，启动了大规模善后处置工作",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "客轮翻沉事件性质严重、原因复杂，国务院决定成立专门调查组，全面深入调查事故原因和责任",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "调查组经过半年深入调查，查明了直接原因和间接原因，形成了最终调查报告并经国务院批复公布",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "调查报告指出了内河航运安全管理的多项不足，推动交通运输部在全国开展安全大检查和标准升级",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "事故暴露了内河客船在稳性、设备、船员应急能力等方面的短板，直接推动了全国内河航运安全整顿",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D009",
+    "effect_event_id": "D010",
+    "relation_type": "递进关系",
+    "description": "安全大检查和标准升级的实践，进一步推动了从法规制度、技术标准到监管体系的全面深刻变革",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "调查报告提出的六方面防范整改措施，为水上交通安全体系的全面改革提供了方向和依据",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "国务院救援指挥部设立专门善后工作组，统筹协调各地力量，推动了善后处置工作的有序开展",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "潜水救援中积累的水下作业经验和对船舱内部结构的了解，为后续扶正打捞后的遗体搜寻提供了帮助",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "事故调查中发现的船舶改装违规、公司管理混乱、监管不到位等问题，直接指向了安全整顿的重点领域",
+    "pack_id": "06"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D010",
+    "relation_type": "因果关系",
+    "description": "东方之星事件作为中国内河航运史最严重的灾难，成为推动整个水上交通安全体系深刻变革的根本动因",
+    "pack_id": "06"
+  }
+]

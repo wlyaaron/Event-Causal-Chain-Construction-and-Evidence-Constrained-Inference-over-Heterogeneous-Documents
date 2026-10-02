@@ -1,0 +1,301 @@
+[
+  {
+    "sample_id": "natural_disaster_083_Q01",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从特大暴雨发生到城市内涝治理展望，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（特大暴雨发生）→D002（影响评估）→D004（排水问题调查）→D005（海绵城市反思）→D008（治理展望）。特大暴雨导致严重内涝，造成重大损失；灾害暴露出城市排水系统的诸多问题；排水问题又引发了对海绵城市建设的反思；基于对排水系统和海绵城市问题的全面反思，最终形成了城市内涝治理的系统思考与展望。中间还包括D003应急救援、D006群众安置、D007气象解读等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含影响评估、排水问题、海绵反思等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D002→D004→D005→D008",
+        "中间还包括应急救援、群众安置、气象解读等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D008"
+      ],
+      [
+        "D001",
+        "D004",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D004",
+        "D005",
+        "D008"
+      ],
+      "stages": [
+        "灾害发生",
+        "影响评估",
+        "排水问题",
+        "海绵反思",
+        "治理展望"
+      ],
+      "hops": 4
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q02",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "排水系统问题调查（D004）和海绵城市建设反思（D005）都对治理展望（D008）有影响，二者中哪一个的影响更直接？请结合材料说明判断依据。",
+    "answers": "二者对D008的影响都是直接因果，但排水系统问题调查（D004）的影响更基础、更直接。依据：D004揭示了排水标准偏低、管网老化失修、建设不配套、硬化地面过多、河道排水不足、管理维护不到位等六大核心问题，这些是城市内涝的直接原因，也是治理展望中对策的主要针对对象；而D005是对海绵城市建设这一具体治理手段的反思，是D004问题的延伸和深化。从因果关系看，D004→D005→D008，D004是更上游的原因。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D004对D008的影响更基础直接",
+        "依据是D004揭示了内涝的核心原因"
+      ],
+      "optional_facts": [
+        "D005是对海绵城市这一治理手段的反思",
+        "因果链：D004→D005→D008，D004更上游"
+      ],
+      "forbidden_facts": [
+        "判断D005更直接且无合理依据",
+        "混淆核心问题与具体手段反思的不同层次"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D008"
+      ],
+      [
+        "D004",
+        "D005",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D004 vs D005对D008的影响",
+      "more_direct": "D004",
+      "reason": "D004揭示内涝核心原因，更基础"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q03",
+    "pack_id": "083",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设城市排水系统完善、海绵城市建设到位（即D004和D005中描述的问题都不存在），此次内涝灾害（D001）的影响会有什么不同？请判断并说明连锁反应。",
+    "answers": "结论：如果排水系统完善、海绵城市建设到位，此次内涝灾害的影响会大幅减轻，但仍可能造成一定影响。连锁影响：排水系统完善意味着管网排水能力大幅提高，大部分雨水可以及时排出；海绵城市建设到位意味着雨水可以就地消纳和调蓄，减少径流。两者结合，可以有效应对3-10年一遇的降雨，显著减轻内涝程度。但此次降雨达到50年一遇，超过常规设计标准，仍可能出现局部积水，但不会出现大面积、深度内涝。受影响的关键边为[['D004','D001'],['D005','D001']]，即排水和海绵问题是放大灾害影响的关键因素。",
+    "answer_facts": {
+      "required_facts": [
+        "判断灾害影响会大幅减轻",
+        "说明排水和海绵到位可有效应对常规降雨"
+      ],
+      "optional_facts": [
+        "50年一遇降雨仍可能造成局部积水",
+        "D004和D005的问题是放大灾害的关键因素"
+      ],
+      "forbidden_facts": [
+        "断言排水完善就完全不会有内涝",
+        "忽视此次降雨极端强度超出常规标准"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D001"
+      ],
+      [
+        "D005",
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除排水系统和海绵城市的问题",
+      "affected_edges": [
+        [
+          "D004",
+          "D001"
+        ],
+        [
+          "D005",
+          "D001"
+        ]
+      ],
+      "counterfactual_result": "灾害影响大幅减轻，但极端降雨仍可能局部积水"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q04",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "气象专家解读极端降雨（D007）与受灾群众安置（D006）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D007（气象解读）→D001（特大暴雨发生）→D006（群众安置）。具体来说，气象专家解读的极端降雨气候原因，是导致此次特大暴雨发生的大背景；特大暴雨引发的严重内涝，直接导致了大量群众需要转移安置。这是一条从气候原因到灾害发生再到民生保障的完整因果链。此外，D007中关于极端降雨将持续增加的预测，也为未来的群众安置和应急管理提供了参考。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D001特大暴雨这一中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D007→D001→D006",
+        "D007的预测也为未来安置工作提供参考"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D007到D006的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediate",
+      "intermediate": "D001",
+      "path": "D007→D001→D006"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q05",
+    "pack_id": "083",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测该市下一次发生特大暴雨的具体日期？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性日期",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_083_Q06",
+    "pack_id": "083",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "特大暴雨发生（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（影响评估）、D003（应急救援）、D006（群众安置）。这三项都是灾害发生后立即启动的应急响应措施。证据：灾害发生后，应急管理部门立即统计灾情损失，消防救援队伍全员出动抢险救灾，民政部门紧急转移安置受灾群众。D004排水问题调查、D005海绵反思、D007气象解读、D008治理展望为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002影响评估",
+        "D001直接导致D003应急救援",
+        "D001直接导致D006群众安置"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D004、D005、D007、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D003应急救援或D006群众安置"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D006"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "natural_disaster_083_Q07",
+    "pack_id": "083",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于灾害发生和影响评估（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003应急救援——灾害发生后，消防等救援力量必然立即出动，转移被困群众、抢救财产；第二，D006群众安置——大量群众受灾，政府必然设立安置点，保障受灾群众基本生活；第三，D004排水问题调查——灾害暴露出排水系统的短板，灾后必然会进行调查和反思。依据：城市内涝灾害的标准应急响应流程包括抢险救援、群众安置、灾后调查等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003应急救援、D006群众安置、D004排水问题调查",
+        "还可能发生D005海绵反思、D007气象解读等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-07",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D006",
+        "D004"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

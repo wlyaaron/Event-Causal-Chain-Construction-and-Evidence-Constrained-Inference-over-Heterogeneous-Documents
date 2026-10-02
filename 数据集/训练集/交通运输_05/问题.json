@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_05_Q01",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "7·23甬温线动车事故发生在哪一天？涉及哪两列列车？共造成多少人死亡和受伤？"
+  },
+  {
+    "sample_id": "transportation_05_Q02",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事故的直接技术原因是什么？列控中心设备在雷击故障后为何没有导向安全侧？请详细说明技术链条。"
+  },
+  {
+    "sample_id": "transportation_05_Q03",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：事故发生、国务院成立调查组、责任追究公布、高铁全面降速、最终调查报告发布、项炜伊获救。"
+  },
+  {
+    "sample_id": "transportation_05_Q04",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "安全大检查阶段的隐患排查整改与高铁全面降速调整在措施性质、影响范围和持续时间上有什么不同？"
+  },
+  {
+    "sample_id": "transportation_05_Q05",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从信号设备设计缺陷到最终导致列车追尾，中间经过了哪些关键环节？请结合设备研发、入网审查、现场处置等多个层面说明。"
+  },
+  {
+    "sample_id": "transportation_05_Q06",
+    "pack_id": "05",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括7·23甬温线事故对中国铁路行业产生的主要影响，包括安全管理、技术发展和建设节奏等方面。"
+  },
+  {
+    "sample_id": "transportation_05_Q07",
+    "pack_id": "05",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设温州南站值班员在发现列控设备异常后立即通知D301次列车停车，事故是否还会发生？请结合制动距离和信号系统特点进行分析。"
+  }
+]

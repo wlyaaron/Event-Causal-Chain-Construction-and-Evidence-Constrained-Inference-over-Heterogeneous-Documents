@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_178_Q01",
+    "pack_id": "178",
+    "question_type": "事实查询",
+    "reasoning_type": "single_hop",
+    "question": "2021年西欧洪灾中，哪个国家的死亡人数最多？具体死亡人数是多少？受灾最严重的德国阿尔河谷地区有多少人遇难？"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q02",
+    "pack_id": "178",
+    "question_type": "因果推理",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么拥有世界上最先进气象预报和洪水预警系统的西欧，在2021年洪灾中仍然造成了超过240人死亡？请从预警信息传达、应急响应、基础设施和气候变化适应等层面分析因果链条。"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q03",
+    "pack_id": "178",
+    "question_type": "时序推理",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序梳理2021年西欧洪灾的关键事件：暴雨开始、德国阿尔河谷洪水顶峰、比利时全国哀悼日、气候变化归因研究发布、德国重建援助协议达成、欧盟新洪水指令通过。"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q04",
+    "pack_id": "178",
+    "question_type": "比较分析",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较德国、比利时和荷兰三国在2021年西欧洪灾中的受灾情况、应急响应和防洪体系的差异，分析为什么荷兰的人员伤亡远少于德国和比利时。"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q05",
+    "pack_id": "178",
+    "question_type": "多跳推理",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2021年西欧洪灾如何通过人员伤亡、经济损失、预警系统调查、气候变化归因研究等多个环节，最终推动欧洲气候政策从以减缓为主转向减缓与适应并重？请梳理完整的传导链条。"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q06",
+    "pack_id": "178",
+    "question_type": "总结概括",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括2021年西欧洪灾的成因、影响和后续应对措施，并总结这场灾害对欧洲气候变化政策和防洪战略的长期启示。"
+  },
+  {
+    "sample_id": "natural_disaster_178_Q07",
+    "pack_id": "178",
+    "question_type": "假设推断",
+    "reasoning_type": "counterfactual",
+    "question": "假设2021年西欧洪灾发生时，各国已经全面部署了基于小区广播技术的全国紧急预警系统，并且所有居民都收到了及时的疏散通知，人员伤亡可能会减少多少？哪些因素仍然可能导致严重的人员伤亡？"
+  }
+]

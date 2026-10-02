@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_172_Q01",
+    "pack_id": "172",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "台风海燕登陆时的最大持续风速和中心气压分别是多少？它在菲律宾造成了多少人死亡和失踪？"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q02",
+    "pack_id": "172",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "为什么台风海燕造成的死亡中约90%是由风暴潮而非强风导致的？请从地形、预警认知和建筑分布等角度分析。"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q03",
+    "pack_id": "172",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：海燕生成、登陆莱特省、联合国气候大会召开、塔克洛班实施宵禁、首次大规模集体安葬。"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q04",
+    "pack_id": "172",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "比较台风海燕与2004年印度洋海啸在灾害成因、影响范围、国际响应方面的异同。"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q05",
+    "pack_id": "172",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "台风海燕的发生如何通过科学研究、国际气候谈判和国内政策改革三个层面，最终影响菲律宾的防灾体系建设？"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q06",
+    "pack_id": "172",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括台风海燕对菲律宾在人员伤亡、基础设施、社会秩序、经济发展和防灾体系方面产生的综合影响。"
+  },
+  {
+    "sample_id": "natural_disaster_172_Q07",
+    "pack_id": "172",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设菲律宾政府在海燕登陆前充分理解了风暴潮的威胁并进行了有效的高地疏散，死亡人数可能会降低多少？还会面临哪些其他挑战？"
+  }
+]

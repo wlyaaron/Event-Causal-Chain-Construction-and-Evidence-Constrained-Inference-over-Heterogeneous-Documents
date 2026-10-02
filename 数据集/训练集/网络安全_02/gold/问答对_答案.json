@@ -1,0 +1,430 @@
+[
+  {
+    "sample_id": "cybersecurity_02_Q01",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，D009（防范建议）的形成经历了哪些关键环节？请按因果先后给出证据链。",
+    "answers": "完整因果链：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）。其中，安全事件为起点，经逐级传导，最终导致防范建议；全球损失超100亿美元。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件） 到终点 D009（防范建议） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件）",
+        "终点为 D009（防范建议）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权） → D009（防范建议）",
+        "可包含关键环节 D002（技术分析）",
+        "可包含关键环节 D003（应急响应）",
+        "可包含关键环节 D004（监管约谈）",
+        "可包含关键环节 D006（标准升级）",
+        "可包含关键环节 D008（用户维权）",
+        "终点影响：全球损失超100亿美元"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "安全事件",
+        "技术分析",
+        "应急响应",
+        "监管约谈",
+        "标准升级",
+        "用户维权",
+        "防范建议"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "D002（技术分析）在D003（应急响应）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "结论：二者确有因果，然而依据在于材料记载的 D002→D003（直接因果），而非单纯时间顺序。证据：NotPetya攻击发生后，乌克兰迅速启动应急响应机制。",
+    "answer_facts": {
+      "required_facts": [
+        "D002（技术分析） 与 D003（应急响应） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D002 先于 D003"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D003（应急响应） 导致 D002（技术分析）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D002",
+      "event_b": "D003",
+      "temporal_order": "D002先于D003",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q03",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D008（用户维权）未曾出现，D009（防范建议）的发生是否还能成立？请给出推断依据。",
+    "answers": "判断：若移除D008，D009很可能不会发生或将显著改变。依据：D008是D009的直接原因（直接因果），移除后受影响的因果边包括 [['D008', 'D009']]。相应地，全球损失超100亿美元 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D009及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ],
+      [
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D008",
+      "affected_edges": [
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D009及其下游很可能不发生",
+      "acceptable_points": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q04",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：假设你只掌握D006（标准升级）阶段及之前的信息（D001 安全事件；D002 技术分析；D003 应急响应；D004 监管约谈；D005 黑产溯源；D006 标准升级），请预测事件的后续走向，并给出可验证的预测结论。",
+    "answers": "基于因果走势，后续将出现：D007（治理挑战）、D008（用户维权）、D009（防范建议）；其中最关键的是治理挑战——NotPetya攻击折射出网络空间治理面临的新挑战。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:治理挑战"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（用户维权）, D009（防范建议）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "D006（标准升级）阶段",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:治理挑战"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料显示D004（监管约谈）与某一事件存在直接因果，请指出该事件及其影响。",
+    "answers": "D004（监管约谈）直接导致了D006（标准升级）。依据：NotPetya攻击事件暴露出行业安全短板，乌克兰加快推动标准升级。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（监管约谈） 直接导致 D006（标准升级）",
+        "后果：NotPetya攻击事件暴露出行业安全短板，乌克兰加快推动标准升级"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（标准升级） 导致 D004（监管约谈）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q06",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，乌克兰全球周边居民的确切疏散人数是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "cybersecurity_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（用户维权），并按顺序给出完整证据链。",
+    "answers": "完整因果链：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权）。其中，安全事件为起点，经逐级传导，最终导致用户维权；全球损失超100亿美元。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件） 到终点 D008（用户维权） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件）",
+        "终点为 D008（用户维权）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件） → D002（技术分析） → D003（应急响应） → D004（监管约谈） → D006（标准升级） → D008（用户维权）",
+        "可包含关键环节 D002（技术分析）",
+        "可包含关键环节 D003（应急响应）",
+        "可包含关键环节 D004（监管约谈）",
+        "可包含关键环节 D006（标准升级）",
+        "终点影响：全球损失超100亿美元"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "安全事件",
+        "技术分析",
+        "应急响应",
+        "监管约谈",
+        "标准升级",
+        "用户维权"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "cybersecurity_02_Q08",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于乌克兰的安全事件事件，不同来源给出的关键数据不一致（官方100、另一来源120）。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "cybersecurity_02_Q09",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的日常检查，是否与主线事件安全事件（D001）构成因果关系？请判断并说明。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "cybersecurity_02_Q10",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，乌克兰在该安全事件事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

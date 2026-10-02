@@ -1,0 +1,305 @@
+[
+  {
+    "sample_id": "diplomacy_034_Q01",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从中欧经贸高层对话开幕到中欧关系展望与专家解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（对话开幕）→D005（贸易摩擦）→D008（关系展望）。对话开幕后，双方就经贸合作的各方面进行讨论，既盘点了合作成果，也讨论了投资协定、绿色合作等重点议题，同时坦诚面对贸易摩擦和分歧；基于对话的全过程和国际社会的评价，专家学者对中欧关系的未来进行了展望和解读。中间还包括D002成果盘点、D003投资协定、D004绿色合作、D006企业视角、D007国际评价等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含贸易摩擦、关系展望等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D005→D008",
+        "中间还包括成果盘点、投资协定、绿色合作、企业视角、国际评价等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005",
+        "D008"
+      ],
+      [
+        "D001",
+        "D007",
+        "D008"
+      ],
+      [
+        "D001",
+        "D002",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D005",
+        "D008"
+      ],
+      "stages": [
+        "对话开幕",
+        "贸易摩擦",
+        "关系展望"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_034_Q02",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "投资协定谈判（D003）和绿色合作（D004）都是对话的重点议题，二者中哪一个对企业视角（D006）的影响更直接？请结合材料说明判断依据。",
+    "answers": "投资协定（D003）对企业视角（D006）的影响更直接。依据：因果关系列表中D003→D006为直接因果（certain），D004→D006也为直接因果，但投资协定直接关系到企业的市场准入、公平竞争、投资保护等核心权益，是企业最关心的制度性保障；而绿色合作主要是为企业创造新的合作机会，影响相对间接。从企业采访内容看，多家企业都表达了对投资协定批准生效的期待，说明投资协定对企业的影响更为直接和根本。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D003对D006的影响更直接",
+        "依据是投资协定直接关系企业核心权益"
+      ],
+      "optional_facts": [
+        "D004绿色合作主要创造新合作机会",
+        "企业普遍期待投资协定批准生效"
+      ],
+      "forbidden_facts": [
+        "判断D004更直接且无合理依据",
+        "混淆制度性保障与合作机会的不同影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D004对D006的影响",
+      "more_direct": "D003",
+      "reason": "投资协定直接关系企业核心权益"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_034_Q03",
+    "pack_id": "034",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设中欧没有举行这次经贸高层对话（移除D001），这会对绿色合作（D004）和国际评价（D007）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有举行这次经贸高层对话，绿色合作（D004）的推进力度会明显减弱，国际评价（D007）的关注度和正面评价也会减少。连锁影响：没有对话这个高层平台，中欧在绿色领域的合作就缺乏顶层推动和战略引领，绿色合作伙伴关系的建立可能会推迟；同时，没有对话就不会引起国际社会的广泛关注和积极评价，国际社会对中欧关系的信心也会受到影响。受影响的关键边为[['D001','D004'],['D001','D007']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断绿色合作推进力度会减弱",
+        "说明国际评价的关注度会减少"
+      ],
+      "optional_facts": [
+        "没有对话绿色合作缺乏顶层推动",
+        "没有对话不会引起国际社会广泛关注"
+      ],
+      "forbidden_facts": [
+        "断言没有对话中欧合作也不会受影响",
+        "忽视高层对话在中欧关系中的引领作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除中欧经贸高层对话",
+      "affected_edges": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "绿色合作推进减弱，国际评价关注度减少"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_034_Q04",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "贸易摩擦与分歧（D005）与中欧关系展望（D008）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在直接因果关联，同时也有间接传导路径。直接路径：D005（贸易摩擦）→D008（关系展望），贸易摩擦和分歧是中欧关系展望中必须面对和分析的重要内容，专家在展望中欧关系时必然会讨论如何妥善解决分歧。间接路径：D005→D006（企业视角）→D008，贸易摩擦直接影响企业的经营环境和预期，企业的诉求和感受又为专家展望中欧关系提供了微观依据。此外，D005→D007（国际评价）→D008也是一条间接路径。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在直接因果关联",
+        "指出贸易摩擦是关系展望的重要内容"
+      ],
+      "optional_facts": [
+        "间接路径：D005→D006→D008",
+        "另一条间接路径：D005→D007→D008"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "忽视贸易摩擦在中欧关系中的重要性"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D008"
+      ],
+      [
+        "D005",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_and_indirect_causal",
+      "direct_path": "D005→D008",
+      "indirect_path": "D005→D006→D008"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_034_Q05",
+    "pack_id": "034",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测中欧投资协定正式生效的具体日期？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性日期",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_034_Q06",
+    "pack_id": "034",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "中欧经贸高层对话开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（成果盘点）、D003（投资协定）、D004（绿色合作）、D005（贸易摩擦）。这四项都是对话中直接讨论的重点议题和内容。证据：对话中双方就经贸合作成果进行了回顾，就投资协定批准生效交换了意见，就绿色合作达成了共识，就贸易摩擦和分歧坦诚交换了意见。D006企业视角、D007国际评价、D008关系展望为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002成果盘点",
+        "D001直接导致D003投资协定",
+        "D001直接导致D004绿色合作",
+        "D001直接导致D005贸易摩擦"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D006、D007、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D003或D004等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_034_Q07",
+    "pack_id": "034",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于对话开幕和成果盘点（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D004绿色合作——对话中双方就绿色合作达成了共识，接下来必然会推进具体合作；第二，D005贸易摩擦讨论——对话中双方必然会就彼此关切的贸易摩擦问题坦诚交换意见；第三，D006企业视角——对话的成果和分歧必然会影响企业的预期和经营，企业会对此作出反应。依据：中欧经贸高层对话的标准议程包括成果回顾、重点议题讨论、分歧交换意见等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D004绿色合作、D005贸易摩擦、D006企业视角",
+        "还可能发生D003投资协定、D007国际评价等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D002",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-06",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D004",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "economy_trade_122_Q01",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化行业影响对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "economy_trade_122_Q02",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "事件D004（专家分析）在时间/进程上早于D006（中小企业影响）。能否据此断定D004（专家分析）导致了D006（中小企业影响）？请给出判断与证据。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q03",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，请依据材料说明D003（企业行动）的基本事实与直接影响。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q04",
+    "pack_id": "122",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "请判断：若观测截断在D006（中小企业影响）阶段（当前已知：D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q05",
+    "pack_id": "122",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "反事实假设：如果D008（成效评估）没有发生（或被及时干预阻断），D009（趋势展望）是否仍会发生？请判断并给出因果依据。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q06",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请回溯到D001（政策落地），说明经由哪些中间事件最终导致了D009（趋势展望）。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q07",
+    "pack_id": "122",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，从多个环节出发，梳理导致D008（成效评估）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q08",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于164个成员的政策落地事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "economy_trade_122_Q09",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中同期无关企业的常规演练，是否与主线事件政策落地（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "economy_trade_122_Q10",
+    "pack_id": "122",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，164个成员在该政策落地事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

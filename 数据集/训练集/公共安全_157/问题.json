@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "public_safety_157_Q01",
+    "pack_id": "157",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，围绕最终结果D009（校园整治），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "public_safety_157_Q02",
+    "pack_id": "157",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "鉴于方城县英才学校宿舍此次并未发生任何火灾，请说明为何官方还要通报13名学生遇难？"
+  },
+  {
+    "sample_id": "public_safety_157_Q03",
+    "pack_id": "157",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，设想D002（宿舍起火）被阻断，D003（烟气致害）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "public_safety_157_Q04",
+    "pack_id": "157",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，截至D006（成立调查组）阶段，材料仅显示：D001 违规超员；D002 宿舍起火；D003 烟气致害；D004 紧急救援；D005 伤亡通报；D006 成立调查组。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "public_safety_157_Q05",
+    "pack_id": "157",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D002（宿舍起火）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "public_safety_157_Q06",
+    "pack_id": "157",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，从时间看D004（紧急救援）早于D010（善后处置），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "public_safety_157_Q07",
+    "pack_id": "157",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：沿因果链解释D008（追究责任）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "public_safety_157_Q08",
+    "pack_id": "157",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于方城县英才学校火灾事故的遇难人数，官方通报与另一网传来源不一致（官方称13名学生遇难，另一来源称遇难人数达数十人）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "public_safety_157_Q09",
+    "pack_id": "157",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（宿舍起火）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "public_safety_157_Q10",
+    "pack_id": "157",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，此次方城县英才学校火灾的起火点最初是由哪一具体电器设备引燃的？"
+  }
+]

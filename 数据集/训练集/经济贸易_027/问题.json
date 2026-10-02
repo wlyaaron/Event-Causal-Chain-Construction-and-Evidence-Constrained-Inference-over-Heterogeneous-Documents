@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "economy_trade_027_Q01",
+    "pack_id": "027",
+    "question_type": "factual_query",
+    "reasoning_type": "single_hop",
+    "question": "1997年亚洲金融危机中，泰国、印尼、韩国三国分别从IMF获得了多少救助资金？哪国获得的最多？"
+  },
+  {
+    "sample_id": "economy_trade_027_Q02",
+    "pack_id": "027",
+    "question_type": "causal_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "泰国为什么会成为亚洲金融危机的爆发点？其经济结构中存在哪些根本性问题？"
+  },
+  {
+    "sample_id": "economy_trade_027_Q03",
+    "pack_id": "027",
+    "question_type": "temporal_reasoning",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列：泰铢贬值、香港金融保卫战、马来西亚资本管制、俄罗斯违约、山一证券破产。"
+  },
+  {
+    "sample_id": "economy_trade_027_Q04",
+    "pack_id": "027",
+    "question_type": "comparative_analysis",
+    "reasoning_type": "multi_hop_causal",
+    "question": "马来西亚的资本管制政策与泰国、韩国接受IMF救助的政策在应对思路和效果上有什么不同？"
+  },
+  {
+    "sample_id": "economy_trade_027_Q05",
+    "pack_id": "027",
+    "question_type": "multi_hop_reasoning",
+    "reasoning_type": "multi_hop_causal",
+    "question": "亚洲金融危机如何从泰国的货币危机逐步演变为波及俄罗斯、拉美的全球新兴市场危机，并最终导致LTCM濒临破产？"
+  },
+  {
+    "sample_id": "economy_trade_027_Q06",
+    "pack_id": "027",
+    "question_type": "summarization",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括亚洲金融危机对亚洲国家经济政策、金融体系和区域合作产生的长期影响。"
+  },
+  {
+    "sample_id": "economy_trade_027_Q07",
+    "pack_id": "027",
+    "question_type": "counterfactual_inference",
+    "reasoning_type": "counterfactual",
+    "question": "假设泰国在1997年7月没有放弃固定汇率，而是继续动用外汇储备干预，危机的发展轨迹可能会有什么不同？"
+  }
+]

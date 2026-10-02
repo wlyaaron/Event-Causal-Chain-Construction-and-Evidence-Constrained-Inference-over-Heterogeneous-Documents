@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "natural_disaster_186_Q01",
+    "pack_id": "186",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化预警建设对区域经济未来五年的总体影响？"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q02",
+    "pack_id": "186",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D009（预警建设）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q03",
+    "pack_id": "186",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间上看D004（灾情安置）早于D006（灾后重建），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q04",
+    "pack_id": "186",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D001（灾害发生）所代表的条件被移除，后续的D002（应急救援）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q05",
+    "pack_id": "186",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "结合材料，D001（灾害发生）发生在D002（应急救援）之前，这是否足以说明D001（灾害发生）是D002（应急救援）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q06",
+    "pack_id": "186",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（灾害发生）到D008（防灾短板）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q07",
+    "pack_id": "186",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，若观测截断在D006（灾后重建）阶段（当前已知：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），后续走向如何？请给出可验证预测。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q08",
+    "pack_id": "186",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于意大利的灾害发生事件，不同来源给出的关键数据不一致（官方15、另一来源18）。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q09",
+    "pack_id": "186",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中另一地区机构的日常检查，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "natural_disaster_186_Q10",
+    "pack_id": "186",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，意大利在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

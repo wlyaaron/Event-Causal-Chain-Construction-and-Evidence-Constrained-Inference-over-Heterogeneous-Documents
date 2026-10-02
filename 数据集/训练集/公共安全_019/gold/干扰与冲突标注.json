@@ -1,0 +1,16 @@
+{
+  "distractor_docs": [
+    "D014.txt"
+  ],
+  "conflict": {
+    "event": "D001",
+    "official_source": "D001.txt",
+    "second_source": "D013.txt",
+    "value_official": "官方通报口径",
+    "value_second": "另一来源相反口径"
+  },
+  "missing_info": [
+    "现场处置精确耗时"
+  ],
+  "long_doc": "D015.txt"
+}

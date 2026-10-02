@@ -1,0 +1,72 @@
+[
+  {
+    "sample_id": "diplomacy_127_Q01",
+    "pack_id": "127",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，沿因果链解释D009（专家解读）的成因：从源头到结果依次经历了哪些事件？"
+  },
+  {
+    "sample_id": "diplomacy_127_Q02",
+    "pack_id": "127",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（共识落实），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_127_Q03",
+    "pack_id": "127",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，沿因果关系看，D001（外交会晤）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_127_Q04",
+    "pack_id": "127",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，假设你只掌握D006（政策发布）阶段及之前的信息（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "diplomacy_127_Q05",
+    "pack_id": "127",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "设想D004（双边会谈）被阻断，D005（多边场合）会不会随之改变或消失？请从因果链角度说明。"
+  },
+  {
+    "sample_id": "diplomacy_127_Q06",
+    "pack_id": "127",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，D003（峰会成果）发生在D004（双边会谈）之前，这是否足以说明D003（峰会成果）是D004（双边会谈）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_127_Q07",
+    "pack_id": "127",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定政策发布是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "diplomacy_127_Q08",
+    "pack_id": "127",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于190多国家的外交会晤事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？"
+  },
+  {
+    "sample_id": "diplomacy_127_Q09",
+    "pack_id": "127",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中其他区域某单位的例行通报，是否与主线事件外交会晤（D001）构成因果关系？请判断并说明。"
+  },
+  {
+    "sample_id": "diplomacy_127_Q10",
+    "pack_id": "127",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，190多国家在该外交会晤事件中的具体现场处置耗时（精确到分钟）是多少？"
+  }
+]

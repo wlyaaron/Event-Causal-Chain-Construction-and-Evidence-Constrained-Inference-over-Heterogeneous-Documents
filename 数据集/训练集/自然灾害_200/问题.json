@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_200_Q01",
+    "pack_id": "200",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对灾情安置的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q02",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D001（灾害发生）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q03",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（灾害发生）早于D004（灾情安置），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q04",
+    "pack_id": "200",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D004（灾情安置）未曾出现，D005（成因分析）的发生是否还能成立？请给出推断依据。"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q05",
+    "pack_id": "200",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，已知信息止于D006（灾后重建）阶段（D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q06",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D009（预警建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "natural_disaster_200_Q07",
+    "pack_id": "200",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D008（防灾短板）的完整因果路径，并标明证据顺序。"
+  }
+]

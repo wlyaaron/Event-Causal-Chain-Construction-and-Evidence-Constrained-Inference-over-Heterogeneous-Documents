@@ -1,0 +1,347 @@
+[
+  {
+    "sample_id": "public_safety_232_Q01",
+    "pack_id": "232",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，设想D001（事故发生）被阻断，D002（救援进展）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "移除D001后，D002及其连锁后果很可能不成立。D001系D002的直接原因（直接因果），受影响边为 [['D001', 'D002'], ['D002', 'D004'], ['D004', 'D007'], ['D007', 'D009'], ['D009', 'D010']]；大规模搜救持续进行 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D004"
+        ],
+        [
+          "D004",
+          "D007"
+        ],
+        [
+          "D007",
+          "D009"
+        ],
+        [
+          "D009",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_232_Q02",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D004（搜救结束）直接导致了什么？请依据材料作答。",
+    "answers": "材料表明，D004（搜救结束）的直接结果是D007（调查进展）；查明直接原因为违法贮存硝化废料自燃引发爆炸。二者为直接因果关系。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（搜救结束） 直接导致 D007（调查进展）",
+        "后果：查明直接原因为违法贮存硝化废料自燃引发爆炸"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D007（调查进展） 导致 D004（搜救结束）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D007"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_232_Q03",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，D001（事故发生）先于D004（搜救结束）发生，可以据此断定D001（事故发生）是D004（搜救结束）的原因吗？请说明。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D004 的因果边；其直接原因是D002（救援进展）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（事故发生） 早于 D004（搜救结束） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（事故发生） 导致 D004（搜救结束）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_232_Q04",
+    "pack_id": "232",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化搜救结束对区域经济未来五年的总体影响？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_232_Q05",
+    "pack_id": "232",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，沿因果链解释D010（整治成效）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "完整因果链：D001（事故发生） → D003（国家调查） → D005（全国部署） → D010（整治成效）。其中，事故发生为起点，经逐级传导，最终导致整治成效；全国危化品安全水平显著提升。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（事故发生） 到终点 D010（整治成效） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（事故发生）",
+        "终点为 D010（整治成效）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（事故发生） → D003（国家调查） → D005（全国部署） → D010（整治成效）",
+        "可包含关键环节 D003（国家调查）",
+        "可包含关键环节 D005（全国部署）",
+        "终点影响：全国危化品安全水平显著提升"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D005",
+        "D010"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      [
+        "D001",
+        "D002",
+        "D004",
+        "D007",
+        "D009",
+        "D010"
+      ],
+      [
+        "D001",
+        "D003",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D005",
+        "D010"
+      ],
+      "stages": [
+        "事故发生",
+        "国家调查",
+        "全国部署",
+        "整治成效"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_232_Q06",
+    "pack_id": "232",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "依据现有材料，D001（事故发生）涉及的确切人数/精确金额是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_232_Q07",
+    "pack_id": "232",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，在只知道2019-04-15前进展（D001 事故发生；D002 救援进展；D003 国家调查；D004 搜救结束；D005 全国部署；D006 标准出台）的前提下，接下来最可能发生什么？请给出可验证判断。",
+    "answers": "后续实际发生：D007（调查进展）、D008（三年行动）、D010（整治成效）。其中关键进展为调查进展：查明直接原因为违法贮存硝化废料自燃引发爆炸。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:调查进展"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（三年行动）, D010（整治成效）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007",
+        "D008",
+        "D010",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2019-04-15",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006"
+      ],
+      "hidden_events": [
+        "D007",
+        "D008",
+        "D010",
+        "D009"
+      ],
+      "ground_truth": "D007:调查进展"
+    },
+    "confidence_level": "possible"
+  }
+]

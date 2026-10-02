@@ -1,0 +1,335 @@
+[
+  {
+    "sample_id": "public_safety_060_Q01",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（安全事件/风险发生）早于D005（整治行动推进），这是否意味着二者存在因果？请判断。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D005 的因果边；其直接原因是D004（专项整治部署）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 早于 D005（整治行动推进） 只是时间先后",
+        "材料中不存在 D001→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（安全事件/风险发生） 导致 D005（整治行动推进）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_060_Q02",
+    "pack_id": "060",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假如当初D006（专项整治部署）未曾出现，D007（治理成效评估）的发生是否还能成立？请给出推断依据。",
+    "answers": "移除D006后，D007及其连锁后果很可能不成立。D006系D007的直接原因（直接因果），受影响边为 [['D006', 'D007']]；全国医疗机构排查覆盖率达87.2% 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D006是D007的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D007及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D006",
+      "affected_edges": [
+        [
+          "D006",
+          "D007"
+        ]
+      ],
+      "counterfactual_result": "D007及其下游很可能不发生",
+      "acceptable_points": [
+        "D006是D007的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_060_Q03",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D001（安全事件/风险发生）到D007（治理成效评估）的完整因果传导过程，并按序列出证据。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D004（专项整治部署） → D006（专项整治部署） → D007（治理成效评估）。安全事件/风险发生触发链条，最终形成治理成效评估；全国医疗机构排查覆盖率达87.2%。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D007（治理成效评估） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D007（治理成效评估）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（专项整治部署） → D006（专项整治部署） → D007（治理成效评估）",
+        "可包含关键环节 D004（专项整治部署）",
+        "可包含关键环节 D006（专项整治部署）",
+        "终点影响：全国医疗机构排查覆盖率达87.2%"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "专项整治部署",
+        "专项整治部署",
+        "治理成效评估"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_060_Q04",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D007（治理成效评估）的完整因果路径，并标明证据顺序。",
+    "answers": "梳理可得因果路径：D001（安全事件/风险发生） → D004（专项整治部署） → D006（专项整治部署） → D007（治理成效评估）。安全事件/风险发生触发链条，最终形成治理成效评估；全国医疗机构排查覆盖率达87.2%。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（安全事件/风险发生） 到终点 D007（治理成效评估） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（安全事件/风险发生）",
+        "终点为 D007（治理成效评估）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（安全事件/风险发生） → D004（专项整治部署） → D006（专项整治部署） → D007（治理成效评估）",
+        "可包含关键环节 D004（专项整治部署）",
+        "可包含关键环节 D006（专项整治部署）",
+        "终点影响：全国医疗机构排查覆盖率达87.2%"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D007"
+      ],
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D007"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D006",
+        "D007"
+      ],
+      "stages": [
+        "安全事件/风险发生",
+        "专项整治部署",
+        "专项整治部署",
+        "治理成效评估"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_060_Q05",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "哪一事件是D001（安全事件/风险发生）的直接后果？其影响如何？",
+    "answers": "D004（专项整治部署）是D001（安全事件/风险发生）的直接后果。证据：国家卫健委指导伤员救治。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（安全事件/风险发生） 直接导致 D004（专项整治部署）",
+        "后果：国家卫健委指导伤员救治"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D004（专项整治部署） 导致 D001（安全事件/风险发生）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D004"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_060_Q06",
+    "pack_id": "060",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "若观测截断在2023-04-20（当前已知：D001 安全事件/风险发生；D002 应急响应与救援；D003 调查评估与核查；D004 专项整治部署），后续走向如何？请给出可验证预测。",
+    "answers": "基于因果走势，后续将出现：D005（整治行动推进）、D006（专项整治部署）、D007（治理成效评估）；其中最关键的是整治行动推进——在全市开展医疗卫生机构消防安全大排查大整治专项行动。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D005:整治行动推进"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（专项整治部署）, D007（治理成效评估）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2023-04-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ],
+      "hidden_events": [
+        "D005",
+        "D006",
+        "D007"
+      ],
+      "ground_truth": "D005:整治行动推进"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_060_Q07",
+    "pack_id": "060",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，已知D006（专项整治部署）先于D007（治理成效评估）出现，可否仅凭先后顺序认定二者的因果关系？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D006→D007（直接因果），不是先后关系。证据：通报全国医疗机构消防安全专项整治阶段性进展。",
+    "answer_facts": {
+      "required_facts": [
+        "D006（专项整治部署） 与 D007（治理成效评估） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D006 先于 D007"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D007（治理成效评估） 导致 D006（专项整治部署）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D006",
+      "event_b": "D007",
+      "temporal_order": "D006先于D007",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  }
+]

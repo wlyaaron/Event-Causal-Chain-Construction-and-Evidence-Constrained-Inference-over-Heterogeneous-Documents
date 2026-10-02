@@ -1,0 +1,86 @@
+[
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D001",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D002",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D002",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D003",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D002",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D004",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D006",
+    "result_event_id": "D001",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D007",
+    "result_event_id": "D001",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D008",
+    "result_event_id": "D004",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D008",
+    "result_event_id": "D001",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D001",
+    "result_event_id": "D009",
+    "causal_type": "直接因果",
+    "confidence_level": "certain",
+    "pack_id": "079"
+  },
+  {
+    "cause_event_id": "D005",
+    "result_event_id": "D009",
+    "causal_type": "间接传导",
+    "confidence_level": "probable",
+    "pack_id": "079"
+  }
+]

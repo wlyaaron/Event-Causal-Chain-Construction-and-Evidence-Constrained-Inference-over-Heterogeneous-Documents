@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_03_Q01",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "长春长生疫苗事件是在哪一天被国家药监局通报的？涉及哪两种问题疫苗？"
+  },
+  {
+    "sample_id": "healthcare_03_Q02",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "长春长生公司在狂犬疫苗生产中具体存在哪些违法违规行为？这些行为为什么会被认定为系统性违法？"
+  },
+  {
+    "sample_id": "healthcare_03_Q03",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：国家药监局通报造假、高俊芳被刑拘、国务院调查组公布结果、91亿罚款、疫苗管理法通过、刑事一审宣判。"
+  },
+  {
+    "sample_id": "healthcare_03_Q04",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "对长春长生的行政处罚（91亿罚款）和刑事判决（高俊芳七年有期徒刑）在处罚依据、力度和社会反响上有什么不同？"
+  },
+  {
+    "sample_id": "healthcare_03_Q05",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从长春长生企业内部的生产违规，到最终推动《疫苗管理法》出台，中间经历了哪些关键环节？请结合调查、问责、公众反应和立法过程等多个层面说明。"
+  },
+  {
+    "sample_id": "healthcare_03_Q06",
+    "pack_id": "03",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括长春长生疫苗事件对中国疫苗行业和监管体系产生的主要长期影响。"
+  },
+  {
+    "sample_id": "healthcare_03_Q07",
+    "pack_id": "03",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设在长春长生疫苗事件发生前，全国疫苗电子追溯体系已经建成并有效运行，事件的发现和处置过程可能会有什么不同？请结合追溯体系的功能进行分析。"
+  }
+]

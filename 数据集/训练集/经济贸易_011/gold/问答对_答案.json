@@ -1,0 +1,385 @@
+[
+  {
+    "sample_id": "economy_trade_011_Q01",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（成效显现），并按顺序给出完整证据链。",
+    "answers": "梳理可得因果路径：D001（政策发布） → D003（配套举措） → D004（成效进展） → D009（评论员文章） → D010（成果落实） → D011（机制建设） → D012（成效显现）。政策发布触发链条，经配套举措、成效进展、评论引导，配套举措转入落实、建立长效机制，最终试验区改革成效持续显现；带动就业和居民收入增长，为区域经济高质量发展注入持久动力。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策发布） 到终点 D012（成效显现） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策发布）",
+        "终点为 D012（成效显现）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策发布） → D003（配套举措） → D004（成效进展） → D009（评论员文章） → D010（成果落实） → D011（机制建设） → D012（成效显现）",
+        "可包含关键环节 D010（成果落实）、D011（机制建设）",
+        "终点影响：带动就业和居民收入增长，为区域经济高质量发展注入持久动力"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ],
+      "stages": [
+        "政策发布",
+        "配套举措",
+        "成效进展",
+        "评论员文章",
+        "成果落实",
+        "机制建设",
+        "成效显现"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_011_Q02",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（政策发布）在D002（社会反响）之前发生，二者是否构成因果？依据是什么？",
+    "answers": "能认定因果，但关键依据是材料中的因果记载 D001→D002（直接因果），不是先后关系。证据：稳定市场预期、提振发展信心。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（政策发布） 与 D002（社会反响） 存在因果关系",
+        "认定依据是明确的因果证据，而非时间先后"
+      ],
+      "optional_facts": [
+        "时间顺序：D001 先于 D002"
+      ],
+      "forbidden_facts": [
+        "仅凭时间先后就断定因果",
+        "D002（社会反响） 导致 D001（政策发布）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D002",
+      "temporal_order": "D001先于D002",
+      "causal_link": true,
+      "note": "时间在先且有因果证据"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_011_Q03",
+    "pack_id": "011",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（政策发布）这一原因，D002（社会反响）是否会失去支撑？请判断并说明连锁影响。",
+    "answers": "结论：一旦阻断D001，D002大概率不再发生。因为D001是D002的直接原因，其下游受影响的边为 [['D001', 'D002'], ['D002', 'D009']]；稳定市场预期、提振发展信心 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D002及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D002",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D001",
+      "affected_edges": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D002及其下游很可能不发生",
+      "acceptable_points": [
+        "D001是D002的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_011_Q04",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D004（成效进展），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（政策发布） → D003（配套举措） → D004（成效进展）。起点为政策发布，终点为成效进展；推动经济稳中向好、提质增效。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（政策发布） 到终点 D004（成效进展） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（政策发布）",
+        "终点为 D004（成效进展）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（政策发布） → D003（配套举措） → D004（成效进展）",
+        "可包含关键环节 D003（配套举措）",
+        "终点影响：推动经济稳中向好、提质增效"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      "stages": [
+        "政策发布",
+        "配套举措",
+        "成效进展"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_011_Q05",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于试验区带动新增市场主体的具体数量，材料中不同来源的说法是否一致？应如何取舍判断？",
+    "answers": "不一致：一份地方通报称新增注册企业逾千家，另有报道则称为数百家，两组数字相互矛盾。应以官方统计口径最终确认的数据为准，在此之前不宜采信任何单一数字。",
+    "answer_facts": {
+      "required_facts": [
+        "识别出新增市场主体数量存在相互矛盾的两种说法（逾千家与数百家）",
+        "指出不同来源之间存在冲突，不能直接采信"
+      ],
+      "optional_facts": [
+        "应以官方统计口径/权威发布为准",
+        "在核实前保持存疑"
+      ],
+      "forbidden_facts": [
+        "直接采信某一数字为确定结论",
+        "忽视来源之间的矛盾"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D014"
+      ]
+    ],
+    "annotations": {
+      "conflict_point": "新增市场主体数量",
+      "sources": [
+        "地方通报：逾千家",
+        "另有报道：数百家"
+      ],
+      "resolution": "以官方统计口径为准，暂无法确认"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "economy_trade_011_Q06",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+    "answers": "D002（社会反响）是D001（政策发布）的直接后果。证据：稳定市场预期、提振发展信心。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D001（政策发布） 直接导致 D002（社会反响）",
+        "后果：稳定市场预期、提振发展信心"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D002（社会反响） 导致 D001（政策发布）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_011_Q07",
+    "pack_id": "011",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2003-06-15（D001 政策发布；D002 社会反响；D003 配套举措；D004 成效进展；D005 工作部署），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D006（专家解读）、D007（数据发布）、D008（区域协同）、D009（评论员文章），并进一步推动D010（成果落实）、D011（机制建设）、D012（成效显现）；其中最关键的是专家解读——帮助各方准确理解和把握政策。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D006:专家解读"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D007（数据发布）、D008（区域协同）、D009（评论员文章）、D010（成果落实）、D011（机制建设）、D012（成效显现）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2003-06-15",
+      "visible": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ],
+      "predicted": [
+        "D006",
+        "D007",
+        "D008",
+        "D009",
+        "D010",
+        "D011",
+        "D012"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "economy_trade_011_Q08",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "distractor_robustness",
+    "question": "材料中提到改革推进期间贵州本地举办了山地民俗文化节和特色农产品展销（D016），这一活动是否属于推动D004（成效进展）的因果原因？请判断并说明理由。",
+    "answers": "不是。山地民俗文化节和特色农产品展销（D016）只是改革推进期间的地方文化活动，与试验区改革核心议程并无直接关联，材料中也未记载其与D004（成效进展）之间存在任何因果边。推动成效进展的是D001（政策发布）、D003（配套举措）等事件，不应被无关活动干扰。",
+    "answer_facts": {
+      "required_facts": [
+        "判断 D016 不是 D004 的因果原因",
+        "指出 D016 与试验区改革核心议程无直接关联，无因果边"
+      ],
+      "optional_facts": [
+        "推动 D004 的是 D001、D003 等事件",
+        "识别 D016 为干扰项"
+      ],
+      "forbidden_facts": [
+        "认定 D016 导致 D004",
+        "编造 D016 与 D004 之间的因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D016"
+      ]
+    ],
+    "annotations": {
+      "distractor": "D016",
+      "target": "D004",
+      "is_causal": false,
+      "reason": "地方文化活动，与试验区改革核心议程无因果关联"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "economy_trade_011_Q09",
+    "pack_id": "011",
+    "question_type": "retrospective",
+    "reasoning_type": "missing_information",
+    "question": "根据材料，能否确定相关地区就跨区域要素对接后续安排（D015）交换意见的具体内容、牵头方和实施时间？若不能，缺少哪些信息？",
+    "answers": "不能确定。D015 仅来自未经证实的消息，材料明确指出该安排的具体内容、牵头方和实施时间均不明确、主体不详。要确定这些内容，还缺少官方正式公告、牵头单位及具体实施时间表等关键信息。",
+    "answer_facts": {
+      "required_facts": [
+        "判定无法确定 D015 的具体内容、牵头方和实施时间",
+        "指出材料信息不足、主体不详"
+      ],
+      "optional_facts": [
+        "缺少官方公告、牵头单位、实施时间表等信息",
+        "该消息未经证实"
+      ],
+      "forbidden_facts": [
+        "编造具体内容、牵头方或时间",
+        "将未经证实的消息当作确定结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D015"
+      ]
+    ],
+    "annotations": {
+      "missing_fields": [
+        "对接安排具体内容",
+        "牵头方",
+        "实施时间"
+      ],
+      "reason": "消息未经证实，主体不详"
+    },
+    "confidence_level": "possible"
+  }
+]

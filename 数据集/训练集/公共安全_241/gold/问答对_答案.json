@@ -1,0 +1,307 @@
+[
+  {
+    "sample_id": "public_safety_241_Q01",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "事故发生后如何进行追责问责？",
+    "answers": "司法机关与监察机关依据调查结论，对负有直接责任的单位和人员采取强制措施、追究法律责任，对负有领导和监管责任的人员依法依规给予党纪政务处分；对涉嫌违法犯罪的移送司法机关查处，通过追责问责警示教育、压实安全生产责任。",
+    "answer_facts": {
+      "required_facts": [
+        "司法机关与监察机关依法依规追究相关单位和人员责任（D002）",
+        "对直接责任人采取强制措施、追究法律责任",
+        "对领导和监管责任人给予党纪政务处分，涉嫌犯罪的移送司法"
+      ],
+      "optional_facts": [
+        "因果关系：D001（坍塌事故）→ D002（追责问责）",
+        "追责目的是警示教育、压实安全生产责任"
+      ],
+      "forbidden_facts": [
+        "把追责问责与应急救援（D004）混为一谈",
+        "编造原文未列明的具体处分档次或人数"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D002"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_241_Q02",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "事故发生后开展了哪些专项督查和排查？",
+    "answers": "有关主管部门以事故为鉴开展公共交通安全专项督查，全面排查突出问题：建立问题隐患清单，落实闭环整改，压实企业主体责任和部门监管责任；同时对督办案件挂牌整改、逐一销号，确保整改见底、见效。",
+    "answer_facts": {
+      "required_facts": [
+        "有关部门开展公共交通安全专项督查（D006）",
+        "全面排查突出问题、建立隐患清单并闭环整改",
+        "压实企业主体责任与部门监管责任"
+      ],
+      "optional_facts": [
+        "传导路径：D001（坍塌事故）→ D006（专项督查）",
+        "对督办案件挂牌整改、逐一销号"
+      ],
+      "forbidden_facts": [
+        "把专项督查等同于事故当日的现场救援",
+        "引入原文未出现的督查覆盖范围或具体数字"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D006"
+      ],
+      "stages": [
+        "公共交通坍塌事故发生",
+        "开展公共交通安全专项督查"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_241_Q03",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何通过情况通报回应社会关切？",
+    "answers": "合肥有关部门第一时间召开新闻通报会，及时准确通报事故基本情况、伤亡救治进展、原因初判和处置措施，公开信息、回应舆论关切，防止谣言和不实炒作，切实保障公众知情权、稳定社会预期。",
+    "answer_facts": {
+      "required_facts": [
+        "合肥有关部门召开新闻通报会及时通报事故情况（D005）",
+        "通报内容包括伤亡救治进展、原因初判和处置措施",
+        "目的是保障公众知情权、稳定社会预期、防止谣言"
+      ],
+      "optional_facts": [
+        "因果关系：D001（坍塌事故）→ D005（情况通报）",
+        "公开信息回应舆论关切"
+      ],
+      "forbidden_facts": [
+        "将情况通报与专项督查（D006）或追责（D002）混淆",
+        "编造原文未提及的通报场次或具体发布数据"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D001",
+        "D005"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_241_Q04",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类事件提出了哪些建议？",
+    "answers": "专家结合安全教育专项提出：普及公共交通等防范知识和科学自救、自救互救技能，提醒公众日常关注隐患、熟悉逃生路线和应急处置常识，遇突发保持镇静、科学应对；建议企业和家庭增强安全意识、落实防范措施，共同营造人人讲安全的良好氛围。",
+    "answer_facts": {
+      "required_facts": [
+        "结合安全教育专项普及防范知识与自救互救技能（D008）",
+        "提醒公众掌握逃生路线、应急处置常识",
+        "建议企业和家庭增强安全意识、落实防范措施"
+      ],
+      "optional_facts": [
+        "传导关系：D001（坍塌事故）→ D008（安全教育专项）",
+        "遇突发保持镇静、科学应对"
+      ],
+      "forbidden_facts": [
+        "把安全教育建议与追责问责（D002）混为一谈",
+        "编造原文未出现的具体培训数据或课程名称"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_cause",
+      "edge": [
+        "D001",
+        "D008"
+      ],
+      "confidence_level": "probable"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_241_Q05",
+    "pack_id": "241",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "2016年合肥市城市公共交通供电系统坍塌事故是如何发生的？引发了哪些后果？",
+    "answers": "2016年合肥市城市公共交通供电系统坍塌事故发生后，引发当地政府启动应急预案、组织力量全力搜救救治；经事件调查组核查，认定为责任事件，直接原因是电路短路或保护失效，暴露出安全生产责任不落实、隐患排查治理不到位等问题；随后依法追责问责、开展专项督查与全国动员部署防范，造成人员死伤和财产损失。",
+    "answer_facts": {
+      "required_facts": [
+        "坍塌事故发生（D001），直接原因是电路短路或保护失效（D003 调查认定）",
+        "引发应急救援（D004）并推动全国动员部署防范（D010）",
+        "暴露安全生产责任不落实、隐患排查治理不到位，造成人员死伤"
+      ],
+      "optional_facts": [
+        "调查链：D001（事故）→ D003（事件调查查明原因）",
+        "处置链：D001（事故）→ D004（应急救援）→ D010（动员部署）"
+      ],
+      "forbidden_facts": [
+        "将原因归结为不可抗力或自然因素",
+        "编造原文未出现的具体责任人或处罚结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D004",
+        "D010"
+      ],
+      "stages": [
+        "公共交通坍塌事故发生",
+        "现场应急救援",
+        "全国动员部署防范"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_241_Q06",
+    "pack_id": "241",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "将如何推动构建安全长效机制？",
+    "answers": "预计将推动构建安全生产体系长效机制：预计健全风险分级管控和隐患排查治理双重预防机制；预计修订完善有关标准规范、提高准入门槛；预计加强科技和信息化手段应用、提升监测预警与应急处置能力，推动安全管理从事后处置向事前预防转变。",
+    "answer_facts": {
+      "required_facts": [
+        "预计健全风险分级管控和隐患排查治理双重预防机制",
+        "预计修订完善标准规范、提高准入门槛",
+        "预计加强科技信息化手段、提升监测预警与应急处置能力"
+      ],
+      "optional_facts": [
+        "基于专项督查（D006）与动员部署（D010）作出的前瞻判断",
+        "推动安全管理从事后处置向事前预防转变"
+      ],
+      "forbidden_facts": [
+        "断言具体机制出台的时间表",
+        "把预测表述为已确证发生的事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D006"
+      ],
+      [
+        "D001",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-01-22",
+      "visible": [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      "predicted": [
+        "D003",
+        "D002",
+        "D007",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_241_Q07",
+    "pack_id": "241",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次事件对压实安全责任将产生哪些长远影响？",
+    "answers": "预计此次事件将推动进一步压实安全生产责任，健全党政同责、一岗双责、失职追责机制；预计将推动完善公共交通安全管理制度，压实企业主体责任和部门监管责任；预计将在长期内提升全社会安全意识，逐步形成事前防范、闭环整改的长效治理格局。",
+    "answer_facts": {
+      "required_facts": [
+        "预计推动压实安全生产责任、健全党政同责与失职追责机制",
+        "预计完善公共交通安全管理制度",
+        "预计长期提升全社会安全意识并形成长效治理"
+      ],
+      "optional_facts": [
+        "基于追责问责（D002）与专项督查（D006）作出的前瞻判断",
+        "由事故（D001）教训转化为制度性防范"
+      ],
+      "forbidden_facts": [
+        "断言具体立法或制度出台日期",
+        "把预测表述为已确证发生的事实"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2016-01-22",
+      "visible": [
+        "D001",
+        "D004",
+        "D005",
+        "D006",
+        "D008",
+        "D010"
+      ],
+      "predicted": [
+        "D003",
+        "D002",
+        "D007",
+        "D009"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

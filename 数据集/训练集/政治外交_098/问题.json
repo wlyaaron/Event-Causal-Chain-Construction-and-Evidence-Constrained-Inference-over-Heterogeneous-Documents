@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_098_Q01",
+    "pack_id": "098",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（未来展望），并按顺序给出完整证据链。"
+  },
+  {
+    "sample_id": "diplomacy_098_Q02",
+    "pack_id": "098",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D002（谈判历史进程）在D001（国际协定达成）之前发生，二者是否构成因果？依据是什么？"
+  },
+  {
+    "sample_id": "diplomacy_098_Q03",
+    "pack_id": "098",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D005（减排差距评估）这一原因，D006（落实进展挑战）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_098_Q04",
+    "pack_id": "098",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：围绕最终结果D007（格拉斯哥大会），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  },
+  {
+    "sample_id": "diplomacy_098_Q05",
+    "pack_id": "098",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？"
+  },
+  {
+    "sample_id": "diplomacy_098_Q06",
+    "pack_id": "098",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D005（减排差距评估）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "diplomacy_098_Q07",
+    "pack_id": "098",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于持续评估（D001 国际协定达成；D002 谈判历史进程；D003 协定核心内容；D004 中国角色贡献；D005 减排差距评估），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

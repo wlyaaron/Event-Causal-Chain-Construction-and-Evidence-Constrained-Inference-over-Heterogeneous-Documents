@@ -1,0 +1,300 @@
+[
+  {
+    "sample_id": "public_safety_046_Q01",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "材料中关于D005（规划战略部署）记载了哪些关键事实？",
+    "answers": "D005（规划战略部署）：国务院在全国范围，印发《现代化应急体系建设'十五五'规划》。影响：为'十五五'时期消防救援事业发展指明方向。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：国务院",
+        "地点：全国范围",
+        "基本事实：印发《现代化应急体系建设'十五五'规划》"
+      ],
+      "optional_facts": [
+        "影响：为'十五五'时期消防救援事业发展指明方向"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D005"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_046_Q02",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D004（政策制度出台）在进程上早于D007（科技发展规划）。能否据此认为D004（政策制度出台）导致了D007（科技发展规划）？请给出判断与证据。",
+    "answers": "不能。D004（政策制度出台）早于D007（科技发展规划）只是时间先后，材料中不存在 D004→D007 的因果关系；其直接原因是D005（规划战略部署）、D002（队伍建设调研）。时间接近不等于因果，须以明确因果证据为准。",
+    "answer_facts": {
+      "required_facts": [
+        "D004（政策制度出台） 早于 D007（科技发展规划） 只是时间先后",
+        "材料中不存在 D004→D007 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D004（政策制度出台） 导致 D007（科技发展规划）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D004",
+      "event_b": "D007",
+      "temporal_order": "D004先于D007",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_046_Q03",
+    "pack_id": "046",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对队伍建设调研的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "来源相互冲突，交叉核验前不应给出唯一结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_046_Q04",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请还原从D005（规划战略部署）到D003（队伍建设招录）的完整因果传导过程，并按序列出证据。",
+    "answers": "该结果由一条有向因果链推动：D005（规划战略部署） → D001（队伍建设招录） → D003（队伍建设招录）。起点为规划战略部署，终点为队伍建设招录；吸引广大有志青年投身消防救援事业。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D005（规划战略部署） 到终点 D003（队伍建设招录） 的有向因果链（顺序不可颠倒）",
+        "起点为 D005（规划战略部署）",
+        "终点为 D003（队伍建设招录）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D005（规划战略部署） → D001（队伍建设招录） → D003（队伍建设招录）",
+        "可包含关键环节 D001（队伍建设招录）",
+        "终点影响：吸引广大有志青年投身消防救援事业"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D001",
+        "D003"
+      ],
+      [
+        "D005",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D005",
+        "D001",
+        "D003"
+      ],
+      "stages": [
+        "规划战略部署",
+        "队伍建设招录",
+        "队伍建设招录"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_046_Q05",
+    "pack_id": "046",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请回溯到D005（规划战略部署），说明经由哪些中间事件最终导致了D008（地方队伍建设）。",
+    "answers": "按证据顺序，成因链为 D005（规划战略部署） → D001（队伍建设招录） → D008（地方队伍建设）。自规划战略部署出发逐环传导至地方队伍建设；充实广东省消防救援力量。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D005（规划战略部署） 到终点 D008（地方队伍建设） 的有向因果链（顺序不可颠倒）",
+        "起点为 D005（规划战略部署）",
+        "终点为 D008（地方队伍建设）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D005（规划战略部署） → D001（队伍建设招录） → D008（地方队伍建设）",
+        "可包含关键环节 D001（队伍建设招录）",
+        "终点影响：充实广东省消防救援力量"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D005",
+        "D001",
+        "D008"
+      ],
+      "stages": [
+        "规划战略部署",
+        "队伍建设招录",
+        "地方队伍建设"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_046_Q06",
+    "pack_id": "046",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于2026-06-10（D004 政策制度出台；D006 政策解读宣传；D007 科技发展规划；D005 规划战略部署；D001 队伍建设招录），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "基于因果走势，后续将出现：D003（队伍建设招录）、D008（地方队伍建设）、D002（队伍建设调研）；其中最关键的是队伍建设招录——正式启动2026年度消防员招录工作。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D003:队伍建设招录"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D008（地方队伍建设）, D002（队伍建设调研）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006",
+        "D007",
+        "D005",
+        "D001",
+        "D003",
+        "D008",
+        "D002",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-06-10",
+      "visible_events": [
+        "D004",
+        "D006",
+        "D007",
+        "D005",
+        "D001"
+      ],
+      "hidden_events": [
+        "D003",
+        "D008",
+        "D002",
+        "D009"
+      ],
+      "ground_truth": "D003:队伍建设招录"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_046_Q07",
+    "pack_id": "046",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "请判断：设想D005（规划战略部署）被阻断，D009（地方队伍建设）会不会随之改变或消失？请从因果链角度说明。",
+    "answers": "结论：一旦阻断D005，D009大概率不再发生。因为D005是D009的直接原因（直接因果），其下游受影响的边为 [['D005', 'D009']]；补齐城乡消防救援力量短板 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D005是D009的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D009及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D009"
+      ],
+      [
+        "D005",
+        "D003"
+      ],
+      [
+        "D005",
+        "D007"
+      ],
+      [
+        "D005",
+        "D001",
+        "D003"
+      ],
+      [
+        "D005",
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D005",
+      "affected_edges": [
+        [
+          "D005",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D009及其下游很可能不发生",
+      "acceptable_points": [
+        "D005是D009的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

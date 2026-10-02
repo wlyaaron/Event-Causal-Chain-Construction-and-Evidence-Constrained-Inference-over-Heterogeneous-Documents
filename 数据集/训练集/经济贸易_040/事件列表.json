@@ -1,0 +1,438 @@
+[
+  {
+    "event_id": "D001",
+    "doc_id": "D001",
+    "event_type": "政策落地",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "将从根本上改变现有的市场竞争格局",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT实施一周年：成效与展望俄罗斯被踢出SWIFT的落地实施成为2022-02-26经济领域最受关注的事件。从具体条款看，俄罗斯被踢出SWIFT针对踢出SWIFT的多个痛点提出了精准施策方案。",
+      "影响": "俄罗斯被踢出SWIFT实施一周年：成效与展望"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D001",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "将从根本上改变现有的市场竞争格局",
+        "doc_id": "D001",
+        "start": 166,
+        "end": 182
+      },
+      {
+        "field": "影响",
+        "text": "俄罗斯被踢出SWIFT实施一周年：成效与展望",
+        "doc_id": "D001",
+        "start": 0,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "event_id": "D002",
+    "doc_id": "D002",
+    "event_type": "市场反应",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "各大金融机构",
+      "地点": "全球",
+      "内容": "全球视野下的俄罗斯被踢出SWIFT俄罗斯被踢出SWIFT的落地实施成为2022-02-26经济领域最受关注的事件。政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措。",
+      "影响": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措"
+    },
+    "occur_time": "2022-02-26",
+    "start": 10,
+    "end": 17,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D002",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "field": "主体",
+        "text": "各大金融机构",
+        "doc_id": "D002",
+        "start": 98,
+        "end": 104
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D002",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "field": "影响",
+        "text": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措",
+        "doc_id": "D002",
+        "start": 58,
+        "end": 96
+      }
+    ]
+  },
+  {
+    "event_id": "D003",
+    "doc_id": "D003",
+    "event_type": "企业行动",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "召开新闻发布会",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT引发市场强烈反应2022-02-26，西方国家对俄围绕俄罗斯被踢出SWIFT召开新闻发布会，详细介绍政策内容。从具体条款看，俄罗斯被踢出SWIFT针对踢出SWIFT的多个痛点提出了精准施策方案。",
+      "影响": "俄罗斯被踢出SWIFT引发市场强烈反应"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D003",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "召开新闻发布会",
+        "doc_id": "D003",
+        "start": 50,
+        "end": 57
+      },
+      {
+        "field": "影响",
+        "text": "俄罗斯被踢出SWIFT引发市场强烈反应",
+        "doc_id": "D003",
+        "start": 0,
+        "end": 19
+      }
+    ]
+  },
+  {
+    "event_id": "D004",
+    "doc_id": "D004",
+    "event_type": "专家分析",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "各大金融机构",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT背后的深层经济逻辑经济领域迎来重要政策变化——俄罗斯被踢出SWIFT于2022-02-26在全球启动。政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措。",
+      "影响": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D004",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "各大金融机构",
+        "doc_id": "D004",
+        "start": 103,
+        "end": 109
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D004",
+        "start": 58,
+        "end": 60
+      },
+      {
+        "field": "影响",
+        "text": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措",
+        "doc_id": "D004",
+        "start": 63,
+        "end": 101
+      }
+    ]
+  },
+  {
+    "event_id": "D005",
+    "doc_id": "D005",
+    "event_type": "行业影响",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "全球迎来新变局",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT重磅落地 全球迎来新变局俄罗斯被踢出SWIFT的落地实施成为2022-02-26经济领域最受关注的事件。从具体条款看，俄罗斯被踢出SWIFT针对踢出SWIFT的多个痛点提出了精准施策方案。",
+      "影响": "俄罗斯被踢出SWIFT的落地实施成为2022-02-26经济领域最受关注的事件"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D005",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "全球迎来新变局",
+        "doc_id": "D005",
+        "start": 16,
+        "end": 23
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D005",
+        "start": 16,
+        "end": 18
+      },
+      {
+        "field": "影响",
+        "text": "俄罗斯被踢出SWIFT的落地实施成为2022-02-26经济领域最受关注的事件",
+        "doc_id": "D005",
+        "start": 24,
+        "end": 63
+      }
+    ]
+  },
+  {
+    "event_id": "D006",
+    "doc_id": "D006",
+    "event_type": "中小企业影响",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "西方国家对俄纷纷调整战略布局",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT背后的深层经济逻辑据经济日报报道，俄罗斯被踢出SWIFT于2022-02-26在全球进入实质性推进阶段。业内分析指出，俄罗斯被踢出SWIFT的制度设计充分考虑了踢出SWIFT领域的特殊性和复杂性。",
+      "影响": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D006",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "西方国家对俄纷纷调整战略布局",
+        "doc_id": "D006",
+        "start": 111,
+        "end": 125
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D006",
+        "start": 52,
+        "end": 54
+      },
+      {
+        "field": "影响",
+        "text": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措",
+        "doc_id": "D006",
+        "start": 235,
+        "end": 273
+      }
+    ]
+  },
+  {
+    "event_id": "D007",
+    "doc_id": "D007",
+    "event_type": "国际合作",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "据权威部",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT实施一周年：成效与展望据权威部门发布，俄罗斯被踢出SWIFT已于2022-02-26在全球正式施行。据了解，俄罗斯被踢出SWIFT涉及踢出SWIFT等多个关键环节，旨在优化资源配置、激发市场活力。",
+      "影响": "俄罗斯被踢出SWIFT实施一周年：成效与展望"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D007",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "据权威部",
+        "doc_id": "D007",
+        "start": 23,
+        "end": 27
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D007",
+        "start": 55,
+        "end": 57
+      },
+      {
+        "field": "影响",
+        "text": "俄罗斯被踢出SWIFT实施一周年：成效与展望",
+        "doc_id": "D007",
+        "start": 0,
+        "end": 22
+      }
+    ]
+  },
+  {
+    "event_id": "D008",
+    "doc_id": "D008",
+    "event_type": "成效评估",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "各大金融机构",
+      "地点": "全球",
+      "内容": "权威解读俄罗斯被踢出SWIFT的政策内涵2022-02-26，俄罗斯被踢出SWIFT正式在全球启动实施，引发市场各方高度关注。据了解，俄罗斯被踢出SWIFT涉及踢出SWIFT等多个关键环节，旨在优化资源配置、激发市场活力。",
+      "影响": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措"
+    },
+    "occur_time": "2022-02-26",
+    "start": 8,
+    "end": 15,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D008",
+        "start": 8,
+        "end": 15
+      },
+      {
+        "field": "主体",
+        "text": "各大金融机构",
+        "doc_id": "D008",
+        "start": 113,
+        "end": 119
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D008",
+        "start": 46,
+        "end": 48
+      },
+      {
+        "field": "影响",
+        "text": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措",
+        "doc_id": "D008",
+        "start": 237,
+        "end": 275
+      }
+    ]
+  },
+  {
+    "event_id": "D009",
+    "doc_id": "D009",
+    "event_type": "趋势展望",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "多家券商研究所",
+      "地点": "全球",
+      "内容": "俄罗斯被踢出SWIFT背后的深层经济逻辑据经济日报报道，俄罗斯被踢出SWIFT于2022-02-26在全球进入实质性推进阶段。从具体条款看，俄罗斯被踢出SWIFT针对踢出SWIFT的多个痛点提出了精准施策方案。",
+      "影响": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措"
+    },
+    "occur_time": "2022-02-26",
+    "start": 4,
+    "end": 11,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D009",
+        "start": 4,
+        "end": 11
+      },
+      {
+        "field": "主体",
+        "text": "多家券商研究所",
+        "doc_id": "D009",
+        "start": 107,
+        "end": 114
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D009",
+        "start": 52,
+        "end": 54
+      },
+      {
+        "field": "影响",
+        "text": "政策覆盖面广、力度大，西方国家对俄在踢出SWIFT领域推出了一系列突破性举措",
+        "doc_id": "D009",
+        "start": 234,
+        "end": 272
+      }
+    ]
+  },
+  {
+    "event_id": "D010",
+    "doc_id": "D010",
+    "event_type": "战略意义",
+    "trigger_word": "踢出SWIFT",
+    "argument": {
+      "主体": "已有数十家上市公司",
+      "地点": "全球",
+      "内容": "全球视野下的俄罗斯被踢出SWIFT2022-02-26，俄罗斯被踢出SWIFT正式在全球启动实施，引发市场各方高度关注。从具体条款看，俄罗斯被踢出SWIFT针对踢出SWIFT的多个痛点提出了精准施策方案。",
+      "影响": "从宏观层面看，俄罗斯被踢出SWIFT对优化经济结构、提升产业链韧性具有重要意义"
+    },
+    "occur_time": "2022-02-26",
+    "start": 10,
+    "end": 17,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "踢出SWIFT",
+        "doc_id": "D010",
+        "start": 10,
+        "end": 17
+      },
+      {
+        "field": "主体",
+        "text": "已有数十家上市公司",
+        "doc_id": "D010",
+        "start": 111,
+        "end": 120
+      },
+      {
+        "field": "地点",
+        "text": "全球",
+        "doc_id": "D010",
+        "start": 0,
+        "end": 2
+      },
+      {
+        "field": "影响",
+        "text": "从宏观层面看，俄罗斯被踢出SWIFT对优化经济结构、提升产业链韧性具有重要意义",
+        "doc_id": "D010",
+        "start": 147,
+        "end": 186
+      }
+    ]
+  }
+]

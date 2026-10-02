@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_010_Q01",
+    "pack_id": "010",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "结合材料，假设你只掌握D006（政策发布）阶段及之前的信息（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请预测事件的后续走向，并给出可验证的预测结论。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q02",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "结合材料，从多个环节出发，梳理导致D009（专家解读）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q03",
+    "pack_id": "010",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "仅凭现有材料，能否唯一确定政策发布是否会导致整个行业长期停摆？"
+  },
+  {
+    "sample_id": "diplomacy_010_Q04",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D008（共识落实）发生在D009（专家解读）之前，这是否足以说明D008（共识落实）是D009（专家解读）的原因？请说明理由。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q05",
+    "pack_id": "010",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "D004（双边会谈）由哪一主体在何地发生？造成了什么影响？"
+  },
+  {
+    "sample_id": "diplomacy_010_Q06",
+    "pack_id": "010",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，如果移除D001（外交会晤）这一原因，D002（官方声明）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "diplomacy_010_Q07",
+    "pack_id": "010",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在本案中，已知信息止于D006（政策发布）阶段（D001 外交会晤；D002 官方声明；D003 峰会成果；D004 双边会谈；D005 多边场合；D006 政策发布），请基于因果趋势预测后续发展并说明依据。"
+  }
+]

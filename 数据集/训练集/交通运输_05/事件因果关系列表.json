@@ -1,0 +1,121 @@
+[
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D002",
+    "relation_type": "因果关系",
+    "description": "动车追尾事故发生后，大量人员被困受伤，直接触发了消防、武警、医疗等力量的紧急救援行动",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D003",
+    "relation_type": "因果关系",
+    "description": "事故造成重大人员伤亡，性质严重，国务院决定成立专门调查组彻查事故原因和责任",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D004",
+    "relation_type": "因果关系",
+    "description": "事故调查组通过技术检测和管理审查，逐步查明了信号系统设计缺陷和应急处置失当等直接原因",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D005",
+    "relation_type": "因果关系",
+    "description": "事故原因查明后，认定为责任事故，相关责任人员被依法依规追究党纪政纪和刑事责任",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "事故造成40人死亡172人受伤，需要对遇难者家属进行安抚赔偿、对伤员进行救治和赔偿，启动善后处置",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "事故暴露了铁路安全管理的薄弱环节，铁道部在全国铁路系统部署安全生产大检查，全面排查隐患",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D008",
+    "relation_type": "递进关系",
+    "description": "安全大检查中发现高铁在速度和安全冗余方面存在不足，促使国务院决定全面降速并调整建设节奏",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D008",
+    "relation_type": "因果关系",
+    "description": "事故原因查明为设备设计缺陷和管理问题，促使国家对高铁发展进行反思和调整，实施降速和重新评估",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D003",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "调查组经过半年深入调查后，形成完整的事故调查报告，经国务院批复后向社会公布",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "事故直接原因和间接原因的查明，为最终调查报告的定性和整改建议提供了核心依据",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D005",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "责任追究的处理结果被纳入最终调查报告，作为事故处置的重要组成部分向社会公布",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D007",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "安全大检查中发现的问题和整改情况，为最终调查报告提出防范整改措施提供了实践依据",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D001",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "整个事故调查、处置和整改工作都围绕7·23事故展开，最终调查报告是对全部工作的系统总结",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D008",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "高铁降速和发展调整的决策，被纳入最终调查报告的整改措施建议中，成为事故后续影响的重要内容",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D002",
+    "effect_event_id": "D006",
+    "relation_type": "因果关系",
+    "description": "现场救援中救治的172名伤员和确认的40名遇难者，是后续善后赔偿和家属安抚工作的对象",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D006",
+    "effect_event_id": "D009",
+    "relation_type": "因果关系",
+    "description": "善后处置工作的完成情况和经验，被纳入最终调查报告，作为事故处置的重要组成部分",
+    "pack_id": "05"
+  },
+  {
+    "cause_event_id": "D004",
+    "effect_event_id": "D007",
+    "relation_type": "因果关系",
+    "description": "事故原因中暴露的设备缺陷和管理问题，直接指向了安全大检查需要重点排查和整改的领域",
+    "pack_id": "05"
+  }
+]

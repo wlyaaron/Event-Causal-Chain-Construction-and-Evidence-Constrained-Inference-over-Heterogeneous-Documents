@@ -1,0 +1,309 @@
+[
+  {
+    "sample_id": "diplomacy_033_Q01",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从联大一般性辩论开幕到专家对联大深远影响的解读，中间经历了哪些关键的传导环节？请梳理完整的因果链条并按顺序给出证据。",
+    "answers": "完整因果传导路径为：D001（联大开幕）→D003（各国辩论）→D006（决议通过）→D008（专家解读）。联大开幕后，各国领导人围绕和平、发展、治理、气候等议题展开一般性辩论，形成广泛共识；基于辩论共识，联大通过了多项重要决议；专家在联大成果的基础上，深度解读了三大深远影响。中间还包括D002中国发言、D004改革热议、D005发展中国家发声等重要环节。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从D001到D008的完整因果传导链",
+        "包含各国辩论、决议通过等关键环节"
+      ],
+      "optional_facts": [
+        "参考路径：D001→D003→D006→D008",
+        "中间还包括中国发言、改革热议、发展中国家发声等"
+      ],
+      "forbidden_facts": [
+        "跳过关键中间环节直接得出结论",
+        "颠倒因果顺序"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D005",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D003",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "联大开幕",
+        "各国辩论",
+        "决议通过",
+        "专家解读"
+      ],
+      "hops": 3
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_033_Q02",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "各国领导人一般性辩论（D003）和发展中国家集体发声（D005）都发生在决议通过之前，二者中哪一个对决议最终内容（D006）的塑造作用更直接？请结合材料说明判断依据。",
+    "answers": "各国领导人一般性辩论（D003）对决议内容（D006）的塑造作用更直接。依据：因果关系列表中D003→D006为直接因果（certain），而D005→D006为间接传导（probable）。一般性辩论是各国领导人系统阐述立场和主张的平台，决议草案的磋商和表决主要基于辩论中形成的共识；发展中国家发声虽然也对决议内容有影响，但主要是通过影响辩论氛围和各方立场来间接发挥作用。",
+    "answer_facts": {
+      "required_facts": [
+        "判断D003对D006的塑造更直接",
+        "依据是D003→D006为直接因果关系"
+      ],
+      "optional_facts": [
+        "D005→D006为间接传导",
+        "一般性辩论是决议磋商的主要基础"
+      ],
+      "forbidden_facts": [
+        "判断D005更直接且无合理依据",
+        "混淆一般性辩论与特定群体发声的不同作用"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "comparison": "D003 vs D005对D006的塑造",
+      "more_direct": "D003",
+      "reason": "D003→D006为直接因果"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_033_Q03",
+    "pack_id": "033",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设本届联大没有发展中国家的集体发声（移除D005），这会对安理会改革热议（D004）和决议通过（D006）产生什么影响？请判断并说明连锁反应。",
+    "answers": "结论：如果没有发展中国家集体发声，安理会改革热议（D004）的热度和聚焦度会明显下降，决议（D006）中关于增加发展中国家代表性的内容会弱化。连锁影响：发展中国家是安理会改革的主要推动力量，非洲国家要求2个常任席位、印度、巴西等国争取入常，这些诉求是改革热议的核心内容。没有D005，改革讨论可能主要由日本、德国等发达国家推动，非洲等发展中国家的诉求会被忽视。决议中关于全球治理改革、增加发展中国家话语权的内容也会减少。受影响的关键边为[['D005','D004'],['D005','D006']]。",
+    "answer_facts": {
+      "required_facts": [
+        "判断安理会改革热议热度会下降",
+        "说明决议中发展中国家代表性内容会弱化"
+      ],
+      "optional_facts": [
+        "发展中国家是安理会改革的主要推动力量",
+        "非洲国家要求2个常任席位是改革讨论的核心内容"
+      ],
+      "forbidden_facts": [
+        "断言没有发展中国家发声改革讨论就不会发生",
+        "忽视日本、德国等国对改革的推动"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D005",
+        "D004"
+      ],
+      [
+        "D005",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除发展中国家集体发声",
+      "affected_edges": [
+        [
+          "D005",
+          "D004"
+        ],
+        [
+          "D005",
+          "D006"
+        ]
+      ],
+      "counterfactual_result": "改革热议热度下降，决议中发展中国家代表性内容弱化"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_033_Q04",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "中国国家主席在联大的发言（D002）与后续国际社会对联大成果的评价（D007）之间是否存在因果关联？请通过中间事件说明二者的传导路径。",
+    "answers": "二者存在间接因果关联，传导路径为：D002（中国发言）→D003（各国辩论）→D006（决议通过）→D007（国际评价）。具体来说，中国国家主席的发言提出了人类命运共同体理念和全球发展、安全、文明三大倡议，为联大讨论提供了重要思路和方案，影响了各国辩论的基调和共识形成；这些共识被纳入联大决议；国际社会在评价联大成果时，普遍关注和肯定了中国方案的作用和贡献。此外，外媒在评价中也直接提到了中国领导人讲话的重要意义。",
+    "answer_facts": {
+      "required_facts": [
+        "说明二者存在间接因果关联",
+        "指出通过D003辩论、D006决议等中间环节传导"
+      ],
+      "optional_facts": [
+        "传导路径：D002→D003→D006→D007",
+        "外媒评价中直接提到了中国领导人讲话的意义"
+      ],
+      "forbidden_facts": [
+        "断言二者完全无关",
+        "虚构D002到D007的直接因果边"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003",
+        "D006",
+        "D007"
+      ]
+    ],
+    "annotations": {
+      "relation": "indirect_causal_via_intermediates",
+      "intermediates": [
+        "D003",
+        "D006"
+      ],
+      "path": "D002→D003→D006→D007"
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "diplomacy_033_Q05",
+    "pack_id": "033",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据现有材料，能否精确预测本届联大通过的各项决议在未来一年内的具体落实比例？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定",
+        "现有证据不足以得出唯一可靠结论"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体确定性比例",
+        "编造材料中不存在的预测数据"
+      ]
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "insufficient_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "diplomacy_033_Q06",
+    "pack_id": "033",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "联大一般性辩论开幕（D001）之后，直接触发了哪些事件？请从材料中找出存在直接因果关系的事件并列举。",
+    "answers": "D001的直接后果包括：D002（中国发言）、D003（各国辩论）、D004（改革热议）、D005（发展中国家发声）。这四项都是联大开幕后当天或随后几天内发生的核心活动。证据：联大开幕后，中国国家主席当天发表重要讲话，各国领导人依次登台进行一般性辩论，安理会改革问题在辩论中引发热议，发展中国家领导人也在辩论中集体发声。D006决议通过、D007国际评价、D008专家解读为间接因果或后续事件。",
+    "answer_facts": {
+      "required_facts": [
+        "D001直接导致D002中国发言",
+        "D001直接导致D003各国辩论",
+        "D001直接导致D004改革热议",
+        "D001直接导致D005发展中国家发声"
+      ],
+      "optional_facts": [
+        "因果类型均为直接因果",
+        "D006、D007、D008为间接或后续事件"
+      ],
+      "forbidden_facts": [
+        "将间接因果事件列为直接后果",
+        "遗漏D004或D005等直接因果事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002"
+      ],
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "direct_results": [
+        "D002",
+        "D003",
+        "D004",
+        "D005"
+      ]
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "diplomacy_033_Q07",
+    "pack_id": "033",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于联大开幕和中国国家主席发言（D001、D002），请基于因果趋势预测接下来最可能发生的三件事，并分别说明预测依据。",
+    "answers": "基于因果走势，接下来最可能发生的三件事是：第一，D003各国领导人一般性辩论——联大开幕后，各国领导人依次登台发言是标准流程，必然发生；第二，D005发展中国家集体发声——近年来'全球南方'崛起，发展中国家在联大上集体发声已经成为常态；第三，D006联大通过多项决议——一般性辩论结束后，联大会就相关议题进行表决并通过决议，这是联大的标准工作流程。依据：联合国大会的标准运作流程包括开幕、一般性辩论、委员会审议、大会表决等环节。",
+    "answer_facts": {
+      "required_facts": [
+        "预测至少三件后续事件",
+        "分别说明预测依据"
+      ],
+      "optional_facts": [
+        "最可能：D003各国辩论、D005发展中国家发声、D006决议通过",
+        "还可能发生D004改革热议、D007国际评价等"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的具体结局"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D003"
+      ],
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D003",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2024-09-24",
+      "visible": [
+        "D001",
+        "D002"
+      ],
+      "predicted": [
+        "D003",
+        "D005",
+        "D006"
+      ]
+    },
+    "confidence_level": "probable"
+  }
+]

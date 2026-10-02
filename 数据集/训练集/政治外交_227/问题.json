@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "diplomacy_227_Q01",
+    "pack_id": "227",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "红十字会与红新月会国际联合会是什么性质的组织？它的主要工作有哪些？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q02",
+    "pack_id": "227",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "红十字运动的七项基本原则是什么？它们各自有什么含义？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q03",
+    "pack_id": "227",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "国际联合会在灾害救援方面有哪些特点和优势？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q04",
+    "pack_id": "227",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "红十字运动的三个组成部分分别是什么？它们是如何分工协作的？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q05",
+    "pack_id": "227",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "国际联合会的治理结构和资金运作是怎样的？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q06",
+    "pack_id": "227",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来红十字会与红新月会国际联合会面临哪些主要挑战？将如何应对？"
+  },
+  {
+    "sample_id": "diplomacy_227_Q07",
+    "pack_id": "227",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "红十字与红新月运动为什么能够历经百年持续发展，在当今世界依然具有重要价值？"
+  }
+]

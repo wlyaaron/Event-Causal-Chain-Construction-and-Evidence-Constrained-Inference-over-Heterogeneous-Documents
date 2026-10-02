@@ -1,0 +1,387 @@
+[
+  {
+    "sample_id": "public_safety_084_Q01",
+    "pack_id": "084",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，若观测截断在2026-05-20（当前已知：D001 媒体曝光食品安全问题；D002 官方紧急响应与联合执法；D008 专项整治与溯源码制度；D004 市场冲击与销量暴跌；D005 果农受牵连与行业协会发声；D003 查处结果通报），后续走向如何？请给出可验证预测。",
+    "answers": "后续实际发生：D007（深度调查：行业潜规则与监管漏洞）、D006（监管问责：23名干部被处理）、D009（媒体评论与社会反思）。其中关键进展为深度调查：行业潜规则与监管漏洞：揭露泡药保鲜是多年行业潜规则。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:深度调查：行业潜规则与监管漏洞"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（监管问责：23名干部被处理）, D009（媒体评论与社会反思）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D008",
+        "D004",
+        "D005",
+        "D003",
+        "D007",
+        "D006",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-05-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D008",
+        "D004",
+        "D005",
+        "D003"
+      ],
+      "hidden_events": [
+        "D007",
+        "D006",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:深度调查：行业潜规则与监管漏洞"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_084_Q02",
+    "pack_id": "084",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D004（市场冲击与销量暴跌）所代表的条件被移除，后续的D005（果农受牵连与行业协会发声）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "移除D004后，D005及其连锁后果很可能不成立。D004系D005的直接原因（直接因果），受影响边为 [['D004', 'D005']]；暴露出一人违法全行业买单的困境 亦随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D005及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D005"
+      ],
+      [
+        "D004",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D004",
+      "affected_edges": [
+        [
+          "D004",
+          "D005"
+        ]
+      ],
+      "counterfactual_result": "D005及其下游很可能不发生",
+      "acceptable_points": [
+        "D004是D005的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_084_Q03",
+    "pack_id": "084",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：D001（媒体曝光食品安全问题）先于D005（果农受牵连与行业协会发声）发生，可以据此断定D001（媒体曝光食品安全问题）是D005（果农受牵连与行业协会发声）的原因吗？请说明。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D005 的因果边；其直接原因是D004（市场冲击与销量暴跌）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（媒体曝光食品安全问题） 早于 D005（果农受牵连与行业协会发声） 只是时间先后",
+        "材料中不存在 D001→D005 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（媒体曝光食品安全问题） 导致 D005（果农受牵连与行业协会发声）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D005"
+      ],
+      [
+        "D001",
+        "D004",
+        "D005"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D005",
+      "temporal_order": "D001先于D005",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_084_Q04",
+    "pack_id": "084",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D001（媒体曝光食品安全问题）由哪一主体在何地发生？造成了什么影响？",
+    "answers": "D001（媒体曝光食品安全问题）发生于福建漳州龙海区，涉及主体媒体。媒体曝光漳州部分杨梅收购点违规使用添加剂浸泡杨梅保鲜。影响：引发社会广泛关注和消费者担忧。",
+    "answer_facts": {
+      "required_facts": [
+        "主体：媒体",
+        "地点：福建漳州龙海区",
+        "基本事实：媒体曝光漳州部分杨梅收购点违规使用添加剂浸泡杨梅保鲜"
+      ],
+      "optional_facts": [
+        "影响：引发社会广泛关注和消费者担忧"
+      ],
+      "forbidden_facts": [
+        "编造材料未提供的细节（如具体人数、姓名、时长）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "relation": "fact_lookup",
+      "event": "D001"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "public_safety_084_Q05",
+    "pack_id": "084",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "沿因果链解释D003（查处结果通报）的成因：从源头到结果依次经历了哪些事件？",
+    "answers": "按证据顺序，成因链为 D001（媒体曝光食品安全问题） → D002（官方紧急响应与联合执法） → D003（查处结果通报）。自媒体曝光食品安全问题出发逐环传导至查处结果通报；违法经营者受到法律制裁。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（媒体曝光食品安全问题） 到终点 D003（查处结果通报） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（媒体曝光食品安全问题）",
+        "终点为 D003（查处结果通报）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（媒体曝光食品安全问题） → D002（官方紧急响应与联合执法） → D003（查处结果通报）",
+        "可包含关键环节 D002（官方紧急响应与联合执法）",
+        "终点影响：违法经营者受到法律制裁"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003"
+      ],
+      "stages": [
+        "媒体曝光食品安全问题",
+        "官方紧急响应与联合执法",
+        "查处结果通报"
+      ],
+      "hops": 2
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_084_Q06",
+    "pack_id": "084",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D007（深度调查：行业潜规则与监管漏洞）到D009（媒体评论与社会反思）的完整因果传导过程，并按序列出证据。",
+    "answers": "该结果由一条有向因果链推动：D007（深度调查：行业潜规则与监管漏洞） → D009（媒体评论与社会反思）。起点为深度调查：行业潜规则与监管漏洞，终点为媒体评论与社会反思；推动食品安全治理理念升级。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D007（深度调查：行业潜规则与监管漏洞） 到终点 D009（媒体评论与社会反思） 的有向因果链（顺序不可颠倒）",
+        "起点为 D007（深度调查：行业潜规则与监管漏洞）",
+        "终点为 D009（媒体评论与社会反思）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D007（深度调查：行业潜规则与监管漏洞） → D009（媒体评论与社会反思）",
+        "终点影响：推动食品安全治理理念升级"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D004",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D007",
+        "D009"
+      ],
+      "stages": [
+        "深度调查：行业潜规则与监管漏洞",
+        "媒体评论与社会反思"
+      ],
+      "hops": 1
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "public_safety_084_Q07",
+    "pack_id": "084",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，已知信息止于2026-05-20（D001 媒体曝光食品安全问题；D002 官方紧急响应与联合执法；D008 专项整治与溯源码制度；D004 市场冲击与销量暴跌；D005 果农受牵连与行业协会发声；D003 查处结果通报），请基于因果趋势预测后续发展并说明依据。",
+    "answers": "后续实际发生：D007（深度调查：行业潜规则与监管漏洞）、D006（监管问责：23名干部被处理）、D009（媒体评论与社会反思）。其中关键进展为深度调查：行业潜规则与监管漏洞：揭露泡药保鲜是多年行业潜规则。",
+    "answer_facts": {
+      "required_facts": [
+        "预测后续发生 D007:深度调查：行业潜规则与监管漏洞"
+      ],
+      "optional_facts": [
+        "后续还可能发生 D006（监管问责：23名干部被处理）, D009（媒体评论与社会反思）"
+      ],
+      "forbidden_facts": [
+        "预测已在可见事件中出现的进展",
+        "编造材料未发生的结局",
+        "预测早于截断点的事件"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D008",
+        "D004",
+        "D005",
+        "D003",
+        "D007",
+        "D006",
+        "D009",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "cutoff": "2026-05-20",
+      "visible_events": [
+        "D001",
+        "D002",
+        "D008",
+        "D004",
+        "D005",
+        "D003"
+      ],
+      "hidden_events": [
+        "D007",
+        "D006",
+        "D009",
+        "D010"
+      ],
+      "ground_truth": "D007:深度调查：行业潜规则与监管漏洞"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_084_Q08",
+    "pack_id": "084",
+    "question_type": "unanswerable",
+    "reasoning_type": "conflicting_sources",
+    "question": "关于媒体的媒体曝光食品安全问题事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "conflicting_sources",
+      "expected_answer": "无法确定",
+      "conflict_docs": [
+        "D001.txt",
+        "D011.txt"
+      ]
+    },
+    "confidence_level": null
+  },
+  {
+    "sample_id": "public_safety_084_Q09",
+    "pack_id": "084",
+    "question_type": "unanswerable",
+    "reasoning_type": "distractor_robustness",
+    "question": "文档《D012.txt》中其他区域某单位的行业交流会，是否与主线事件媒体曝光食品安全问题（D001）构成因果关系？请判断并说明。",
+    "answers": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无关/无法建立因果",
+      "distractor_doc": "D012.txt"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "public_safety_084_Q10",
+    "pack_id": "084",
+    "question_type": "unanswerable",
+    "reasoning_type": "missing_information",
+    "question": "根据现有全部文档，媒体在该媒体曝光食品安全问题事件中的具体现场处置耗时（精确到分钟）是多少？",
+    "answers": "无法确定",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [],
+    "annotations": {
+      "unanswerable_reason": "missing_information",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": null
+  }
+]

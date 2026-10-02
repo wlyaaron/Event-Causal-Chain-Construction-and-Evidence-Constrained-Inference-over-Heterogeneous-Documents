@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "energy_environment_004_Q01",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "既然材料显示国家管网对产业发展不负有任何责任，请解释后续处理的依据。"
+  },
+  {
+    "sample_id": "energy_environment_004_Q02",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设D001（政策发布）这一环节从未发生，那么D002（权威解读）是否仍有可能出现？请说明你的推理过程和依据。"
+  },
+  {
+    "sample_id": "energy_environment_004_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "在本案中，从时间看D001（政策发布）早于D004（环保讨论），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "energy_environment_004_Q04",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "在只知道D006（产业发展）阶段前进展（D001 政策发布；D002 权威解读；D003 能源转型；D004 环保讨论；D005 国际影响；D006 产业发展）的前提下，接下来最可能发生什么？请给出可验证判断。"
+  },
+  {
+    "sample_id": "energy_environment_004_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "在本案中，D006（产业发展）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "energy_environment_004_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：从多个环节出发，梳理导致D009（科技创新）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "energy_environment_004_Q07",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请回溯到D001（政策发布），说明经由哪些中间事件最终导致了D008（绿色路径）。"
+  }
+]

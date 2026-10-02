@@ -1,0 +1,144 @@
+[
+  {
+    "sample_id": "natural_disaster_211_Q01",
+    "pack_id": "211",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "专家就防范此类灾害提出了哪些建议？",
+    "answers": "专家指出持续大范围低温雨雪冰冻天气是此类灾害的重要成因，防范关键在于加强监测预警、完善应急预案、开展防灾演练，做到早预警、早转移、早避险。专家建议公众增强防灾避险意识、掌握自救互救技能、熟悉转移路线，遇到预警坚决服从指挥、及时转移。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_211_Q02",
+    "pack_id": "211",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾后恢复重建情况如何？涌现了哪些先锋事迹？",
+    "answers": "当地坚持科学规划、以人为本推进重建，严格执行工程设防标准、提高抗灾能力，努力建设更安全宜居的新家园。抗灾一线涌现出众多冲锋在前、无私奉献的先锋，党员干部和救援人员把危险留给自己、把安全带给群众，汇聚起磅礴精神力量。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D007"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_211_Q03",
+    "pack_id": "211",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "2016年湖北遭遇大范围低温雨雪冰冻灾害是怎样发生的？造成了怎样的影响？",
+    "answers": "2016年湖北遭遇大范围低温雨雪冰冻灾害。灾害由持续大范围低温雨雪冰冻天气引发，造成一定人员伤亡和财产损失，部分房屋、道路、电力、通信等设施受损，众多群众不同程度受灾。灾情发生后当地立即启动应急响应，组织多方力量第一时间赶赴一线全力搜救被困群众、救治受伤人员。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_211_Q04",
+    "pack_id": "211",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "灾害发生后开展了哪些抢险救援和转移安置工作？",
+    "answers": "现场救援指挥部统一指挥、科学调度，各救援力量分区分组搜救被困群众、抢通受阻道路，克服恶劣天气和次生灾害威胁逐片搜救。当地坚持应转尽转、不落一人紧急转移群众，安置点物资和医疗防疫等服务同步跟进、保障有力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D006",
+        "D005"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_211_Q05",
+    "pack_id": "211",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "有关方面如何指挥调度抗灾救灾工作？",
+    "answers": "有关主管部门迅速启动应急响应，派出工作组赶赴一线指导，紧急调拨救灾资金物资、统筹调度专业救援力量。有关方面强调压紧压实责任、加强会商研判、科学调度力量、坚决防范次生灾害，并加快抢修基础设施、尽快恢复生产生活秩序。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D003"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": null
+  },
+  {
+    "sample_id": "natural_disaster_211_Q06",
+    "pack_id": "211",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "未来在防范应对同类灾害方面还需重点做好哪些工作？",
+    "answers": "预计未来将多措并举强化同类灾害防范应对。预计将完善监测预警和会商研判机制，提升预报精准度和预警时效性；预计将加强重点区域和薄弱环节隐患排查治理；预计将健全应急预案和救援力量体系、加强物资储备和演练，全面提升防灾减灾救灾能力水平。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "natural_disaster_211_Q07",
+    "pack_id": "211",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "此次灾害将如何推动防灾减灾救灾能力的提升？",
+    "answers": "预计此次灾害将推动防灾减灾救灾能力整体提升。预计将健全以防为主、防抗救相结合的体制机制，补短板堵漏洞强弱项；预计将加强监测预警体系和防灾基础设施建设、提高工程设防标准；预计将加强科普宣传和应急演练，全面提升全社会综合防灾减灾能力。",
+    "answer_facts": {
+      "required_facts": [],
+      "optional_facts": [],
+      "forbidden_facts": []
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {},
+    "confidence_level": "probable"
+  }
+]

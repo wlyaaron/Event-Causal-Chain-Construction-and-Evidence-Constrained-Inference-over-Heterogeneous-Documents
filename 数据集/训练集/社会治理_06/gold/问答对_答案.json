@@ -1,0 +1,428 @@
+[
+  {
+    "sample_id": "social_governance_06_Q01",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "结合材料，D004（责任追究）的直接下游事件是哪一个？造成了什么后果？",
+    "answers": "D004（责任追究）直接导致了D006（法治建设）。依据：中国防汛救灾事件在京津冀引发法治建设讨论。（直接因果）",
+    "answer_facts": {
+      "required_facts": [
+        "D004（责任追究） 直接导致 D006（法治建设）",
+        "后果：中国防汛救灾事件在京津冀引发法治建设讨论"
+      ],
+      "optional_facts": [
+        "因果类型为直接因果",
+        "置信度等级 certain"
+      ],
+      "forbidden_facts": [
+        "D006（法治建设） 导致 D004（责任追究）（因果方向颠倒）",
+        "编造材料未记载的其它后果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D004",
+        "D006"
+      ]
+    ],
+    "annotations": {
+      "relation": "direct_cause",
+      "edge": [
+        "D004",
+        "D006"
+      ],
+      "confidence_level": "certain"
+    },
+    "confidence_level": "certain"
+  },
+  {
+    "sample_id": "social_governance_06_Q02",
+    "pack_id": "06",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "根据材料，京津冀周边居民的确切疏散人数是多少？",
+    "answers": "无法确定：材料中没有提供该信息，无法据此作答。",
+    "answer_facts": {
+      "required_facts": [
+        "应判定为无法确定 / 无法回答",
+        "材料未提供该信息"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "给出具体的确定性答案",
+        "编造材料中不存在的数据或结论"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001"
+      ]
+    ],
+    "annotations": {
+      "unanswerable_reason": "no_evidence",
+      "expected_answer": "无法确定"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_06_Q03",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（社会事件）到D009（社会共治）的完整因果传导过程，并按序列出证据。",
+    "answers": "按证据顺序，成因链为 D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）。自社会事件出发逐环传导至社会共治；启动国家防汛三级响应。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（社会事件） 到终点 D009（社会共治） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（社会事件）",
+        "终点为 D009（社会共治）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注） → D009（社会共治）",
+        "可包含关键环节 D002（官方回应）",
+        "可包含关键环节 D003（调查进展）",
+        "可包含关键环节 D004（责任追究）",
+        "可包含关键环节 D006（法治建设）",
+        "可包含关键环节 D008（舆论关注）",
+        "终点影响：启动国家防汛三级响应"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      "stages": [
+        "社会事件",
+        "官方回应",
+        "调查进展",
+        "责任追究",
+        "法治建设",
+        "舆论关注",
+        "社会共治"
+      ],
+      "hops": 6
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_06_Q04",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "在本案中，若D008（舆论关注）所代表的条件被移除，后续的D009（社会共治）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "结论：一旦阻断D008，D009大概率不再发生。因为D008是D009的直接原因（直接因果），其下游受影响的边为 [['D008', 'D009']]；启动国家防汛三级响应 也会随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D009及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D008",
+        "D009"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D008",
+      "affected_edges": [
+        [
+          "D008",
+          "D009"
+        ]
+      ],
+      "counterfactual_result": "D009及其下游很可能不发生",
+      "acceptable_points": [
+        "D008是D009的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_06_Q05",
+    "pack_id": "06",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "若D002（官方回应）所代表的条件被移除，后续的D003（调查进展）及其连锁后果是否还会出现？请给出判断与解释要点。",
+    "answers": "判断：若移除D002，D003很可能不会发生或将显著改变。依据：D002是D003的直接原因（直接因果），移除后受影响的因果边包括 [['D002', 'D003'], ['D003', 'D004'], ['D004', 'D005'], ['D004', 'D006'], ['D006', 'D007'], ['D006', 'D008'], ['D008', 'D009'], ['D008', 'D010']]。相应地，启动国家防汛三级响应 也将随之改变。",
+    "answer_facts": {
+      "required_facts": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂"
+      ],
+      "optional_facts": [
+        "需区分直接因果与间接传导的强弱",
+        "D003及其下游很可能不发生"
+      ],
+      "forbidden_facts": [
+        "移除原因后结果仍照常发生",
+        "忽视下游连锁影响"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D002",
+        "D003"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D005",
+        "D007",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D007",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D009"
+      ],
+      [
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008",
+        "D010"
+      ]
+    ],
+    "annotations": {
+      "intervention": "移除/阻断 D002",
+      "affected_edges": [
+        [
+          "D002",
+          "D003"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008",
+          "D010"
+        ]
+      ],
+      "counterfactual_result": "D003及其下游很可能不发生",
+      "acceptable_points": [
+        "D002是D003的直接原因",
+        "移除原因则结果链断裂",
+        "需区分直接因果与间接传导的强弱"
+      ]
+    },
+    "confidence_level": "probable"
+  },
+  {
+    "sample_id": "social_governance_06_Q06",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "依据现有证据，事件D001（社会事件）在进程上早于D004（责任追究）。能否据此认为D001（社会事件）导致了D004（责任追究）？请给出判断与证据。",
+    "answers": "不成立。二者仅有先后顺序，材料未记载 D001→D004 的因果边；其直接原因是D003（调查进展）。不能据时间断定因果。",
+    "answer_facts": {
+      "required_facts": [
+        "D001（社会事件） 早于 D004（责任追究） 只是时间先后",
+        "材料中不存在 D001→D004 的因果关系",
+        "不能据时间先后认定因果"
+      ],
+      "optional_facts": [],
+      "forbidden_facts": [
+        "D001（社会事件） 导致 D004（责任追究）",
+        "时间接近即等于因果"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D004"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004"
+      ],
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004"
+      ]
+    ],
+    "annotations": {
+      "event_a": "D001",
+      "event_b": "D004",
+      "temporal_order": "D001先于D004",
+      "causal_link": false,
+      "note": "时间在先但无因果证据"
+    },
+    "confidence_level": "possible"
+  },
+  {
+    "sample_id": "social_governance_06_Q07",
+    "pack_id": "06",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在本案中，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（舆论关注），并按顺序给出完整证据链。",
+    "answers": "该结果由一条有向因果链推动：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注）。起点为社会事件，终点为舆论关注；启动国家防汛三级响应。",
+    "answer_facts": {
+      "required_facts": [
+        "给出从起点 D001（社会事件） 到终点 D008（舆论关注） 的有向因果链（顺序不可颠倒）",
+        "起点为 D001（社会事件）",
+        "终点为 D008（舆论关注）"
+      ],
+      "optional_facts": [
+        "参考路径之一：D001（社会事件） → D002（官方回应） → D003（调查进展） → D004（责任追究） → D006（法治建设） → D008（舆论关注）",
+        "可包含关键环节 D002（官方回应）",
+        "可包含关键环节 D003（调查进展）",
+        "可包含关键环节 D004（责任追究）",
+        "可包含关键环节 D006（法治建设）",
+        "终点影响：启动国家防汛三级响应"
+      ],
+      "forbidden_facts": [
+        "颠倒因果链的先后顺序",
+        "使用材料中不存在的因果边（编造事件间连接）"
+      ]
+    },
+    "evidence_chains": [
+      [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      [
+        "D001",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ]
+    ],
+    "annotations": {
+      "causal_path": [
+        "D001",
+        "D002",
+        "D003",
+        "D004",
+        "D006",
+        "D008"
+      ],
+      "stages": [
+        "社会事件",
+        "官方回应",
+        "调查进展",
+        "责任追究",
+        "法治建设",
+        "舆论关注"
+      ],
+      "hops": 5
+    },
+    "confidence_level": "probable"
+  }
+]

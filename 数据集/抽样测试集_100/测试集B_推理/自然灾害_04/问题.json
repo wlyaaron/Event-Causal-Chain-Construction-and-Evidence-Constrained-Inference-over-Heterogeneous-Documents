@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "natural_disaster_004_Q01",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "依据现有证据，若D003（官方通报）所代表的条件被移除，后续的D004（灾情安置）及其连锁后果是否还会出现？请给出判断与解释要点。"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "依据现有证据，请还原从D001（灾害发生）到D009（预警建设）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q03",
+    "pack_id": "04",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "依据现有证据，截至D006（灾后重建）阶段，材料仅显示：D001 灾害发生；D002 应急救援；D003 官方通报；D004 灾情安置；D005 成因分析；D006 灾后重建。据此预测后续最可能发生的进展，并说明推理依据。"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "从时间上看D008（防灾短板）早于D009（预警建设），但这能否证明因果？请依据材料判断。"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "依据现有证据，D002（应急救援）与哪一事件构成直接因果关系？其后果是什么？"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "从多个环节出发，梳理导致D008（防灾短板）的完整因果路径，并标明证据顺序。"
+  },
+  {
+    "sample_id": "natural_disaster_004_Q07",
+    "pack_id": "04",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对应急救援的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  }
+]

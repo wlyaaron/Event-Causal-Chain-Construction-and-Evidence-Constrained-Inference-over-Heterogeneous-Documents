@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "healthcare_02_Q01",
+    "pack_id": "02",
+    "question_type": "unanswerable",
+    "reasoning_type": "unanswerable",
+    "question": "如果不同来源对专家科普的关键数据报道不一致，能否直接得出确定结论？请说明处理方式。"
+  },
+  {
+    "sample_id": "healthcare_02_Q02",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "沿因果关系看，D004（专家科普）之后直接发生了什么？"
+  },
+  {
+    "sample_id": "healthcare_02_Q03",
+    "pack_id": "02",
+    "question_type": "prospective",
+    "reasoning_type": "grounded_pred",
+    "question": "已知信息止于D006（防控政策）阶段（D001 疫情通报；D002 官方发布；D003 临床救治；D004 专家科普；D005 疫苗药物；D006 防控政策），请基于因果趋势预测后续发展并说明依据。"
+  },
+  {
+    "sample_id": "healthcare_02_Q04",
+    "pack_id": "02",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "结合材料，如果移除D004（专家科普）这一原因，D006（防控政策）是否会失去支撑？请判断并说明连锁影响。"
+  },
+  {
+    "sample_id": "healthcare_02_Q05",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请判断：从时间看D001（疫情通报）早于D004（专家科普），这是否意味着二者存在因果？请判断。"
+  },
+  {
+    "sample_id": "healthcare_02_Q06",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请判断：请还原从D001（疫情通报）到D009（长期影响）的完整因果传导过程，并按序列出证据。"
+  },
+  {
+    "sample_id": "healthcare_02_Q07",
+    "pack_id": "02",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "围绕最终结果D008（医保政策），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。"
+  }
+]

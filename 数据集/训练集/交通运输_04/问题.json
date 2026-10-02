@@ -1,0 +1,51 @@
+[
+  {
+    "sample_id": "transportation_04_Q01",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "single_hop",
+    "question": "MH370航班是在哪一天从哪个机场起飞的？机上共有多少人？其中中国公民有多少名？"
+  },
+  {
+    "sample_id": "transportation_04_Q02",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "MH370航班失联后，为什么搜索范围从最初的泰国湾转移到了南印度洋？这一转变的关键依据是什么？"
+  },
+  {
+    "sample_id": "transportation_04_Q03",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "temporal_causal",
+    "question": "请按时间顺序排列以下事件：黑匣子信号搜索、留尼汪岛残骸发现、马来西亚总理宣布航班终结、最终调查报告发布、深海拖曳声呐搜索启动。"
+  },
+  {
+    "sample_id": "transportation_04_Q04",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "黑匣子水下信标搜索阶段和深海拖曳声呐搜索阶段在搜索方法、覆盖范围和搜索结果上有什么不同？"
+  },
+  {
+    "sample_id": "transportation_04_Q05",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "在留尼汪岛发现的襟副翼残骸是如何被确认属于MH370的？这一发现对整个调查产生了哪些影响？请结合具体证据说明。"
+  },
+  {
+    "sample_id": "transportation_04_Q06",
+    "pack_id": "04",
+    "question_type": "retrospective",
+    "reasoning_type": "multi_hop_causal",
+    "question": "请概括MH370失联事件对全球民航安全体系产生的主要影响和推动的改革措施。"
+  },
+  {
+    "sample_id": "transportation_04_Q07",
+    "pack_id": "04",
+    "question_type": "counterfactual",
+    "reasoning_type": "counterfactual",
+    "question": "假设MH370航班配备了可抛放式飞行记录器，且该记录器在坠毁后成功弹出并漂浮在海面，后续的搜索和调查过程可能会有什么不同？"
+  }
+]
