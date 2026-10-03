@@ -123,6 +123,39 @@ class BertEncoder:
         return [float(x) for x in np.asarray(self.cache[key]) @ question]
 
 
+class LocalHFGenerator:
+    """Offline open-weight chat generation without a remote API server."""
+
+    def __init__(self, path: Path, context_tokens: int):
+        if not path.is_dir():
+            raise ValueError(f"本地生成模型权重目录不存在：{path}")
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+        torch.set_num_threads(min(torch.get_num_threads(), 4))
+        self.torch = torch
+        self.tokenizer = AutoTokenizer.from_pretrained(str(path), local_files_only=True)
+        self.model = AutoModelForCausalLM.from_pretrained(
+            str(path), local_files_only=True, torch_dtype=torch.float32).eval()
+        self.model.generation_config.temperature = 1.0
+        self.model.generation_config.top_p = 1.0
+        self.model.generation_config.top_k = 50
+        self.context_tokens = context_tokens
+
+    def generate(self, content: str, max_new_tokens: int) -> str:
+        messages = [{"role": "system", "content": common.SYSTEM_PROMPT},
+                    {"role": "user", "content": content}]
+        prompt = self.tokenizer.apply_chat_template(messages, tokenize=False,
+                                                    add_generation_prompt=True)
+        inputs = self.tokenizer(prompt, return_tensors="pt")
+        length = inputs["input_ids"].shape[-1]
+        if length + max_new_tokens > self.context_tokens:
+            raise ValueError(f"本地模型输入 {length} token 加输出 {max_new_tokens} 超过 --hf-context-tokens={self.context_tokens}；请减小 --top-k 或提高上下文上限")
+        with self.torch.inference_mode():
+            output = self.model.generate(**inputs, max_new_tokens=max_new_tokens,
+                                         do_sample=False, pad_token_id=self.tokenizer.eos_token_id)
+        return self.tokenizer.decode(output[0][length:], skip_special_tokens=True)
+
+
 def rank_candidates(question: str, pack: Pack, encoder: BertEncoder | None,
                     hybrid: bool) -> list[tuple[Candidate, float]]:
     texts = [candidate.text for candidate in pack.candidates]
@@ -277,6 +310,10 @@ def run(argv: list[str] | None = None) -> int:
     parser.add_argument("--api-url")
     parser.add_argument("--model")
     parser.add_argument("--api-key-file", type=Path)
+    parser.add_argument("--local-hf-model", type=Path,
+                        help="离线 Hugging Face 聊天模型权重目录；与 --api-url 二选一")
+    parser.add_argument("--hf-context-tokens", type=int, default=8192)
+    parser.add_argument("--hf-max-new-tokens", type=int, default=512)
     parser.add_argument("--no-json-mode", action="store_true")
     parser.add_argument("--max-tokens", type=int, default=8192)
     parser.add_argument("--timeout", type=int, default=180)
@@ -302,18 +339,29 @@ def run(argv: list[str] | None = None) -> int:
             raise ValueError(f"完整输出已存在：{output}；请更换 --output 或使用 --overwrite")
         encoder = BertEncoder(args.embedding_model) if args.method == "bm25_bert" else None
         endpoint = key = model = None
+        local_generator = None
         if args.method in {"rag", "llama3"}:
-            if args.method == "llama3" and not args.api_url:
-                raise ValueError("llama3 需要已启动的本地兼容接口 --api-url")
-            endpoint, key, model = common.read_api_settings(args)
-            if args.method == "llama3" and urlsplit(endpoint).hostname not in {"localhost", "127.0.0.1", "::1"}:
-                raise ValueError("llama3 方法须连接本地部署的开源权重")
+            if args.local_hf_model:
+                if args.api_url:
+                    raise ValueError("--local-hf-model 与 --api-url 不能同时使用")
+                local_generator = LocalHFGenerator(args.local_hf_model, args.hf_context_tokens)
+                model = str(args.local_hf_model.resolve())
+                endpoint = "offline-transformers"
+            else:
+                if args.method == "llama3" and not args.api_url:
+                    raise ValueError("llama3 需要已启动的本地兼容接口或 --local-hf-model")
+                endpoint, key, model = common.read_api_settings(args)
+                if args.method == "llama3" and urlsplit(endpoint).hostname not in {"localhost", "127.0.0.1", "::1"}:
+                    raise ValueError("llama3 方法须连接本地部署的开源权重")
         signature = hashlib.sha256("\n".join(s.sample_id for s in samples).encode()).hexdigest()
         metadata = {"method": args.method, "dataset": str(args.dataset.resolve()),
                     "track": args.track, "limit": args.limit, "sample_ids_sha256": signature,
                     "embedding_model": str(args.embedding_model.resolve()) if encoder else None,
                     "endpoint": endpoint, "model": model, "top_k": args.top_k,
-                    "json_mode": not args.no_json_mode}
+                    "json_mode": not args.no_json_mode,
+                    "max_tokens": args.max_tokens if local_generator is None else None,
+                    "hf_context_tokens": args.hf_context_tokens if local_generator else None,
+                    "hf_max_new_tokens": args.hf_max_new_tokens if local_generator else None}
         if meta_path.exists() or partial.exists():
             if not meta_path.exists() or common.read_json(meta_path) != metadata:
                 raise ValueError("续跑参数不同或元数据缺失；请更换输出路径或使用 --overwrite")
@@ -338,9 +386,11 @@ def run(argv: list[str] | None = None) -> int:
                            if args.method == "rag" else common.build_input(sample)[0])
                 allowed = {candidate.event_id for candidate in pack.candidates}
                 for correction in range(2):
-                    raw = common.call_model(endpoint, key, model, content,
-                                            args.timeout, args.retries, args.max_tokens,
-                                            json_mode=not args.no_json_mode)
+                    raw = (local_generator.generate(content, args.hf_max_new_tokens)
+                           if local_generator else
+                           common.call_model(endpoint, key, model, content,
+                                             args.timeout, args.retries, args.max_tokens,
+                                             json_mode=not args.no_json_mode))
                     try:
                         record = common.parse_prediction(raw, sample, allowed)
                         break

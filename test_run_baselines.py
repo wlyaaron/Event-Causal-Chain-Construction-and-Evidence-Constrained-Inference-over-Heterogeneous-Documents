@@ -88,6 +88,18 @@ class BaselineTests(unittest.TestCase):
         self.assertEqual(model.call_count, 2)
         self.assertEqual(common.read_json(output)[0]["answer"], "无法确定")
 
+    def test_rag_can_run_with_offline_model_backend(self):
+        response = json.dumps({"answer": "无法确定", "evidence_chain": [],
+                               "confidence": None}, ensure_ascii=False)
+        output = self.root / "rag_offline.json"
+        with patch.object(baseline, "LocalHFGenerator") as generator:
+            generator.return_value.generate.return_value = response
+            with patch.object(common, "call_model", side_effect=AssertionError("remote API called")):
+                self.assertEqual(baseline.run(["--method", "rag", "--dataset", str(self.root),
+                                               "--limit", "1", "--output", str(output),
+                                               "--local-hf-model", str(self.root)]), 0)
+        generator.return_value.generate.assert_called_once()
+
 
 if __name__ == "__main__":
     unittest.main()
