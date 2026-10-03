@@ -55,6 +55,31 @@ def make_pack(root: Path, track: str, questions: int = 1) -> Path:
 
 
 class BaselineTests(unittest.TestCase):
+    def test_api_key_file_is_read_without_displaying_secret(self):
+        with temporary_workspace() as root:
+            key_file = root / "key.txt"
+            key_file.write_text("\ufeffsk-test-only-secret\n", encoding="utf-8")
+            with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "wrong-env-key"}):
+                with patch.object(app, "probe_balance") as balance:
+                    with patch.object(app, "call_model", side_effect=["OK", '{"ok":true}']) as calls:
+                        with patch("sys.stdout", new_callable=io.StringIO) as output:
+                            result = app.main(["--probe-api", "--api-url", "https://api.deepseek.com",
+                                               "--model", "deepseek-flash", "--api-key-file", str(key_file)])
+            self.assertEqual(result, 0)
+            balance.assert_called_once_with("sk-test-only-secret", 120)
+            self.assertEqual(calls.call_args_list[0].args[1], "sk-test-only-secret")
+            self.assertNotIn("sk-test-only-secret", output.getvalue())
+
+    def test_local_api_does_not_require_key(self):
+        args = app.argparse.Namespace(api_url="http://127.0.0.1:8000/v1", model="local-model",
+                                      api_key_file=None)
+        with patch.dict(os.environ, {}, clear=True):
+            with patch.object(app.getpass, "getpass", side_effect=AssertionError("prompted")):
+                endpoint, api_key, model = app.read_api_settings(args)
+        self.assertEqual(endpoint, "http://127.0.0.1:8000/v1/chat/completions")
+        self.assertEqual(api_key, "EMPTY")
+        self.assertEqual(model, "local-model")
+
     def test_empty_http_error_has_useful_diagnostics(self):
         error = HTTPError("https://api.deepseek.com/chat/completions", 400,
                           "Bad Request", {}, io.BytesIO(b""))

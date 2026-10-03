@@ -25,7 +25,7 @@ REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_DATASET = REPO_ROOT / "数据集" / "抽样测试集_100"
 DEFAULT_OUTPUT = REPO_ROOT / "outputs" / "deepseek_predictions.json"
 DEFAULT_API_URL = "https://api.deepseek.com"
-DEFAULT_MODEL = "deepseek-v4-pro"
+DEFAULT_MODEL = "deepseek-flash"
 
 SYSTEM_PROMPT = """你是赛题4的证据约束问答系统。只依据用户消息给出的文档、事件和因果关系回答；不得使用外部知识补齐材料缺口。
 请输出一个 JSON 对象，且仅包含 answer、evidence_chain、confidence 三个字段。
@@ -152,8 +152,17 @@ def read_api_settings(args: argparse.Namespace) -> tuple[str, str, str]:
     api_url = args.api_url or input(f"API URL [{DEFAULT_API_URL}]: ").strip() or DEFAULT_API_URL
     model = args.model or input(f"模型名 [{DEFAULT_MODEL}]: ").strip() or DEFAULT_MODEL
     endpoint = completion_url(api_url)
-    api_key = (os.getenv("DEEPSEEK_API_KEY") or
-               getpass.getpass("DeepSeek API Key（输入不会回显）：")).strip()
+    key_file = getattr(args, "api_key_file", None)
+    if key_file is not None:
+        api_key = key_file.read_text(encoding="utf-8-sig").strip()
+    elif os.getenv("DEEPSEEK_API_KEY_FILE"):
+        api_key = Path(os.environ["DEEPSEEK_API_KEY_FILE"]).read_text(encoding="utf-8-sig").strip()
+    elif os.getenv("DEEPSEEK_API_KEY"):
+        api_key = os.environ["DEEPSEEK_API_KEY"].strip()
+    elif urlsplit(endpoint).hostname in {"localhost", "127.0.0.1", "::1"}:
+        api_key = "EMPTY"  # OpenAI-compatible local servers usually ignore this header.
+    else:
+        api_key = getpass.getpass("DeepSeek API Key（输入不会回显）：").strip()
     if api_key.lower().startswith("bearer "):
         api_key = api_key[7:].strip()
     if not api_key:
@@ -188,7 +197,7 @@ def probe_balance(api_key: str, timeout: int) -> None:
 
 
 def call_model(endpoint: str, api_key: str, model: str, content: str,
-               timeout: int = 120, retries: int = 2, max_tokens: int | None = 1200,
+               timeout: int = 120, retries: int = 2, max_tokens: int | None = 8192,
                json_mode: bool = True, system_prompt: str | None = SYSTEM_PROMPT) -> str:
     messages = [{"role": "user", "content": content}]
     if system_prompt is not None:
@@ -313,9 +322,11 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--api-url", default=os.getenv("DEEPSEEK_API_URL"), help="API 基础地址或完整 /chat/completions 地址")
     parser.add_argument("--model", default=os.getenv("DEEPSEEK_MODEL"), help="服务商提供的准确模型名")
+    parser.add_argument("--api-key-file", type=Path, help="从本地 UTF-8 文本文件读取 Key；文件内容不会显示或写入结果")
     parser.add_argument("--timeout", type=int, default=120)
     parser.add_argument("--retries", type=int, default=2)
-    parser.add_argument("--max-tokens", type=int, default=1200)
+    parser.add_argument("--max-tokens", type=int, default=8192,
+                        help="单次最大生成 token 数，含模型思考；默认 8192")
     parser.add_argument("--max-input-chars", type=int, default=80000)
     parser.add_argument("--dry-run", action="store_true", help="只检查数据和输入规模，不调用 API")
     parser.add_argument("--probe-api", action="store_true", help="用两条短消息依次测试基础调用与 JSON 模式，不发送数据集")
@@ -331,7 +342,7 @@ def main(argv: list[str] | None = None) -> int:
             if urlsplit(endpoint).hostname == "api.deepseek.com":
                 print("[认证] 检查官方 API Key 状态……", flush=True)
                 probe_balance(api_key, args.timeout)
-            print("[1/2] 测试官方极简聊天请求……", flush=True)
+            print("[1/2] 测试极简聊天请求……", flush=True)
             call_model(endpoint, api_key, model, "Hello", args.timeout, 0, None,
                        json_mode=False, system_prompt=None)
             print("极简请求成功。", flush=True)
@@ -339,7 +350,7 @@ def main(argv: list[str] | None = None) -> int:
             call_model(endpoint, api_key, model, "请输出包含 ok=true 的 JSON 对象。",
                        args.timeout, 0, None, json_mode=True,
                        system_prompt='请只输出 JSON 对象，例如 {"ok": true}。')
-            print("JSON 模式成功。两项均成功时，原来的 400 更可能与完整题目请求有关。")
+            print("JSON 模式成功。当前文件中的 Key 和接口均可用。")
             return 0
 
         samples = discover_samples(args.dataset, args.track, args.limit)
@@ -412,7 +423,7 @@ def main(argv: list[str] | None = None) -> int:
         validate_file(partial, samples, args.max_input_chars)
         os.replace(partial, output)
         metadata_path.unlink(missing_ok=True)
-        print(f"完成：{output}。请在正式提交前核对赛事对 API 模型的使用规则。")
+        print(f"完成：{output}。官方赛事禁止闭源 API；正式提交须使用符合规则的离线开源模型，并复核答案和证据链。")
         return 0
     except (ValueError, RuntimeError, OSError, json.JSONDecodeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)
