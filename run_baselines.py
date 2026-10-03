@@ -18,7 +18,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from urllib.parse import urlsplit
 
-import run_deepseek as common
+import task4_api as api
+import task4_core as common
 
 
 ROOT = Path(__file__).resolve().parent
@@ -41,17 +42,11 @@ class Pack:
     documents: dict[str, str]
     candidates: list[Candidate]
     edges: list[dict]
+    events: list[dict] | None
 
 
 def read_pack(path: Path) -> Pack:
-    documents = {p.stem: p.read_text(encoding="utf-8")
-                 for p in sorted(path.glob("D[0-9]*.txt"))}
-    if not documents:
-        raise ValueError(f"缺少文档：{path}")
-    events_path = path / "事件列表.json"
-    edges_path = path / "事件因果关系列表.json"
-    events = common.read_json(events_path) if events_path.exists() else None
-    edges = common.read_json(edges_path) if edges_path.exists() else []
+    documents, events, edges = common.load_pack(path)
     candidates: list[Candidate] = []
     if events is not None:
         for event in events:
@@ -66,9 +61,7 @@ def read_pack(path: Path) -> Pack:
         for doc_id, document in documents.items():
             title = next((s.strip(" #：:。\t") for s in document.splitlines() if s.strip()), doc_id)
             candidates.append(Candidate(doc_id, doc_id, title[:60], document[:900]))
-    if not isinstance(edges, list):
-        raise ValueError(f"因果边文件不是数组：{edges_path}")
-    return Pack(documents, candidates, edges)
+    return Pack(documents, candidates, edges or [], events)
 
 
 def tokens(text: str) -> list[str]:
@@ -284,14 +277,12 @@ def rag_input(sample: common.Sample, pack: Pack,
     selected_ids = {candidate.doc_id for candidate, _ in ranking[:top_k]}
     # Explicitly referenced documents must not be dropped by retrieval.
     selected_ids.update(name for name in ID_PATTERN.findall(sample.question) if name in pack.documents)
-    events_path = sample.pack / "事件列表.json"
-    events = common.read_json(events_path) if events_path.exists() else None
     payload = {
         "track": sample.track, "sample_id": sample.sample_id,
         "question_type": sample.question_type, "question": sample.question,
         "retrieved_documents": [{"doc_id": name, "text": text}
                                 for name, text in pack.documents.items() if name in selected_ids],
-        "events": events,
+        "events": pack.events,
         "causal_relations": pack.edges or None,
         "retrieval_note": "只可用已给材料。未检索到的文档不能凭记忆补全；若关键证据不足，请拒答。",
     }
@@ -329,14 +320,7 @@ def run(argv: list[str] | None = None) -> int:
             return 0
         if args.top_k < 1:
             raise ValueError("--top-k 必须至少为 1")
-        output = (args.output or ROOT / "outputs" / f"{args.method}.json").resolve()
-        partial = output.with_name(output.name + ".partial")
-        meta_path = output.with_name(output.name + ".partial.meta.json")
-        if args.overwrite:
-            for path in (output, partial, meta_path):
-                path.unlink(missing_ok=True)
-        if output.exists():
-            raise ValueError(f"完整输出已存在：{output}；请更换 --output 或使用 --overwrite")
+        output = args.output or ROOT / "outputs" / f"{args.method}.json"
         encoder = BertEncoder(args.embedding_model) if args.method == "bm25_bert" else None
         endpoint = key = model = None
         local_generator = None
@@ -350,7 +334,7 @@ def run(argv: list[str] | None = None) -> int:
             else:
                 if args.method == "llama3" and not args.api_url:
                     raise ValueError("llama3 需要已启动的本地兼容接口或 --local-hf-model")
-                endpoint, key, model = common.read_api_settings(args)
+                endpoint, key, model = api.read_api_settings(args)
                 if args.method == "llama3" and urlsplit(endpoint).hostname not in {"localhost", "127.0.0.1", "::1"}:
                     raise ValueError("llama3 方法须连接本地部署的开源权重")
         signature = hashlib.sha256("\n".join(s.sample_id for s in samples).encode()).hexdigest()
@@ -362,18 +346,9 @@ def run(argv: list[str] | None = None) -> int:
                     "max_tokens": args.max_tokens if local_generator is None else None,
                     "hf_context_tokens": args.hf_context_tokens if local_generator else None,
                     "hf_max_new_tokens": args.hf_max_new_tokens if local_generator else None}
-        if meta_path.exists() or partial.exists():
-            if not meta_path.exists() or common.read_json(meta_path) != metadata:
-                raise ValueError("续跑参数不同或元数据缺失；请更换输出路径或使用 --overwrite")
-            completed = common.read_json(partial) if partial.exists() else []
-            if not isinstance(completed, list) or [r.get("sample_id") for r in completed] != [s.sample_id for s in samples[:len(completed)]]:
-                raise ValueError("续跑结果的问题顺序不一致")
-        else:
-            completed = []
-            common.atomic_json(meta_path, metadata)
-            common.atomic_json(partial, completed)
+        store = common.PredictionStore(output, samples, metadata, overwrite=args.overwrite)
         cache: dict[Path, Pack] = {}
-        for index, sample in enumerate(samples[len(completed):], len(completed) + 1):
+        for index, sample in enumerate(samples[len(store.completed):], len(store.completed) + 1):
             if sample.pack not in cache:
                 cache[sample.pack] = read_pack(sample.pack)
             pack = cache[sample.pack]
@@ -388,7 +363,7 @@ def run(argv: list[str] | None = None) -> int:
                 for correction in range(2):
                     raw = (local_generator.generate(content, args.hf_max_new_tokens)
                            if local_generator else
-                           common.call_model(endpoint, key, model, content,
+                           api.call_model(endpoint, key, model, content,
                                              args.timeout, args.retries, args.max_tokens,
                                              json_mode=not args.no_json_mode))
                     try:
@@ -401,13 +376,10 @@ def run(argv: list[str] | None = None) -> int:
                                     + "。请重新输出 JSON；可回答时必须给出真实有序事件 ID 证据链。"
                                       "若仅能说时间先后、缺少可核查的因果证据，请输出"
                                       '{"answer":"无法确定","evidence_chain":[],"confidence":null}。')
-            completed.append(record)
-            common.atomic_json(partial, completed)
+            store.append(record)
             print(f"[{index}/{len(samples)}] {sample.sample_id} 已保存", flush=True)
-        common.validate_file(partial, samples, 80000)
-        partial.replace(output)
-        meta_path.unlink(missing_ok=True)
-        print(f"完成：{output}；{len(samples)} 题通过结构校验。此结果不是官方评分。")
+        store.finish()
+        print(f"完成：{store.output}；{len(samples)} 题通过结构校验。此结果不是官方评分。")
         return 0
     except (OSError, ValueError, RuntimeError, json.JSONDecodeError) as exc:
         print(f"错误：{exc}", file=sys.stderr)

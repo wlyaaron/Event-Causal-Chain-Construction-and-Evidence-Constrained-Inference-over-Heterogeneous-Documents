@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 import run_baselines as baseline
 import run_deepseek as common
+import task4_api as api
 
 
 class BaselineTests(unittest.TestCase):
@@ -66,7 +67,7 @@ class BaselineTests(unittest.TestCase):
                                "confidence": 0.8}, ensure_ascii=False)
         for method in ("rag", "llama3"):
             output = self.root / f"{method}.json"
-            with patch.object(common, "call_model", return_value=response) as model:
+            with patch.object(api, "call_model", return_value=response) as model:
                 self.assertEqual(baseline.run(["--method", method,
                                                "--dataset", str(self.root), "--limit", "1",
                                                "--output", str(output), "--api-url",
@@ -80,7 +81,7 @@ class BaselineTests(unittest.TestCase):
         valid = json.dumps({"answer": "无法确定", "evidence_chain": [],
                             "confidence": None}, ensure_ascii=False)
         output = self.root / "rag_retry.json"
-        with patch.object(common, "call_model", side_effect=[invalid, valid]) as model:
+        with patch.object(api, "call_model", side_effect=[invalid, valid]) as model:
             self.assertEqual(baseline.run(["--method", "rag", "--dataset", str(self.root),
                                            "--limit", "1", "--output", str(output),
                                            "--api-url", "http://127.0.0.1:8000/v1",
@@ -94,7 +95,7 @@ class BaselineTests(unittest.TestCase):
         output = self.root / "rag_offline.json"
         with patch.object(baseline, "LocalHFGenerator") as generator:
             generator.return_value.generate.return_value = response
-            with patch.object(common, "call_model", side_effect=AssertionError("remote API called")):
+            with patch.object(api, "call_model", side_effect=AssertionError("remote API called")):
                 self.assertEqual(baseline.run(["--method", "rag", "--dataset", str(self.root),
                                                "--limit", "1", "--output", str(output),
                                                "--local-hf-model", str(self.root)]), 0)
