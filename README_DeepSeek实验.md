@@ -18,6 +18,14 @@ python run_deepseek.py --track A --limit 3 --output outputs/a_preview.json
 
 第二条命令会提示输入 API URL、模型名和 Key。URL 可填基础地址（例如 `https://api.deepseek.com`）或完整的 `/chat/completions` 地址；模型名请填你账户实际可用的名称（例如 `deepseek-v4-pro`）。Key 输入时不回显。也可以用 `--api-url`、`--model`，或环境变量 `DEEPSEEK_API_URL`、`DEEPSEEK_MODEL`、`DEEPSEEK_API_KEY` 设置，但**不要将 Key 写进脚本、命令行参数、README 或 Git 提交**。
 
+如果调用返回 HTTP 400，先运行下面的诊断命令。它先检查官方 API Key 是否可用，再发送两条短测试消息，**不会发送数据集，也不会显示 Key 或账户金额**：
+
+```powershell
+python run_deepseek.py --probe-api --api-url https://api.deepseek.com --model deepseek-flash
+```
+
+诊断会依次区分认证、官方极简聊天请求和 JSON 输出模式。若基础请求成功而 JSON 模式失败，可在正式命令中加入 `--no-json-mode --overwrite` 试运行；脚本仍要求模型返回 JSON 并逐条校验。首次请求失败后留下的 `.partial.meta.json` 现在可以直接续跑，或用 `--overwrite` 清除后重新运行。
+
 官方 API 文档：[接入说明](https://api-docs.deepseek.com/)、[Chat Completions](https://api-docs.deepseek.com/api/create-chat-completion/)、[模型更新记录](https://api-docs.deepseek.com/updates/)。当前官方文档接受 `deepseek-v4-pro`；旧的 `deepseek-v4-flash` 名称虽仍可用，但已转到更新的 Flash 模型。若要复现赛事表中 `DeepSeek-V4-Flash` 基线，必须先确认服务端实际模型版本。
 
 先分别试 A/B/C，再考虑全量：

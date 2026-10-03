@@ -148,18 +148,61 @@ def completion_url(api_url: str) -> str:
     return urlunsplit((url.scheme, url.netloc, path, "", ""))
 
 
+def read_api_settings(args: argparse.Namespace) -> tuple[str, str, str]:
+    api_url = args.api_url or input(f"API URL [{DEFAULT_API_URL}]: ").strip() or DEFAULT_API_URL
+    model = args.model or input(f"模型名 [{DEFAULT_MODEL}]: ").strip() or DEFAULT_MODEL
+    endpoint = completion_url(api_url)
+    api_key = (os.getenv("DEEPSEEK_API_KEY") or
+               getpass.getpass("DeepSeek API Key（输入不会回显）：")).strip()
+    if api_key.lower().startswith("bearer "):
+        api_key = api_key[7:].strip()
+    if not api_key:
+        raise ValueError("API Key 不能为空")
+    if not model.strip():
+        raise ValueError("模型名不能为空")
+    return endpoint, api_key, model.strip()
+
+
+def http_error_text(exc: HTTPError, api_key: str) -> str:
+    detail = exc.read(2048).decode("utf-8", errors="replace").strip()
+    detail = detail.replace(api_key, "[REDACTED]")[:500] or "服务器未返回错误正文"
+    fields = [f"Content-Type={exc.headers.get('Content-Type', '未知')}"]
+    for name in ("Server", "Via", "Content-Length", "x-request-id", "x-ds-request-id", "request-id"):
+        value = exc.headers.get(name)
+        if value:
+            fields.append(f"{name}={value[:120]}")
+    return f"API HTTP {exc.code}: {detail}；" + "；".join(fields)
+
+
+def probe_balance(api_key: str, timeout: int) -> None:
+    request = Request("https://api.deepseek.com/user/balance", headers={
+        "Authorization": f"Bearer {api_key}", "Accept": "application/json",
+    })
+    try:
+        with urlopen(request, timeout=timeout) as response:
+            result = json.load(response)
+        available = result.get("is_available") if isinstance(result, dict) else None
+        print(f"官方 API Key 认证成功；调用余额可用：{available}（不显示金额）。", flush=True)
+    except HTTPError as exc:
+        raise RuntimeError("认证检查失败；" + http_error_text(exc, api_key)) from exc
+
+
 def call_model(endpoint: str, api_key: str, model: str, content: str,
-               timeout: int = 120, retries: int = 2, max_tokens: int = 1200) -> str:
-    body = json.dumps({
+               timeout: int = 120, retries: int = 2, max_tokens: int | None = 1200,
+               json_mode: bool = True, system_prompt: str | None = SYSTEM_PROMPT) -> str:
+    messages = [{"role": "user", "content": content}]
+    if system_prompt is not None:
+        messages.insert(0, {"role": "system", "content": system_prompt})
+    payload = {
         "model": model,
-        "messages": [
-            {"role": "system", "content": SYSTEM_PROMPT},
-            {"role": "user", "content": content},
-        ],
-        "response_format": {"type": "json_object"},
-        "max_tokens": max_tokens,
+        "messages": messages,
         "stream": False,
-    }, ensure_ascii=False).encode("utf-8")
+    }
+    if max_tokens is not None:
+        payload["max_tokens"] = max_tokens
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
+    body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
     request = Request(endpoint, data=body, method="POST", headers={
         "Authorization": f"Bearer {api_key}",
         "Content-Type": "application/json",
@@ -177,9 +220,8 @@ def call_model(endpoint: str, api_key: str, model: str, content: str,
                 raise ValueError("模型未返回文本内容")
             return text
         except HTTPError as exc:
-            detail = exc.read(400).decode("utf-8", errors="replace").replace(api_key, "[REDACTED]")
             if exc.code not in {429, 500, 502, 503, 504} or attempt == retries:
-                raise RuntimeError(f"API HTTP {exc.code}: {detail}") from exc
+                raise RuntimeError(http_error_text(exc, api_key)) from exc
         except URLError as exc:
             if attempt == retries:
                 raise RuntimeError(f"API 连接失败：{exc.reason}") from exc
@@ -276,11 +318,30 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-tokens", type=int, default=1200)
     parser.add_argument("--max-input-chars", type=int, default=80000)
     parser.add_argument("--dry-run", action="store_true", help="只检查数据和输入规模，不调用 API")
+    parser.add_argument("--probe-api", action="store_true", help="用两条短消息依次测试基础调用与 JSON 模式，不发送数据集")
+    parser.add_argument("--no-json-mode", action="store_true", help="不向 API 发送 response_format，仍要求模型输出 JSON")
     parser.add_argument("--validate", type=Path, help="只校验已有 JSON 的覆盖率和格式")
     parser.add_argument("--overwrite", action="store_true", help="覆盖已有完整或未完成的输出")
     args = parser.parse_args(argv)
 
     try:
+        if args.probe_api:
+            endpoint, api_key, model = read_api_settings(args)
+            print(f"诊断目标：{endpoint}，模型：{model}；不会发送数据集或显示 Key。")
+            if urlsplit(endpoint).hostname == "api.deepseek.com":
+                print("[认证] 检查官方 API Key 状态……", flush=True)
+                probe_balance(api_key, args.timeout)
+            print("[1/2] 测试官方极简聊天请求……", flush=True)
+            call_model(endpoint, api_key, model, "Hello", args.timeout, 0, None,
+                       json_mode=False, system_prompt=None)
+            print("极简请求成功。", flush=True)
+            print("[2/2] 测试 JSON 输出模式……", flush=True)
+            call_model(endpoint, api_key, model, "请输出包含 ok=true 的 JSON 对象。",
+                       args.timeout, 0, None, json_mode=True,
+                       system_prompt='请只输出 JSON 对象，例如 {"ok": true}。')
+            print("JSON 模式成功。两项均成功时，原来的 400 更可能与完整题目请求有关。")
+            return 0
+
         samples = discover_samples(args.dataset, args.track, args.limit)
         counts: dict[str, int] = {}
         for sample in samples:
@@ -297,14 +358,7 @@ def main(argv: list[str] | None = None) -> int:
             print("未发出 API 请求；未读取 gold 答案。")
             return 0
 
-        api_url = args.api_url or input(f"API URL [{DEFAULT_API_URL}]: ").strip() or DEFAULT_API_URL
-        model = args.model or input(f"模型名 [{DEFAULT_MODEL}]: ").strip() or DEFAULT_MODEL
-        endpoint = completion_url(api_url)
-        api_key = os.getenv("DEEPSEEK_API_KEY") or getpass.getpass("DeepSeek API Key（输入不会回显）：").strip()
-        if not api_key:
-            raise ValueError("API Key 不能为空")
-        if not model.strip():
-            raise ValueError("模型名不能为空")
+        endpoint, api_key, model = read_api_settings(args)
         output = args.output.resolve()
         partial = output.with_name(output.name + ".partial")
         metadata_path = output.with_name(output.name + ".partial.meta.json")
@@ -312,6 +366,8 @@ def main(argv: list[str] | None = None) -> int:
         metadata = {"dataset": str(args.dataset.resolve()), "track": args.track,
                     "limit": args.limit, "model": model, "endpoint": endpoint,
                     "sample_ids_sha256": signature}
+        if args.no_json_mode:
+            metadata["json_mode"] = "disabled"
         if args.overwrite:
             for path in (output, partial, metadata_path):
                 path.unlink(missing_ok=True)
@@ -319,13 +375,15 @@ def main(argv: list[str] | None = None) -> int:
             raise ValueError(f"完整输出已存在：{output}；更换 --output 或使用 --overwrite")
         completed: list[dict] = []
         if partial.exists() or metadata_path.exists():
-            if not (partial.exists() and metadata_path.exists()):
+            if not metadata_path.exists():
                 raise ValueError("续跑文件不完整；请人工检查，或使用 --overwrite")
             if read_json(metadata_path) != metadata:
                 raise ValueError("续跑文件来自不同数据/模型/URL；请更换 --output 或使用 --overwrite")
-            completed = read_json(partial)
+            completed = read_json(partial) if partial.exists() else []
             if not isinstance(completed, list):
                 raise ValueError("续跑文件不是 JSON 数组")
+            if not partial.exists():
+                atomic_json(partial, completed)
             completed_ids = [r.get("sample_id") for r in completed if isinstance(r, dict)]
             if completed_ids != [s.sample_id for s in samples[:len(completed)]]:
                 raise ValueError("续跑文件的问题顺序与当前选择不一致")
@@ -336,11 +394,13 @@ def main(argv: list[str] | None = None) -> int:
             print(f"从 {len(completed)} 条已保存结果继续")
         else:
             atomic_json(metadata_path, metadata)
+            atomic_json(partial, completed)
 
         for index, sample in enumerate(samples[len(completed):], len(completed) + 1):
             content, allowed_ids, edges = build_input(sample, args.max_input_chars)
             raw = call_model(endpoint, api_key, model, content, args.timeout,
-                             args.retries, args.max_tokens)
+                             args.retries, args.max_tokens,
+                             json_mode=not args.no_json_mode)
             record = parse_prediction(raw, sample, allowed_ids)
             chain = record["evidence_chain"]
             if edges and any((a, b) not in edges for a, b in zip(chain, chain[1:])):

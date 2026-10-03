@@ -1,6 +1,8 @@
 """Offline tests. No real API key or paid API call is used."""
 
 import json
+import hashlib
+import io
 import os
 import shutil
 import threading
@@ -9,6 +11,7 @@ import uuid
 from contextlib import contextmanager
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from urllib.error import HTTPError
 from unittest.mock import patch
 
 import run_deepseek as app
@@ -52,6 +55,26 @@ def make_pack(root: Path, track: str, questions: int = 1) -> Path:
 
 
 class BaselineTests(unittest.TestCase):
+    def test_empty_http_error_has_useful_diagnostics(self):
+        error = HTTPError("https://api.deepseek.com/chat/completions", 400,
+                          "Bad Request", {}, io.BytesIO(b""))
+        text = app.http_error_text(error, "secret-key")
+        self.assertIn("API HTTP 400", text)
+        self.assertIn("服务器未返回错误正文", text)
+        self.assertNotIn("secret-key", text)
+
+    def test_probe_checks_auth_and_two_minimal_requests_without_dataset(self):
+        with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-only-secret"}):
+            with patch.object(app, "probe_balance") as balance:
+                with patch.object(app, "call_model", side_effect=["OK", '{"ok":true}']) as calls:
+                    result = app.main(["--probe-api", "--api-url", "https://api.deepseek.com",
+                                       "--model", "deepseek-flash", "--dataset", "missing"])
+        self.assertEqual(result, 0)
+        balance.assert_called_once()
+        self.assertEqual(calls.call_count, 2)
+        self.assertFalse(calls.call_args_list[0].kwargs["json_mode"])
+        self.assertTrue(calls.call_args_list[1].kwargs["json_mode"])
+
     def test_inputs_follow_actual_track_files_and_exclude_gold(self):
         with temporary_workspace() as root:
             for track in "ABC":
@@ -128,6 +151,26 @@ class BaselineTests(unittest.TestCase):
                 server.shutdown()
                 server.server_close()
                 thread.join(timeout=5)
+
+    def test_old_metadata_without_partial_recovers_after_first_request_failure(self):
+        with temporary_workspace() as root:
+            make_pack(root, "A")
+            output = root / "predictions.json"
+            sample = app.discover_samples(root, limit=1)[0]
+            metadata = {
+                "dataset": str(root.resolve()), "track": "all", "limit": 1,
+                "model": "mock-model", "endpoint": "http://127.0.0.1:8123/chat/completions",
+                "sample_ids_sha256": hashlib.sha256(sample.sample_id.encode()).hexdigest(),
+            }
+            app.atomic_json(output.with_name(output.name + ".partial.meta.json"), metadata)
+            answer = '{"answer":"暴雨导致交通中断","evidence_chain":["D001","D002"],"confidence":0.8}'
+            args = ["--dataset", str(root), "--limit", "1", "--output", str(output),
+                    "--api-url", "http://127.0.0.1:8123", "--model", "mock-model"]
+            with patch.dict(os.environ, {"DEEPSEEK_API_KEY": "test-only-secret"}):
+                with patch.object(app, "call_model", return_value=answer) as call:
+                    self.assertEqual(app.main(args), 0)
+            call.assert_called_once()
+            self.assertEqual(len(app.read_json(output)), 1)
 
 
 if __name__ == "__main__":
