@@ -89,6 +89,17 @@ class BaselineTests(unittest.TestCase):
         self.assertEqual(model.call_count, 2)
         self.assertEqual(common.read_json(output)[0]["answer"], "无法确定")
 
+    def test_rag_twice_invalid_generation_is_valid_conservative_refusal(self):
+        invalid = '{"answer":"无证据的猜测","evidence_chain":[],"confidence":0.8}'
+        output = self.root / "rag_fallback.json"
+        with patch.object(api, "call_model", return_value=invalid) as model:
+            self.assertEqual(baseline.run(["--method", "rag", "--dataset", str(self.root),
+                                           "--limit", "1", "--output", str(output),
+                                           "--api-url", "http://127.0.0.1:8000/v1",
+                                           "--model", "local-model"]), 0)
+        self.assertEqual(model.call_count, 2)
+        self.assertEqual(common.read_json(output)[0]["answer"], "无法确定")
+
     def test_rag_can_run_with_offline_model_backend(self):
         response = json.dumps({"answer": "无法确定", "evidence_chain": [],
                                "confidence": None}, ensure_ascii=False)

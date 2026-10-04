@@ -412,7 +412,11 @@ def run(argv: list[str] | None = None) -> int:
                         break
                     except ValueError as exc:
                         if correction:
-                            raise
+                            print(f"提示：{sample.sample_id} 两次生成均未通过格式校验，改为保守拒答：{exc}",
+                                  file=sys.stderr, flush=True)
+                            refusal = '{"answer":"无法确定","evidence_chain":[],"confidence":null}'
+                            record = common.parse_prediction(refusal, sample, allowed)
+                            break
                         content += ("\n\n上一版输出未通过提交格式校验：" + str(exc)
                                     + "。请重新输出 JSON；可回答时必须给出真实有序事件 ID 证据链。"
                                       "若仅能说时间先后、缺少可核查的因果证据，请输出"

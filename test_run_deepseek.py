@@ -141,6 +141,10 @@ class BaselineTests(unittest.TestCase):
             explained = app.parse_prediction('{"answer":"原文证明题目存在错误前提","evidence_chain":["D001"],"confidence":0.5}',
                                              sample, {"D001", "D002"})
             self.assertIsNone(explained["question_type"])
+            normalized = app.parse_prediction('{"answer":"无法确定：材料不足","evidence_chain":[],"confidence":0.5}',
+                                              sample, {"D001", "D002"})
+            self.assertEqual(normalized["answer"], "无法确定")
+            self.assertIsNone(normalized["confidence"])
 
     def test_train_evaluator_reports_answer_and_chain_separately(self):
         with temporary_workspace() as root:
@@ -159,6 +163,17 @@ class BaselineTests(unittest.TestCase):
             self.assertEqual(result["answer_char_f1"], 1.0)
             self.assertEqual(result["chain_edge_f1"], 1.0)
             self.assertEqual(result["required_fact_coverage"], 1.0)
+
+    def test_twice_invalid_model_answer_falls_back_to_valid_refusal(self):
+        with temporary_workspace() as root:
+            make_pack(root, "A")
+            sample = app.discover_samples(root)[0]
+            with patch.object(app, "call_model", return_value='{"answer":"猜测","evidence_chain":[],"confidence":0.8}') as model:
+                record, unsupported = app.predict(sample, "http://127.0.0.1:1/chat/completions",
+                                                  "test-key", "mock", 1, 0, 100, 80000, True)
+            self.assertEqual(model.call_count, 2)
+            self.assertEqual(record["answer"], "无法确定")
+            self.assertFalse(unsupported)
 
     def test_api_failure_keeps_progress_and_next_run_resumes(self):
         with temporary_workspace() as root:

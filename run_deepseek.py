@@ -47,10 +47,10 @@ def predict(sample: Sample, endpoint: str, api_key: str, model: str,
             return record, unsupported
         except ValueError as exc:
             if correction:
-                if sample.question_type == "unanswerable":
-                    fallback = '{"answer":"无法确定","evidence_chain":[],"confidence":null}'
-                    return parse_prediction(fallback, sample, allowed_ids), False
-                raise
+                print(f"提示：{sample.sample_id} 两次模型输出均未通过格式校验，改为保守拒答：{exc}",
+                      file=sys.stderr, flush=True)
+                fallback = '{"answer":"无法确定","evidence_chain":[],"confidence":null}'
+                return parse_prediction(fallback, sample, allowed_ids), False
             content += ("\n\n上一版输出未通过提交格式校验：" + str(exc)
                         + "。请仅输出修正后的 JSON；证据链只用上述真实事件 ID。"
                           "无法确定且没有可核查证据时，使用精确拒答格式。")

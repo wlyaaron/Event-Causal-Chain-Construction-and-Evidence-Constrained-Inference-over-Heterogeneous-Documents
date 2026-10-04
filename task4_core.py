@@ -149,6 +149,11 @@ def parse_prediction(raw: str, sample: Sample, allowed_ids: set[str]) -> dict:
         raise ValueError(f"{sample.sample_id} 证据 ID 不在材料中：{unknown}")
     if len(chain) != len(set(chain)):
         raise ValueError(f"{sample.sample_id} 证据链含重复 ID")
+    refusal_prefixes = ("无法确定", "无法回答", "无法精确", "不能确定", "无法仅凭",
+                        "现有材料不足", "资料不足", "证据不足", "无法建立因果关系")
+    if not chain and answer.startswith(refusal_prefixes):
+        answer = "无法确定"
+        confidence = None
     if answer == "无法确定":
         if chain or confidence is not None:
             raise ValueError(f"{sample.sample_id} 拒答时证据链必须为空、置信度必须为 null")

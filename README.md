@@ -47,7 +47,9 @@
 | `llama3` | 全量材料送本地兼容接口或离线 Hugging Face 模型，复用统一校验 | 通用本地模型适配器；仓库没有 Llama3-8B 权重，未验证真正 Llama3-8B 效果 |
 | `run_deepseek.py` | 全量材料送兼容 Chat Completions 接口，支持有序并发、格式修复和断点续跑 | 托管 API 仅作研究诊断，不作为正式提交路径 |
 
-本地校验检查五个字段、证据 ID、拒答约束与 760 题覆盖。训练集诊断另算答案字符 F1、可选 BERT 语义相似度、证据节点/边和拒答正确率，**均不是官方评分公式**；测试集没有标准答案，不能计算它的官方得分。图方法已经对补充后的 760 题全部生成并通过结构校验。官方公开综合分（图 25.52、BM25+BERT 40.20、普通 RAG 40.48、Llama3-8B 50.85、DeepSeek-V4-Flash 57.61）不能直接套用到本仓库实现。
+本地校验检查五个字段、证据 ID、拒答约束与 760 题覆盖。训练集诊断另算答案字符 F1、可选 BERT 语义相似度、证据节点/边和拒答正确率，**均不是官方评分公式**；测试集没有标准答案，不能计算它的官方得分。图方法和 BM25+BERT 已对补充后的 760 题全部生成并通过结构校验；训练集前 100 题的链完全匹配率分别为 0.46、0.45，未复现赛事表中 BM25+BERT 相对图方法的明显优势。RAG 接口在 B 类 3 题上生成合格 JSON；本地 Qwen2.5-0.5B-Instruct 实测输出不稳定，只靠保守拒答兜底通过结构校验，不能据此证明答案质量。官方公开综合分（图 25.52、BM25+BERT 40.20、普通 RAG 40.48、Llama3-8B 50.85、DeepSeek-V4-Flash 57.61）不能直接套用到本仓库实现。
+
+生成模型若连续两次输出无效 JSON 或答题时不附证据链，会记录日志并保守输出“无法确定”。模型输出的“无法确定：……”等无证据拒答会规范成完全一致的拒答格式。应统计这些兜底题并人工复核，不能把格式通过当作答题正确。
 
 ## 代码结构
 
@@ -74,7 +76,9 @@ python run_baselines.py --method llama3 --track A --limit 3 --api-url http://127
 python run_deepseek.py --dry-run --track A --limit 3
 python run_deepseek.py --track all --limit 0 --workers 6 --output outputs/deepseek_research_760.json --api-url https://api.deepseek.com --model deepseek-flash --api-key-file C:/path/to/key.txt
 python run_deepseek.py --track all --limit 0 --validate outputs/deepseek_research_760.json
-python evaluate_baselines.py --predictions outputs/graph_train.json --train-root 数据集/训练集
+python run_baselines.py --method graph --dataset 数据集/训练集 --track train --limit 100 --output outputs/graph_train_100.json
+python evaluate_baselines.py --predictions outputs/graph_train_100.json --train-root 数据集/训练集
+python evaluate_baselines.py --predictions outputs/graph_760.json --test-root 数据集/抽样测试集_100
 python -m unittest -q test_run_deepseek.py test_run_baselines.py
 ```
 
