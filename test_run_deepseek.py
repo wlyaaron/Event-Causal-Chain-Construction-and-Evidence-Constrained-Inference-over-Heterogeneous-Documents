@@ -15,6 +15,7 @@ from urllib.error import HTTPError
 from unittest.mock import patch
 
 import run_deepseek as app
+import evaluate_baselines as evaluator
 
 
 @contextmanager
@@ -122,6 +123,42 @@ class BaselineTests(unittest.TestCase):
                 app.parse_prediction('{"answer":"事故","evidence_chain":["X999"],"confidence":0.7}', sample, {"D001", "D002"})
             with self.assertRaisesRegex(ValueError, "拒答时"):
                 app.parse_prediction('{"answer":"无法确定","evidence_chain":["D001"],"confidence":null}', sample, {"D001", "D002"})
+
+    def test_unanswerable_submission_uses_null_question_type(self):
+        with temporary_workspace() as root:
+            pack = make_pack(root, "B")
+            (pack / "问题.json").write_text(json.dumps([{
+                "sample_id": "B_U01", "question_type": "unanswerable",
+                "question": "没有材料的问题？"
+            }], ensure_ascii=False), encoding="utf-8")
+            sample = app.discover_samples(root)[0]
+            record = app.parse_prediction('{"answer":"无法确定","evidence_chain":[],"confidence":null}',
+                                          sample, {"D001", "D002"})
+            self.assertIsNone(record["question_type"])
+            output = root / "submission.json"
+            app.atomic_json(output, [record])
+            self.assertEqual(app.validate_file(output, [sample], 80000), 1)
+            explained = app.parse_prediction('{"answer":"原文证明题目存在错误前提","evidence_chain":["D001"],"confidence":0.5}',
+                                             sample, {"D001", "D002"})
+            self.assertIsNone(explained["question_type"])
+
+    def test_train_evaluator_reports_answer_and_chain_separately(self):
+        with temporary_workspace() as root:
+            pack = make_pack(root, "A")
+            (pack / "gold" / "问答对_答案.json").write_text(json.dumps([{
+                "sample_id": "A_Q01", "answers": "暴雨导致积水，积水导致交通中断。",
+                "evidence_chains": [["D001", "D002"]],
+                "answer_facts": {"required_facts": ["积水"], "forbidden_facts": []}
+            }], ensure_ascii=False), encoding="utf-8")
+            sample = app.discover_samples(root)[0]
+            record = app.parse_prediction('{"answer":"暴雨导致积水，积水导致交通中断。","evidence_chain":["D001","D002"],"confidence":0.8}',
+                                          sample, {"D001", "D002"})
+            output = root / "predictions.json"
+            app.atomic_json(output, [record])
+            result = evaluator.evaluate(output, root)["groups"]["all"]
+            self.assertEqual(result["answer_char_f1"], 1.0)
+            self.assertEqual(result["chain_edge_f1"], 1.0)
+            self.assertEqual(result["required_fact_coverage"], 1.0)
 
     def test_api_failure_keeps_progress_and_next_run_resumes(self):
         with temporary_workspace() as root:

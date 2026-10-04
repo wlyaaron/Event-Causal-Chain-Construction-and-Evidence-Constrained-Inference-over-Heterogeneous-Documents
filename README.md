@@ -23,7 +23,7 @@
 
 ## 赛题、数据与提交
 
-目标是读取多篇文档，回答因果问题，并给出从原因到结果排列的证据事件 ID 和置信度。任务 A 给文档、事件列表和因果边，权重 **60%**；B 给文档和候选事件但需自行判断因果方向，权重 **30%**；C 涵盖事件抽取、反事实、冲突证据和无答案问题，权重 **10%**。[本地抽样测试集](数据集/抽样测试集_100/)共 A 210、B 350、C 200，合计 **760 题**。其中本地 B/C 文件包只有文档和问题，缺少网页描述中的候选事件列表。代码按实际文件处理，暂用文档 ID 作 B/C 证据候选；取得正式数据后须核对。
+目标是读取多篇文档，回答因果问题，并给出从原因到结果排列的证据事件 ID 和置信度。任务 A 给文档、事件列表和因果边，权重 **60%**；B 给文档和候选事件但需自行判断因果方向，权重 **30%**；C 涵盖事件抽取、反事实、冲突证据和无答案问题，权重 **10%**。[本地抽样测试集](数据集/抽样测试集_100/)共 A 210、B 350、C 200，合计 **760 题**。2026-10-04 收到的赛题 4 补充包中，494 份文档和 50 份问题文件与仓库已有文件逐字节一致，新增的 50 份 B 类事件列表已合并；C 类目前仍只有文档和问题，暂用文档 ID 作为候选证据 ID。
 
 初赛提交单个 UTF-8 JSON 数组，网页示例的每题字段如下：
 
@@ -33,7 +33,7 @@
 
 无法确定时按网页示例写 `"answer":"无法确定"`、`"evidence_chain":[]`、`"confidence":null`。评测按答案正确性 **40%**、证据链准确性 **40%**、置信度与拒答 **20%** 计分；单个 JSON 覆盖 A/B/C。每天最多提交三次，算法和结果须可复现。规则要求符合条件的开源模型，禁止直接用闭源 API 生成正式参赛预测，也禁止人工标注测试答案。DeepSeek 托管 API 脚本仅作研究诊断。
 
-**待平台澄清：** 当前数据存在 `question_type=unanswerable`，网页示例主要列出 `retrospective`、`prospective`、`counterfactual`；FAQ 对拒答又提到 `null`。程序目前原样保留输入的 `question_type`，只做本地结构校验，不擅自改映射。线上评测和官方 `sample_submission.json` / 校验脚本开放后，再按官方要求复核。
+**待平台澄清：** 当前数据存在 `question_type=unanswerable`，网页示例主要列出 `retrospective`、`prospective`、`counterfactual`。根据赛事问答中“无法回答题按 null 输出”的现有理解，程序将这类题的提交字段 `question_type` 写为 JSON `null`；输入题型仍保留给模型。训练集 937 道此类题中，有 93 道的金标答案含对错误前提或冲突的解释及非空证据链，因此代码不强制所有 `unanswerable` 都写成同一种拒答。此映射尚未通过平台反馈证实。
 
 ## 方法核查
 
@@ -41,13 +41,13 @@
 
 | 方法 | 实际使用 | 当前边界 |
 | --- | --- | --- |
-| `graph` | A 档给定有向因果边搜索路径、模板作答 | B/C 无边时只保守定位单个文档；答案模板粗 |
-| `bm25_bert` | 中文字符词 BM25（词频、IDF、长度归一化）加本地 BGE-small-zh-v1.5 BERT 编码器余弦相似度排序，复用图链与模板答案 | 真正使用了 BM25 与 BERT 语义重排；并非 BERT 因果分类器，答案生成能力与 `graph` 相同 |
-| `rag` | BM25 检索候选，保留题目明确点名的文档，再交本地模型生成 | 真正先检索再生成；并非向量 RAG，检索可能漏跨文档证据 |
+| `graph` | A 档给定有向因果边搜索路径，再从对应原文抽取相关句子作答 | B/C 无边时只保守定位单个事件；不能凭相关性杜撰因果边 |
+| `bm25_bert` | 中文字符词 BM25（词频、IDF、长度归一化）加本地 BGE-small-zh-v1.5 BERT 编码器余弦相似度排序，复用图链与原文句子答案 | 真正使用 BM25 与 BERT 语义重排；并非 BERT 因果分类器 |
+| `rag` | BM25 检索候选，保留题目点名和候选链涉及的文档，再交本地模型生成 | 真正先检索再生成；检索可能漏跨文档证据 |
 | `llama3` | 全量材料送本地兼容接口或离线 Hugging Face 模型，复用统一校验 | 通用本地模型适配器；仓库没有 Llama3-8B 权重，未验证真正 Llama3-8B 效果 |
-| `run_deepseek.py` | 全量材料送兼容 Chat Completions 接口 | 已跑通托管 DeepSeek 单题结构；托管 API 不作为正式提交路径 |
+| `run_deepseek.py` | 全量材料送兼容 Chat Completions 接口，支持有序并发、格式修复和断点续跑 | 托管 API 仅作研究诊断，不作为正式提交路径 |
 
-本地校验检查五个字段、证据 ID 与题目覆盖，**不证明答案事实、因果方向或官方得分正确**。图方法和 BM25+BERT 曾对本地 760 题全部生成并通过结构校验；训练集前 100 题的证据链完全匹配率分别约 0.38 和 0.37。RAG 接口与离线模型加载路径已试过，所用 0.5B 小模型在真实样例上未稳定给出合格 JSON。官方公开综合分（图 25.52、BM25+BERT 40.20、普通 RAG 40.48、Llama3-8B 50.85、DeepSeek-V4-Flash 57.61）不能直接套用到本仓库实现。
+本地校验检查五个字段、证据 ID、拒答约束与 760 题覆盖。训练集诊断另算答案字符 F1、可选 BERT 语义相似度、证据节点/边和拒答正确率，**均不是官方评分公式**；测试集没有标准答案，不能计算它的官方得分。图方法已经对补充后的 760 题全部生成并通过结构校验。官方公开综合分（图 25.52、BM25+BERT 40.20、普通 RAG 40.48、Llama3-8B 50.85、DeepSeek-V4-Flash 57.61）不能直接套用到本仓库实现。
 
 ## 代码结构
 
@@ -57,7 +57,7 @@
 | [`task4_api.py`](task4_api.py) | 兼容 Chat Completions 的 URL、Key、诊断和请求 |
 | [`run_baselines.py`](run_baselines.py) | BM25、BERT 排序、图路径、RAG、本地模型与方法命令行 |
 | [`run_deepseek.py`](run_deepseek.py) | DeepSeek/兼容接口的研究命令行，复用核心与接口代码 |
-| [`evaluate_baselines.py`](evaluate_baselines.py) | 仅训练集诊断时读取标准答案；推理代码不读 `gold` |
+| [`evaluate_baselines.py`](evaluate_baselines.py) | 仅训练集诊断时读取标准答案，输出答案和证据链等代理指标；推理代码不读 `gold` |
 | `test_run_*.py` | 不需真实 Key 的测试 |
 | [`数据集/`](数据集/) · `docs/赛事网页内容/` | 原始数据 · 六张赛事截图 |
 
@@ -72,10 +72,15 @@ python run_baselines.py --method bm25_bert --track A --limit 3 --embedding-model
 python run_baselines.py --method rag --track A --limit 3 --local-hf-model models/YOUR_OPEN_MODEL --output outputs/rag_a.json
 python run_baselines.py --method llama3 --track A --limit 3 --api-url http://127.0.0.1:8000/v1 --model YOUR_LOCAL_LLAMA3_MODEL --output outputs/llama3_a.json
 python run_deepseek.py --dry-run --track A --limit 3
+python run_deepseek.py --track all --limit 0 --workers 6 --output outputs/deepseek_research_760.json --api-url https://api.deepseek.com --model deepseek-flash --api-key-file C:/path/to/key.txt
+python run_deepseek.py --track all --limit 0 --validate outputs/deepseek_research_760.json
+python evaluate_baselines.py --predictions outputs/graph_train.json --train-root 数据集/训练集
 python -m unittest -q test_run_deepseek.py test_run_baselines.py
 ```
 
-`bm25_bert` 需要本地 [BAAI/bge-small-zh-v1.5](https://huggingface.co/BAAI/bge-small-zh-v1.5) 权重和 `sentence-transformers`；RAG 离线模式需要本地开源生成权重、`torch`、`transformers`。模型权重不在 Git 中。RAG 也可接已启动的本机 Chat Completions 服务（`--api-url`、`--model`）。研究 DeepSeek 托管 API 可运行 `python run_deepseek.py --probe-api --api-url https://api.deepseek.com --model deepseek-flash`；Key 从交互输入或 `--api-key-file` 读取，不能提交 Key 或实验输出。取得官方校验脚本后还须用它复核。
+`bm25_bert` 需要本地 [BAAI/bge-small-zh-v1.5](https://huggingface.co/BAAI/bge-small-zh-v1.5) 权重和 `sentence-transformers`；RAG 离线模式需要本地开源生成权重、`torch`、`transformers`。模型权重不在 Git 中。RAG 也可接已启动的本机 Chat Completions 服务（`--api-url`、`--model`）。DeepSeek 托管 API 的 Key 从交互输入或 `--api-key-file` 读取，不能提交 Key 或实验输出。完整研究运行可断点续跑，但托管 DeepSeek 结果不能作为正式参赛提交。
+
+DeepSeek 官方[更新记录](https://api-docs.deepseek.com/updates/)说明：2026-09-10 起 `deepseek-flash` 指向 **V4.1 Flash**，旧 V4 Flash 已退役，旧别名也转接 V4.1。因此当前 API 实验与赛方公开的“DeepSeek-V4-Flash 57.61”并非同一模型版本，且测试集无金标，不能直接核对该分数。
 
 ## 赛事页面截图
 

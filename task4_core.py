@@ -11,7 +11,7 @@ DEFAULT_DATASET = REPO_ROOT / "数据集" / "抽样测试集_100"
 
 SYSTEM_PROMPT = """你是赛题4的证据约束问答系统。只依据用户消息给出的文档、事件和因果关系回答；不得使用外部知识补齐材料缺口。
 请输出一个 JSON 对象，且仅包含 answer、evidence_chain、confidence 三个字段。
-answer：简洁回答问题，覆盖有材料支持的关键事实；若材料不足、互相冲突或问题前提无法确认，严格写“无法确定”。反事实问题只作有边界推断，不把可能性说成确定事实。
+answer：结合原文而不只依赖事件名称，简洁回答问题并覆盖有材料支持的关键事实；若材料不足、互相冲突或问题前提无法确认，可写“无法确定”或给出有证据的限定解释。输入 question_type 为 unanswerable 时尤其要核查错误前提与冲突证据；不能凭题型直接猜答案。反事实问题只作有边界推断，不把可能性说成确定事实。
 evidence_chain：按原因到结果顺序排列的事件 ID。给定事件列表时使用其中的 event_id；未给定事件列表时，现有数据每篇文档对应一个候选事件，使用相应的 D001 等文档 ID。不要添加材料中不存在的 ID，不要把时间先后自动当作因果。
 confidence：可回答时给出 0 到 1 的数值；回答“无法确定”时为 null，证据链必须为空数组。
 任务 A 若给出因果边，优先使用有向边支持的路径；任务 B/C 没有边时，需要从文档判断因果方向。所有结论都须受材料约束。"""
@@ -165,7 +165,7 @@ def parse_prediction(raw: str, sample: Sample, allowed_ids: set[str]) -> dict:
         "answer": answer,
         "evidence_chain": chain,
         "confidence": confidence,
-        "question_type": sample.question_type,
+        "question_type": None if sample.question_type == "unanswerable" else sample.question_type,
     }
 
 

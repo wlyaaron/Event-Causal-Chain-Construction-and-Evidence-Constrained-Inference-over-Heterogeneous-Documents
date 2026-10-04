@@ -12,6 +12,7 @@ import hashlib
 import json
 import os
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import urlsplit
 
@@ -23,6 +24,37 @@ from task4_api import (DEFAULT_API_URL, DEFAULT_MODEL, completion_url,
 
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = REPO_ROOT / "outputs" / "deepseek_predictions.json"
+
+def predict(sample: Sample, endpoint: str, api_key: str, model: str,
+            timeout: int, retries: int, max_tokens: int,
+            max_input_chars: int, json_mode: bool) -> tuple[dict, bool]:
+    content, allowed_ids, edges = build_input(sample, max_input_chars)
+    for correction in range(2):
+        output_cap = max_tokens
+        for expansion in range(3):
+            try:
+                raw = call_model(endpoint, api_key, model, content, timeout, retries,
+                                 output_cap, json_mode=json_mode)
+                break
+            except ValueError as exc:
+                if "max_tokens 截断" not in str(exc) or expansion == 2:
+                    raise
+                output_cap = min(output_cap * 2, 32768)
+        try:
+            record = parse_prediction(raw, sample, allowed_ids)
+            chain = record["evidence_chain"]
+            unsupported = bool(edges and any((a, b) not in edges for a, b in zip(chain, chain[1:])))
+            return record, unsupported
+        except ValueError as exc:
+            if correction:
+                if sample.question_type == "unanswerable":
+                    fallback = '{"answer":"无法确定","evidence_chain":[],"confidence":null}'
+                    return parse_prediction(fallback, sample, allowed_ids), False
+                raise
+            content += ("\n\n上一版输出未通过提交格式校验：" + str(exc)
+                        + "。请仅输出修正后的 JSON；证据链只用上述真实事件 ID。"
+                          "无法确定且没有可核查证据时，使用精确拒答格式。")
+    raise AssertionError("unreachable")
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="赛题4 DeepSeek API 实验基线；默认只试运行 3 题")
@@ -38,6 +70,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--max-tokens", type=int, default=8192,
                         help="单次最大生成 token 数，含模型思考；默认 8192")
     parser.add_argument("--max-input-chars", type=int, default=80000)
+    parser.add_argument("--workers", type=int, default=1, help="并发请求数，1 到 8；结果仍按问题顺序保存")
     parser.add_argument("--dry-run", action="store_true", help="只检查数据和输入规模，不调用 API")
     parser.add_argument("--probe-api", action="store_true", help="用两条短消息依次测试基础调用与 JSON 模式，不发送数据集")
     parser.add_argument("--no-json-mode", action="store_true", help="不向 API 发送 response_format，仍要求模型输出 JSON")
@@ -79,6 +112,9 @@ def main(argv: list[str] | None = None) -> int:
             print("未发出 API 请求；未读取 gold 答案。")
             return 0
 
+        if not 1 <= args.workers <= 8:
+            raise ValueError("--workers 必须在 1 到 8 之间")
+
         endpoint, api_key, model = read_api_settings(args)
         signature = hashlib.sha256("\n".join(s.sample_id for s in samples).encode()).hexdigest()
         metadata = {"dataset": str(args.dataset.resolve()), "track": args.track,
@@ -91,17 +127,25 @@ def main(argv: list[str] | None = None) -> int:
         if store.completed:
             print(f"从 {len(store.completed)} 条已保存结果继续")
 
-        for index, sample in enumerate(samples[len(store.completed):], len(store.completed) + 1):
-            content, allowed_ids, edges = build_input(sample, args.max_input_chars)
-            raw = call_model(endpoint, api_key, model, content, args.timeout,
-                             args.retries, args.max_tokens,
-                             json_mode=not args.no_json_mode)
-            record = parse_prediction(raw, sample, allowed_ids)
-            chain = record["evidence_chain"]
-            if edges and any((a, b) not in edges for a, b in zip(chain, chain[1:])):
-                print(f"提示：{sample.sample_id} 的证据链含未在给定图中直接列出的相邻边，请人工复核。", file=sys.stderr)
-            store.append(record)
-            print(f"[{index}/{len(samples)}] {sample.sample_id} 已保存", flush=True)
+        def work(sample: Sample) -> tuple[dict, bool]:
+            return predict(sample, endpoint, api_key, model, args.timeout,
+                           args.retries, args.max_tokens, args.max_input_chars,
+                           not args.no_json_mode)
+
+        start = len(store.completed)
+        with ThreadPoolExecutor(max_workers=args.workers) as pool:
+            pending = {}
+            next_submit = start
+            for index in range(start, len(samples)):
+                while next_submit < min(len(samples), index + args.workers):
+                    pending[next_submit] = pool.submit(work, samples[next_submit])
+                    next_submit += 1
+                record, unsupported = pending.pop(index).result()
+                sample = samples[index]
+                if unsupported:
+                    print(f"提示：{sample.sample_id} 的证据链含未在给定图中直接列出的相邻边，请人工复核。", file=sys.stderr)
+                store.append(record)
+                print(f"[{index + 1}/{len(samples)}] {sample.sample_id} 已保存", flush=True)
 
         store.finish()
         print(f"完成：{store.output}。官方赛事禁止闭源 API；正式提交须使用符合规则的离线开源模型，并复核答案和证据链。")

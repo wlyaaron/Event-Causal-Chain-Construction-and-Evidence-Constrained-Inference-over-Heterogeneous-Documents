@@ -240,23 +240,55 @@ def select_chain(question: str, pack: Pack,
             return [max(incoming[candidate], key=lambda name: scores.get(name, 0)), candidate]
         if outgoing[candidate]:
             return [candidate, max(outgoing[candidate], key=lambda name: scores.get(name, 0))]
-    # B/C downloaded data contains neither an event list nor known causal edges.
-    # A single identified document is safer than inventing an ordered causal edge.
+    # B now has event lists but no known causal edges; C has neither.
+    # Retrieval alone does not prove a causal edge.
     return [explicit[-1]] if explicit else [ranking[0][0].event_id]
 
 
+def evidence_sentences(question: str, pack: Pack, chain: list[str],
+                       max_chars: int = 420,
+                       encoder: BertEncoder | None = None) -> list[str]:
+    """Extract source sentences from documents attached to the selected events."""
+    lookup = {candidate.event_id: candidate for candidate in pack.candidates}
+    selected: list[str] = []
+    used: set[str] = set()
+    for event_id in chain:
+        candidate = lookup[event_id]
+        document = pack.documents.get(candidate.doc_id, "")
+        sentences = [part.strip() for part in re.split(r"(?<=[。！？；;])|\n+", document)
+                     if part.strip()]
+        sentences = [part for part in sentences if 8 <= len(part) <= 250] or sentences
+        if not sentences:
+            continue
+        scores = bm25_scores(question + " " + candidate.label, sentences)
+        if encoder is not None:
+            maximum = max(scores, default=0) or 1.0
+            semantic = encoder.scores(question, sentences)
+            scores = [0.4 * lexical / maximum + 0.6 * max(0.0, meaning)
+                      for lexical, meaning in zip(scores, semantic)]
+        best = max(range(len(sentences)), key=lambda i: scores[i])
+        sentence = sentences[best]
+        if sentence not in used and sum(map(len, selected)) + len(sentence) <= max_chars:
+            selected.append(sentence)
+            used.add(sentence)
+    return selected
+
+
 def template_prediction(sample: common.Sample, pack: Pack,
-                        ranking: list[tuple[Candidate, float]]) -> dict:
+                        ranking: list[tuple[Candidate, float]],
+                        encoder: BertEncoder | None = None) -> dict:
     if sample.question_type == "unanswerable":
         raw = {"answer": "无法确定", "evidence_chain": [], "confidence": None}
     else:
         chain = select_chain(sample.question, pack, ranking)
         labels = {candidate.event_id: candidate.label for candidate in pack.candidates}
+        excerpts = evidence_sentences(sample.question, pack, chain, encoder=encoder)
+        factual_text = " ".join(excerpts)
         if not chain:
             raw = {"answer": "无法确定", "evidence_chain": [], "confidence": None}
         elif len(chain) == 1:
             node = chain[0]
-            raw = {"answer": f"材料中可定位到{node}（{labels[node]}）；现有证据不足以确认更完整的因果传导。",
+            raw = {"answer": factual_text or labels[node],
                    "evidence_chain": chain, "confidence": 0.5}
         else:
             path = " → ".join(f"{name}（{labels[name]}）" for name in chain)
@@ -266,7 +298,12 @@ def template_prediction(sample: common.Sample, pack: Pack,
             confidence = (0.9 if levels and all(level == "certain" for level in levels)
                           else 0.7 if levels and all(level in {"certain", "probable"} for level in levels)
                           else 0.5)
-            raw = {"answer": f"按给定因果关系，可追溯的事件链为：{path}。",
+            if sample.question_type == "counterfactual":
+                answer = (f"若题述原因未发生，给定因果链 {path} 的对应传导将失去依据；"
+                          "其它因素可能造成的结果无法仅凭现有材料确定。")
+            else:
+                answer = f"{factual_text} 据给定因果关系，事件顺序为：{path}。".strip()
+            raw = {"answer": answer,
                    "evidence_chain": chain, "confidence": confidence}
     allowed = {candidate.event_id for candidate in pack.candidates}
     return common.parse_prediction(json.dumps(raw, ensure_ascii=False), sample, allowed)
@@ -275,6 +312,9 @@ def template_prediction(sample: common.Sample, pack: Pack,
 def rag_input(sample: common.Sample, pack: Pack,
               ranking: list[tuple[Candidate, float]], top_k: int) -> str:
     selected_ids = {candidate.doc_id for candidate, _ in ranking[:top_k]}
+    chain_ids = select_chain(sample.question, pack, ranking)
+    lookup = {candidate.event_id: candidate for candidate in pack.candidates}
+    selected_ids.update(lookup[event_id].doc_id for event_id in chain_ids)
     # Explicitly referenced documents must not be dropped by retrieval.
     selected_ids.update(name for name in ID_PATTERN.findall(sample.question) if name in pack.documents)
     payload = {
@@ -284,6 +324,7 @@ def rag_input(sample: common.Sample, pack: Pack,
                                 for name, text in pack.documents.items() if name in selected_ids],
         "events": pack.events,
         "causal_relations": pack.edges or None,
+        "candidate_chain": chain_ids,
         "retrieval_note": "只可用已给材料。未检索到的文档不能凭记忆补全；若关键证据不足，请拒答。",
     }
     return json.dumps(payload, ensure_ascii=False, separators=(",", ":"))
@@ -355,7 +396,7 @@ def run(argv: list[str] | None = None) -> int:
             ranking = rank_candidates(sample.question, pack, encoder,
                                       hybrid=args.method == "bm25_bert")
             if args.method in {"graph", "bm25_bert"}:
-                record = template_prediction(sample, pack, ranking)
+                record = template_prediction(sample, pack, ranking, encoder)
             else:
                 content = (rag_input(sample, pack, ranking, args.top_k)
                            if args.method == "rag" else common.build_input(sample)[0])

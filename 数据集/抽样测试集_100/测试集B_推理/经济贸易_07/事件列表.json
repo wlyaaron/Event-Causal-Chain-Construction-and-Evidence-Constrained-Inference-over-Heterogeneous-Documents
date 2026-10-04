@@ -1,0 +1,354 @@
+[
+  {
+    "event_id": "D001",
+    "doc_id": "D001",
+    "event_type": "政策落地",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "2023-04-02，OPEC+减产正式在维也纳启动。OPEC+作为核心参与方，此次减产将对产业链、供应链产生深远影响。业内普遍认为，自愿减产160万桶/日，标志着经济发展进入新阶段。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 6,
+    "end": 8,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D001",
+        "start": 6,
+        "end": 8
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D001",
+        "start": 1,
+        "end": 6
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D001",
+        "start": 72,
+        "end": 75
+      }
+    ]
+  },
+  {
+    "event_id": "D002",
+    "doc_id": "D002",
+    "event_type": "市场反应",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "针对2023-04-02在维也纳推出的OPEC+减产，维也纳主管部门召开新闻发布会进行解读。OPEC+负责人指出，减产政策旨在优化资源配置、激发市场活力。自愿减产160万桶/日，预计将为经济增长注入强劲动力。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D002",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D002",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D002",
+        "start": 70,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "event_id": "D003",
+    "doc_id": "D003",
+    "event_type": "企业行动",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "2023-04-02OPEC+减产消息传出后，资本市场迅速作出反应。OPEC+相关概念股集体异动，维也纳主要股指出现波动。分析师认为，减产的落地将重塑行业格局，自愿减产160万桶/日，投资者应密切关注中长期布局机会。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 11,
+    "end": 13,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D003",
+        "start": 11,
+        "end": 13
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D003",
+        "start": 6,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "event_id": "D004",
+    "doc_id": "D004",
+    "event_type": "专家分析",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "OPEC+减产在维也纳的推进引发企业界高度关注。OPEC+纷纷调整战略布局，围绕减产寻找新的增长点。多家龙头企业表示将加大投入力度，自愿减产160万桶/日，抢占发展先机。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 11,
+    "end": 13,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D004",
+        "start": 11,
+        "end": 13
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D004",
+        "start": 6,
+        "end": 11
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D004",
+        "start": 70,
+        "end": 73
+      }
+    ]
+  },
+  {
+    "event_id": "D005",
+    "doc_id": "D005",
+    "event_type": "行业影响",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "围绕2023-04-02的OPEC+减产，多位经济学家展开深入讨论。专家指出，OPEC+在维也纳推动的减产举措，从宏观层面看自愿减产160万桶/日，有望成为稳增长、促转型的重要抓手。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D005",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D005",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D005",
+        "start": 66,
+        "end": 69
+      }
+    ]
+  },
+  {
+    "event_id": "D006",
+    "doc_id": "D006",
+    "event_type": "中小企业影响",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "OPEC+减产在维也纳的推进对中小企业影响深远。OPEC+中的中小微企业普遍反映，减产既带来机遇也伴随挑战。自愿减产160万桶/日，亟需政府出台针对性扶持政策，帮助中小企业平稳过渡。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D006",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D006",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "event_id": "D007",
+    "doc_id": "D007",
+    "event_type": "国际合作",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "OPEC+减产在维也纳的落地引发全球经济界关注。OPEC+与国际同行的互动表明，减产已成为全球经济格局调整的重要变量。自愿减产160万桶/日，中国在这一进程中的角色备受关注。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D007",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D007",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D007",
+        "start": 12,
+        "end": 15
+      }
+    ]
+  },
+  {
+    "event_id": "D008",
+    "doc_id": "D008",
+    "event_type": "成效评估",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "OPEC+减产实施已近一周年，维也纳各界对其成效进行总结评估。OPEC+普遍反映，减产政策在多个维度展现出积极效果，自愿减产160万桶/日。下一步，维也纳主管部门将根据实践经验进一步优化完善。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D008",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D008",
+        "start": 0,
+        "end": 5
+      }
+    ]
+  },
+  {
+    "event_id": "D009",
+    "doc_id": "D009",
+    "event_type": "趋势展望",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "2023-04-02的OPEC+减产为行业发展指明了方向。OPEC+在维也纳的实践表明，减产正在成为推动产业升级的关键力量。自愿减产160万桶/日，未来行业发展将呈现新的特征和趋势。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 11,
+    "end": 13,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D009",
+        "start": 11,
+        "end": 13
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D009",
+        "start": 6,
+        "end": 11
+      }
+    ]
+  },
+  {
+    "event_id": "D010",
+    "doc_id": "D010",
+    "event_type": "战略意义",
+    "trigger_word": "减产",
+    "argument": {
+      "主体": "OPEC+",
+      "地点": "维也纳",
+      "内容": "OPEC+减产在维也纳的推出并非偶然，OPEC+围绕减产作出的战略部署折射出经济发展的深层逻辑。2023-04-02以来，自愿减产160万桶/日，为高质量发展奠定了坚实基础。",
+      "影响": "自愿减产160万桶/日"
+    },
+    "occur_time": "2023-04-02",
+    "start": 5,
+    "end": 7,
+    "source_spans": [
+      {
+        "field": "trigger_word",
+        "text": "减产",
+        "doc_id": "D010",
+        "start": 5,
+        "end": 7
+      },
+      {
+        "field": "主体",
+        "text": "OPEC+",
+        "doc_id": "D010",
+        "start": 0,
+        "end": 5
+      },
+      {
+        "field": "地点",
+        "text": "维也纳",
+        "doc_id": "D010",
+        "start": 79,
+        "end": 82
+      }
+    ]
+  }
+]
