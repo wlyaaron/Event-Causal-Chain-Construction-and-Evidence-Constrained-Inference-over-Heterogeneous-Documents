@@ -37,6 +37,8 @@
 
 ## 方法核查
 
+模型无关的检索与核验探索、训练集证据覆盖审计及论文来源见[赛题 4 优化研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。
+
 这些代码依据公开描述**独立实现同类方法**。主办方未公开基线源代码、模型权重或提示词，不能声称复现其分数。
 
 | 方法 | 实际使用 | 当前边界 |
@@ -47,7 +49,7 @@
 | `llama3` | 全量材料送本地兼容接口或离线 Hugging Face 模型，复用统一校验 | 通用本地模型适配器；仓库没有 Llama3-8B 权重，未验证真正 Llama3-8B 效果 |
 | `run_deepseek.py` | 全量材料送兼容 Chat Completions 接口，支持有序并发、格式修复和断点续跑 | 托管 API 仅作研究诊断，不作为正式提交路径 |
 
-本地校验检查五个字段、证据 ID、拒答约束与 760 题覆盖。训练集诊断另算答案字符 F1、可选 BERT 语义相似度、证据节点/边和拒答正确率，**均不是官方评分公式**；测试集没有标准答案，不能计算它的官方得分。图方法和 BM25+BERT 已对补充后的 760 题全部生成并通过结构校验；训练集前 100 题的链完全匹配率分别为 0.46、0.45，未复现赛事表中 BM25+BERT 相对图方法的明显优势。RAG 接口在 B 类 3 题上生成合格 JSON；本地 Qwen2.5-0.5B-Instruct 实测输出不稳定，只靠保守拒答兜底通过结构校验，不能据此证明答案质量。官方公开综合分（图 25.52、BM25+BERT 40.20、普通 RAG 40.48、Llama3-8B 50.85、DeepSeek-V4-Flash 57.61）不能直接套用到本仓库实现。
+本地校验检查五个字段、证据 ID、拒答约束与 760 题覆盖。训练集诊断另算答案字符 F1、可选 BERT 语义相似度、证据节点/边和拒答正确率；这些指标可用于本地估分与方案比较，但细项实现不等于未公开的官方评分脚本。测试集没有标准答案，不能自行精确重算平台分数。2026-10-04 提交的 DeepSeek 研究输出获平台总分 **59.55**，A/B/C 为 **64.96/51.35/51.67**，按 60/30/10 加权一致。官方基线表中 DeepSeek 的 A/B/C 分数按公开权重计算为 61.68，却另列综合 57.61，口径待核实；详见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。图方法和 BM25+BERT 已对补充后的 760 题全部生成并通过结构校验；训练集前 100 题的链完全匹配率分别为 0.46、0.45，未复现赛事表中 BM25+BERT 相对图方法的明显优势。RAG 接口在 B 类 3 题上生成合格 JSON；本地 Qwen2.5-0.5B-Instruct 实测输出不稳定，只靠保守拒答兜底通过结构校验，不能据此证明答案质量。
 
 生成模型若连续两次输出无效 JSON 或答题时不附证据链，会记录日志并保守输出“无法确定”。模型输出的“无法确定：……”等无证据拒答会规范成完全一致的拒答格式。应统计这些兜底题并人工复核，不能把格式通过当作答题正确。
 
@@ -74,6 +76,7 @@ DeepSeek 的盲测输出按 A/B/C 分别为 210/350/200 题，精确拒答 13/66
 | [`run_baselines.py`](run_baselines.py) | BM25、BERT 排序、图路径、RAG、本地模型与方法命令行 |
 | [`run_deepseek.py`](run_deepseek.py) | DeepSeek/兼容接口的研究命令行，复用核心与接口代码 |
 | [`evaluate_baselines.py`](evaluate_baselines.py) | 仅训练集诊断时读取标准答案，输出答案和证据链等代理指标；推理代码不读 `gold` |
+| [`task4_workflow.py`](task4_workflow.py) · [`experiments/`](experiments/) | 证据提示、训练集检索与生成配对实验、公开权重核查；方法与局限见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md) |
 | `test_run_*.py` | 不需真实 Key 的测试 |
 | [`数据集/`](数据集/) · `docs/赛事网页内容/` | 原始数据 · 六张赛事截图 |
 
@@ -93,6 +96,7 @@ python run_deepseek.py --track all --limit 0 --validate outputs/deepseek_researc
 python run_baselines.py --method graph --dataset 数据集/训练集 --track train --limit 100 --output outputs/graph_train_100.json
 python evaluate_baselines.py --predictions outputs/graph_train_100.json --train-root 数据集/训练集
 python evaluate_baselines.py --predictions outputs/graph_760.json --test-root 数据集/抽样测试集_100
+python -m experiments.check_published_scores --a 64.96 --b 51.35 --c 51.67 --reported-total 59.55
 python -m unittest -q test_run_deepseek.py test_run_baselines.py
 ```
 
