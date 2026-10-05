@@ -196,15 +196,19 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
             for sample in by_pack[pack]:
                 item = gold[sample.sample_id]
                 flags = flags_for(item, sample, event_ids, doc_ids, edges)
+                answer = item.get("answers")
+                if (split := assignment[pack.name]) != "fit" and isinstance(answer, str) and (
+                    normalized(sample.question), normalized(answer)) in fit_qa:
+                    # A repeated question/answer template is an evaluation stratum,
+                    # not proof that the underlying documents or causal chain leaked.
+                    flags.append("same_question_answer_as_fit")
                 flag_counts.update(flags)
-                split = assignment[pack.name]
                 for view in "ABC":
                     content, allowed, _ = workflow.training_view_input(sample, view)
                     input_lengths[view].append(len(content))
                     alternatives = compatible_chains(item, allowed)
                     chosen = choose_chain(item, allowed, sample.question,
                                           edges if view == "A" else None)
-                    answer = item.get("answers")
                     reason = None
                     if chosen is None:
                         reason = "no_compatible_gold_path"
@@ -212,9 +216,6 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                         reason = "invalid_answer"
                     elif (answer.strip() == "无法确定") != (chosen == []):
                         reason = "answer_chain_refusal_conflict"
-                    elif split != "fit" and (normalized(sample.question),
-                                               normalized(answer)) in fit_qa:
-                        reason = "same_question_answer_as_fit"
                     if reason:
                         quarantined.append({"pack": pack.name, "sample_id": sample.sample_id,
                                             "split": split, "view": view, "reason": reason,
@@ -251,7 +252,7 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                "quarantine_count": len(quarantined),
                "quarantine_reasons_by_view": dict(sorted(Counter(
                    f"{row['view']}:{row['reason']}" for row in quarantined).items())),
-               "note": "A/B/C are separate input views. Every compatible intact gold chain is retained as metadata; targets use one intact alternative, preferring given A edges but never excluding a chain solely for an absent edge. Targets omit numeric confidence. Structurally incompatible labels and validation/holdout exact question+answer matches to fit are quarantined; question-only templates are audited, not called answer leaks."}
+               "note": "A/B/C are separate input views. Every compatible intact gold chain is retained as metadata; targets use one intact alternative, preferring given A edges but never excluding a chain solely for an absent edge. Targets omit numeric confidence. Structurally incompatible labels are quarantined. Cross-pack matching question+answer text is flagged for separate evaluation, not automatically treated as leakage because exact matching documents are already grouped."}
     core.atomic_json(output_dir / "summary.json", summary)
     return summary
 

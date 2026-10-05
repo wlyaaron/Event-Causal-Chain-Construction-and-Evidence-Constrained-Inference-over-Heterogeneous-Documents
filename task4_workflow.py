@@ -245,7 +245,12 @@ def question_conditioned_paths(sample: core.Sample, limit: int = 5,
 
 def causal_path_input(sample: core.Sample, view: str = "A") -> tuple[str, set[str], dict]:
     """Provide typed, question-ranked causal paths with source excerpts."""
-    original, allowed, _ = training_view_input(sample, view)
+    if sample.track == "train":
+        original, allowed, _ = training_view_input(sample, view)
+    else:
+        if sample.track != view:
+            raise ValueError("inference view must match the sample track")
+        original, allowed, _ = core.build_input(sample)
     if view != "A":
         return original, allowed, {"candidate_paths": [], "relation_count": 0}
     documents, events, edges = core.load_pack(sample.pack)

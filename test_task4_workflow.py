@@ -9,9 +9,22 @@ from pathlib import Path
 
 import task4_core as core
 import task4_workflow as workflow
+from experiments.run_full_causal_path_research import input_for
 
 
 class WorkflowTests(unittest.TestCase):
+    def test_full_research_changes_only_a_view(self) -> None:
+        for track in "ABC":
+            sample = core.discover_samples(core.DEFAULT_DATASET, track, 1)[0]
+            original, allowed, _ = core.build_input(sample)
+            content, selected_allowed = input_for(sample)
+            self.assertEqual(allowed, selected_allowed)
+            if track == "A":
+                self.assertIn("因果路径核验索引", content)
+                self.assertIn(original, content)
+            else:
+                self.assertEqual(original, content)
+
     def test_question_anchor_is_kept_and_gold_is_never_in_prompt(self) -> None:
         (core.REPO_ROOT / "outputs").mkdir(exist_ok=True)
         with tempfile.TemporaryDirectory(dir=core.REPO_ROOT / "outputs") as directory:
@@ -76,6 +89,12 @@ class WorkflowTests(unittest.TestCase):
             self.assertNotIn("SECRET_GOLD_SENTINEL", prompt)
             self.assertEqual({f"D{number:03d}" for number in range(1, 5)}, allowed)
             self.assertEqual(["D002", "D003"], meta["candidate_paths"][0])
+            test_sample = core.Sample(pack, "A", "demo_Q03", "retrospective",
+                                      "D002 的直接下游事件是什么？")
+            test_prompt, test_allowed, test_meta = workflow.causal_path_input(test_sample)
+            self.assertEqual(allowed, test_allowed)
+            self.assertEqual(paths[0], test_meta["candidate_paths"][0])
+            self.assertNotIn("SECRET_GOLD_SENTINEL", test_prompt)
 
 
 if __name__ == "__main__":

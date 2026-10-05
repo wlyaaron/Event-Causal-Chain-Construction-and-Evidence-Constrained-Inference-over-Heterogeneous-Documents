@@ -71,6 +71,8 @@
 
 DeepSeek 的盲测输出按 A/B/C 分别为 210/350/200 题，精确拒答 13/66/59 题，平均链长 4.04/2.66/2.44。A 类有 47 题的链存在未在给定边表中直接列出的相邻节点，需要复核；训练集金标中也存在这种跳跃，不能据此直接判错。运行日志记录 6 道因两次格式失败而保守拒答的题。
 
+2026-10-06 用同一 API 别名完成 760 题研究复跑并通过结构校验：A 使用题目条件化局部路径索引，B/C 保持原输入和基线运行器。A 的同期原始提示→新提示对照中，给定边支持比例 84.0%→97.9%，但平均链长 4.14→3.60，完整长链可能被截短。B/C 即使方法不变，跨日输出也有明显波动；测试题没有 gold，因此这次复跑**没有新的官方分数，也不能证明 59.55 已提高**。实验设计、逐档汇总和微调数据 v3 决策见[持续研究记录](docs/赛题4_因果流程与微调数据研究_2026-10-05.md)。
+
 ## 代码结构
 
 | 位置 | 职责 |
@@ -84,6 +86,7 @@ DeepSeek 的盲测输出按 A/B/C 分别为 210/350/200 题，精确拒答 13/66
 | [`experiments/audit_training_data.py`](experiments/audit_training_data.py) · [`experiments/prepare_finetune_data.py`](experiments/prepare_finetune_data.py) | 训练集质量审计、A/B/C 视图样本、按包划分与隔离报告；训练内容仅在 `outputs/` |
 | [`experiments/run_path_answer_pair.py`](experiments/run_path_answer_pair.py) · [`experiments/evaluate_path_answer_pair.py`](experiments/evaluate_path_answer_pair.py) | 研究专用同模型配对与代理指标；API 输出不可用于训练或正式提交 |
 | [`experiments/run_causal_path_pair.py`](experiments/run_causal_path_pair.py) · [`experiments/audit_causal_path_candidates.py`](experiments/audit_causal_path_candidates.py) | 冻结 A 档包隔离配对、核验局部候选覆盖；研究输出仅在 `outputs/` |
+| [`experiments/run_full_causal_path_research.py`](experiments/run_full_causal_path_research.py) · [`experiments/compare_full_causal_path_research.py`](experiments/compare_full_causal_path_research.py) | 760 题研究复跑、断点续跑与无金标输出变化统计；A 加路径索引，B/C 保持原输入 |
 | [`experiments/sample_multireference_epoch.py`](experiments/sample_multireference_epoch.py) | 从所有兼容的完整金标备选链中按种子和轮次确定性选一条，不合并链 |
 | `test_run_*.py` | 不需真实 Key 的测试 |
 | [`数据集/`](数据集/) · `docs/赛事网页内容/` | 原始数据 · 六张赛事截图 |
@@ -107,11 +110,14 @@ python evaluate_baselines.py --predictions outputs/graph_760.json --test-root �
 python -m experiments.check_published_scores --a 64.96 --b 51.35 --c 51.67 --reported-total 59.55
 python -m experiments.audit_training_data --output outputs/training_data_audit.json
 python -m experiments.prepare_finetune_data
-python -m experiments.prepare_finetune_data --output-dir outputs/finetune_2026-10-05_v2
-python -m experiments.sample_multireference_epoch --source outputs/finetune_2026-10-05_v2/fit_A.jsonl --output outputs/finetune_2026-10-05_v2/fit_A_epoch_1.jsonl --epoch 1
+python -m experiments.prepare_finetune_data --output-dir outputs/finetune_2026-10-06_v3
+python -m experiments.sample_multireference_epoch --source outputs/finetune_2026-10-06_v3/fit_A.jsonl --output outputs/finetune_2026-10-06_v3/fit_A_epoch_1.jsonl --epoch 1
 python -m experiments.audit_causal_path_candidates --output outputs/causal_path_candidate_audit.json
 python -m experiments.run_causal_path_pair --selection experiments/causal_path_holdout_20261005.json --output outputs/causal_path_pair.json --api-key-file C:/path/to/key.txt --model deepseek-flash
 python -m experiments.evaluate_path_answer_pair --paired outputs/causal_path_pair.json --output outputs/causal_path_pair.metrics.json --embedding-model C:/path/to/local/bge-small-zh-v1.5
+python -m experiments.run_full_causal_path_research --dry-run --output outputs/causal_path_full_760.json
+python -m experiments.run_full_causal_path_research --output outputs/causal_path_full_760.json --api-key-file C:/path/to/key.txt --model deepseek-flash --workers 12
+python -m experiments.compare_full_causal_path_research --old outputs/deepseek_flash_full_760.json --new outputs/causal_path_full_760.json --output outputs/causal_path_full_comparison.json
 python -m experiments.run_path_answer_pair --output outputs/path_answer_pair.json --api-key-file C:/path/to/key.txt
 python -m experiments.evaluate_path_answer_pair --paired outputs/path_answer_pair.json --output outputs/path_answer_pair.metrics.json
 python -m unittest -q test_run_deepseek.py test_run_baselines.py
