@@ -14,6 +14,12 @@ from task4_core import SYSTEM_PROMPT
 DEFAULT_API_URL = "https://api.deepseek.com"
 DEFAULT_MODEL = "deepseek-flash"
 
+
+class TruncatedResponseError(ValueError):
+    def __init__(self, usage: dict):
+        super().__init__("模型输出被 max_tokens 截断；请增大 --max-tokens")
+        self.usage = usage
+
 def completion_url(api_url: str) -> str:
     url = urlsplit(api_url.strip())
     if url.scheme not in {"http", "https"} or not url.netloc:
@@ -78,7 +84,8 @@ def probe_balance(api_key: str, timeout: int) -> None:
 
 def call_model(endpoint: str, api_key: str, model: str, content: str,
                timeout: int = 120, retries: int = 2, max_tokens: int | None = 8192,
-               json_mode: bool = True, system_prompt: str | None = SYSTEM_PROMPT) -> str:
+               json_mode: bool = True, system_prompt: str | None = SYSTEM_PROMPT,
+               return_usage: bool = False) -> str | tuple[str, dict]:
     messages = [{"role": "user", "content": content}]
     if system_prompt is not None:
         messages.insert(0, {"role": "system", "content": system_prompt})
@@ -103,10 +110,13 @@ def call_model(endpoint: str, api_key: str, model: str, content: str,
                 result = json.load(response)
             choice = result["choices"][0]
             if choice.get("finish_reason") == "length":
-                raise ValueError("模型输出被 max_tokens 截断；请增大 --max-tokens")
+                raise TruncatedResponseError(result.get("usage") or {})
             text = choice["message"]["content"]
             if not isinstance(text, str) or not text.strip():
                 raise ValueError("模型未返回文本内容")
+            if return_usage:
+                usage = result.get("usage") if isinstance(result, dict) else None
+                return text, usage if isinstance(usage, dict) else {}
             return text
         except HTTPError as exc:
             if exc.code not in {429, 500, 502, 503, 504} or attempt == retries:

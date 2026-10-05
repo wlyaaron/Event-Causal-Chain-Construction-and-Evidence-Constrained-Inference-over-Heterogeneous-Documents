@@ -39,6 +39,8 @@
 
 模型无关的检索与核验探索、训练集证据覆盖审计及论文来源见[赛题 4 优化研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。
 
+2026-10-05 已复核 1000 包、7196 道训练题，并生成按材料包及完全相同文档分组的[微调划分清单](experiments/finetune_split_20261005.json)。[训练数据审计与三视图样本生成脚本](experiments/prepare_finetune_data.py)只使用赛事训练集，输出到忽略的 `outputs/`，不为金标置信度伪造数值。新一轮 12 道干净留出题的同模型配对显示：A 档关系说明改善了小样本答案代理指标，但链 exact 未升、边 F1 下降；锁定链后再改答案也没有稳定净收益。具体口径、成本、失败题与隔离策略见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。这些结果尚不支持声称线上提分。
+
 这些代码依据公开描述**独立实现同类方法**。主办方未公开基线源代码、模型权重或提示词，不能声称复现其分数。
 
 | 方法 | 实际使用 | 当前边界 |
@@ -77,6 +79,8 @@ DeepSeek 的盲测输出按 A/B/C 分别为 210/350/200 题，精确拒答 13/66
 | [`run_deepseek.py`](run_deepseek.py) | DeepSeek/兼容接口的研究命令行，复用核心与接口代码 |
 | [`evaluate_baselines.py`](evaluate_baselines.py) | 仅训练集诊断时读取标准答案，输出答案和证据链等代理指标；推理代码不读 `gold` |
 | [`task4_workflow.py`](task4_workflow.py) · [`experiments/`](experiments/) | 证据提示、训练集检索与生成配对实验、公开权重核查；方法与局限见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md) |
+| [`experiments/audit_training_data.py`](experiments/audit_training_data.py) · [`experiments/prepare_finetune_data.py`](experiments/prepare_finetune_data.py) | 训练集质量审计、A/B/C 视图样本、按包划分与隔离报告；训练内容仅在 `outputs/` |
+| [`experiments/run_path_answer_pair.py`](experiments/run_path_answer_pair.py) · [`experiments/evaluate_path_answer_pair.py`](experiments/evaluate_path_answer_pair.py) | 研究专用同模型配对与代理指标；API 输出不可用于训练或正式提交 |
 | `test_run_*.py` | 不需真实 Key 的测试 |
 | [`数据集/`](数据集/) · `docs/赛事网页内容/` | 原始数据 · 六张赛事截图 |
 
@@ -97,6 +101,10 @@ python run_baselines.py --method graph --dataset 数据集/训练集 --track tra
 python evaluate_baselines.py --predictions outputs/graph_train_100.json --train-root 数据集/训练集
 python evaluate_baselines.py --predictions outputs/graph_760.json --test-root 数据集/抽样测试集_100
 python -m experiments.check_published_scores --a 64.96 --b 51.35 --c 51.67 --reported-total 59.55
+python -m experiments.audit_training_data --output outputs/training_data_audit.json
+python -m experiments.prepare_finetune_data
+python -m experiments.run_path_answer_pair --output outputs/path_answer_pair.json --api-key-file C:/path/to/key.txt
+python -m experiments.evaluate_path_answer_pair --paired outputs/path_answer_pair.json --output outputs/path_answer_pair.metrics.json
 python -m unittest -q test_run_deepseek.py test_run_baselines.py
 ```
 

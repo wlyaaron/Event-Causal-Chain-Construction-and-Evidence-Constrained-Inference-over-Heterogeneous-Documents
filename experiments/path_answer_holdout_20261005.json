@@ -1,0 +1,74 @@
+[
+  {
+    "sample_id": "diplomacy_203_Q01",
+    "pack": "政治外交_203",
+    "view": "A",
+    "question_type": "retrospective"
+  },
+  {
+    "sample_id": "diplomacy_170_Q07",
+    "pack": "政治外交_170",
+    "view": "A",
+    "question_type": "prospective"
+  },
+  {
+    "sample_id": "diplomacy_027_Q06",
+    "pack": "政治外交_027",
+    "view": "A",
+    "question_type": "counterfactual"
+  },
+  {
+    "sample_id": "diplomacy_029_Q03",
+    "pack": "政治外交_029",
+    "view": "A",
+    "question_type": "unanswerable"
+  },
+  {
+    "sample_id": "public_safety_222_Q02",
+    "pack": "公共安全_222",
+    "view": "B",
+    "question_type": "retrospective"
+  },
+  {
+    "sample_id": "diplomacy_031_Q07",
+    "pack": "政治外交_031",
+    "view": "B",
+    "question_type": "prospective"
+  },
+  {
+    "sample_id": "diplomacy_168_Q03",
+    "pack": "政治外交_168",
+    "view": "B",
+    "question_type": "counterfactual"
+  },
+  {
+    "sample_id": "economy_trade_117_Q06",
+    "pack": "经济贸易_117",
+    "view": "B",
+    "question_type": "unanswerable"
+  },
+  {
+    "sample_id": "natural_disaster_121_Q05",
+    "pack": "自然灾害_121",
+    "view": "C",
+    "question_type": "retrospective"
+  },
+  {
+    "sample_id": "public_safety_140_Q07",
+    "pack": "公共安全_140",
+    "view": "C",
+    "question_type": "prospective"
+  },
+  {
+    "sample_id": "natural_disaster_061_Q06",
+    "pack": "自然灾害_061",
+    "view": "C",
+    "question_type": "counterfactual"
+  },
+  {
+    "sample_id": "healthcare_07_Q01",
+    "pack": "医疗健康_07",
+    "view": "C",
+    "question_type": "unanswerable"
+  }
+]

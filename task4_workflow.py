@@ -14,6 +14,58 @@ import run_baselines as baseline
 import task4_core as core
 
 
+def training_view_input(sample: core.Sample, view: str) -> tuple[str, set[str], set[tuple[str, str]]]:
+    """Simulate the three published inference views without reading gold labels."""
+    if sample.track != "train" or view not in {"A", "B", "C"}:
+        raise ValueError("training_view_input requires a train sample and A/B/C view")
+    documents, events, edges = core.load_pack(sample.pack)
+    if view == "C":
+        events, edges = None, None
+    elif view == "B":
+        edges = None
+    allowed = ({event["event_id"] for event in events} if events is not None
+               else set(documents))
+    directed = {(edge["cause_event_id"],
+                 edge.get("result_event_id", edge.get("effect_event_id")))
+                for edge in edges or [] if isinstance(edge, dict)
+                and isinstance(edge.get("cause_event_id"), str)
+                and isinstance(edge.get("result_event_id", edge.get("effect_event_id")), str)}
+    payload = {"track": view, "sample_id": sample.sample_id,
+               "question_type": sample.question_type, "question": sample.question,
+               "documents": [{"doc_id": doc_id, "text": text}
+                             for doc_id, text in documents.items()],
+               "events": events, "causal_relations": edges}
+    return json.dumps(payload, ensure_ascii=False, separators=(",", ":")), allowed, directed
+
+
+def relation_guided_input(sample: core.Sample, view: str) -> tuple[str, set[str], dict]:
+    """Explain supplied edges and ask for one question-relevant path, not all paths."""
+    original, allowed, directed = training_view_input(sample, view)
+    if view != "A":
+        return original, allowed, {"relation_count": 0, "candidate_paths": []}
+    documents, events, edges = core.load_pack(sample.pack)
+    labels = {event["event_id"]: str(event.get("event_type") or
+                                      event.get("trigger_word") or event["event_id"])
+              for event in events or []}
+    relations = [f"{a}（{labels.get(a, a)}）导致/推动{b}（{labels.get(b, b)}）"
+                 for a, b in sorted(directed)]
+    paths = graph_path_hints(sample, limit=5)
+    guidance = {
+        "given_causal_relations_in_words": relations,
+        "question_relevant_candidate_paths": paths,
+        "evidence_sufficiency_check": (
+            "先找出问题所问的起点、终点及限定条件；逐步核对每条边的方向和原文依据。"
+            "候选路径仅供选择，只输出与问题最相关且证据充分的一条。"
+            "若问完整过程，保留必要中间环节；若问直接关系，勿扩展无关下游。"
+            "给定图未列出某边不必然代表原文无因果，但不能把时间先后当作因果。"
+            "遇到冲突或缺口，先核对全部原文，再决定限定回答或拒答。")}
+    return ("关系与路径阅读辅助（须以完整原始材料核实）：\n"
+            + json.dumps(guidance, ensure_ascii=False)
+            + "\n\n完整原始输入：\n" + original), allowed, {
+                "relation_count": len(relations), "candidate_paths": paths,
+                "input_chars": len(original)}
+
+
 @dataclass(frozen=True)
 class EvidenceHint:
     event_id: str
