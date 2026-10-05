@@ -160,6 +160,137 @@ def graph_path_hints(sample: core.Sample, limit: int = 3) -> list[list[str]]:
     return selected
 
 
+def question_conditioned_paths(sample: core.Sample, limit: int = 5,
+                               max_hops: int = 9) -> list[list[str]]:
+    """Rank directed local path segments by the question, without reading gold.
+
+    Every prefix is eligible, including paths ending at an internal graph node.
+    The graph is a source of candidates, not a guarantee of textual support.
+    """
+    if limit < 1 or max_hops < 1:
+        raise ValueError("limit and max_hops must be positive")
+    pack = baseline.read_pack(sample.pack)
+    outgoing, _ = baseline.directed_graph(pack)
+    if not pack.edges or not outgoing:
+        return []
+    nodes = set(outgoing)
+    anchors = list(dict.fromkeys(node for node in
+                                 baseline.ID_PATTERN.findall(sample.question)
+                                 if node in nodes))
+    question = sample.question
+    if anchors and re.search(r"直接(下游|后续|结果)|下一个事件", question):
+        intent = "direct_down"
+    elif anchors and re.search(r"直接(上游|原因|前因)", question):
+        intent = "direct_up"
+    elif len(anchors) >= 2 and sample.question_type == "counterfactual":
+        intent = "from_to"
+    elif anchors and sample.question_type == "prospective":
+        intent = "future"
+    elif anchors and sample.question_type == "retrospective":
+        intent = "upstream"
+    else:
+        intent = "general"
+
+    ranking = baseline.rank_candidates(question, pack, None, hybrid=False)
+    relevance = {candidate.event_id: score for candidate, score in ranking}
+    preferred = ([anchors[-1]] if intent == "future" else anchors)
+    starts = [*preferred, *sorted(nodes - set(preferred),
+                                  key=lambda node: (-relevance.get(node, 0), node))]
+    paths: list[list[str]] = []
+    max_paths = 20000
+
+    def visit(path: list[str]) -> None:
+        if len(paths) >= max_paths:
+            return
+        if len(path) > 1:
+            paths.append(path)
+        if len(path) - 1 >= max_hops:
+            return
+        next_nodes = sorted(outgoing[path[-1]],
+                            key=lambda node: (-relevance.get(node, 0), node))
+        for next_node in next_nodes:
+            if next_node not in path:
+                visit([*path, next_node])
+
+    for start in starts:
+        visit([start])
+        if len(paths) >= max_paths:
+            break
+
+    anchor_set = set(anchors)
+
+    def score(path: list[str]) -> tuple:
+        if intent == "direct_down":
+            match = int(path[0] == anchors[0] and len(path) == 2)
+        elif intent == "direct_up":
+            match = int(path[-1] == anchors[0] and len(path) == 2)
+        elif intent == "from_to":
+            match = int(path[0] == anchors[0] and path[-1] == anchors[-1])
+        elif intent == "future":
+            match = int(path[0] == anchors[-1] and path[-1] not in anchor_set)
+        elif intent == "upstream":
+            match = int(path[-1] == anchors[0])
+        else:
+            match = 0
+        coverage = len(anchor_set.intersection(path)) / max(1, len(anchor_set))
+        relevance_mean = sum(relevance.get(node, 0.0) for node in path) / len(path)
+        # Local chains avoid appending unrelated downstream events. Multi-hop
+        # questions may still prefer a longer path when its anchors match.
+        length_preference = (len(path) if re.search(r"完整|多跳|连锁|传导", question)
+                             else -len(path))
+        return match, coverage, relevance_mean, length_preference
+
+    return sorted(paths, key=score, reverse=True)[:limit]
+
+
+def causal_path_input(sample: core.Sample, view: str = "A") -> tuple[str, set[str], dict]:
+    """Provide typed, question-ranked causal paths with source excerpts."""
+    original, allowed, _ = training_view_input(sample, view)
+    if view != "A":
+        return original, allowed, {"candidate_paths": [], "relation_count": 0}
+    documents, events, edges = core.load_pack(sample.pack)
+    by_id = {event["event_id"]: event for event in events or []}
+    by_edge = {(edge.get("cause_event_id"),
+                edge.get("result_event_id", edge.get("effect_event_id"))): edge
+               for edge in edges or []}
+    paths = question_conditioned_paths(sample)
+    used_nodes = list(dict.fromkeys(node for path in paths for node in path))
+    evidence = []
+    for node in used_nodes:
+        event = by_id.get(node, {})
+        doc_id = event.get("doc_id")
+        label = str(event.get("event_type") or event.get("trigger_word") or node)
+        evidence.append({"event_id": node, "doc_id": doc_id, "event_label": label,
+                         "source_excerpt": _best_excerpt(
+                             sample.question, label, documents.get(doc_id, ""),
+                             max_chars=160)})
+    path_details = []
+    for path in paths:
+        steps = []
+        for cause, result in zip(path, path[1:]):
+            edge = by_edge.get((cause, result), {})
+            steps.append({"cause": cause, "result": result,
+                          "relation_type": edge.get("causal_type",
+                                                    edge.get("relation_type")),
+                          "confidence_level": edge.get("confidence_level")})
+        path_details.append({"event_ids": path, "given_edges": steps})
+    guidance = {
+        "candidate_status": "题目条件化的图路径候选，未证明原文充分支持，也可能遗漏金标路径",
+        "candidate_paths": path_details,
+        "event_source_index": evidence,
+        "verification": (
+            "先区分题目所问的起点、终点、直接关系和已知截止条件；"
+            "逐步核对边的方向、关系类型与原文，不把时间先后当因果。"
+            "只选一条符合题意且证据充分的链；若候选不合适，可据完整原文与合法 ID 另选。"
+            "答案只陈述所选链及原文支持的事实；对错误前提、冲突或缺口先解释再决定是否拒答。")}
+    prompt = ("因果路径核验索引（非标准答案）：\n"
+              + json.dumps(guidance, ensure_ascii=False, separators=(",", ":"))
+              + "\n\n完整原始输入：\n" + original)
+    return prompt, allowed, {"candidate_paths": paths,
+                             "relation_count": sum(len(p) - 1 for p in paths),
+                             "input_chars": len(prompt)}
+
+
 def guided_input(sample: core.Sample, top_k: int = 3,
                  encoder: baseline.BertEncoder | None = None,
                  hint_mode: str = "nodes",

@@ -39,6 +39,8 @@
 
 模型无关的检索与核验探索、训练集证据覆盖审计及论文来源见[赛题 4 优化研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。
 
+2026-10-05 的[因果路径与微调数据研究记录](docs/赛题4_因果流程与微调数据研究_2026-10-05.md)区分了论文启发、代码假设和配对实测。新增的 A 档问题条件化局部路径提示在两组共 23 道不同包留出题上提高了候选完整链覆盖与节点／边 F1；独立第二组的答案字符 F1、语义和链完全匹配未提升，故尚不能宣称稳定最终提分，也未替换原基线。微调数据现保留同题所有兼容的完整金标备选链，边表缺步仅标记；新版样本与研究 API 输出均只在被 Git 忽略的 `outputs/`，没有加入外部数据或伪标签。2026-10-04 的 59.55 分 DeepSeek 研究基线已在本地另行归档，不进入正式参赛提交或训练。
+
 2026-10-05 已复核 1000 包、7196 道训练题，并生成按材料包及完全相同文档分组的[微调划分清单](experiments/finetune_split_20261005.json)。[训练数据审计与三视图样本生成脚本](experiments/prepare_finetune_data.py)只使用赛事训练集，输出到忽略的 `outputs/`，不为金标置信度伪造数值。新一轮 12 道干净留出题的同模型配对显示：A 档关系说明改善了小样本答案代理指标，但链 exact 未升、边 F1 下降；锁定链后再改答案也没有稳定净收益。具体口径、成本、失败题与隔离策略见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md)。这些结果尚不支持声称线上提分。
 
 这些代码依据公开描述**独立实现同类方法**。主办方未公开基线源代码、模型权重或提示词，不能声称复现其分数。
@@ -81,6 +83,8 @@ DeepSeek 的盲测输出按 A/B/C 分别为 210/350/200 题，精确拒答 13/66
 | [`task4_workflow.py`](task4_workflow.py) · [`experiments/`](experiments/) | 证据提示、训练集检索与生成配对实验、公开权重核查；方法与局限见[研究记录](docs/赛题4_模型无关优化研究_2026-10-04.md) |
 | [`experiments/audit_training_data.py`](experiments/audit_training_data.py) · [`experiments/prepare_finetune_data.py`](experiments/prepare_finetune_data.py) | 训练集质量审计、A/B/C 视图样本、按包划分与隔离报告；训练内容仅在 `outputs/` |
 | [`experiments/run_path_answer_pair.py`](experiments/run_path_answer_pair.py) · [`experiments/evaluate_path_answer_pair.py`](experiments/evaluate_path_answer_pair.py) | 研究专用同模型配对与代理指标；API 输出不可用于训练或正式提交 |
+| [`experiments/run_causal_path_pair.py`](experiments/run_causal_path_pair.py) · [`experiments/audit_causal_path_candidates.py`](experiments/audit_causal_path_candidates.py) | 冻结 A 档包隔离配对、核验局部候选覆盖；研究输出仅在 `outputs/` |
+| [`experiments/sample_multireference_epoch.py`](experiments/sample_multireference_epoch.py) | 从所有兼容的完整金标备选链中按种子和轮次确定性选一条，不合并链 |
 | `test_run_*.py` | 不需真实 Key 的测试 |
 | [`数据集/`](数据集/) · `docs/赛事网页内容/` | 原始数据 · 六张赛事截图 |
 
@@ -103,6 +107,11 @@ python evaluate_baselines.py --predictions outputs/graph_760.json --test-root �
 python -m experiments.check_published_scores --a 64.96 --b 51.35 --c 51.67 --reported-total 59.55
 python -m experiments.audit_training_data --output outputs/training_data_audit.json
 python -m experiments.prepare_finetune_data
+python -m experiments.prepare_finetune_data --output-dir outputs/finetune_2026-10-05_v2
+python -m experiments.sample_multireference_epoch --source outputs/finetune_2026-10-05_v2/fit_A.jsonl --output outputs/finetune_2026-10-05_v2/fit_A_epoch_1.jsonl --epoch 1
+python -m experiments.audit_causal_path_candidates --output outputs/causal_path_candidate_audit.json
+python -m experiments.run_causal_path_pair --selection experiments/causal_path_holdout_20261005.json --output outputs/causal_path_pair.json --api-key-file C:/path/to/key.txt --model deepseek-flash
+python -m experiments.evaluate_path_answer_pair --paired outputs/causal_path_pair.json --output outputs/causal_path_pair.metrics.json --embedding-model C:/path/to/local/bge-small-zh-v1.5
 python -m experiments.run_path_answer_pair --output outputs/path_answer_pair.json --api-key-file C:/path/to/key.txt
 python -m experiments.evaluate_path_answer_pair --paired outputs/path_answer_pair.json --output outputs/path_answer_pair.metrics.json
 python -m unittest -q test_run_deepseek.py test_run_baselines.py

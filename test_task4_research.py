@@ -10,7 +10,9 @@ from pathlib import Path
 import task4_core as core
 import task4_workflow as workflow
 from experiments.prepare_finetune_data import (SFT_SYSTEM_PROMPT, choose_chain,
+                                                compatible_chains,
                                                 document_groups, make_split)
+from experiments.sample_multireference_epoch import selected_chain
 
 
 class ResearchDataTests(unittest.TestCase):
@@ -49,6 +51,18 @@ class ResearchDataTests(unittest.TestCase):
         self.assertEqual(choose_chain({"answers": "无法确定", "evidence_chains": []},
                                       {"D001"}, "?"), [])
         self.assertNotIn('"confidence":', SFT_SYSTEM_PROMPT)
+
+    def test_absent_visible_edge_does_not_erase_gold_or_make_false_negative(self):
+        item = {"answers": "D001导致D003", "evidence_chains": [
+            ["D001", "D002", "D003"], ["D001", "D003"]]}
+        allowed = {"D001", "D002", "D003"}
+        self.assertEqual(2, len(compatible_chains(item, allowed)))
+        self.assertIn(choose_chain(item, allowed, "D001如何到达D003？",
+                                   {("D001", "D002")}), item["evidence_chains"])
+        row = {"pack": "测试_001", "sample_id": "Q01", "view": "A",
+               "compatible_gold_chains": compatible_chains(item, allowed)}
+        self.assertEqual(selected_chain(row, 20261005, 2), selected_chain(row, 20261005, 2))
+        self.assertIn(selected_chain(row, 20261005, 2), item["evidence_chains"])
 
     def test_duplicate_documents_are_grouped_before_split(self):
         with tempfile.TemporaryDirectory(dir=core.REPO_ROOT) as temp:

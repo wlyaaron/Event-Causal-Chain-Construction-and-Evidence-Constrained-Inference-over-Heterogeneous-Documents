@@ -44,6 +44,8 @@ def evaluate(path: Path, train_root: Path, embedding_model: str) -> dict:
                          and str(item.get("answers", "")).strip() == "无法确定")
         variants = {}
         for arm in ("direct", "guided", "locked"):
+            if arm not in record:
+                continue
             prediction = record[arm]
             chain = prediction["evidence_chain"]
             edges = [f"{a}>{b}" for a, b in zip(chain, chain[1:])]
@@ -68,13 +70,15 @@ def evaluate(path: Path, train_root: Path, embedding_model: str) -> dict:
                 "chain_exact": float(chain in alternatives),
                 "refusal_correct": float((prediction["answer"] == "无法确定") == truth_refusal),
                 "refusal": float(prediction["answer"] == "无法确定"),
+                "nonrefusal_confidence": prediction["confidence"],
             }
         rows.append({"sample_id": record["sample_id"], "view": record["view"],
                      "question_type": record["question_type"], "metrics": variants,
                      "guided_changed_chain": record["direct"]["evidence_chain"] !=
                      record["guided"]["evidence_chain"],
-                     "locked_changed_answer": record["guided"]["answer"] !=
-                     record["locked"]["answer"]})
+                     "locked_changed_answer": (record["guided"]["answer"] !=
+                                               record["locked"]["answer"]
+                                               if "locked" in record else None)})
 
     def summarize(subset: list[dict], arm: str) -> dict:
         keys = subset[0]["metrics"][arm]
@@ -90,8 +94,8 @@ def evaluate(path: Path, train_root: Path, embedding_model: str) -> dict:
     grouped = {"all": rows, **{view: [row for row in rows if row["view"] == view]
                               for view in "ABC"}}
     summary = {name: {arm: summarize(subset, arm) for arm in
-                      (("direct", "guided", "locked") if name == "A" else
-                       ("direct", "locked"))}
+                      ("direct", "guided", "locked")
+                      if all(arm in row["metrics"] for row in subset)}
                for name, subset in grouped.items() if subset}
     costs = {}
     for name in ("direct_usage", "guided_usage", "rewrite_usage"):
@@ -117,6 +121,7 @@ def evaluate(path: Path, train_root: Path, embedding_model: str) -> dict:
     result = {"samples": len(rows), "model": records[0]["model"],
               "semantic_model": embedding_model,
               "fact_coverage_rule": "BGE cosine >= 0.70 per required_fact; exploratory local proxy, not official scorer",
+              "confidence_note": "Mean stated confidence is descriptive, not calibrated correctness or the official confidence score.",
               "cost_note": "USD range uses DeepSeek Flash list prices and reported token usage; earlier truncated calls without usage make this a lower bound. No official per-item scoring formula assumed.",
               "summary": summary, "cost_tokens": costs,
               "input_chars": {arm: sum(record[f"{arm}_input_chars"] for record in records)

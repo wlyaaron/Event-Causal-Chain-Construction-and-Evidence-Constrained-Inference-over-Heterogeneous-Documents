@@ -102,17 +102,24 @@ def flags_for(item: dict, sample: core.Sample, event_ids: set[str],
     return flags
 
 
+def compatible_chains(item: dict, allowed: set[str]) -> list[list[str]]:
+    """Keep every complete gold alternative representable in this input view."""
+    chains = item.get("evidence_chains") or []
+    alternatives = []
+    for chain in chains:
+        if (isinstance(chain, list) and all(isinstance(node, str) for node in chain)
+                and len(chain) == len(set(chain)) and set(chain) <= allowed
+                and chain not in alternatives):
+            alternatives.append(list(chain))
+    if not chains and str(item.get("answers", "")).strip() == "无法确定":
+        return [[]]
+    return alternatives
+
+
 def choose_chain(item: dict, allowed: set[str], question: str,
                  supported_edges: set[tuple[str, str]] | None = None) -> list[str] | None:
-    """Choose one intact gold alternative; never splice nodes across paths."""
-    chains = item.get("evidence_chains") or []
-    if not chains and str(item.get("answers", "")).strip() == "无法确定":
-        return []
-    alternatives = [chain for chain in chains if isinstance(chain, list)
-                    and len(chain) == len(set(chain)) and set(chain) <= allowed]
-    if supported_edges is not None:
-        alternatives = [chain for chain in alternatives if all(
-            (a, b) in supported_edges for a, b in zip(chain, chain[1:]))]
+    """Choose one intact gold alternative; favor, but do not require, visible edges."""
+    alternatives = compatible_chains(item, allowed)
     if not alternatives:
         return None
     if all(not chain for chain in alternatives):
@@ -128,7 +135,9 @@ def choose_chain(item: dict, allowed: set[str], question: str,
         # Reference path and answer mention order give a reproducible choice.
         positions = [answer.find(node) for node in chain]
         ordered_in_answer = all(position >= 0 for position in positions) and positions == sorted(positions)
-        return (chain == annotated, ordered_in_answer,
+        graph_supported = (supported_edges is not None and all(
+            (a, b) in supported_edges for a, b in zip(chain, chain[1:])))
+        return (graph_supported, chain == annotated, ordered_in_answer,
                 len(anchors & set(chain)),
                 len(chain) if "完整" in question or "多个阶段" in question else -len(chain),
                 tuple(chain))
@@ -192,13 +201,13 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                 for view in "ABC":
                     content, allowed, _ = workflow.training_view_input(sample, view)
                     input_lengths[view].append(len(content))
+                    alternatives = compatible_chains(item, allowed)
                     chosen = choose_chain(item, allowed, sample.question,
                                           edges if view == "A" else None)
                     answer = item.get("answers")
                     reason = None
                     if chosen is None:
-                        reason = ("no_supported_visible_graph_path" if view == "A"
-                                  else "no_compatible_gold_path")
+                        reason = "no_compatible_gold_path"
                     elif not isinstance(answer, str) or not answer.strip():
                         reason = "invalid_answer"
                     elif (answer.strip() == "无法确定") != (chosen == []):
@@ -219,8 +228,12 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                                         {"role": "assistant", "content": json.dumps(
                                             {"answer": answer, "evidence_chain": chosen},
                                             ensure_ascii=False)}],
-                           "selection": "one_intact_gold_alternative",
+                           "selection": "one_intact_gold_alternative_preferring_visible_edges",
                            "gold_alternative_count": len(item.get("evidence_chains") or []),
+                           "compatible_gold_chains": alternatives,
+                           "visible_graph_supported_chains": (
+                               sum(all((a, b) in edges for a, b in zip(chain, chain[1:]))
+                                   for chain in alternatives) if view == "A" else None),
                            "flags": flags}
                     handles[split, view].write(json.dumps(row, ensure_ascii=False) + "\n")
                     counts[f"{split}_{view}"] += 1
@@ -238,7 +251,7 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                "quarantine_count": len(quarantined),
                "quarantine_reasons_by_view": dict(sorted(Counter(
                    f"{row['view']}:{row['reason']}" for row in quarantined).items())),
-               "note": "A/B/C are separate input views. Targets omit numeric confidence. Structurally incompatible labels and validation/holdout exact question+answer matches to fit are quarantined; question-only templates are audited, not called answer leaks."}
+               "note": "A/B/C are separate input views. Every compatible intact gold chain is retained as metadata; targets use one intact alternative, preferring given A edges but never excluding a chain solely for an absent edge. Targets omit numeric confidence. Structurally incompatible labels and validation/holdout exact question+answer matches to fit are quarantined; question-only templates are audited, not called answer leaks."}
     core.atomic_json(output_dir / "summary.json", summary)
     return summary
 

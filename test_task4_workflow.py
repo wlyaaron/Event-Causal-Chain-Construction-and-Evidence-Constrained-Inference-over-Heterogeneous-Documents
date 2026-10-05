@@ -43,6 +43,40 @@ class WorkflowTests(unittest.TestCase):
             self.assertIn(["D001", "D002", "D004"],
                           workflow.graph_path_hints(sample))
 
+    def test_direct_downstream_uses_internal_segment_and_preserves_type(self) -> None:
+        (core.REPO_ROOT / "outputs").mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=core.REPO_ROOT / "outputs") as directory:
+            pack = Path(directory)
+            for number in range(1, 5):
+                (pack / f"D{number:03d}.txt").write_text(
+                    f"阶段{number}形成下一阶段。", encoding="utf-8")
+            events = [{"event_id": f"D{number:03d}",
+                       "doc_id": f"D{number:03d}",
+                       "event_type": f"阶段{number}"}
+                      for number in range(1, 5)]
+            edges = [{"cause_event_id": f"D{number:03d}",
+                      "result_event_id": f"D{number + 1:03d}",
+                      "causal_type": "间接传导" if number == 2 else "直接因果",
+                      "confidence_level": "probable"}
+                     for number in range(1, 4)]
+            (pack / "事件列表.json").write_text(
+                json.dumps(events, ensure_ascii=False), encoding="utf-8")
+            (pack / "事件因果关系列表.json").write_text(
+                json.dumps(edges, ensure_ascii=False), encoding="utf-8")
+            (pack / "gold").mkdir()
+            (pack / "gold" / "问答对_答案.json").write_text(
+                "SECRET_GOLD_SENTINEL", encoding="utf-8")
+            sample = core.Sample(pack, "train", "demo_Q02", "retrospective",
+                                 "D002 的直接下游事件是什么？")
+            paths = workflow.question_conditioned_paths(sample)
+            self.assertEqual(["D002", "D003"], paths[0])
+            prompt, allowed, meta = workflow.causal_path_input(sample)
+            self.assertIn("间接传导", prompt)
+            self.assertIn("probable", prompt)
+            self.assertNotIn("SECRET_GOLD_SENTINEL", prompt)
+            self.assertEqual({f"D{number:03d}" for number in range(1, 5)}, allowed)
+            self.assertEqual(["D002", "D003"], meta["candidate_paths"][0])
+
 
 if __name__ == "__main__":
     unittest.main()
