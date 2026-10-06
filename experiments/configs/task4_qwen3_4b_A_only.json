@@ -1,0 +1,25 @@
+{
+  "model_id": "Qwen/Qwen3-4B-Instruct-2507",
+  "model_revision": "cdbee75f17c01a7cc42f958dc650907174af0554",
+  "model_files_sha256": {
+    "model-00001-of-00003.safetensors": "75311d91bb08cf0b882913da464a1e722a31fb44db35208663487efb7a3d8ed6",
+    "model-00002-of-00003.safetensors": "0b48adbb1f60e901153d91907ba11ce63bd4b8b584482e730f48808d055dfba1",
+    "model-00003-of-00003.safetensors": "7dd39ccca5e4de123c74c14af44c9bf2eb75df33b4614382af0134528e060d5d"
+  },
+  "model_dir": "/root/autodl-tmp/event-causal-chain-repo/outputs/qwen3-4b-instruct-2507-tokenizer",
+  "tokenizer_dir": "/root/autodl-tmp/event-causal-chain-repo/outputs/qwen3-4b-instruct-2507-tokenizer",
+  "train_jsonl": "/root/autodl-tmp/event-causal-chain-repo/outputs/finetune_2026-10-06_v3/fit_A.jsonl",
+  "output_dir": "/root/autodl-tmp/event-causal-chain-repo/outputs/sft_runs/qwen3_4b_A_only",
+  "max_seq_tokens": 8192,
+  "allow_overlength_skip": true,
+  "quantization": "4bit",
+  "lora_r": 16,
+  "lora_alpha": 32,
+  "lora_dropout": 0.05,
+  "gradient_accumulation_steps": 8,
+  "max_steps": 800,
+  "learning_rate": 0.0002,
+  "warmup_ratio": 0.03,
+  "save_steps": 200,
+  "seed": 20261006
+}

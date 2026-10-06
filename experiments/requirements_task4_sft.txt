@@ -1,0 +1,9 @@
+# Install into a venv created from the existing Python 3.11 / torch 2.4.1+cu121
+# environment with --system-site-packages. Keep that environment unchanged.
+transformers==4.56.2
+tokenizers==0.22.1
+huggingface-hub==0.35.3
+peft==0.17.1
+bitsandbytes==0.47.0
+accelerate==0.34.2
+safetensors==0.4.5

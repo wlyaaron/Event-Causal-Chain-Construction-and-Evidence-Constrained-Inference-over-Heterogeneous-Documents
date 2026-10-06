@@ -172,8 +172,12 @@ def prepare(train_root: Path, output_dir: Path, manifest_path: Path,
                 "normalized_exact_document_group_count": len(groups),
                 "splits": splits}
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
-                             encoding="utf-8")
+    if manifest_path.exists():
+        if core.read_json(manifest_path) != manifest:
+            raise ValueError("existing fixed split differs from reconstructed pack groups")
+    else:
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
+                                 encoding="utf-8")
     output_dir.mkdir(parents=True, exist_ok=True)
     handles = {(split, view): (output_dir / f"{split}_{view}.jsonl").open("w", encoding="utf-8")
                for split in splits for view in "ABC"}
