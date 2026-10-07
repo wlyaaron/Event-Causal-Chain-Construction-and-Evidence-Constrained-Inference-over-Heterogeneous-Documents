@@ -84,7 +84,8 @@ def main() -> None:
         prompt = [{"role": "system", "content": SFT_SYSTEM_PROMPT},
                   {"role": "user", "content": content}]
         ids = tokenizer.apply_chat_template(prompt, tokenize=True,
-                                            add_generation_prompt=True)
+                                            add_generation_prompt=True,
+                                            enable_thinking=False)
         if len(ids) + args.max_new_tokens > args.max_context_tokens:
             over.append({"pack": pack, "sample_id": sample_id, "view": view,
                          "input_tokens": len(ids)})
@@ -152,7 +153,8 @@ def main() -> None:
             prompt = [{"role": "system", "content": SFT_SYSTEM_PROMPT},
                       {"role": "user", "content": content}]
             input_ids = tokenizer.apply_chat_template(prompt, tokenize=True,
-                                                       add_generation_prompt=True)
+                                                       add_generation_prompt=True,
+                                                       enable_thinking=False)
             if len(input_ids) != checked_tokens:
                 raise ValueError("token count changed since context check")
             tensor = torch.tensor([input_ids], dtype=torch.long, device=model.device)
