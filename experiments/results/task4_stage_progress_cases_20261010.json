@@ -1,0 +1,1216 @@
+{
+  "schema": "task4_stage_progress_cases_v1",
+  "sources_sha256": {
+    "v3": "aee3653f1f14b5dd70d7ebfcd72035e14b74d9956da2d0f160bf816d238b2f81",
+    "v4": "bb0dfd2f748c7834d9cdfbad4c6ca620d5bf84c291d3578fbfbaf73c3a5e3a21",
+    "hybrid": "33251d0bf53e075d5f56f675843fd5925297a0dd036909cdee75bf96e7b1acb5",
+    "route": "99f637a15b005dd958676360657aee7a14a62aca56bd7ef6b69ad0dd31432680",
+    "pair": "456de732127bc00f228d4ec4549444422bbd377b8e65ac73ee256e9fa7ca6cb2",
+    "repair": "32abb86e1e882b67d5d9b1b012113f7cd92f6f907f3076d335de17459cec74ba",
+    "final": "a924a114cd28b9110051dff1b7a465924125636f2999bd707f9f35075fad1157"
+  },
+  "cases": [
+    {
+      "stage": "规则提示词：先看拒答边界",
+      "source": "v3",
+      "sample_id": "public_safety_067_Q02",
+      "question": "材料是否记载了公安机关、检察机关齐齐哈尔市第三十四中学体育馆负责人的个人从业年限？",
+      "gold": {
+        "answer": "无法确定",
+        "chains": []
+      },
+      "left_label": "基础版",
+      "right_label": "合并问答与证据链规则 V3",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "public_safety_067_Q02",
+          "answer": "无法确定",
+          "evidence_chain": [],
+          "confidence": null,
+          "question_type": "unanswerable"
+        },
+        "raw": "{\"answer\": \"无法确定\", \"evidence_chain\": [], \"confidence\": null}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 6335,
+          "completion_tokens": 337,
+          "total_tokens": 6672,
+          "prompt_tokens_details": {
+            "cached_tokens": 128
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 318
+          },
+          "prompt_cache_hit_tokens": 128,
+          "prompt_cache_miss_tokens": 6207
+        },
+        "elapsed_seconds": 1.747
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.0,
+          "answer_semantic_cosine": 0.4695741534233093,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "public_safety_067_Q02",
+          "answer": "未记载。现有材料中，公安机关介入方面只记载了对施工单位相关责任人立案侦查、采取刑事强制措施（D005）；事故调查报告也只记载了对51名责任人追责、部分人员身份及处分/处罚建议（D007）。材料没有记载“检察机关”对相关负责人的个人从业年限，也没有记载“齐齐哈尔市第三十四中学体育馆负责人”的个人从业年限。",
+          "evidence_chain": [
+            "D005",
+            "D007"
+          ],
+          "confidence": 0.95,
+          "question_type": "unanswerable"
+        },
+        "raw": "{\"answer\":\"未记载。现有材料中，公安机关介入方面只记载了对施工单位相关责任人立案侦查、采取刑事强制措施（D005）；事故调查报告也只记载了对51名责任人追责、部分人员身份及处分/处罚建议（D007）。材料没有记载“检察机关”对相关负责人的个人从业年限，也没有记载“齐齐哈尔市第三十四中学体育馆负责人”的个人从业年限。\",\"evidence_chain\":[\"D005\",\"D007\"],\"confidence\":0.95}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 7242,
+          "completion_tokens": 1345,
+          "total_tokens": 8587,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1242
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 6218
+        },
+        "elapsed_seconds": 7.131
+      },
+      "observation": "严格 gold 拒答被 V3 改写为有链解释；这是 V3 整体下降的核心类型。"
+    },
+    {
+      "stage": "规则提示词：先看拒答边界",
+      "source": "v4",
+      "sample_id": "energy_environment_04_Q02",
+      "question": "既然材料显示欧盟对国际影响不负有任何责任，请解释后续处理的依据。",
+      "gold": {
+        "answer": "无法确定",
+        "chains": []
+      },
+      "left_label": "V3",
+      "right_label": "V4 零示例",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.0,
+          "answer_semantic_cosine": 0.4053826928138733,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "energy_environment_04_Q02",
+          "answer": "该问题的前提不成立：材料并未显示“欧盟对国际影响不负有任何责任”。相反，D005 显示多国关注欧洲能源危机的国际影响，且欧盟牵头推进实施；D003 显示国际合作持续深化，欧盟与多国开展技术交流和项目合作；D009 显示欧盟表示将加快构建能源危机长效机制、推动制度建设和治理能力提升。因此，不能基于“欧盟不负责任”来解释后续处理依据；材料能支持的后续处理依据是欧盟牵头推进、国际与多国合作以及构建长效机制。",
+          "evidence_chain": [
+            "D005",
+            "D003",
+            "D009"
+          ],
+          "confidence": 0.9,
+          "question_type": "unanswerable"
+        },
+        "raw": "{\"answer\":\"该问题的前提不成立：材料并未显示“欧盟对国际影响不负有任何责任”。相反，D005 显示多国关注欧洲能源危机的国际影响，且欧盟牵头推进实施；D003 显示国际合作持续深化，欧盟与多国开展技术交流和项目合作；D009 显示欧盟表示将加快构建能源危机长效机制、推动制度建设和治理能力提升。因此，不能基于“欧盟不负责任”来解释后续处理依据；材料能支持的后续处理依据是欧盟牵头推进、国际与多国合作以及构建长效机制。\",\"evidence_chain\":[\"D005\",\"D003\",\"D009\"],\"confidence\":0.9}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 6844,
+          "completion_tokens": 2861,
+          "total_tokens": 9705,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2724
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 5820
+        },
+        "elapsed_seconds": 14.425
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "energy_environment_04_Q02",
+          "answer": "无法确定",
+          "evidence_chain": [],
+          "confidence": null,
+          "question_type": "unanswerable"
+        },
+        "raw": "{\"answer\":\"无法确定\",\"evidence_chain\":[],\"confidence\":null}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 6687,
+          "completion_tokens": 224,
+          "total_tokens": 6911,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 207
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5791
+        },
+        "elapsed_seconds": 1.712
+      },
+      "observation": "V4 恢复该题的严格拒答与空链；它也会在后面的两阶段流程里再次失守。"
+    },
+    {
+      "stage": "小规模程序试探：候选不可盲加",
+      "source": "hybrid",
+      "sample_id": "economy_trade_201_Q05",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "gold": {
+        "answer": "无法确定",
+        "chains": []
+      },
+      "left_label": "V4 原答",
+      "right_label": "V4＋程序候选复核",
+      "left_result": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "economy_trade_201_Q05",
+          "answer": "无法确定",
+          "evidence_chain": [],
+          "confidence": null,
+          "question_type": "unanswerable"
+        },
+        "metrics": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "raw": "{\"answer\":\"无法确定\",\"evidence_chain\":[],\"confidence\":null}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 6986,
+          "completion_tokens": 1127,
+          "total_tokens": 8113,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1110
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6090
+        },
+        "elapsed_seconds": 6.878
+      },
+      "right_result": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "economy_trade_201_Q05",
+          "answer": "不能精确量化。材料仅以“从长远看……带动就业和居民收入增长”等定性表述描述影响，并只发布当前主要指标稳中向好的总体情况，未给出未来五年总体影响的量化数值或测算依据。",
+          "evidence_chain": [
+            "D001",
+            "D007"
+          ],
+          "confidence": 0.9,
+          "question_type": "unanswerable"
+        },
+        "metrics": {
+          "answer_char_f1": 0.05128205128205128,
+          "answer_semantic_cosine": 0.48752957582473755,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "raw": "{\"answer\":\"不能精确量化。材料仅以“从长远看……带动就业和居民收入增长”等定性表述描述影响，并只发布当前主要指标稳中向好的总体情况，未给出未来五年总体影响的量化数值或测算依据。\",\"evidence_chain\":[\"D001\",\"D007\"],\"confidence\":0.9}",
+        "error": null,
+        "finish_reason": "stop",
+        "response_model": "deepseek-flash",
+        "usage": {
+          "prompt_tokens": 7805,
+          "completion_tokens": 5561,
+          "total_tokens": 13366,
+          "prompt_tokens_details": {
+            "cached_tokens": 1024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5488
+          },
+          "prompt_cache_hit_tokens": 1024,
+          "prompt_cache_miss_tokens": 6781
+        },
+        "elapsed_seconds": 31.768
+      },
+      "observation": "原答已严格拒答；加入图路径后，模型把‘无法精确量化’扩成可回答的解释。"
+    },
+    {
+      "stage": "两阶段路由：新增一次模型调用的代价",
+      "source": "route",
+      "sample_id": "energy_environment_04_Q02",
+      "question": "既然材料显示欧盟对国际影响不负有任何责任，请解释后续处理的依据。",
+      "gold": {
+        "answer": "无法确定",
+        "chains": []
+      },
+      "left_label": "V4 原答",
+      "right_label": "路由＋条件复核",
+      "left_result": {
+        "prediction": {
+          "view": "A",
+          "sample_id": "energy_environment_04_Q02",
+          "answer": "无法确定",
+          "evidence_chain": [],
+          "confidence": null,
+          "question_type": "unanswerable"
+        },
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "error": null
+      },
+      "right_result": {
+        "prediction": {
+          "view": "A",
+          "sample_id": "energy_environment_04_Q02",
+          "answer": "材料并未显示“欧盟对国际影响不负有任何责任”。相反，原文可核查地显示：欧盟牵头推进欧洲能源危机的实施（D003、D005），与多国开展技术交流和项目合作（D003），并表示将加快构建能源危机长效机制、推动制度建设和治理能力提升（D002、D003）。因此，后续处理并非建立在“欧盟不负责任”之上，而应依据欧盟在推进实施、国际合作和长效机制建设中的作用来解释。",
+          "evidence_chain": [
+            "D003",
+            "D005",
+            "D002"
+          ],
+          "confidence": 0.88,
+          "question_type": null
+        },
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.0,
+          "answer_semantic_cosine": 0.36942923069000244,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "error": null
+      },
+      "observation": "路线判断把严格 gold 拒答变成纠错性解释；同一道题再次展示门控风险。"
+    },
+    {
+      "stage": "两阶段路由：新增一次模型调用的代价",
+      "source": "route",
+      "sample_id": "public_safety_129_Q09",
+      "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（燃气泄漏）构成因果关系？请判断并说明。",
+      "gold": {
+        "answer": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+        "chains": [
+          [
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "V4 原答",
+      "right_label": "路由＋条件复核",
+      "left_result": {
+        "prediction": {
+          "view": "A",
+          "sample_id": "public_safety_129_Q09",
+          "answer": "不构成因果关系。D012 的背景性信息是 2024-02-28 某地社区开展居民用气安全知识讲座，属于常规安全宣传；文档明确说明其与本次燕郊镇燃气泄漏爆燃事故无直接关联，且主题、涉及主体和事件性质均不同。D002 是 2024-03-13 燕郊镇小张各庄村底商发生的天然气泄漏。二者仅时间接近，没有材料支持的因果联系，应作为无关背景排除。",
+          "evidence_chain": [
+            "D002"
+          ],
+          "confidence": 0.95,
+          "question_type": "unanswerable"
+        },
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.31,
+          "answer_semantic_cosine": 0.6574404239654541,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "error": null
+      },
+      "right_result": {
+        "prediction": null,
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "error": "route_invalid"
+      },
+      "observation": "模型中间结果给出非法 basis ID，程序发现但流程未回退，吞掉有效初答。"
+    },
+    {
+      "stage": "候选池直接加入 V4：格式风险",
+      "source": "pair",
+      "sample_id": "natural_disaster_193_Q06",
+      "question": "沿因果关系看，D001（自然灾害-洪涝）之后直接发生了什么？",
+      "gold": {
+        "answer": "D002（应急处置-分洪蓄洪）是D001（自然灾害-洪涝）的直接后果。证据：有效削减淮河干流洪峰，降低干流水位，为保障淮河防洪安全发挥关键作用，彰显王家坝精神。（直接因果）",
+        "chains": [
+          [
+            "D001",
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "V4＋原候选列表",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.46258503401360546,
+          "answer_semantic_cosine": 0.8890776634216309,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.4,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_193_Q06",
+          "answer": "D001（自然灾害-洪涝）之后的直接结果事件为：D002（应急处置-分洪蓄洪，王家坝开闸蓄洪）、D003（应急处置-抗洪抢险）、D004（应急处置-科学调度）、D005（应急处置-转移安置）。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（自然灾害-洪涝）之后的直接结果事件为：D002（应急处置-分洪蓄洪，王家坝开闸蓄洪）、D003（应急处置-抗洪抢险）、D004（应急处置-科学调度）、D005（应急处置-转移安置）。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7224,
+          "completion_tokens": 897,
+          "total_tokens": 8121,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 809
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6328
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 4.634
+      },
+      "right_result": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "{\"answer\":\"D001（自然灾害-洪涝）之后直接发生的有四个事件：D002（王家坝开闸蓄洪、启用蓄滞洪区）、D003（军民团结抗洪抢险）、D004（科学调度、精准防控）、D005（受灾群众转移安置）。\",\"evidence_chain\":[[\"D001\",\"D002\"],[\"D001\",\"D003\"],[\"D001\",\"D004\"],[\"D001\",\"D005\"]],\"confidence\":0.95}",
+        "error": "natural_disaster_193_Q06 evidence_chain 必须是 ID 字符串数组",
+        "usage": {
+          "prompt_tokens": 7329,
+          "completion_tokens": 1931,
+          "total_tokens": 9260,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1830
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6433
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 9.836
+      },
+      "observation": "候选包含 gold，但模型把四条平行路线输出成二维 evidence_chain，按原协议无效。"
+    },
+    {
+      "stage": "六题事后修复：仅供排错",
+      "source": "repair",
+      "sample_id": "natural_disaster_193_Q06",
+      "question": "沿因果关系看，D001（自然灾害-洪涝）之后直接发生了什么？",
+      "gold": {
+        "answer": "D002（应急处置-分洪蓄洪）是D001（自然灾害-洪涝）的直接后果。证据：有效削减淮河干流洪峰，降低干流水位，为保障淮河防洪安全发挥关键作用，彰显王家坝精神。（直接因果）",
+        "chains": [
+          [
+            "D001",
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "原候选输出",
+      "right_label": "编号候选＋单链要求＋较高上限",
+      "left_result": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "{\"answer\":\"D001（自然灾害-洪涝）之后直接发生的有四个事件：D002（王家坝开闸蓄洪、启用蓄滞洪区）、D003（军民团结抗洪抢险）、D004（科学调度、精准防控）、D005（受灾群众转移安置）。\",\"evidence_chain\":[[\"D001\",\"D002\"],[\"D001\",\"D003\"],[\"D001\",\"D004\"],[\"D001\",\"D005\"]],\"confidence\":0.95}",
+        "error": "natural_disaster_193_Q06 evidence_chain 必须是 ID 字符串数组",
+        "usage": {
+          "prompt_tokens": 7329,
+          "completion_tokens": 1931,
+          "total_tokens": 9260,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1830
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6433
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 9.836
+      },
+      "right_result": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "natural_disaster_193_Q06",
+          "answer": "D001（2003年淮河特大洪水）之后直接引发多项应急处置：D002 王家坝开闸蓄洪、蒙洼蓄滞洪区启用；D003 军民团结抗洪抢险；D004 科学调度、精准防控；D005 受灾群众转移安置。材料因果图将这些均标为 D001 的直接结果。",
+          "evidence_chain": [
+            "D001",
+            "D002"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（2003年淮河特大洪水）之后直接引发多项应急处置：D002 王家坝开闸蓄洪、蒙洼蓄滞洪区启用；D003 军民团结抗洪抢险；D004 科学调度、精准防控；D005 受灾群众转移安置。材料因果图将这些均标为 D001 的直接结果。\",\"evidence_chain\":[\"D001\",\"D002\"],\"confidence\":0.95}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 7421,
+          "completion_tokens": 4003,
+          "total_tokens": 11424,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3906
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6525
+        },
+        "elapsed_seconds": 21.938,
+        "metrics": {
+          "answer_char_f1": 0.4482758620689655,
+          "answer_semantic_cosine": 0.8846690654754639,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      },
+      "observation": "格式与链修复成功，但新 answer 仍列入 D003/D004/D005，说明链对不等于答案对。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "diplomacy_101_Q06",
+      "question": "沿因果关系看，D001（合作机制建立发展）之后直接发生了什么？",
+      "gold": {
+        "answer": "D002（领导人会晤机制）是D001（合作机制建立发展）的直接后果。证据：作为最高级别机制引领合作方向，推动合作不断升级。（直接因果）",
+        "chains": [
+          [
+            "D001",
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.4217687074829932,
+          "answer_semantic_cosine": 0.7650155425071716,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.3333333333333333,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "diplomacy_101_Q06",
+          "answer": "按因果关系列表，D001之后直接因果关联到：D002（领导人会晤机制）、D003（经贸合作成果）、D004（基建互联互通合作）、D005（地方与人文交流）；此外，D001对D008（双边关系深入发展）标注为促进作用。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D008"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"按因果关系列表，D001之后直接因果关联到：D002（领导人会晤机制）、D003（经贸合作成果）、D004（基建互联互通合作）、D005（地方与人文交流）；此外，D001对D008（双边关系深入发展）标注为促进作用。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\",\"D008\"],\"confidence\":0.9}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 13167,
+          "completion_tokens": 1605,
+          "total_tokens": 14772,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1510
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 12271
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 8.379
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.6909090909090909,
+          "answer_semantic_cosine": 0.8559674024581909,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "diplomacy_101_Q06",
+          "answer": "D001（合作机制建立发展）之后，直接发生的是领导人会晤机制成为该合作的最高级别形式，并持续为合作制定规划、引领方向。",
+          "evidence_chain": [
+            "D001",
+            "D002"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 13510,
+          "completion_tokens": 1382,
+          "total_tokens": 14892,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1325
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 12614
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 7.474
+      },
+      "observation": "平行后果收敛为 gold 的 D001→D002；链、字符 F1 与语义均提高。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "natural_disaster_072_Q04",
+      "question": "请判断：围绕最终结果D010（防灾减灾能力提升），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "gold": {
+        "answer": "该结果由一条有向因果链推动：D001（台风生成增强） → D002（超强台风首次登陆） → D003（国家防总应急部部署防御） → D010（防灾减灾能力提升）。起点为台风生成增强，终点为防灾减灾能力提升；推动补短板强弱项，全面提升抵御自然灾害综合防范能力。",
+        "chains": [
+          [
+            "D001",
+            "D002",
+            "D003",
+            "D010"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.5725806451612904,
+          "answer_semantic_cosine": 0.8937487006187439,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_072_Q04",
+          "answer": "按给定因果关系，围绕最终结果D010（防灾减灾能力提升）可追溯的有序推动链条为：D001（台风生成增强）→ D002（超强台风首次登陆）→ D003（国家防总应急部部署防御）→ D010（防灾减灾能力提升）。其中D001→D002、D002→D003为直接因果，D003→D010为间接传导，因此D003不是以直接因果方式推动D010。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D010"
+          ],
+          "confidence": 0.7,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"按给定因果关系，围绕最终结果D010（防灾减灾能力提升）可追溯的有序推动链条为：D001（台风生成增强）→ D002（超强台风首次登陆）→ D003（国家防总应急部部署防御）→ D010（防灾减灾能力提升）。其中D001→D002、D002→D003为直接因果，D003→D010为间接传导，因此D003不是以直接因果方式推动D010。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D010\"],\"confidence\":0.7}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 10017,
+          "completion_tokens": 1849,
+          "total_tokens": 11866,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1722
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 9121
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 9.002
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.34545454545454546,
+          "answer_semantic_cosine": 0.7691398859024048,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_072_Q04",
+          "answer": "围绕最终结果D010（防灾减灾能力提升）的多跳有序证据链为：D001→D002→D003→D010。即D001先推动D002，D002再推动D003；其中D003对D010为间接传导，不是直接因果。因此依次推动D010的事件是D001、D002、D003。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D010"
+          ],
+          "confidence": 0.75,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 10372,
+          "completion_tokens": 6606,
+          "total_tokens": 16978,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 6502
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 9476
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 33.212
+      },
+      "observation": "两次都命中完整链，但新 answer 主要写编号与边型，弱化事件含义和结果解释；答案两项指标下降。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "natural_disaster_026_Q06",
+      "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+      "gold": {
+        "answer": "D002（领导指示）是D001（自然灾害）的直接后果。证据：抗震救灾工作迅速有力展开，各方救援力量紧急集结。（直接因果）",
+        "chains": [
+          [
+            "D001",
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.36363636363636365,
+          "answer_semantic_cosine": 0.7834324836730957,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.4,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_026_Q06",
+          "answer": "D001（青海玉树7.1级地震）之后，按因果关系中的直接因果边，直接发生的是：D002（领导指示，要求全力抢救受灾群众并启动应急响应）、D003（应急救援，全国救援队伍开展搜救）、D004（灾情通报，核定2698人遇难并举行全国哀悼活动）、D005（群众安置，搭建帐篷、设立安置点并保障基本生活）。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（青海玉树7.1级地震）之后，按因果关系中的直接因果边，直接发生的是：D002（领导指示，要求全力抢救受灾群众并启动应急响应）、D003（应急救援，全国救援队伍开展搜救）、D004（灾情通报，核定2698人遇难并举行全国哀悼活动）、D005（群众安置，搭建帐篷、设立安置点并保障基本生活）。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7971,
+          "completion_tokens": 2118,
+          "total_tokens": 10089,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1996
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 7075
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 10.085
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.3263157894736842,
+          "answer_semantic_cosine": 0.7276510000228882,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_026_Q06",
+          "answer": "D001（青海玉树7.1级强烈地震）之后直接发生的是中央领导作出重要指示：胡锦涛、温家宝分别要求全力做好抗震救灾工作、千方百计救援受灾群众、最大限度减少人员伤亡，并妥善安置受灾群众、保障基本生活；按此指示，国务院迅速成立抗震救灾总指挥部，启动应急响应，调集专业救援队伍、医疗卫生力量和救灾物资紧急驰援玉树灾区。",
+          "evidence_chain": [
+            "D001",
+            "D002"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 8314,
+          "completion_tokens": 2295,
+          "total_tokens": 10609,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2177
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 7418
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 12.927
+      },
+      "observation": "新链由错到对；新 answer 加入大量领导指示和部署细节，和简短 gold 答法距离更远。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "economy_trade_123_Q06",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "gold": {
+        "answer": "D002（成效进展）是D001（政策发布）的直接后果。证据：推动经济稳中向好、提质增效。（直接因果）",
+        "chains": [
+          [
+            "D001",
+            "D002"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.27472527472527475,
+          "answer_semantic_cosine": 0.7154297828674316,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.3333333333333333,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "economy_trade_123_Q06",
+          "answer": "D001（2002年陕西自由贸易试验区挂牌运行）之后直接发生了：D006 陕西部署做好自由贸易试验区挂牌运行相关工作、D004 市场热议并提振各方信心、D005 专家进行解读、D003 陕西推出配套举措优化服务、D002 挂牌运行落地见效并显现成效。D007、D008 属于间接传导或后续展望，不是D001的直接结果。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（2002年陕西自由贸易试验区挂牌运行）之后直接发生了：D006 陕西部署做好自由贸易试验区挂牌运行相关工作、D004 市场热议并提振各方信心、D005 专家进行解读、D003 陕西推出配套举措优化服务、D002 挂牌运行落地见效并显现成效。D007、D008 属于间接传导或后续展望，不是D001的直接结果。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\",\"D006\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7018,
+          "completion_tokens": 1217,
+          "total_tokens": 8235,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1097
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6122
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 7.563
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.2905982905982906,
+          "answer_semantic_cosine": 0.6885232329368591,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "economy_trade_123_Q06",
+          "answer": "D001（政策发布）之后直接发生的是有关主管部门的工作部署：为推动自由贸易试验区挂牌运行落地见效，要求细化配套措施、明确责任分工、健全推进机制，确保各项政策措施落到实处。",
+          "evidence_chain": [
+            "D001",
+            "D006"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7364,
+          "completion_tokens": 3260,
+          "total_tokens": 10624,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3196
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6468
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 17.601
+      },
+      "observation": "新版本只选一条图上直接边，但选了 D006 而非 gold D002；格式修复并不保证分支选择。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "diplomacy_070_Q01",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（全球疫苗接种启动与变异病毒出现），并按顺序给出完整证据链。",
+      "gold": {
+        "answer": "梳理可得因果路径：D001（武汉不明原因肺炎出现与病毒鉴定）→D002（武汉封城与全国一级响应）→D004（疫情全球扩散与命名COVID-19）→D005（WHO宣布全球大流行与各国封锁）→D008（全球疫苗筹款与中国五项举措）→D009（疫苗研发冲刺与中国经济复苏）→D011（欧洲第二波疫情与疫苗三期成功）→D012（全球疫苗接种启动与变异病毒出现）。病毒鉴定为疫苗研发奠定基础，全球大流行加速了疫苗研发投入，最终在2020年底实现疫苗接种。",
+        "chains": [
+          [
+            "D001",
+            "D002",
+            "D004",
+            "D005",
+            "D008",
+            "D009",
+            "D011",
+            "D012"
+          ],
+          [
+            "D001",
+            "D004",
+            "D005",
+            "D009",
+            "D012"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.5985915492957746,
+          "answer_semantic_cosine": 0.8662127256393433,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8888888888888888,
+          "chain_edge_f1": 0.625,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "diplomacy_070_Q01",
+          "answer": "按材料与给定因果关系，导致D012的是一条从疫情起源、全球扩散到疫苗研发成熟、再到接种启动与变异病毒出现的多阶段因果链。起因阶段是D001（武汉不明原因肺炎出现与病毒鉴定）引发D002（武汉封城与全国一级响应）；发展阶段依次经D004（疫情全球扩散与命名COVID-19）、D005（WHO宣布全球大流行与各国封锁）、D007（武汉解封与美国暂停资助WHO）、D008（全球疫苗筹款与中国五项举措）、D009（疫苗研发冲刺与中国经济复苏）、D010（COVAX计划与联合国75周年），再到D011（欧洲第二波疫情与疫苗三期成功）；结果阶段由D011以及D009的疫苗研发冲刺共同推动D012（全球疫苗接种启动与变异病毒出现），表现为英国率先批准并启动辉瑞疫苗接种、美国等国跟进、中国疫苗获批附条件上市，同时B.1.1.7等变异株出现。完整顺序证据链为：D001→D002→D004→D005→D007→D008→D009→D010→D011→D012。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D004",
+            "D005",
+            "D007",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "confidence": 0.85,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"按材料与给定因果关系，导致D012的是一条从疫情起源、全球扩散到疫苗研发成熟、再到接种启动与变异病毒出现的多阶段因果链。起因阶段是D001（武汉不明原因肺炎出现与病毒鉴定）引发D002（武汉封城与全国一级响应）；发展阶段依次经D004（疫情全球扩散与命名COVID-19）、D005（WHO宣布全球大流行与各国封锁）、D007（武汉解封与美国暂停资助WHO）、D008（全球疫苗筹款与中国五项举措）、D009（疫苗研发冲刺与中国经济复苏）、D010（COVAX计划与联合国75周年），再到D011（欧洲第二波疫情与疫苗三期成功）；结果阶段由D011以及D009的疫苗研发冲刺共同推动D012（全球疫苗接种启动与变异病毒出现），表现为英国率先批准并启动辉瑞疫苗接种、美国等国跟进、中国疫苗获批附条件上市，同时B.1.1.7等变异株出现。完整顺序证据链为：D001→D002→D004→D005→D007→D008→D009→D010→D011→D012。\",\"evidence_chain\":[\"D001\",\"D002\",\"D004\",\"D005\",\"D007\",\"D008\",\"D009\",\"D010\",\"D011\",\"D012\"],\"confidence\":0.85}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 12254,
+          "completion_tokens": 5344,
+          "total_tokens": 17598,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5057
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 11358
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 24.634
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.46065808297567956,
+          "answer_semantic_cosine": 0.863641083240509,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8888888888888888,
+          "chain_edge_f1": 0.625,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "diplomacy_070_Q01",
+          "answer": "导致D012（全球疫苗接种启动与变异病毒出现）的是一条从疫情起源、全球扩散、国际合作与资金筹款、疫苗研发冲刺、三期临床成功到批准接种的连续过程。起因是D001武汉出现不明原因肺炎并完成病毒鉴定；D002武汉封城与全国一级响应，限制本土传播但疫情已向境外扩散。发展包括：D004世卫命名COVID-19，全球研究与创新论坛将疫苗开发列为优先，疫情在全球加速；D005世卫宣布全球大流行，各国实施封锁；D006东京奥运推迟、G20特别峰会承诺共享信息、加强科研合作并注入资金；D008全球冠状病毒响应认捐会议筹集74亿欧元并推动疫苗研发，中国宣布疫苗将作为全球公共产品；D009全球疫苗研发进入冲刺，俄罗斯注册“卫星-V”，多款疫苗进入三期临床；D010 COVAX扩大至172个国家和地区并确立20亿剂目标，联合国大会呼吁全球合作；D011辉瑞、莫德纳、阿斯利康、国药等疫苗三期有效性数据公布，欧洲第二波疫情持续。结果是D012：英国率先批准辉瑞/BioNTech疫苗并启动全球首轮接种，美国、欧盟、俄罗斯、中国等随后批准和接种；同期英国发现B.1.1.7变异株、南非发现501Y.V2变异株，多国断航并重启封锁。因此，D001→D002→D004→D005→D006→D008→D009→D010→D011→D012构成完整证据链。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D004",
+            "D005",
+            "D006",
+            "D008",
+            "D009",
+            "D010",
+            "D011",
+            "D012"
+          ],
+          "confidence": 0.86,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 12678,
+          "completion_tokens": 4956,
+          "total_tokens": 17634,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4576
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 11782
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 23.451
+      },
+      "observation": "前五候选缺完整 gold；模型在池外自构长链，仍多出 D006/D010。字符 F1 下降，语义接近。"
+    },
+    {
+      "stage": "最终同题探索复跑：链与答案一起看",
+      "source": "final",
+      "sample_id": "natural_disaster_121_Q06",
+      "question": "结合材料，从时间看D005（医疗救治）早于D008（成因分析），这是否意味着二者存在因果？请判断。",
+      "gold": {
+        "answer": "不能。D005（医疗救治）早于D008（成因分析）只是时间先后，材料中不存在 D005→D008 的因果关系；时间接近不等于因果，须以明确因果证据为准。",
+        "chains": [
+          [
+            "D005",
+            "D008"
+          ]
+        ]
+      },
+      "left_label": "纯 V4",
+      "right_label": "候选＋单链及答案对齐",
+      "left_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.6233766233766234,
+          "answer_semantic_cosine": 0.8368270397186279,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 1
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_121_Q06",
+          "answer": "否。材料显示D005（2025-01-09）并不早于D008（2025-01-08），而是晚于；时间先后本身不能证明因果，且给定因果关系中也不存在D005与D008之间的因果边，因此不能据此认为二者存在因果。",
+          "evidence_chain": [
+            "D008",
+            "D005"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"否。材料显示D005（2025-01-09）并不早于D008（2025-01-08），而是晚于；时间先后本身不能证明因果，且给定因果关系中也不存在D005与D008之间的因果边，因此不能据此认为二者存在因果。\",\"evidence_chain\":[\"D008\",\"D005\"],\"confidence\":0.9}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 9377,
+          "completion_tokens": 1315,
+          "total_tokens": 10692,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1231
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 8481
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 7.12
+      },
+      "right_result": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.45081967213114754,
+          "answer_semantic_cosine": 0.8708562850952148,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_121_Q06",
+          "answer": "不能由此判断二者存在因果。材料显示D008（成因分析）的时间为2025-01-08，D005（医疗救治）的时间为2025-01-09，因此“D005早于D008”的时间前提本身不成立，实际是D008早于D005。即便存在时间先后，时间先后也不等于因果；材料中的因果关系没有D005与D008之间的因果边，D008是对地震成因的专家解析，D005是医疗机构收治伤员的统计，不能据时间先后推出二者存在因果。",
+          "evidence_chain": [
+            "D008",
+            "D005"
+          ],
+          "confidence": 0.88,
+          "question_type": "retrospective"
+        },
+        "error": null,
+        "usage": {
+          "prompt_tokens": 9720,
+          "completion_tokens": 3329,
+          "total_tokens": 13049,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3191
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 8824
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 17.62
+      },
+      "observation": "两版都与 gold 链相反；事件表日期表明题设的 D005 早于 D008 不成立，需将此例标为标注争议。"
+    }
+  ]
+}
