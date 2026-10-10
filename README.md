@@ -97,6 +97,7 @@ QLoRA 理论来源、当前配置约 70–100 小时/轮的测量外推、以及
 | [`experiments/run_path_answer_pair.py`](experiments/run_path_answer_pair.py) · [`experiments/evaluate_path_answer_pair.py`](experiments/evaluate_path_answer_pair.py) | 研究专用同模型配对与代理指标；API 输出不可用于训练或正式提交 |
 | [`experiments/run_causal_path_pair.py`](experiments/run_causal_path_pair.py) · [`experiments/audit_causal_path_candidates.py`](experiments/audit_causal_path_candidates.py) | 冻结 A 档包隔离配对、核验局部候选覆盖；研究输出仅在 `outputs/` |
 | [`experiments/run_full_causal_path_research.py`](experiments/run_full_causal_path_research.py) · [`experiments/compare_full_causal_path_research.py`](experiments/compare_full_causal_path_research.py) | 760 题研究复跑、断点续跑与无金标输出变化统计；A 加路径索引，B/C 保持原输入 |
+| [`experiments/run_task4_v4_candidate_test.py`](experiments/run_task4_v4_candidate_test.py) | 新版三档研究运行器：A 用前五条定向图候选＋单链提示，B/C 用 V4；统一经过保守拒答格式解析与完整输出校验；默认每档 1 题 |
 | [`experiments/sample_multireference_epoch.py`](experiments/sample_multireference_epoch.py) | 从所有兼容的完整金标备选链中按种子和轮次确定性选一条，不合并链 |
 | [`experiments/train_sft.py`](experiments/train_sft.py) · [`experiments/run_sft.py`](experiments/run_sft.py) · [`experiments/evaluate_sft.py`](experiments/evaluate_sft.py) | 离线 QLoRA SFT、固定包验证/留出推理和训练金标代理评估；无 GPU 时只运行预检 |
 | [`experiments/prepare_llamafactory_data.py`](experiments/prepare_llamafactory_data.py) · [`experiments/configs/task4_qwen35_9b_llamafactory_fit_16k.yaml`](experiments/configs/task4_qwen35_9b_llamafactory_fit_16k.yaml) | 以官方框架真实模板筛除超长行，注册固定 fit 数据并运行 Qwen3.5-9B 16K QLoRA 基线 |
@@ -129,6 +130,9 @@ python -m experiments.run_causal_path_pair --selection experiments/causal_path_h
 python -m experiments.evaluate_path_answer_pair --paired outputs/causal_path_pair.json --output outputs/causal_path_pair.metrics.json --embedding-model C:/path/to/local/bge-small-zh-v1.5
 python -m experiments.run_full_causal_path_research --dry-run --output outputs/causal_path_full_760.json
 python -m experiments.run_full_causal_path_research --output outputs/causal_path_full_760.json --api-key-file C:/path/to/key.txt --model deepseek-flash --workers 12
+python -m experiments.run_task4_v4_candidate_test --dry-run
+python -m experiments.run_task4_v4_candidate_test --validate --output outputs/task4_v4_candidate_test_smoke.json
+python -m experiments.run_task4_v4_candidate_test --all --dry-run
 python -m experiments.compare_full_causal_path_research --old outputs/deepseek_flash_full_760.json --new outputs/causal_path_full_760.json --output outputs/causal_path_full_comparison.json
 python -m experiments.run_path_answer_pair --output outputs/path_answer_pair.json --api-key-file C:/path/to/key.txt
 python -m experiments.evaluate_path_answer_pair --paired outputs/path_answer_pair.json --output outputs/path_answer_pair.metrics.json
