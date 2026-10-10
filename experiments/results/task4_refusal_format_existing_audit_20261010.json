@@ -1,0 +1,51 @@
+{
+  "note": "Posthoc saved-output audit; V6 cases informed the repair rule.",
+  "source_sha256": {
+    "old90": "f6b8485a5964c91254631f528b133235acf7290588291d4677e175694e666f7a",
+    "fresh30_v6": "a7fb2504297531ff4de3832d0adc115a10fb6b10f926ff6c1006a1797b97cc0b"
+  },
+  "sets": {
+    "old90": {
+      "n": 90,
+      "repairs": 1,
+      "cases": [
+        {
+          "sample_id": "public_safety_054_Q08",
+          "repair": "empty_chain_refusal_phrase",
+          "original_valid": false,
+          "repaired_valid": true,
+          "original_answer": "不能得出唯一确定结论。现有材料显示，官方通报与另一来源在关键结论上相互矛盾，双方口径尚未统一，仍需进一步交叉核验。",
+          "repaired_answer": "无法确定",
+          "gold_strict": true
+        }
+      ],
+      "valid_before": 80,
+      "valid_after": 81,
+      "strict_gold_hit_before": 19,
+      "strict_gold_hit_after": 20,
+      "nonstrict_gold_strict_before": 1,
+      "nonstrict_gold_strict_after": 1
+    },
+    "fresh30_v6": {
+      "n": 30,
+      "repairs": 1,
+      "cases": [
+        {
+          "sample_id": "public_safety_118_Q08",
+          "repair": "empty_chain_refusal_phrase",
+          "original_valid": false,
+          "repaired_valid": true,
+          "original_answer": "不能得出唯一确定结论。官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验，两方口径尚未统一。",
+          "repaired_answer": "无法确定",
+          "gold_strict": true
+        }
+      ],
+      "valid_before": 27,
+      "valid_after": 28,
+      "strict_gold_hit_before": 10,
+      "strict_gold_hit_after": 11,
+      "nonstrict_gold_strict_before": 1,
+      "nonstrict_gold_strict_after": 1
+    }
+  }
+}

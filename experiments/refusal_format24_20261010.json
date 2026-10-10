@@ -1,0 +1,260 @@
+{
+  "purpose": "Paired V4 vs short refusal-format prompt; 8 strict, 8 explanatory, 8 other gold strata",
+  "seed": "task4:refusal-format24:2026-10-10:before-api",
+  "source_split": "fit",
+  "n": 24,
+  "gold_used_only_for_sampling": true,
+  "excluded_prior_pack_count": 131,
+  "document_isolated_from_prior_and_within_set": true,
+  "views": {
+    "A": 14,
+    "B": 7,
+    "C": 3
+  },
+  "prompt_sha256": {
+    "v4": "6e4d5b5f162b0505a3912ebcd71af6d99850729b522cf70fead0fe218cf2eab5",
+    "fmt": "72477a6158da66bea3a8e8937b9d9c07843b3cbf03138e6a141811a0f3de4d4d"
+  },
+  "rows": [
+    {
+      "sample_id": "economy_trade_152_Q05",
+      "pack": "经济贸易_152",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "A",
+      "input_chars": 12156,
+      "input_sha256": "195425458eed5d76cf2d59af9135b3b87c152b290c6221fb1c25ae0e74dce44d"
+    },
+    {
+      "sample_id": "public_safety_133_Q05",
+      "pack": "公共安全_133",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "A",
+      "input_chars": 13726,
+      "input_sha256": "17e0800de6d12c8f39d51b033890ebdaf5978f4d80f45ff1e2fa80e3a44ef53f"
+    },
+    {
+      "sample_id": "economy_trade_156_Q05",
+      "pack": "经济贸易_156",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "A",
+      "input_chars": 12203,
+      "input_sha256": "abd9492a7d9b0f506d0b1c15644997db61454b1fd67603487eb21b689c27aa18"
+    },
+    {
+      "sample_id": "public_safety_015_Q05",
+      "pack": "公共安全_015",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "A",
+      "input_chars": 10833,
+      "input_sha256": "55c667c0dd12f430620c66c01ff7ff8df570c1e10f0c32f724bb569dfee75dc6"
+    },
+    {
+      "sample_id": "public_safety_206_Q05",
+      "pack": "公共安全_206",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "A",
+      "input_chars": 12300,
+      "input_sha256": "652298c56fbe995fbe580d11d5c44caf65658d8dee502b5c1900ff7a1eac49f5"
+    },
+    {
+      "sample_id": "diplomacy_172_Q05",
+      "pack": "政治外交_172",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "B",
+      "input_chars": 12122,
+      "input_sha256": "4748cb237e61f070ddbf999612042d78975a0112c924d54a5152662b1579c1c8"
+    },
+    {
+      "sample_id": "public_safety_216_Q05",
+      "pack": "公共安全_216",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "B",
+      "input_chars": 14974,
+      "input_sha256": "feb8acc2b75d1ced1573eb2b8c19d9e20f6ec9a9261b0776380061958f61f134"
+    },
+    {
+      "sample_id": "public_safety_147_Q05",
+      "pack": "公共安全_147",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "view": "C",
+      "input_chars": 18295,
+      "input_sha256": "9b558f60243f193c63e9a95494ad009b12475cc4c9327d97445ab4c4486d9b77"
+    },
+    {
+      "sample_id": "cybersecurity_06_Q02",
+      "pack": "网络安全_06",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "鉴于标准升级事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+      "view": "A",
+      "input_chars": 13075,
+      "input_sha256": "7f39b66e493deb14eacaaaf145b4e65f794c0c81c452563df13adce7c49c93c2"
+    },
+    {
+      "sample_id": "economy_trade_124_Q07",
+      "pack": "经济贸易_124",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "鉴于趋势展望事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+      "view": "A",
+      "input_chars": 12796,
+      "input_sha256": "66ac1ee3ebcf4ac25be4a0427ee62cfe9084e1522a7654a5d55643dc35f0f468"
+    },
+    {
+      "sample_id": "economy_trade_031_Q04",
+      "pack": "经济贸易_031",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "鉴于中小企业影响事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+      "view": "A",
+      "input_chars": 12900,
+      "input_sha256": "04f01866a2f3e1db5886bf215ddff6edb2203f40653e4964887a8117f89c84b7"
+    },
+    {
+      "sample_id": "energy_environment_07_Q07",
+      "pack": "能源环境_07",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "仅凭现有材料，能否唯一确定能源转型是否会导致整个行业长期停摆？",
+      "view": "A",
+      "input_chars": 12992,
+      "input_sha256": "529a72f67ac734c00fe873c6c57045a16bd562d9ee783a994414a0042ff55f59"
+    },
+    {
+      "sample_id": "economy_trade_192_Q04",
+      "pack": "经济贸易_192",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "鉴于企业行动事件并未造成任何人员伤亡或损失，请说明为何仍要追责？",
+      "view": "A",
+      "input_chars": 12563,
+      "input_sha256": "c848245f4562d04c5dd40ad5e23b1a85d812e2f1ecc107cdce3897bb76f5fc20"
+    },
+    {
+      "sample_id": "public_safety_006_Q09",
+      "pack": "公共安全_006",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "unanswerable",
+      "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（路面塌方）构成因果关系？请判断并说明。",
+      "view": "B",
+      "input_chars": 12857,
+      "input_sha256": "26cecc3635518d9142907eabc5f07d69515a618b5fb64a6541ca153a0487941a"
+    },
+    {
+      "sample_id": "public_safety_052_Q09",
+      "pack": "公共安全_052",
+      "reasoning_type": "missing_information",
+      "question_type": "unanswerable",
+      "question": "根据材料，涉事橡胶软管究竟从何时开始老化开裂、燃气泄漏持续了多长时间？请依据材料作答。",
+      "view": "B",
+      "input_chars": 10319,
+      "input_sha256": "3856ce25f22ce957aac920b8afa267ba6a5a30e34ff9a8d5a74c27519ff27a28"
+    },
+    {
+      "sample_id": "social_governance_06_Q02",
+      "pack": "社会治理_06",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，京津冀周边居民的确切疏散人数是多少？",
+      "view": "C",
+      "input_chars": 5402,
+      "input_sha256": "e533774abc79d41816e50ca68a85afd0e5e5f46f6e8e7e0d8ec6bba4e9caeb02"
+    },
+    {
+      "sample_id": "economy_trade_042_Q06",
+      "pack": "经济贸易_042",
+      "reasoning_type": "single_hop",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "view": "A",
+      "input_chars": 16715,
+      "input_sha256": "44e3c0713272f7f7496582cdba4bba4d295c503018de633147dc1dedd23bc0d9"
+    },
+    {
+      "sample_id": "natural_disaster_194_Q07",
+      "pack": "自然灾害_194",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于山火持续期间（D001 山火灾害爆发；D002 灾害成因分析；D003 人员财产损失；D004 生态灾难；D005 烟雾环境影响），请基于因果趋势预测后续发展并说明依据。",
+      "view": "A",
+      "input_chars": 17736,
+      "input_sha256": "41f57690d2f4f475f74a51e9ebc8d0169d92b780bbfdcb3dabd1b44672d7d239"
+    },
+    {
+      "sample_id": "economy_trade_113_Q03",
+      "pack": "经济贸易_113",
+      "reasoning_type": "counterfactual",
+      "question_type": "counterfactual",
+      "question": "依据现有证据，如果移除D001（政策发布）这一原因，D002（成效进展）是否会失去支撑？请判断并说明连锁影响。",
+      "view": "A",
+      "input_chars": 16746,
+      "input_sha256": "60f26c04df841052f0a1737ac421b98e07d05b632cf9cfc017c3aa9faaf8124b"
+    },
+    {
+      "sample_id": "diplomacy_002_Q02",
+      "pack": "政治外交_002",
+      "reasoning_type": "temporal_causal",
+      "question_type": "retrospective",
+      "question": "请判断：D001（组织成立）在D002（制度建设）之前发生，二者是否构成因果？依据是什么？",
+      "view": "A",
+      "input_chars": 25434,
+      "input_sha256": "fd8b54778d1b64f93f6932485b3c6a482084b3bb0daf19336b9e9e8099e4a92b"
+    },
+    {
+      "sample_id": "natural_disaster_119_Q07",
+      "pack": "自然灾害_119",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于2004-11-11（D001 自然灾害；D002 转移安置；D003 抢险救援；D004 救灾救助；D005 工作部署），请基于因果趋势预测后续发展并说明依据。",
+      "view": "B",
+      "input_chars": 13143,
+      "input_sha256": "a9cb9d5aa69ae54ff1f7ae5386ff7f3ffbf80b75d29350b093d677bfb69055d8"
+    },
+    {
+      "sample_id": "public_safety_025_Q01",
+      "pack": "公共安全_025",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D010（安全防范总结），并按顺序给出完整证据链。",
+      "view": "B",
+      "input_chars": 17669,
+      "input_sha256": "db1945cb0498e677be298563508ec43cb36ecc2bdec605e07075a6ff095978d7"
+    },
+    {
+      "sample_id": "diplomacy_115_Q06",
+      "pack": "政治外交_115",
+      "reasoning_type": "single_hop",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D002（俄乌冲突讨论）之后直接发生了什么？",
+      "view": "B",
+      "input_chars": 18268,
+      "input_sha256": "955f785d1b321b5d5ae0ec5e972e9c5f06f3eacc35c64ae3428705daa5c4a33b"
+    },
+    {
+      "sample_id": "natural_disaster_189_Q02",
+      "pack": "自然灾害_189",
+      "reasoning_type": "temporal_causal",
+      "question_type": "retrospective",
+      "question": "请判断：D001（飓风登陆）在D002（堤防决口）之前发生，二者是否构成因果？依据是什么？",
+      "view": "C",
+      "input_chars": 13925,
+      "input_sha256": "38c09e185859b71e460c963877f2f35c1780e59b6eb488ae21d3c72da285134a"
+    }
+  ]
+}

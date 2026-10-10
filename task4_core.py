@@ -6,6 +6,8 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from task4_refusal_format import normalize_raw
+
 REPO_ROOT = Path(__file__).resolve().parent
 DEFAULT_DATASET = REPO_ROOT / "数据集" / "抽样测试集_100"
 
@@ -124,7 +126,8 @@ def build_input(sample: Sample, max_input_chars: int = 80000) -> tuple[str, set[
 
 
 def parse_prediction(raw: str, sample: Sample, allowed_ids: set[str]) -> dict:
-    text = raw.strip()
+    text, _ = normalize_raw(raw)
+    text = text.strip()
     if text.startswith("```"):
         lines = text.splitlines()
         if len(lines) >= 3 and lines[-1].strip() == "```":
@@ -149,11 +152,6 @@ def parse_prediction(raw: str, sample: Sample, allowed_ids: set[str]) -> dict:
         raise ValueError(f"{sample.sample_id} 证据 ID 不在材料中：{unknown}")
     if len(chain) != len(set(chain)):
         raise ValueError(f"{sample.sample_id} 证据链含重复 ID")
-    refusal_prefixes = ("无法确定", "无法回答", "无法精确", "不能确定", "无法仅凭",
-                        "现有材料不足", "资料不足", "证据不足", "无法建立因果关系")
-    if not chain and answer.startswith(refusal_prefixes):
-        answer = "无法确定"
-        confidence = None
     if answer == "无法确定":
         if chain or confidence is not None:
             raise ValueError(f"{sample.sample_id} 拒答时证据链必须为空、置信度必须为 null")
