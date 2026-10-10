@@ -1,0 +1,83 @@
+{
+  "scope": "organizer training packages, phrase containing '之后直接发生了什么'",
+  "note": "The first direct successor is the smallest event ID; this is an annotation regularity, not proof that it is semantically superior.",
+  "by_split": {
+    "fit": {
+      "questions": 505,
+      "multiple_direct_successors": 403,
+      "gold_is_first_direct_successor": 503,
+      "gold_D001_D002": 414
+    },
+    "validation": {
+      "questions": 67,
+      "multiple_direct_successors": 57,
+      "gold_is_first_direct_successor": 67,
+      "gold_D001_D002": 61
+    },
+    "holdout": {
+      "questions": 67,
+      "multiple_direct_successors": 52,
+      "gold_is_first_direct_successor": 66,
+      "gold_D001_D002": 55
+    }
+  },
+  "all": {
+    "questions": 639,
+    "multiple_direct_successors": 512,
+    "gold_is_first_direct_successor": 636,
+    "gold_D001_D002": 530
+  },
+  "exceptions": [
+    {
+      "sample_id": "public_safety_229_Q04",
+      "pack": "公共安全_229",
+      "split": "holdout",
+      "start": "D005",
+      "direct_successors": [
+        "D006",
+        "D007"
+      ],
+      "gold_chains": [
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "question": "在本案中，沿因果关系看，D005（事故调查组成立）之后直接发生了什么？"
+    },
+    {
+      "sample_id": "healthcare_02_Q02",
+      "pack": "医疗健康_02",
+      "split": "fit",
+      "start": "D004",
+      "direct_successors": [
+        "D005",
+        "D006"
+      ],
+      "gold_chains": [
+        [
+          "D004",
+          "D006"
+        ]
+      ],
+      "question": "沿因果关系看，D004（专家科普）之后直接发生了什么？"
+    },
+    {
+      "sample_id": "natural_disaster_184_Q06",
+      "pack": "自然灾害_184",
+      "split": "fit",
+      "start": "D001",
+      "direct_successors": [
+        "D002",
+        "D006"
+      ],
+      "gold_chains": [
+        [
+          "D001",
+          "D006"
+        ]
+      ],
+      "question": "沿因果关系看，D001（台风预警响应）之后直接发生了什么？"
+    }
+  ]
+}
