@@ -1,0 +1,1774 @@
+{
+  "rows": [
+    {
+      "sample_id": "economy_trade_059_Q03",
+      "pack": "经济贸易_059",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，材料中关于D004（专家分析）记载了哪些关键事实？",
+      "category": "event_facts",
+      "input_sha256": "aaedab9ad54ce243767b234da26508914a2308569c9989e8dd43c60fcaf8c231",
+      "candidate_paths": [
+        [
+          "D004"
+        ],
+        [
+          "D004",
+          "D006",
+          "D008",
+          "D010"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D004",
+          "D006",
+          "D008"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_027_Q03",
+      "pack": "政治外交_027",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "依据现有证据，材料中关于D006（政策发布）记载了哪些关键事实？",
+      "category": "event_facts",
+      "input_sha256": "f07ab16942ae1381b8f08030c883cc78d2cf11b671be690a274576763d720bb1",
+      "candidate_paths": [
+        [
+          "D006"
+        ],
+        [
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D006",
+          "D008"
+        ],
+        [
+          "D006",
+          "D007"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_201_Q05",
+      "pack": "政治外交_201",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请概述D010（国际评价）的主体、地点与主要影响。",
+      "category": "event_facts",
+      "input_sha256": "3bfa4f0258f540ff3390ad256a76703443bece1792855f579b2ab0c58a1a7ae4",
+      "candidate_paths": [
+        [
+          "D010"
+        ],
+        [
+          "D004",
+          "D006",
+          "D008",
+          "D010"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D008",
+          "D010"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_200_Q04",
+      "pack": "政治外交_200",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "在本案中，材料显示D001（外交会晤）与某一事件存在直接因果，请指出该事件及其影响。",
+      "category": "unspecified_direct",
+      "input_sha256": "22088960c85810a4f29eccd844e3eca1eeb12d7ce697ee41f125eb7192e2a0b1",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_117_Q07",
+      "pack": "经济贸易_117",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D004（专家分析）与哪一事件构成直接因果关系？其后果是什么？",
+      "category": "unspecified_direct",
+      "input_sha256": "0bdda373cbf37c186587b77375dfe29f816949b98ba42518eb404969ceffe3ef",
+      "candidate_paths": [
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004",
+          "D005"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_123_Q06",
+      "pack": "经济贸易_123",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "111b37b105da2206801e7c53738e70705b3a62e837477525c5f1272188f9b07c",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D003"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_157_Q06",
+      "pack": "政治外交_157",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（国际峰会）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "6e90501448ff9309551fd2f22fe6dd4a3d5546267f8bbf3db43361968e4464fe",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D003"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_075_Q06",
+      "pack": "公共安全_075",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（事故）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "081d2cc165253ad0a218309158dd98fc2adc9e1814c08c0ac8bfe499a7bfd2f0",
+      "candidate_paths": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D004"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_150_Q06",
+      "pack": "经济贸易_150",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D003（去美元化推动因素）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "fedc4b715b4a98f5a707434cca79ba88218312e5dbf907a8a224cc0a333cca55",
+      "candidate_paths": [
+        [
+          "D003",
+          "D001"
+        ],
+        [
+          "D003"
+        ],
+        [
+          "D003",
+          "D001",
+          "D006"
+        ],
+        [
+          "D003",
+          "D001",
+          "D005"
+        ],
+        [
+          "D003",
+          "D001",
+          "D004"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_193_Q06",
+      "pack": "自然灾害_193",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（自然灾害-洪涝）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "03c543892083cb431ed77f556e6d9c1fc5bda6cd904bb014c4c880b43d0fd7bd",
+      "candidate_paths": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_183_Q06",
+      "pack": "公共安全_183",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（公共安全-火灾事故）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "84d906b1a0953b57f16fb453edef936354eb31b018320aa874142e8022a5e77f",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_101_Q06",
+      "pack": "政治外交_101",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（合作机制建立发展）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "3276039c13e40363ee2144b473d441b506197e87ddf75ed37a83c7f1dba598f3",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_045_Q06",
+      "pack": "经济贸易_045",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "fcc9220770d81df3600640c37510856dfa645c2c66eacc0d04d0334d99ac2f58",
+      "candidate_paths": [
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_167_Q06",
+      "pack": "公共安全_167",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（事故）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "0ecd537ba9f4b4cb49b2d994bd22852b8d923423e58cc8a99a6247c3e8ba83c7",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_162_Q03",
+      "pack": "经济贸易_162",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：哪一事件是D008（成效评估）的直接后果？其影响如何？",
+      "category": "direct_effect",
+      "input_sha256": "cf301fefefed7fca65f9f6ccbe69622191d92199037feea0d4549ac96ce28d5c",
+      "candidate_paths": [
+        [
+          "D008",
+          "D009"
+        ],
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D008"
+        ],
+        [
+          "D008",
+          "D010"
+        ],
+        [
+          "D006",
+          "D008"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_066_Q06",
+      "pack": "经济贸易_066",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "d130ec3bb7a6b6f09e8d6e4c41a9e06815dc458a3c358c98c9ed9c294dd4a1f9",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_026_Q06",
+      "pack": "自然灾害_026",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "afa4b6be5ba444a7592adb9758561262b8e71bb1829d4991cf8e9522e04092ec",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_183_Q06",
+      "pack": "自然灾害_183",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（自然灾害-暴雨洪涝）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "b710012e7046c05413f956f7ff1fb4217d5833d7c9d8bf80b240501ff4fd1dda",
+      "candidate_paths": [
+        [
+          "D001",
+          "D007"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_106_Q06",
+      "pack": "公共安全_106",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（事故）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "dc313effa3490de7a73fa45cfe97e815192c5cd389ba4a8234304cec307c3357",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_133_Q06",
+      "pack": "经济贸易_133",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（政策发布）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "5e971250b43061fe87c711a6dd540a9a740493f5a0d81a5e85a35918b1a44b7c",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_186_Q02",
+      "pack": "公共安全_186",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（事故）在D002（事故调查）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "1ae94344bb8a102fca2e9cfe2cdaa6c7c931d416469953f6b675ec27c1d49d5b",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_121_Q06",
+      "pack": "自然灾害_121",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，从时间看D005（医疗救治）早于D008（成因分析），这是否意味着二者存在因果？请判断。",
+      "category": "temporal_causal_pair",
+      "input_sha256": "078aba28f5ff56ea1f99eab60a605d8ccb1ce85177a6f26d41f0913e7013242b",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D005"
+        ],
+        [
+          "D001",
+          "D008"
+        ],
+        [
+          "D004",
+          "D005"
+        ],
+        [
+          "D001",
+          "D002",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_080_Q02",
+      "pack": "政治外交_080",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（佩洛西拟窜访台湾消息曝光与中方警告）在D003（佩洛西窜台与中方反制启动）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "7f391a63bf7431248a5d1edfd978d236b32313f0119be412e76d0e01ffc82b12",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D005",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_099_Q02",
+      "pack": "公共安全_099",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D003（事故原因调查）在D001（安全事故发生）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "58a61a93baf6f199f0b7b8574267ecfdd74172e9409b13080f81400e27c99013",
+      "candidate_paths": [
+        [
+          "D003",
+          "D001"
+        ],
+        [
+          "D003",
+          "D001",
+          "D004",
+          "D005",
+          "D006"
+        ],
+        [
+          "D003",
+          "D001",
+          "D002"
+        ],
+        [
+          "D003",
+          "D001",
+          "D004"
+        ],
+        [
+          "D003",
+          "D001",
+          "D004",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_019_Q02",
+      "pack": "自然灾害_019",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（自然灾害）在D002（抢险救援）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "895354acd19bded4c8e6cf5189a81baddbc6eb58d32874596f0c71905be6a4b5",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_082_Q02",
+      "pack": "经济贸易_082",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（政策发布）在D002（成效进展）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "28e1fecb9cc18e9135a55e62ae0b18b8105a11a30c55d9a0b333fd8bae0a1cc1",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_134_Q02",
+      "pack": "政治外交_134",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D004（历程回顾）在D001（签署条约）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "7fede744d07d1a20e7b178b53bb51c160b11bdd0c1fa83cf3cc8d59827c90552",
+      "candidate_paths": [
+        [
+          "D004",
+          "D001"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D004",
+          "D001",
+          "D003"
+        ],
+        [
+          "D004",
+          "D001",
+          "D005"
+        ],
+        [
+          "D004",
+          "D001",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_102_Q02",
+      "pack": "政治外交_102",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（元首会晤举行）在D002（共识成果发布）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "50e0096dd150829b6b6fdb67c58db6168cfd558e2e569394c4c75b48bfb1157f",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D004",
+          "D009"
+        ],
+        [
+          "D001",
+          "D005",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_198_Q02",
+      "pack": "政治外交_198",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（高峰论坛开幕）在D002（发表主旨演讲）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "14ff746b4f5ec76fec50b3999ab146a56f4c7eb6a2b041ded5b41fad38cc8c1f",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D001",
+          "D002",
+          "D010"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D005",
+          "D007",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_187_Q02",
+      "pack": "经济贸易_187",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D002（危机原因分析）在D001（债务危机爆发）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "05bfb061abebd156fe6d31a6b2d10b41e5720747b2bc19b84e521ade004e4917",
+      "candidate_paths": [
+        [
+          "D002",
+          "D001"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D002",
+          "D001",
+          "D005"
+        ],
+        [
+          "D002",
+          "D001",
+          "D009"
+        ],
+        [
+          "D002",
+          "D001",
+          "D005",
+          "D006",
+          "D008",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_108_Q02",
+      "pack": "经济贸易_108",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（政策发布）在D002（专家解读）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "bcbb1ae5e2ab0141fae3871779193141ff1358d73970b32d0a0a10e27d6cfad8",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002"
+        ],
+        [
+          "D001",
+          "D002",
+          "D009"
+        ],
+        [
+          "D002",
+          "D009"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_229_Q05",
+      "pack": "公共安全_229",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：事件D001（燃气闪爆事故发生）在进程上早于D004（善后处置工作）。能否据此认为D001（燃气闪爆事故发生）导致了D004（善后处置工作）？请给出判断与证据。",
+      "category": "temporal_causal_pair",
+      "input_sha256": "4bf388ee703bc586381fc8fcee600e73ea539a70d5ad5854a22494cf2cdadbc3",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_097_Q02",
+      "pack": "公共安全_097",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：D001（事故）在D002（应急救援）之前发生，二者是否构成因果？依据是什么？",
+      "category": "temporal_causal_pair",
+      "input_sha256": "b4267577b78a6a5d006e51445367c74893e2045499a77b39976cee0948f23224",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D002",
+          "D007"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D005"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_174_Q06",
+      "pack": "经济贸易_174",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，从时间看D004（措施生效）早于D006（提起诉讼），这是否意味着二者存在因果？请判断。",
+      "category": "temporal_causal_pair",
+      "input_sha256": "61fd4f3181d7a96dedc8ecec4968504697c8de99c818d84b940c765ec17d1c14",
+      "candidate_paths": [
+        [
+          "D006"
+        ],
+        [
+          "D005",
+          "D006"
+        ],
+        [
+          "D006",
+          "D010"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D001",
+          "D002",
+          "D005",
+          "D006"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_060_Q01",
+      "pack": "公共安全_060",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：从时间看D001（安全事件/风险发生）早于D005（整治行动推进），这是否意味着二者存在因果？请判断。",
+      "category": "temporal_causal_pair",
+      "input_sha256": "efd9a741d17e61c3fb7c2bc0dcf2630ad3fb256eb861c821c7eab2660ac11ea2",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004",
+          "D005"
+        ],
+        [
+          "D005"
+        ],
+        [
+          "D001"
+        ],
+        [
+          "D001",
+          "D004",
+          "D005",
+          "D007"
+        ],
+        [
+          "D005",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_170_Q01",
+      "pack": "政治外交_170",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "ba18c41918fecc52fcd153d2865c6531776f23a23106b33e49488c1d41f73855",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_113_Q04",
+      "pack": "政治外交_113",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D004（会议成果），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "e1617488436145a3801ac0763521ccf5dcab89744b8780e46bc0969f82c485ca",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D004",
+          "D009"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_124_Q01",
+      "pack": "自然灾害_124",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D009（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "abc66e2aa97cf007932c62cfb89131cc9cb6deea5fd8803bbedd44fe53e0d0c3",
+      "candidate_paths": [
+        [
+          "D009"
+        ],
+        [
+          "D003",
+          "D004",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D009"
+        ],
+        [
+          "D003",
+          "D009"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_077_Q04",
+      "pack": "公共安全_077",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D004（应急救援），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "5f13266d6aa1e4ae1357463144f12b3744addbbcdad080415025371213858e19",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D004"
+        ],
+        [
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_153_Q01",
+      "pack": "公共安全_153",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "95dfbaebc6e984a0620fa62c11e313d37f510daf09972dfd4b468b39426dab7e",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D011"
+        ],
+        [
+          "D011"
+        ],
+        [
+          "D001",
+          "D002",
+          "D011"
+        ],
+        [
+          "D001",
+          "D004",
+          "D011"
+        ],
+        [
+          "D001",
+          "D003",
+          "D011"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_191_Q01",
+      "pack": "公共安全_191",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "ba5d53e4176293ef3eb6ed67bcaf83d070da9e3d0fbea35f20ef007379deb477",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_007_Q05",
+      "pack": "自然灾害_007",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请还原从D001（灾害发生）到D009（预警建设）的完整因果传导过程，并按序列出证据。",
+      "category": "explicit_path",
+      "input_sha256": "96f8555fc080861c648f95e409edd56b29bcc088a376dc7d62247750683f1c72",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "economy_trade_135_Q04",
+      "pack": "经济贸易_135",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D007（银行业风险爆发），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "bea62d54eaa3bb56b33dc555c6aca1a42817bd6ee6fc0ca365720eb5c01d8936",
+      "candidate_paths": [
+        [
+          "D007"
+        ],
+        [
+          "D002",
+          "D001",
+          "D003",
+          "D007"
+        ],
+        [
+          "D002",
+          "D001",
+          "D007"
+        ],
+        [
+          "D001",
+          "D003",
+          "D007"
+        ],
+        [
+          "D001",
+          "D007"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_029_Q04",
+      "pack": "政治外交_029",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "在本案中，围绕最终结果D009（专家解读），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "def840afcf9c604ac0e2e3e3a959cc1d803dc8772370d96675f592bec58700e9",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_005_Q04",
+      "pack": "自然灾害_005",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D010（长期应对策略），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "108201d90df405bb4d2092e169670ce2ceb87b0ca9433c36cd068cdfe02d842d",
+      "candidate_paths": [
+        [
+          "D002",
+          "D001",
+          "D004",
+          "D009",
+          "D010"
+        ],
+        [
+          "D002",
+          "D001",
+          "D003",
+          "D009",
+          "D010"
+        ],
+        [
+          "D002",
+          "D001",
+          "D008",
+          "D010"
+        ],
+        [
+          "D010"
+        ],
+        [
+          "D002",
+          "D001",
+          "D009",
+          "D010"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "public_safety_108_Q04",
+      "pack": "公共安全_108",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D006（法治建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "bc8610c09dc5a34b2707ae5570ed45be9ee9a9bb4c23f65baa7c910aebc30359",
+      "candidate_paths": [
+        [
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_091_Q06",
+      "pack": "自然灾害_091",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，围绕最终结果D009（预警建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "1b6f2d21e658d12e7f33f511672d691bab19d59e62011c2e719eab33c390b118",
+      "candidate_paths": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_072_Q04",
+      "pack": "自然灾害_072",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D010（防灾减灾能力提升），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "1e5c979d86cdb4878c1a7cdb3d2dcee9c67f30a3cf06645571c0090402b287b5",
+      "candidate_paths": [
+        [
+          "D010"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D010"
+        ],
+        [
+          "D002",
+          "D003",
+          "D010"
+        ],
+        [
+          "D003",
+          "D010"
+        ],
+        [
+          "D002",
+          "D004",
+          "D006"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "natural_disaster_012_Q01",
+      "pack": "自然灾害_012",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "f5c1201544cfd45fe54288ffd54f004a083989824ed58f06299113fda472602b",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ]
+      ],
+      "risk_flags": []
+    },
+    {
+      "sample_id": "diplomacy_070_Q01",
+      "pack": "政治外交_070",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D012（全球疫苗接种启动与变异病毒出现），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "84847c0e656444caf0b50697eceec0bddc5324f6f2d0a090dd3139283dbae74f",
+      "candidate_paths": [
+        [
+          "D005",
+          "D007",
+          "D008",
+          "D009",
+          "D010",
+          "D011",
+          "D012"
+        ],
+        [
+          "D001",
+          "D002",
+          "D004",
+          "D005",
+          "D006",
+          "D008",
+          "D009",
+          "D012"
+        ],
+        [
+          "D001",
+          "D002",
+          "D004",
+          "D009",
+          "D010",
+          "D011",
+          "D012"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D007",
+          "D008",
+          "D009",
+          "D012"
+        ],
+        [
+          "D004",
+          "D005",
+          "D006",
+          "D008",
+          "D010",
+          "D011",
+          "D012"
+        ]
+      ],
+      "risk_flags": []
+    }
+  ]
+}

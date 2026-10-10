@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "5f4c884990ddf2f1c1f0c66026c45024cf9addb2ae080d97a201832b18aa72e2",
+  "system_sha256": "6e4d5b5f162b0505a3912ebcd71af6d99850729b522cf70fead0fe218cf2eab5",
+  "prefix_sha256": "f92a7d9505ab0fc931919a5f9e4aadd3dbe36d913375d8c28880370db6eef158",
+  "model": "deepseek-flash",
+  "max_tokens": 32768,
+  "temperature": "provider default",
+  "thinking": "provider default",
+  "response_format": {
+    "type": "json_object"
+  },
+  "gold_sent": false,
+  "scope": "exploratory same-50 rerun, simulated A view",
+  "start_balance_cny": "50.42",
+  "stop_spend_cny": "8.00",
+  "min_balance_cny": "10.00"
+}
