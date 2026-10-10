@@ -1,0 +1,251 @@
+{
+  "scope": "fit only, simulated A view",
+  "known_path_rule": "question_type=retrospective AND PATH_CUE matches question text",
+  "path_cue_pattern": "因果链|证据链|有序|一步步|多跳|传导|依次|追溯|事件链|因果顺序|如何.*发生|怎么.*发生|形成过程",
+  "caution": "Applicability rule chosen after fit exploration; validation is required before generalization.",
+  "groups": {
+    "causal_reasoning": {
+      "all": 25,
+      "multi_any_gold_chain": 23,
+      "new_top10_hit": 8,
+      "new_top16_hit": 11,
+      "new_top5_hit": 6,
+      "nonempty_gold_chain": 25,
+      "old_top5_hit": 10,
+      "raw_graph_hit": 14
+    },
+    "comparative_analysis": {
+      "all": 25,
+      "multi_any_gold_chain": 25,
+      "new_top10_hit": 4,
+      "new_top16_hit": 7,
+      "new_top5_hit": 3,
+      "nonempty_gold_chain": 25,
+      "old_top5_hit": 5,
+      "raw_graph_hit": 9
+    },
+    "conflicting": {
+      "all": 3,
+      "multi_any_gold_chain": 0,
+      "new_top10_hit": 3,
+      "new_top16_hit": 3,
+      "new_top5_hit": 3,
+      "nonempty_gold_chain": 3,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 3
+    },
+    "counterfactual": {
+      "all": 709,
+      "multi_any_gold_chain": 709,
+      "new_top10_hit": 698,
+      "new_top16_hit": 703,
+      "new_top5_hit": 673,
+      "nonempty_gold_chain": 709,
+      "old_top5_hit": 700,
+      "raw_graph_hit": 707
+    },
+    "counterfactual_inference": {
+      "all": 24,
+      "multi_any_gold_chain": 24,
+      "new_top10_hit": 3,
+      "new_top16_hit": 3,
+      "new_top5_hit": 2,
+      "nonempty_gold_chain": 24,
+      "old_top5_hit": 4,
+      "raw_graph_hit": 10
+    },
+    "distractor": {
+      "all": 2,
+      "multi_any_gold_chain": 0,
+      "new_top10_hit": 2,
+      "new_top16_hit": 2,
+      "new_top5_hit": 2,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 2
+    },
+    "fact_query": {
+      "all": 1,
+      "multi_any_gold_chain": 0,
+      "new_top10_hit": 1,
+      "new_top16_hit": 1,
+      "new_top5_hit": 1,
+      "nonempty_gold_chain": 1,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 1
+    },
+    "factual_query": {
+      "all": 24,
+      "multi_any_gold_chain": 16,
+      "new_top10_hit": 16,
+      "new_top16_hit": 16,
+      "new_top5_hit": 14,
+      "nonempty_gold_chain": 24,
+      "old_top5_hit": 7,
+      "raw_graph_hit": 18
+    },
+    "known_retrospective_path_cue": {
+      "all": 1296,
+      "multi_any_gold_chain": 1286,
+      "new_top10_hit": 1268,
+      "new_top16_hit": 1280,
+      "new_top5_hit": 1213,
+      "nonempty_gold_chain": 1296,
+      "old_top5_hit": 975,
+      "raw_graph_hit": 1289
+    },
+    "missing_information": {
+      "all": 2,
+      "empty_gold_chain": 1,
+      "multi_any_gold_chain": 0,
+      "new_top10_hit": 1,
+      "new_top16_hit": 1,
+      "new_top5_hit": 1,
+      "nonempty_gold_chain": 1,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 1
+    },
+    "multi_hop_reasoning": {
+      "all": 25,
+      "multi_any_gold_chain": 25,
+      "new_top10_hit": 1,
+      "new_top16_hit": 2,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 25,
+      "old_top5_hit": 1,
+      "raw_graph_hit": 7
+    },
+    "prospective": {
+      "all": 853,
+      "multi_any_gold_chain": 822,
+      "new_top10_hit": 298,
+      "new_top16_hit": 433,
+      "new_top5_hit": 120,
+      "nonempty_gold_chain": 853,
+      "old_top5_hit": 156,
+      "raw_graph_hit": 582
+    },
+    "retrospective": {
+      "all": 3265,
+      "empty_gold_chain": 12,
+      "multi_any_gold_chain": 2867,
+      "new_top10_hit": 2907,
+      "new_top16_hit": 3070,
+      "new_top5_hit": 2583,
+      "nonempty_gold_chain": 3253,
+      "old_top5_hit": 2085,
+      "raw_graph_hit": 3128
+    },
+    "summarization": {
+      "all": 24,
+      "multi_any_gold_chain": 24,
+      "new_top10_hit": 2,
+      "new_top16_hit": 2,
+      "new_top5_hit": 1,
+      "nonempty_gold_chain": 24,
+      "old_top5_hit": 2,
+      "raw_graph_hit": 3
+    },
+    "summary": {
+      "all": 1,
+      "multi_any_gold_chain": 1,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 1,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 1
+    },
+    "temporal_reasoning": {
+      "all": 25,
+      "multi_any_gold_chain": 25,
+      "new_top10_hit": 2,
+      "new_top16_hit": 2,
+      "new_top5_hit": 1,
+      "nonempty_gold_chain": 25,
+      "old_top5_hit": 1,
+      "raw_graph_hit": 4
+    },
+    "unanswerable": {
+      "all": 763,
+      "empty_gold_chain": 685,
+      "multi_any_gold_chain": 0,
+      "new_top10_hit": 72,
+      "new_top16_hit": 75,
+      "new_top5_hit": 67,
+      "nonempty_gold_chain": 78,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 78
+    },
+    "事实查询": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "假设推断": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "因果推理": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "多跳推理": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "总结概括": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "时序推理": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    },
+    "比较分析": {
+      "all": 2,
+      "multi_any_gold_chain": 2,
+      "new_top10_hit": 0,
+      "new_top16_hit": 0,
+      "new_top5_hit": 0,
+      "nonempty_gold_chain": 2,
+      "old_top5_hit": 0,
+      "raw_graph_hit": 0
+    }
+  }
+}

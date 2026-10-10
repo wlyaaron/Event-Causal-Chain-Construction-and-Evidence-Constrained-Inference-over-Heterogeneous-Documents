@@ -96,6 +96,39 @@ class WorkflowTests(unittest.TestCase):
             self.assertEqual(paths[0], test_meta["candidate_paths"][0])
             self.assertNotIn("SECRET_GOLD_SENTINEL", test_prompt)
 
+    def test_targeted_mode_is_opt_in_and_keeps_complete_materials(self) -> None:
+        (core.REPO_ROOT / "outputs").mkdir(exist_ok=True)
+        with tempfile.TemporaryDirectory(dir=core.REPO_ROOT / "outputs") as directory:
+            pack = Path(directory)
+            for number in range(1, 4):
+                (pack / f"D{number:03d}.txt").write_text(
+                    f"事件 {number} 的完整材料。", encoding="utf-8")
+            events = [{"event_id": f"D{number:03d}",
+                       "doc_id": f"D{number:03d}"}
+                      for number in range(1, 4)]
+            edges = [
+                {"cause_event_id": "D001", "result_event_id": "D002",
+                 "causal_type": "直接因果"},
+                {"cause_event_id": "D001", "result_event_id": "D003",
+                 "causal_type": "间接传导"},
+            ]
+            (pack / "事件列表.json").write_text(
+                json.dumps(events, ensure_ascii=False), encoding="utf-8")
+            (pack / "事件因果关系列表.json").write_text(
+                json.dumps(edges, ensure_ascii=False), encoding="utf-8")
+            (pack / "gold").mkdir()
+            (pack / "gold" / "问答对_答案.json").write_text(
+                "SECRET_GOLD_SENTINEL", encoding="utf-8")
+            sample = core.Sample(pack, "train", "demo_Q04", "retrospective",
+                                 "D001（事件一）之后直接发生了什么？")
+            prompt, allowed, meta = workflow.causal_path_input(
+                sample, candidate_mode="targeted")
+            self.assertEqual(["D001", "D002"], meta["candidate_paths"][0])
+            self.assertIn("完整原始输入", prompt)
+            self.assertIn("事件 3 的完整材料", prompt)
+            self.assertNotIn("SECRET_GOLD_SENTINEL", prompt)
+            self.assertEqual({"D001", "D002", "D003"}, allowed)
+
 
 if __name__ == "__main__":
     unittest.main()

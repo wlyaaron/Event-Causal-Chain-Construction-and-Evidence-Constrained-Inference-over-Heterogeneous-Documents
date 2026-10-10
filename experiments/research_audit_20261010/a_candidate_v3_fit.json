@@ -1,0 +1,444 @@
+{
+  "scope": "fit only, simulated A view",
+  "comparison": "V2 vs frozen V3, exact any complete gold chain at top5",
+  "groups": {
+    "causal_reasoning": {
+      "n": 25,
+      "v2_hit": 6,
+      "v3_hit": 6,
+      "gains": 0,
+      "losses": 0
+    },
+    "comparative_analysis": {
+      "n": 25,
+      "v2_hit": 3,
+      "v3_hit": 3,
+      "gains": 0,
+      "losses": 0
+    },
+    "conflicting": {
+      "n": 3,
+      "v2_hit": 3,
+      "v3_hit": 3,
+      "gains": 0,
+      "losses": 0
+    },
+    "counterfactual": {
+      "n": 709,
+      "v2_hit": 673,
+      "v3_hit": 673,
+      "gains": 0,
+      "losses": 0
+    },
+    "counterfactual_inference": {
+      "n": 24,
+      "v2_hit": 2,
+      "v3_hit": 2,
+      "gains": 0,
+      "losses": 0
+    },
+    "distractor": {
+      "n": 2,
+      "v2_hit": 2,
+      "v3_hit": 2,
+      "gains": 0,
+      "losses": 0
+    },
+    "explicit_path_retrospective": {
+      "n": 1296,
+      "v2_hit": 1213,
+      "v3_hit": 1213,
+      "gains": 0,
+      "losses": 0
+    },
+    "fact_query": {
+      "n": 1,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gains": 0,
+      "losses": 0
+    },
+    "factual_query": {
+      "n": 24,
+      "v2_hit": 14,
+      "v3_hit": 14,
+      "gains": 0,
+      "losses": 0
+    },
+    "missing_information": {
+      "n": 1,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gains": 0,
+      "losses": 0
+    },
+    "multi_hop_reasoning": {
+      "n": 25,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "other_retrospective": {
+      "n": 1957,
+      "v2_hit": 1734,
+      "v3_hit": 1767,
+      "gains": 33,
+      "losses": 0,
+      "intent_temporal_causal_pair": 629,
+      "intent_event_facts": 55,
+      "intent_direct_effect": 583,
+      "intent_unspecified_direct": 28
+    },
+    "prospective": {
+      "n": 853,
+      "v2_hit": 120,
+      "v3_hit": 120,
+      "gains": 0,
+      "losses": 0
+    },
+    "summarization": {
+      "n": 24,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gains": 0,
+      "losses": 0
+    },
+    "summary": {
+      "n": 1,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "temporal_reasoning": {
+      "n": 25,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gains": 0,
+      "losses": 0
+    },
+    "unanswerable": {
+      "n": 78,
+      "v2_hit": 67,
+      "v3_hit": 67,
+      "gains": 0,
+      "losses": 0
+    },
+    "事实查询": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "假设推断": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "因果推理": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "多跳推理": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "总结概括": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "时序推理": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    },
+    "比较分析": {
+      "n": 2,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gains": 0,
+      "losses": 0
+    }
+  },
+  "changes": [
+    {
+      "sample_id": "public_safety_016_Q02",
+      "pack": "公共安全_016",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_027_Q02",
+      "pack": "公共安全_027",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_055_Q02",
+      "pack": "公共安全_055",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_076_Q02",
+      "pack": "公共安全_076",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_083_Q07",
+      "pack": "公共安全_083",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_118_Q02",
+      "pack": "公共安全_118",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_156_Q02",
+      "pack": "公共安全_156",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_210_Q02",
+      "pack": "公共安全_210",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "public_safety_236_Q02",
+      "pack": "公共安全_236",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "healthcare_05_Q04",
+      "pack": "医疗健康_05",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "healthcare_08_Q06",
+      "pack": "医疗健康_08",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "industrial_production_08_Q04",
+      "pack": "工业生产_08",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "diplomacy_048_Q02",
+      "pack": "政治外交_048",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "diplomacy_077_Q02",
+      "pack": "政治外交_077",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "social_governance_07_Q02",
+      "pack": "社会治理_07",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_037_Q03",
+      "pack": "经济贸易_037",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_047_Q04",
+      "pack": "经济贸易_047",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_072_Q02",
+      "pack": "经济贸易_072",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_075_Q07",
+      "pack": "经济贸易_075",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_084_Q02",
+      "pack": "经济贸易_084",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_111_Q02",
+      "pack": "经济贸易_111",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_114_Q02",
+      "pack": "经济贸易_114",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_134_Q07",
+      "pack": "经济贸易_134",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_181_Q02",
+      "pack": "经济贸易_181",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "economy_trade_192_Q02",
+      "pack": "经济贸易_192",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "cybersecurity_02_Q05",
+      "pack": "网络安全_02",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "cybersecurity_08_Q04",
+      "pack": "网络安全_08",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "energy_environment_05_Q06",
+      "pack": "能源环境_05",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "natural_disaster_042_Q06",
+      "pack": "自然灾害_042",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "natural_disaster_065_Q05",
+      "pack": "自然灾害_065",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "natural_disaster_078_Q05",
+      "pack": "自然灾害_078",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "natural_disaster_096_Q07",
+      "pack": "自然灾害_096",
+      "group": "other_retrospective",
+      "intent": "unspecified_direct",
+      "v2_hit": false,
+      "v3_hit": true
+    },
+    {
+      "sample_id": "natural_disaster_171_Q02",
+      "pack": "自然灾害_171",
+      "group": "other_retrospective",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    }
+  ]
+}

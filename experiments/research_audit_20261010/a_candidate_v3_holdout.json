@@ -1,0 +1,139 @@
+{
+  "scope": "untouched 98 holdout packages, simulated A view",
+  "comparison": "V2 vs V3 top5 exact intact nonempty gold chain",
+  "gold_opened_after_100_model_attempts": true,
+  "groups": {
+    "causal_reasoning": {
+      "n": 4,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "comparative_analysis": {
+      "n": 4,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "conflicting": {
+      "n": 2,
+      "v2_hit": 2,
+      "v3_hit": 2,
+      "gain": 0,
+      "loss": 0
+    },
+    "counterfactual": {
+      "n": 94,
+      "v2_hit": 89,
+      "v3_hit": 89,
+      "gain": 0,
+      "loss": 0
+    },
+    "counterfactual_inference": {
+      "n": 3,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "distractor": {
+      "n": 1,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "explicit_path_retrospective": {
+      "n": 169,
+      "v2_hit": 156,
+      "v3_hit": 156,
+      "gain": 0,
+      "loss": 0
+    },
+    "fact_query": {
+      "n": 1,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "factual_query": {
+      "n": 3,
+      "v2_hit": 3,
+      "v3_hit": 3,
+      "gain": 0,
+      "loss": 0
+    },
+    "missing_information": {
+      "n": 1,
+      "v2_hit": 1,
+      "v3_hit": 1,
+      "gain": 0,
+      "loss": 0
+    },
+    "multi_hop_reasoning": {
+      "n": 4,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "other_retrospective": {
+      "n": 223,
+      "v2_hit": 206,
+      "v3_hit": 207,
+      "gain": 1,
+      "loss": 0,
+      "intent_temporal_causal_pair": 84,
+      "intent_direct_effect": 77,
+      "intent_event_facts": 3,
+      "intent_unspecified_direct": 2
+    },
+    "prospective": {
+      "n": 97,
+      "v2_hit": 17,
+      "v3_hit": 17,
+      "gain": 0,
+      "loss": 0
+    },
+    "summarization": {
+      "n": 3,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "summary": {
+      "n": 1,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "temporal_reasoning": {
+      "n": 4,
+      "v2_hit": 0,
+      "v3_hit": 0,
+      "gain": 0,
+      "loss": 0
+    },
+    "unanswerable": {
+      "n": 8,
+      "v2_hit": 6,
+      "v3_hit": 6,
+      "gain": 0,
+      "loss": 0
+    }
+  },
+  "changed": [
+    {
+      "sample_id": "diplomacy_134_Q02",
+      "pack": "政治外交_134",
+      "intent": "temporal_causal_pair",
+      "v2_hit": false,
+      "v3_hit": true
+    }
+  ]
+}

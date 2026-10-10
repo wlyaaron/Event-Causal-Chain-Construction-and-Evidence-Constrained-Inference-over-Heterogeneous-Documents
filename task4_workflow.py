@@ -243,8 +243,11 @@ def question_conditioned_paths(sample: core.Sample, limit: int = 5,
     return sorted(paths, key=score, reverse=True)[:limit]
 
 
-def causal_path_input(sample: core.Sample, view: str = "A") -> tuple[str, set[str], dict]:
+def causal_path_input(sample: core.Sample, view: str = "A", *,
+                      candidate_mode: str = "legacy") -> tuple[str, set[str], dict]:
     """Provide typed, question-ranked causal paths with source excerpts."""
+    if candidate_mode not in {"legacy", "targeted"}:
+        raise ValueError("candidate_mode must be legacy or targeted")
     if sample.track == "train":
         original, allowed, _ = training_view_input(sample, view)
     else:
@@ -258,7 +261,18 @@ def causal_path_input(sample: core.Sample, view: str = "A") -> tuple[str, set[st
     by_edge = {(edge.get("cause_event_id"),
                 edge.get("result_event_id", edge.get("effect_event_id"))): edge
                for edge in edges or []}
-    paths = question_conditioned_paths(sample)
+    if candidate_mode == "targeted":
+        from experiments.task4_a_candidate_pool import (
+            enumerate_graph_paths,
+            rank_graph_paths_targeted,
+        )
+
+        raw_paths = enumerate_graph_paths(events or [], edges or [])
+        paths = [list(path) for path in rank_graph_paths_targeted(
+            sample.question, sample.question_type, events or [], edges or [],
+            documents, raw_paths, limit=5)]
+    else:
+        paths = question_conditioned_paths(sample)
     used_nodes = list(dict.fromkeys(node for path in paths for node in path))
     evidence = []
     for node in used_nodes:
