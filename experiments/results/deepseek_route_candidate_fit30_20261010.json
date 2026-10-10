@@ -1,0 +1,3427 @@
+{
+  "n": 30,
+  "summary": {
+    "all": {
+      "v4": {
+        "n": 30,
+        "valid": 27,
+        "strict_confusion": {
+          "tp": 9,
+          "fn": 3,
+          "tn": 18
+        },
+        "answer_char_f1": 0.5165,
+        "answer_semantic_cosine": 0.7534,
+        "required_fact_coverage_lit": 0.1154,
+        "chain_node_f1": 0.6644,
+        "chain_edge_f1": 0.6051,
+        "chain_exact": 0.5,
+        "strict_refusal_correct": 0.8333
+      },
+      "method": {
+        "n": 30,
+        "valid": 22,
+        "strict_confusion": {
+          "tp": 6,
+          "fn": 6,
+          "fp": 1,
+          "tn": 17
+        },
+        "answer_char_f1": 0.3766,
+        "answer_semantic_cosine": 0.5857,
+        "required_fact_coverage_lit": 0.0741,
+        "chain_node_f1": 0.3888,
+        "chain_edge_f1": 0.35,
+        "chain_exact": 0.2333,
+        "strict_refusal_correct": 0.6
+      }
+    },
+    "strict_gold": {
+      "v4": {
+        "n": 12,
+        "valid": 11,
+        "strict_confusion": {
+          "tp": 9,
+          "fn": 3
+        },
+        "answer_char_f1": 0.7591,
+        "answer_semantic_cosine": 0.845,
+        "required_fact_coverage_lit": 0.3333,
+        "chain_node_f1": 0.75,
+        "chain_edge_f1": 0.8333,
+        "chain_exact": 0.75,
+        "strict_refusal_correct": 0.75
+      },
+      "method": {
+        "n": 12,
+        "valid": 9,
+        "strict_confusion": {
+          "tp": 6,
+          "fn": 6
+        },
+        "answer_char_f1": 0.5092,
+        "answer_semantic_cosine": 0.6121,
+        "required_fact_coverage_lit": 0.2,
+        "chain_node_f1": 0.5,
+        "chain_edge_f1": 0.5,
+        "chain_exact": 0.5,
+        "strict_refusal_correct": 0.5
+      }
+    },
+    "non_strict_gold": {
+      "v4": {
+        "n": 18,
+        "valid": 16,
+        "strict_confusion": {
+          "tn": 18
+        },
+        "answer_char_f1": 0.3548,
+        "answer_semantic_cosine": 0.6923,
+        "required_fact_coverage_lit": 0.0,
+        "chain_node_f1": 0.6073,
+        "chain_edge_f1": 0.453,
+        "chain_exact": 0.3333,
+        "strict_refusal_correct": 0.8889
+      },
+      "method": {
+        "n": 18,
+        "valid": 13,
+        "strict_confusion": {
+          "fp": 1,
+          "tn": 17
+        },
+        "answer_char_f1": 0.2882,
+        "answer_semantic_cosine": 0.5682,
+        "required_fact_coverage_lit": 0.0,
+        "chain_node_f1": 0.3147,
+        "chain_edge_f1": 0.25,
+        "chain_exact": 0.0556,
+        "strict_refusal_correct": 0.6667
+      }
+    },
+    "A": {
+      "v4": {
+        "n": 18,
+        "valid": 15,
+        "strict_confusion": {
+          "tp": 5,
+          "fn": 2,
+          "tn": 11
+        },
+        "answer_char_f1": 0.4774,
+        "answer_semantic_cosine": 0.6937,
+        "required_fact_coverage_lit": 0.1,
+        "chain_node_f1": 0.6565,
+        "chain_edge_f1": 0.5641,
+        "chain_exact": 0.5556,
+        "strict_refusal_correct": 0.7778
+      },
+      "method": {
+        "n": 18,
+        "valid": 12,
+        "strict_confusion": {
+          "tp": 3,
+          "fn": 4,
+          "fp": 1,
+          "tn": 10
+        },
+        "answer_char_f1": 0.3161,
+        "answer_semantic_cosine": 0.5131,
+        "required_fact_coverage_lit": 0.0625,
+        "chain_node_f1": 0.3589,
+        "chain_edge_f1": 0.287,
+        "chain_exact": 0.2222,
+        "strict_refusal_correct": 0.5
+      }
+    },
+    "B": {
+      "v4": {
+        "n": 9,
+        "valid": 9,
+        "strict_confusion": {
+          "tp": 3,
+          "tn": 5,
+          "fn": 1
+        },
+        "answer_char_f1": 0.5805,
+        "answer_semantic_cosine": 0.8455,
+        "required_fact_coverage_lit": 0.125,
+        "chain_node_f1": 0.7269,
+        "chain_edge_f1": 0.6296,
+        "chain_exact": 0.4444,
+        "strict_refusal_correct": 0.8889
+      },
+      "method": {
+        "n": 9,
+        "valid": 7,
+        "strict_confusion": {
+          "fn": 2,
+          "tp": 2,
+          "tn": 5
+        },
+        "answer_char_f1": 0.4276,
+        "answer_semantic_cosine": 0.6446,
+        "required_fact_coverage_lit": 0.0625,
+        "chain_node_f1": 0.4037,
+        "chain_edge_f1": 0.3333,
+        "chain_exact": 0.2222,
+        "strict_refusal_correct": 0.6667
+      }
+    },
+    "C": {
+      "v4": {
+        "n": 3,
+        "valid": 3,
+        "strict_confusion": {
+          "tp": 1,
+          "tn": 2
+        },
+        "answer_char_f1": 0.5593,
+        "answer_semantic_cosine": 0.8345,
+        "required_fact_coverage_lit": 0.1667,
+        "chain_node_f1": 0.5238,
+        "chain_edge_f1": 0.7778,
+        "chain_exact": 0.3333,
+        "strict_refusal_correct": 1.0
+      },
+      "method": {
+        "n": 3,
+        "valid": 3,
+        "strict_confusion": {
+          "tp": 1,
+          "tn": 2
+        },
+        "answer_char_f1": 0.5867,
+        "answer_semantic_cosine": 0.8448,
+        "required_fact_coverage_lit": 0.1667,
+        "chain_node_f1": 0.5238,
+        "chain_edge_f1": 0.7778,
+        "chain_exact": 0.3333,
+        "strict_refusal_correct": 1.0
+      }
+    }
+  },
+  "calls": 49,
+  "usage": {
+    "prompt_tokens": 400186,
+    "completion_tokens": 106535
+  },
+  "latency_seconds_sum": 541.06,
+  "cases": [
+    {
+      "sample_id": "natural_disaster_077_Q03",
+      "view": "A",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，西班牙周边居民的确切疏散人数是多少？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "natural_disaster_077_Q03",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "natural_disaster_077_Q03",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": null
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [],
+        "requested_target": "西班牙周边居民在灾害中的确切疏散人数（一个确定数值）",
+        "reason": "材料只有“紧急转移安置群众数万人”等模糊表述，未提供西班牙周边居民的确切疏散人数，无法确定该具体数值。"
+      },
+      "decision": "strict_consensus_code",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_162_Q05",
+      "view": "A",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "natural_disaster_162_Q05",
+        "answer": "不能精确量化。材料没有提供区域经济与社会未来五年的总体影响量化数据，且就直接经济损失也说明当时统计条件有限，很难精确计算全部经济损失。",
+        "evidence_chain": [
+          "D002",
+          "D007"
+        ],
+        "confidence": 0.7,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "natural_disaster_162_Q05",
+        "answer": "不能精确量化。材料没有提供通海地震相关事件对区域经济与社会未来五年总体影响的量化数据；对直接经济损失也明确说明当时统计条件有限，很难精确计算全部经济损失，因此更无法精确量化未来五年的总体影响。",
+        "evidence_chain": [
+          "D002",
+          "D007"
+        ],
+        "confidence": 0.92,
+        "question_type": null
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D002",
+          "D007"
+        ],
+        "requested_target": "判断并根据材料说明能否精确量化通海地震相关事件对区域经济与社会未来五年的总体影响。",
+        "reason": "材料虽描述了房屋、农田、水利、交通等损失及重建过程，但D002明确指出当时统计条件有限、很难精确计算全部经济损失，且未提供未来五年区域经济与社会总体影响的量化数据，因此只能说明不能精确量化，无法给出具体数值。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D002",
+            "D007"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.029850746268656716,
+          "answer_semantic_cosine": 0.5219346880912781,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "method": {
+          "answer_char_f1": 0.06315789473684211,
+          "answer_semantic_cosine": 0.5060433745384216,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "energy_environment_04_Q02",
+      "view": "A",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "既然材料显示欧盟对国际影响不负有任何责任，请解释后续处理的依据。",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "energy_environment_04_Q02",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "energy_environment_04_Q02",
+        "answer": "材料并未显示“欧盟对国际影响不负有任何责任”。相反，原文可核查地显示：欧盟牵头推进欧洲能源危机的实施（D003、D005），与多国开展技术交流和项目合作（D003），并表示将加快构建能源危机长效机制、推动制度建设和治理能力提升（D002、D003）。因此，后续处理并非建立在“欧盟不负责任”之上，而应依据欧盟在推进实施、国际合作和长效机制建设中的作用来解释。",
+        "evidence_chain": [
+          "D003",
+          "D005",
+          "D002"
+        ],
+        "confidence": 0.88,
+        "question_type": null
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D005",
+          "D003",
+          "D002"
+        ],
+        "requested_target": "纠正“欧盟对国际影响不负有任何责任”这一错误前提，并依据材料说明欧盟参与/推进后续处理的可核查依据。",
+        "reason": "材料未显示欧盟对国际影响不负责任，反而显示欧盟牵头推进实施、多国关注其国际影响，且欧盟表示将加快构建能源危机长效机制，因此只能作纠错性说明而非确认该前提。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D005"
+          ],
+          "source": "route_anchor"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "route_anchor"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "route_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.0,
+          "answer_semantic_cosine": 0.36942923069000244,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_188_Q05",
+      "view": "B",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "B",
+        "sample_id": "natural_disaster_188_Q05",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "natural_disaster_188_Q05",
+        "answer": "不能。根据材料，无法精确量化九寨沟地震及相关事件对区域经济与社会未来五年的总体影响。材料仅提供直接经济损失超过百亿元的初步统计，以及力争用三年左右时间完成重建、总投资超过百亿元等阶段性或部分量化信息，没有给出未来五年区域经济与社会总体影响的量化评估或预测数据。",
+        "evidence_chain": [
+          "D002",
+          "D008"
+        ],
+        "confidence": 0.94,
+        "question_type": null
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D002",
+          "D008"
+        ],
+        "requested_target": "九寨沟地震及相关事件对未来五年区域经济与社会总体影响的精确量化结果，以及材料能否支持该量化的明确判断。",
+        "reason": "材料只提供直接经济损失初步统计和三年左右重建投资/目标，没有未来五年区域经济与社会总体影响的量化评估或预测数据，因此只能说明不能精确量化。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "route_anchor"
+        },
+        {
+          "chain": [
+            "D008"
+          ],
+          "source": "route_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.047244094488188976,
+          "answer_semantic_cosine": 0.4697013795375824,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_031_Q05",
+      "view": "C",
+      "reasoning_type": "unanswerable",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否精确量化上述事件对区域经济与社会未来五年的总体影响？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "C",
+        "sample_id": "natural_disaster_031_Q05",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "C",
+        "sample_id": "natural_disaster_031_Q05",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": null
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [],
+        "requested_target": "精确量化上述事件对区域经济与社会未来五年的总体影响（具体量化数值或评估结论）",
+        "reason": "材料仅定性描述灾情、救援安置和恢复重建进展，未提供未来五年区域经济与社会总体影响的量化数据或预测评估，因此无法精确量化。"
+      },
+      "decision": "strict_consensus_code",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "economy_trade_074_Q09",
+      "view": "A",
+      "reasoning_type": "missing_information",
+      "question_type": "retrospective",
+      "question": "有关方面拟就新一轮西部大开发出台的专项支持方案，其具体内容、牵头部门和实施时间是什么？材料是否提供了足以确定的信息？",
+      "gold_answer": "材料未提供足以确定的信息。材料仅以未经证实的消息提及有关方面或将就新一轮西部大开发出台专项支持方案，但明确指出该方案的具体内容、牵头部门和实施时间均不明确，主体不详，相关信息有待进一步核实，因此无法据此作答。",
+      "gold_chains": [
+        [
+          "D014"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": null,
+      "method": {
+        "view": "A",
+        "sample_id": "economy_trade_074_Q09",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [
+          "D007",
+          "D014"
+        ],
+        "requested_target": "新一轮西部大开发专项支持方案的具体内容、牵头部门和实施时间",
+        "reason": "材料仅在D007/事件D014中提及未经证实的专项支持方案，并明确其具体内容、牵头部门和实施时间均不明确、主体不详，无法确定所求信息。"
+      },
+      "decision": "model_review",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "method": {
+          "answer_char_f1": 0.07920792079207921,
+          "answer_semantic_cosine": 0.5787086486816406,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_068_Q09",
+      "view": "A",
+      "reasoning_type": "missing_information",
+      "question_type": "retrospective",
+      "question": "材料提到有关方面或将追加一份专项投资支持方案，请说明该方案的具体投资总额、牵头部门和实施时间。",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "natural_disaster_068_Q09",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "natural_disaster_068_Q09",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [
+          "D006",
+          "D013"
+        ],
+        "requested_target": "有关方面或追加的专项投资支持方案的具体投资总额、牵头部门和实施时间",
+        "reason": "D006及事件D013仅称未经证实消息说或将追加专项方案，并明确其投资总额、牵头部门和实施时间均不明确、尚待核实，故材料无法确定所求对象。"
+      },
+      "decision": "strict_consensus_code",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_064_Q10",
+      "view": "A",
+      "reasoning_type": "missing_information",
+      "question_type": "unanswerable",
+      "question": "根据现有全部文档，土耳其叙利亚在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "natural_disaster_064_Q10",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "natural_disaster_064_Q10",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": null
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [],
+        "requested_target": "土耳其叙利亚在该灾害发生事件中现场处置的具体耗时，且需精确到分钟。",
+        "reason": "全部文档和事件列表均未记载现场处置的起始时间、结束时间或持续时长，无法确定精确到分钟的处置耗时。"
+      },
+      "decision": "strict_consensus_code",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_186_Q10",
+      "view": "B",
+      "reasoning_type": "missing_information",
+      "question_type": "unanswerable",
+      "question": "根据现有全部文档，意大利在该灾害发生事件中的具体现场处置耗时（精确到分钟）是多少？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "B",
+        "sample_id": "natural_disaster_186_Q10",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "natural_disaster_186_Q10",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": null
+      },
+      "route": {
+        "route": "strict_refusal",
+        "evidence_mode": "none",
+        "basis_ids": [],
+        "requested_target": "意大利在艾米利亚-罗马涅洪灾发生事件中的具体现场处置耗时，精确到分钟。",
+        "reason": "全部文档仅定性描述救援力量抵达、搜救推进和设施抢修，未给出任何现场处置的起止时间或精确耗时数据，因此无法确定该具体数值。"
+      },
+      "decision": "strict_consensus_code",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_028_Q09",
+      "view": "B",
+      "reasoning_type": "missing_information",
+      "question_type": "unanswerable",
+      "question": "根据材料，能否确定本次食物中毒首例发病的准确时刻（D018）？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "B",
+        "sample_id": "public_safety_028_Q09",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "public_safety_028_Q09",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": null
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D001",
+          "D018"
+        ],
+        "requested_target": "判断能否确定本次食物中毒首例发病的准确时刻，并说明材料是否给出明确依据。",
+        "reason": "D001明确说明中毒症状最初集中出现的确切时间各方记录不一致、现有信息尚无法确定首例发病准确时刻，D018事件也显示该时间未定。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "route_anchor"
+        },
+        {
+          "chain": [
+            "D018"
+          ],
+          "source": "route_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": 0.5,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_118_Q08",
+      "view": "A",
+      "reasoning_type": "conflicting_sources",
+      "question_type": "unanswerable",
+      "question": "关于新井煤业有限公司露天煤矿的事故发生事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": null,
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "diplomacy_175_Q08",
+      "view": "A",
+      "reasoning_type": "conflicting_sources",
+      "question_type": "unanswerable",
+      "question": "关于28国代表的外交会晤事件，官方通报与另一来源在关键结论上相互矛盾，信息尚未交叉核验。据此能否得出唯一确定结论？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "A",
+        "sample_id": "diplomacy_175_Q08",
+        "answer": "无法确定",
+        "evidence_chain": [],
+        "confidence": null,
+        "question_type": "unanswerable"
+      },
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 1.0,
+          "answer_semantic_cosine": 1.000000238418579,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "diplomacy_009_Q07",
+      "view": "A",
+      "reasoning_type": "conflicting_sources",
+      "question_type": "conflicting",
+      "question": "关于联合声明所涵盖的合作条目数量，不同来源报道不一（数十项/逾百项/多项）。应如何判断？请说明处理方式。",
+      "gold_answer": "无法直接采信单一口径：各来源对合作条目数量报道相互冲突（数十项/逾百项/多项），在权威全文公布、各方交叉核验之前应并列存疑，标注冲突而非给出唯一确定数字。",
+      "gold_chains": [
+        [
+          "D012"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "diplomacy_009_Q07",
+        "answer": "无法确定联合声明所涵盖合作条目的具体数量；材料显示“数十项”“逾百项”“多项”等口径相互冲突。处理方式应是并列存疑，不采信任何单一口径；待权威联合声明全文公布并完成各方交叉核验后，再据此确定。",
+        "evidence_chain": [
+          "D012"
+        ],
+        "confidence": 0.9,
+        "question_type": "conflicting"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "diplomacy_009_Q07",
+        "answer": "不能确定联合声明合作条目的具体数量，也不应采信“数十项”“逾百项”“多项”中的任一单一口径。处理上应并列保留不同报道口径并注明来源差异，优先查找联合声明权威全文或官方发布，以权威文本逐条核验、计数；在权威全文公布、各方交叉核验之前，结论中不作确定数量认定，避免以某一数字定论。",
+        "evidence_chain": [
+          "D003",
+          "D012"
+        ],
+        "confidence": 0.95,
+        "question_type": "conflicting"
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D003",
+          "D012"
+        ],
+        "requested_target": "对联合声明合作条目数量报道冲突的判断与处理方式，即是否/如何采信某一数字，而非要求给出唯一确定数量。",
+        "reason": "材料明确列出“数十项/逾百项/多项”等冲突口径，并说明在权威全文公布、交叉核验前该数字尚难定论，故应并列存疑、避免采信单一口径。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D012"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "route_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.5921052631578947,
+          "answer_semantic_cosine": 0.8332853317260742,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.5052631578947369,
+          "answer_semantic_cosine": 0.8068943619728088,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.6666666666666666,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_115_Q04",
+      "view": "B",
+      "reasoning_type": "conflicting_sources",
+      "question_type": "retrospective",
+      "question": "关于起火原因，网络传言（D012）称系电器线路短路或同行蓄意纵火，而初步调查（D003）认定为舞台自制烟火引燃隔音海绵。两类信息相互矛盾时应如何取舍？请说明理由。",
+      "gold_answer": "应采信初步调查（D003）的权威认定，即火灾直接原因是舞台表演使用自制烟火道具引燃聚氨酯隔音海绵。D012（网络传言）关于电器短路或同行纵火的说法查无实据、来源不明，可信度低于经现场勘查和当事人讯问得出、并由后续国务院调查报告确认的官方结论，故应以官方认定为准。",
+      "gold_chains": [
+        [
+          "D003"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "B",
+        "sample_id": "public_safety_115_Q04",
+        "answer": "应采信调查结论，不采信网络传言：起火直接原因是舞台表演时使用自制烟火道具，火花引燃聚氨酯隔音海绵。理由：初步调查（D003）经现场勘查和当事人讯问明确认定该原因，并指出电器线路短路、“与表演无关”、同行蓄意纵火等说法均与权威结论相悖；国务院调查组公布的调查报告（D005）也认定同一直接原因。网络传言（D012）所称电器线路短路或同行蓄意纵火，缺乏可核实的权威依据，且与调查结论冲突，故不足采信。",
+        "evidence_chain": [
+          "D003",
+          "D005",
+          "D012"
+        ],
+        "confidence": 0.95,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "public_safety_115_Q04",
+        "answer": "应采信调查结论（D003，并获D005国务院调查报告印证），不采信网络传言（D012）：起火直接原因是舞台表演时使用自制烟火道具，火花引燃聚氨酯隔音海绵。理由：D003载明调查经现场勘查和当事人讯问明确认定该原因，并明确电器线路短路、“与表演无关”、同行蓄意纵火等说法均与权威结论相悖、不足采信；D005的国务院调查报告又认定同一直接原因。网络传言来源不明、无权威证据支持，且与调查结论冲突，故不能作为起火原因采信。",
+        "evidence_chain": [
+          "D003",
+          "D005",
+          "D012"
+        ],
+        "confidence": 0.95,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D003",
+          "D005",
+          "D012"
+        ],
+        "requested_target": "判断网络传言（电器线路短路或同行纵火）与初步调查（舞台自制烟火引燃隔音海绵）冲突时应采信何者，并说明理由。",
+        "reason": "D003载明初步调查经现场勘查和当事人讯问认定舞台自制烟火引燃聚氨酯隔音海绵，并明确电器线路短路、同行纵火等传言与权威结论相悖；D005国务院调查报告亦认定同一直接原因。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D003",
+            "D005",
+            "D012"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D003",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D012"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D012"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D012"
+          ],
+          "source": "ordered_skip"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.668918918918919,
+          "answer_semantic_cosine": 0.9139338731765747,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.6209150326797386,
+          "answer_semantic_cosine": 0.9069175124168396,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "diplomacy_046_Q08",
+      "view": "B",
+      "reasoning_type": "conflicting_sources",
+      "question_type": "unanswerable",
+      "question": "关于中美元首利马会晤的持续时长，官方报道与另一网传来源不一致（官方未披露精确时长、仅称坦诚深入沟通，另一来源称仅持续十分钟）。据此能否得出唯一确定结论？",
+      "gold_answer": "无法确定",
+      "gold_chains": [],
+      "gold_strict": true,
+      "v4": {
+        "view": "B",
+        "sample_id": "diplomacy_046_Q08",
+        "answer": "不能得出唯一确定结论。官方报道未披露精确时长，仅称双方坦诚、深入沟通；另一网传来源称会晤仅持续十分钟，两种说法尚未一致，应以权威部门发布为准并进一步交叉核验。",
+        "evidence_chain": [
+          "D002"
+        ],
+        "confidence": 0.8,
+        "question_type": "unanswerable"
+      },
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.07894736842105263,
+          "answer_semantic_cosine": 0.6176172494888306,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "diplomacy_094_Q09",
+      "view": "A",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "unanswerable",
+      "question": "文档《D012.txt》中的背景性信息，是否与主线事件D001（会议举办）构成因果关系？请判断并说明。",
+      "gold_answer": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+      "gold_chains": [
+        [
+          "D001"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "diplomacy_094_Q09",
+        "answer": "不构成因果关系。D012中的背景性信息是某区域组织于2024-05-18在另一城市召开外长会，属年度例行活动；文档明确说明其与本次上合组织阿斯塔纳峰会无直接关联，虽时间接近，但主题、主体和事件性质均不同，应作为无关背景排除。因此，D012中的背景性信息不能与D001（会议举办）构成因果关系。",
+        "evidence_chain": [
+          "D001"
+        ],
+        "confidence": 0.96,
+        "question_type": "unanswerable"
+      },
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.33879781420765026,
+          "answer_semantic_cosine": 0.7053431272506714,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_129_Q09",
+      "view": "A",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "unanswerable",
+      "question": "文档《D012.txt》中的背景性信息，是否与主线事件D002（燃气泄漏）构成因果关系？请判断并说明。",
+      "gold_answer": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+      "gold_chains": [
+        [
+          "D002"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "public_safety_129_Q09",
+        "answer": "不构成因果关系。D012 的背景性信息是 2024-02-28 某地社区开展居民用气安全知识讲座，属于常规安全宣传；文档明确说明其与本次燕郊镇燃气泄漏爆燃事故无直接关联，且主题、涉及主体和事件性质均不同。D002 是 2024-03-13 燕郊镇小张各庄村底商发生的天然气泄漏。二者仅时间接近，没有材料支持的因果联系，应作为无关背景排除。",
+        "evidence_chain": [
+          "D002"
+        ],
+        "confidence": 0.95,
+        "question_type": "unanswerable"
+      },
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.31,
+          "answer_semantic_cosine": 0.6574404239654541,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_094_Q09",
+      "view": "A",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "unanswerable",
+      "question": "文档《D012.txt》中同期无关企业的日常检查，是否与主线事件灾害发生（D001）构成因果关系？请判断并说明。",
+      "gold_answer": "无法建立因果关系：D012.txt 为干扰性背景信息，与主线事件不存在证据支持的因果联系，应予以排除，不纳入证据链。",
+      "gold_chains": [
+        [
+          "D001"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": null,
+      "method": null,
+      "route": null,
+      "decision": "route_invalid",
+      "candidates": [],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_033_Q08",
+      "view": "B",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "distractor",
+      "question": "有材料提到邻近地区举办康定情歌旅游文化节，这与泸定灾区的抗震救灾、人员搜救存在因果关系吗？请判断并说明。",
+      "gold_answer": "没有因果关系。康定情歌旅游文化节（D017）只是邻近地区如期举办的一年一度民俗文化活动，与泸定灾区的抗震救灾、人员搜救工作并无直接关联，属于语义相近但无关的干扰信息，不应纳入因果链。",
+      "gold_chains": [
+        [
+          "D017"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "B",
+        "sample_id": "natural_disaster_033_Q08",
+        "answer": "不存在直接因果关系。材料将该文化节列为无关事项，并明确说明其与泸定灾区抗震救灾和人员搜救工作并无直接关联。",
+        "evidence_chain": [
+          "D017"
+        ],
+        "confidence": 0.95,
+        "question_type": "distractor"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "natural_disaster_033_Q08",
+        "answer": "不存在因果关系。原始材料明确将邻近地区举办的康定情歌旅游文化节列为无关事项，并指出其与泸定灾区抗震救灾和人员搜救工作并无直接关联；该文化节与泸定地震灾害及救援行动之间没有因果传导关系。",
+        "evidence_chain": [
+          "D003"
+        ],
+        "confidence": 0.98,
+        "question_type": "distractor"
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D003",
+          "D017"
+        ],
+        "requested_target": "判断邻近地区举办的康定情歌旅游文化节与泸定灾区抗震救灾、人员搜救之间是否存在因果关系，并给出说明。",
+        "reason": "D003将康定情歌旅游文化节列为“无关事项”，明确说明其与泸定灾区抗震救灾和人员搜救工作并无直接关联，D017也将其标为无关干扰事件，因此不存在因果关系。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D017"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "route_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.46616541353383456,
+          "answer_semantic_cosine": 0.7371875643730164,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.5964912280701754,
+          "answer_semantic_cosine": 0.9069586396217346,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_001_Q08",
+      "view": "C",
+      "reasoning_type": "distractor_robustness",
+      "question_type": "retrospective",
+      "question": "材料提到邻近地区举办了龙舟民俗文化节。该活动是否与团洲垸决口抢险及灾后安置存在因果关联？请判断并说明理由。",
+      "gold_answer": "无因果关联。龙舟民俗文化节（D013）只是邻近地区如期举办的常规民俗活动，材料明确其与团洲垸抢险救灾和灾后安置并无直接关联，不构成任何因果链上的节点，属于干扰信息。",
+      "gold_chains": [
+        [
+          "D013"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "C",
+        "sample_id": "natural_disaster_001_Q08",
+        "answer": "依据材料，不存在因果关联。材料将邻近地区举办龙舟民俗文化节列为“无关事项”，并明确说明该活动“与团洲垸抢险救灾和灾后安置并无直接关联”，未提供任何支持其与决口抢险或灾后安置存在因果联系的事实。因此，不能认定二者存在因果关联。",
+        "evidence_chain": [
+          "D007"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "C",
+        "sample_id": "natural_disaster_001_Q08",
+        "answer": "依据材料，不存在因果关联。D007将邻近地区举办龙舟民俗文化节列为“无关事项”，并明确说明该活动“与团洲垸抢险救灾和灾后安置并无直接关联”，材料未提供任何支持二者存在因果联系的事实。",
+        "evidence_chain": [
+          "D007"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "limited_explanation",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D007"
+        ],
+        "requested_target": "判断邻近地区举办的龙舟民俗文化节是否与团洲垸决口抢险及灾后安置存在因果关联，并说明理由。",
+        "reason": "D007将龙舟民俗文化节列为“无关事项”，并明确说明其与团洲垸抢险救灾和灾后安置并无直接关联，因此材料支持作出不存在因果关联的有边界判断。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D007"
+          ],
+          "source": "original"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.5681818181818182,
+          "answer_semantic_cosine": 0.8926462531089783,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.6496815286624203,
+          "answer_semantic_cosine": 0.9120438098907471,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "transportation_03_Q04",
+      "view": "A",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "在本案中，假设你只掌握D006（善后处置）阶段及之前的信息（D001 事故发生；D002 现场救援；D003 官方部署；D004 原因调查；D005 责任追究；D006 善后处置），请预测事件的后续走向，并给出可验证的预测结论。",
+      "gold_answer": "后续实际发生：D007（隐患分析）、D008（专项整治）、D009（行业转型）。其中关键进展为隐患分析：狮航JT610空难事故引发行业反思。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D008",
+          "D009",
+          "D010"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "transportation_03_Q04",
+        "answer": "基于D006及之前信息，后续最可能沿“调查报告公布与责任整改—安全专项整治/隐患排查—行业安全标准修订与系统提升”推进。可验证的预测结论：①事故调查报告将在近期公布，并对事故责任和整改措施作出明确认定；②印尼狮航将开展或继续空难安全专项排查整治，全面加强安全管理和隐患排查；③行业层面将推动空难安全标准修订完善，提升空难安全管理水平。",
+        "evidence_chain": [
+          "D006",
+          "D004",
+          "D005",
+          "D001",
+          "D003"
+        ],
+        "confidence": 0.72,
+        "question_type": "prospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "transportation_03_Q04",
+        "answer": "基于D001—D006，后续最可能沿“调查报告公布与责任认定—专项排查整治/整改—安全标准修订与行业安全管理提升”推进。可验证的预测结论：①事故调查报告将在近期公布，并对事故责任和整改措施作出明确认定；②印尼狮航将开展或继续空难安全专项排查整治，全面加强空难领域安全管理和隐患排查；③行业层面将推动空难安全标准修订完善，从制度层面防范类似事故重演。",
+        "evidence_chain": [
+          "D006",
+          "D004",
+          "D005",
+          "D001"
+        ],
+        "confidence": 0.8,
+        "question_type": "prospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D004",
+          "D005",
+          "D001",
+          "D006"
+        ],
+        "requested_target": "基于D001至D006的信息，预测D006善后处置之后的后续走向，并给出可验证的预测结论。",
+        "reason": "D004已明确事故调查报告预计近期公布并将认定责任和整改措施，D005显示已部署空难安全专项排查整治，D001提及推动安全标准修订完善，D006善后处置阶段则显示将继续加强安全管理和隐患排查，因此可沿既有因果线索作出有边界的后续预测。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D006",
+            "D004",
+            "D005",
+            "D001",
+            "D003"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D006",
+            "D004",
+            "D005",
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006",
+            "D004",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005",
+            "D001",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005",
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D001",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006",
+            "D004",
+            "D005",
+            "D003"
+          ],
+          "source": "ordered_skip"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.24644549763033174,
+          "answer_semantic_cosine": 0.8224335312843323,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.6666666666666666,
+          "chain_edge_f1": 0.15384615384615385,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.25806451612903225,
+          "answer_semantic_cosine": 0.8262221813201904,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.16666666666666666,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "economy_trade_043_Q07",
+      "view": "A",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于1992-06-01（D001 经济理论提出；D002 国家独立与经济困境；D003 经济改革启动；D004 恶性通货膨胀；D005 大规模私有化运动），请基于因果趋势预测后续发展并说明依据。",
+      "gold_answer": "基于因果走势，后续将出现：D006（经济大衰退）、D007（金融危机）、D008（改革失败原因分析）、D009（经济政策调整与复苏）、D010（历史教训总结）；其中最关键的是经济大衰退——造成了和平时期罕见的经济大倒退和社会灾难，代价远超预期。",
+      "gold_chains": [
+        [
+          "D001",
+          "D003"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "economy_trade_043_Q07",
+        "answer": "按给定因果趋势，1992-06-01之后俄罗斯很可能继续沿激进转型路径发展：短期价格自由化与紧缩难以迅速稳定，恶性通胀压力延续，大规模私有化推进并造成资产向少数人集中；这些因素叠加会加深生产下滑、财政困难和经济社会代价，进而把经济推向经济大衰退，并可能进一步演变为金融危机或债务危机；危机后政策方向可能转向加强国家调控和秩序整顿，随后出现阶段性复苏。依据是材料中的因果链：D003 经济改革启动直接导致 D004 恶性通胀和 D005 大规模私有化，D004、D005 又导致 D006 经济大衰退，D006 导致 D007 金融危机，D007 导致 D009 经济政策调整与复苏。",
+        "evidence_chain": [
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        "confidence": 0.85,
+        "question_type": "prospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "economy_trade_043_Q07",
+        "answer": "基于截至1992-06-01的已知事件，按材料中的因果趋势，俄罗斯在1992-06后很可能继续经历激进转型的严重后果：价格自由化引发的恶性通胀和紧缩难以迅速稳定，大规模私有化推进并造成资产向少数人集中；这些因素叠加会加深生产下滑、财政困难和经济社会代价，进而演变为长期经济大衰退，并可能进一步发展为金融危机或债务危机；危机后政策方向可能转向加强国家调控、整顿秩序，随后出现阶段性复苏。",
+        "evidence_chain": [
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        "confidence": 0.85,
+        "question_type": "prospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        "requested_target": "基于截至1992-06-01的已知事件与因果趋势，预测俄罗斯休克疗法在1992-06之后的后续发展并说明依据。",
+        "reason": "材料中可见因果链 D003→D004/D005→D006→D007→D009，足以推出价格自由化与大规模私有化将先引发恶性通胀和经济大衰退，继而导致金融危机，随后政策转向调整与复苏。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D009"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D005",
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D005",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005",
+            "D006",
+            "D007",
+            "D009"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005",
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D006",
+            "D007",
+            "D009"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006",
+            "D007",
+            "D009"
+          ],
+          "source": "contiguous_trim"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.3788300835654596,
+          "answer_semantic_cosine": 0.732012152671814,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.25,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.35251798561151076,
+          "answer_semantic_cosine": 0.6982144713401794,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.25,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_027_Q07",
+      "view": "A",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于2017-09-20（D001 安全事故；D002 事故调查；D003 善后处置；D004 责任处理），请基于因果趋势预测后续发展并说明依据。",
+      "gold_answer": "基于因果走势，后续将出现：D005（专项整治）、D006（深度报道）、D007（司法追责）、D008（媒体评论）；其中最关键的是专项整治——推动建设工程安全生产责任落实，防范遏制重特大施工事故。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "public_safety_027_Q07",
+        "answer": "在2017-09-20责任处理已完成的基础上，后续最可能的发展是进入对事故背后职务犯罪的司法追责阶段：最高人民检察院可能对丰城电厂“11·24”事故涉及的职务犯罪案件挂牌督办，依法查办安全生产监管中的玩忽职守、滥用职权、徇私舞弊以及违规违法招投标、收受贿赂等职务犯罪，并通过检察建议推动完善建设工程安全生产监管制度。依据：D002已查明事故为生产安全责任事故，并指出有关地方政府和部门监管薄弱、部分国家机关工作人员严重不负责任；D004显示国务院已完成责任处理，31名责任人被追究刑事责任，多名监管干部受到党纪政纪处分。因果趋势中D002→D007为直接因果、D004→D007为间接传导，故后续会向司法追责和制度性整改延伸。",
+        "evidence_chain": [
+          "D002",
+          "D004",
+          "D007"
+        ],
+        "confidence": 0.78,
+        "question_type": "prospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "public_safety_027_Q07",
+        "answer": "后续最可能进入对事故背后职务犯罪的司法追责阶段：最高人民检察院可能对丰城电厂“11·24”事故涉及的职务犯罪案件挂牌督办，依法查办安全生产监管中的玩忽职守、滥用职权、徇私舞弊以及违规违法招投标、收受贿赂等职务犯罪，并通过检察建议推动完善建设工程安全生产监管制度。依据是：D002已认定该事故为生产安全责任事故，并指出有关地方政府和部门监管薄弱、部分国家机关工作人员严重不负责任、存在违规违法招投标等问题；D004显示国务院已完成责任处理，31名责任人被追究刑事责任，多名监管干部受到党纪政纪处分，部分人员被移送司法机关。因果趋势上，D002→D007为直接因果，D004→D007为间接传导，故后续会向职务犯罪司法追责和制度性整改延伸。",
+        "evidence_chain": [
+          "D002",
+          "D004",
+          "D007"
+        ],
+        "confidence": 0.82,
+        "question_type": "prospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D002",
+          "D004",
+          "D007"
+        ],
+        "requested_target": "基于2017-09-20前的事故调查与责任处理，预测后续司法追责及制度整改方向并说明因果依据。",
+        "reason": "事故调查（D002）已认定责任事故并指出监管失职，责任处理（D004）完成后因果链指向最高检对职务犯罪挂牌督办（D007），材料足以支持后续司法追责预测。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D002",
+            "D004",
+            "D007"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D007"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "question_anchor"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "question_anchor"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D001",
+            "D004"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D002",
+            "D005"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D004",
+            "D005"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D002",
+            "D006"
+          ],
+          "source": "visible_directed_edge"
+        },
+        {
+          "chain": [
+            "D001",
+            "D006"
+          ],
+          "source": "visible_directed_edge"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.2615803814713896,
+          "answer_semantic_cosine": 0.6916419267654419,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.4,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.25268817204301075,
+          "answer_semantic_cosine": 0.704084038734436,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.4,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "industrial_production_05_Q06",
+      "view": "B",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于2015年8月15日（D001爆炸；D002救援；D003调查组成立；D004李克强赴现场），请基于因果趋势预测后续发展并说明依据。",
+      "gold_answer": "基于因果走势，后续将出现：D005（瑞海公司违法违规行为查明）、D006（事故阶段性调查结果公布）、D007（司法审判与全国整改）；其中最关键的是事故调查结果公布，认定为特别重大生产安全责任事故。",
+      "gold_chains": [
+        [
+          "D003",
+          "D005"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "B",
+        "sample_id": "industrial_production_05_Q06",
+        "answer": "基于截至2015年8月15日的已知信息，后续最可能沿以下方向发展：第一，现场处置将从灭火救人转向全面清理、失联人员搜救和残留危险化学品处置，并继续防范次生事故；由于已出现死亡50人、85人、104人的上升趋势且仍有数十人失联，伤亡和失联人数可能进一步核实上升，但具体数字无法确定。第二，事故调查和追责会继续深入：调查组已成立，瑞海公司存在超量存储、混存、行贿伪造资质等问题，公司高管及多名官员已被控制或停职，后续可能进一步查明责任并依法追责。第三，环境治理将从应急监测转向核心区土壤、水体污染处置和长期修复，氰化钠等危化品回收处理仍会继续。第四，善后与恢复工作会推进，包括受损房屋评估、赔偿安置、学校复课安排和天津港部分业务逐步恢复。第五，危险化学品安全排查和监管整改可能加强。依据是D001至D004显示的事故性质、危化品复杂性、伤亡上升趋势、调查组成立及领导要求救人、科学施救、公开信息和追责。具体时间、最终伤亡数和处理结果不能仅凭已知信息确定。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        "confidence": 0.8,
+        "question_type": "prospective"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "industrial_production_05_Q06",
+        "answer": "在只使用截至2015年8月15日已知信息的前提下，可作趋势性预测：第一，救援与现场处置仍会继续，重心将从灭火救人转向清理现场、搜救失联人员和处置残留危险化学品，并持续防范次生事故；伤亡和失联人数可能进一步上升或被核实，但具体数字无法确定。第二，事故调查和责任追究会继续深入，瑞海公司超量存储、混存危化品以及行贿、伪造材料获取资质等问题，会推动对公司高管和负有监管责任的官员进一步调查处理。第三，环境监测与污染治理将继续推进，核心区土壤、水体污染以及氰化钠等危险化学品的回收处置会成为后续重点工作。第四，善后与恢复工作会逐步展开，包括受损房屋评估、赔偿安置、学校复课安排以及天津港部分业务恢复。第五，危险化学品安全排查和监管整改可能加强。依据是D001至D004已显示事故涉及大量复杂危化品、伤亡数字持续上升、救援和防次生灾害困难、国务院调查组已成立、企业高管和多名官员被控制或停职，以及李克强赴现场要求救人、科学施救、公开信息和追责。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        "confidence": 0.8,
+        "question_type": "prospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        "requested_target": "在已知信息止于2015年8月15日的约束下，预测天津港爆炸事故后续发展趋势并说明因果依据，而非要求精确未来事实。",
+        "reason": "D001至D004已呈现爆炸、救援、调查组成立和高层现场指导的连续过程，并显示伤亡上升、危化品处置困难及违规追责线索，足以支持对后续救援清理、调查追责、环境治理和善后恢复的趋势性预测；具体最终数值和处置结果无法确定。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.2330508474576271,
+          "answer_semantic_cosine": 0.711529016494751,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.3333333333333333,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.2094017094017094,
+          "answer_semantic_cosine": 0.6968055367469788,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.3333333333333333,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "economy_trade_096_Q02",
+      "view": "C",
+      "reasoning_type": "grounded_pred",
+      "question_type": "prospective",
+      "question": "已知信息止于D006（中小企业影响）阶段（D001 政策落地；D002 市场反应；D003 企业行动；D004 专家分析；D005 行业影响；D006 中小企业影响），请基于因果趋势预测后续发展并说明依据。",
+      "gold_answer": "后续实际发生：D007（国际合作）、D008（成效评估）、D009（趋势展望）。其中关键进展为国际合作：天然气价格危机在欧洲的落地引发全球经济界关注。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D006",
+          "D007",
+          "D008",
+          "D009",
+          "D010"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "C",
+        "sample_id": "economy_trade_096_Q02",
+        "answer": "后续较可能进入配套细则和配套举措陆续出台、动态优化完善的阶段：政策红利进一步释放，行业与企业战略调整继续深化，市场主体积极抢抓机遇；同时竞争加剧，中小企业及各类主体将面临机遇与挑战并存，需在把握政策红利的同时做好应对竞争的准备。宏观上，政策有望持续发力，向稳增长、促转型和高质量发展传导。具体出台时点和量化影响材料未给出，只能作方向性预测。",
+        "evidence_chain": [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        "confidence": 0.78,
+        "question_type": "prospective"
+      },
+      "method": {
+        "view": "C",
+        "sample_id": "economy_trade_096_Q02",
+        "answer": "后续较可能进入配套细则和配套举措陆续出台、动态优化完善的阶段：政策红利进一步释放，行业与企业战略调整继续深化，市场主体积极抢抓机遇；同时竞争加剧，各类企业（含中小企业）将面临机遇与挑战并存。宏观上，政策有望持续发力，向稳增长、促转型和高质量发展传导。具体出台时点和量化影响材料未给出，只能作方向性预测。",
+        "evidence_chain": [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        "confidence": 0.8,
+        "question_type": "prospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        "requested_target": "预测已知信息止于D006后天然气价格危机政策的后续发展方向，并说明依据；交付的是方向性趋势判断而非具体时点或量化结果。",
+        "reason": "材料虽未给出后续具体时点和量化影响，但D002、D003、D006等明确指向配套细则和配套举措将陆续出台、政策红利进一步释放、行业与企业调整深化且机遇挑战并存，足以支撑方向性预测。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D006"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004",
+            "D006"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D002",
+            "D006"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D003",
+            "D006"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "question_anchor"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.1095890410958904,
+          "answer_semantic_cosine": 0.6107910871505737,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.3333333333333333,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.11055276381909548,
+          "answer_semantic_cosine": 0.6222825050354004,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.3333333333333333,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_220_Q05",
+      "view": "A",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "在本案中，D004（善后处置工作）是如何一步步发生的？请自起点起按因果顺序还原事件链。",
+      "gold_answer": "按证据顺序，成因链为 D001（安全事故发生） → D002（应急救援处置） → D003（伤亡情况通报） → D004（善后处置工作）。自安全事故发生出发逐环传导至善后处置工作；安抚遇难者家属情绪。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "public_safety_220_Q05",
+        "answer": "按材料给出的因果链，D004（善后处置工作）的前序事件顺序为：先发生 D001 沈海高速盐城段“4·4”重大交通事故，造成11人死亡、19人受伤；随后进入 D002，江苏省和盐城市启动应急响应，公安、消防、医疗、交通等多部门协同开展应急救援处置，救出被困人员、转运伤员并实施交通管制；其后 D003，公安部交通管理局通报初步调查结果，确认前车轮胎脱落为主要诱因并通报伤亡情况；在此基础上，D004 善后处置工作有序推进：盐城市启动善后处置工作机制，成立专门工作班子，针对11名遇难者建立“一人一专班”，一对一对接家属，开展家属接待、情绪安抚、政策解释、理赔协商、后事办理等工作，同时推进心理疏导、伤员救治、保险理赔、DNA身份确认、殡葬协助以及对涉事运输企业的安全检查等。D004 事件的影响为伤员救治工作持续推进。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        "confidence": 0.8,
+        "question_type": "retrospective"
+      },
+      "method": null,
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D004"
+        ],
+        "requested_target": "还原D004善后处置工作自事故起点起按因果关系逐步发生的事件链。",
+        "reason": "材料D004具体描述善后处置启动、专门班子和“一人一专班”等措施，且事件因果关系给出D001→D002→D003→D004的有序链，足以按因果顺序还原该过程。"
+      },
+      "decision": "final_invalid",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        },
+        {
+          "chain": [
+            "D001",
+            "D005"
+          ],
+          "source": "visible_directed_edge"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.3384615384615385,
+          "answer_semantic_cosine": 0.7615898251533508,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "transportation_07_Q03",
+      "view": "A",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "围绕最终结果D009（行业转型），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "gold_answer": "该结果由一条有向因果链推动：D001（事故发生） → D002（现场救援） → D003（官方部署） → D004（原因调查） → D006（善后处置） → D008（专项整治） → D009（行业转型）。起点为事故发生，终点为行业转型；15人遇难。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D005",
+          "D007",
+          "D009"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D007",
+          "D009"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "transportation_07_Q03",
+        "answer": "按给定因果关系，推动D009（行业转型）的一条完整有序链是：D001（事故发生）→ D002（现场救援）→ D003（官方部署）→ D004（原因调查）→ D006（善后处置）→ D008（专项整治）→ D009（行业转型）。其中D008对D009为直接因果，D006、D004、D003、D002、D001为上游依次传导环节。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "transportation_07_Q03",
+        "answer": "按给定因果图，推动 D009（行业转型）的有序多跳链为：D001（事故发生）→ D002（现场救援）→ D003（官方部署）→ D004（原因调查）→ D006（善后处置）→ D008（专项整治）→ D009（行业转型）。这些相邻事件在给定因果关系中依次由直接因果边连接。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006",
+          "D008",
+          "D009"
+        ],
+        "requested_target": "围绕D009（行业转型），给出推动它的有序多跳因果事件证据链。",
+        "reason": "因果关系中可见D001→D002→D003→D004→D006→D008→D009的连续因果边，且D008→D009为直接因果，足以构成有序多跳链。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D006",
+            "D008",
+            "D009"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D006",
+            "D008"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004",
+            "D006",
+            "D008",
+            "D009"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004",
+            "D006",
+            "D008"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D006",
+            "D008",
+            "D009"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D006",
+            "D008"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.6697674418604651,
+          "answer_semantic_cosine": 0.8861470222473145,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.7329842931937173,
+          "answer_semantic_cosine": 0.8705217838287354,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_206_Q02",
+      "view": "A",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "灾害发生后开展了哪些抢险救援和转移安置工作？",
+      "gold_answer": "现场救援指挥部统一指挥、科学调度，各救援力量分区分组搜救被困群众、抢通受阻道路，克服恶劣天气和次生灾害威胁逐片搜救。当地坚持应转尽转、不落一人紧急转移群众，安置点物资和医疗防疫等服务同步跟进、保障有力。",
+      "gold_chains": [
+        [
+          "D003",
+          "D002"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "A",
+        "sample_id": "natural_disaster_206_Q02",
+        "answer": "灾害发生后，抢险救援方面：当地迅速启动应急响应，组织应急、消防、武警、医疗等力量第一时间赶赴一线，搜救被困群众、救治受伤人员；现场救援指挥部统一指挥、科学调度，各救援力量分区分组、密切协同，全力搜救被困群众、抢通受阻道路，打通生命通道；有关主管部门派出工作组指导抢险救灾，紧急调拨救灾资金和物资，统筹调度专业救援力量，抢修水电路讯等基础设施；社会救援队伍、救灾物资和爱心捐赠汇向灾区，志愿者和社会组织参与救灾帮扶。转移安置方面：果断组织受威胁区域群众紧急转移，坚持应转尽转、不落一人；在集中安置点及时到位帐篷、折叠床、棉被、食品、饮用水等物资，医疗、防疫、供电、通信等服务同步跟进；逐户走访登记，开展帮扶救助和心理疏导；加密监测预警和会商研判，及时预警、果断避险。",
+        "evidence_chain": [
+          "D001",
+          "D003",
+          "D005",
+          "D004",
+          "D002",
+          "D007"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "A",
+        "sample_id": "natural_disaster_206_Q02",
+        "answer": "灾害发生后，抢险救援方面：当地立即启动应急响应，组织应急、消防、武警、医疗等力量第一时间赶赴一线，全力搜救被困群众、救治受伤人员；现场救援指挥部统一指挥、科学调度，各救援力量分区分组、密切协同，全力搜救被困群众、抢通受阻道路、打通生命通道；有关主管部门派出工作组赶赴一线指导抢险救灾，紧急调拨救灾资金和物资，统筹调度专业救援力量，抢通水电路讯等生命线。转移安置方面：果断组织受威胁区域群众紧急转移，坚持应转尽转、不落一人；集中安置点及时到位帐篷、折叠床、棉被、食品、饮用水等物资，医疗、防疫、供电、通信等服务同步跟进；逐户走访、登记造册，动态掌握受灾群众困难需求，给予帮扶救助和心理疏导；加密监测预警和会商研判，及时预警、果断避险。",
+        "evidence_chain": [
+          "D001",
+          "D003",
+          "D005",
+          "D002",
+          "D007"
+        ],
+        "confidence": 0.9,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "anchor",
+        "basis_ids": [
+          "D001",
+          "D002",
+          "D003",
+          "D005"
+        ],
+        "requested_target": "灾害发生后已开展的抢险救援和转移安置工作的具体措施清单",
+        "reason": "D001、D003、D005具体记载了应急响应、力量调度、搜救救治、抢通道路与基础设施等抢险救援工作，D002明确记载了紧急转移、集中安置及物资医疗服务，足以回答。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D005",
+            "D004",
+            "D002",
+            "D007"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D005",
+            "D004",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D005",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D005",
+            "D004",
+            "D002",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D005",
+            "D004",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D005",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003",
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D003"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D004",
+            "D002",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D004",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D005"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D002",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.4281984334203655,
+          "answer_semantic_cosine": 0.8756564855575562,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.44565217391304346,
+          "answer_semantic_cosine": 0.8764029145240784,
+          "required_fact_coverage_lit": null,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_192_Q04",
+      "view": "B",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D007（责任追究处理），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "gold_answer": "该结果由一条有向因果链推动：D001（铁路交通事故） → D002（领导指示部署） → D004（成立调查组） → D005（发布调查报告） → D006（事故原因认定） → D007（责任追究处理）。起点为铁路交通事故，终点为责任追究处理；坚持四不放过原则严肃追责，警示落实安全生产责任制。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D004",
+          "D005",
+          "D006",
+          "D007"
+        ],
+        [
+          "D001",
+          "D004",
+          "D005",
+          "D006",
+          "D007"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "B",
+        "sample_id": "public_safety_192_Q04",
+        "answer": "围绕D007（责任追究处理），可追溯的有序因果链为：D001甬温线动车组列车追尾事故（2011-07-23）发生 → D002党中央、国务院作出指示，要求全力救援并尽快查明事故原因、严肃追究责任（2011-07-24） → D004国务院成立“7·23”甬温线特别重大铁路交通事故调查组，全面调查并依法依纪追究有关人员责任（2011-07-28） → D006调查报告认定列控中心设备严重设计缺陷、审查把关不严、应急处置不力等是事故原因，并认定这是一起责任事故（2011-12-28） → D007国务院批复调查报告，认定特别重大责任事故，同意对54名事故责任人员作出严肃处理（2011-12-28）。",
+        "evidence_chain": [
+          "D001",
+          "D002",
+          "D004",
+          "D006",
+          "D007"
+        ],
+        "confidence": 0.87,
+        "question_type": "retrospective"
+      },
+      "method": null,
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D001",
+          "D002",
+          "D004",
+          "D005",
+          "D006",
+          "D007"
+        ],
+        "requested_target": "追溯并给出围绕D007责任追究处理、依次推动其发生的有序多跳因果事件链。",
+        "reason": "材料明确记录了从D001追尾事故、D002要求查明原因并严肃追责、D004国务院成立调查组、D005/D006调查报告认定原因与责任，到D007国务院批复并对54名责任人处理的先后链条，足以重构有序因果过程。"
+      },
+      "decision": "final_invalid",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004",
+            "D006",
+            "D007"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004",
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D002"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004",
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D006"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D002",
+            "D004",
+            "D007"
+          ],
+          "source": "ordered_skip"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.4383561643835616,
+          "answer_semantic_cosine": 0.8377776741981506,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.9090909090909091,
+          "chain_edge_f1": 0.6666666666666666,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_179_Q04",
+      "view": "B",
+      "reasoning_type": "multi_hop_causal",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D004（转移安置），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "gold_answer": "该结果由一条有向因果链推动：D001（自然灾害） → D003（灾情核查） → D004（转移安置）。起点为自然灾害，终点为转移安置；确保受灾群众有饭吃有衣穿有安全住所。",
+      "gold_chains": [
+        [
+          "D001",
+          "D003",
+          "D004"
+        ],
+        [
+          "D001",
+          "D004"
+        ]
+      ],
+      "gold_strict": false,
+      "v4": {
+        "view": "B",
+        "sample_id": "natural_disaster_179_Q04",
+        "answer": "可追溯的有序推动链为：D001（严重雪灾）→ D007（监测预警）→ D004（转移安置）。依据是：雪灾发生后进入应对过程，气象水文部门加强监测预警并滚动发布预报预警信息，为提前转移避险赢得时间；随后当地果断组织受威胁区域群众紧急转移、应转尽转，形成D004转移安置。",
+        "evidence_chain": [
+          "D001",
+          "D007",
+          "D004"
+        ],
+        "confidence": 0.7,
+        "question_type": "retrospective"
+      },
+      "method": {
+        "view": "B",
+        "sample_id": "natural_disaster_179_Q04",
+        "answer": "有序因果链为：D001（河南严重雪灾）→ D007（气象水文部门加强监测预警、滚动发布预报预警信息，为提前转移避险赢得时间）→ D004（当地果断组织受威胁区域群众紧急转移，应转尽转、不落一人，形成转移安置结果）。因此，推动D004转移安置的关键前置环节是雪灾发生和监测预警。",
+        "evidence_chain": [
+          "D001",
+          "D007",
+          "D004"
+        ],
+        "confidence": 0.75,
+        "question_type": "retrospective"
+      },
+      "route": {
+        "route": "answer",
+        "evidence_mode": "path",
+        "basis_ids": [
+          "D001",
+          "D007",
+          "D004"
+        ],
+        "requested_target": "围绕最终结果D004（转移安置），给出有序的多跳因果证据链，说明哪些事件依次推动转移安置。",
+        "reason": "D001明确为河南严重雪灾并触发应急响应，D007说明监测预警为提前转移避险赢得时间，D004记录受威胁群众紧急转移安置，足以形成D001→D007→D004的有序因果证据链。"
+      },
+      "decision": "model_review",
+      "candidates": [
+        {
+          "chain": [
+            "D001",
+            "D007",
+            "D004"
+          ],
+          "source": "original"
+        },
+        {
+          "chain": [
+            "D001",
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D007",
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D007"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D004"
+          ],
+          "source": "contiguous_trim"
+        },
+        {
+          "chain": [
+            "D001",
+            "D004"
+          ],
+          "source": "ordered_skip"
+        }
+      ],
+      "metrics": {
+        "v4": {
+          "answer_char_f1": 0.33879781420765026,
+          "answer_semantic_cosine": 0.7918351888656616,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        },
+        "method": {
+          "answer_char_f1": 0.37433155080213903,
+          "answer_semantic_cosine": 0.8208581805229187,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1
+        }
+      }
+    }
+  ],
+  "note": "Exploratory fit30; original complete gold proxy, not official scoring."
+}
