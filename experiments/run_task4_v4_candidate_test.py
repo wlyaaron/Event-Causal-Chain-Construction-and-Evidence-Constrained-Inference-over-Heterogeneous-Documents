@@ -11,6 +11,7 @@ import argparse
 import hashlib
 import json
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import task4_core as core
@@ -25,6 +26,13 @@ ROOT = Path(__file__).resolve().parents[1]
 V4_PROMPT = ROOT / "experiments/prompts/task4_merged_rules_v4_draft_20261009.txt"
 A_PREFIX = ROOT / "experiments/prompts/task4_a_candidate_chain_only_20261010.txt"
 DEFAULT_OUTPUT = ROOT / "outputs/task4_v4_candidate_test_smoke.json"
+FORMAT_REPAIR = (
+    "\n\n上一版输出未通过提交格式校验：{error}。请重新核对同一份完整原文和当前问题，"
+    "只输出一个合法 JSON 对象。若主要结论确实无法确定且没有可核查的解释证据，"
+    "请使用精确的 answer=\"无法确定\"、evidence_chain=[]、confidence=null；"
+    "若原文支持有边界的解释，请保留解释，并给出实际支持它的合法事件 ID 链和 0 到 1 的数值 confidence。"
+    "不要为了通过格式校验而编造事实或证据链。"
+)
 
 
 def digest(value: str | bytes) -> str:
@@ -91,11 +99,19 @@ def main() -> None:
     parser.add_argument("--max-tokens", type=int, default=32768)
     parser.add_argument("--max-input-chars", type=int, default=80000)
     parser.add_argument("--timeout", type=int, default=600)
+    parser.add_argument("--workers", type=int, default=6)
+    parser.add_argument("--invalid-retries", type=int, default=1,
+                        help="Repeat the identical request after an invalid output")
+    parser.add_argument("--format-repair-retries", type=int, default=2,
+                        help="After identical retries fail, ask only for format repair")
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--validate", action="store_true", help="Validate an existing output only")
     args = parser.parse_args()
     if args.max_tokens < 1 or args.timeout < 1 or args.max_input_chars < 1:
         raise ValueError("Token, timeout and input limits must be positive")
+    if (not 1 <= args.workers <= 8 or not 0 <= args.invalid_retries <= 2
+            or not 0 <= args.format_repair_retries <= 2):
+        raise ValueError("workers must be 1..8; retry counts must be 0..2")
     output = args.output.resolve()
     if not output.is_relative_to((ROOT / "outputs").resolve()):
         raise ValueError("Research outputs must stay under ignored outputs/")
@@ -122,6 +138,9 @@ def main() -> None:
         "core_code_sha256": digest((ROOT / "task4_core.py").read_bytes()),
         "parser_code_sha256": digest((ROOT / "task4_refusal_format.py").read_bytes()),
         "model": args.model, "max_tokens": args.max_tokens,
+        "invalid_retries": args.invalid_retries,
+        "format_repair_retries": args.format_repair_retries,
+        "format_repair_sha256": digest(FORMAT_REPAIR),
         "response_format": {"type": "json_object"},
         "thinking": "provider default", "gold_sent": False,
         "route": {"A": "targeted graph top-5 + chain-only prefix + V4",
@@ -139,33 +158,68 @@ def main() -> None:
     key = read_key()
     store = core.PredictionStore(output, samples, signature, args.max_input_chars)
     attempts_path = output.with_name(output.name + ".attempts.jsonl")
-    for index in range(len(store.completed), len(prepared)):
-        sample, content, allowed, candidates = prepared[index]
-        attempt = call_api(key, args.model, system, content,
-                           timeout=args.timeout, max_tokens=args.max_tokens)
-        try:
-            if attempt.get("raw") is None:
-                raise ValueError(attempt.get("error") or "No model output")
-            if attempt.get("finish_reason") == "length":
-                raise ValueError("Model output reached max_tokens")
-            prediction = core.parse_prediction(attempt["raw"], sample, allowed)
-            status = "valid"
-        except (ValueError, TypeError, KeyError) as exc:
-            prediction = None
-            status = str(exc).replace(key, "[REDACTED]")
-        record = {"sample_id": sample.sample_id, "track": sample.track,
-                  "input_sha256": digest(content), "candidate_paths": candidates,
-                  "status": status, "parsed": prediction, "attempt": attempt}
-        with attempts_path.open("a", encoding="utf-8", newline="\n") as handle:
-            handle.write(json.dumps(record, ensure_ascii=False) + "\n")
-        if prediction is None:
-            raise RuntimeError(f"{sample.sample_id}: invalid model output ({status}); "
-                               "checkpoint preserved, rerun to retry this question")
-        store.append(prediction)
-        print(json.dumps({"progress": f"{index + 1}/{len(samples)}",
-                          "sample_id": sample.sample_id, "track": sample.track,
-                          "valid": True, "finish_reason": attempt.get("finish_reason"),
-                          "usage": attempt.get("usage")}, ensure_ascii=False), flush=True)
+    def work(item: tuple[core.Sample, str, set[str], list[list[str]]]) -> list[dict]:
+        sample, content, allowed, candidates = item
+        results = []
+
+        def call_once(request_content: str, phase: str, number: int) -> dict:
+            attempt = call_api(key, args.model, system, request_content,
+                               timeout=args.timeout, max_tokens=args.max_tokens)
+            try:
+                if attempt.get("raw") is None:
+                    raise ValueError(attempt.get("error") or "No model output")
+                if attempt.get("finish_reason") == "length":
+                    raise ValueError("Model output reached max_tokens")
+                prediction = core.parse_prediction(attempt["raw"], sample, allowed)
+                status = "valid"
+            except (ValueError, TypeError, KeyError) as exc:
+                prediction = None
+                status = str(exc).replace(key, "[REDACTED]")
+            return {"sample_id": sample.sample_id, "track": sample.track,
+                    "phase": phase, "repeat": number,
+                    "input_sha256": digest(request_content),
+                    "candidate_paths": candidates, "status": status,
+                    "parsed": prediction, "attempt": attempt}
+
+        for number in range(args.invalid_retries + 1):
+            record = call_once(content, "original", number)
+            results.append(record)
+            if record["parsed"] is not None or record["attempt"].get("http_status") in {401, 402, 403}:
+                break
+        if results[-1]["parsed"] is None and results[-1]["attempt"].get("http_status") not in {401, 402, 403}:
+            for number in range(args.format_repair_retries):
+                repair_content = content + FORMAT_REPAIR.format(error=results[-1]["status"])
+                record = call_once(repair_content, "format_repair", number)
+                results.append(record)
+                if record["parsed"] is not None or record["attempt"].get("http_status") in {401, 402, 403}:
+                    break
+        return results
+
+    start = len(store.completed)
+    with ThreadPoolExecutor(max_workers=args.workers) as pool:
+        pending = {}
+        next_submit = start
+        for index in range(start, len(prepared)):
+            while next_submit < min(len(prepared), index + args.workers):
+                pending[next_submit] = pool.submit(work, prepared[next_submit])
+                next_submit += 1
+            records = pending.pop(index).result()
+            with attempts_path.open("a", encoding="utf-8", newline="\n") as handle:
+                for record in records:
+                    handle.write(json.dumps(record, ensure_ascii=False) + "\n")
+            final = records[-1]
+            prediction = final["parsed"]
+            if prediction is None:
+                raise RuntimeError(f"{final['sample_id']}: invalid model output "
+                                   f"({final['status']}); checkpoint preserved")
+            store.append(prediction)
+            if (index + 1) % 10 == 0 or index + 1 == len(samples) or index < 3:
+                print(json.dumps({"progress": f"{index + 1}/{len(samples)}",
+                                  "sample_id": final["sample_id"], "track": final["track"],
+                                  "valid": True, "repeats": len(records) - 1,
+                                  "finish_reason": final["attempt"].get("finish_reason"),
+                                  "usage": final["attempt"].get("usage")},
+                                 ensure_ascii=False), flush=True)
     count = store.finish()
     print(json.dumps({"validated": count, "output": str(output),
                       "attempts": str(attempts_path)}, ensure_ascii=False))
