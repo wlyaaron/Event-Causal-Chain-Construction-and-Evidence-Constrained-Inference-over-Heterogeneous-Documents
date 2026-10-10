@@ -1,0 +1,17 @@
+{
+  "manifest_sha256": "818ae3f2a0d89cf0ce7b0460b0c6793457ef166a720c01def7da553854ada20e",
+  "system_sha256": "6e4d5b5f162b0505a3912ebcd71af6d99850729b522cf70fead0fe218cf2eab5",
+  "prefix_sha256": "98081fefd9a076f14b9d6bef86b2a00dcf426462ebe3b993e1f3476a2da8a4df",
+  "model": "deepseek-flash",
+  "max_tokens": 32768,
+  "response_format": {
+    "type": "json_object"
+  },
+  "temperature": "provider default",
+  "reasoning_effort": "provider default",
+  "thinking": "provider default",
+  "gold_sent": false,
+  "scope": "six previously invalid guided-arm questions",
+  "start_balance_cny": "50.61",
+  "stop_spend_cny": "5.00"
+}

@@ -1,0 +1,215 @@
+{
+  "selection": "all six previously invalid guided outputs, no gold selection",
+  "source_manifest_sha256": "5f4c884990ddf2f1c1f0c66026c45024cf9addb2ae080d97a201832b18aa72e2",
+  "source_attempts_sha256": "01f9a80b2efa04dd3043c034f13e11f1895e1f87d670070b48118338b0753b11",
+  "v4_prompt_sha256": "6e4d5b5f162b0505a3912ebcd71af6d99850729b522cf70fead0fe218cf2eab5",
+  "repair_prefix_sha256": "98081fefd9a076f14b9d6bef86b2a00dcf426462ebe3b993e1f3476a2da8a4df",
+  "gold_used_for_selection": false,
+  "rows": [
+    {
+      "sample_id": "natural_disaster_193_Q06",
+      "pack": "自然灾害_193",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（自然灾害-洪涝）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "03c543892083cb431ed77f556e6d9c1fc5bda6cd904bb014c4c880b43d0fd7bd",
+      "candidate_paths": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "previous_failure_type": "schema_invalid"
+    },
+    {
+      "sample_id": "public_safety_167_Q06",
+      "pack": "公共安全_167",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（事故）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "0ecd537ba9f4b4cb49b2d994bd22852b8d923423e58cc8a99a6247c3e8ba83c7",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "previous_failure_type": "schema_invalid"
+    },
+    {
+      "sample_id": "natural_disaster_026_Q06",
+      "pack": "自然灾害_026",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+      "category": "direct_effect",
+      "input_sha256": "afa4b6be5ba444a7592adb9758561262b8e71bb1829d4991cf8e9522e04092ec",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "previous_failure_type": "schema_invalid"
+    },
+    {
+      "sample_id": "diplomacy_170_Q01",
+      "pack": "政治外交_170",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "ba18c41918fecc52fcd153d2865c6531776f23a23106b33e49488c1d41f73855",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008"
+        ]
+      ],
+      "previous_failure_type": "truncated"
+    },
+    {
+      "sample_id": "public_safety_153_Q01",
+      "pack": "公共安全_153",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（评论员文章），并按顺序给出完整证据链。",
+      "category": "explicit_path",
+      "input_sha256": "95dfbaebc6e984a0620fa62c11e313d37f510daf09972dfd4b468b39426dab7e",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D011"
+        ],
+        [
+          "D011"
+        ],
+        [
+          "D001",
+          "D002",
+          "D011"
+        ],
+        [
+          "D001",
+          "D004",
+          "D011"
+        ],
+        [
+          "D001",
+          "D003",
+          "D011"
+        ]
+      ],
+      "previous_failure_type": "truncated"
+    },
+    {
+      "sample_id": "public_safety_108_Q04",
+      "pack": "公共安全_108",
+      "view": "A",
+      "question_type": "retrospective",
+      "question": "请判断：围绕最终结果D006（法治建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "category": "explicit_path",
+      "input_sha256": "bc8610c09dc5a34b2707ae5570ed45be9ee9a9bb4c23f65baa7c910aebc30359",
+      "candidate_paths": [
+        [
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ]
+      ],
+      "previous_failure_type": "truncated"
+    }
+  ]
+}

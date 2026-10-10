@@ -1,0 +1,72 @@
+[
+  {
+    "view": "A",
+    "sample_id": "natural_disaster_193_Q06",
+    "answer": "D001（2003年淮河特大洪水）之后直接引发多项应急处置：D002 王家坝开闸蓄洪、蒙洼蓄滞洪区启用；D003 军民团结抗洪抢险；D004 科学调度、精准防控；D005 受灾群众转移安置。材料因果图将这些均标为 D001 的直接结果。",
+    "evidence_chain": [
+      "D001",
+      "D002"
+    ],
+    "confidence": 0.95,
+    "question_type": "retrospective"
+  },
+  {
+    "view": "A",
+    "sample_id": "public_safety_167_Q06",
+    "answer": "D001事故之后，直接发生的是应急救援：当地立即启动应急响应，组织公安、消防、应急、医疗等力量赶赴现场，搜救被困人员、救治受伤群众并疏散周边人员、封控危险区域，对应事件D002。",
+    "evidence_chain": [
+      "D001",
+      "D002"
+    ],
+    "confidence": 0.95,
+    "question_type": "retrospective"
+  },
+  {
+    "view": "A",
+    "sample_id": "natural_disaster_026_Q06",
+    "answer": "D001（青海玉树7.1级地震）之后，直接因果上发生的是应急救援（D003）：当地立即组织自救互救，各方救援力量赶赴灾区搜救被埋压群众。",
+    "evidence_chain": [
+      "D001",
+      "D003"
+    ],
+    "confidence": 0.9,
+    "question_type": "retrospective"
+  },
+  {
+    "view": "A",
+    "sample_id": "diplomacy_170_Q01",
+    "answer": "D008（评论员文章）的起因是D001和平共处五项原则发表纪念活动举行；发展环节可确认D003国际社会对活动成果的积极反响/各方点赞；结果即D008人民日报评论员文章。材料中D002（重要讲话）、D004（双边会见）也与D008存在间接因果边，但属于同源并行环节，不宜与上述阶段拼成一条单链，因此本答以时间顺序不冲突的完整主链D001→D003→D008为核心证据链。",
+    "evidence_chain": [
+      "D001",
+      "D003",
+      "D008"
+    ],
+    "confidence": 0.78,
+    "question_type": "retrospective"
+  },
+  {
+    "view": "A",
+    "sample_id": "public_safety_153_Q01",
+    "answer": "D011（评论员文章）的完整因果链可确定为：D001（抚顺市在建桥梁坍塌事故，起因）→ D002（针对该事故紧急部署建筑施工安全专项整治，发展）→ D011（人民日报评论员文章，结果）。事故发生后，有关主管部门部署专项整治并要求压实责任、排查整治隐患，这一发展环节经间接传导促成D011对安全生产责任和侥幸心理的评论。",
+    "evidence_chain": [
+      "D001",
+      "D002",
+      "D011"
+    ],
+    "confidence": 0.78,
+    "question_type": "retrospective"
+  },
+  {
+    "view": "A",
+    "sample_id": "public_safety_108_Q04",
+    "answer": "围绕 D006（法治建设），可按一条多跳因果链追溯为：D001 大兴安岭特大森林火灾发生 → D003 深入调查火灾原因并追究失职渎职责任 → D004 全面加强森林防火工作、开展隐患整治 → D006 健全森林防火法规制度、推进法治建设。其中 D001→D003、D003→D004 为直接因果，D004→D006 为间接传导。",
+    "evidence_chain": [
+      "D001",
+      "D003",
+      "D004",
+      "D006"
+    ],
+    "confidence": 0.75,
+    "question_type": "retrospective"
+  }
+]

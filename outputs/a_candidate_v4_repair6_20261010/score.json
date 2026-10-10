@@ -1,0 +1,994 @@
+{
+  "scope": "post-hoc repair of six previous invalid guided outputs",
+  "method_note": "Same V4 system and frozen full inputs; numbered candidates, one-chain instruction, max_tokens 32768. Gold read only after calls. This is not a new 50-question efficacy estimate.",
+  "summary": {
+    "n": 6,
+    "valid": 6,
+    "chain_exact": 5,
+    "candidate_chain_chosen": 5,
+    "prompt_tokens": 46665,
+    "completion_tokens": 35138,
+    "reasoning_tokens": 34525,
+    "elapsed_seconds_sum": 175.4
+  },
+  "cases": [
+    {
+      "sample_id": "natural_disaster_193_Q06",
+      "question": "沿因果关系看，D001（自然灾害-洪涝）之后直接发生了什么？",
+      "previous_failure_type": "schema_invalid",
+      "candidate_paths": [
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "gold_answers": "D002（应急处置-分洪蓄洪）是D001（自然灾害-洪涝）的直接后果。证据：有效削减淮河干流洪峰，降低干流水位，为保障淮河防洪安全发挥关键作用，彰显王家坝精神。（直接因果）",
+      "gold_chains": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.46258503401360546,
+          "answer_semantic_cosine": 0.8890776634216309,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.4,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_193_Q06",
+          "answer": "D001（自然灾害-洪涝）之后的直接结果事件为：D002（应急处置-分洪蓄洪，王家坝开闸蓄洪）、D003（应急处置-抗洪抢险）、D004（应急处置-科学调度）、D005（应急处置-转移安置）。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（自然灾害-洪涝）之后的直接结果事件为：D002（应急处置-分洪蓄洪，王家坝开闸蓄洪）、D003（应急处置-抗洪抢险）、D004（应急处置-科学调度）、D005（应急处置-转移安置）。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7224,
+          "completion_tokens": 897,
+          "total_tokens": 8121,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 809
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6328
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 4.634
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "{\"answer\":\"D001（自然灾害-洪涝）之后直接发生的有四个事件：D002（王家坝开闸蓄洪、启用蓄滞洪区）、D003（军民团结抗洪抢险）、D004（科学调度、精准防控）、D005（受灾群众转移安置）。\",\"evidence_chain\":[[\"D001\",\"D002\"],[\"D001\",\"D003\"],[\"D001\",\"D004\"],[\"D001\",\"D005\"]],\"confidence\":0.95}",
+        "error": "natural_disaster_193_Q06 evidence_chain 必须是 ID 字符串数组",
+        "usage": {
+          "prompt_tokens": 7329,
+          "completion_tokens": 1931,
+          "total_tokens": 9260,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1830
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6433
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 9.836
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "natural_disaster_193_Q06",
+          "answer": "D001（2003年淮河特大洪水）之后直接引发多项应急处置：D002 王家坝开闸蓄洪、蒙洼蓄滞洪区启用；D003 军民团结抗洪抢险；D004 科学调度、精准防控；D005 受灾群众转移安置。材料因果图将这些均标为 D001 的直接结果。",
+          "evidence_chain": [
+            "D001",
+            "D002"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（2003年淮河特大洪水）之后直接引发多项应急处置：D002 王家坝开闸蓄洪、蒙洼蓄滞洪区启用；D003 军民团结抗洪抢险；D004 科学调度、精准防控；D005 受灾群众转移安置。材料因果图将这些均标为 D001 的直接结果。\",\"evidence_chain\":[\"D001\",\"D002\"],\"confidence\":0.95}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 7421,
+          "completion_tokens": 4003,
+          "total_tokens": 11424,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3906
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6525
+        },
+        "elapsed_seconds": 21.938,
+        "metrics": {
+          "answer_char_f1": 0.4482758620689655,
+          "answer_semantic_cosine": 0.8846690654754639,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_167_Q06",
+      "question": "沿因果关系看，D001（事故）之后直接发生了什么？",
+      "previous_failure_type": "schema_invalid",
+      "candidate_paths": [
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "gold_answers": "D002（应急救援）是D001（事故）的直接后果。证据：最大限度搜救被困人员、减少人员伤亡。（直接因果）",
+      "gold_chains": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.44,
+          "answer_semantic_cosine": 0.8519919514656067,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.3333333333333333,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "public_safety_167_Q06",
+          "answer": "D001（事故）之后直接发生/直接导致的是：D002（应急救援）、D003（医疗救治）、D004（事故调查）、D005（追责问责）、D006（安全整治）。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005",
+            "D006"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（事故）之后直接发生/直接导致的是：D002（应急救援）、D003（医疗救治）、D004（事故调查）、D005（追责问责）、D006（安全整治）。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\",\"D006\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6626,
+          "completion_tokens": 822,
+          "total_tokens": 7448,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 744
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5730
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 4.336
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "{\"answer\":\"沿给定因果关系，D001（事故）之后直接发生的是：D002应急救援、D003医疗救治、D004事故调查、D005追责问责、D006安全整治；D007评论员文章属间接传导，不算直接发生。\",\"evidence_chain\":[[\"D001\",\"D002\"],[\"D001\",\"D003\"],[\"D001\",\"D004\"],[\"D001\",\"D005\"],[\"D001\",\"D006\"]],\"confidence\":0.95}",
+        "error": "public_safety_167_Q06 evidence_chain 必须是 ID 字符串数组",
+        "usage": {
+          "prompt_tokens": 6735,
+          "completion_tokens": 2727,
+          "total_tokens": 9462,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2624
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5839
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 14.344
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "public_safety_167_Q06",
+          "answer": "D001事故之后，直接发生的是应急救援：当地立即启动应急响应，组织公安、消防、应急、医疗等力量赶赴现场，搜救被困人员、救治受伤群众并疏散周边人员、封控危险区域，对应事件D002。",
+          "evidence_chain": [
+            "D001",
+            "D002"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001事故之后，直接发生的是应急救援：当地立即启动应急响应，组织公安、消防、应急、医疗等力量赶赴现场，搜救被困人员、救治受伤群众并疏散周边人员、封控危险区域，对应事件D002。\",\"evidence_chain\":[\"D001\",\"D002\"],\"confidence\":0.95}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 6826,
+          "completion_tokens": 1928,
+          "total_tokens": 8754,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1852
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5930
+        },
+        "elapsed_seconds": 9.969,
+        "metrics": {
+          "answer_char_f1": 0.4666666666666667,
+          "answer_semantic_cosine": 0.810930609703064,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    },
+    {
+      "sample_id": "natural_disaster_026_Q06",
+      "question": "沿因果关系看，D001（自然灾害）之后直接发生了什么？",
+      "previous_failure_type": "schema_invalid",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003"
+        ],
+        [
+          "D001",
+          "D004"
+        ],
+        [
+          "D001",
+          "D002"
+        ],
+        [
+          "D001",
+          "D005"
+        ],
+        [
+          "D001"
+        ]
+      ],
+      "gold_answers": "D002（领导指示）是D001（自然灾害）的直接后果。证据：抗震救灾工作迅速有力展开，各方救援力量紧急集结。（直接因果）",
+      "gold_chains": [
+        [
+          "D001",
+          "D002"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.36363636363636365,
+          "answer_semantic_cosine": 0.7834324836730957,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5714285714285714,
+          "chain_edge_f1": 0.4,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "natural_disaster_026_Q06",
+          "answer": "D001（青海玉树7.1级地震）之后，按因果关系中的直接因果边，直接发生的是：D002（领导指示，要求全力抢救受灾群众并启动应急响应）、D003（应急救援，全国救援队伍开展搜救）、D004（灾情通报，核定2698人遇难并举行全国哀悼活动）、D005（群众安置，搭建帐篷、设立安置点并保障基本生活）。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D005"
+          ],
+          "confidence": 0.95,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（青海玉树7.1级地震）之后，按因果关系中的直接因果边，直接发生的是：D002（领导指示，要求全力抢救受灾群众并启动应急响应）、D003（应急救援，全国救援队伍开展搜救）、D004（灾情通报，核定2698人遇难并举行全国哀悼活动）、D005（群众安置，搭建帐篷、设立安置点并保障基本生活）。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D005\"],\"confidence\":0.95}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7971,
+          "completion_tokens": 2118,
+          "total_tokens": 10089,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 1996
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 7075
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 10.085
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "{\"answer\":\"沿给定因果关系，D001（青海玉树7.1级地震）之后直接连通的结果事件为：D002（胡锦涛、温家宝作出重要指示并部署抗震救灾）、D003（高原生命大营救/应急救援）、D004（灾情通报及全国哀悼活动）、D005（妥善安置受灾群众、保障基本生活）。D006、D007等属于后续或间接传导，不是D001的直接后继。\",\"evidence_chain\":[[\"D001\",\"D002\"],[\"D001\",\"D003\"],[\"D001\",\"D004\"],[\"D001\",\"D005\"]],\"confidence\":0.95}",
+        "error": "natural_disaster_026_Q06 evidence_chain 必须是 ID 字符串数组",
+        "usage": {
+          "prompt_tokens": 8076,
+          "completion_tokens": 4168,
+          "total_tokens": 12244,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 4030
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 7180
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 21.399
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "natural_disaster_026_Q06",
+          "answer": "D001（青海玉树7.1级地震）之后，直接因果上发生的是应急救援（D003）：当地立即组织自救互救，各方救援力量赶赴灾区搜救被埋压群众。",
+          "evidence_chain": [
+            "D001",
+            "D003"
+          ],
+          "confidence": 0.9,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D001（青海玉树7.1级地震）之后，直接因果上发生的是应急救援（D003）：当地立即组织自救互救，各方救援力量赶赴灾区搜救被埋压群众。\",\"evidence_chain\":[\"D001\",\"D003\"],\"confidence\":0.9}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 8168,
+          "completion_tokens": 6873,
+          "total_tokens": 15041,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 6806
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 7272
+        },
+        "elapsed_seconds": 35.385,
+        "metrics": {
+          "answer_char_f1": 0.45871559633027525,
+          "answer_semantic_cosine": 0.7733361721038818,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.5,
+          "chain_edge_f1": 0.0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    },
+    {
+      "sample_id": "diplomacy_170_Q01",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D008（评论员文章），并按顺序给出完整证据链。",
+      "previous_failure_type": "truncated",
+      "candidate_paths": [
+        [
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008"
+        ]
+      ],
+      "gold_answers": "梳理可得因果路径：D001（外交活动） → D003（国际反响） → D004（双边会见） → D008（评论员文章）。外交活动触发链条，最终形成评论员文章；凝聚推动构建人类命运共同体的共识。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D003",
+          "D008"
+        ],
+        [
+          "D001",
+          "D004",
+          "D008"
+        ],
+        [
+          "D001",
+          "D008"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.35714285714285715,
+          "answer_semantic_cosine": 0.7208533883094788,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8888888888888888,
+          "chain_edge_f1": 0.5714285714285714,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "diplomacy_170_Q01",
+          "answer": "D008（评论员文章《携手同行 共创美好未来》）不是由单一事件直接产生，而是以D001（和平共处五项原则发表纪念活动举行）为总起因，经由会期发展共同形成的间接结果：D002（中方在活动上发表重要讲话、提出重要倡议）、D003（国际社会对活动成果的热议与积极反响）、D004（活动期间中方举行多场双边会见和会晤）共同为D008的评论定调并提供事实基础，最终对应D008评论员文章。因果关系中，D001、D002、D003、D004到D008均为间接传导，而非直接因果。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D003",
+            "D004",
+            "D008"
+          ],
+          "confidence": 0.75,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D008（评论员文章《携手同行 共创美好未来》）不是由单一事件直接产生，而是以D001（和平共处五项原则发表纪念活动举行）为总起因，经由会期发展共同形成的间接结果：D002（中方在活动上发表重要讲话、提出重要倡议）、D003（国际社会对活动成果的热议与积极反响）、D004（活动期间中方举行多场双边会见和会晤）共同为D008的评论定调并提供事实基础，最终对应D008评论员文章。因果关系中，D001、D002、D003、D004到D008均为间接传导，而非直接因果。\",\"evidence_chain\":[\"D001\",\"D002\",\"D003\",\"D004\",\"D008\"],\"confidence\":0.75}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 7441,
+          "completion_tokens": 2419,
+          "total_tokens": 9860,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 2251
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6545
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 12.208
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "",
+        "error": "Output truncated",
+        "usage": {
+          "prompt_tokens": 7566,
+          "completion_tokens": 8192,
+          "total_tokens": 15758,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8192
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6670
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 39.167
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "diplomacy_170_Q01",
+          "answer": "D008（评论员文章）的起因是D001和平共处五项原则发表纪念活动举行；发展环节可确认D003国际社会对活动成果的积极反响/各方点赞；结果即D008人民日报评论员文章。材料中D002（重要讲话）、D004（双边会见）也与D008存在间接因果边，但属于同源并行环节，不宜与上述阶段拼成一条单链，因此本答以时间顺序不冲突的完整主链D001→D003→D008为核心证据链。",
+          "evidence_chain": [
+            "D001",
+            "D003",
+            "D008"
+          ],
+          "confidence": 0.78,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D008（评论员文章）的起因是D001和平共处五项原则发表纪念活动举行；发展环节可确认D003国际社会对活动成果的积极反响/各方点赞；结果即D008人民日报评论员文章。材料中D002（重要讲话）、D004（双边会见）也与D008存在间接因果边，但属于同源并行环节，不宜与上述阶段拼成一条单链，因此本答以时间顺序不冲突的完整主链D001→D003→D008为核心证据链。\",\"evidence_chain\":[\"D001\",\"D003\",\"D008\"],\"confidence\":0.78}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 7653,
+          "completion_tokens": 8157,
+          "total_tokens": 15810,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8020
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 6757
+        },
+        "elapsed_seconds": 40.432,
+        "metrics": {
+          "answer_char_f1": 0.4066390041493776,
+          "answer_semantic_cosine": 0.7720150947570801,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_153_Q01",
+      "question": "结合材料，请从起因、发展和结果多个阶段，说明哪些事件共同导致了D011（评论员文章），并按顺序给出完整证据链。",
+      "previous_failure_type": "truncated",
+      "candidate_paths": [
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D011"
+        ],
+        [
+          "D011"
+        ],
+        [
+          "D001",
+          "D002",
+          "D011"
+        ],
+        [
+          "D001",
+          "D004",
+          "D011"
+        ],
+        [
+          "D001",
+          "D003",
+          "D011"
+        ]
+      ],
+      "gold_answers": "梳理可得因果路径：D001（事故） → D003（应急救援） → D004（医疗救治） → D011（评论员文章）。事故触发链条，最终形成评论员文章；凝聚全社会重视安全生产的共识。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D011"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D011"
+        ],
+        [
+          "D001",
+          "D003",
+          "D011"
+        ],
+        [
+          "D001",
+          "D004",
+          "D011"
+        ],
+        [
+          "D001",
+          "D011"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.3205574912891986,
+          "answer_semantic_cosine": 0.7070449590682983,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 0.8888888888888888,
+          "chain_edge_f1": 0.5714285714285714,
+          "chain_exact": 0,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "public_safety_153_Q01",
+          "answer": "共同导致D011（人民日报评论员文章《安全生产容不得半点侥幸》）的事件按阶段为：起因是D001抚顺市在建桥梁坍塌事故；发展阶段包括D003现场应急救援、D004集中医疗资源救治伤员、D002针对事故暴露问题开展建筑施工安全专项整治；这些事件通过间接传导共同促成D011于2003年7月7日发表，以事故教训警示安全生产不容侥幸。证据链按顺序为D001→D003→D004→D002→D011，其中D003直接推动D004，D001、D002、D003、D004均间接传导至D011。",
+          "evidence_chain": [
+            "D001",
+            "D003",
+            "D004",
+            "D002",
+            "D011"
+          ],
+          "confidence": 0.78,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"共同导致D011（人民日报评论员文章《安全生产容不得半点侥幸》）的事件按阶段为：起因是D001抚顺市在建桥梁坍塌事故；发展阶段包括D003现场应急救援、D004集中医疗资源救治伤员、D002针对事故暴露问题开展建筑施工安全专项整治；这些事件通过间接传导共同促成D011于2003年7月7日发表，以事故教训警示安全生产不容侥幸。证据链按顺序为D001→D003→D004→D002→D011，其中D003直接推动D004，D001、D002、D003、D004均间接传导至D011。\",\"evidence_chain\":[\"D001\",\"D003\",\"D004\",\"D002\",\"D011\"],\"confidence\":0.78}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 9630,
+          "completion_tokens": 3316,
+          "total_tokens": 12946,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3152
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 8734
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 15.188
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "",
+        "error": "Output truncated",
+        "usage": {
+          "prompt_tokens": 9755,
+          "completion_tokens": 8192,
+          "total_tokens": 17947,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8192
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 8859
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 39.363
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "public_safety_153_Q01",
+          "answer": "D011（评论员文章）的完整因果链可确定为：D001（抚顺市在建桥梁坍塌事故，起因）→ D002（针对该事故紧急部署建筑施工安全专项整治，发展）→ D011（人民日报评论员文章，结果）。事故发生后，有关主管部门部署专项整治并要求压实责任、排查整治隐患，这一发展环节经间接传导促成D011对安全生产责任和侥幸心理的评论。",
+          "evidence_chain": [
+            "D001",
+            "D002",
+            "D011"
+          ],
+          "confidence": 0.78,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"D011（评论员文章）的完整因果链可确定为：D001（抚顺市在建桥梁坍塌事故，起因）→ D002（针对该事故紧急部署建筑施工安全专项整治，发展）→ D011（人民日报评论员文章，结果）。事故发生后，有关主管部门部署专项整治并要求压实责任、排查整治隐患，这一发展环节经间接传导促成D011对安全生产责任和侥幸心理的评论。\",\"evidence_chain\":[\"D001\",\"D002\",\"D011\"],\"confidence\":0.78}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 9842,
+          "completion_tokens": 5227,
+          "total_tokens": 15069,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 5115
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 8946
+        },
+        "elapsed_seconds": 26.283,
+        "metrics": {
+          "answer_char_f1": 0.4174757281553398,
+          "answer_semantic_cosine": 0.8136343955993652,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    },
+    {
+      "sample_id": "public_safety_108_Q04",
+      "question": "请判断：围绕最终结果D006（法治建设），追溯其多跳因果链条：哪些事件依次推动了它？请给出有序证据链。",
+      "previous_failure_type": "truncated",
+      "candidate_paths": [
+        [
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D003",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D002",
+          "D003",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ]
+      ],
+      "gold_answers": "该结果由一条有向因果链推动：D001（火灾发生） → D002（应急扑救） → D003（事故调查） → D004（隐患整治） → D006（法治建设）。起点为火灾发生，终点为法治建设；为保护森林资源安全提供坚实法治保障。",
+      "gold_chains": [
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D001",
+          "D002",
+          "D003",
+          "D006"
+        ],
+        [
+          "D001",
+          "D003",
+          "D004",
+          "D006"
+        ],
+        [
+          "D001",
+          "D003",
+          "D006"
+        ],
+        [
+          "D001",
+          "D004",
+          "D006"
+        ]
+      ],
+      "old_base": {
+        "valid": true,
+        "metrics": {
+          "answer_char_f1": 0.5416666666666666,
+          "answer_semantic_cosine": 0.836776614189148,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": {
+          "sample_id": "public_safety_108_Q04",
+          "answer": "依次推动 D006（法治建设）的事件链为：D001 大兴安岭特大森林火灾发生 → D003 事故调查与责任追究 → D004 全面加强森林防火工作（隐患整治） → D006 健全森林防火法规制度（法治建设）。其中 D004 到 D006 属于间接传导，不宜表述为直接因果。",
+          "evidence_chain": [
+            "D001",
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "confidence": 0.75,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"依次推动 D006（法治建设）的事件链为：D001 大兴安岭特大森林火灾发生 → D003 事故调查与责任追究 → D004 全面加强森林防火工作（隐患整治） → D006 健全森林防火法规制度（法治建设）。其中 D004 到 D006 属于间接传导，不宜表述为直接因果。\",\"evidence_chain\":[\"D001\",\"D003\",\"D004\",\"D006\"],\"confidence\":0.75}",
+        "error": null,
+        "usage": {
+          "prompt_tokens": 6534,
+          "completion_tokens": 4075,
+          "total_tokens": 10609,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 3971
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5638
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 18.781
+      },
+      "old_guided": {
+        "valid": false,
+        "metrics": {
+          "answer_char_f1": 0,
+          "answer_semantic_cosine": 0,
+          "required_fact_coverage_lit": 0,
+          "chain_node_f1": 0,
+          "chain_edge_f1": 0,
+          "chain_exact": 0,
+          "strict_refusal_correct": 0,
+          "answer_right_chain_wrong": 0
+        },
+        "prediction": null,
+        "raw": "",
+        "error": "Output truncated",
+        "usage": {
+          "prompt_tokens": 6671,
+          "completion_tokens": 8192,
+          "total_tokens": 14863,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8192
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5775
+        },
+        "response_model": "deepseek-flash",
+        "elapsed_seconds": 36.607
+      },
+      "repair": {
+        "valid": true,
+        "prediction": {
+          "sample_id": "public_safety_108_Q04",
+          "answer": "围绕 D006（法治建设），可按一条多跳因果链追溯为：D001 大兴安岭特大森林火灾发生 → D003 深入调查火灾原因并追究失职渎职责任 → D004 全面加强森林防火工作、开展隐患整治 → D006 健全森林防火法规制度、推进法治建设。其中 D001→D003、D003→D004 为直接因果，D004→D006 为间接传导。",
+          "evidence_chain": [
+            "D001",
+            "D003",
+            "D004",
+            "D006"
+          ],
+          "confidence": 0.75,
+          "question_type": "retrospective"
+        },
+        "raw": "{\"answer\":\"围绕 D006（法治建设），可按一条多跳因果链追溯为：D001 大兴安岭特大森林火灾发生 → D003 深入调查火灾原因并追究失职渎职责任 → D004 全面加强森林防火工作、开展隐患整治 → D006 健全森林防火法规制度、推进法治建设。其中 D001→D003、D003→D004 为直接因果，D004→D006 为间接传导。\",\"evidence_chain\":[\"D001\",\"D003\",\"D004\",\"D006\"],\"confidence\":0.75}",
+        "error": null,
+        "finish_reason": "stop",
+        "usage": {
+          "prompt_tokens": 6755,
+          "completion_tokens": 8950,
+          "total_tokens": 15705,
+          "prompt_tokens_details": {
+            "cached_tokens": 896
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 8826
+          },
+          "prompt_cache_hit_tokens": 896,
+          "prompt_cache_miss_tokens": 5859
+        },
+        "elapsed_seconds": 41.395,
+        "metrics": {
+          "answer_char_f1": 0.4931506849315068,
+          "answer_semantic_cosine": 0.8602815866470337,
+          "required_fact_coverage_lit": 0.0,
+          "chain_node_f1": 1.0,
+          "chain_edge_f1": 1.0,
+          "chain_exact": 1,
+          "strict_refusal_correct": 1,
+          "refusal": 0,
+          "answer_right_chain_wrong": 0
+        }
+      }
+    }
+  ]
+}
