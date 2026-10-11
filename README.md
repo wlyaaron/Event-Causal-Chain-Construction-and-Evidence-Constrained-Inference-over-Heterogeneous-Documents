@@ -2,7 +2,7 @@
 
 2026 大数据与计算智能挑战赛赛题 4 团队资料仓库。赛事截图保存于 **2026-10-02**；时间、规则和格式以[赛事页面](https://www.heywhale.com/org/cunsl/competition/area/6aba35f66e5beff2fca5b1e8/content/0)最新内容为准。
 
-**最新研究进度：**[赛题 4 提示词与程序候选阶段汇报（2026-10-09 至 10-10）](docs/赛题4_2026-10-09至10-10_提示词与程序候选阶段进度汇报.md)，配套[真实输出横排对照](docs/赛题4_提示词到程序候选_阶段实验真实输出横排对照_2026-10-10.md)。这轮训练集同题探索中，候选池与单链约束提高了完整链命中，但答案字符 F1 和语义均低于纯 V4；均非官方测试分数。[上一阶段研究与工程总览（截至 2026-10-07）](docs/赛题4_2026-10-02至10-07_研究与工程进展总览.md)保留此前线上分档结果、成本与微调计划。
+**最新研究进度：**[原版与 V4 全量输出差异、只重跑 A 类的隔离对照（2026-10-11）](docs/赛题4_原版与V4全量差异_A单独候选对照_2026-10-11.md)。较早的[提示词与程序候选阶段汇报（2026-10-09 至 10-10）](docs/赛题4_2026-10-09至10-10_提示词与程序候选阶段进度汇报.md)配有[真实输出横排对照](docs/赛题4_提示词到程序候选_阶段实验真实输出横排对照_2026-10-10.md)。测试集没有 gold；逐题输出差异不等于正确性。[上一阶段研究与工程总览（截至 2026-10-07）](docs/赛题4_2026-10-02至10-07_研究与工程进展总览.md)保留此前线上分档结果、成本与微调计划。
 
 ## 赛事入口与交流群
 
@@ -98,6 +98,7 @@ QLoRA 理论来源、当前配置约 70–100 小时/轮的测量外推、以及
 | [`experiments/run_causal_path_pair.py`](experiments/run_causal_path_pair.py) · [`experiments/audit_causal_path_candidates.py`](experiments/audit_causal_path_candidates.py) | 冻结 A 档包隔离配对、核验局部候选覆盖；研究输出仅在 `outputs/` |
 | [`experiments/run_full_causal_path_research.py`](experiments/run_full_causal_path_research.py) · [`experiments/compare_full_causal_path_research.py`](experiments/compare_full_causal_path_research.py) | 760 题研究复跑、断点续跑与无金标输出变化统计；A 加路径索引，B/C 保持原输入 |
 | [`experiments/run_task4_v4_candidate_test.py`](experiments/run_task4_v4_candidate_test.py) | 新版三档研究运行器：A 用前五条定向图候选＋单链提示，B/C 用 V4；统一经过保守拒答格式解析与完整输出校验；默认每档 1 题 |
+| [`experiments/run_task4_original_a_candidate_20261011.py`](experiments/run_task4_original_a_candidate_20261011.py) · [`experiments/compare_task4_test_outputs_20261011.py`](experiments/compare_task4_test_outputs_20261011.py) | 原版已评分提示词只重跑 A 候选、原样复用 B/C；无 gold 输出行为对比与完整结构校验 |
 | [`experiments/sample_multireference_epoch.py`](experiments/sample_multireference_epoch.py) | 从所有兼容的完整金标备选链中按种子和轮次确定性选一条，不合并链 |
 | [`experiments/train_sft.py`](experiments/train_sft.py) · [`experiments/run_sft.py`](experiments/run_sft.py) · [`experiments/evaluate_sft.py`](experiments/evaluate_sft.py) | 离线 QLoRA SFT、固定包验证/留出推理和训练金标代理评估；无 GPU 时只运行预检 |
 | [`experiments/prepare_llamafactory_data.py`](experiments/prepare_llamafactory_data.py) · [`experiments/configs/task4_qwen35_9b_llamafactory_fit_16k.yaml`](experiments/configs/task4_qwen35_9b_llamafactory_fit_16k.yaml) | 以官方框架真实模板筛除超长行，注册固定 fit 数据并运行 Qwen3.5-9B 16K QLoRA 基线 |
