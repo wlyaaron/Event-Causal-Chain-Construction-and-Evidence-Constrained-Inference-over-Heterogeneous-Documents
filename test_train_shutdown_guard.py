@@ -58,6 +58,18 @@ class ShutdownGuardTests(unittest.TestCase):
         self.assertFalse(gate.observe(1202, idle)[0])
         self.assertTrue(gate.observe(1802, idle)[0])
 
+    def test_two_gpu_idle_requires_both_cards(self) -> None:
+        gate = guard.IdleGate(5, 2048, 600)
+        idle = guard.GpuSample(0, 3, ())
+        busy = guard.GpuSample(96, 18000, ("42",))
+        self.assertFalse(gate.observe(0, guard.combine_gpu_samples([idle, idle]))[0])
+        self.assertFalse(gate.observe(600, guard.combine_gpu_samples([idle, busy]))[0])
+        self.assertFalse(gate.observe(601, guard.combine_gpu_samples([idle, idle]))[0])
+        self.assertTrue(gate.observe(1201, guard.combine_gpu_samples([idle, idle]))[0])
+        self.assertEqual(guard.parse_gpu_indices("0,1"), (0, 1))
+        with self.assertRaises(Exception):
+            guard.parse_gpu_indices("0,0")
+
     def test_nvidia_smi_parse_requires_no_compute_processes(self) -> None:
         class Result:
             def __init__(self, stdout: str):
@@ -68,7 +80,8 @@ class ShutdownGuardTests(unittest.TestCase):
         self.assertEqual(sample, guard.GpuSample(0, 3, ("912",)))
         self.assertFalse(guard.IdleGate(5, 2048, 1).observe(0, sample)[0])
 
-    def run_fake_wrapper(self, return_code: int) -> tuple[int, Path]:
+    def run_fake_wrapper(self, return_code: int,
+                         gpu_indices: str | None = None) -> tuple[int, Path]:
         output = self.output / "run"
         config = self.output / "fit.yaml"
         config.write_text(f"output_dir: {output.as_posix()}\n", encoding="utf-8")
@@ -77,12 +90,14 @@ class ShutdownGuardTests(unittest.TestCase):
         shutdown = self.output / "shutdown"
         shutdown.write_text("fake", encoding="utf-8")
         status = self.output / "status.json"
+        launch_env = {}
 
         class FakeProcess:
             pid = 1234
             returncode = return_code
 
             def __init__(inner_self, *args, **kwargs):
+                launch_env.update(kwargs["env"])
                 if return_code == 0:
                     self.make_artifacts(output=output)
 
@@ -99,15 +114,23 @@ class ShutdownGuardTests(unittest.TestCase):
         arguments = ["guard", "--config", str(config), "--trainer", str(trainer),
                      "--log-file", str(self.output / "train.log"),
                      "--status-file", str(status), "--arm-shutdown"]
+        if gpu_indices:
+            arguments.extend(["--gpu-indices", gpu_indices])
         with (patch.object(sys, "argv", arguments),
               patch.object(guard.os, "geteuid", return_value=0, create=True),
               patch.object(guard.os, "access", return_value=True),
               patch.object(guard, "SHUTDOWN", shutdown),
               patch.object(guard.subprocess, "Popen", FakeProcess),
               patch.object(guard, "IdleGate", ReadyGate),
-              patch.object(guard, "query_gpu", return_value=guard.GpuSample(0, 3, ())),
+              patch.object(guard, "query_gpu", return_value=guard.GpuSample(0, 3, ())) as gpu_query,
               patch.object(guard.subprocess, "run") as shutdown_call):
             result = guard.main()
+            if gpu_indices:
+                self.assertEqual(launch_env["CUDA_VISIBLE_DEVICES"], gpu_indices)
+                self.assertEqual(launch_env["NPROC_PER_NODE"], "2")
+                self.assertEqual(launch_env["FORCE_TORCHRUN"], "1")
+                self.assertIn(0, {call.args[0] for call in gpu_query.call_args_list})
+                self.assertIn(1, {call.args[0] for call in gpu_query.call_args_list})
             if return_code == 0:
                 shutdown_call.assert_called_once_with(["/bin/sh", str(shutdown)],
                                                       check=True, timeout=30)
@@ -126,6 +149,12 @@ class ShutdownGuardTests(unittest.TestCase):
         self.assertEqual(result, 1)
         self.assertEqual(json.loads(status.read_text(encoding="utf-8"))["phase"],
                          "training_failed")
+
+    def test_two_gpu_run_uses_ddp_and_checks_both_before_shutdown(self) -> None:
+        result, status = self.run_fake_wrapper(return_code=0, gpu_indices="0,1")
+        self.assertEqual(result, 0)
+        self.assertEqual(json.loads(status.read_text(encoding="utf-8"))["phase"],
+                         "shutdown_requested")
 
 
 if __name__ == "__main__":

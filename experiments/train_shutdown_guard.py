@@ -91,6 +91,27 @@ def query_gpu(index: int) -> GpuSample:
     return GpuSample(int(fields[0]), int(fields[1]), tuple(apps.splitlines()) if apps else ())
 
 
+def combine_gpu_samples(samples: list[GpuSample]) -> GpuSample:
+    """One busy device must reset the shared idle timer."""
+    if not samples:
+        raise ValueError("no GPU samples")
+    return GpuSample(
+        max(sample.utilization_pct for sample in samples),
+        max(sample.memory_mib for sample in samples),
+        tuple(pid for sample in samples for pid in sample.compute_processes),
+    )
+
+
+def parse_gpu_indices(value: str) -> tuple[int, ...]:
+    try:
+        indices = tuple(int(part.strip()) for part in value.split(","))
+    except ValueError as error:
+        raise argparse.ArgumentTypeError("GPU indices must be comma-separated integers") from error
+    if not indices or any(index < 0 for index in indices) or len(set(indices)) != len(indices):
+        raise argparse.ArgumentTypeError("GPU indices must be distinct nonnegative integers")
+    return indices
+
+
 class IdleGate:
     def __init__(self, utilization_limit: int, memory_limit_mib: int, idle_seconds: int):
         self.utilization_limit = utilization_limit
@@ -126,10 +147,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trainer", type=Path, default=DEFAULT_TRAINER)
     parser.add_argument("--log-file", type=Path)
     parser.add_argument("--status-file", type=Path)
-    parser.add_argument("--gpu-index", type=int, default=0)
+    gpu = parser.add_mutually_exclusive_group()
+    gpu.add_argument("--gpu-index", type=int, help="legacy single-GPU index")
+    gpu.add_argument("--gpu-indices", type=parse_gpu_indices,
+                     help="comma-separated GPU indices; e.g. 0,1 for two-card DDP")
     parser.add_argument("--utilization-limit", type=int, default=5)
     parser.add_argument("--memory-limit-mib", type=int, default=2048)
-    parser.add_argument("--idle-minutes", type=int, default=10)
+    parser.add_argument("--idle-minutes", type=int, default=3)
     parser.add_argument("--poll-seconds", type=int, default=30)
     parser.add_argument("--max-idle-wait-minutes", type=int, default=120)
     parser.add_argument("--min-steps", type=int, default=1000,
@@ -143,6 +167,9 @@ def parse_args() -> argparse.Namespace:
         parser.error("invalid GPU idle threshold")
     if min(args.idle_minutes, args.poll_seconds, args.max_idle_wait_minutes, args.min_steps) < 1:
         parser.error("idle, poll, and maximum wait periods must be positive")
+    if args.gpu_index is not None and args.gpu_index < 0:
+        parser.error("GPU index must be nonnegative")
+    args.gpu_indices = args.gpu_indices or (args.gpu_index if args.gpu_index is not None else 0,)
     return args
 
 
@@ -154,7 +181,8 @@ def main() -> int:
     output_dir = output_dir_from_config(config)
     if args.check_existing:
         print(json.dumps({"artifacts": validate_artifacts(output_dir),
-                          "gpu": query_gpu(args.gpu_index).__dict__}, ensure_ascii=False))
+                          "gpus": {index: query_gpu(index).__dict__
+                                   for index in args.gpu_indices}}, ensure_ascii=False))
         return 0
 
     default_prefix = Path("outputs/llamafactory_logs") / config.stem
@@ -168,15 +196,28 @@ def main() -> int:
         raise FileNotFoundError(trainer)
     if args.arm_shutdown and (os.geteuid() != 0 or not SHUTDOWN.is_file()):
         raise RuntimeError("armed shutdown requires root and the platform shutdown command")
+    # Fail before creating any run files if a requested device cannot be queried.
+    for index in args.gpu_indices:
+        query_gpu(index)
     log_file.parent.mkdir(parents=True, exist_ok=True)
     status_file.parent.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True)
     environment = os.environ.copy()
     environment.update({"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
-                        "TOKENIZERS_PARALLELISM": "false", "CUDA_VISIBLE_DEVICES": str(args.gpu_index),
+                        "TOKENIZERS_PARALLELISM": "false",
+                        "CUDA_VISIBLE_DEVICES": ",".join(map(str, args.gpu_indices)),
                         "HF_HOME": "/root/autodl-tmp/task4-hf-cache"})
+    # LLaMA-Factory launches torchrun by name for multiple visible GPUs.
+    environment["PATH"] = str(trainer.parent) + os.pathsep + environment.get("PATH", "")
+    if len(args.gpu_indices) > 1:
+        environment["NPROC_PER_NODE"] = str(len(args.gpu_indices))
+        environment["FORCE_TORCHRUN"] = "1"
+    else:
+        environment.pop("NPROC_PER_NODE", None)
+        environment.pop("FORCE_TORCHRUN", None)
     write_status(status_file, "starting", config=str(config), output_dir=str(output_dir),
-                 log_file=str(log_file), armed=args.arm_shutdown)
+                 log_file=str(log_file), armed=args.arm_shutdown,
+                 gpu_indices=args.gpu_indices)
     with log_file.open("w", encoding="utf-8") as log:
         process = subprocess.Popen([str(trainer), "train", str(config)], cwd=REPO_ROOT,
                                    env=environment, stdout=log, stderr=subprocess.STDOUT)
@@ -198,13 +239,15 @@ def main() -> int:
     deadline = time.monotonic() + args.max_idle_wait_minutes * 60
     while time.monotonic() <= deadline:
         try:
-            sample = query_gpu(args.gpu_index)
+            samples = {index: query_gpu(index) for index in args.gpu_indices}
+            sample = combine_gpu_samples(list(samples.values()))
             query_error = None
         except (OSError, ValueError, subprocess.SubprocessError) as error:
-            sample, query_error = None, str(error)
+            samples, sample, query_error = {}, None, str(error)
         ready, idle_for = gate.observe(time.monotonic(), sample)
         write_status(status_file, "waiting_for_idle", artifacts=artifacts,
-                     gpu=sample.__dict__ if sample else None, gpu_error=query_error,
+                     gpus={index: gpu.__dict__ for index, gpu in samples.items()},
+                     gpu_error=query_error,
                      idle_seconds=round(idle_for), required_idle_seconds=args.idle_minutes * 60)
         if ready:
             if not args.arm_shutdown:
