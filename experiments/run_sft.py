@@ -18,7 +18,16 @@ from experiments.prepare_finetune_data import SFT_SYSTEM_PROMPT
 
 
 def validate_answer_chain(raw: str, allowed: set[str]) -> dict:
-    value = json.loads(raw.strip())
+    text = raw.strip()
+    # Qwen3.5 can emit a thinking block even when the training prompt uses
+    # the no-think template. Accept only a complete leading block, then parse
+    # the final answer as one strict JSON object.
+    if text.startswith("<think>"):
+        end = text.find("</think>")
+        if end < 0:
+            raise ValueError("unfinished thinking block")
+        text = text[end + len("</think>"):].strip()
+    value = json.loads(text)
     if not isinstance(value, dict):
         raise ValueError("prediction is not a JSON object")
     if set(value) != {"answer", "evidence_chain"}:
@@ -37,6 +46,17 @@ def validate_answer_chain(raw: str, allowed: set[str]) -> dict:
     if answer.strip() != "无法确定" and not chain:
         raise ValueError("non-refusal has an empty evidence chain")
     return {"answer": answer.strip(), "evidence_chain": chain}
+
+
+def encode_training_prompt(tokenizer, template, content: str) -> list[int]:
+    """Use the exact LLaMA-Factory no-think prompt used for SFT targets."""
+    prompt_ids, _ = template.encode_oneturn(
+        tokenizer,
+        [{"role": "user", "content": content},
+         {"role": "assistant", "content": ""}],
+        system=SFT_SYSTEM_PROMPT,
+    )
+    return prompt_ids
 
 
 def load_items(train_root: Path, data_dir: Path, split: str):
@@ -68,8 +88,12 @@ def main() -> None:
     parser.add_argument("--max-context-tokens", type=int, default=32768)
     parser.add_argument("--max-new-tokens", type=int, default=1024)
     parser.add_argument("--seed", type=int, default=20261006)
+    parser.add_argument("--limit", type=int, default=0,
+                        help="Process the first N split/view examples for a smoke run; 0 means all")
     parser.add_argument("--check-only", action="store_true")
     args = parser.parse_args()
+    if args.limit < 0:
+        raise ValueError("--limit must be nonnegative")
     ignored = (core.REPO_ROOT / "outputs").resolve()
     for path in (args.data_dir, args.model_dir, args.tokenizer_dir, args.output):
         if not path.resolve().is_relative_to(ignored):
@@ -77,15 +101,15 @@ def main() -> None:
     if args.adapter_dir and not args.adapter_dir.resolve().is_relative_to(ignored):
         raise ValueError("adapter must stay under ignored outputs/")
     from transformers import AutoTokenizer
+    from llamafactory.data.template import TEMPLATES
     tokenizer = AutoTokenizer.from_pretrained(args.tokenizer_dir, local_files_only=True)
+    template = TEMPLATES["qwen3_5_nothink"]
     items = list(load_items(args.train_root, args.data_dir, args.split))
+    if args.limit:
+        items = items[:args.limit]
     prepared, over = [], []
     for pack, sample_id, view, content, allowed in items:
-        prompt = [{"role": "system", "content": SFT_SYSTEM_PROMPT},
-                  {"role": "user", "content": content}]
-        ids = tokenizer.apply_chat_template(prompt, tokenize=True,
-                                            add_generation_prompt=True,
-                                            enable_thinking=False)
+        ids = encode_training_prompt(tokenizer, template, content)
         if len(ids) + args.max_new_tokens > args.max_context_tokens:
             over.append({"pack": pack, "sample_id": sample_id, "view": view,
                          "input_tokens": len(ids)})
@@ -150,11 +174,7 @@ def main() -> None:
             if (pack, sample_id, view) in done:
                 continue
             start = time.perf_counter()
-            prompt = [{"role": "system", "content": SFT_SYSTEM_PROMPT},
-                      {"role": "user", "content": content}]
-            input_ids = tokenizer.apply_chat_template(prompt, tokenize=True,
-                                                       add_generation_prompt=True,
-                                                       enable_thinking=False)
+            input_ids = encode_training_prompt(tokenizer, template, content)
             if len(input_ids) != checked_tokens:
                 raise ValueError("token count changed since context check")
             tensor = torch.tensor([input_ids], dtype=torch.long, device=model.device)
@@ -172,6 +192,7 @@ def main() -> None:
                 valid, error = False, str(exc)
             record = {"pack": pack, "sample_id": sample_id, "view": view,
                       **parsed, "valid": valid, "error": error,
+                      "raw_output": raw,
                       "input_tokens": len(input_ids), "output_tokens": len(new_ids),
                       "latency_seconds": round(time.perf_counter() - start, 3)}
             output.write(json.dumps(record, ensure_ascii=False) + "\n")

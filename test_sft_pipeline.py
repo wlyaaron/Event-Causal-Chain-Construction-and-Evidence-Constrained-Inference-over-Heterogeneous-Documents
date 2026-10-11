@@ -113,6 +113,11 @@ class SftDataTests(unittest.TestCase):
         self.assertEqual(validate_answer_chain(
             '{"answer":"事故推动救援","evidence_chain":["D001"]}',
             {"D001"})["evidence_chain"], ["D001"])
+        self.assertEqual(validate_answer_chain(
+            '<think>\n\n</think>\n{"answer":"无法确定","evidence_chain":[]}',
+            set())["answer"], "无法确定")
+        with self.assertRaisesRegex(ValueError, "unfinished thinking block"):
+            validate_answer_chain('<think>unfinished', set())
         with self.assertRaisesRegex(ValueError, "unknown"):
             validate_answer_chain('{"answer":"a","evidence_chain":["D999"]}',
                                   {"D001"})
